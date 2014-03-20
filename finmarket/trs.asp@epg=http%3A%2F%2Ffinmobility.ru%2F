@@ -1,0 +1,556 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+	<title>FinMobility-2013. Мобильный банкинг и мобильный маркетинг</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+	<meta content="FinMobility-2013. Мобильный банкинг и мобильный маркетинг" name="title">	<BASE href="http://finmobility.ru/" />
+	<LINK href="style.css" type="text/css" rel="stylesheet">
+	<LINK href="lightbox.css" type="text/css" rel="stylesheet">
+	<LINK rel="icon" href="http://finmobility.ru/favicon.ico" type="image/x-icon">
+	<LINK rel="shortcut icon" href="http://finmobility.ru/favicon.ico" type="image/x-icon">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.form.js"></script>
+	<!--<script src="js/lightbox.js"></script>-->
+</head>
+<body style="background-color:#e5e5e5;">
+
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '208229249326856', // App ID
+      channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+    // Additional initialization code here
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "http://connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+</script>
+
+
+
+<div class="global_container">
+
+<div class="orange_menu_container">
+  <div class="content_container_960">
+  <div class="content_container content">
+    <div class="content">
+     <div class="social_button"><!--<a href="https://www.facebook.com/Finbranch" target="_blank"><img src="fb_button.png" border="0"></a>--></div>
+     <div class="date"><a href="?s=place">21 ноября 2013 года | Бизнес-отель «Бородино»</a></div>
+     <div class="clear"><!-- --></div>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="shadow">
+<div class="menu_container">
+  <div class="content_container_960">
+  <div class="content_container">
+   <div class="content">
+    <div class="logo"><a href="http://finmobility.ru/"><img src="logo.png" border=0></a></div>
+    <div class="menu_items">
+     <table width="100%" cellpadding=0 cellspacing=0 border=0>
+      <tbody>
+       <tr>
+        <td width="19%"><a href="?s=about" class="menu_link">О форуме</a></td>
+        <td width="19%"><a href="?s=programm" class="menu_link">Программа</a></td>
+        <td width="19%"><a href="?s=participants" class="menu_link">Спикеры</a></td>
+        <td width="19%"><a href="?s=place" class="menu_link">Контакты</a></td>
+        <td width="24%"><a href="?s=gallery" class="special"><b>Фотогалерея</b></a></td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="clear"><!-- --></div>
+   </div>
+  </div>
+  </div>
+</div>
+
+
+ 
+ <style>
+   .follow_header {font-family:helveticaneuecyrlight;Arial,Helvetica,Verdana,Sans-serif;font-size:17px;color:#ffffff;}
+   .follow_text {font-size:13px;text-align:left;color:#ffffff;padding:5px 0 5px 0;}
+ </style>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+// ---- Форма -----
+  var options = {
+    // элемент, который будет обновлен по ответу сервера
+  	target: "#follow_form_output",
+    //beforeSubmit: showRequest, // функция, вызываемая перед передачей
+    //success: showResponse, // функция, вызываемая при получении ответа
+    timeout: 3000 // тайм-аут
+  };
+
+  // привязываем событие submit к форме
+  $('#myForm').submit(function() {
+    $(this).ajaxSubmit(options);
+    // !!! Важно !!!
+    // всегда возвращаем false, чтобы предупредить стандартные
+    // действия браузера (переход на страницу form.php)
+    return false;
+  });
+// ---- Форма -----
+});
+
+// вызов перед передачей данных
+function showRequest(formData, jqForm, options) {
+    // formData - массив; здесь используется $.param чтобы преобразовать его в строку для вывода в alert(),
+    // (только в демонстрационных целях), но в самом плагине jQuery Form это совершается автоматически.
+    var queryString = $.param(formData);
+    // jqForm это jQuery объект, содержащий элементы формы.
+    // Для доступа к элементам формы используйте
+    // var formElement = jqForm[0];
+    alert('Вот что мы передаем: \n\n' + queryString);
+    // здесь можно вернуть false чтобы запретить отправку формы;
+    // любое отличное от fals значение разрешит отправку формы.
+    return true;
+}
+
+// вызов после получения ответа
+function showResponse(responseText, statusText)  {
+    // для обычного html ответа, первый аргумент - свойство responseText
+    // объекта XMLHttpRequest
+
+    // если применяется метод ajaxSubmit (или ajaxForm) с использованием опции dataType
+    // установленной в 'xml', первый аргумент - свойство responseXML
+    // объекта XMLHttpRequest
+
+    // если применяется метод ajaxSubmit (или ajaxForm) с использованием опции dataType
+    // установленной в 'json', первый аргумент - объек json, возвращенный сервером.
+
+    alert('Статус ответа сервера: ' + statusText + '\n\nТекст ответа сервера: \n' + responseText +
+        '\n\nЦелевой элемент div обновиться этим текстом.');
+}
+</script>
+
+ <form id="myForm" action="http://finmobility.ru/?s=form" method="post"><div class="orange_menu_container">
+  <div id="follow_form_output" class="content_container">
+     <table width="100%" cellpadding=0 cellspacing=0 border=0>
+      <tbody>
+       <tr>
+        <td width="27%" valign="middle" class="follow_header">Следите за форумом по email</td>
+        <td width="27%" valign="middle"><input type="text" id="follow_email_input" name="follow_email_input" placeholder="Ваш email"> <input type="submit" id="follow_email_submit" value="OK"></td>
+        <td valign="middle" class="follow_text">Уведомления о самых интересных событиях и обновлениях
+в процессе подготовки мероприятия, составе спикеров и программе
+        </td>
+       </tr>
+      </tbody>
+     </table>
+  </div>
+ </div>
+ </form>
+
+ 
+
+
+
+
+ <!--<div style="background-color:#8e134d; padding:10px 0 10px 0; text-align:center;">
+
+  <div class="content_container">
+
+
+
+<a href="http://finmobility.ru/#page_text" style="color:#ffffff;font-size:20px;"><b>Четыре причины пойти на «FinMobility» 21 ноября</b></a>
+
+
+  </div>
+
+ </div>-->
+
+
+<div class="banner_container">
+  <div class="banner_main_page" style="background:url(layout_01.jpg); background-repeat:no-repeat; background-position:top center; height:406px;">
+   <div class="content_container">
+    <div class="slogan">
+      <div class="lineBlock">«Мобильный банк – дань хипстерской моде?</div><br />
+      <div class="lineBlock second">Или канал банковских продаж?»</div><br />
+      <!--<div class="lineBlock second">Форум FinMobility. Мобильный банкинг и маркетинг</div><br />
+      <div class="lineBlock second">(21 ноября, Москва)</div><br />-->
+    </div>
+   </div>
+  </div>
+</div>
+</div>
+
+
+<div class="content_container_960">
+<div class="content_container">
+ <div class="page_content">
+
+
+
+  <table width="100%" cellpadding=0 cellspacing=0 border=0>
+      <tbody>
+       <tr>
+        <td>
+         <div id="page_text" class="page_text">
+
+<h1>FinMobility-2013 состоялся</h1>
+
+
+<p><a href="http://finmobility.ru/?s=gallery"><img width="607" height="598" src="http://finmobility.ru/pictures/gallery.jpg" alt="" /></a></p>
+<div>21 ноября в Москве прошел &nbsp;<b>Ф</b><b>орум &laquo;FinMobility-2013</b>. <b>Мобильный банкинг и маркетинг&raquo;</b>, организованный ИД &laquo;Регламент&raquo;. <span>Форум собрал более 200 участников не только из Москвы, но и Воронежа, Екатеринбурга, Казани, Киева, Магнитогорска, Минска, Санкт-Петербурга, Одессы, Омска и Риги</span>.</div>
+<div>&nbsp;</div>
+<div>Впервые на одной площадке встретились банкиры, разработчики приложений и мобильные операторы для обсуждения стратегических вопросов мобильных финансовых услуг: как превратить mobility в канал продаж; насколько эффективен мобильный маркетинг для банков; как сделать мобильный банк и не потратить впустую свой бюджет.</div>
+<div>&nbsp;</div>
+<div>Форум открылся сообщением генерального директора <strong>Markswebb Rank &amp; Report</strong> Алексея Скобелева на тему: <em>&quot;Мобильный банкинг в России. Особенности спроса и предложения.</em></div>
+<div><em>&nbsp;</em></div>
+<div>Ведущие российские банки и разработчики презентовали свои новые кейсы по интеграции мобильного банкинга. Участниками Casestudy&nbsp;стали:&nbsp;Вячеслав Акулов - руководитель проектов Блока &quot;электронный бизнес&quot;, <b>Альфа-Банк</b>, Александр Солонин - руководитель Фабрики розничных инноваций, <b>Промсвязьбанк</b>, Владимир Шабасон - директор департамента перспективных технологий, <b>Связной банк</b>, Виктор Лысенко - CEO, co-founder, <b>Rocketbank</b>, Роман Потемкин - СЕО, <b>Instabank</b>, Павел Малышев - CEO, <b>SoftWear</b>, Алексей Зотов - руководитель направления развития мобильных решений, <b>BSS</b>, Евгений Козлов&nbsp;- директор по маркетингу, <b>Ubank</b>, Ксения Сидорова - заместитель директора по работе с партнерами, <b>Faktura.ru/ГК ЦФТ</b>, Наталья Борисова - руководитель бизнеса электронной коммерции Дирекции розничного бизнеса, <b>Банк &quot;Санкт-Петербург&quot;</b>.</div>
+<div>&nbsp;</div>
+<div>Неподдельный интерес среди участников вызвал доклад специального гостя Форума &ndash; самого технологически продвинутого банка Украины, пионера по внедрению мобильного эквайринга на территории СНГ &ndash; <b>ПриватБанка</b>. Руководитель Приват24 -Татьяна Игнатенко рассказала&nbsp;о новейших разработках мобильных приложений компании, среди которых мобильная автозаправка и &nbsp;бесконтактное снятие наличных денег в банкоматах.</div>
+<div>&nbsp;</div>
+<div>Опытом развития м<span>обильного банкинга</span> за рубежом поделились: Михал Панович, managing director, <b>Mbank</b> (Польша) и Иво Камиллери [Ivo Camilleri], Executive Head&nbsp; Electronic Banking Services, <b>Bank of Valletta</b> (Мальта).</div>
+<div>&nbsp;</div>
+<div>Тема мобильного маркетинга для банков поднималась в докладах &nbsp;Алексея Писаревского, директора по развитию компании <b>Mobio</b> - &quot;<em>Маркетинговые коммуникации в мобильной среде&quot; и </em>Дмитрия Лазарева, СЕО, <b>ОТМ</b> - <em>&quot;Банковские кейсы в мобильном маркетинге&quot;.</em></div>
+<div>&nbsp;</div>
+<div>В рамках Форума состоялась панельная дискуссия &laquo;Практика мобильного банкинга&raquo;, на которой были затронуты&nbsp;вопросы о поведении потребителей при пользовании мобильными устройствами, а также вопросы безопасности vs и удобствах пользования.</div>
+<div>&nbsp;</div>
+<div>Завершил программу Форума &laquo;FinMobility-2013&raquo; - Круглый стол мобильных операторов&nbsp;с участием Булада Субанова, президента <b>банка &laquo;Раунд&raquo;</b>, Виктора Маркелова, директора по продуктам и развитию бизнеса компании <b>Билайн</b> и Артема Яманова, SVP for Business Development, <b>ТКС</b>. Здесь довольно бурно обсуждались основополагающие темы, такие как:<strong> </strong>- финансовые сервисы глазами мобильных операторов; - системные финансовые проекты мобильных операторов; - новые возможности сотрудничества банков и операторов; - возможность построения единой платформы мобильных финансовых сервисов в России и др.</div>
+<div>&nbsp;</div>
+<p><b>Организатор форума &laquo;<span>FinMobility-2013&raquo;:</span></b> <a href="http://reglament.net/" target="_blank"><span>Издательский Дом &laquo;Регламент&raquo;</span></a></p>
+<p>&nbsp;</p>
+<hr />
+<h3><span style="color: rgb(0, 0, 255);">Архив</span>:</h3>
+<h1>Четыре причины пойти <nobr>на &laquo;FinMobility&raquo;</nobr> 21 ноября</h1>
+<h3>1. Большое количество <a href="http://finmobility.ru/?s=programm#casestudy" target="_blank">свежих российских кейсов</a> мобильного банкинга</h3>
+<h3>2. Специальный гость Форума &ndash; инновационный ПриватБанк &ndash;</h3>
+<p>самый технологически продвинутый банк Украины, пионер по внедрению мобильного эквайринга на территории СНГ</p>
+<p><strong>Материалы по теме:</strong></p>
+<ul>
+    <li><a href="http://futurebanking.ru/post/2318" target="_blank">Приватбанк разработал первый в мире банкомат на Android</a></li>
+    <li><a href="http://futurebanking.ru/post/2122" target="_blank">&laquo;По скорости и качеству разработок мы ушли далеко вперед&raquo;, &ndash; Александр Витязь, заместитель председателя правления ПриватБанка</a></li>
+    <li><a href="http://futurebanking.ru/search?query=%D0%9F%D1%80%D0%B8%D0%B2%D0%B0%D1%82%D0%B1%D0%B0%D0%BD%D0%BA&amp;sort=date_added" target="_blank">Все материалы про ПриватБанк</a></li>
+</ul>
+<h3>3. Иностранный опыт</h3>
+<p>Mbank (Польша), удостоенный номинации Best of Show на Finovate.<br />
+Bank of Valetta (Мальта)&nbsp; успешно привлекает клиентов из других стран</p>
+<p><strong>Материалы по теме:</strong></p>
+<ul>
+    <li><a href="http://futurebanking.ru/post/2314" target="_blank">Одиннадцать инноваций Mbank. Беседа с Michal Panowiz, управляющий директор Mbank (Польша)</a></li>
+    <li><a target="_blank" href="http://futurebanking.ru/post/2278">Восемь лучших фин-тех стартапов этой осени</a></li>
+</ul>
+<h3>4. Круглый стол с мобильными операторами</h3>
+<p>Участвуют МТС и Билайн.<br />
+Модератор: Булад Субанов, банк &laquo;Раунд&raquo;</p>
+<p><strong>Материалы по теме:</strong></p>
+<ul>
+    <li><a target="_blank" href="http://futurebanking.ru/post/2298">&laquo;Инвестиции в бесконтактные платежи будут давать эффект в лучшем случае через 3-5 лет&raquo;, &ndash; Дмитрий Панфилов, директор департамента финансовых услуг МТС</a></li>
+    <li><a target="_blank" href="http://futurebanking.ru/post/2245">&laquo;Банки рассматривают мобильных операторов как своих конкурентов, но у нас больше поводов для сотрудничества, чем для ревности&raquo;, &ndash; Виктор Маркелов, &laquo;ВымпелКом&raquo;</a></li>
+</ul>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong><span style="font-size: larger;"><a href="http://finmobility.ru/?s=programm"><span style="font-size: large;">Развернутая программа Форума</span></a></span></strong></p>
+<p style="text-align: center;">&nbsp;</p>
+<hr />
+<h2>Как превратить mobility в канал продаж?</h2>
+<h2>Насколько эффективен мобильный маркетинг для банков?</h2>
+<div><span style="font-size: medium;">Задача Форума дать конкретные ответы на эти и многие другие вопросы по мобильному банкингу.</span></div>
+<div><span style="color: rgb(128, 0, 0);"><strong><span style="font-size: medium;">А главное &ndash; дать участникам know-how &laquo;как сделать мобильный банк и не потратить бюджет на фуфло&raquo;</span></strong></span><span style="font-size: medium;">.</span></div>
+<div><span style="font-size: medium;"><b>&nbsp;</b></span></div>
+<div><span style="font-size: medium;"><b>В программе форума: </b><b>&nbsp;</b></span></div>
+<ul>
+    <li><span style="font-size: medium;">Практические кейсы лучших мобильных банков в России</span></li>
+    <li><span style="font-size: medium;">Поведения потребителей при пользовании мобильными устройствами</span></li>
+    <li><span style="font-size: medium;">Безопасность vs удобство пользования</span></li>
+    <li><span style="font-size: medium;">Интеграция мобильного банкинга и других каналов банковских услуг</span></li>
+    <li><span style="font-size: medium;">Маркетинговые коммуникации в мобильной среде</span></li>
+</ul>
+<p>&nbsp;</p>
+<p style="text-align: center;"><strong><span style="font-size: larger;"><a href="http://finmobility.ru/?s=programm"><span style="font-size: large;">Развернутая программа Форума</span></a></span></strong><span style="font-size: medium;"><br />
+</span></p>
+<p style="text-align: center;">&nbsp;</p>
+
+
+
+
+  
+
+<script type="text/javascript">
+$(document).ready(function(){
+// ---- Форма -----
+  var options = {
+    // элемент, который будет обновлен по ответу сервера
+  	target: "#follow_form_output2",
+    //beforeSubmit: showRequest, // функция, вызываемая перед передачей
+    //success: showResponse, // функция, вызываемая при получении ответа
+    timeout: 3000 // тайм-аут
+  };
+
+  // привязываем событие submit к форме
+  $('#myForm2').submit(function() {
+    $(this).ajaxSubmit(options);
+    // !!! Важно !!!
+    // всегда возвращаем false, чтобы предупредить стандартные
+    // действия браузера (переход на страницу form.php)
+    return false;
+  });
+// ---- Форма -----
+});
+
+
+</script>
+
+ <form id="myForm2" action="http://finmobility.ru/?s=form2" method="post">
+ <div class="orange_menu_container">
+ <div id="follow_form_output2">
+  <table width="100%" cellpadding=5 cellspacing=0 border=0>
+      <tbody>
+       <tr>
+        <td width="27%" valign="middle" style="vertical-align:middle;" class="follow_header">Следите за форумом по email</td>
+        <td width="27%" valign="middle" style="vertical-align:middle;" ><div style="padding-bottom:5px;"><input type="text" id="follow_email_input" name="follow_email_input" placeholder="Ваш email"></div><input type="submit" id="follow_email_submit" value="OK"></td>
+        <td valign="middle"  style="vertical-align:middle;"  class="follow_text">Уведомления о самых интересных событиях и обновлениях
+в процессе подготовки мероприятия, составе спикеров и программе
+        </td>
+       </tr>
+      </tbody>
+     </table>
+ </div>
+ </div>
+ </form>
+
+ 
+
+ <!-- окончание div class="page_text" -->
+ </div>
+
+ <h2 class="partners_header partners_header_2">
+<b>Партнеры форума FinMobility 2013</b>
+</h2>
+<div class="partners"><div>&nbsp;</div>
+<ul><li><div class="partner_item"><img src="http://www.reglament.net/images/minisite_partners_items/img_oilmi.jpg" border="0" style="vertical-align:middle;"></div></li>
+<li><div class="partner_item"><a href="http://www.bssys.com/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_p0a50u.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><img src="http://www.reglament.net/images/minisite_partners_items/img_44ozw.jpg" border="0" style="vertical-align:middle;"></div></li>
+<li><div class="partner_item"><img src="http://www.reglament.net/images/minisite_partners_items/img_dqwh8t8.jpg" border="0" style="vertical-align:middle;"></div></li>
+<li><div class="partner_item">Спонсор рабочей тетради<br /><a href="https://faktura.ru/default.aspx" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_o5rikzg.gif" border="0"></a></div></li>
+</ul><div class="clear"><!-- --></div></div><h2 class="partners_header partners_header_2">
+<b>Участники выставки форума FinMobility 2013</b>
+</h2>
+<div class="partners"><div>&nbsp;</div>
+<ul><li><div class="partner_item"><a href="http://idamob.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_y1zm4o.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><img src="http://www.reglament.net/images/minisite_partners_items/img_7aacpel.jpg" border="0" style="vertical-align:middle;"></div></li>
+<li><div class="partner_item"><a href="http://usabilitylab.ru/	" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_f6lkr3h.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://indgroup.eu/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_oysxm8.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><img src="http://www.reglament.net/images/minisite_partners_items/img_tfbqwg.jpg" border="0" style="vertical-align:middle;"></div></li>
+<li><div class="partner_item"><a href="http://www.moedelo.org/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_tqng9.jpg" border="0"></a></div></li>
+</ul><div class="clear"><!-- --></div></div><h2 class="partners_header partners_header_2">
+<b>Медиа-партнеры форума FinMobility 2013</b>
+</h2>
+<div class="partners"><div>&nbsp;</div>
+<ul><li><div class="partner_item">Генеральный <nobr>интернет-партнер</nobr><br /><a href="http://bankir.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_g2lt4.png" border="0"></a></div></li>
+<li><div class="partner_item"><img src="http://www.reglament.net/images/minisite_partners_items/img_iyvr9up.jpg" border="0" style="vertical-align:middle;"></div></li>
+<li><div class="partner_item">При поддержке<br /><a href="http://www.raec.ru/commission/679/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_vgglmy7.jpg" border="0"></a></div></li>
+<li><div class="partner_item">Стратегический <nobr>интернет-партнер</nobr><br /><a href="http://futurebanking.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_kyvefv.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><img src="http://www.reglament.net/images/minisite_partners_items/img_e0pt4q.jpg" border="0" style="vertical-align:middle;"></div></li>
+<li><div class="partner_item">Стратегический <nobr>интернет-партнер</nobr> <nobr>                                      </nobr><br /><a href="http://www.comnews.ru	" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_o7vxi2e.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://bosfera.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_vuggh.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://www.banki.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_km02vdg.png" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://www.nbj.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_d4bnb5.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://www.in-numbers.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_4dkqg1.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://www.finmarket.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_lh4a0fp.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://www.finam.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_q4hsus.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://www.abajour.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_mgsw4fv.gif" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://bdm.ru/anketa-bdm.html" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_3bbadp1.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://www.smart-payments.info" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_gkf6f.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://www.int-bank.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_k42uta.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://www.int-bank.ru/jornal_bt/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_u8vc4bo.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><a href="http://www.bank-online.com.ua/?utm_source=finmobility&utm_medium=logo&utm_campaign=conf" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_mcrz8ua.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><a href=" http://www.journal.ib-bank.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_szybms.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><img src="http://www.reglament.net/images/minisite_partners_items/img_5nkv8wr.jpg" border="0" style="vertical-align:middle;"></div></li>
+<li><div class="partner_item"><a href="http://credcons.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_nn5hl6.jpg" border="0"></a></div></li>
+</ul><div class="clear"><!-- --></div></div><h2 class="partners_header partners_header_2">
+<b>Специальные партнеры FinMobility 2013</b>
+</h2>
+<div class="partners"><div>&nbsp;</div>
+<ul><li><div class="partner_item">Календарь IT-мероприятий<br /><a href="http://runet-id.com/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_z1grnh.jpg" border="0"></a></div></li>
+<li><div class="partner_item"><img src="http://www.reglament.net/images/minisite_partners_items/img_x5z7n.jpg" border="0" style="vertical-align:middle;"></div></li>
+<li><div class="partner_item">Дизайн-партнер<br /><a href="http://aic.ru/" target="_blank"><img src="http://www.reglament.net/images/minisite_partners_items/img_e2qbe2k.jpg" border="0"></a></div></li>
+</ul><div class="clear"><!-- --></div></div>
+
+        </td>
+        <td width="20">&nbsp;</td>
+        <td width="260">
+
+
+        <!-- <div class="right_column_block">
+          <div class="inner">
+
+                <h3>Вопросы спикерам online</h3>
+
+                 <b>Уже сейчас <a href="http://finmobility.ru/?s=participants#all">задавайте</a> вопросы через сайт</b> для общего обсуждения на Форуме или адресуйте вопрос <a href="http://finmobility.ru/?s=participants">конкретному спикеру</a>.
+
+          </div>
+         </div>
+
+
+         <div>&nbsp;</div> -->
+
+         <!--<div class="right_column_block">
+          <div class="inner">
+
+                 <a style=" display:block; font-size:18px; padding: 10px 0 10px 0; margin: 10px auto 15px auto; background-color:#1D94C1; color:#ffffff; text-align:center;" href="http://finmobility.ru/?s=zayavka"><b>Экспресс-регистрация <nobr>на мероприятие</nobr></b></a>
+
+          </div>
+         </div>
+
+
+         <div>&nbsp;</div>-->
+
+         
+         <!--<div class="right_column_block">
+          <div class="inner">
+
+                <div class="fb_like_box"><fb:like-box href="https://www.facebook.com/Finbranch" width="240" height="300" show_faces="true" stream="false" show_border="false" header="false"></fb:like-box></div>
+
+          </div>
+         </div>
+
+
+         <div>&nbsp;</div>-->
+
+         <div>&nbsp;</div>
+		  <div class="right_column_block">
+		   <div class="inner">
+		    <a href="http://finmobility.ru/?s=reviews" style=" display:block; font-size:18px; padding: 10px 0 10px 0; margin: 10px auto 15px auto; background-color:#1D94C1; color:#ffffff; text-align:center;">
+		     <b>Отзывы</b>
+		    </a>
+		   </div>
+		  </div>
+
+		 <div>&nbsp;</div>
+
+
+         <div class="right_column_block">
+          <div class="inner2">
+
+          <h3>По вопросам информационного партнерства:</h3>
+
+				<b>Елена  Острикова</b><br />
+				+7 (495) 921-2334, ext.240<br />
+				+7 (903) 671-4931<br />
+				<a href="mailto:ostrikova@reglament.net">ostrikova@reglament.net</a><br />
+
+				<br />
+
+				<h3>По вопросам спонсорства мероприятия:</h3>
+
+				<b>Олеся Сидоренко</b><br />
+
+				+7 (495) 921-23-34, ext.259<br />
+				+7 (916) 298-98-23<br />
+
+				<a href="mailto:sidorenko@reglament.net">sidorenko@reglament.net</a>
+          </div>
+         </div>
+
+
+        <div>&nbsp;</div>
+
+
+      <div class="right_column_block">
+          <div class="inner2">
+
+		       <b>Организатор Форума:</b>
+				<br>
+				Издательский Дом «Регламент»
+				<br>
+				<br>
+				<div align="left">
+				<a target="_blank" href="http://reglament.net/">
+				<img width="164" border="0" height="65" alt="" src="reglament.jpg">
+				</a>
+				</div>
+				<br>
+				+7 (495) 921-2334
+				<br>
+				<a target="_blank" href="http://reglament.net/">http://reglament.net</a>
+
+          </div>
+         </div>
+
+
+         <!--<div>&nbsp;</div>
+
+         <div class="right_column_block">
+          <div class="inner">
+
+                 <a style=" display:block; font-size:18px; padding: 10px 0 10px 0; margin: 10px auto 15px auto; background-color:#1D94C1; color:#ffffff; text-align:center;" href="http://finmobility.ru/?s=zayavka"><b>Экспресс-регистрация <nobr>на мероприятие</nobr></b></a>
+
+          </div>
+         </div>-->
+
+
+         <div align="right" style="margin-top:10px;"><!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t14.3;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//-->
+</script><!--/LiveInternet-->
+</div>
+
+
+        </td>
+       </tr>
+      </tbody>
+     </table>
+
+ </div>
+</div>
+</div>
+
+</div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter22720882 = new Ya.Metrika({id:22720882,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/22720882" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
+
+

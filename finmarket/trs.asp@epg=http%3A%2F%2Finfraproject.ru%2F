@@ -1,0 +1,1043 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head>
+<title>Ежегодный общероссийский	форум-выставка</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="author" content="bablomag" />
+	<meta name="description" content="Ежегодный общероссийский	форум-выставка" />
+	<meta name="keywords"  content="Ежегодный общероссийский форум-выставка" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />    
+<!-- Bootstrap -->
+<link href="files/css/bootstrap.min.css" rel="stylesheet">
+<script src="files/js/bootstrap.min.js"></script>
+<!-- Bootstrap -->	
+
+	<script src="files/js/jquery.min.js"></script>
+	<script src="files/js/jquery-ui.min.js"></script>
+<!--[if lt IE 9]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->	
+<!-- Валидация формы -->	
+<script type="text/javascript" src="files/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="files/js/jquery.maskedinput.js"></script>
+<script type="text/javascript" src="files/js/jquery.scrollTo-min.js"></script>
+<script type="text/javascript" src="files/js/effects.js"></script>
+<script>
+ $(document).ready(function() {
+       
+   
+   
+				$.validator.addMethod('validEml', function (value) {
+				var regexp = /^[a-zA-Z0-9_\-.]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$/.exec(value);
+                if (regexp != null)
+				        return true;
+			       else
+			            return false;
+				}, '');
+
+				
+				$.validator.addMethod('validName', function (value) {
+				var result = true;
+				var iChars = "!@#$%^&*()+=-[]\\\';,./{}|\:<>?0123456789";
+				for (var i = 0; i < value.length; i++) {
+					if (iChars.indexOf(value.charAt(i)) != -1) {
+					return false;
+					}
+				}
+				return result;
+				}, '');
+    
+	
+				$.validator.addMethod('reqPhn', function (value) {
+				var result = true;
+				if(value.indexOf("_") != -1 || value == "") 
+					result = false;
+				return result;
+				}, '');
+   
+   
+   
+				$("form").each(function(){
+					$(this).validate({
+							rules:{
+								yourname:{
+									required: true,
+									minlength: 3,
+									maxlength: 35,
+									validName: true
+								}, 
+								eml: {
+									required: true,
+									validEml: true
+								},
+								phn: {
+									required: true, 
+									reqPhn: true
+								}
+							},
+							submitHandler: function(form) {
+								form.submit();
+							}
+					});
+				}); 
+});
+</script>	
+<!--Таймер-->
+        <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+        <link rel="stylesheet" href="assets/countdown/jquery.countdown.css" />
+        
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- JavaScript includes -->
+		<script src="assets/countdown/jquery.countdown.js"></script>
+		<script src="assets/js/script.js"></script>
+<!--Таймер-->
+<!--Карусель-->
+		<link rel="stylesheet" type="text/css" href="carusel/css/jquery.jscrollpane.css" media="all" />
+<!--Карусель-->
+<!--Кнопка вверх-->
+<script type="text/javascript">$(document).ready(function(){
+$(window).scroll(function () {if ($(this).scrollTop() > 0) {$('#scroller').fadeIn();} else {$('#scroller').fadeOut();}});
+$('#scroller').click(function () {$('body,html').animate({scrollTop: 0}, 400); return false;});
+});</script>
+<!--Добавить в избранное-->
+<script>
+function addBookmark() {
+if (document.all) window.external.addFavorite('http://htmlbook.ru', 'Сайт htmlbook.ru');
+}
+</script>
+<link rel="stylesheet"  type="text/css" href="" />
+<!--	<link rel="stylesheet" type="text/css" href="files/css/style.css" />-->
+</head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter24084937 = new Ya.Metrika({id:24084937,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/24084937" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<body>
+<div id="ancor01"></div>
+<!--Хедер-->
+<div class="container header">
+	<div class="container menu">
+		<div class="row">
+			<a id="ancor8" href="#">
+				<img class="col-md-2 logoIm" src="files/images/logo.png"/>
+				<p class="logo">Форум Регионов России 2014</p>
+			</a>
+			<ul class="col-md-8">
+				<li id="ancor10"><a href="#ancor01" id="ancor1">Главная</a></li>
+				<li id="ancor20"><a href="#ancor02" id="ancor2">О форуме</a></li>   
+				<li id="ancor30"><a href="#ancor03" id="ancor3">Фото</a></li>
+				<li id="ancor40"><a href="#ancor04" id="ancor4">7 причин</a></li>
+				<li id="ancor50"><a href="#ancor05" id="ancor5">Отзывы</a></li>
+				<li id="ancor60"><a href="#ancor06" id="ancor6">Стоимость</a></li>
+			</ul>
+			<div class="col-md-2 phone">
+				<p><img src="files/images/ic01.png"/> +7 (499) 551-88-16</p>
+				<a onmouseover="this.style.cursor=&quot;pointer&quot; " onfocus="this.blur();" onclick="document.getElementById('PopUp').style.display='block'" style="cursor: pointer;">
+					Заказать звонок
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Визуализация--> 
+<div class="container vizual">
+	<div class="row">
+		<h1>Ежегодный общероссийский<br>
+			форум-выставка №1<br> 
+			в сфере инноваций и<br> 
+			инвестиций в регионах</h1>
+		<form class="form-signin col-md-4" role="form" method="post" action="obr02.php" target="_blank">
+			<h3>Зарегистрируйтесь на форум<br>
+				до 31 марта и получите<br> 
+				дополнительное место<br>
+				в делегации <b>БЕСПЛАТНО</b></h3>
+			<h4>ДО НАЧАЛА ФОРУМА:</h4>		
+			<div id="countdown"></div>
+			<a onmouseover="this.style.cursor=&quot;pointer&quot; " onfocus="this.blur();" onclick="document.getElementById('PopUp01').style.display='block'" style="cursor: pointer;">
+				<img src="files/images/btn01.png"/>
+			</a>
+		</form> 
+		<h2>8 апреля 2014 г. Москва,
+			МГУ имени М.В.Ломоносова </h2>
+	</div>  
+</div>
+<!--Привет-->
+	<div class="container hi">
+		<div class="row">
+			<div class="col-md-6 ">
+				<h3>организаторы</h3>
+				<img src="files/images/o01.png"/>
+				<img src="files/images/o02.png"/>
+				<img src="files/images/o03.png"/>
+			</div>
+			<div class="col-md-6 ">
+				<h3>при поддержке</h3>
+				<img src="files/images/o04.png"/>
+				<img src="files/images/o05.png"/>
+			</div>
+		</div>
+	</div>
+<!--Ярышкин-->	
+	<div class="container jar">
+		<div class="row">	
+			<div class="col-md-12">
+				<img src="files/images/jar.png"/>
+				<div class="col-md-9" >
+					<p class="col-md-12"><i>
+						Приветствую организаторов и участников Форума регионов России 2013!<br><br>
+						Сбалансированное социально-экономическое развитие российских регионов требует
+						согласованных действий органов государственной власти, местного самоуправления и 
+						бизнес-сообщества. Уверен, что в ходе дискуссий на площадках форума состоится 
+						профессиональное обсуждение наиболее острых проблем территориального развития страны и будут предложены новые, востребованные инициативы.<br>
+						Желаю участникам форума успешной и плодотворной работы.
+					</i></p>
+					<p class="col-md-3">
+						Председатель Государственной<br> 
+						Думы Российской Федерации 
+					</p>
+					<img id="sign" src="files/images/sign.png"/>
+					<p class="col-md-2">С.Е. Нарышкин</p>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--преимущество-->
+	<div class="container advantage"><div id="ancor02"></div>
+		<h2>ПРЕСТИЖНЫЙ РОССИЙСКИЙ <span>ФОРУМ ОБ ИННОВАЦИЯХ<br>И ИНВЕСТИЦИЯХ</span> В РЕГИОНАХ</h2>
+		<div class="row advantage01">
+			<div class="col-md-3">
+				<img src="files/images/a01.png"/>
+				<p>Более 3200 участников<br>
+				с 2010 года</p>
+			</div>
+			<div class="col-md-3">
+				<img src="files/images/a02.png"/>
+				<p>125 часов<br>
+				экспертных дискуссий<br>
+				в режиме нон-стоп</p>
+			</div>
+			<div class="col-md-3">
+				<img src="files/images/a03.png"/>
+				<p>68 регионов<br> 
+				ежегодно посещают форум 
+				</p>
+			</div>
+			<div class="col-md-3">
+				<img src="files/images/a04.png"/>
+				<p>780 000 000 рублей<br>
+				общая сумма<br>
+				инвестиционных соглашений</p>
+			</div>
+		</div>
+		<div class="row advantage02">
+			<div class="col-md-3">
+				<img src="files/images/a05.png"/>
+				<p>55+ инвестиционных проектов<br>
+				представлено на форуме<br>
+				&nbsp; &nbsp;  </p>
+			</div>
+			<div class="col-md-3">
+				<img src="files/images/a06.png"/>
+				<p>Более 100 журналистов<br>
+				освещают каждое<br>
+				мероприятие</p>
+			</div>
+		</div>
+		<div class="row advantage03">
+			<p class="col-md-12">
+				Форум регионов России – ежегодное деловое мероприятие о региональных инновациях и инвестициях, проводимое с 2010 года.
+				Традиционное место встречи бизнеса регионов, институтов развития, инвесторов, 
+				федеральных органов власти и руководства региональных администраций
+			</p>
+		</div>	
+	</div>	
+<!--Спикеры-->
+
+	<div class="container speaker">
+		<h2><span>СПИКЕРЫ</span> ФОРУМА 2010 - 2013 гг.</h2>	
+		<div class="row">
+			<div id="ca-container" class="ca-container">
+				<div class="ca-wrapper">
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/sp01.png"/>
+								<h3>
+									Александр Торшин 
+								</h3>
+								<p>Первый заместитель Председателя
+									Совета Федерации ФС РФ</p>
+							<img src="files/images/sp14.png"/>
+							<h3>
+								Леонид Рошаль 
+							</h3>
+							<p>Президент Национальной медицинской Палаты</p>
+							</div>
+					</div>
+					<div class="ca-item ca-item-2">
+							<div class="col-md-12">
+								<img src="files/images/sp02.png"/>
+								<h3>
+									Александр Аузан 
+								</h3>
+								<p>Руководитель Консультативной рабочей группы Комиссии при Президенте Российской Федерации по модернизации России  </p>
+							<img src="files/images/sp13.png"/>
+							<h3>
+								Никита Белых 
+							</h3>
+							<p>Губернатор Кировской области</p>
+							</div>
+					</div>
+					
+					<div class="ca-item ca-item-3">
+						<div class="col-md-12">
+							<img src="files/images/sp06.png"/>
+							<h3>
+								Игорь Агамирзян 
+							</h3>
+							<p>Генеральный директор ОАО «Российская венчурная компания» </p>
+							<img src="files/images/sp12.png"/>
+							<h3>
+								Юрий Удальцов 
+							</h3>
+							<p>Директор по инновационному развитию, член правления ОАО «РОСНАНО» </p>
+						</div>
+					</div>
+					
+					<div class="ca-item ca-item-4">
+						<div class="col-md-12">
+							<img src="files/images/sp03.png"/>
+							<h3>
+								Александр Осипов 
+							</h3>
+							<p>Первый заместитель Министра РФ по развитию Дальнего Востока</p>
+							<img src="files/images/sp11.png"/>
+							<h3>
+								Сергей Васильев 
+							</h3>
+							<p>Заместитель Председателя Внешэкономбанка  </p>
+						</div>
+					</div>
+					
+					<div class="ca-item ca-item-5">
+						<div class="col-md-12">
+							<img src="files/images/sp04.png"/>
+							<h3>
+								Вероника Скворцова 
+							</h3>
+							<p>Министр здравоохранения РФ</p>
+							<img src="files/images/sp10.png"/>
+							<h3>
+								Сергей Калашников 
+							</h3>
+							<p>Председатель Комитета Государственной Думы ФС РФ по охране здоровья </p>
+						</div>
+					</div>
+
+					<div class="ca-item ca-item-6">
+						<div class="col-md-12">
+							<img src="files/images/sp05.png"/>
+							<h3>
+								Виктор Толоконский 
+							</h3>
+							<p>Полномочный представитель Президента РФ в Сибирском Федеральном округе</p>
+							<img src="files/images/sp09.png"/>
+							<h3>
+								Олег Фомичев 
+							</h3>
+							<p>Заместитель Министра экономического развития РФ </p>
+						</div>
+					</div>
+					
+					<div class="ca-item ca-item-7">
+						<div class="col-md-12">
+							<img src="files/images/sp07.png"/>
+							<h3>
+								Иван Бортник 
+							</h3>
+							<p>Исполнительный директор «Ассоциации инновационных регионов России» </p>
+							<img src="files/images/sp08.png"/>
+							<h3>
+								Александр Баженов
+							</h3>
+							<p>Директор Центра государственно-частного партнерства Внешэкономбанка</p>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>		
+	</div>
+<!--Слайдер-->
+	<div class="container slider"><div id="ancor03"></div>
+		<div class="row">
+		<h2>ДВИЖЕНИЕ К УСПЕХУ – <span>5 ЛЕТ ВМЕСТЕ</span></h2>	
+			<p class="col-md-12">
+				Тематика мероприятия затрагивает различные направления, механизмы, инструменты инновационного развития регионов.<br> 
+				Форум содержит не только богатый выбор отраслевых секций, но и специальную инвестиционную сессию, которая вызывает высокий интерес участников за счет реальной возможности выйти на подписание инвестиционного соглашения прямо на форуме. 
+			</p>
+			<div id="ca-container01" class="ca-container col-md-12">
+				<div class="ca-nav">
+					<span class="ca-nav-prev">Previous</span>
+					<span class="ca-nav-next">Next</span>
+				</div>
+				<div class="ca-wrapper">
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl01.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-2">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl02.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-3">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl03.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-4">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl04.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-5">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl05.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl06.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl07.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl08.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl09.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl10.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl11.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl12.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl13.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl14.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl15.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl16.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl17.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl18.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl19.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl20.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl21.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl22.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl23.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl24.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl25.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl26.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl27.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl28.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl29.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl30.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl31.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl32.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl33.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl34.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl35.jpg"/>
+							</div>
+					</div>
+					<div class="ca-item ca-item-1">
+							<div class="col-md-12">
+								<img src="files/images/slider/sl36.jpg"/>
+							</div>
+					</div>
+				</div>
+			</div>	
+				
+		</div>		
+	</div>
+<!--Остались вопросы? Закажите бесплатную консультацию!-->
+<div class="container take01">
+	<div class="row">
+		<h2>ДЕЛОВАЯ ПРОГРАММА 2014: <span>АКТУАЛЬНЫЕ ТЕМЫ</span> И НЕФОРМАЛЬНОЕ ОБЩЕНИЕ</h2>
+	 	<ul class="col-md-6">
+			<li>Государственно-частное партнерство</li>
+			<li>Федеральная контрактная система</li>
+			<li>Развитие человеческого капитала</li>
+			<li>Бизнес в спортивном строительстве</li>
+			<li>Тест-драйв инвестиционных проектов</li>
+			<li>Выставка бизнес-проектов «Потенциал регионов»</li>
+			<li>Церемония вручения общественной премии «Инфраструктура России»</li>
+			<li>Площадка для деловых переговоров «1 на 1»</li>
+		</ul>
+		<form class="form-signin col-md-6" role="form" method="post" action="obr05.php" target="_blank">
+			<h2>Получите презентацию<br> 
+				и программу форума на ваш e-mail</h2>
+			<h3>Внимание! Документы форума высылаются только на<br> 
+				корпоративные почтовые ящики</h3>
+			<input class="form-control" name="yourname" type="text" placeholder="Ваше Имя" />
+			<input class="form-control" name="eml" type="text" placeholder="Ваш корпоративный e-mail" />
+			<input type="image" src="files/images/btn02.png">
+		</form>	
+	</div>
+</div>	
+<!--Причины-->
+	<div class="container steps"><div id="ancor04"></div>
+		<div class="row">
+			<h2><span>7 ПРИЧИН</span> ПРИЕХАТЬ НА ФОРУМ</h2>
+			<ul class="col-md-12">
+				<li><img src="files/images/n01.png"/> Общение «1 на 1» с людьми, которые принимают решения в сфере вашего бизнеса и, как правило, недоступны для контактов в другой ситуации</li>
+				<li><img src="files/images/n02.png"/>Возможность презентовать свою компанию как ответственного и надежного бизнес-партнера и исполнителя 
+государственного заказа</li>
+				<li><img src="files/images/n03.png"/>Неформальное общение с директорами предприятий из разных регионов и отраслей экономики, заключение 
+договоренностей о сотрудничестве прямо на форуме</li>
+				<li><img src="files/images/n04.png"/>Знакомство с представителями региональной власти, принимающими участие в работе форума, презентация возможностей вашей компании для решения задач местного уровня</li>
+				<li><img src="files/images/n05.png"/>Встречи с инвесторами, с которыми не так просто встретиться в другой обстановке, для обсуждения 
+возможностей финансирования инвестиционных проектов</li>
+				<li><img src="files/images/n06.png"/>Выступление по актуальной теме перед заинтересованной аудиторией, экспертами, представителями органов власти </li>
+				<li><img src="files/images/n07.png"/>Внесение предложений в резолюцию форума по развитию вашей сферы экономики </li>
+			</ul>
+		</div>
+	</div>	
+<!--Степы-->
+	<div class="container participation">
+		<div class="row">
+			<h2>ВАШИ <span>ПРЕИМУЩЕСТВА ОТ УЧАСТИЯ</span> В ФОРУМЕ</h2>
+			<h3>НОВЫЕ ЗАКАЗЫ И<br> 
+				УВЕЛИЧЕНИЕ<br>
+				ПРИБЫЛИ<br> 
+				ВАШЕГО БИЗНЕСА</h3>
+			<div class="col-md-3 participation01">
+				<p>Повышение<br>
+					узнаваемости компании <br>
+					или торговой марки</p>
+			</div>
+			<div class="col-md-3 participation02">
+				<p>Презентация проектов,<br>
+					продукции, услуг</p>
+			</div>
+			<div class="col-md-3 participation03">
+				<p>Интерес со стороны<br>
+				ведущих СМИ</p>
+			</div>
+			<div class="col-md-3 participation04">
+				<p>Знакомство<br>
+					с потенциальными<br>
+					клиентами</p>
+			</div>
+			<div class="col-md-3 participation05">
+				<p>Предварительные<br>
+					инвестиционные<br>
+					соглашения</p>
+			</div>
+			<div class="col-md-3 participation06">
+				<p>Обмен контактами,<br>
+					деловые переговоры</p>
+			</div>
+		</div>
+	</div>
+<!--Причины-->
+	<div class="container advertising">
+		<div class="row">
+			<h2>ИСПОЛЬЗУЙТЕ <span>РЕКЛАМНЫЕ ВОЗМОЖНОСТИ</span> ФОРУМА НА 100%</h2>
+			<ul class="col-md-12">
+				<li><img src="files/images/ic03.png"/>Имиджевая статья о компании в официальном буклете форума </li>
+				<li><img src="files/images/ic03.png"/>Станьте экспертами в глазах участников и соорганизаторов мероприятия: разместите свои предложения по ключевым 
+					вопросам форума в официальном буклете и резолюции </li>
+				<li><img src="files/images/ic03.png"/>Ваш логотип на центральном баннере на пленарном заседании и на баннерах на круглых столах запомнится всем 
+					участникам  форума</li>
+				<li><img src="files/images/ic03.png"/>Рекламная и сувенирная продукция в портфелях всех участников и гостей </li>
+				<li><img src="files/images/ic03.png"/>Роллап на территории проведения мероприятия всегда привлекает внимание</li>
+				<li><img src="files/images/ic03.png"/>Собственный выставочный стенд - это еще +100% к эффективности вашего участия в форуме </li>
+				<li><img src="files/images/ic03.png"/>Ваши рекламные материалы на стойках регистрации увидят все посетители форума</li>
+				<li><img src="files/images/ic03.png"/>Сделайте нестандартный ход: проведите промо-акцию прямо на форуме </li>
+				<li><img src="files/images/ic03.png"/>Закажите трансляцию ваших рекламных видеороликов на плазменных экранах</li>
+				<li><img src="files/images/ic03.png"/>Интервью вашего руководителя для известного СМИ? Нет ничего проще </li>
+				<li><img src="files/images/ic03.png"/>Ваши фирменные флажки на столах спикеров не останутся незамеченными и попадут во все фотоотчеты  </li>
+				<li><img src="files/images/ic03.png"/>Отраслевой, тематический круглый стол с участием статусных спикеров под вашим брендом – об этом можно не только
+мечтать, но и воплотить в реальность уже 8 апреля! </li>
+			</ul>
+		</div>
+	</div>	
+<!--Остались вопросы? Закажите бесплатную консультацию!-->
+<div class="container take02"><div id="ancor07"></div>
+	<div class="row">
+		<h2><span>Зарегистрируйтесь</span> на Форум регионов России 2014 <span>прямо сейчас</span></h2>
+		<form class="form-signin col-md-12" role="form" method="post" action="obr03.php" target="_blank">
+			<input class="form-control" name="yourname" type="text" placeholder="Ваше Имя" />
+			<input class="form-control" name="phn" type="text" placeholder="Ваш телефон" />
+			<button type="submit">Зарегистрироваться</button>
+		</form>	
+	</div>
+</div>
+<!--Эффект-->
+<div class="container effect">
+		<div class="row">	
+			<h2>УТРОЙТЕ <span>ЭФФЕКТ ОТ УЧАСТИЯ</span> В МЕРОПРИЯТИИ!</h2>
+			<div class="col-md-12">
+				<img src="files/images/img01.jpg"/>
+				<div class="col-md-7" >
+					<p class="col-md-12 effect01">
+						Теперь Форум регионов России - форум-выставка!<br>
+						Выставка – это гениальная возможность рассказать о вашем бизнесе, продукции, услугах сотням потенциальных клиентов и партнеров и представителям органов государственной власти прямо у выставочного стенда.
+					</p>
+					<p class="col-md-12 effect02">
+						Узнайте больше о великолепных возможностях участия<br> 
+						в форуме регионов России с выставочным<br> 
+						стендом – позвоните нам прямо сейчас<br> 
+						<b>+7 (499) 551-88-16,</b><br>
+						и мы ответим на все интересующие вопросы. 
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>	
+<!--ОТЗЫВЫ-->	
+<div class="container reviews"><div id="ancor05"></div>
+		<div class="row">
+		<h2><span>ОТЗЫВЫ</span> УЧАСТНИКОВ ФОРУМА</h2>	
+			<div id="ca-container02" class="ca-container col-md-6">
+				<div class="ca-nav">
+					<span class="ca-nav-prev">Previous</span>
+					<span class="ca-nav-next">Next</span>
+				</div>
+				<div class="ca-wrapper">
+					<div class="ca-item ca-item-1">
+						<div class="col-md-12">
+							<p>«На последнем форуме познакомились с заказчиками из Тульской и Тверской области. С одними заключили предварительное соглашение прямо на мероприятии, сейчас оба являются нашими клиентами уже почти год. Такой результат форума был для нас неожиданным и очень понравился». </p>
+							<span>А.В. Белимов, директор по производству ООО "СИАЛМА" </span>
+						</div>
+					</div>
+					<div class="ca-item ca-item-2">
+						<div class="col-md-12">
+							<p>«Наша компания участвует в форуме уже 3 год, за это время мы подружились и наладили связи со многими коллегами из других регионов. Данным форумом очень довольны. Состав участников подобран идеально с нашей точки зрения, организаторы всегда оказывают помощь в проведении переговоров с интересующими участниками».</p>
+							<span>А.Н. Михайлов, глава представительства "Прогресс Сталь" в Москве</span>
+						</div>
+					</div>
+					<div class="ca-item ca-item-3">
+						<div class="col-md-12">
+							<p>«Думаю, для многих участников форума представляет большой интерес инвестиционный тест-драйв с участием банков, которые нацелены вкладывать в перспективные проекты. Наш проект в прошлом году получил одобрение экспертов, на днях мы завершаем переговоры по получению финансирования».</p>
+							<span>С.А. Воробьев, генеральный директор ООО "Грин Вуд"</span>
+						</div>
+					</div>
+				</div>
+			</div>	
+				
+		</div>		
+	</div>	
+<!--ПРИСОЕДИНЯЙТЕСЬ-->
+	<div class="container join">
+		<div class="row">
+			<h2>ПРИСОЕДИНЯЙТЕСЬ <span>К ЛИДЕРАМ!</span></h2>
+			<div class="col-md-12 ">
+				<img src="files/images/p01.jpg"/>
+				<img src="files/images/p02.jpg"/>
+				<img src="files/images/p03.jpg"/>
+				<img src="files/images/p04.jpg"/>
+				<img src="files/images/p05.jpg"/>
+				<img src="files/images/p06.jpg"/>
+				<img src="files/images/p07.jpg"/>
+				<img src="files/images/p08.jpg"/>
+				<img src="files/images/p09.jpg"/>
+				<img src="files/images/p10.jpg"/>
+				<img src="files/images/p11.jpg"/>
+				<img src="files/images/p12.jpg"/>
+			</div>
+		</div>
+	</div>	
+<!--ВЫБЕРИТЕ СВОЙ ПАКЕТ УЧАСТНИКА -->	
+	<div class="container price"><div id="ancor06"></div>
+		<div class="row">
+			<h2>ВЫБЕРИТЕ СВОЙ <span>ПАКЕТ УЧАСТНИКА!</span></h2>
+			<div class="col-md-3 price01">
+				<div class="col-md-12 price10">
+					<h3>Пакет<br>
+						«УЧАСТНИК»</h3>
+					<h4>(1 человек от организации)</h4>
+				</div>
+				<div class="col-md-12 price20">
+					<p>Участие в форуме,<br>
+						стандартный пакет<br>участника</p>
+				</div>
+				<div class="col-md-12 price30">
+					<span>87 500 Р</span>
+					<a onmouseover="this.style.cursor=&quot;pointer&quot; " onfocus="this.blur();" onclick="document.getElementById('PopUp02').style.display='block'" style="cursor: pointer;">
+						Заказать
+					</a>				
+				</div>
+			</div>
+			<div class="col-md-3 price02">
+				<div class="col-md-12 price10">
+					<h3>Пакет<br>
+						«ДЕЛЕГАЦИЯ»</h3>
+					<h4>(3 человека от организации)</h4>
+				</div>
+				<div class="col-md-12 price20">
+					<p>Участие в форуме,<br>
+						стандартный пакет для<br> 
+						участия делегацией</p>
+				</div>
+				<div class="col-md-12 price30">
+					<span>157 300 Р</span>
+					<a onmouseover="this.style.cursor=&quot;pointer&quot; " onfocus="this.blur();" onclick="document.getElementById('PopUp02').style.display='block'" style="cursor: pointer;">
+						Заказать
+					</a>				
+				</div>
+			</div>
+			<div class="col-md-3 price03">
+				<div class="col-md-12 price10">
+					<h3>Пакет<br>
+						«ДЕЛЕГАЦИЯ<br> 
+						С ВЫСТАВОЧНОЙ<br> 
+						ЭКСПОЗИЦИЕЙ»</h3>
+					<h4>(3 человека от организации)</h4>
+				</div>
+				<div class="col-md-12 price20">
+					<p>Участие в форуме и выставке,<br>максимальный результат и<br>имиджевый эффект</p>
+				</div>
+				<div class="col-md-12 price30">
+					<span>297 000 Р</span>
+					<a onmouseover="this.style.cursor=&quot;pointer&quot; " onfocus="this.blur();" onclick="document.getElementById('PopUp02').style.display='block'" style="cursor: pointer;">
+						Заказать
+					</a>				
+				</div>
+			</div>
+			<div class="col-md-3 price04">
+				<div class="col-md-12 price10">
+					<h3>Пакет<br>
+						«СПОНСОР»</h3>
+					<h4>(5 человек от организации)</h4>
+				</div>
+				<div class="col-md-12 price20">
+					<p>Участие в форуме и выставке,<br>охват всех тематических<br>секций, спонсорский статус,<br>королевские привилегии и<br>рекламные возможности</p>
+				</div>
+				<div class="col-md-12 price30">
+					<span>596 000 Р</span>
+					<a onmouseover="this.style.cursor=&quot;pointer&quot; " onfocus="this.blur();" onclick="document.getElementById('PopUp02').style.display='block'" style="cursor: pointer;">
+						Заказать
+					</a>				
+				</div>
+			</div>
+			<div class="col-md-12 present">Всем участникам в подарок европейский сервис, помощь в размещении в Москве, персональный менеджер от компании 
+				TalkSquare – официального оператора Форума регионов России</div>
+		</div>
+	</div>
+<!--КАК СТАТЬ УЧАСТНИКОМ ФОРУМА-->
+	<div class="container how">
+		<h2><span>КАК</span> СТАТЬ УЧАСТНИКОМ ФОРУМА</h2>
+		<div class="row advantage01">
+			<div class="col-md-6">
+				<img src="files/images/s01.png"/>
+				<p>1.Позвоните нам <b>+7 (499) 551-88-16</b><br> 
+или <a href="#ancor07" id="ancor7">отправьте заявку с сайта</a></p>
+			</div>
+			<div class="col-md-6">
+				<img src="files/images/s02.png"/>
+				<p>2.Мы связываемся с вами, обсуждаем<br> 
+детали вашего участия в форуме</p>
+			</div>
+			<div class="col-md-6">
+				<img src="files/images/s03.png"/>
+				<p>3.Заключение договора,<br>
+наличная или безналичная оплата</p>
+			</div>
+			<div class="col-md-6">
+				<img src="files/images/s04.png"/>
+				<p>4.Получение рабочих материалов форума</p>
+			</div>
+			<div class="col-md-6">
+				<img src="files/images/s05.png"/>
+				<p>5.Работа на форуме, обсуждение,<br> 
+новые деловые контакты, проекты,<br> 
+партнеры и клиенты</p>
+			</div>
+			<div class="col-md-6">
+				<img src="files/images/s06.png"/>
+				<p>6.Вы остаетесь довольны, рекомендуете<br>
+нас своим друзьям и приезжаете<br>
+на форум в следующем году</p>
+			</div>
+		</div>
+	</div>	
+<!--Карта-->
+	<div class="container maps">
+		<div class="row">
+			<div class="col-md-5 contact">
+				<h2>Контакты</h2>
+				<img src="files/images/logo02.png"/>
+				<div  class="col-md-12">
+					<p class="left">Адрес:</p>
+					<p class="right">г. Москва, Семёновская<br>наб., д. 2/1, стр. 1</p>
+				</div>
+				<div  class="col-md-12">
+					<p class="left">Телефон:</p>
+					<p class="right">+7 (499) 551-88-16</p>
+				</div>
+				<div  class="col-md-12">
+					<p class="left">E-mail:</p>
+					<p class="right"><a href="mailto:admin@mail.ru">info@talk-s.ru</a></p>
+				</div>
+				<div  class="col-md-12">
+					<p class="left">САЙТ:</p>
+					<p class="right"><a href="http://talk-s.ru/">talk-s.ru</a></p>
+				</div>
+				<a class="zvon" onmouseover="this.style.cursor=&quot;pointer&quot; " onfocus="this.blur();" onclick="document.getElementById('PopUp').style.display='block'" style="cursor: pointer;">
+					Обратный звонок
+				</a>
+			</div>			
+		</div>
+		<iframe class="google" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ua/maps?f=q&amp;source=s_q&amp;hl=ru&amp;geocode=+&amp;q=%D0%B3.+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%A1%D0%B5%D0%BC%D1%91%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BD%D0%B0%D0%B1.,+%D0%B4.+2%2F1,+%D1%81%D1%82%D1%80.+1&amp;ie=UTF8&amp;hq=&amp;hnear=%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BD%D0%B0%D0%B1.,+2%2F1+%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5+1,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F&amp;t=m&amp;ll=55.777249,37.704649&amp;spn=0.01955,0.164795&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.ua/maps?f=q&amp;source=embed&amp;hl=ru&amp;geocode=+&amp;q=%D0%B3.+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%A1%D0%B5%D0%BC%D1%91%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BD%D0%B0%D0%B1.,+%D0%B4.+2%2F1,+%D1%81%D1%82%D1%80.+1&amp;ie=UTF8&amp;hq=&amp;hnear=%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BD%D0%B0%D0%B1.,+2%2F1+%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5+1,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%B3%D0%BE%D1%80%D0%BE%D0%B4+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F&amp;t=m&amp;ll=55.777249,37.704649&amp;spn=0.01955,0.164795&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left"></a></small>
+	</div>
+<!--информационные партнеры-->
+	<div class="container partnerships">
+		<div class="row">
+			<h2>информационные партнеры</h2>
+			<div class="col-md-12 ">
+				<img src="files/images/in01.png"/>
+				<img src="files/images/in02.png"/>
+				<img src="files/images/in03.png"/>
+				<img src="files/images/in04.png"/>
+				<img src="files/images/in05.png"/>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+<!--Футер-->
+<div class="container footer">
+<!--	<div class="container footer01">
+	 	<div class="row">
+	 		<div class="col-md-4 logo">
+	 			<img src="files/images/logo03.png"/>
+	 		</div>
+	 		<div class="col-md-4 phone">
+	 			<h2>Форум регионов России<br>
+					в социальных сетях:</h2>
+	 			<a href="#"><img src="files/images/ic06.png"/></a>
+	 			<a href="#"><img src="files/images/ic05.png"/></a>
+	 		</div>
+	 		<div class="col-md-4 inn">
+	 			<a href="http://htmlbook.ru" rel="sidebar" onclick="addBookmark()"><img src="files/images/ic04.png"/>Добавить в избранное</a>
+	 		</div>
+	 	</div>
+ 	</div>-->
+	<div class="container footer02">
+	 	<div class="row">
+	 		<div class="col-md-6 copyright">
+				© 2008-2014 ООО «ТокСквер» Все права защищены
+	 		</div>
+	 		<div class="col-md-6 design">
+	 			<p>Создание сайта -</p>  
+	 			<a onmouseover="this.style.cursor=&quot;pointer&quot; " onfocus="this.blur();" onclick="document.getElementById('PopUp03').style.display='block'" style="cursor: pointer;">
+		 			<img src="files/images/logo04.png"/>
+		 		</a>
+	 		</div>
+	 	</div>
+	 </div>
+ </div>
+<!--Попандер-->	
+	<div class="PopUp" id='PopUp'>
+		<div id='PopUpCont' class="col-md-4 form">
+			<form class="form01" role="form" method="post" action="obr01.php" target="_blank">
+			<a class="callx"onmouseover="this.style.cursor=&quot;pointer&quot; " onfocus="this.blur();" onclick="document.getElementById('PopUp').style.display='none'" style="cursor: pointer;"><img src="files/images/x.png"/></a>
+		    <h2 class="form-signin-heading">Заказать обратный звонок</h2>
+			<input class="form-control" name="yourname" type="text" placeholder="Ваше Имя" />
+			<input class="form-control" name="phn" type="text" placeholder="Ваш телефон" />
+		    <input type="image" src="files/images/btn04.png">
+			</form>		
+		</div>
+	</div>	
+	<div class="PopUp" id='PopUp01'>
+		<div class="PopUpCont01" id='PopUpCont' class="col-md-4 form">
+			<form class="form01" role="form" method="post" action="obr02.php" target="_blank">
+			<a class="callx"onmouseover="this.style.cursor=&quot;pointer&quot; " onfocus="this.blur();" onclick="document.getElementById('PopUp01').style.display='none'" style="cursor: pointer;"><img src="files/images/x.png"/></a>
+		        <h2 class="form-signin-heading">Зарегистрируйтесь на Форум<br>
+					регионов России 2014<br>
+					прямо сейчас</h2>
+			<input class="form-control" name="yourname" type="text" placeholder="Ваше Имя" />
+			<input class="form-control" name="phn" type="text" placeholder="Ваш телефон" />
+		    <input type="image" src="files/images/btn01.png">
+			</form>		
+		</div>
+	</div>	
+	<div class="PopUp" id='PopUp02'>
+		<div class="PopUpCont01" id='PopUpCont' class="col-md-4 form">
+			<form class="form01" role="form" method="post" action="obr03.php" target="_blank">
+			<a class="callx"onmouseover="this.style.cursor=&quot;pointer&quot; " onfocus="this.blur();" onclick="document.getElementById('PopUp02').style.display='none'" style="cursor: pointer;"><img src="files/images/x.png"/></a>
+		        <h2 class="form-signin-heading">ПОЛУЧИТЕ БОЛЕЕ ПОДРОБНУЮ ИНФОРМАЦИЮ О ПАКЕТАХ УЧАСТНИКОВ</h2>
+			<input class="form-control" name="yourname" type="text" placeholder="Ваше Имя" />
+			<input class="form-control" name="phn" type="text" placeholder="Ваш телефон" />
+		    <input type="image" src="files/images/btn04.png">
+			</form>		
+		</div>
+	</div>	
+	<div class="PopUp" id='PopUp03'>
+		<div class="PopUpCont01" id='PopUpCont' class="col-md-4 form">
+			<form class="form01" role="form" method="post" action="obr04.php" target="_blank">
+			<a class="callx"onmouseover="this.style.cursor=&quot;pointer&quot; " onfocus="this.blur();" onclick="document.getElementById('PopUp03').style.display='none'" style="cursor: pointer;"><img src="files/images/x.png"/></a>
+		        <h2 class="form-signin-heading">Хотите такой сайт?<br> 
+Оставьте заявку и мы обсудим<br> 
+все детали при личном разговоре</h2>
+			<input class="form-control" name="yourname" type="text" placeholder="Ваше Имя" />
+			<input class="form-control" name="phn" type="text" placeholder="Ваш телефон" />
+		    <input type="image" src="files/images/btn04.png">
+			</form>		
+		</div>
+	</div>	
+<div id="scroller" class="b-top" style="display: none;"><span class="b-top-but">наверх</span></div>	
+<!--Карусель-->
+
+		<script type="text/javascript" src="carusel/js/jquery.easing.1.3.js"></script>
+		<!-- the jScrollPane script -->
+		<script type="text/javascript" src="carusel/js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="carusel/js/jquery.contentcarousel.js"></script>
+		<script type="text/javascript">
+			$('#ca-container').contentcarousel();
+			$('#ca-container01').contentcarousel();
+			$('#ca-container02').contentcarousel();
+		</script>		
+<!--Карусель-->	
+
+</body>
+</html>

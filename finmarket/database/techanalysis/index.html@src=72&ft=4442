@@ -1,0 +1,834 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link rel="stylesheet" type="text/css" href="/css/fm.css">
+<meta name="description" content="Технический анализ акций и российских фондовых индексов">
+<meta name="keywords" content="Технический анализ, теханализ, тех. анализ, акции, фондовые индексы, РТС, ММВБ, Blue Chips, голубые фишки">
+<meta http-equiv="pragma" content="no-cache">
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/jquery-1.8.1.min.js"></script>
+
+<title>Технический анализ - Финмаркет</title>
+<link rel="alternate" type="application/rss+xml" title="Финмаркет - Главные новости" href="http://www.finmarket.ru/rss/mainnews.asp">
+<link rel="alternate" type="application/rss+xml" title="Финмаркет - Новости" href="http://www.finmarket.ru/rss.asp">
+<link rel="alternate" type="application/rss+xml" title="Финмаркет - Лента аналитики" href="http://www.finmarket.ru/rss/analytics.asp">
+<link rel="alternate" type="application/rss+xml" title="Финмаркет - Мнения экспертов" href="http://www.finmarket.ru/rss/experts.asp">
+</head>
+<body bgcolor=white marginheight=0 marginwidth=0 topmargin=0 leftmargin=0>
+<!-- <div class="top">.</div> -->
+<div style="margin-top:7px;"></div>
+<div style="position: absolute; top: 0; left: 0; width: 242px; border: 1px solid #adb2bb; z-index: 120; background: #ffffff; display: none; text-align: left;" id="menu_content"></div>
+<script src="/js/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" media="screen" href="/css/jquery.fancybox-1.3.4.css">
+
+<script type=""text/javascript">
+$(document).ready(function() {
+	$("body").on("click", function() {
+		$("#menu_content").slideUp(200);
+		g_OpenedMenuId = 0;
+		for(var i = 0; i < 6; i++) {
+			var o = document.getElementById("menu_" + i + "_arrow");
+			if (o) o.src = "/img/mn_st1.gif";
+		}
+	});
+	$(".linked_anchor").fancybox({
+		'centerOnScroll': true,
+		'overlayOpacity': 0.5,
+		'titleShow': false,
+		'transitionIn': 'fade',
+		'transitionOut': 'fade',
+		'overlayColor': '#000',
+		'hideOnContentClick': true
+	});
+	$(".linked_image").fancybox({
+		'type': 'image',
+		'centerOnScroll': true,
+		'overlayOpacity': 0.5,
+		'titleShow': false,
+		'transitionIn': 'fade',
+		'transitionOut': 'fade',
+		'overlayColor': '#000',
+		'hideOnContentClick': true
+	});
+});
+
+</script>
+
+<div id="pl36_ban62"><!--AdFox START-->
+<!--roden-media-->
+<!--Площадка: Finmarket / * / *-->
+<!--Тип баннера: BackGround-->
+<!--Расположение: <середина страницы>-->
+<script type="text/javascript">
+<!--
+if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 1000000); }
+if (typeof(document.referrer) != 'undefined') {
+  if (typeof(afReferrer) == 'undefined') {
+    afReferrer = escape(document.referrer);
+  }
+} else {
+  afReferrer = '';
+}
+var addate = new Date(); 
+var scrheight = '', scrwidth = '';
+if (self.screen) {
+scrwidth = screen.width;
+scrheight = screen.height;
+} else if (self.java) {
+var jkit = java.awt.Toolkit.getDefaultToolkit();
+var scrsize = jkit.getScreenSize();
+scrwidth = scrsize.width;
+scrheight = scrsize.height;
+}
+document.write('<scr' + 'ipt type="text/javascript" src="http://ads.adfox.ru/173858/prepareCode?pp=h&amp;ps=blao&amp;p2=epdp&amp;pct=c&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '&amp;puid1=&amp;pdw=' + scrwidth + '&amp;pdh=' + scrheight + '"><\/scr' + 'ipt>');
+// -->
+</script>
+<!--AdFox END--></div>
+
+<div id="pl13_ban61"><!--AdFox START-->
+<!--roden-media-->
+<!--Площадка: Finmarket / * / *-->
+<!--Тип баннера: Перетяжка 100%-->
+<!--Расположение: <верх страницы>-->
+<script type="text/javascript">
+<!--
+if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 1000000); }
+if (typeof(document.referrer) != 'undefined') {
+  if (typeof(afReferrer) == 'undefined') {
+    afReferrer = escape(document.referrer);
+  }
+} else {
+  afReferrer = '';
+}
+var addate = new Date(); 
+var scrheight = '', scrwidth = '';
+if (self.screen) {
+scrwidth = screen.width;
+scrheight = screen.height;
+} else if (self.java) {
+var jkit = java.awt.Toolkit.getDefaultToolkit();
+var scrsize = jkit.getScreenSize();
+scrwidth = scrsize.width;
+scrheight = scrsize.height;
+}
+document.write('<scr' + 'ipt type="text/javascript" src="http://ads.adfox.ru/173858/prepareCode?pp=g&amp;ps=blao&amp;p2=y&amp;pct=c&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '&amp;puid1=&amp;pdw=' + scrwidth + '&amp;pdh=' + scrheight + '"><\/scr' + 'ipt>');
+// -->
+</script>
+<!--AdFox END--></div>
+
+
+<div class="content">
+	<div class="top">.</div>
+	<div class="inner">.</div>
+	<div class="head_spinner_block">
+		<div class="head_spinner_title"><!--noindex-->СЕГОДНЯ:<!--/noindex--></div>
+		<div class="head_spinner">
+			<!-- крутилка -->
+			<div id="head_spin_cur">&nbsp;</div>
+			<div id="head_spin_next">&nbsp;</div>
+		</div>
+		<div class="split_dot side_margin">.</div>
+	</div>
+	<script type="text/javascript" src="/headspinner.asp"></script>
+	<div class="head_logo">
+		<!-- логотип и кнопки соц.сетей-->
+		<div class="logo_box">
+		<a href="/" style="margin-left: 12px;"><img src="/img/logo_fm.gif" width="280" height="38" border="0" /></a>
+		</div>
+		<div class="socnet_box" style="width: 640px;">
+			<a href="/archive/" style="position: relative; top: -3px;">ПОИСК</a>
+			<span class="v_split" style="top: -3px;">|</span>		
+			<!-- <a href="" class="lnkblue" style="position: relative; top: -3px;">МОСБИРЖА ВАЛЮТА</a>
+			<span class="v_split" style="top: -3px;">|</span>		-->
+			<!--noindex--><a href="http://www.interfax.ru/" class="lnkblue" target="_blank" style="position: relative; top: -3px;"  rel="nofollow">INTERFAX.RU</a><!--/noindex-->
+			<span class="v_split" style="top: -3px;">|</span>
+			<!--noindex--><a href="http://www.rusbonds.ru/" class="lnkblue" target="_blank" style="position: relative; top: -3px;"  rel="nofollow">RUSBONDS.RU</a><!--/noindex-->
+			<!--noindex--><a href="http://www.facebook.com/finmarket" target="_blank" style="margin-left: 16px;"  rel="nofollow"><img src="/img/fb_l.gif" width="18" height="18" border="0" /></a><!--/noindex-->
+			<!--noindex--><a href="http://twitter.com/#!/finmarket_news" target="_blank" style="margin-left: 4px;"  rel="nofollow"><img src="/img/tw_l.gif" width="18" height="18" border="0" /></a><!--/noindex-->
+			<!--noindex--><a href="http://vkontakte.ru/finmarket_news" target="_blank" style="margin-left: 4px;"  rel="nofollow"><img src="/img/vk_l.gif" width="18" height="18" border="0" /></a><!--/noindex-->
+			<!--noindex--><a href="http://www.yandex.ru/?add=65283&from=promocode" target="_blank" style="margin-left: 4px;"  rel="nofollow"><img src="/img/ya_l.gif" width="18" height="18" border="0" /></a><!--/noindex-->
+			<a href="/rss/mainnews.asp" target="_blank" style="margin-left: 4px;"><img src="/img/rss_l.gif" width="18" height="18" border="0" /></a>
+			<a href="#" style="margin-left: 4px;" onclick="return FavAdd();"><img src="/img/fav_l.gif" width="18" height="18" border="0" /></a>
+			<script language="javascript">function FavAdd() { t = "ИА «Финмаркет»"; u = "http://www.finmarket.ru"; if (window.sidebar) { window.sidebar.addPanel(t, u, ""); } else if (window.external) { window.external.AddFavorite(u, t); } return false; }</script>
+		</div>
+	</div>
+	<div class="split_1 side_margin">.</div>
+	<div class="head_menu">
+		<!-- главное меню сайта -->
+		<div class="top_menu_left">
+			<!-- текстовая часть-->
+			<a href="/main/" class="top_menu_txt red">Главное</a>
+			<a href="/economics/" class="top_menu_txt">Экономика</a>
+			<a href="/finances/" class="top_menu_txt">Финансы</a>
+			<a href="/life/" class="top_menu_txt">Жизнь</a>
+		</div>
+		<div class="top_menu_right">
+			<!-- цифровая часть-->
+			<span id="menu_2"><a href="/currency/" class="top_menu_digit blue2">Валюта</a><a href="" class="menu_dd" onclick="return MenuDropDown(2, event)"><img src="/img/mn_st1.gif" width="12" height="12" border="0" id="menu_2_arrow" /></a></span>
+			<span id="menu_3"><a href="/shares/" class="top_menu_digit blue2">Акции</a><a href="" class="menu_dd" onclick="return MenuDropDown(3, event)"><img src="/img/mn_st1.gif" width="12" height="12" border="0" id="menu_3_arrow"  /></a></span>
+			<span id="menu_4"><a href="/bonds/" class="top_menu_digit blue2">Облигации</a><a href="" class="menu_dd" onclick="return MenuDropDown(4, event)"><img src="/img/mn_st1.gif" width="12" height="12" border="0" id="menu_4_arrow"  /></a></span>
+			<span id="menu_5"><a href="/database/" class="top_menu_digit lblue">Аналитикам</a><a href="" class="menu_dd" onclick="return MenuDropDown(5, event)"><img src="/img/mn_st1.gif" width="12" height="12" border="0" id="menu_5_arrow"  /></a></span>
+			<span id="menu_6"><a href="/x/" class="top_menu_digit lblue">Подписчикам</a><a href="" class="menu_dd" onclick="return MenuDropDown(6, event)"><img src="/img/mn_st1.gif" width="12" height="12" border="0" id="menu_6_arrow"/></a></span>
+			<span id="menu_7"><a href="/about/" class="top_menu_digit lblue">О компании</a><a href="" class="menu_dd" onclick="return MenuDropDown(7, event)"><img src="/img/mn_st1.gif" width="12" height="12" border="0" id="menu_7_arrow"/></a></span>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="split_2" style="margin-bottom: 10px;">.</div>
+			<div style="margin: 10px; margin-top: 20px;">
+				<b style="font-size: 24px;">АНАЛИТИКАМ</b>
+				<div style="margin-top: 10px; font-size: 11px;"><a href=/ class="fs11">Главная</a> &nbsp;/&nbsp; <a href=/database/ class="fs11">Аналитикам</a> &nbsp;/&nbsp; <span class="fs11"> Технический анализ</span></div>
+			</div>
+			<div class="split_3" style="margin-bottom: 10px;">.</div>
+			<div class="left_240">
+			
+<div id="pl27_ban39"><!--AdFox START-->
+<!--roden-media-->
+<!--Площадка: Finmarket / * / *-->
+<!--Тип баннера: 240х120_новый ФМ-->
+<!--Расположение: <верх страницы>-->
+<script type="text/javascript">
+<!--
+if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 1000000); }
+if (typeof(document.referrer) != 'undefined') {
+  if (typeof(afReferrer) == 'undefined') {
+    afReferrer = escape(document.referrer);
+  }
+} else {
+  afReferrer = '';
+}
+var addate = new Date(); 
+var scrheight = '', scrwidth = '';
+if (self.screen) {
+scrwidth = screen.width;
+scrheight = screen.height;
+} else if (self.java) {
+var jkit = java.awt.Toolkit.getDefaultToolkit();
+var scrsize = jkit.getScreenSize();
+scrwidth = scrsize.width;
+scrheight = scrsize.height;
+}
+document.write('<scr' + 'ipt type="text/javascript" src="http://ads.adfox.ru/173858/prepareCode?pp=g&amp;ps=blao&amp;p2=etmb&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '&amp;puid1=&amp;pdw=' + scrwidth + '&amp;pdh=' + scrheight + '"><\/scr' + 'ipt>');
+// -->
+</script>
+<!--AdFox END--></div>
+<div class="rubrikator">
+	<!-- меню рубрики -->
+	<div class="group"><b>Динамика мировых рынков</b></div>
+	<div class="split_dot">.</div>
+	<div class="item"><a href="/database/graph.asp?id=3">Валютный рынок</a></div>
+	<div class="item"><a href="/database/graph.asp?id=0">Индикаторы</a></div>
+	<div class="item"><a href="/database/graph.asp?id=6">Товарный рынок</a></div>
+	<div class="item"><a href="/database/fintool/search.asp?ftid=6">Финансовые инструменты: фьючерсы</a></div>
+	<div class="item"><a href="/database/dailydata/?rid=5&ms=I&pr=0">Ежедневные итоги: товары</a></div>
+	<div class="group">Новости и аналитика</div>
+	<div class="split_dot">.</div>
+	<div class="item"><a href="/database/news/">Лента новостей</a></div>
+	<div class="item"><a href="/analytics/">Мнения аналитиков</a></div>
+	<div class="item"><a href="/database/comments/">Лента комментариев</a></div>
+	<div class="group">Базы данных</div>
+	<div class="split_dot">.</div>
+	<div class="item"><a href="/database/organization/search.asp">Каталог компаний</a></div>
+	<div class="item"><a href="/database/fintool/search.asp">Финансовые инструменты</a></div>
+	<div class="item"><a href="/database/rankings/">Рэнкинги ИФ100</a></div>
+	<div class="item"><a href="/database/creditratings/">Кредитные рейтинги</a></div>
+	</div>
+
+			</div>
+		<div class="right_wide">
+<div style="margin: 0px 10px; height: 40px; line-height: 34px;"><b style="font-size: 14px;">ТЕХНИЧЕСКИЙ АНАЛИЗ<img src="/img/s_gr_down.gif" width="7" height="4" border="0" align="absmiddle" style="margin-left: 10px;" /></b></div>
+<style type="text/css">
+div.sample_line { width: 60px; height: 1px; line-height: 1px; font-size: 1px; }
+</style>
+	<div style="width: 100%;">
+	<table cellspacing=0 cellpadding=0 width="100%" style="width: 100%;">
+	<tr><td width=628 valign=top>
+	<form action=/database/techanalysis/ method=get name=frmChart1>
+	<table border=0 cellpadding=0 cellspacing=4 style="padding-left: 8px;">
+	<tr><td>
+		Источник:<br><select name=src class=gsm onchange='this.form.submit()'><option value="66">Рос.Фонд.Индексы</option><option value="72" selected>МБ Blue Chips T+</option></select>
+		</td>
+	<td><br><input type="image" src="/img/metro_select.gif" width="73" height="20" border="0" /></td>
+	</tr>
+	</table>
+	</form>
+	
+
+	<form action=/database/techanalysis/ method=get name=frmChart2>
+	<table border=0 cellpadding=0 cellspacing=4 style="padding-left: 8px;" class="fs11">
+	<td>
+	<input type=hidden name=src value=72>
+	Инструмент:<br><select name=ft class=gsm><option value="4378">+МосЭнерго</option><option value="4209">АВТОВАЗао</option><option value="4210">АВТОВАЗап</option><option value="27073">ВТБао</option><option value="4445">Газпрнефть</option><option value="4609">ГАЗПРОМао</option><option value="5800">ГМКНорНик</option><option value="4355">ЛУКОЙЛ</option><option value="61579">РБКао</option><option value="6036">РБКИС-ао</option><option value="21265">Роснефть</option><option value="4431">Ростел-ао</option><option value="4432">Ростел-ап</option><option value="4442" selected>Сбербанк</option><option value="4443">Сбербанк-п</option><option value="4455">Сургнфгз</option><option value="4456">Сургнфгз-п</option><option value="5854">Татнфт3ао</option><option value="5855">Татнфт3ап</option><option value="4864">УралСвИ-ао</option></select><td>Период:<br><select name=per class=gsm><option value="0">1 минута</option><option value="1">5 минут</option><option value="2">15 минут</option><option value="3">1 час</option><option value="4" selected>день</option></select></td>
+		<td>Цена:<br>
+		<select name=pt class=gsm>
+		<option value="0" selected>Закрытие</option><option value="1">Средневзвеш.</option>
+		</select>
+		</td>
+	</tr>
+	</table>
+	<table border=0 cellpadding=0 cellspacing=4  class="fs11">
+	<tr>
+		<td width=1>&nbsp;</td><td>Вид графика:<br>
+		<select name=ct class=gsm>
+		<option value="0">Без цены</option><option value="1" selected>Свечки</option><option value="2">Бары</option><option value="3">Линия</option>
+		</select>
+		</td>
+		<td>Глубина:<br>
+		<select name=depth class=gsm>
+		<option value="0" selected>100 точек</option><option value="1">200 точек</option><option value="2">300 точек</option><option value="3">400 точек</option>
+		</select>
+		</td>
+		<td>Объемы:<br>
+		<select name=vol class=gsm>
+		<option value="0" selected>Скрыть</option><option value="1">Показать</option>
+		</select>
+		</td>
+		<td>Курсор:<br>
+		<select name=cur class=gsm><option value="0">Скрыть</option><option value="1" selected>Показать</option></select></td>
+		<td>Обновление:<br>
+		<select name=refr class=gsm><option value="0" selected>Без обновления</option><option value="1">5 минут</option><option value="2">10 минут</option><option value="3">15 минут</option></select></td>
+		<td width=20>&nbsp;</td>
+		<td><br><input type="image" src="/img/btn_show.gif" width="76" height="20" border="0" /></td>
+		<td><br><input type="image" src="/img/metro_clear.gif" width="73" height="20" border="0" onclick="ClearForm()" /></td>
+	</tr>
+	</table>
+	<div class=grayline style="height: 4px;"></div>
+	<table border=0 cellpadding=0 cellspacing=4 style="padding-left: 8px;" class="fs11">
+	<tr><td>Средние скользящие (СС)</td><td>Интервал</td><td>Отклонение от СС</td><td>&nbsp;</td><td>Цвет линии</td></tr>
+		
+	<tr>
+		<td><select name=avgsl class=gsm>		<option value="-1" selected>(нет)</option><option value="0">Простая СС (SMA)</option><option value="1">Экспоненциальная СС (EMA)</option><option value="2">Линейно-взвешенная СС (WMA)</option><option value="3">Регрессионная СС (RMA)</option></select></td>
+		<td><input type=text name=slper maxlength=2 size=6 value="" class="border gsm"></td>
+		<td><select name=devtype class=gsm><option value="-1" selected>(нет)</option><option value="4">Полосы Боллинджера (BOB)</option><option value="0">Абсолютное (ед.цены) (ABS)</option><option value="1">Относительное (PER)</option><option value="2">Максимальное (ед.цены) (MAX)</option><option value="3">Максимальное (MAXPER)</option></select></td>
+		<td><input type=text name=devdist maxlength=3 size=6 value="" class="border gsm"></td>
+		<td><div style="background: #3366CC;" class="sample_line">.</div></div></td>
+	</tr>
+	
+	<tr>
+		<td><select name=avgsl class=gsm>		<option value="-1" selected>(нет)</option><option value="0">Простая СС (SMA)</option><option value="1">Экспоненциальная СС (EMA)</option><option value="2">Линейно-взвешенная СС (WMA)</option><option value="3">Регрессионная СС (RMA)</option></select></td>
+		<td><input type=text name=slper maxlength=2 size=6 value="" class="border gsm"></td>
+		<td><select name=devtype class=gsm><option value="-1" selected>(нет)</option><option value="4">Полосы Боллинджера (BOB)</option><option value="0">Абсолютное (ед.цены) (ABS)</option><option value="1">Относительное (PER)</option><option value="2">Максимальное (ед.цены) (MAX)</option><option value="3">Максимальное (MAXPER)</option></select></td>
+		<td><input type=text name=devdist maxlength=3 size=6 value="" class="border gsm"></td>
+		<td><div style="background: #CC66CC;" class="sample_line">.</div></div></td>
+	</tr>
+	
+	<tr>
+		<td><select name=avgsl class=gsm>		<option value="-1" selected>(нет)</option><option value="0">Простая СС (SMA)</option><option value="1">Экспоненциальная СС (EMA)</option><option value="2">Линейно-взвешенная СС (WMA)</option><option value="3">Регрессионная СС (RMA)</option></select></td>
+		<td><input type=text name=slper maxlength=2 size=6 value="" class="border gsm"></td>
+		<td><select name=devtype class=gsm><option value="-1" selected>(нет)</option><option value="4">Полосы Боллинджера (BOB)</option><option value="0">Абсолютное (ед.цены) (ABS)</option><option value="1">Относительное (PER)</option><option value="2">Максимальное (ед.цены) (MAX)</option><option value="3">Максимальное (MAXPER)</option></select></td>
+		<td><input type=text name=devdist maxlength=3 size=6 value="" class="border gsm"></td>
+		<td><div style="background: #009900;" class="sample_line">.</div></div></td>
+	</tr>
+	
+	</table>
+	<div class=grayline style="height: 4px;"></div>
+	<table border=0 cellpadding=0 cellspacing=4 class="fs11" style="padding-left: 8px;">
+	<tr>
+		<td>Дополнительные индикаторы</td>
+		<td>Тип СС</td>
+		<td>Интервал 1</td>
+		<td>Интервал 2</td>
+		<td>Цвет линии</td>
+	</tr>
+	
+	<tr>
+		<td><select name=aitype_0 class=gsm onchange="SelectAIType(0)"><option value="-1" selected>(нет)</option><option value="0">Осциллятор цены (PRO)</option><option value="1">Осциллятор объема (VLO)</option><option value="2">Индикатор Каири (KRI)</option><option value="10">Индикатор Чайкина (CHO)</option><option value="3">Схождение/расхождение средних скользящих (MACD)</option><option value="4">Гистограмма MACD (HMACD)</option><option value="5">Индикатор момента (MOM)</option><option value="6">Индикатор момента (MOM %)</option><option value="7">Индикатор темпа (ROC)</option><option value="8">Индекс относительной силы (RSI)</option><option value="9">Усредненный индекс относительной силы (MARSI)</option><option value="11">Стохастический осциллятор (STO)</option><option value="12">Индикатор среднего направленного движения (ADX)</option></select></td>
+		<td><select name=aima_0 class=gsm onclick="SelectAIMA(0)"><option value="0" selected>SMA</option><option value="1">EMA</option><option value="2">WMA</option><option value="3">RMA</option></select></td>
+		<td><input type=text name=aipar1_0 class="border gsm" maxlength=14 size=10 value=""></td>
+		<td><input type=text name=aipar2_0 class="border gsm" maxlength=14 size=10 value=""></td>
+		<td><div style="background: #1144AA;" class="sample_line">.</div></div></td>
+	</tr>
+	
+	<tr>
+		<td><select name=aitype_1 class=gsm onchange="SelectAIType(1)"><option value="-1" selected>(нет)</option><option value="0">Осциллятор цены (PRO)</option><option value="1">Осциллятор объема (VLO)</option><option value="2">Индикатор Каири (KRI)</option><option value="10">Индикатор Чайкина (CHO)</option><option value="3">Схождение/расхождение средних скользящих (MACD)</option><option value="4">Гистограмма MACD (HMACD)</option><option value="5">Индикатор момента (MOM)</option><option value="6">Индикатор момента (MOM %)</option><option value="7">Индикатор темпа (ROC)</option><option value="8">Индекс относительной силы (RSI)</option><option value="9">Усредненный индекс относительной силы (MARSI)</option><option value="11">Стохастический осциллятор (STO)</option><option value="12">Индикатор среднего направленного движения (ADX)</option></select></td>
+		<td><select name=aima_1 class=gsm onclick="SelectAIMA(1)"><option value="0" selected>SMA</option><option value="1">EMA</option><option value="2">WMA</option><option value="3">RMA</option></select></td>
+		<td><input type=text name=aipar1_1 class="border gsm" maxlength=14 size=10 value=""></td>
+		<td><input type=text name=aipar2_1 class="border gsm" maxlength=14 size=10 value=""></td>
+		<td><div style="background: #AA44AA;" class="sample_line">.</div></div></td>
+	</tr>
+	
+	<tr>
+		<td><select name=aitype_2 class=gsm onchange="SelectAIType(2)"><option value="-1" selected>(нет)</option><option value="0">Осциллятор цены (PRO)</option><option value="1">Осциллятор объема (VLO)</option><option value="2">Индикатор Каири (KRI)</option><option value="10">Индикатор Чайкина (CHO)</option><option value="3">Схождение/расхождение средних скользящих (MACD)</option><option value="4">Гистограмма MACD (HMACD)</option><option value="5">Индикатор момента (MOM)</option><option value="6">Индикатор момента (MOM %)</option><option value="7">Индикатор темпа (ROC)</option><option value="8">Индекс относительной силы (RSI)</option><option value="9">Усредненный индекс относительной силы (MARSI)</option><option value="11">Стохастический осциллятор (STO)</option><option value="12">Индикатор среднего направленного движения (ADX)</option></select></td>
+		<td><select name=aima_2 class=gsm onclick="SelectAIMA(2)"><option value="0">SMA</option><option value="1">EMA</option><option value="2">WMA</option><option value="3">RMA</option></select></td>
+		<td><input type=text name=aipar1_2 class="border gsm" maxlength=14 size=10 value=""></td>
+		<td><input type=text name=aipar2_2 class="border gsm" maxlength=14 size=10 value=""></td>
+		<td><div style="background: #007700;" class="sample_line">.</div></div></td>
+	</tr>
+	
+	</table>
+	</form>
+</div>	
+
+<script language="javascript">
+<!--
+function SelectAIType(idx) {
+	var frm = document.frmChart2;
+	var tmp = frm["aitype_" + idx].options[frm["aitype_" + idx].selectedIndex].value;
+	switch (tmp) {
+		case "-1":
+			frm["aima_" + idx].disabled = true;
+			frm["aipar1_" + idx].disabled = true;
+			frm["aipar2_" + idx].disabled = true;
+			break;
+		case "2":
+		case "4":
+		case "8":
+			frm["aima_" + idx].disabled = false;
+			frm["aipar1_" + idx].disabled = false;
+			frm["aipar2_" + idx].disabled = false;
+			break;
+		case "3":
+			frm["aima_" + idx].disabled = false;
+			frm["aipar1_" + idx].disabled = false;
+			frm["aipar2_" + idx].disabled = true;
+			break;
+		case "5":
+		case "6":
+		case "7":
+			frm["aima_" + idx].disabled = true;
+			frm["aipar1_" + idx].disabled = false;
+			frm["aipar2_" + idx].disabled = true;
+			break;
+		default : 
+			frm["aima_" + idx].disabled = false;
+			frm["aipar1_" + idx].disabled = false;
+			frm["aipar2_" + idx].disabled = false;
+	}
+	var tmp2 = frm["aima_" + idx].options[frm["aima_" + idx].selectedIndex].value;
+	if ((tmp == 8 || tmp == 9 || tmp == 12) && tmp2 == 3) {
+		frm["aima_" + idx].selectedIndex = 0;
+	}
+}
+function SelectAIMA(idx) {
+	var frm = document.frmChart2;
+	var tmp = frm["aima_" + idx].options[frm["aima_" + idx].selectedIndex].value;
+	var tmp2 = frm["aima_" + idx].options[frm["aima_" + idx].selectedIndex].value;
+	if ((tmp == 8 || tmp == 9 || tmp == 12) && tmp2 == 3) {
+		frm["aima_" + idx].selectedIndex = 0;
+	}
+}
+function ClearForm() {
+	var frm = document.frmChart2;
+	for (i = 0; i < 3; i++) {
+		frm.avgsl[i].selectedIndex = 0;
+		frm.slper[i].value = "";
+		frm.devtype[i].selectedIndex = 0;
+		frm.devdist[i].value = "";
+	}
+	for (i = 0; i < 3; i++) {
+		frm["aitype_" + i].selectedIndex = 0;
+		frm["aima_" + i].selectedIndex = 0;
+		frm["aipar1_" + i].value = "";
+		frm["aipar2_" + i].value = "";
+	}
+	frm.submit();
+}
+for (i = 0; i < 3; i++) {
+	SelectAIType(i);
+}
+// -->
+</script>
+
+	</td>
+	<td width=10>&nbsp;</td>
+	<td width=240 valign=top>
+					
+<div id="pl28_ban30"><!--AdFox START-->
+<!--roden-media-->
+<!--Площадка: Finmarket / * / *-->
+<!--Тип баннера: ТГБ 2-->
+<!--Расположение: <верх страницы>-->
+<script type="text/javascript">
+<!--
+if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 1000000); }
+if (typeof(document.referrer) != 'undefined') {
+  if (typeof(afReferrer) == 'undefined') {
+    afReferrer = escape(document.referrer);
+  }
+} else {
+  afReferrer = '';
+}
+var addate = new Date(); 
+var scrheight = '', scrwidth = '';
+if (self.screen) {
+scrwidth = screen.width;
+scrheight = screen.height;
+} else if (self.java) {
+var jkit = java.awt.Toolkit.getDefaultToolkit();
+var scrsize = jkit.getScreenSize();
+scrwidth = scrsize.width;
+scrheight = scrsize.height;
+}
+document.write('<scr' + 'ipt type="text/javascript" src="http://ads.adfox.ru/173858/prepareCode?pp=g&amp;ps=blao&amp;p2=emxu&amp;pct=d&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '&amp;puid1=&amp;pdw=' + scrwidth + '&amp;pdh=' + scrheight + '&amp;random=916940632"><\/scr' + 'ipt>');
+// -->
+</script>
+<!--AdFox END--></div>
+
+<div id="pl29_ban29"><!--AdFox START-->
+<!--roden-media-->
+<!--Площадка: Finmarket / * / *-->
+<!--Тип баннера: ТГБ 2-->
+<!--Расположение: <верх страницы>-->
+<script type="text/javascript">
+<!--
+if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 1000000); }
+if (typeof(document.referrer) != 'undefined') {
+  if (typeof(afReferrer) == 'undefined') {
+    afReferrer = escape(document.referrer);
+  }
+} else {
+  afReferrer = '';
+}
+var addate = new Date(); 
+var scrheight = '', scrwidth = '';
+if (self.screen) {
+scrwidth = screen.width;
+scrheight = screen.height;
+} else if (self.java) {
+var jkit = java.awt.Toolkit.getDefaultToolkit();
+var scrsize = jkit.getScreenSize();
+scrwidth = scrsize.width;
+scrheight = scrsize.height;
+}
+document.write('<scr' + 'ipt type="text/javascript" src="http://ads.adfox.ru/173858/prepareCode?pp=g&amp;ps=blao&amp;p2=emxu&amp;pct=d&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '&amp;puid1=&amp;pdw=' + scrwidth + '&amp;pdh=' + scrheight + '&amp;random=1326526010"><\/scr' + 'ipt>');
+// -->
+</script>
+<!--AdFox END--></div>
+
+<div id="pl30_ban28"><!--AdFox START-->
+<!--roden-media-->
+<!--Площадка: Finmarket / * / *-->
+<!--Тип баннера: ТГБ 2-->
+<!--Расположение: <верх страницы>-->
+<script type="text/javascript">
+<!--
+if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 1000000); }
+if (typeof(document.referrer) != 'undefined') {
+  if (typeof(afReferrer) == 'undefined') {
+    afReferrer = escape(document.referrer);
+  }
+} else {
+  afReferrer = '';
+}
+var addate = new Date(); 
+var scrheight = '', scrwidth = '';
+if (self.screen) {
+scrwidth = screen.width;
+scrheight = screen.height;
+} else if (self.java) {
+var jkit = java.awt.Toolkit.getDefaultToolkit();
+var scrsize = jkit.getScreenSize();
+scrwidth = scrsize.width;
+scrheight = scrsize.height;
+}
+document.write('<scr' + 'ipt type="text/javascript" src="http://ads.adfox.ru/173858/prepareCode?pp=g&amp;ps=blao&amp;p2=emxu&amp;pct=d&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '&amp;puid1=&amp;pdw=' + scrwidth + '&amp;pdh=' + scrheight + '&amp;random=704670341"><\/scr' + 'ipt>');
+// -->
+</script>
+<!--AdFox END--></div>
+
+	</td>
+	</tr>
+	</table>
+	
+	<div class=dgrayplash style="display: none;">
+		<div class="leftflo whitehead"><h2 style="margin: 0px; font-size: 12px;">Технический анализ - источник &laquo;МБ Blue Chips T+&raquo;, инструмент &laquo;Сбербанк&raquo;, период: день, глубина: 100 точек</h2></div>
+		<div class=rightflo><a href="/about/html.asp?cod=348" style=color:white>Описание формул</a> &nbsp; </div>
+	</div>
+	
+	<div>
+		<div style="position: relative; top: 0px; left: 0px;">
+		
+		<img src="http://gr04.finmarket.ru/Charts/TechAnalysis.aspx?src=72&ft=4442&per=4&depth=0&vol=0&ct=1" border="0" id="chart" onload="LoadChartData()" onmousemove="drawValues(event)" onmouseout="HideLine()"><br>
+ 		<div id="chartLine" style="display:none; width:1px; font-size: 1px; margin: 0px; padding: 0px; background-color:#ff0099; position:absolute; top: 0px; left: 0px;  z-index: 1;">.</div>
+		<div id="chartVal" style="display:none; border: 1px solid #000000; font-size: 10px; padding: 1px; background-color:#FFFFCC; color: #000000; font-family: Verdana; position:absolute; top: 0px; left: 0px;  z-index: 250; text-align: left;"></div>
+		<script language="javascript" id="jsData"></script>
+		<script language="javascript">
+		var chartOk = false;
+		var prevArrId = -1;
+		
+		var oLine = document.getElementById("chartLine");
+		var oCanvas = document.getElementById("chart"); //document.getElementById("chartCanvas");
+		var oChartVal = document.getElementById("chartVal");
+		var chart = document.getElementById("chart");
+		var jsData = document.getElementById("jsData");
+
+		function LoadChartData() {
+			if (jsData) {
+				jsData.src="http://gr04.finmarket.ru/Charts/TechAnalysis.aspx?getContent";
+			}
+		}
+		
+		function StartDynChart() {
+			chartOk = true;
+		}
+		function drawValues(evt) {
+			if (chartOk) {
+				var lMouseCoordX = 0;
+				var lMouseCoordY = 0;
+				if ('layerX' in evt) {
+					lMouseCoordX = evt.layerX;
+					lMouseCoordY = evt.layerY;
+				} else {
+					if ('x' in evt) {
+						lMouseCoordX = evt.x;
+						lMouseCoordY = evt.y;
+					}
+				}
+				if (oLine && oCanvas) {
+					if (oLine.style.display == "none") {
+						oLine.style.display = "block";
+						oLine.style.height = oCanvas.offsetHeight - 121;
+						oLine.style.top = (29 + oCanvas.offsetTop);
+					}
+					var newArrId = getNearestXCoord(lMouseCoordX);
+					if (prevArrId != newArrId) {
+						prevArrId = newArrId;
+						oLine.style.left = arrCoordX[prevArrId] + oCanvas.offsetLeft;
+						if (oChartVal) {
+							if (oChartVal.style.display == "none") {
+								oChartVal.style.display = "block";
+								oChartVal.style.top = oCanvas.offsetTop + oCanvas.offsetHeight / 2;
+							}
+							oChartVal.style.left = 16 + arrCoordX[prevArrId] + oCanvas.offsetLeft + 4;
+							oChartVal.style.top = 16 + oCanvas.offsetTop + lMouseCoordY;
+							oChartVal.innerHTML = arrValues[prevArrId];
+						}
+					}
+				}
+			}
+		}
+		function HideLine() {
+			if (oLine && chartOk) {
+				oLine.style.display = "none";
+				oChartVal.style.display = "none";
+				prevArrId = -1;
+			}
+		}
+		function getNearestXCoord(lMouseX) {
+			var diff = 0;
+			var arrId = 0;
+			var prev = 0;
+			for(i = 0; i < arrCoordX.length; i++) {
+				diff = Math.abs(lMouseX - arrCoordX[i]);
+				if (diff == 0) {
+					arrId = i;
+					break;
+				} else {
+					if (i == 0) {
+						prev = diff;
+					}
+					if (diff < prev) {
+						arrId = i;
+						prev = diff;
+					}
+				}
+			}
+			return arrId;
+		}
+		</script>
+		
+		</div>
+	</div>
+	
+	
+			</div>
+	</div>
+
+	<div style="clear:both; height: 20px; line-height: 20px; font-size: 1px;">.</div>
+</div>
+
+<div style="width: 1140px; text-align: left; margin: 0px auto; background: #494949;" id="footer">
+	<!-- футер -->
+	<div style="height: 60px; margin: 0px 20px; line-height: 60px; display: inline-block;">
+		<!-- лого и копирайт -->
+		<div style="float: left; width: 345px;">
+			<div style="margin-top: 20px;"><a href="/"><img src="/img/logo_ft2.gif" border="0" width="176" height="26" /></a></div>
+		</div>
+		<div style="float: right; clear: right; width: 755px; text-align: right;">
+			<span style="color: #818181; font-size: 11px;">Copright &copy; 1991&mdash;2014. Все права защищены. &nbsp; | &nbsp; <a href="/lcz.asp" style="color: #818181; text-decoration: none; font-size: 11px;">Условия использования информации</a>&nbsp; | &nbsp; <a href="/verbot.asp" style="color: #818181; text-decoration: none; font-size: 11px;">Запрещено для детей</a></span>
+		</div>
+	</div>
+	<div style="height: 36px; line-height: 36px; background: #3f3f3f;">
+		<!-- меню главных разделов -->
+		<div style="display: inline-block; margin: 0px 20px;">
+			<div style="float: left; width: 460px;">
+				<!-- текстовая часть-->
+				<a href="/main/" style="text-decoration: none; font-size: 14px; font-weight: bold; margin-right: 20px; color: #e5e5e5;">Главное</a>
+				<a href="/economics/" style="text-decoration: none; font-size: 14px; font-weight: bold; margin-right: 20px; color: #e5e5e5;">Экономика</a>
+				<a href="/finances/" style="text-decoration: none; font-size: 14px; font-weight: bold; margin-right: 20px; color: #e5e5e5;">Финансы</a>
+				<a href="/life/" style="text-decoration: none; font-size: 14px; font-weight: bold; margin-right: 20px; color: #e5e5e5;">Жизнь</a>
+			</div>
+			<div style="float: right; width: 610px; text-align: right;">
+				<!-- цифровая часть-->
+				<a href="/currency/" style="text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 20px; color: #7ea0cc;">Валюта</a>
+				<a href="/shares/" style="text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 20px; color: #7ea0cc;">Акции</a>
+				<a href="/bonds/" style="text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 20px; color: #7ea0cc;">Облигации</a>
+				<a href="/database/" style="text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 20px; color: #7ea0cc;">Аналитикам</a>
+				<a href="/x/" style="text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 20px; color: #7ea0cc;">Подписчикам</a>
+				<a href="/about/" style="text-decoration: none; font-size: 14px; font-weight: bold; margin-left: 20px; color: #ffc155;">О компании</a>
+			</div>
+		</div>
+	</div>
+	<div style="height: 46px; line-height: 46px;">
+		<!-- меню спец.проектов -->
+		<div style="margin: 0px 20px; display: inline-block;">
+			<div style="float: left; width: 320px;">
+				<b style="color: #818181; font-size: 14px;">СПЕЦИАЛЬНЫЕ ПРОЕКТЫ АГЕНТСТВА:</b>
+			</div>
+			<div style="float: right; width: 780px;">
+				<!--noindex--><a href="http://www.rusbonds.ru/" style="color: #e5e5e5; font-size: 12px; text-decoration: none;" rel="nofollow"><b>РЫНОК ОБЛИГАЦИЙ В РОССИИ</b></a><!--/noindex-->
+				<span style="color: #e5e5e5; margin: 0px 20px;">|</span>
+				<a href="/database/inform.asp" style="color: #e5e5e5; font-size: 12px; text-decoration: none;"><b>РАСКРЫТИЕ ИНФОРМАЦИИ</b></a>
+				<span style="color: #e5e5e5; margin: 0px 20px;">|</span>
+				<a href="/about/events.asp" style="color: #e5e5e5; font-size: 12px; text-decoration: none;"><b>КАЛЕНДАРЬ СОБЫТИЙ</b></a>
+			</div>
+		</div>
+	</div>
+	<div class="split_2" style="margin: 0px 20px;">.</div>
+	<div style="margin: 0px 20px;">
+		<!-- контакты и кнопки соц.сетей -->
+		<div style="margin: 20px 0px; display: inline-block;">
+			<div style="float: left; width: 900px;">
+				<span style="color: #e5e5e5; font-size: 11px;">
+				Телефоны: (495) 988-76-77 &nbsp; (495) 988-76-02<br />
+				Телефон службы технической поддержки: (495) 988-76-39<br />
+				<br />
+				По вопросам технической поддержки<br />
+				<a href="mailto:support@finmarket.ru" style="color: #e5e5e5; text-decoration: none; font-size: 11px;">support@finmarket.ru</a>
+				</span>
+			</div>
+			<div style="float: right; width: 200px; text-align: right;">
+				<!--noindex--><a href="http://www.facebook.com/finmarket" target="_blank" style="margin-left: 16px;" rel="nofollow"><img src="/img/fb.png" width="18" height="18" border="0" /></a><!--/noindex-->
+				<!--noindex--><a href="http://twitter.com/#!/finmarket_news" target="_blank" style="margin-left: 4px;" rel="nofollow"><img src="/img/tw.png" width="18" height="18" border="0" /></a><!--/noindex-->
+				<!--noindex--><a href="http://vkontakte.ru/finmarket_news" target="_blank" style="margin-left: 4px;" rel="nofollow"><img src="/img/vk.png" width="18" height="18" border="0" /></a><!--/noindex-->
+				<!--noindex--><a href="http://www.yandex.ru/?add=65283&from=promocode" target="_blank" style="margin-left: 4px;" rel="nofollow"><img src="/img/ya.png" width="18" height="18" border="0" /></a><!--/noindex-->
+				<a href="/rss/mainnews.asp" target="_blank" style="margin-left: 4px;"><img src="/img/rss.png" width="18" height="18" border="0" /></a>
+				<a href="#" onclick="return FavAdd();" style="margin-left: 4px;"><img src="/img/fav.png" width="18" height="18" border="0" /></a>
+			</div>
+
+		</div>
+	</div>
+	<div class="split_2" style="margin: 0px 20px;">.</div>
+	<div style="margin: 0px 20px;">
+		<!-- № свидетельств и счетчики -->
+		<div style="margin: 20px 0px; display: inline-block;">
+			<div style="float: left; width: 900px;">
+				<span style="color: #818181; font-size: 11px;">Электронное периодическое издание «Информационное агентство «Финмаркет». Свидетельство о регистрации СМИ Эл № ФС77-30207 выдано Федеральной службой по надзору в сфере массовых коммуникаций, связи и охраны культурного наследия  16 ноября 2007 года.</span>
+			</div>
+			<div style="float: right; width: 200px; text-align: right;">
+				<!--noindex-->
+				<a href="http://top100.rambler.ru/navi/7919/" target="_blank"  rel="nofollow"><img src=/img/top100.gif border=0 width=88 height=31></a><!--/noindex-->
+				<!--noindex--><a href="http://www.liveinternet.ru/click;finmarket.ru"
+target="_blank"><img src="//counter.yadro.ru/logo;finmarket.ru?44.6" title="LiveInternet" alt="" border="0" width="31" height="31"/></a><!--/noindex-->
+		
+<!-- tns-counter.ru --> 
+<script language="JavaScript" type="text/javascript"> 
+	var img = new Image();
+	img.src = 'http://www.tns-counter.ru/V13a***R>' + document.referrer.replace(/\*/g,'%2a') + '*finmarket_ru/ru/UTF-8/tmsec=finmarket_total/' + Math.round(Math.random() * 1000000000);
+</script> 
+<noscript> 
+	<img src="http://www.tns-counter.ru/V13a****finmarket_ru/ru/UTF-8/tmsec=finmarket_total/" width="1" height="1" alt="">
+</noscript> 
+<!--/ tns-counter.ru -->
+		
+			</div>
+		</div>
+	</div>
+</div>
+<div style="height: 15px;">
+
+<div id="pl54_ban75"><iframe src="http://ads.adfox.ru/219672/getCode?p1=blwmw&p2=v&p3=a&p4=a&pct=a&plp=a&pli=a&pop=a&pfc=rupd&pfb=bxqrg" style="width:0px !important;height:0px !important; border: 0px;"></iframe></div>
+
+</div>
+
+<div id="pl34_ban27"><!--AdFox START-->
+<!--roden-media-->
+<!--Площадка: Finmarket / * / *-->
+<!--Тип баннера: FullScreen-->
+<!--Расположение: <верх страницы>-->
+<script type="text/javascript">
+<!--
+if (typeof(pr) == 'undefined') { var pr = Math.floor(Math.random() * 1000000); }
+if (typeof(document.referrer) != 'undefined') {
+  if (typeof(afReferrer) == 'undefined') {
+    afReferrer = escape(document.referrer);
+  }
+} else {
+  afReferrer = '';
+}
+var addate = new Date(); 
+var scrheight = '', scrwidth = '';
+if (self.screen) {
+scrwidth = screen.width;
+scrheight = screen.height;
+} else if (self.java) {
+var jkit = java.awt.Toolkit.getDefaultToolkit();
+var scrsize = jkit.getScreenSize();
+scrwidth = scrsize.width;
+scrheight = scrsize.height;
+}
+document.write('<scr' + 'ipt type="text/javascript" src="http://ads.adfox.ru/173858/prepareCode?pp=g&amp;ps=blao&amp;p2=enli&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + pr +'&amp;pt=b&amp;pd=' + addate.getDate() + '&amp;pw=' + addate.getDay() + '&amp;pv=' + addate.getHours() + '&amp;prr=' + afReferrer + '&amp;puid1=&amp;pdw=' + scrwidth + '&amp;pdh=' + scrheight + '"><\/scr' + 'ipt>');
+// -->
+</script>
+<!--AdFox END--></div>
+
+
+<!--LiveInternet counter-->
+<script type="text/javascript">
+	new Image().src = "//counter.yadro.ru/hit;interfax?r" + escape(document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + 		(screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) + ";h"+escape(document.title.substring(0,80)) + ";" +Math.random();
+</script>
+<!--/LiveInternet-->
+
+<!-- begin of Top100 code -->  
+<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?7919">
+</script>  
+<noscript>
+<img src="http://counter.rambler.ru/top100.cnt?7919" alt="" width="1" height="1" border="0" />
+</noscript>  
+<!-- end of Top100 code -->
+
+<!-- begin of google-analytics code -->  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26520904-1']);
+  _gaq.push(['_setDomainName', 'finmarket.ru']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- end of google-analytics code -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter22006777 = new Ya.Metrika({id:22006777,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/22006777" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body></html>

@@ -20,6 +20,14 @@
 <script src="/js/jquery.fancybox-1.3.4.pack.js"></script>
 <link rel="stylesheet" media="screen" href="/css/jquery.fancybox-1.3.4.css">
 
+<!-- (C)2000-2014 Gemius SA - gemiusAudience / finmarket.ru / Home Page -->
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var pp_gemius_identifier = new String('1v1L0GdotLarXIWn7fl2CoaT.M6FSdgZ7LDBKkIkliH.U7');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.finmarket.ru/rcl/code/xgemius.js"></script>
+
 <script type=""text/javascript">
 $(document).ready(function() {
 	$("body").on("click", function() {
@@ -260,34 +268,34 @@ document.write('<scr' + 'ipt type="text/javascript" src="http://ads.adfox.ru/173
 				<div class="ind_article">
 					
 					
-<span class="date">19 марта 2014 года 18:05</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657978">ООО "Городская энергосбытовая компания", Липецк</a></div><div class="lead">Раскрытие информации за март месяц 2014 г. ООО "Городская энергосбытовая компания" &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657978">читать дальше</a></div>
+<span class="date">20 марта 2014 года 10:10</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658439">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация о плановых значениях перетоков электрической энергии по контролируемым сечениям. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658439">читать дальше</a></div>
 <div class="split_2" style="margin:20px 0px;">.</div>
 
-<span class="date">19 марта 2014 года 16:41</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657824">НП "Совет рынка"</a></div><div class="lead">Информация о каждом из членов Наблюдательного совета НП "Совет рынка" по форме, утверждаемой этим советом (с учетом соблюдения законодательства Российской Федерации о персональных данных) &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657824">читать дальше</a></div>
+<span class="date">20 марта 2014 года 10:10</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658438">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация о зонах свободного перетока. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658438">читать дальше</a></div>
 <div class="split_2" style="margin:20px 0px;">.</div>
 
-<span class="date">19 марта 2014 года 13:52</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657584">ОАО "Саратовэнерго"</a></div><div class="lead">Раскрытие информации ОАО "Саратовэнерго" в соответствии со Стандартами раскрытия информации субъектами оптового и розничных рынков электрической энергии за февраль 2014г. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657584">читать дальше</a></div>
+<span class="date">20 марта 2014 года 10:10</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658437">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация об объемах планового почасового потребления электрической энергии по типам потребителей и объемах планового почасового производства электрической энергии по типам станций. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658437">читать дальше</a></div>
 <div class="split_2" style="margin:20px 0px;">.</div>
 
-<span class="date">19 марта 2014 года 10:16</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657254">ООО "ЭСК "Энергосервис"</a></div><div class="lead"> &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657254">читать дальше</a></div>
+<span class="date">20 марта 2014 года 10:10</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658436">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация об объемах суммарных плановых нагрузочных потерь электроэнергии. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658436">читать дальше</a></div>
 <div class="split_2" style="margin:20px 0px;">.</div>
 
-<span class="date">19 марта 2014 года 10:09</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657241">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация о плановых значениях перетоков электрической энергии по контролируемым сечениям. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657241">читать дальше</a></div>
+<span class="date">20 марта 2014 года 10:10</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658435">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация о механизмах учета нерегулярных колебаний графиков энергопотребления. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658435">читать дальше</a></div>
 <div class="split_2" style="margin:20px 0px;">.</div>
 
-<span class="date">19 марта 2014 года 10:09</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657240">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация о равновесных ценах на электрическую энергию в 1 тыс. наиболее крупных узлов расчетной модели электрической сети с почасовой разбивкой по итогам отбора ценовых заявок за текущие торговые сутки. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657240">читать дальше</a></div>
+<span class="date">20 марта 2014 года 10:10</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658434">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация о равновесных ценах на электрическую энергию в 1 тыс. наиболее крупных узлов расчетной модели электрической сети с почасовой разбивкой по итогам отбора ценовых заявок за текущие торговые сутки. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658434">читать дальше</a></div>
 <div class="split_2" style="margin:20px 0px;">.</div>
 
-<span class="date">19 марта 2014 года 10:09</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657239">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация об объемах планового почасового потребления электрической энергии по типам потребителей и объемах планового почасового производства электрической энергии по типам станций. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657239">читать дальше</a></div>
+<span class="date">20 марта 2014 года 10:10</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658433">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация о суммарных объемах продажи и покупки электрической энергии (мощности) на оптовом рынке, полученных по результатам конкурентного отбора ценовых заявок покупателей и поставщиков, осуществляемого за сутки до начала поставки. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658433">читать дальше</a></div>
 <div class="split_2" style="margin:20px 0px;">.</div>
 
-<span class="date">19 марта 2014 года 10:09</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657238">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация о зонах свободного перетока. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657238">читать дальше</a></div>
+<span class="date">20 марта 2014 года 10:10</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658432">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация о графике совокупного спроса и предложения (по ценовым зонам и (или) по всему рынку) по итогам отбора ценовых заявок за текущие торговые сутки. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658432">читать дальше</a></div>
 <div class="split_2" style="margin:20px 0px;">.</div>
 
-<span class="date">19 марта 2014 года 10:09</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657237">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация об объемах суммарных плановых нагрузочных потерь электроэнергии. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657237">читать дальше</a></div>
+<span class="date">20 марта 2014 года 10:10</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658431">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация о плановом объеме производства электрической энергии по итогам отбора ценовых заявок за текущие торговые сутки (в соответствии со структурой генерации). &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658431">читать дальше</a></div>
 <div class="split_2" style="margin:20px 0px;">.</div>
 
-<span class="date">19 марта 2014 года 10:09</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657236">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация о механизмах учета нерегулярных колебаний графиков энергопотребления. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3657236">читать дальше</a></div>
+<span class="date">20 марта 2014 года 10:10</span><div class="title"><a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658430">ОАО "Администратор торговой системы оптового рынка электроэнергии"</a></div><div class="lead">Информация о плановых совокупных объемах производства и потребления электрической энергии, полученных по результатам конкурентного отбора ценовых заявок покупателей и поставщиков, осуществляемого за сутки до начала поставки. &nbsp; &nbsp;<a href="/database/inform.asp?fid=0&mn=0&yy=0&id=3658430">читать дальше</a></div>
 <div class="split_2" style="margin:20px 0px;">.</div>
 
 				</div>	

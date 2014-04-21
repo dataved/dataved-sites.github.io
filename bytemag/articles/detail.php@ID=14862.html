@@ -1,0 +1,376 @@
+<HTML>
+<HEAD>
+<title>Лоскутная автоматизация, или как управлять «зоопарком» программ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Существует два диаметрально противоположных подхода к задаче автоматизации различных управленческих функций производственного предприятия. В этой статье мы постараемся определить, какой из подходов предпочтителен, а какой лишь допустим, и в каких" />
+<meta name="description" content="Существует два диаметрально противоположных подхода к задаче автоматизации различных управленческих функций производственного предприятия. В этой статье мы постараемся определить, какой из подходов предпочтителен, а какой лишь допустим, и в каких" />
+<link href="/bitrix/js/main/core/css/core.css?1397654732" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/main/styles.css?1357814843" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/main/template_styles.css?1357814843" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/bitrix/js/main/core/core.js?1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398074551','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ajax.js?1397654452"></script>
+<script type="text/javascript" src="/bitrix/js/main/session.js?1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='/rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="/images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="/images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="/bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="/bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="/images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="/images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="/images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='/articles/index.php?TYPE_ID=6260'>Новости</a><a href='/numbers/'>Архив</a><a href='/foto/'>Фоторепортажи</a><a href='/video/'>Видеоролики</a><a href='/events/'>Мероприятия</a><a href='/forum/'>Форумы</a><a href='/white-papers/'>Решения</a><a href='/courses/'>Учебные курсы</a><a href='/subscribe/'>Подписка на рассылки</a><a href='/about/'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="/images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='/auth/'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='/' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="/images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6250'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6251'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6252'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6253'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='/articles/index.php?TYPE_ID=6254'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=16029'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6256'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6257'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6258'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6255'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="/images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="/images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="/images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='/images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='/rss/index.php'><img src='/images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='/rss/index.php'>RSS</a></td>
+	<td><img src="/images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='/themes/'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="/images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="/images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="/images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="/ad/banners/left.php" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/articles/index.php?TYPE_ID=6260'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/articles/index.php?TYPE_ID=6260'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='/articles/detail.php?ID=25289'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='/articles/detail.php?ID=25288'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='/articles/detail.php?ID=25286'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='/articles/detail.php?ID=25285'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='/articles/detail.php?ID=25284'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='/articles/index.php?TYPE_ID=6260' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/articles/index.php?OPINION=1'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/articles/index.php?OPINION=1'>Мнения</a></td></tr></table><DIV class='block-g'><a href='/articles/detail.php?ID=25262'><img src='/upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='/articles/detail.php?ID=25262'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='/articles/detail.php?ID=24189'><img src='/upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='/articles/detail.php?ID=24189'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='/articles/detail.php?ID=23635'><img src='/upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='/articles/detail.php?ID=23635'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='/articles/index.php?OPINION=1' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/articles/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/articles/'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='/articles/detail.php?ID=25074'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='/articles/detail.php?ID=25041'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='/articles/detail.php?ID=25196'>Видеоконференции в среде ALT Linux </a></li><li><a href='/articles/detail.php?ID=25115'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='/articles/detail.php?ID=25176'>Коммутаторы начального уровня</a></li><li><a href='/articles/detail.php?ID=25114'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='/articles/detail.php?ID=25103'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='/articles/detail.php?ID=25178'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='/articles/detail.php?ID=25177'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='/articles/detail.php?ID=25208'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/white-papers/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/white-papers/'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=12543'><img src='/upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=12544'>Новые стратегии резервного копирования</a></b></div><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=19413'><img src='/upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=19667'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=13245'><img src='/upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=13246'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=12719'><img src='/upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=12720'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=12721'><img src='/upload/iblock/f89/softintegro.gif' alt='Софтинтегро' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=12722'>Система управления ИТ-инфраструктурой предприятия — «ИнфраМенеджер»</a></b></div><a href='/white-papers/' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/courses/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/courses/'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='/courses/index.php?COMPANY_ID=18527'><img src='/upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='/courses/detail.php?ID=19120'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='/courses/index.php?COMPANY_ID=18527'><img src='/upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='/courses/detail.php?ID=18993'>Adaptec Certified Storage Professional</a></b></div><a href='/courses/' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/subscribe/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/subscribe/'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='/subscribe/' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="/images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm14862' method='post' action='detail_print.php?ID=14862&PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='/images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm14862"].SHOW_IMAGE.value="N"; document.forms["PrintForm14862"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm14862"].SHOW_IMAGE.value="Y"; document.forms["PrintForm14862"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='/images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(14862);'>Отправить ссылку</a></TD><TD width='16'><img src='/images/byte/icon-blog.gif'></TD><TD><a href='#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='/images/byte/icon-forum.gif'></TD><TD><a href='#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='/images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(14862);'>Написать автору</a></TD><TD width='16'><img src='/images/byte/icon-subscribe.gif'></TD><TD><a href='/subscribe/'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='/articles/index.php?TYPE_ID=6253'>Проекты</a><br /><b>Тема:</b> <a href='/articles/index.php?THEME_ID=6271'>ERP</a><br /></p><h1>Лоскутная автоматизация, или как управлять «зоопарком» программ</h1>Автор: Николай Лисин, руководитель отдела разработки, компания ИТРП, lisin@itrp.ru<br />19.06.2009<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='/big-pictures/index.php?ARTICLE_ID=14862&PICTURE_ID=14860'><IMG src='/upload/iblock/019/ris1-150.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 1. Взаимосвязь бизнес-процессов предприятия.</b></TD></TR><TR align='center'><TD><a href='/big-pictures/index.php?ARTICLE_ID=14862&PICTURE_ID=14861'><IMG src='/upload/iblock/b2c/ris2-150.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 2. Области задач, решаемых комплексной информационной системой.</b></TD></TR></TABLE><DIV class='article-text'>
+<p>Существует два диаметрально противоположных подхода к задаче автоматизации различных управленческих функций производственного предприятия. В этой статье мы постараемся определить, какой из подходов предпочтителен, а какой лишь допустим, и в каких именно ситуациях и условиях каждый из них имеет право на существование. Эта тема достаточно популярна, она часто обсуждается как специалистами по ИТ, так и профессиональными управленцами. Тем не менее мы надеемся представить читателю дополнительную точку зрения, которая может оказаться полезной в принятии решений о выборе стратегий автоматизации. </p>
+
+<p><b>Внедрение комплексной системы, или &laquo;гигантомания&raquo;. </b> На &laquo;бытовом&raquo; уровне можно найти множество аргументов против такого подхода. Кажется разумным автоматизировать каждый блок задач с помощью своей небольшой системы, которая проста, удобна и &laquo;заточена&raquo; под выполнение конкретной задачи. Эти системы дешевле, их легче внедрить и работе с ними проще обучить. Фактически отдельные микросистемы &ndash; это специализированные решения, а не громоздкий и плохо управляемый продукт &laquo;все-в-одном&raquo;. </p>
+
+<p><b>Применение &laquo;локально-кусочной&raquo; системы, или &laquo;зоопарк&raquo; программ. </b> В результате такой &laquo;кусочной&raquo; автоматизации предприятия получают разрозненные прикладные системы, стоимость интеграции которых сравнима с общей стоимостью комплексного решения. Зачастую отсутствие единой стратегии развития автоматизированных систем приводит к созданию незаконченных фрагментов информационной инфраструктуры и прикладных систем, которые не могут эффективно применяться в практической деятельности предприятия. При этом предприятие продолжает нести дополнительные затраты на дублирование функций, которые могла бы выполнять комплексная информационная система, и обслуживание трудоемких процедур обмена данными. Этот так называемый зоопарк программ характеризуется низкой доступностью информации о предприятии: необходимая информация есть в базе данных, но она порой противоречива и недоступна напрямую руководству. Специалисты подразделений могут успешно пользоваться этими данными, но до руководства они доходят с задержками и в виде громоздких сводок, неприемлемых для оперативного анализа и принятия решений. </p>
+
+<h2>&laquo;Зоопарк&raquo; или &laquo;гигантомания&raquo; &ndash; истина посередине и немного сбоку</h2>
+ 
+<p>По нашему мнению, вопрос выбора между комплексной или локально-кусочной автоматизацией принципиально некорректен. Правильная постановка вопроса такова: какие области, данные, задачи, функции можно разнести по разным программам, а какие &ndash; крайне нежелательно? Когда речь идет о решении двух разнородных задач, например, о расчете режима работы станка и о ведении взаиморасчетов с контрагентами компании, работать в разных программах принципиально удобнее и правильнее. </p>
+
+<p>Здесь имеет смысл раскрыть понятие &laquo;сущностей&raquo;, имеющихся в каждой автоматизированной системе. Любая программа оперирует сущностями и их данными. Примерами таких сущностей могут быть &laquo;Номенклатура&raquo;, &laquo;Склад&raquo;, &laquo;Запасы&raquo;, &laquo;Остатки товарно-материальных ценностей&raquo;, &laquo;Основные средства&raquo;, &laquo;Сотрудник&raquo;, &laquo;Производственное подразделение&raquo;, &laquo;Касса&raquo;, &laquo;Единица оборудования&raquo;, &laquo;План продаж&raquo;, &laquo;Контрагент&raquo;, &laquo;Кредиторская задолженность&raquo; и т. д. Сущности могут быть связаны между собой: например, касса тесно связана с взаиморасчетами и сотрудниками, но никак не связана с производственным оборудованием (если речь идет не о системе торговой организации). </p>
+
+<p>При решении о внедрении информационной системы предприятия необходимо учитывать ряд известных &laquo;аксиом&raquo; автоматизации: </p>
+
+<ul>
+  <li>чем больше программ обслуживает одну сущность, тем хуже созданная система и тем ближе она к &laquo;зоопарку&raquo;; </li>
+
+  <li>чем больше связанных между собой сущностей находятся в разных программах, тем ниже эффективность создаваемого решения; </li>
+
+  <li>несвязанные сущности должны быть использованы в отдельных программах, иначе система будет слишком громоздкой. </li>
+</ul>
+ 
+<p>Если попытаться визуализировать эти принципы, можно сравнить бизнес-процессы с шестеренками: если они цепляются друг за друга, то должны работать в одной программе. </p>
+
+<p>В качестве иллюстрации бизнес-процессов, которые обычно автоматизируются, на рис. 1 показана &laquo;нервная система&raquo; предприятия. Даже если не пытаться проанализировать все изображенные здесь связи, можно оценить сложность схемы. Участки бизнес-процессов предприятия переплетены в очень тесный клубок, и такие же связи должны быть реализованы в автоматизированной системе. Причем взаимосвязей в системе гораздо больше, чем участков работ (прямоугольников на схеме). </p>
+
+<p>Чем же руководствоваться специалистам компании при выборе стратегии автоматизации? Внедрение локальных программ оправдано, если: </p>
+
+<ul>
+  <li>программа является специализированной, слабо связана с другими участками деятельности и фактически отключена от прочих бизнес-процессов; </li>
+
+  <li>программа связана с другими участками, но решает очень срочные задачи, требующие максимальной оперативности решений. При этом нужно помнить, что существование такой программы в дальнейшем наложит серьезные ограничения на создание сквозной интегрированной системы. Ведь реализация связей между программами &ndash; это чрезвычайно трудоемкая задача, и решить ее возможно только при совпадении логики основных объектов программы. А в дальнейшем потребуется постоянная поддержка выполнения регламентов обмена, при этом добиться надежной безошибочной работы очень сложно. Подобная проблема разрешима только одним способом &ndash; путем концентрации всех данных в одной базе и программе. </li>
+</ul>
+ 
+<p>При этом необходимо понимать, что даже если ИТ-специалистам компании удастся отладить надежную связь между разными программами, получать сквозную отчетность с данными одновременно из нескольких программ на практике не получится. Такую отчетность придется собирать &laquo;по крохам&raquo; вручную. </p>
+
+<p>Самый неприятный момент для сторонников &laquo;зоопарка&raquo; программ &mdash; это следующее противоречие: если локальные программы, с одной стороны, прочно вросли в бизнес-процессы компании, а, с другой стороны, не позволяют создать качественную интегрированную сквозную систему, складывается ситуация, когда отказаться от всех или некоторых локальных программ уже неразумно (они образуют нервную систему предприятия и обеспечивают его жизнедеятельность), но не использовать преимущества сквозной системы также неправильно. И это противоречие неразрешимо. </p>
+<blockquote> 
+  <h3>Опыт одного из ведущих поставщиков смазочных материалов</h3>
+ 
+  <p>Компания &laquo;Фукс Ойл&raquo;, единственный российский представитель крупнейшего мирового производителя смазочных материалов, международного концерна FUCHS, в настоящее время осваивает новую систему бухгалтерского и управленческого учета. Ранее компания использовала несколько разнородных программ, решающих родственные учетные и управленческие задачи. </p>
+
+  <p>До начала проекта автоматизации на &laquo;Фукс-Ойл&raquo; функционировала система на базе &laquo;1С:Предприятие 7.7&raquo;, но типовые возможности продукта не позволяли руководству получить максимально прозрачный доступ к сведенным воедино финансовым данным. Кроме того, возникла необходимость организации эффективного управления производством, в том числе обеспечения полной прозрачности процессов и создания единой информационной базы данных. Ранее эти задачи управлялись различными локальными решениями и настройками. А новая комплексная система должна была быть настроена в полном соответствии с особенностями производственных и бизнес-процессов предприятия. </p>
+
+  <p>В качестве основы создаваемой системы специалисты &laquo;Фукс Ойл&raquo; выбрали &laquo;1С: Управление производственным предприятием&raquo; на платформе &laquo;1С:Предприятие 8&raquo; &ndash; комплексное решение, охватывающее основные контуры управления и учета на производственном предприятии. Для внедрения системы были приглашены специалисты компании ИТРП. </p>
+
+  <p>По завершении проекта руководство &laquo;Фукс Ойл&raquo; получило единое комплексное решение для ведения управленческого и бухгалтерского учета по российским и международным стандартам финансовой отчетности, полностью адаптированное к особенностям деятельности предприятия и обеспечивающее автоматизацию учета материалов, прямых и косвенных затрат, товаров и продукции; денежных средств, заработной платы. Внедрение комплексной системы позволило уйти от разнородных программных доработок и сформировать единое информационное пространство предприятия, что повысило оперативность получения информации и значимо упростило взаимодействие с поставщиками, клиентами и контрагентами. </p>
+</blockquote> 
+<h2>Срок жизни &laquo;зоопарка&raquo; программ</h2>
+ 
+<p>Возникает вопрос: зачем нужна комплексная информационная система (рис. 2), когда компании нужно автоматизировать один-два конкретных участка. Ответом могут стать свойства масштабируемости, которыми должна обладать современная комплексная система. Фактически предприятие автоматизирует в комплексной системе эти два участка, а остальные функции запускает по мере необходимости. </p>
+
+<p>Рассмотрим типичную ситуацию с автоматизацией учета и управления на предприятиях, ИТ-системы которых развивались эволюционно, начиная с времен появления первых доступных средств создания ИТ-инфраструктуры в конце 1990-х гг. Автоматизированная система (АС) в такой ситуации включает в себя несколько разрозненных программ и баз данных, обмен данными между которыми постепенно отлаживался силами собственного ИТ-персонала компании. Большая часть таких программ &ndash; это уникальные заказные, либо ПО собственной разработки, либо типовые решения с доработками, обычно достаточно глубокими. На сопровождение такой АС тратятся существенные силы местной команды ИТ-специалистов. Сопровождение, помимо сиюминутных доработок по пожеланиям пользователей, включает выполнение регламентов обслуживания системы, регламентов обмена, трансформации и синхронизации данных между различными базами. Бухгалтерия в такой ситуации в лучшем случае ведется с использованием типового решения фирмы &laquo;1С&raquo;, и если глубокие доработки не практикуются, это приводит к стабильности системы регламентированного учета. Доработки действующего ПО при этом, как правило, не носят системного характера, поскольку направлены на удовлетворение текущих пожеланий пользователей как можно меньшими средствами. </p>
+
+<p>Срок жизни таких &laquo;кусочно-локально-заплаточных&raquo; систем не бесконечен. В течение жизни системы, как правило, существует тенденция увеличения степени ее проникновения в бизнес-процессы, что сопровождается нарастанием требований со стороны руководства и пользователей к ее функциональности. Свою лепту в процесс нарастания требований вносят и постоянные изменения законодательства страны и структуры бизнеса предприятия. </p>
+
+<p>Множество локальных доработок с течением времени приводят тому, что сложность ее дальнейшего обслуживания и развития растет в геометрической прогрессии. Происходит это потому, что любая программа изначально проектируется в целостном виде, с продуманной архитектурой и взаимосвязями и с определенными ограничениями и допущениями, которые носят системный характер. Такую &laquo;чистую&raquo; систему дорабатывать и развивать достаточно просто. Но в процессе ее эволюционного развития требования системности доработок выполнить сложно, так как цель этих доработок состоит в быстром и эффективном решении сиюминутных проблем. При системном решении задачи скорость и продуктивность всегда страдают, поскольку основное требование системности доработок &ndash; учет свойств всей системы в целом, а не только локального участка. </p>
+
+<p>В итоге несистемные решения и доработки приводят к постепенному разрушению целостности действующего ПО. Это касается любого программного продукта, особенно тех, которые решают экономические задачи (учет, управление), независимо от качества исходной системы. Разрушение целостности работающего на предприятии ПО &ndash; это объективный процесс, который приводит к ограниченности срока жизни любой действующей системы автоматизации. По статистике, срок жизни автоматизированной системы, решающей экономические задачи, &ndash; не более 5&ndash;7 лет. Разрушение целостности системы сказывается на качестве ее функционирования и ощущается пользователями; страдает качество (согласованность, детальность), оперативность, достоверность получаемой информации. Развитие системы, добавление в нее новых функций затрудняется и сопровождается сопротивлением отдела ИТ. При этом ПО на платформе &laquo;1С:Предприятие&raquo; обладает большей степенью &laquo;живучести&raquo;, так как открытость кода позволяет быстро выполнять необходимые доработки. Однако и разрушение таких систем может происходить быстро. </p>
+<blockquote> 
+  <h3>Опыт российского производителя технического углерода</h3>
+ 
+  <p>ОАО &laquo;Нижнекамский завод технического углерода&raquo; &ndash; одно из крупнейших современных предприятий, производящих способный конкурировать с зарубежными аналогами технический углерод, важнейший компонент для изготовления резины и полиэтиленовых изделий. До внедрения системы &laquo;ИТРП:Процессное производство 8&raquo; на платформе &laquo;1С:Предприятие 8&raquo; на предприятии использовалось несколько разрозненных решений, часть из которых была создана силами специалистов собственного ИТ-отдела. Возможности используемых систем не соответствовали потребностям комплексного учета и управления с охватом всех сторон деятельности предприятия, функции систем не были включены в бизнес-процессы предприятия, а бухгалтерский учет велся вручную в электронных таблицах. </p>
+
+  <p>В ходе проекта внедрения в единой системе были автоматизированы управленческий и бухгалтерский учет хозяйственных операций, управление сбытом и закупками, производственный учет и расчет себестоимости, а также учет денежных средств и управление финансовыми ресурсами. По мнению руководства предприятия, автоматизированная система стала удобным инструментом контроля и оптимизации затрат по процессам производственной деятельности подразделений, позволила в установленные законодательством сроки готовить бухгалтерскую отчетность, стала источником достоверной финансовой информации. </p>
+
+  <p>Благодаря внедрению комплексной автоматизированной системы &laquo;ИТРП:Процессное производство 8&raquo; были достигнуты основные задачи ухода от схемы лоскутной автоматизации. Сформирована целостная система с однократным вводом информации, охватывающая все финансовые и материальные потоки предприятия. Качество предоставляемой информации, детальность, оперативность, достоверность обеспечивают управление заводом на более высоком уровне и объективно способствуют достижению основной цели проекта &ndash; повышению капитализации предприятия. </p>
+</blockquote> 
+<h2>Вместо заключения</h2>
+ 
+<p>По мере увеличения срока эксплуатации лоскутной системы становится все сложнее удовлетворить нарастающие требования к &laquo;зоопарку&raquo; программ путем локальных &laquo;заплаток&raquo; и доработок. Со временем система, представляющая собой набор локальных решений, становится тормозом, а не катализатором развития бизнеса. Из-за несистемности хранения данных ценнейшая информация о состоянии предприятия и отдельных бизнес-процессов, необходимая для принятия управленческих решений, не доходит до руководства. </p>
+
+<p>Выход из ситуации только один &ndash; начало нового цикла развития автоматизированной системы. Новый цикл начинается, как правило, с перехода на новое типовое ПО. Именно в этот момент появляется необходимость определиться со стратегией создания информационной системы &ndash; использовать ли несколько отдельных программ для автоматизации несвязанных друг с другом бизнес-процессов или приложить все усилия для поиска подходящей масштабируемой комплексной системы и начать ее внедрение. </p>
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='/articles/detail.php?ID=25287'>Печатная продукция становится интерактивной</A></b></li><li><b><A href='/articles/detail.php?ID=22290'>О чем волнуется заказчик перед стартом проекта автоматизации</A></b></li><li><b><A href='/articles/detail.php?ID=19935'>EMC Isilon и облачные сервисы хранения данных  </A></b></li><li><b><A href='/articles/detail.php?ID=18873'>Интеллектуальное управление данными – ответ системных интеграторов на проблемы роста объемов данных</A></b></li><li><b><A href='/articles/detail.php?ID=14522'>CRM-система и автомобильный бизнес</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='/articles/detail.php?ID=24872'>Microsoft Dynamics NAV 2013 R2 в России</A></b></li><li><b><A href='/articles/detail.php?ID=24846'>Epicor: новая модель внедрения ERP-систем </A></b></li><li><b><A href='/articles/detail.php?ID=24758'>Коннектор системы ЭДО и Microsoft Dynamics AX </A></b></li><li><b><A href='/articles/detail.php?ID=23887'>Облачное решение iTMan для учета ИТ-активов</A></b></li><li><b><A href='/articles/detail.php?ID=23802'>Новые технологии отчетности от БФТ</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='/images/byte/title-b.gif'></td><td width='2'><img src='/images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='/images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='/images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="http://www.bytemag.ru" target="_blank"><img src="http://www.bytemag.ru/images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="http://www.bytemag.ru/articles/detail.php?ID=14862" target="_blank"><img src="http://www.bytemag.ru/upload/iblock/4bf/itrp-50.jpg" alt="Открыть материал" style="width:50px; height:50px; border:1px solid #000; float:left; margin:0 5px 5px 0;"></a><a href="http://www.bytemag.ru/articles/detail.php?ID=14862" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Лоскутная автоматизация, или как управлять «зоопарком» программ</a><br><a href="http://www.bytemag.ru/articles/detail.php?ID=14862" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Есть два подхода к задаче внедрения автоматизированных систем на предприятии, каждый из которых в определенных условиях имеет право на существование&hellip;</a></td></tr><tr><td align="right"><a href="http://www.bytemag.ru/articles/detail.php?ID=14862" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='/images/byte/title-b.gif'></td><td width='2'><img src='/images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='/images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='/images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='detail.php?ID=14862&#add-comment' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='01f69e6e3790b09f469ec8d01d90626e'><img src='/bitrix/tools/captcha.php?captcha_code=01f69e6e3790b09f469ec8d01d90626e' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='http://www.bytemag.ru/about/' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='http://www.bytemag.ru/articles/index.php?TYPE_ID=16029' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='http://www.bytemag.ru/articles/index.php?TYPE_ID=6258' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/foto/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/foto/'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='/foto/detail.php?ID=19983'><IMG src='/upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='/foto/detail.php?ID=19983'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='/foto/detail.php?ID=17939'><IMG src='/upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='/foto/detail.php?ID=17939'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='/foto/detail.php?ID=17921'><IMG src='/upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='/foto/detail.php?ID=17921'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='/foto/' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="/images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/video/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/video/'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='/video/detail.php?ID=17721'><img src='/upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='/video/detail.php?ID=17721'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='/video/detail.php?ID=16525'><img src='/upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='/video/detail.php?ID=16525'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='/video/detail.php?ID=15824'><img src='/upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='/video/detail.php?ID=15824'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='/video/' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="/images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="/bitrix/rk.php?id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%2F+%5B375%5D+%5BTXT2%5D+%CA%EE%EC%EC%F3%F2%E0%F2%EE%F0%FB+%ED%E0%F7%E0%EB%FC%ED%EE%E3%EE+%F3%F0%EE%E2%ED%FF+%E0%EF%F0%E5%EB%FC+2014&amp;goto=http%3A%2F%2Fwww.bytemag.ru%2Farticles%2Fdetail.php%3FID%3D25176" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/themes/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/themes/'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='/articles/index.php?THEME_ID=6261'>Перспективные технологии</a><li><a href='/articles/index.php?THEME_ID=6262'>Информационная безопасность</a><li><a href='/articles/index.php?THEME_ID=6263'>Серверы</a><li><a href='/articles/index.php?THEME_ID=6264'>HPC (High Performance Computing)</a><li><a href='/articles/index.php?THEME_ID=6265'>Центры обработки данных</a><li><a href='/articles/index.php?THEME_ID=6266'>Технологии хранения данных</a><li><a href='/articles/index.php?THEME_ID=6267'>Инфраструктурные технологии</a><li><a href='/articles/index.php?THEME_ID=6268'>Периферийное оборудование</a><li><a href='/articles/index.php?THEME_ID=6269'>Телеком-решения</a><li><a href='/articles/index.php?THEME_ID=6270'>Мобильные решения</a><li><a href='/articles/index.php?THEME_ID=6271'>ERP</a><li><a href='/articles/index.php?THEME_ID=6272'>Документооборот</a><li><a href='/articles/index.php?THEME_ID=6273'>Управление бизнес-процессами</a><li><a href='/articles/index.php?THEME_ID=6274'>Бизнес-аналитика</a><li><a href='/articles/index.php?THEME_ID=6275'>Интеграционные технологии</a><li><a href='/articles/index.php?THEME_ID=6276'>Разработка приложений</a><li><a href='/articles/index.php?THEME_ID=12163'>Интеграция данных и приложений</a><li><a href='/articles/index.php?THEME_ID=12781'>Управление ИТ-инфраструктурой</a><li><a href='/articles/index.php?THEME_ID=11766'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/events/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/events/'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='/events/detail.php?ID=25002'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='/events/detail.php?ID=25217'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='/events/detail.php?ID=25221'>Docflow 2014 </a></b><br /><br /><a href='/events/' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/forum/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/forum/'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='/forum/forum2/topic70917/'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='/forum/forum2/topic70916/'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='/forum/forum2/topic70915/'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='/forum/forum2/topic70914/'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='/forum/forum2/topic70913/'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/press/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/press/'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='/press/detail.php?ID=25278'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='/press/detail.php?ID=25277'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='/press/detail.php?ID=25276'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='/press/'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="/images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="/images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="/images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="/credits/">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

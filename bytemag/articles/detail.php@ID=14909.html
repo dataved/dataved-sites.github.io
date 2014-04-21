@@ -1,0 +1,456 @@
+<HTML>
+<HEAD>
+<title>Intel Parallel Inspector – поиск ошибок доступа к памяти</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Parallel Inspector &mdash; один из четырех инструментов, входящих в состав набора Intel Parallel Studio. Его можно установить и интегрировать с Microsoft Visual Studio и как часть набора, и отдельно. На сегодняшний день это самый интересный инструмент" />
+<meta name="description" content="Parallel Inspector &mdash; один из четырех инструментов, входящих в состав набора Intel Parallel Studio. Его можно установить и интегрировать с Microsoft Visual Studio и как часть набора, и отдельно. На сегодняшний день это самый интересный инструмент" />
+<link href="/bitrix/js/main/core/css/core.css?1397654732" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/main/styles.css?1357814843" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/main/template_styles.css?1357814843" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/bitrix/js/main/core/core.js?1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398074227','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ajax.js?1397654452"></script>
+<script type="text/javascript" src="/bitrix/js/main/session.js?1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='/rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="/images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="/images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="/bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="/bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="/images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="/images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="/images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='/articles/index.php?TYPE_ID=6260'>Новости</a><a href='/numbers/'>Архив</a><a href='/foto/'>Фоторепортажи</a><a href='/video/'>Видеоролики</a><a href='/events/'>Мероприятия</a><a href='/forum/'>Форумы</a><a href='/white-papers/'>Решения</a><a href='/courses/'>Учебные курсы</a><a href='/subscribe/'>Подписка на рассылки</a><a href='/about/'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="/images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='/auth/'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='/' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="/images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6250'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6251'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6252'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6253'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='/articles/index.php?TYPE_ID=6254'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=16029'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6256'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6257'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6258'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6255'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="/images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="/images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="/images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='/images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='/rss/index.php'><img src='/images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='/rss/index.php'>RSS</a></td>
+	<td><img src="/images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='/themes/'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="/images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="/images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="/images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="/ad/banners/left.php" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/articles/index.php?TYPE_ID=6260'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/articles/index.php?TYPE_ID=6260'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='/articles/detail.php?ID=25289'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='/articles/detail.php?ID=25288'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='/articles/detail.php?ID=25286'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='/articles/detail.php?ID=25285'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='/articles/detail.php?ID=25284'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='/articles/index.php?TYPE_ID=6260' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/articles/index.php?OPINION=1'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/articles/index.php?OPINION=1'>Мнения</a></td></tr></table><DIV class='block-g'><a href='/articles/detail.php?ID=25262'><img src='/upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='/articles/detail.php?ID=25262'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='/articles/detail.php?ID=24189'><img src='/upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='/articles/detail.php?ID=24189'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='/articles/detail.php?ID=23635'><img src='/upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='/articles/detail.php?ID=23635'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='/articles/index.php?OPINION=1' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/articles/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/articles/'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='/articles/detail.php?ID=25074'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='/articles/detail.php?ID=25041'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='/articles/detail.php?ID=25196'>Видеоконференции в среде ALT Linux </a></li><li><a href='/articles/detail.php?ID=25115'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='/articles/detail.php?ID=25176'>Коммутаторы начального уровня</a></li><li><a href='/articles/detail.php?ID=25114'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='/articles/detail.php?ID=25103'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='/articles/detail.php?ID=25178'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='/articles/detail.php?ID=25177'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='/articles/detail.php?ID=25208'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/white-papers/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/white-papers/'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=12543'><img src='/upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=12544'>Новые стратегии резервного копирования</a></b></div><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=19413'><img src='/upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=19667'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=13245'><img src='/upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=13246'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=12719'><img src='/upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=12720'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=12721'><img src='/upload/iblock/f89/softintegro.gif' alt='Софтинтегро' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=12722'>Система управления ИТ-инфраструктурой предприятия — «ИнфраМенеджер»</a></b></div><a href='/white-papers/' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/courses/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/courses/'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='/courses/index.php?COMPANY_ID=18527'><img src='/upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='/courses/detail.php?ID=19120'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='/courses/index.php?COMPANY_ID=18527'><img src='/upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='/courses/detail.php?ID=18993'>Adaptec Certified Storage Professional</a></b></div><a href='/courses/' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/subscribe/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/subscribe/'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='/subscribe/' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="/images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm14909' method='post' action='detail_print.php?ID=14909&PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='/images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm14909"].SHOW_IMAGE.value="N"; document.forms["PrintForm14909"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm14909"].SHOW_IMAGE.value="Y"; document.forms["PrintForm14909"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='/images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(14909);'>Отправить ссылку</a></TD><TD width='16'><img src='/images/byte/icon-blog.gif'></TD><TD><a href='#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='/images/byte/icon-forum.gif'></TD><TD><a href='#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='/images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(14909);'>Написать автору</a></TD><TD width='16'><img src='/images/byte/icon-subscribe.gif'></TD><TD><a href='/subscribe/'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='/articles/index.php?TYPE_ID=6256'>Средства разработки</a><br /><b>Тема:</b> <a href='/articles/index.php?THEME_ID=6276'>Разработка приложений</a><br /></p><h1>Intel Parallel Inspector – поиск ошибок доступа к памяти</h1>Автор: Владимир Цымбал, инженер, технический консультант подразделения SSG, Intel<br />30.06.2009<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='/big-pictures/index.php?ARTICLE_ID=14909&PICTURE_ID=14905'><IMG src='/upload/iblock/15c/ris1-150.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 1. Спецификация типа анализа Inspector.</b></TD></TR><TR align='center'><TD><a href='/big-pictures/index.php?ARTICLE_ID=14909&PICTURE_ID=14906'><IMG src='/upload/iblock/3fa/ris2-150.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 2. Окно выбора глубины анализа.</b></TD></TR><TR align='center'><TD><a href='/big-pictures/index.php?ARTICLE_ID=14909&PICTURE_ID=14907'><IMG src='/upload/iblock/29c/ris3-150.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 3. Список обнаруженных утечек памяти и их размер.</b></TD></TR><TR align='center'><TD><a href='/big-pictures/index.php?ARTICLE_ID=14909&PICTURE_ID=14908'><IMG src='/upload/iblock/25b/ris4-150.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 4. Режим Sources.</b></TD></TR></TABLE><DIV class='article-text'>
+<p>Parallel Inspector &mdash; один из четырех инструментов, входящих в состав набора Intel Parallel Studio. Его можно установить и интегрировать с Microsoft Visual Studio и как часть набора, и отдельно. На сегодняшний день это самый интересный инструмент в составе пакета, которого больше всего ожидали, так как он помогает обнаружить ошибки в многопоточной программе на этапе верификации, повышая корректность и стабильность ее исполнения. Специфичный функционал Inspector подразумевает, что он будет применяться командами тестировщиков (QA team). Однако и сами разработчики включают проверку программы на наличие ошибок, хотя бы на уровне юнит-тестов (unit tests), в свою инженерную практику. </p>
+
+<p>В данной статье мы рассмотрим особенности использования Parallel Inspector для поиска ошибок доступа к памяти. Инструмент позволяет находить и ошибки, характерные исключительно для многопоточных программ (dead locks, data races), но эта тема заслуживает отдельной статьи, и мы ее обсудим позже. </p>
+
+<h2>Механизмы поиска ошибок</h2>
+
+<p>В общем случае механизм обнаружения ошибок памяти основан на структурном анализе всей совокупности актов чтения и записи в память процесса в течение исполнения программы. Такой подход не нов и используется различными &laquo;мемори-чекерами&raquo;, которые применяют так называемую статическую инструментацию для отслеживания инструкций чтения/записи и вызовов функций API работы с памятью. Для этого «измерительный инструмент» (instrumentation engine) модифицирует бинарный код еще до запуска его на исполнение (static binary instrumentation), вставляя определенные инструкции до и сразу после нужной инструкции или функции. Далее инструментированная программа запускается на исполнение, а при достижении вставок кода сохраняются параметры программы, такие как временная отметка, текущий стек и контекст исполнения. Затем вся эта масса информации обрабатывается с целью поиска нарушений доступа, некорректного использования и других ошибок работы с памятью. </p>
+
+<p>В Inspector применяется несколько другой подход &ndash; анализ всех инструкций чтения/записи памяти и их адресов на уровне бинарного кода с помощью динамической бинарной инструментации. В основе инструментатора лежит утилита <a href="http://www.pintool.org" target="_blank" >Pin – Dynamic Binary Instrumentation Tool</a>, которая внедряется в анализируемый процесс непосредственно перед стартом и позволяет отслеживать выполнение практически любых инструкций, предоставляет API доступа к содержимому регистров, контексту выполнения программы, символьной и отладочной информации. </p>
+
+<p>Можно провести некоторую аналогию между Pin и JIT (just-in-time) компилятором. Только на вход «Pin-компилятора» подается не байт-код, а исполняемый бинарный код. Pin перехватывает самую первую инструкцию программы и генерирует свою последовательность инструкций (трассу), совпадающую с первыми оригинальными инструкциями вплоть до первого ветвления программы (или до значения лимита инструкций в трассе), а затем передает управление этой последовательности. Управление возвращается к Pin при наступлении ветвления, он генерирует новую последовательность инструкций, соответствующую ветке, и снова передает управление. Pin держит весь сгенерированный код в памяти, поэтому и исполнение, и ветвление довольно эффективны. Оригинальный код не исполняется, исполняются только сгенерированные последовательности, при этом пользователь утилиты получает возможность внедрять свой (анализирующий) код куда угодно (инструментация), за исключением разве что модулей ядра ОС. </p>
+
+<p>Обе составляющие результирующего кода, инструментированный и анализирующий, «живут» в одном адресном пространстве модуля Pintool, который можно рассматривать как плагин, позволяющий модифицировать процесс генерирования кода внутри утилиты Pin. Pintool регистрирует функции обратного вызова (callback), которые вызываются Pin каждый раз, когда в профилируемом приложении выполняется определенное условие (выполняется инструкция, вызывается функция и т. д.). Эти функции ответственны за состав сгенерированной последовательности инструкций, они инспектируют код программы и определяют, есть ли необходимость и где именно нужно вставить вызовы анализирующего кода в эту последовательность. Этими вызовами можно «накрыть» практически любые функции, исполняемые в приложении. А Pin позаботится о том, чтобы контексты вызовов были сохранены и восстановлены без изменений, чтобы функциям передавались правильные аргументы. </p>
+
+<p>Pintool может иметь еще более низкую гранулярность и инструментировать каждую инструкцию приложения. Для этого Pin предоставляет специальный API, позволяющий селективно инструментировать инструкции определенного типа, например, доступа к памяти или ветвления. Инструкции, специфичные для определенных микроархитектур, также могут быть проинструментированы с помощью специального API. </p>
+
+<p>Так как Pintool представляет собой плагин, то он исполняется в том же процессе, что и Pin и анализируемое приложение. Поэтому ему доступны все данные исполняемого модуля, включая файлы и дескрипторы. Если исполняемый модуль слинкован во время компиляции с динамическими библиотеками, то Pintool имеет доступ и к ним тоже, так как он контролирует выполнение загрузчика библиотек. </p>
+
+<h2>Интерфейс</h2>
+
+<p>Таким образом, в зависимости от целей и задач анализа, можно сформировать несколько типов Pintool-инструментов, которые бы имели свой уровень гранулярности инструментации и были бы «нацелены» на сбор определенного типа данных в исполняемой программе. Понятно, что всесторонний анализ исполняемого кода нельзя провести без существенных накладных расходов, поэтому он разделен на уровни, использующие разные Pintool-инструменты, имеющие разные возможности обнаружения ошибок и отражающие глубину и сложность анализа. Чем выше уровень, тем, как правило, больше потребуется времени для проверки приложения. </p>
+
+<ul>
+  <li>Уровень mi1 – позволяет обнаруживать только утечки памяти, выделенной в куче (heap). Глубина стека функций равна 7, что дает достаточно информации для определения местонахождения ошибки и структуры вызовов функций, выделявших память. </li>
+
+  <li>Уровень mi2 – позволяет обнаруживать все остальные ошибки работы с памятью в куче, которые мы рассмотрим ниже. Однако для снижения накладных расходов и ускорения анализа глубина стека выбрана равной единице. Это означает, что на данном уровне можно найти ответ на вопрос, есть ли в принципе ошибки в программе, – а где находятся эти ошибки, поможет определить следующий уровень. </li>
+
+  <li>Уровень mi3 – отличается от предыдущего тем, что глубина стека увеличена до 12 и добавлен функционал поиска утерянных указателей. На этом уровне происходит наиболее полный анализ корректности работы с памятью в куче, но за это приходится платить высокими накладными расходами, которые увеличат время выполнения программы от 20 до 80 раз по сравнению с оригиналом. </li>
+
+  <li>Уровень mi4 – высший уровень, дополнен анализом ошибок доступа к памяти, выделенной на стеке, которые не обнаружены на стадии компиляции или с помощью run-time check опций компилятора. Уровень вложенности функций – 32. Как и все остальные уровни, 4-й является инклюзивным, т. е. включает в себя все виды анализа на предыдущих уровнях. Соответственно накладные расходы будут максимальными. </li>
+</ul>
+
+<p>Глубина стека на каждом уровне выбрана эмпирически и является компромиссом между полнотой предоставляемой информации и величиной накладных расходов на анализ приложения. В данной версии продукта пользователь не может менять глубину стека. </p>
+
+<p>Для того чтобы начать анализ приложения, необходимо просто выбрать соответствующий тип анализа в инструментальной панели Parallel Inspector (рис. 1), нажать кнопку Inspect и выбрать уровень анализа (рис. 2). Прежде чем приложение будет запущено, соответствующий Pintool внедрится в его процесс и, заменив оригинальный код, запустится в новом процессе, инициализируя запуск кода приложения. Вместе с загрузкой дополнительных библиотек это занимает какое-то время, поэтому пользователь заметит задержку старта приложения. Чем больше динамических библиотек в программе, тем больше эта задержка. Далее приложение исполняется как обычно, только медленнее – в зависимости от глубины анализа и, конечно, от относительного количества специфичных вызовов функций Memory API во время исполнения. </p>
+
+<p>Еще до окончания анализа приложения пользователю предоставляется лог событий или ошибок, которые были выявлены в процессе выполнения. Причем на всех уровнях, кроме mi1, можно начать анализировать логи и исходный код еще до окончания анализа, так как результаты уже будут доступны. </p>
+
+<p>Результаты анализа структурированы таким образом, чтобы вначале дать обзор списка проблем (Problem Sets), представляющих собой конечный результат действия нескольких событий, приведших к проблеме. Например, доступ к недействительной памяти — это следствие выделения самой памяти, преждевременного ее освобождения и собственно попытки доступа. Такие детали в виде зарегистрированных событий (Observations) можно посмотреть в окне, нажав кнопку Details в главном окне (рис. 3). Там же можно быстро взглянуть на код, в котором это событие произошло. Это удобно, когда нет необходимости переключаться в редактор исходного кода, а нужно просто пройтись по ошибкам в списке и просмотреть, на какие строки кода ссылается диагностика. </p>
+
+<p>В списке с найденными ошибками доступна вся информация о процессе, модуле, функции и номере строки кода, в которой эта ошибка произошла. В реальных проектах список ошибок бывает довольно велик. В этом случае удобно воспользоваться фильтром по типу ошибки, ее описанию, имени исходника, имени функции или модуля. В процессе исправления ошибок можно помечать их как исправленные или отфильтровывать, чтобы они не загромождали список. </p>
+
+<p>Из списка проблем или детального списка можно перейти в режим Sources (рис. 4). Инструмент предоставит два окна с исходным кодом, в которых будет отображена взаимосвязь между начальным действием, – как правило, выделением или инициализацией памяти, – и конечным действием, которое привело к ошибке, например, попыткой чтения или записи. Какое именно их этих действий является ошибочным, инструмент знать не может, так как они определяются логикой приложения. Но нарушение корректности реализации логики будет продемонстрировано как с помощью исходного кода, так и в окне Observations Relationships, где графически выстраивается связь между исходным и конечным событиями. При этом события помечаются разными цветами, чтобы легко было определить соответствующие окна исходного кода, описания событий и стеки вызовов функций. Стеки вызовов нужны для того, чтобы было легче ориентироваться, каким образом мы попали в ту или иную функцию, так как событие, приведшее к ошибке, далеко не всегда находится в самом исследуемом приложении, а может, например, оказаться в сторонней библиотеке. Найдя ошибку, совсем не обязательно переключаться с помощью Alt-Tab в окно редактора Visual Studio и искать нужные файл исходника и строку. Достаточно двойного щелчка мышки на строке кода в окне Sources, чтобы попасть в редактор Visual Studio в нужное место. </p>
+
+<p>Одна из полезных особенностей интерфейса Inspector – подавление диагностики уже известных ошибок. Бывает, что по каким-либо причинам не нужно исправлять ошибки определенного типа или ошибки в определенных модулях либо в исходных файлах. Например, существует проблема так называемых false positives, т. е. ложной диагностики, когда обнаруживается якобы ошибка работы с памятью, на самом деле таковой не являющаяся. Это случается при использовании некоторых сторонних библиотек или при реализации собственных пользовательских аллокаторов в программе. В таком случае можно, используя фильтры, добавить ошибку в список Private Suppressions и при старте анализа использовать одну из опций: Mark problems или Delete Problems. При этом ошибки будут либо помечены в списке, либо вообще не будут отображаться. Для отмены подавления достаточно выбрать опцию Do not use suppressions. </p>
+
+<p>И в заключение описания интерфейса полезно упомянуть о возможности использовать инструмент в режиме командной строки. Основное его назначение – автоматизация процесса тестирования, например, для регрессионных тестов в QA. Диагностики в этом случае формируются в текстовом режиме, и их легко обрабатывать с помощью скриптов. Встроенная система помощи содержит всю информацию относительно формата командной строки. </p>
+
+<h2>Типы обнаруживаемых ошибок </h2>
+
+<p><b>Memory Leaks.</b> На первом уровне mi1 инструмент обнаруживает только «утечки памяти». Они возникают при выделении памяти в куче и неосвобождении ее по окончании программы. В списке Problems мы увидим ошибки Memory Leak, для которых помимо обычной информации будет указан размер утечки. Если выделение потерянной памяти происходит несколько раз в одной и той же строке, например, в цикле, то диагностика выдаст суммарный результат. Если же доступ к этой строке происходил разными путями (т. е. будут разные стеки), то появятся отдельные диагностики. </p>
+
+<p>Необходимо отметить, что анализ на уровне mi1 происходит гораздо быстрее, чем на других уровнях. Это связано с тем, что, несмотря на инструментацию, утилита Pin используется в режиме Probe mode. Probe mode – это метод, в котором используется внедрение «датчиков», jump-инструкций, только в начале определенных функций перед загрузкой образа исполняемого модуля. Перед внедрением кода «датчика» Pin замещает несколько первых инструкций кода функции своими и перенаправляет управление в обработчик. Длина внедренного кода «датчика» для архитектуры IA-32 составляет 5 байт, для Intel 64 – 7 байт. Поскольку и приложение, и обработчик выполняются практически без изменений (нет замещения кода всех инструкций), то производительность оказывается намного выше, чем в обычном режиме. </p>
+
+<p>Pintool (mi1) дополняет функции выделения и освобождения памяти собственными, анализирующими функциями с помощью Pin API. Отследив все вызовы выделения и освобождения памяти в куче и сопоставив их, можно сделать вывод о том, какие из выделенных объектов памяти не были освобождены до завершения программы. Стоит только отметить, что если ссылка на выделенную в куче память будет сохранена в глобальном указателе, то сигнала об ошибке «утечка памяти» не будет. Это частичное ограничение технологии, и на сегодняшний день анализ глобальных указателей не поддерживается. С помощью Windows API dbghelp.dll будут определены модули, имена функций, в которых была выделена память, и номера соответствующих строк кода. </p>
+
+<p>Нахождение символов и строк кода, как и получение корректного стека, требует отладочной информации для исполняемого кода. Поэтому крайне желательно включить ее генерирование во время компиляции и линковки с помощью ключей /Zi и /DEBUG. Оптимизирующий компилятор создаст дополнительные трудности на пути определения принадлежности собранных данных функциям и строкам, поэтому оптимизацию кода лучше отключить, используя ключ /Od. Если анализ приложения происходит в Debug-режиме, то эти опции включены в проекте Visual Studio по умолчанию. Какой именно С++ компилятор используется в Visual Studio – от Intel или Microsoft, – особого значения не имеет. </p>
+
+<p>Следующий уровень анализа, mi2, способен обнаружить почти все оставшиеся типы ошибок доступа к памяти, выделенной в куче. Однако для ускорения анализа глубина стека установлена равной единице, т.е. на этом уровне выясняется, есть ли в принципе ошибки в программе, а где конкретно они находятся, определяется на уровне mi3, где глубина стека функций увеличена до 12. </p>
+
+<p><b>Missing Allocation.</b> Ошибки возникают при попытке освободить память по несуществующему адресу. Проще говоря, если будет случайно продублирован вызов функций free/delete или их аргумент указывает на несуществующую память, диагностируется ошибка. И если в Debug-режиме компилятор с включенной опцией run-time check найдет эту оплошность еще в процессе компиляции, в Release-режиме сообщение об ошибке выдано не будет. </p>
+
+<p><b>Mismatched Allocation/Deallocation.</b> Такие ошибки возникают при попытке освободить память с помощью функций, не соответствующих функции выделения памяти. Например, где-то «глубоко в недрах программы» выделяется какой-то объект, допустим, буфер обмена или дескриптор, и пользователь должен его освободить. При этом сам объект может быть выделен с помощью run-time функции malloc, но пользователь в своем C++-модуле применяет функцию delete (листинг 1). В окне Details Inspector выдаст две цитаты кода с выделенными строками: в качестве Allocation Site – ту строку, где память была выделена в malloc, и диагностику Mismatched Allocation/Deallocation в месте, где вызвана delete-функция. Это особенно хорошо иллюстрирует разницу между событиями и проблемой. Вполне корректные сами по себе события, такие как аллокация и деаллокация памяти, вместе составляют одну проблему из списка, который и представлен в окне Overview. А окно Observations Relationships указывает временную причинно-следственную связь между событиями: в данном случае первична аллокация памяти, за которой последовала ее некорректная деаллокация. </p>
+<blockquote>
+  <p>char *pStr = (char*) malloc(16); 
+    <br />
+  ... 
+    <br />
+  delete pStr;//Err:Mismatched Allocation/Deallocation 
+    <br />
+  
+    <br />
+  free(pStr); 
+    <br />
+  free(pStr);// Err:Missing Allocation </p>
+
+  <p><b>Листинг 1.</b> </p>
+</blockquote>
+<p><b>Invalid Memory Access и Invalid Partial Memory Access.</b> Ошибки возникают при чтении/записи по недействительным адресам памяти в куче или в стеке и по частично недействительным адресам памяти. В программах довольно часто встречается такая небезопасная функция копирования строк, как strcpy. В листинге 2 представлен пример, где сделана попытка скопировать строку «my string» по уже несуществующему адресу. </p>
+<blockquote>
+  <p>char *pStr = (char*) malloc(16); 
+    <br />
+  free(pStr); 
+    <br />
+  strcpy(pStr, &quot;my string&quot;);//Err:Invalid Memory Access 
+    <br />
+  
+    <br />
+  char *pStr = (char*) malloc(16); 
+    <br />
+  free(pStr); 
+    <br />
+  char *pStr1 = (char*) malloc(16); 
+    <br />
+  strcpy(pStr, &quot;my string&quot;);//Err:Invalid Memory Access </p>
+
+  <p><b>Листинг 2.</b> </p>
+</blockquote>
+<p>В результате работы Inspector иногда выявляется несколько одинаковых ошибок Invalid Memory Access, ссылающихся на одну и ту же строчку кода. Возможно, это смутит пользователя, однако нужно понимать, что Inspector анализирует не исходный код, а исполняемый, и в данном случае компилятор мог оптимизировать копирование строки, выполнив его несколькими инструкциями. Естественно, что все эти инструкции принадлежат одной и той же строке исходного кода. Это, кстати, одна из причин, почему лучше выбрать Debug-режим для анализа приложения Inspector. </p>
+
+<p>Если в прошлом примере речь шла о копировании строки в память, которая была недействительна, то сейчас мы рассмотрим более сложный случай – одну из самых коварных ошибок при работе с указателями и памятью (листинг 2). Сначала выделим буфер памяти с помощью malloc и сохраним его адрес в указателе pStr. Затем сразу же освобождаем ее и выделяем буфер такого же размера, но по указателю pStr1. Далее копируем строку по старому указателю. В некоторых случаях, когда между выделениями памяти нет других операций с кучей и при этом программа выполняется в незагруженных другими приложениями системах, велика вероятность, что значения адреса в обоих указателях pStr и pStr1 совпадут, и ничего страшного в этот раз не произойдет. Но тем и коварна данная ошибка, что при переносе программы на реальную систему приложение начнет падать, что совершенно недопустимо. Осталось отметить, что такой тип ошибки Inspector обнаруживает только на уровне mi3 и выше, где включен дополнительный механизм поиска «утерянных» указателей. Естественно, это влечет за собой дополнительные накладные расходы во время анализа. </p>
+
+<p><b>Invalid Partial Memory Access.</b> Эта ошибка возникает, когда происходит доступ к составному объекту памяти, например, структуре, часть которого недействительна. В листинге 3 представлен пример такого кода. Здесь используется функция выделения памяти под структуру tally с явным указанием размера и с помощью sizeof, что более правильно. Далее мы инициализируем поля одной из структур по указателю pCurrent единицами и копируем ее в структуру по указателю pRoot. Inspector диагностирует ошибку Invalid Partial Memory Access в строке копирования, при этом в диагностике ошибочной (Partial Invalid Read) будет названа структура по указателю pCurrent. </p>
+<blockquote>
+  <p>char array[10]; 
+    <br />
+  strcpy(array, &quot;my string&quot;); 
+    <br />
+  int len = strlen(array); 
+    <br />
+  while (array[len] != 'Z')//Will read from below the stack pointer 
+    <br />
+  len--; </p>
+
+  <p><b>Листинг 3.</b> </p>
+</blockquote>
+<p>Разберемся, в чем состоит ошибка. К сожалению, Inspector пока еще не может подсказать, что по умолчанию включена опция компилятора /Zp4, которая заставляет его выравнивать размеры структур до величины 4 байт. А значит, sizeof нашей структуры из переменных типа int и char составляет не 5, а 8 байт. Таким образом, при копировании мы попытались прочитать 8 байт структуры по указателю pCurrent, в которой инициализированы, а следовательно, действительны, только первые 5 байт памяти. </p>
+
+<p>В том же листинге 3 представлен пример ошибки, которая обнаруживается только на уровне mi4. Этот уровень позволяет находить ошибки доступа к памяти, выделенной на стеке, которые по какой-то причине не обнаруживаются еще на стадии компиляции с помощью опций компилятора run-time check. Для данного примера копирования символов строки «my string» в цикле Inspector выдаст диагностику чтения недействительной памяти в теле массива. И в самом деле, так как в данной строке нет символа &lsquo;Z&rsquo;, то на одиннадцатой итерации произойдет попытка чтения символа за границей выделенного в стеке участка памяти. </p>
+
+<p><b>Uninitialized Memory Access и Uninitialized Partial Memory Access.</b> Ошибки возникают при попытке чтения выделенной, т. е. действительной, но неинициализированной памяти, в куче или в стеке. Простейший пример такой ошибки представлен в листинге 4. Мы сделали попытку чтения первого символа из неинициализированной строки в переменную с. Как и в случае доступа к частично недействительной памяти, возможна ошибка доступа к частично неинициализированной памяти. Пример тоже связан со структурой. Если попытаться только скопировать частично проинициализированную структуру person, расположенную по указателю p1, в новую структуру по указателю p2, Inspector выдаст ошибку Uninitialized Partial Memory Read для строки копирования, при этом в качестве Allocation Site будет определена строка выделения памяти для структуры по указателю p1. </p>
+<blockquote>
+  <p>struct person { 
+    <br />
+  unsigned char age; 
+    <br />
+  char firstInitial; 
+    <br />
+  char middleInitial; 
+    <br />
+  char lastInitial; 
+    <br />
+  }; 
+    <br />
+  struct person *p1, *p2; 
+    <br />
+  p1 = (struct person*) malloc(sizeof(struct person)); 
+    <br />
+  p2 = (struct person*) malloc(sizeof(struct person)); 
+    <br />
+  p1-&gt;firstInitial = 'c'; 
+    <br />
+  p1-&gt;lastInitial = 'o'; 
+    <br />
+  *p2 = *p1;//Uninitialized Partial Memory Read </p>
+
+  <p><b>Листинг 4.</b> </p>
+</blockquote>
+<h2>Заключение</h2>
+
+<p>Наверное, не имеет особого смысла объяснять разработчикам ПО последствия ошибок, вызванных некорректным использованием памяти. Необходимость инструмента, подобного Inspector, в процессе разработки не вызывает сомнений. Вопрос заключается в том, насколько этот инструмент удобен для работы и насколько полно он охватывает возможные проблемы корректности исполнения программ. Разработчики Intel Parallel Inspector будут рады услышать мнения пользователей и обсудить недостатки, которые еще есть в продукте, на форумах ISN, как <a href="http://software.intel.com/en-us/forums/intel-parallel-studio" target="_blank" >англоязычном</a>, так и <a href="http://software.intel.com/ru-ru/forums/intel-parallel-studio" target="_blank" >русскоязычном</a>. </p>
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='/articles/detail.php?ID=16073'>Intel Parallel Composer – отладка параллельных программ</A></b></li><li><b><A href='/articles/detail.php?ID=15724'>Intel Parallel Inspector – поиск ошибок многопоточности</A></b></li><li><b><A href='/articles/detail.php?ID=15064'>Intel Parallel Amplifier – профилировщих многопоточных приложений</A></b></li><li><b><A href='/articles/detail.php?ID=14743'>Intel Parallel Studio – инструмент для создания параллельных приложений</A></b></li><li><b><A href='/articles/detail.php?ID=12444'>Средства разработки CodeGear</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='/articles/detail.php?ID=25235'>NVIDIA Jetson TK1: разработка приложений нового поколения </A></b></li><li><b><A href='/articles/detail.php?ID=25219'>Обновленные модели программирования в Java SE 8 </A></b></li><li><b><A href='/articles/detail.php?ID=25122'>Embarcadero Appmethod: разработка приложений для разных платформ</A></b></li><li><b><A href='/articles/detail.php?ID=25103'>Серверы IBM Power Systems – в облаке для разработчиков </A></b></li><li><b><A href='/articles/detail.php?ID=25000'>Новый релиз платформы CUDA </A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='/images/byte/title-b.gif'></td><td width='2'><img src='/images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='/images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='/images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="http://www.bytemag.ru" target="_blank"><img src="http://www.bytemag.ru/images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="http://www.bytemag.ru/articles/detail.php?ID=14909" target="_blank"><img src="http://www.bytemag.ru/upload/iblock/7b6/int-par2-50.jpg" alt="Открыть материал" style="width:50px; height:50px; border:1px solid #000; float:left; margin:0 5px 5px 0;"></a><a href="http://www.bytemag.ru/articles/detail.php?ID=14909" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Intel Parallel Inspector – поиск ошибок доступа к памяти</a><br><a href="http://www.bytemag.ru/articles/detail.php?ID=14909" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Инструмент диагностики ошибок доступа к памяти Parallel Inspector &ndash; это часть пакета Intel Parallel Studio для разработки многопоточных приложений &hellip; </a></td></tr><tr><td align="right"><a href="http://www.bytemag.ru/articles/detail.php?ID=14909" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='/images/byte/title-b.gif'></td><td width='2'><img src='/images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='/images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='/images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='detail.php?ID=14909&#add-comment' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0b344f967e0f443f612db3d7ad69b432'><img src='/bitrix/tools/captcha.php?captcha_code=0b344f967e0f443f612db3d7ad69b432' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='http://www.bytemag.ru/about/' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='http://www.bytemag.ru/articles/index.php?TYPE_ID=16029' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='http://www.bytemag.ru/articles/index.php?TYPE_ID=6258' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/foto/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/foto/'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='/foto/detail.php?ID=19983'><IMG src='/upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='/foto/detail.php?ID=19983'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='/foto/detail.php?ID=17939'><IMG src='/upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='/foto/detail.php?ID=17939'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='/foto/detail.php?ID=17921'><IMG src='/upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='/foto/detail.php?ID=17921'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='/foto/' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="/images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/video/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/video/'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='/video/detail.php?ID=17721'><img src='/upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='/video/detail.php?ID=17721'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='/video/detail.php?ID=16525'><img src='/upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='/video/detail.php?ID=16525'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='/video/detail.php?ID=15824'><img src='/upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='/video/detail.php?ID=15824'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='/video/' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="/images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="/bitrix/rk.php?id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%2F+%5B375%5D+%5BTXT2%5D+%CA%EE%EC%EC%F3%F2%E0%F2%EE%F0%FB+%ED%E0%F7%E0%EB%FC%ED%EE%E3%EE+%F3%F0%EE%E2%ED%FF+%E0%EF%F0%E5%EB%FC+2014&amp;goto=http%3A%2F%2Fwww.bytemag.ru%2Farticles%2Fdetail.php%3FID%3D25176" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/themes/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/themes/'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='/articles/index.php?THEME_ID=6261'>Перспективные технологии</a><li><a href='/articles/index.php?THEME_ID=6262'>Информационная безопасность</a><li><a href='/articles/index.php?THEME_ID=6263'>Серверы</a><li><a href='/articles/index.php?THEME_ID=6264'>HPC (High Performance Computing)</a><li><a href='/articles/index.php?THEME_ID=6265'>Центры обработки данных</a><li><a href='/articles/index.php?THEME_ID=6266'>Технологии хранения данных</a><li><a href='/articles/index.php?THEME_ID=6267'>Инфраструктурные технологии</a><li><a href='/articles/index.php?THEME_ID=6268'>Периферийное оборудование</a><li><a href='/articles/index.php?THEME_ID=6269'>Телеком-решения</a><li><a href='/articles/index.php?THEME_ID=6270'>Мобильные решения</a><li><a href='/articles/index.php?THEME_ID=6271'>ERP</a><li><a href='/articles/index.php?THEME_ID=6272'>Документооборот</a><li><a href='/articles/index.php?THEME_ID=6273'>Управление бизнес-процессами</a><li><a href='/articles/index.php?THEME_ID=6274'>Бизнес-аналитика</a><li><a href='/articles/index.php?THEME_ID=6275'>Интеграционные технологии</a><li><a href='/articles/index.php?THEME_ID=6276'>Разработка приложений</a><li><a href='/articles/index.php?THEME_ID=12163'>Интеграция данных и приложений</a><li><a href='/articles/index.php?THEME_ID=12781'>Управление ИТ-инфраструктурой</a><li><a href='/articles/index.php?THEME_ID=11766'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/events/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/events/'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='/events/detail.php?ID=25002'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='/events/detail.php?ID=25217'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='/events/detail.php?ID=25221'>Docflow 2014 </a></b><br /><br /><a href='/events/' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/forum/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/forum/'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='/forum/forum2/topic70917/'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='/forum/forum2/topic70916/'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='/forum/forum2/topic70915/'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='/forum/forum2/topic70914/'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='/forum/forum2/topic70913/'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/press/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/press/'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='/press/detail.php?ID=25278'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='/press/detail.php?ID=25277'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='/press/detail.php?ID=25276'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='/press/'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="/images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="/images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="/images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="/credits/">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

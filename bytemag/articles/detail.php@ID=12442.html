@@ -1,0 +1,401 @@
+<HTML>
+<HEAD>
+<title>Silverlight – технология Microsoft для мультимедийных порталов</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="История создания, недостатки и возможности технологии Microsoft Silverlight. В последнее время при разработке корпоративных систем все чаще приходится иметь дело как с &laquo;толстыми&raquo; клиентами, так и с Web-приложениями, функциональность" />
+<meta name="description" content="История создания, недостатки и возможности технологии Microsoft Silverlight. В последнее время при разработке корпоративных систем все чаще приходится иметь дело как с &laquo;толстыми&raquo; клиентами, так и с Web-приложениями, функциональность" />
+<link href="/bitrix/js/main/core/css/core.css?1397654732" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/main/styles.css?1357814843" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/main/template_styles.css?1357814843" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/bitrix/js/main/core/core.js?1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398074617','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ajax.js?1397654452"></script>
+<script type="text/javascript" src="/bitrix/js/main/session.js?1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='/rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="/images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="/images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="/bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="/bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="/images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="/images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="/images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="/images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='/articles/index.php?TYPE_ID=6260'>Новости</a><a href='/numbers/'>Архив</a><a href='/foto/'>Фоторепортажи</a><a href='/video/'>Видеоролики</a><a href='/events/'>Мероприятия</a><a href='/forum/'>Форумы</a><a href='/white-papers/'>Решения</a><a href='/courses/'>Учебные курсы</a><a href='/subscribe/'>Подписка на рассылки</a><a href='/about/'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="/images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='/auth/'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='/' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="/images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6250'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6251'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6252'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6253'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='/articles/index.php?TYPE_ID=6254'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=16029'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6256'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6257'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6258'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6255'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="/images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="/images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="/images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="/images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='/images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='/rss/index.php'><img src='/images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='/rss/index.php'>RSS</a></td>
+	<td><img src="/images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='/themes/'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="/images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="/images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="/images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="/ad/banners/left.php" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/articles/index.php?TYPE_ID=6260'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/articles/index.php?TYPE_ID=6260'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='/articles/detail.php?ID=25289'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='/articles/detail.php?ID=25288'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='/articles/detail.php?ID=25286'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='/articles/detail.php?ID=25285'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='/articles/detail.php?ID=25284'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='/articles/index.php?TYPE_ID=6260' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/articles/index.php?OPINION=1'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/articles/index.php?OPINION=1'>Мнения</a></td></tr></table><DIV class='block-g'><a href='/articles/detail.php?ID=25262'><img src='/upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='/articles/detail.php?ID=25262'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='/articles/detail.php?ID=24189'><img src='/upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='/articles/detail.php?ID=24189'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='/articles/detail.php?ID=23635'><img src='/upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='/articles/detail.php?ID=23635'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='/articles/index.php?OPINION=1' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/articles/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/articles/'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='/articles/detail.php?ID=25074'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='/articles/detail.php?ID=25041'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='/articles/detail.php?ID=25196'>Видеоконференции в среде ALT Linux </a></li><li><a href='/articles/detail.php?ID=25115'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='/articles/detail.php?ID=25176'>Коммутаторы начального уровня</a></li><li><a href='/articles/detail.php?ID=25114'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='/articles/detail.php?ID=25103'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='/articles/detail.php?ID=25178'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='/articles/detail.php?ID=25177'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='/articles/detail.php?ID=25208'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/white-papers/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/white-papers/'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=12543'><img src='/upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=12544'>Новые стратегии резервного копирования</a></b></div><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=19413'><img src='/upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=19667'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=13245'><img src='/upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=13246'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=12719'><img src='/upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=12720'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='/white-papers/index.php?COMPANY_ID=12721'><img src='/upload/iblock/f89/softintegro.gif' alt='Софтинтегро' class='wp-logo-last'></a><b><a href='/white-papers/detail.php?ID=12722'>Система управления ИТ-инфраструктурой предприятия — «ИнфраМенеджер»</a></b></div><a href='/white-papers/' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/courses/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/courses/'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='/courses/index.php?COMPANY_ID=18527'><img src='/upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='/courses/detail.php?ID=19120'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='/courses/index.php?COMPANY_ID=18527'><img src='/upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='/courses/detail.php?ID=18993'>Adaptec Certified Storage Professional</a></b></div><a href='/courses/' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/subscribe/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/subscribe/'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='/subscribe/' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="/images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm12442' method='post' action='detail_print.php?ID=12442&PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='/images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm12442"].SHOW_IMAGE.value="N"; document.forms["PrintForm12442"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm12442"].SHOW_IMAGE.value="Y"; document.forms["PrintForm12442"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='/images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(12442);'>Отправить ссылку</a></TD><TD width='16'><img src='/images/byte/icon-blog.gif'></TD><TD><a href='#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='/images/byte/icon-forum.gif'></TD><TD><a href='#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='/images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(12442);'>Написать автору</a></TD><TD width='16'><img src='/images/byte/icon-subscribe.gif'></TD><TD><a href='/subscribe/'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='/articles/index.php?TYPE_ID=6256'>Средства разработки</a><br /><b>Тема:</b> <a href='/articles/index.php?THEME_ID=6276'>Разработка приложений</a><br /></p><a href='/numbers/index.php?ID=12424'>№7-8 (117), июль-август 2008</a><h1>Silverlight – технология Microsoft для мультимедийных порталов</h1>Автор: Константин Солопов, руководитель проектов компании «Аплана»<br />14.08.2008<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='/big-pictures/index.php?ARTICLE_ID=12442&PICTURE_ID=12439'><IMG src='/upload/iblock/211/10-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 1. Стандартная схема разработки Web-приложения. Камень преткновения — взаимодействие дизайнера и разработчика.</b></TD></TR><TR align='center'><TD><a href='/big-pictures/index.php?ARTICLE_ID=12442&PICTURE_ID=12440'><IMG src='/upload/iblock/009/11-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 2. Expression Blend — список созданных элементов, визуальное представление и XML-описание объекта.</b></TD></TR><TR align='center'><TD><a href='/big-pictures/index.php?ARTICLE_ID=12442&PICTURE_ID=12441'><IMG src='/upload/iblock/77e/12-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 3. Редактирование действий (Storyboard) — временная шкала и XML-описание.</b></TD></TR><TR align='center'><TD><a href='/big-pictures/index.php?ARTICLE_ID=12442&PICTURE_ID=12443'><IMG src='/upload/iblock/ae7/13-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Команда топ-менеджеров направления разработки ПО Microsoft (слева направо): старший вице-президент Developer Division С. Сомасегер (S. Somasegar), технический руководитель и менеджер разработки продукта Team Foundation Server Брайан Харри (Brian Harry),</b></TD></TR><TR align='center'><TD><a href='/big-pictures/index.php?ARTICLE_ID=12442&PICTURE_ID=12449'><IMG src='/upload/iblock/9f5/qq-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Интерфейс портала Hard Rock Memorabilia 2.0 реализован с помощью Microsoft Silverlight 2. Любители могут в деталях рассматривать тысячи артефактов тяжелого рока.</b></TD></TR></TABLE><DIV class='article-text'> 
+<p><em>История создания, недостатки и возможности технологии Microsoft Silverlight.</em> </p>
+ 
+<p>В последнее время при разработке корпоративных систем все чаще приходится иметь дело как с &laquo;толстыми&raquo; клиентами, так и с Web-приложениями, функциональность которых сильно пересекается, &mdash; отсюда и естественное желание унифицировать разработку обоих типов. История создания Silverlight началась с технологии Windows Presentation Foundation (WPF), которая появилась в Microsoft .NET Framework 3.5. WPF представляет собой высокоуровневый объектно-ориентированный функциональный слой (framework), позволяющий создавать графические 2D- и 3D-интерфейсы. Основной элемент WPF &mdash; язык XAML (eXtensible Application Markup Language), декларативный XML-подобный язык, который описывает все представления, отображаемые подсистемой WPF. В XAML имеются четыре основные категории элементов: панели, элементы управления, элементы, связанные с документом, и графические фигуры. Основным минусом технологии WPF было то, что она предназначена для создания настольных приложений, и потому следующим логичным шагом в ее развитии стал перевод на мобильную платформу. Эта новая технология и получила название Silverlight. </p>
+ 
+<p>Silverlight представляет собой средство создания графических интерфейсов для Web-приложений. Фактически это плагин для браузера (на данный момент поддерживаются Internet Explorer, Firefox в среде Windows, Safari и Firefox для Mac OS X), который позволяет показывать на страницах разработанные приложения. Любое приложение Silverlight содержит код JavaScript, который проверяет наличие установленного плагина, а при его отсутствии предлагает его загрузить. С помощью XAML в Silverlight описываются все графические элементы приложения, а также динамические изменения этих элементов. Кроме того, ключевыми нововведениями можно считать удобную работу с медиаконтентом и функциональность полного экрана, когда приложение Silverlight раскрывается на весь экран пользователя &mdash; без меню, строк состояния, навигации и т. д. На данный момент существуют две версии Silverlight &mdash; 1.0 Release и 2.0 Beta. Первая ориентирована на работу с мультимедиа, во второй предполагаются более широкие возможности, однако код, написанный на Silverlight 1.0, не может быть перенесен на Silverlight 2.0. Выпуск версии Silverlight 2.0 планируется на IV квартал 2008 г. </p>
+ 
+<h3>Silverlight 1.0 &mdash; достоинства и недостатки </h3>
+ 
+<p>Одной из предпосылок для создания технологии Silverlight стало то, что наиболее популярные сегодня технологии создания мультимедиа и презентаций &mdash; Adobe Flash и Web &mdash; имеют ряд недостатков. Основной из них связан с тем, что в одном коде тесно пересекаются логика и дизайнерские решения, и такое пересечение влечет за собой многочисленные проблемы при совмещении элементов графического дизайна и программного кода. Если при создании настольных приложений есть стандартные формы, и они понятны как разработчику, так и дизайнеру, то при разработке Web-приложений дело обстоит иначе. </p>
+ 
+<p>Web предполагает большую свободу в выборе представлений, и дизайнеры в своей работе используют и изображения, и HTML, и другие возможности. Разработчикам же предстоит в них разбираться и переводить представление информации в удобный для разработки вид, что реализуется достаточно сложно: разработчик не всегда может точно перевести в приложение представления, созданные дизайнером, или же дизайнер вносит изменения, которые заставляют разработчика переделывать все заново. Такой процесс разработки подразумевает множество итераций и длительные сроки, подчас трудно прогнозируемые. Чтобы избежать подобного хода событий, участникам процесса нужно общаться на одном языке: или дизайнеры должны стать хорошими разработчиками (а добиться этого не так-то просто), или же разработчики должны научиться разбираться во всех представлениях, созданных дизайнером, что тоже достаточно проблематично (рис. 1). </p>
+ 
+<p>Silverlight разработан именно для того, чтобы избавить разработчиков и дизайнеров от этих проблем, разделив их работу. Основные элементы Silverlight &mdash; это язык XAML, который описывает все представления, пакет программ для работы дизайнера Expression Studio и средство разработки Visual Studio, знакомое любому, кто занимается разработкой на платформе Microsoft. </p>
+ 
+<p>В состав Expression Studio входят четыре инструмента: </p>
+ 
+<ul> 
+  <li>Expression Web &mdash; проектирование Интернет-сайтов; </li>
+ 
+  <li>Expression Design &mdash; графический редактор для векторной графики; </li>
+ 
+  <li>Expression Blend &mdash; проектирование интерфейсов приложений в XAML; </li>
+ 
+  <li>Expression Media &mdash; организация работы с медиасодержимым на диске; </li>
+ 
+  <li>Expression Encoder &mdash; кодирование видео в различные форматы. </li>
+ </ul>
+ 
+<p>Сначала дизайнер подготавливает векторную графику с помощью Expression Design, CorelDraw или Adobe Illustrator. Далее в Expression Design графика экспортируется в XAML, с которым работает Expression Blend (рис. 2). </p>
+ 
+<p>Инструмент Expression Blend ориентирован именно на дизайнера и предоставляет ему удобную среду для разработки. Описание интерфейса можно разделить на две части &mdash; статику и динамику. Импортировав графические элементы из Expression Design, дизайнер получает набор объектов (Canvas), на который накладывает динамику (Storyboard) &mdash; перемещение, изменение прозрачности, вращение и т. д. Таким образом, XAML представляет собой объектно-ориентированную модель &mdash; объекты и действия с ними, причем описание объекта может содержать в себе все действия над ним. При описании действий дизайнер оперирует временной шкалой и для каждой единицы времени может задать набор параметров объекта &mdash; местоположение, прозрачность, размеры и т. д. (рис. 3). </p>
+ 
+<p>Далее разработчик, не вникая в дизайнерские элементы, оперирует ими целиком и пишет код в привычной для него среде Visual Studio. Если дизайнеру требуется внести изменения, он делает их независимо от разработчика. Таким образом, в Silverlight граница взаимодействия прописана гораздо четче, чем в технологиях Web или Adobe Flash, и процесс конвертации исчезает как таковой. Дизайнер и разработчик работают одновременно, не мешая друг другу. Языком разработки служит JavaScript с дополнительным набором классов. Чтобы получить или изменить свойство любого именованного объекта, описанного в XAML, достаточно простого вызова (элемент прячется под все остальные): </p>
+ 
+<p>source.findName(&lsquo;ThumbImage&rsquo;)[&quot;canvas.ZIndex&quot;] = -1;</p>
+ 
+<p>При создании Silverlight 1.0 акцент делался на богатые мультимедиа-возможности и удобную работу с аудио- и медиаконтентом. Однако взаимодействие элементов, обработка действий пользователя и другая логика работы интерфейса описываются с помощью JavaScript, что усложняет промышленную разработку с использованием данной технологии. Собственно приложение Silverlight состоит из HTML-страницы с кодом вызова Silverlight, XAML c описанием интерфейса и набора файлов JavaScript, описывающих логику. Тем не менее, если задача, например, состоит в разработке Web-приложения для проигрывания видео (плеер), Silverlight представляется оптимальным решением. Так, код для проигрывания видео с помощью Windows Media Player на странице вряд ли можно считать простым и понятным для разработки, а кроме того, он практически не позволяет настроить дизайн под себя: </p>
+ 
+<p>&lt;object width=&quot;320&quot; height=&quot;285&quot; id=&quot;playwideo&quot; type=&quot;application/x-oleobject&quot; standby=&quot;Loading Microsoft Media Player components...&quot; codebase=&quot;http://www. microsoft.com/ntserver/netshow/download/en/nsmp2inf.cab#Version=5,1,51,415&quot; 0080c74c7e95=&quot;&quot; classid=&quot;CLSID:22D6f312-B0F6-11D0-94AB-&quot;&amp;rt; &lt;param value=&quot;true&quot; name=&quot;autostart&quot;&amp;rt;&lt;/param&amp;rt; &lt;param value=&quot;mms://video.rfn.ru/rtr-vesti/134527.asf&quot; name=&quot;filename&quot;&amp;rt;&lt;/param&amp;rt; &lt;param value=&quot;true&quot; name=&quot;controltype&quot;&amp;rt;&lt;/param&amp;rt; &lt;param value=&quot;false&quot; name=&quot;showdisplay&quot;&amp;rt;&lt;/param&amp;rt; &lt;param value=&quot;true&quot; name=&quot;showcontrols&quot;&amp;rt;&lt;/param&amp;rt; &lt;param value=&quot;high&quot; name=&quot;quality&quot;&amp;rt;&lt;/param&amp;rt; &lt;embed width=&quot;320&quot; height=&quot;285&quot; id=&quot;playwideo&quot; showcontrols=&quot;1&quot; showdisplay=&quot;0&quot; src=&quot;mms://video.rfn.ru/rtr-vesti/134527.asf&quot; pluginspage=&quot;http://www.microsoft.com/windows/mediaplayer/download/default.asp&quot; type=&quot;video/x-ms-asf-plugin&quot;&amp;rt;&lt;/embed&amp;rt; &lt;/object&amp;rt;</p>
+ 
+<p>В то же время Silverlight cодержит стандартный XAML-элемент, который позволяет проигрывать видео- или аудиоконтент: </p>
+ 
+<p>&lt;mediaelement x:name=&quot;VideoWindow&quot; width=&quot;636&quot; height=&quot;480&quot; canvas.left=&quot;2&quot; canvas.top=&quot;35&quot; source=&quot; mms://video.rfn.ru/rtr-vesti/134527.asf&quot;&amp;rt; &lt;/mediaelement&amp;rt;</p>
+ 
+<p>Этот элемент можно органично встроить в нужный интерфейс, и он не будет из него стилистически выпадать. Далее с помощью JavaScript разработчик может управлять этим элементом: </p>
+ 
+<p>source.findName(&lsquo;VideoWindow&rsquo;).play();</p>
+ 
+<p>Еще одним новшеством, упрощающим работу с медиаконтентом, стала возможность развернуть окно приложения на весь экран клиента (рис. 4.). Управление таким переходом и возвратом в нормальное состояние тривиально и входит в число стандартных функций Silverlight: </p>
+ 
+<p>root.getHost().content.fullScreen = !root.getHost().content.fullScreen;</p>
+ 
+<h3>Пример проекта </h3>
+ 
+<p>Одним из первых в России проектов с использованием технологии Silverlight стал сайт трансляции видеоматериалов для телеканала &laquo;Спорт&raquo;, разработанный компанией &laquo;Аплана&raquo; (www.aplana.ru). Этот проект показателен с точки зрения сроков реализации &mdash; они были весьма жесткими, поэтому классическая схема, когда сначала дизайнеры разрабатывают интерфейсы, а далее к процессу подключаются разработчики, не годилась. В проекте для телеканала &laquo;Спорт&raquo; за счет использования технологии Silverlight работы шли параллельно, и в результате сроки были сокращены вдвое. Несмотря на то что дизайн несколько раз переделывался, на деятельность разработчиков это никак не повлияло, поскольку все изменения дизайнеры вносили внутри объектов, а разработчики оперировали этими объектами как единым целым. </p>
+ <blockquote> 
+  <h3>Silverlight &mdash; хронология развития </h3>
+
+  <p>В октябре 2003 г. Microsoft (www.microsoft. com) объявила о намерении создать ОС Windows нового поколения, которая получила кодовое название Longhorn. Тогда же было сказано, что эта ОС будет базироваться на новой модели программирования WinFX, состоящей из трех основных компонентов, один из которых, Avalon, отвечал за реализацию пользовательского интерфейса приложений. Одной из ключевых идеей Avalon было использование декларативной модели программирования интерфейса с применением нового языка XAML и с переходом от растровой графики к векторной. В последующие три года все эти идеи и концепции постепенно приобретали форму конкретных технологий: Longhorn получила официальное имя Vista, WinFX &mdash; .NET Framework 3.0, Avalon &mdash; Windows Presentation Foundation (WPF). </p>
+
+  <p>Однако примерно в 2005 г. стало понятно, что вектор развития средств разработки направлен в сторону RIA (rich interface application), что подразумевает, в частности, возможность создавать Web-приложения с функциональностью интерфейса, имевшейся к тому времени только у &laquo;толстых&raquo; Windows-приложений. Решение этой задачи требовало создания дополнительной среды исполнения для Web-браузеров. Проблема же заключалась в том, что если браузеры базируются на некоторых отраслевых спецификациях, то для подобных RIA-расширений никаких единых стандартов выработать не удалось, и в этой сфере началась борьба поставщиков. </p>
+
+  <p>В начале 2006 г. в борьбу на поле RIA вступила Microsoft, объявив о намерении создать свой базовый операционный слой Windows Presentation Foundation/Everywhere (WPF/E), предназначенный для кросс-исполнения приложений в среде Web-браузеров. Уже из самого названия понятно, что WPF/E представлял собой усеченный вариант WPF, адаптированный для Web. </p>
+
+  <p>Предварительный вариант WPF/E был представлен разработчиками еще весной 2006 г., а окончательный вариант был обещан к концу года. Но оказалось, что реализация данного проекта не так проста, &mdash; сроки выпуска WPF/E несколько раз сдвигались. И это при том, что конкуренты (в первую очередь Adobe и сообщество Eclipse) быстро увеличивали свою активность в этом направлении. Конкуренция заставила Microsoft также форсировать события: в апреле 2007 г. корпорация заявила, что WPF/E теперь будет официально называться Silverlight (&laquo;Серебряный рассвет&raquo;), и представила первую его бета-версию. </p>
+
+  <p>Тогда же было объявлено о скором начале поставок нового продукта Expression Studio, предназначенного для широкого круга профессионалов, занимающихся созданием функционально насыщенных Web-решений. Сильная сторона этого пакета &mdash; тесная интеграция с Visual Studio, что дает разработчикам и дизайнерам возможность одновременно работать над созданием интерфейсов клиентских приложений, в том числе используя новейшие платформенные технологии Windows Presentation Foundation и Silverlight. </p>
+
+  <p>В сентябре 2007 г. Microsoft объявила о доступности Silverlight 1.0 для свободного скачивания. В этом варианте технологии главный акцент явно был сделан на работу с мультимедийной информацией, в частности с потоковым видео. Предполагалось, что дополнительные возможности для использования Silverlight в бизнес-приложениях появятся в версии 1.1, которая планировалась на конец того же года. Но в ноябре стало известно, что версии 1.1 не будет: следующим станет выпуск Silverlight 2.0, который откладывался на 2008 г. </p>
+
+  <p>Уже в момент выпуска Silvetlight 1.0 был виден главный ее недостаток по сравнению, например, с технологиями Adobe, &mdash; ограниченный спектр поддерживаемых платформ, как ОС, так и Web-браузеров. Но Microsoft предприняла некоторые шаги в этом направлении: в момент объявления технологии Silverlight 1.0 компания сообщила, что она совместно с Novell готовит к запуску проект ее поддержки для Linux (пока Silverlight работает только на платформах Windows и Macintosh). Проект получил название Moonlight и реализуется на open source-платформе mono-project.com (независимая реализация среды .NET для Linux). </p>
+
+  <p>В мае 2008 г. Microsoft представила обновленный пакет инструментов для Web-разработчиков и дизайнеров Expression Studio 2. В состав первого варианта пакета, выпущенного годом ранее, входили три инструмента: Expression Web (EW), Expression Blend (EB) и Expression Design (ED), ориентированные соответственно на Web-разработчиков, дизайнеров и разработчиков клиентских Windows-приложений. Все эти средства получили развитие во второй версии. В частности, EW 2 теперь поддерживает язык программирования PHP и позволяет импортировать файлы из Adobe Photoshop. В EB 2 в дополнение к полной поддержке Silverlight реализована поддержка векторной анимации, пользовательский интерфейс стал более удобным за счет одновременного представления панелей &laquo;Дизайн&raquo; и XAML. В ED 2 улучшены функции экспорта, включая возможность экспортировать разметку проекта. </p>
+
+  <p>Кроме того, в Expression Studio 2 включены два новых инструмента: Expression Media (EM) &mdash; решение для управления ресурсами, предназначенными для профессиональных фотографов и дизайнеров, и Expression Encoder (EE) &mdash; средство оптимизации видеоконтента и его размещения в Интернете в виде потокового видео, мультимедийной рекламы и других форматов Web 2.0. </p>
+
+  <p>В июне 2008 г. была выпущена вторая бета-версия Silverlight 2, представленная в виде лицензии Go Live (пригодной для коммерческой разработки). Тогда же стало известно, что компания NBC Universal намерена именно с ее помощью вести Интернет-трансляции с Олимпийских игр в Пекине. В июле должны также выйти предварительные версии Expression Blend 2.5 June 2008 Preview и Microsoft Silverlight Tools beta 2 for Visual Studio 2008. </p>
+
+  <p><em>Андрей Колесов</em> </p>
+</blockquote> 
+<p>Разработанный сайт обеспечивает удобный доступ к перечню трансляций и более качественное воспроизведение видео- и аудиотрансляций при относительно небольших требованиях к ресурсам. В рамках проекта были улучшены пользовательские качества сайта, удобнее стало и работать с каталогом трансляций, и просматривать видео. Благодаря новому функционалу все пользователи сайта могут просматривать видеоматериалы на странице видеоархива и в двух полноэкранных режимах &mdash; просмотра каталога трансляций и просмотра видео. </p>
+ 
+<p>В целом видеокаталог телеканала &laquo;Спорт&raquo; демонстрирует все сильные стороны Silverlight &mdash; ведь чаще всего именно при спортивных трансляциях возникает желание увидеть интересный момент еще раз, просмотреть комментарии и статистику. Технология Silverlight предоставляет зрителям дополнительные сервисы, появление которых стало одним из ключевых факторов, способствующих развитию Интернет-телевидения. </p>
+ 
+<h3>Silverlight 2.0 </h3>
+ 
+<p>Тем не менее версия Silverlight 1.0 ориентирована скорее на мультимедиа и не подходит для полномасштабной разработки Web-приложений. В конце 2008 г. ожидается релиз второй версии, к которому Microsoft начала готовиться сразу после выхода первой. </p>
+ 
+<p>В качестве одного из способов обсуждения проблем текущей версии и сбора пожеланий к последующим Microsoft практикует организацию конференций для разработчиков, на которых демонстрирует направление развития технологий и общается с разработчиками со всего мира. На семинаре для разработчиков в среде Silverlight, состоявшемся в начале 2008 г. в штаб-квартире Microsoft в Редмонде, среди наиболее интересных тем для обсуждения были следующие: организация взаимодействия с источниками данных с помощью технологии LINQ (Language Integrated Query &mdash; проект добавления синтаксиса языка запросов, напоминающего SQL, в языки программирования платформы .NET Framework), сетевое взаимодействие, поддержка работы мобильных устройств, элементы управления. Там же была представлена технология Sea Dragon, предназначенная для так называемого глубокого масштабирования (deep zoom), которую можно использовать для картографических систем. В конце каждой презентации раздавались анкеты под названием One hundred dollar questions, где предлагалось отдать 100 виртуальных долларов за выбранные возможности из числа тех, которые предполагается реализовать в последующих версиях. Результаты опросов Microsoft не разглашает, но на основе обсуждений участников наибольшее внимание было уделено в первую очередь пользовательским элементам управления (DataGrid и стандартным &mdash; Combobox, Calendar и т. д.), а далее &mdash; усовершенствованиям DataBinding, поддержке различных платформ, собственной разработке клика правой кнопки мыши, усовершенствованию работы с перехватом событий нажатия кнопок на клавиатуре. Будут ли данные пожелания учтены, пока неизвестно, но о некоторых недостатках первой версии, которые будут исправлены в новой, можно говорить с уверенностью. </p>
+ 
+<p>Один из главных недостатков Silverlight 1.0 &mdash; использование JavaScript. Это неформализованный язык, с ним тяжелее работать, он требует больших навыков. Разработчики Silverlight это понимают, поэтому самым главным улучшением во второй версии станет переход на языки .NЕТ (C#, Visual Basic, C++). Использование этих языков значительно улучшает процесс разработки, так как они более формализованы, на них легче вести разработку, их проще развивать и поддерживать. </p>
+ 
+<p>Второй большой минус, который ограничивал возможности Silverlight 1.0, &mdash; это отсутствие стандартных элементов управления. Изначально Silverlight 1.0 развивался по пути Adobe Flash &mdash; технологии создания анимационных и мультимедийных порталов. Для этого в Silverlight 1.0 был предусмотрен широкий набор готовых к использованию плееров со всеми &laquo;обвязками&raquo; &mdash; воспроизведение, пауза, громкость, перемотка и т. д. По сравнению с Adobe Flash в Silverlight 1.0 на этом сделан больший акцент, использовать их намного проще, и это безусловный плюс продукта. Минус же заключается в отсутствии стандартных элементов управления, которые позволяли бы создать какие-либо поля ввода данных и установить двустороннее взаимодействие с пользователем. Это неудобно, и потому разработчики Silverlight обогащают версию 2.0 как стандартными, так и новыми элементами управления, которые позволят строить полномасштабные мультимедиапорталы без вкрапления инородных технологий. </p>
+ 
+<p>Наконец, третьим заметным улучшением технологии Silverlight станет поддержка работы мобильных устройств. На сегодня версия 1.0 поддерживает наиболее популярные браузеры для настольных компьютеров; в Silverlight 2.0 планируется расширить их число за счет поддержки мобильных устройств. </p>
+ </DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='/articles/detail.php?ID=16073'>Intel Parallel Composer – отладка параллельных программ</A></b></li><li><b><A href='/articles/detail.php?ID=15724'>Intel Parallel Inspector – поиск ошибок многопоточности</A></b></li><li><b><A href='/articles/detail.php?ID=15064'>Intel Parallel Amplifier – профилировщих многопоточных приложений</A></b></li><li><b><A href='/articles/detail.php?ID=14909'>Intel Parallel Inspector – поиск ошибок доступа к памяти</A></b></li><li><b><A href='/articles/detail.php?ID=14743'>Intel Parallel Studio – инструмент для создания параллельных приложений</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='/articles/detail.php?ID=25235'>NVIDIA Jetson TK1: разработка приложений нового поколения </A></b></li><li><b><A href='/articles/detail.php?ID=25219'>Обновленные модели программирования в Java SE 8 </A></b></li><li><b><A href='/articles/detail.php?ID=25122'>Embarcadero Appmethod: разработка приложений для разных платформ</A></b></li><li><b><A href='/articles/detail.php?ID=25103'>Серверы IBM Power Systems – в облаке для разработчиков </A></b></li><li><b><A href='/articles/detail.php?ID=25000'>Новый релиз платформы CUDA </A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='/images/byte/title-b.gif'></td><td width='2'><img src='/images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='/images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='/images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="http://www.bytemag.ru" target="_blank"><img src="http://www.bytemag.ru/images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="http://www.bytemag.ru/articles/detail.php?ID=12442" target="_blank"><img src="http://www.bytemag.ru/upload/iblock/ce4/11-1-1.jpg" alt="Открыть материал" style="width:50px; height:50px; border:1px solid #000; float:left; margin:0 5px 5px 0;"></a><a href="http://www.bytemag.ru/articles/detail.php?ID=12442" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Silverlight – технология Microsoft для мультимедийных порталов</a><br><a href="http://www.bytemag.ru/articles/detail.php?ID=12442" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">В последнее время при разработке корпоративных систем все чаще приходится иметь дело как с «толстыми» клиентами, так и с Web-приложениями …</a></td></tr><tr><td align="right"><a href="http://www.bytemag.ru/articles/detail.php?ID=12442" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='/images/byte/title-b.gif'></td><td width='2'><img src='/images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='/images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='/images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='detail.php?ID=12442&#add-comment' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0eea4ec9a785d444f2c03f68d1b230fa'><img src='/bitrix/tools/captcha.php?captcha_code=0eea4ec9a785d444f2c03f68d1b230fa' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='http://www.bytemag.ru/about/' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='http://www.bytemag.ru/articles/index.php?TYPE_ID=16029' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='http://www.bytemag.ru/articles/index.php?TYPE_ID=6258' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/foto/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/foto/'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='/foto/detail.php?ID=19983'><IMG src='/upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='/foto/detail.php?ID=19983'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='/foto/detail.php?ID=17939'><IMG src='/upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='/foto/detail.php?ID=17939'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='/foto/detail.php?ID=17921'><IMG src='/upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='/foto/detail.php?ID=17921'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='/foto/' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="/images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/video/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/video/'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='/video/detail.php?ID=17721'><img src='/upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='/video/detail.php?ID=17721'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='/video/detail.php?ID=16525'><img src='/upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='/video/detail.php?ID=16525'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='/video/detail.php?ID=15824'><img src='/upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='/video/detail.php?ID=15824'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='/video/' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="/images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="/bitrix/rk.php?id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%2F+%5B375%5D+%5BTXT2%5D+%CA%EE%EC%EC%F3%F2%E0%F2%EE%F0%FB+%ED%E0%F7%E0%EB%FC%ED%EE%E3%EE+%F3%F0%EE%E2%ED%FF+%E0%EF%F0%E5%EB%FC+2014&amp;goto=http%3A%2F%2Fwww.bytemag.ru%2Farticles%2Fdetail.php%3FID%3D25176" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/themes/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/themes/'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='/articles/index.php?THEME_ID=6261'>Перспективные технологии</a><li><a href='/articles/index.php?THEME_ID=6262'>Информационная безопасность</a><li><a href='/articles/index.php?THEME_ID=6263'>Серверы</a><li><a href='/articles/index.php?THEME_ID=6264'>HPC (High Performance Computing)</a><li><a href='/articles/index.php?THEME_ID=6265'>Центры обработки данных</a><li><a href='/articles/index.php?THEME_ID=6266'>Технологии хранения данных</a><li><a href='/articles/index.php?THEME_ID=6267'>Инфраструктурные технологии</a><li><a href='/articles/index.php?THEME_ID=6268'>Периферийное оборудование</a><li><a href='/articles/index.php?THEME_ID=6269'>Телеком-решения</a><li><a href='/articles/index.php?THEME_ID=6270'>Мобильные решения</a><li><a href='/articles/index.php?THEME_ID=6271'>ERP</a><li><a href='/articles/index.php?THEME_ID=6272'>Документооборот</a><li><a href='/articles/index.php?THEME_ID=6273'>Управление бизнес-процессами</a><li><a href='/articles/index.php?THEME_ID=6274'>Бизнес-аналитика</a><li><a href='/articles/index.php?THEME_ID=6275'>Интеграционные технологии</a><li><a href='/articles/index.php?THEME_ID=6276'>Разработка приложений</a><li><a href='/articles/index.php?THEME_ID=12163'>Интеграция данных и приложений</a><li><a href='/articles/index.php?THEME_ID=12781'>Управление ИТ-инфраструктурой</a><li><a href='/articles/index.php?THEME_ID=11766'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/events/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/events/'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='/events/detail.php?ID=25002'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='/events/detail.php?ID=25217'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='/events/detail.php?ID=25221'>Docflow 2014 </a></b><br /><br /><a href='/events/' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/forum/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/forum/'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='/forum/forum2/topic70917/'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='/forum/forum2/topic70916/'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='/forum/forum2/topic70915/'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='/forum/forum2/topic70914/'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='/forum/forum2/topic70913/'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='/press/'><img src='/images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='/press/'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='/press/detail.php?ID=25278'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='/press/detail.php?ID=25277'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='/press/detail.php?ID=25276'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='/press/'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="/images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="/images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="/images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="/credits/">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

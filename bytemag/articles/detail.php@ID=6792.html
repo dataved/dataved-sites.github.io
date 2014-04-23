@@ -1,0 +1,728 @@
+<HTML>
+<HEAD>
+<title>VMware как архитектор виртуализации
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Для начала давайте уточним терминологию предметной области, о которой пойдет речь в этой статье. Основное ее понятие, виртуализация, означает дополнительный уровень абстракции, позволяющий разделить то аппаратное обеспечение, на котором" />
+<meta name="description" content="Для начала давайте уточним терминологию предметной области, о которой пойдет речь в этой статье. Основное ее понятие, виртуализация, означает дополнительный уровень абстракции, позволяющий разделить то аппаратное обеспечение, на котором" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398081469','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6792' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6792&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6792"].SHOW_IMAGE.value="N"; document.forms["PrintForm6792"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6792"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6792"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6792);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6792.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6792.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6792);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a><br /></p><a href='../numbers/index.php@ID=11513.html'>№5 (93), май 2006</a><h1>VMware как архитектор виртуализации
+</h1>17.05.2006<p></p><DIV class='article-text'><p>Для начала давайте уточним терминологию предметной области, о которой пойдет 
+  речь в этой статье. Основное ее понятие, <i>виртуализация</i>, означает дополнительный 
+  уровень абстракции, позволяющий разделить то аппаратное обеспечение, на котором 
+  работает ОС, и то, которое она видит и к которому имеет доступ. Интересна эта 
+  технология в первую очередь тем, что с ее помощью можно организовать более эффективную 
+  утилизацию имеющихся ресурсов и повысить гибкость инфраструктуры. Благодаря 
+  виртуализации несколько виртуальных машин с произвольными гостевыми ОС могут 
+  работать независимо друг от друга на одной физической машине. 
+<p>Из других терминов поясним следующие. <i>Хост</i> - это физический компьютер 
+  (сервер), на котором установлено ПО виртуализации и работают виртуальные машины; 
+  <i>хостовая ОС</i> - соответственно ОС, установленная непосредственно на хосте 
+  (это может быть Windows, Linux, VMware ESX Server). <i>Виртуальная машина</i> 
+  - объект в программе виртуализации. Для <i>гостевой ОС</i>, т. е. ОС, работающей 
+  внутри виртуальной машины, это физическая машина, которая ничем в принципе не 
+  отличается от реальной (но аппаратно она отличается от хоста). 
+<h3>Преимущества виртуализации </h3>
+<p>Организация работы виртуальных машин имеет некоторые особенности, за счет которых и достигаются преимущества виртуализации.
+<p><b>Разделение.</b> Множество приложений и ОС могут корректно работать на одной 
+  физической системе. Серверы могут перемещаться с физических серверов в виртуальные 
+  машины и обратно. Все ресурсы физической машины рассматриваются как общий пул, 
+  откуда они выдаются тем виртуальным машинам, которые в них нуждаются. 
+<p><b>Изоляция.</b> Виртуальные машины полностью изолированы от ОС хоста и от 
+  других виртуальных машин на этом хосте. Если внутри виртуальной машины произойдет 
+  программный сбой, на работоспособности всех прочих это не отразится. Данные 
+  не могут неподконтрольно перемещаться между виртуальными машинами, приложения 
+  могут общаться только по сконфигурированным сетевым соединениям, что, несомненно, 
+  дает выигрыш с точки зрения безопасности. 
+<p><b>Инкапсуляция.</b> Полностью работоспособная виртуальная машина представляет 
+  собой набор файлов - это файлы дисков виртуальной машины, на которых хранится 
+  значимая информация, и файл настроек этой виртуальной машины относительно ПО 
+  виртуализации. Как следствие, операции, которые обычно применяют к файлам, естественно 
+  применять к виртуальным машинам. Именно поэтому легко выполнять резервное копирование, 
+  перемещать, копировать, создавать шаблоны виртуальных машин. Если потребуется, 
+  систему целиком (сконфигурированная ОС, приложения, BIOS и аппаратные настройки) 
+  за короткое время можно переместить с одного физического сервера на другой без 
+  каких-либо дополнительных действий. 
+<p>Каждая из виртуальных машин имеет свой собственный набор виртуальных комплектующих (процессор, оперативная память, дисковая подсистема, сетевые адаптеры и т. д.), в котором и происходит загрузка и работа гостевой ОС. Она видит один и тот же работоспособный набор оборудования, вне зависимости от конфигурации физического хоста, на котором работает. Стандартизованные виртуальные комплектующие, которые видит гостевая ОС, гарантируют совместимость и работоспособность виртуальной машины независимо от комплектующих хоста.
+<p>Сегодня на рынке виртуализации присутствуют продукты нескольких компаний: линейка ПО VMware, Microsoft Virtual Server, HP Virtual Server Environment (VSE) и т. п. Отметим, что компания VMware занимает ведущее положение в области ПО для создания виртуальной инфраструктуры вычислительных систем корпоративного класса. Продукты этой компании мы и рассмотрим подробнее.
+<h3>Продукты VMware для настольных систем </h3>
+<p>Крупнейшие мировые компании используют решения VMware, чтобы упростить свою 
+  ИТ-инфраструктуру и увеличить эффективность вложений в ИТ. VMware (<a href="http://www.vmware.com">http://www.vmware.com</a>) 
+  в декабре 2003 г. была куплена компанией EMC (<a href="http://www.emc.com">http://www.emc.com</a>), 
+  однако продолжает выпускать ПО под своей торговой маркой, будучи подразделением 
+  EMC. 
+<p>Инновации и стратегическая важность продуктов VMware регулярно отмечаются многочисленными наградами в области высоких технологий. Ее продукты VMware ESX Server, VMware VirtualCenter и VMware Workstation признаны журналом InfoWorld в январе 2006 г. "Технологией года". Эта премия ежегодно присуждается технологиям, которые, как ожидается, в значительной степени повлияют на стратегию развития ИТ для предприятий, а также корпоративным продуктам, принципиально изменившим ситуацию в области ИТ.
+<p>Формирование семейства VMware начиналось с настольных систем, которые и открывают наш обзор. Сравнение этих продуктов проведено в табл. 1.
+<h4>Таблица 1. Сравнительные характеристики продуктов VMware для настольных систем 
+</h4>
+<table border="1">
+  <tr>
+    <td> </td>
+    <td>VMware Player</td>
+    <td>VMware Workstation 5</td>
+    <td>VMware ACE</td>
+  </tr>
+  <tr>
+    <td>Стоимость, долл. </td>
+    <td>Бесплатно</td>
+    <td>189</td>
+    <td>99</td>
+  </tr>
+  <tr>
+    <td>Описание</td>
+    <td>Позволяет запускать любые виртуальные машины на хостовой ОС Windows или 
+      Linux</td>
+    <td>Мощное полнофункциональное средство для профессионального использования</td>
+    <td>Продукт уровня предприятия </td>
+  </tr>
+  <tr>
+    <td>Целевая группа</td>
+    <td>Кто угодно, включая пользователей из целевой группы Workstation и энтузиастов</td>
+    <td>Разработчики, тестеры, системные администраторы</td>
+    <td>Администраторы информационной безопасности на предприятии </td>
+  </tr>
+  <tr>
+    <td>Запуск нескольких виртуальных машин на одном хосте</td>
+    <td>+</td>
+    <td>+</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Создание виртуальных машин</td>
+    <td>-</td>
+    <td>+</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Перенос текста и файлов в виртуальную машину, доступ к папке с хоста и 
+      виртуальной машины</td>
+    <td>+</td>
+    <td>+</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Поддержка разнообразных конфигураций сети</td>
+    <td>+</td>
+    <td>+</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Конфигурирование памяти виртуальной машины</td>
+    <td>+</td>
+    <td>+</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Доступ к устройствам хоста (CD/DVD-приводы, сетевые карты, USB-устройства) 
+    </td>
+    <td>+</td>
+    <td>+</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Возможность добавления устройств в виртуальную машину самими пользователями</td>
+    <td>-</td>
+    <td>+</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>осстановление к состоянию виртуальной машины, заданному "снимком состояния 
+      (snapshots)</td>
+    <td>+</td>
+    <td>+</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>оздание нескольких "снимков для одной виртуальной машины</td>
+    <td>-</td>
+    <td>+</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Поддержка двухпроцессорных виртуальных машин</td>
+    <td>-</td>
+    <td>+</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Задание настроек безопасности (управление установлением подлинности виртуальных 
+      машин, истечением срока действия, шифрованием, защитой от копирования, доступом 
+      к устройствам и к сети)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Упаковка виртуальных машин в установочный пакет для безопасного распространения 
+      на неуправляемый ПК</td>
+    <td>-</td>
+    <td>-</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Поддерживаемые хостовые ОС</td>
+    <td>Windows, Linux</td>
+    <td>Windows, Linux</td>
+    <td>Windows</td>
+  </tr>
+  <tr>
+    <td>Поддерживаемые гостевые ОС</td>
+    <td>Windows, Linux, Netware, Solaris, FreeBSD </td>
+    <td>Windows, Linux, Netware, Solaris, FreeBSD </td>
+    <td>Windows, Linux, Netware</td>
+  </tr>
+  <tr>
+    <td>Поддержка 64-разрядных гостевых и хостовых ОС</td>
+    <td>+</td>
+    <td>+</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Примеры использования</td>
+    <td>Быстрый и легкий запуск и оценка предустановленных приложений и бета-версий 
+      ПО, содержащихся на виртуальных машинах</td>
+    <td>Разработка, написание, тестирование ПО. <br>
+      Увеличение производительности работы ИТ-специалистов. <br>
+      Запуск учебных, тестовых и т. п. программ в стабильной среде в разнообразном 
+      окружении</td>
+    <td>Создание защищенной, сконфигурированной и управляемой точки входа на неконтролируемом 
+      ПК. <br>
+      Запуск нескольких защищенных виртуальных машин на одном физическом ПК </td>
+  </tr>
+</table>
+<h4>VMware Player </h4>
+<p>Бесплатное Windows-приложение, позволяющее запускать уже созданные виртуальные машины. Создавать новые оно не позволяет, зато поддерживает запуск виртуальных машин, созданных в таких программах, как VMware Workstation, GSX и ESX Server, а также Microsoft Virtual PC и образы Symantec LiveState Recovery.
+<p>Особенность программы - возможность копировать и вставлять (drug&drop) тексты (файлы) между гостевой и хостовой ОС.
+<p>Сайт VMware предоставляет неплохой выбор уже готовых виртуальных машин. Например, пакет под названием Browser Appliance представляет собой виртуальную машину с предустановленной ОС и браузером для безопасного Интернет-серфинга. Безопасность достигается за счет того, что любые действия, предпринятые против этой машины извне, применимы только к этой виртуальной машине и никак не влияют на хостовую (здесь - основную рабочую) ОС. На сайте также доступны машины от поставщиков платформ и приложений (Red Hat, Novell, IBM, MySAP и т. д.), с предустановленными ознакомительными версиями соответствующих программ.
+<h4>VMware Workstation </h4>
+<p>Первый продукт, выпущенный компанией VMware. На сегодня актуальна версия 5.5 - полнофункциональное приложение, позволяющее создавать и запускать на единственной физической машине множество разнообразных виртуальных машин. Пользователи могут работать и получать доступ к сети в средах Windows, Linux, Netware, Solaris x86, установленных на виртуальных машинах, без перезагрузки или создания множества разделов на жестком диске. VMware Workstation предоставляет дополнительные функции, такие, как оптимизация использования памяти, возможность объединять виртуальные машины в многоузловую сеть и делать многократные "снимки" (snapshots) текущего состояния виртуальной машины. Последняя функция по сути дает возможность выполнить откат изменений в масштабах всей системы, притом с гарантированным сохранением работоспособности. Эта функция доступна для большинства продуктов VMware.
+<h4>VMware ACE </h4>
+<p>VMware ACE, The Assured Computing Environment for the Enterprise, - мощный инструмент для администраторов, ответственных за безопасность, обеспечивающий защиту важной информации на компьютерах пользователей и безопасный доступ к данным в сети путем снижения риска, возникающего при обращении к сети неадминистрируемых компьютеров.
+<p>Возможности VMware ACE (рис. 1) фактически представляют собой смесь возможностей VMware Workstation и VMware Player с небольшими добавками. Функциональность администраторской части позволяет создавать виртуальные машины с произвольными требованиями к производительности хоста, настройками ОС, набором установленных приложений, временем работоспособности данной виртуальной машины и т. д. Клиентская же часть представляет собой просто средство для запуска этой виртуальной машины.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/wmware/ris1.jpg" alt=Fig.1></td>
+<td align="left" valign="bottom">Рис. 1. Схема элементов VMware ACE.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Дополнительные функции дают возможность упаковывать виртуальные машины в самодостаточные пакеты ПО, которые тем или иным путем передаются пользователям, и устанавливать так называемый сервер политик, к которому за обновлением политик (настроек) обращаются все распределенные виртуальные машины VMware ACE, что позволяет гибко управлять развернутой инфраструктурой. Список параметров, контролируемых политиками, весьма обширен. Основное здесь - регулирование доступа к виртуальным машинам через пользователей и группы Active Directory, время жизни виртуальной машины с момента запуска, защита этой виртуальной машины от копирования, доступ к сети с этой виртуальной машины.
+<h3>Серверные продукты VMware </h3>
+<h4>VMware GSX Server и VMware Server </h4>
+<p>VMware GSX Server - базовый продукт серверного уровня. VMware Server (рис. 2) почти полностью аналогичен ему по возможностям, но распространяется бесплатно. VMware GSX Server вскоре перестанет продаваться, а VMware Server как раз и придет ему на смену (на момент написания статьи он находился в стадии бета-тестирования). Следует отметить, что возможности этой программы не урезаны, как мы привыкли ожидать от бесплатного предложения, а почти не уступают (и в чем-то даже превосходят) возможности GSX Server.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/wmware/ris2.jpg" alt=Fig.2></td>
+<td align="left" valign="bottom">Рис. 2. Структура VMware Server.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Например, для VMware Server заявлена поддержка Virtual SMP (что означает создание многопроцессорных виртуальных машин - технология, ранее доступная только в ESX Server), поддержка (пока экспериментальная) Intel Virtualization Technology и поддержка 64-разрядных ОС. Нацелен же этот продукт на те компании, которые еще только готовятся опробовать преимущества виртуализации.
+<p>VMware Server позволяет перенести физические серверы в виртуальные машины и получить начальное представление о возможностях виртуальной инфраструктуры. С помощью VMware Server компании могут развернуть новые серверы, не вложив ни копейки в "железо", запускать разнообразные ОС на одной и той же аппаратной платформе, переносить виртуальные машины с одного физического хоста на другой без перенастройки.
+<p>Продукт подходит для разработки ПО и тестирования, предоставлений ознакомительных версий продуктов в настроенных и отлаженных виртуальных машинах, запуска устаревших приложений и ОС.
+<h4>VMware ESX Server и VirtualCenter </h4>
+<p>VMware ESX Server - самый технологически продвинутый продукт виртуализации, его место - на серверах центров обработки данных. Главное отличие его от прочих продуктов VMware в том, что ESX Server - операционная система, т. е. он ставится на "голое железо" (табл. 2). Плюс такого решения - не надо тратить ресурсы хоста на промежуточную ОС. В минусы можно записать меньшее количество официально поддерживаемых систем (тот же GSX Server работает на любом оборудовании, где можно установить Windows или Linux). Тем не менее список поддерживаемых систем достаточно велик и продолжает расти.
+<p>На сервере с установленным ESX Server одновременно работают два компонента: ядро (vmkernel) - именно этот компонент, написанный программистами VMware, распределяет ресурсы между виртуальными машинами, и слегка модифицированная Red Hat Linux 7.2 - управляющий элемент, выступающий в роли Service Console. Service Console предоставляет интерфейс командной строки. Именно в среде Service Console работает Web-сервер Apache, на базе которого построен графический Web-интерфейс управления ESX Server.
+<p>Но если в нашем ведении несколько серверов, управлять каждым отдельно неудобно, и на сцену выходит продукт VirtualCenter (рис. 3). Это Windows-приложение, позволяющее эффективно управлять всеми системами ESX, GSX и (в следующих версиях) VMware Server. Управление через VirtualCenter включает в себя изменение настроек хостов, мониторинг как хостов, так и виртуальных машин, и полное управление всеми виртуальными машинами на управляемых хостах.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/wmware/ris3.jpg" alt=Fig.3></td></tr>
+<tr><td align="left" valign="bottom">Рис. 3. "Снимок" экрана VirtualCenter.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Второй важный аргумент в пользу приобретения VirtualCenter - поддержка VMotion, процесса переноса работающей виртуальной машины с одного хоста на другой без ее выключения. За счет этого можно более гибко использовать ресурсы нескольких хостов, перемещая виртуальные машины с более загруженных серверов на менее загруженные. Появляется также возможность отключать серверы, например, для обслуживания, без отключения работающих на них виртуальных машин, т. е. простаивание сервера проходит практически безболезненно для бизнес-процессов. Процесс VMotion требует SAN-инфраструктуры.
+<p>ESX Server позволяет создать до восьми виртуальных коммутаторов. Эти объекты используются для связи виртуальных машин одного хоста. К каждому коммутатору можно привязать одну или несколько физических сетевых карт, что позволит виртуальным машинам хоста общаться с узлами сети. Виртуальные коммутаторы поддерживают IEEE 802.1Q VLAN Tagging.
+<p>Важное свойство - возможность создать систему правил распределения ресурсов хоста между виртуальными машинами (под ресурсами подразумеваются процессорное время, оперативная память, доступ к дисковой подсистеме и сети). Можно задавать гарантируемые минимумы и максимумы выделяемой оперативной памяти или процессорного времени и устанавливать для каждой машины вес, определяющий, какая доля ресурса достанется этой виртуальной машине, если ресурса не хватит на всех.
+<p>В программе также присутствуют широкие возможности мониторинга и обработки событий. Например, в качестве реакции на недостаток какого-то ресурса можно задать различные действия, такие, как выключение виртуальных машин, перевод их в состояние паузы (suspend mode), выполнение произвольного скрипта, изменение весов виртуальных машин и т. д.
+<h4>Таблица 2. Сравнительные характеристики VMware Server и ESX Server </h4>
+<table border="1">
+  <tr>
+    <td> </td>
+    <td>VMware Server</td>
+    <td>VMware ESX Server & VirtualCenter</td>
+  </tr>
+  <tr>
+    <td>Описание продукта</td>
+    <td>Бесплатная программа для переноса физических серверов в виртуальные машины</td>
+    <td>Высокопроизводительная платформа для виртуализации </td>
+  </tr>
+  <tr>
+    <td>Рабочее окружение</td>
+    <td>Разработчик, отдел, рабочая группа, филиал</td>
+    <td>Центр обработки данных предприятия</td>
+  </tr>
+  <tr>
+    <td>Поддержка аппаратного обеспечения</td>
+    <td>Совместимость обеспечивается ОС хоста</td>
+    <td>Требуются драйверы для VMware ESX Server</td>
+  </tr>
+  <tr>
+    <td>Типовое число одновременно работающих виртуальных машин</td>
+    <td>2-4 на ядро</td>
+    <td>4-8 на ядро</td>
+  </tr>
+  <tr>
+    <td>Типичная система</td>
+    <td>2-16 процессоров</td>
+    <td>2-16 процессоров</td>
+  </tr>
+  <tr>
+    <td>Поддержка двухпроцессорных виртуальных машин (Virtual SMP)</td>
+    <td>+</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Оперативная память хоста</td>
+    <td>До 64 Гбайт (ограничения ОС хоста)</td>
+    <td>До 64 Гбайт </td>
+  </tr>
+  <tr>
+    <td>Web-интерфейс управления серверами</td>
+    <td>+</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Удаленная консоль к виртуальным машинам</td>
+    <td>+</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Поддержка скриптов</td>
+    <td>COM и Perl</td>
+    <td>COM и Perl</td>
+  </tr>
+  <tr>
+    <td>Централизованное управление (через VirtualCenter)</td>
+    <td>- (будет в следующих релизах)</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Создание шаблонов виртуальных машин</td>
+    <td>-</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Группировка сетевых контроллеров</td>
+    <td>На уровне ОС хоста</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Кластеризация виртуальных машин</td>
+    <td>+ (только между виртуальными машинами одного хоста)</td>
+    <td>+ (в том числе между виртуальными машинами разных хостов)</td>
+  </tr>
+  <tr>
+    <td>Подключение к системам хранения SAN</td>
+    <td>В зависимости от возможностей хоста</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Перенос работающей виртуальной машины между хостами (VMotion)</td>
+    <td>-</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Корректное управление правами доступа на уровне учетных записей Windows 
+      (через VirtualCenter)</td>
+    <td>-</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Улучшенная сетевая безопасность путем помещения виртуальных машин одного 
+      хоста в разные VLAN </td>
+    <td>-</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Операционная система хоста</td>
+    <td>Linux и Windows 2000/2003 Server</td>
+    <td>Не требуется. Устанавливается на "голое железо</td>
+  </tr>
+  <tr>
+    <td>Нацелен на задачи</td>
+    <td>Разработка и отладка ПО предприятия. <br>
+      Создание полностью настроенных виртуальных машин с предустановленным ПО.<br>
+      Запуск устаревших ОС.<br>
+      Оптимизация загрузки сервера</td>
+    <td>Консолидация серверов. <br>
+      Обеспечение непрерывности бизнес-процессов</td>
+  </tr>
+  <tr>
+    <td>Типичные применения </td>
+    <td>Интранет, сервисные серверы, прикладные серверы</td>
+    <td>Web-приложения, "тяжелые продукты (SAP, Oracle, Siebel и т. п.), файл- 
+      и принт-серверы, контроллеры домена, серверы электронной почты и т. д.</td>
+  </tr>
+</table>
+<h4>P2V Assistant </h4>
+<p>Первая часть названия этого продукта представляет собой аббревиатуру от Physical To Virtual. Программа предназначена для удобного и простого переноса ОС с физического сервера внутрь виртуальной машины.
+<h3>Сценарии применения </h3>
+<p>Само собой, виртуальные машины - незаменимый инструмент для тестов. В числе их потребителей - разработчики и отладчики ПО, администраторы крупных компаний, а также те, кому могут понадобиться настройка и тестирование приложений, компоненты которых работают на нескольких компьютерах, тестирование обновлений приложений и ОС (и все это на одном ПК), демонстрации возможностей ПО (даже требующих нескольких машин) на одном ПК.
+<p>Очень удобно, что все изменения, внесенные как пользователем, так и программами, легко откатить, вернув систему в исходное, "чистое" состояние. Возьмем, например, отладку ПО - отладчик может в любой момент после сбоя за секунды вернуться к исходному состоянию виртуальной машины. Эти возможности могут быть интересны и в учебных процессах, где студентам периодически нужны "чистые", работоспособные машины с корректными настройками для экспериментов с различными ОС, приложениями и т. п., притом безопасных для хостовой ОС.
+<p>Виртуальные машины обеспечивают быстрое решение для служб help desk - если у пользователя возникли проблемы с настройками его рабочей виртуальной машины, ему очень легко дать новую, с корректными настройками. В этом случае, конечно же, требуется развертывание соответствующей инфраструктуры. У компании VMware есть продукт именно этого класса - VMware ACE, и мы рассмотрим ниже пример его использования.
+<p>Некоторым организациям часто требуется предоставлять сторонним специалистам доступ в корпоративную сеть с их ноутбуков. Обычно при этом приходится решать проблемы, связанные с отсутствием на ноутбуках настроек доступа и специализированного ПО, опасностью вирусного заражения с них и т. д. В случае же развернутой инфраструктуры VMware ACE картина намного более отрадна для администратора организации: человек, которому необходимо получить доступ, обращается, например, на внутренний общедоступный портал в сети компании. Оттуда он может получить одну из нескольких (отличающихся набором ПО, настройками, системными требованиями) виртуальных машин VMware ACE. Они представляют собой виртуальные машины с правильно настроенной ОС, установленными приложениями, сконфигурированным антивирусом и т. п. Кроме того, администратор с помощью механизма политик может задавать для этой конкретной виртуальной машины время жизни, настройки безопасности, настройки защиты от копирования и многое другое.
+<p>Эти возможности могут быть интересны компаниям, которые разрешают своим сотрудникам удаленную работу с домашнего ПК. Сценарий в этом случае тот же самый - работник получает виртуальную машину, настройки которой он изменить не может, перенос информации из которой в его хостовую ОС запрещен политиками VMware ACE и т. д.
+<p>Резюмируя, можно сказать, что VMware ACE используется для:
+<ul><li>создания безопасных и настроенных точек доступа в сеть;
+<li>обеспечения безопасности информации на отдельном ПК;
+<li>одновременного запуска нескольких защищенных и настроенных сред для доступа в локальную сеть/несколько сетей на одном ПК;
+<li>снижения себестоимости бизнес-процессов.</ul>
+<p>Виртуализация серверных задач предполагает некоторое количество серверов, в которых все или большая часть ресурсов не используются. Тем не менее, в силу каких-либо причин под эти задачи были выделены отдельные физические серверы (например, если существует жесткая рекомендация давать под отдельную задачу выделенную копию ОС). Это могут быть контроллеры доменов, DHCP-серверы, серверы приложений, нагрузка на которые редка (например, сервер базы данных, который нагружают раз в месяц при составлении отчетов), и т. д. В этом случае перенос приложений на виртуальные машины позволит существенно сэкономить на аппаратном обеспечении.
+<p>Например, компания Avaya предлагает комплексное решение сервера телефонии для небольших компаний (рис. 4). Оно представляет собой сервер с ОС Linux, к которому подключены соответствующие внешние устройства. На сервере также установлен VMware GSX Server, под управлением которого работают четыре виртуальные машины. ПО трех виртуальных машин выполняет свою собственную функцию; четвертая виртуальная машина оставлена под задачи пользователя. Преимущества этого решения - крайняя простота настройки. Пользователю не приходится заниматься ни установкой ОС Linux, ни ее конфигурированием, ни настройкой приложений (кроме самой минимальной). К тому же сервер телефонии этой компании избавлен от общей ОС как от единой точки отказа (имеется в виду, что ОС, в которой работает преимущественно одно приложение, VMware GSX Server, будет более стабильна, чем система, в которой функционирует несколько приложений, управляющих телефонией).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/wmware/ris4.jpg" alt=Fig.4></td>
+<td align="left" valign="bottom">Рис. 4. Схема сервера телефонии компании Avaya.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>По информации, опубликованной на сайте VMware, консолидация составляет в среднем 12 виртуальных машин на одну физическую. Если учесть возможность объединения ресурсов нескольких хостов (на основе технологии VMotion), то виртуализация серверов дает на выходе экономичную, эффективно управляемую и безопасную инфраструктуру.
+<p>Отдельная тема - построение решений высокой готовности. Использование виртуальных машин на ESX Server дает несколько вариантов кластеризации (рис. 5). Так, Cluster-In-a-Box предполагает кластерные отношения между двумя виртуальными машинами на одном хосте и защищает от программных сбоев. Это преимущественно тестовое решение, поскольку сам хост становится единой точкой отказа.
+<p>Cluster-Across-Boxes - кластеризация виртуальных машин, работающих на разных хостах. Этот вариант кластеризации более интересен в производственной среде. Для его применения требуется инфраструктура SAN.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/wmware/ris5.jpg" alt=Fig.5></td>
+<td align="left" valign="bottom">Рис. 5. Варианты кластеризации: а) Cluster-In-a-Box; б) Cluster-Across-Boxes; в) кластер между физической и виртуальной машинами.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Кластерные отношения между физической и виртуальной машинами - очень интересное решение, позволяющее при относительно небольших расходах повысить надежность систем. Можно "кластеризовать" несколько физических серверов с виртуальными машинами на одном ESX Server. В случае сбоя на одной из физических машин кластеризованное приложение поднимается на соответствующей виртуальной машине, а так как все остальные виртуальные машины в этот момент выступают как пассивные узлы кластера, то почти все ресурсы хоста доступны ставшему активным узлу.
+<p>И, наконец, есть возможность организовать кластерные отношения между двумя ESX Server. Это обеспечит отказоустойчивое решение, притом не потребуется дополнительных настроек или ПО при создании новых виртуальных машин на кластеризуемом хосте.
+<p>В России, на взгляд автора, в первую очередь стоит присмотреться к продукту VMware Server. Он интересен очень богатыми возможностями и при этом бесплатен. Последний фактор выделяет его среди предложений конкурентов, основное из которых - Microsoft Virtual Server.
+<p>VMware Server поддерживает широчайший спектр гостевых ОС, отличается богатыми возможностями управления виртуальными машинами, продвинутыми технологическими характеристиками и простотой внедрения. Как ни странно, но платный продукт VMware Workstation по своим возможностям фактически не превосходит это бесплатное решение.
+<p>Продукт VMware Server можно рассматривать и как ступеньку к следующему шагу виртуализации - внедрению ESX Server. Виртуальные машины, созданные в VMware Server, легко перенести на хост под управлением ESX Server. В данном варианте возможно разделить ресурсы нескольких серверов между большим количеством виртуальных машин. Это обеспечивает экономию на аппаратном обеспечении, так как организация одновременно получает и выделенную копию ОС под каждое приложение, и в серверной у нее нет серверов, чьи процессоры загружены на 3% в течение 99% времени. Сегодня ни один из поставщиков продуктов виртуализации не предлагает продуктов такого уровня. При этом решение для виртуальной инфраструктуры (связка ESC Server и VirtualCenter) представляет собой зрелую и отлаженную систему, с большим количеством внедрений по всему миру и довольно существенным числом реализованных проектов в России.
+<p>Наконец, стоит отметить продукт VMware ACE. Возможности его представляются 
+  особо привлекательными в связи с повышением внимания к предотвращению информационных 
+  угроз, исходящих от сотрудников предприятий и от лиц, которым предоставляется 
+  временный доступ в корпоративную сеть. 
+<p>
+<table width="100%" border="0" cellpadding="1" bgcolor="#CCFFFF">
+  <tr>
+    <td>
+      <h4>Обучение - ключевое условие </h4>
+      <p>В 2005 г. компания VMware начала активное продвижение своих решений на 
+        российский рынок. Сегодня в России есть дистрибьютор ее продукции - компания 
+        OCS (<a href="http://www.ocs.ru">http://www.ocs.ru</a>), есть и авторизованный 
+        учебный центр VMware, открытый на базе учебного центра "Микроинформ" (<a href="http://www.microinform.ru">http://www.microinform.ru</a>). 
+      <p>Обучение - ключ к максимальной отдаче от вложений средств, поскольку 
+        позволяет задействовать возможности оборудования и ПО "на все 100%". VMware 
+        предлагает единую во всем мире программу обучения и сертификации по своим 
+        продуктам и решениям на их основе. Программа рассчитана в первую очередь 
+        на технических специалистов - партнеров, пользователей и консультантов. 
+        Ключевой курс этой программы, "Построение виртуальной инфраструктуры с 
+        помощью ESX Server и VMware VirtualCenter", ориентирован как на администраторов 
+        ESX Server, так и на пользователей VMware VirtualCenter. 
+      <p>Очное обучение на данном курсе - обязательное условие участия в программе 
+        сертификации VMware Certified Professional (VCP). Второе условие - успешный 
+        результат сертификационного теста, который можно сдать в международном 
+        центре тестирования специалистов Pearson VUE. 
+      <p>В учебном центре "Микроинформ" проводится обучение системных администраторов 
+        и системных инженеров, которые отвечают за интеграцию, администрирование 
+        и управление ESX Server. В числе первых в программе обучения приняли участие 
+        специалисты компаний МТС, ЦБ РФ, "СУАЛ-Холдинг", IBS, SoftLine Trade, 
+        "АйТи", КРОК, ЛАНИТ и т. д. 
+    </td>
+  </tr>
+</table>
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=21113.html'>Программные инструменты криминалистов: можно ли нарушить закон в онлайне и остаться непойманным?</A></b></li><li><b><A href='detail.php@ID=20694.html'>Национальные особенности рынка ECM/СЭД в России</A></b></li><li><b><A href='detail.php@ID=20562.html'>Корпоративная мультиплатформенность бизнес-приложений</A></b></li><li><b><A href='detail.php@ID=19146.html'>Что нового в новой версии виртуальной машины Oracle?</A></b></li><li><b><A href='detail.php@ID=17871.html'>Облачная стратегия Microsoft 2011</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24814.html'>Виртуализация для сервис-провайдеров – платформа Cisco ESP</A></b></li><li><b><A href='detail.php@ID=24808.html'>Горизонтально масштабируемые СХД NetApp и виртуализация для облачных инфраструктур</A></b></li><li><b><A href='detail.php@ID=24772.html'>Решение для виртуализации серверов HP Moonshot</A></b></li><li><b><A href='detail.php@ID=24427.html'>Новинки ViewSonic в области VDI и дисплейных технологий</A></b></li><li><b><A href='detail.php@ID=24343.html'>Cisco DaaS: виртуальные настольные системы как сервис</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6792.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">VMware как архитектор виртуализации
+</a><br><a href="detail.php@ID=6792.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Для начала давайте уточним терминологию предметной области, о которой пойдет 
+  речь в этой статье. Основное ее понятие, виртуализация, означает&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6792.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6792&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='01a8669c365ca13b7805b323cb7ad6a7'><img src='../bitrix/tools/captcha.php@captcha_code=01a8669c365ca13b7805b323cb7ad6a7' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

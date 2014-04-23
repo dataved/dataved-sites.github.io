@@ -1,0 +1,411 @@
+<HTML>
+<HEAD>
+<title>Управление жизненным циклом информации
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Владислав Шаров Каждый год в мире создаются тысячи петабайт новых данных. Согласно ряду экспертных оценок, объемы корпоративной информации ежегодно утраиваются, причем более половины этого объема составляет информация в неструктурированном виде" />
+<meta name="description" content="Владислав Шаров Каждый год в мире создаются тысячи петабайт новых данных. Согласно ряду экспертных оценок, объемы корпоративной информации ежегодно утраиваются, причем более половины этого объема составляет информация в неструктурированном виде" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082593','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6701' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6701&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6701"].SHOW_IMAGE.value="N"; document.forms["PrintForm6701"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6701"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6701"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6701);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6701.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6701.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6701);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11544.html'>№11 (75), ноябрь 2004</a><h1>Управление жизненным циклом информации
+</h1>10.11.2004<p></p><DIV class='article-text'><p><i>Владислав Шаров</i> 
+<p>Каждый год в мире создаются тысячи петабайт новых данных. Согласно ряду экспертных оценок, объемы корпоративной информации ежегодно утраиваются, причем более половины этого объема составляет информация в неструктурированном виде (традиционные офисные документы, мультимедийные данные, чертежи, XML-документы, HTML-файлы, электронная почта, графические образы документов и т. д.). Чтобы обеспечить непрерывное и плодотворное взаимодействие сотрудников, партнеров и заказчиков, требуются адекватные инструменты, которые поддержали бы такое взаимодействие и позволяли организовать обмен информацией на протяжении всего ее жизненного цикла, как внутри, так и вне компании.
+<p>Вместе с нарастающим объемом данных расширяются и системы их хранения. Однако управлять такими системами, используя старые методы, становится все труднее, а стоимость их резко возрастает. И при этом трудно реализовать высокую доступность, достаточную производительность, адекватную темпам развития бизнеса, надежность хранения информации, которая соответствовала бы требованиям бизнеса и государственных регулирующих органов к долгосрочному хранению информации.
+<p>Одно из решений проблемы состоит в том, чтобы разделить данные по критерию их ценности для бизнеса и управлять информацией с учетом изменения ее ценности во времени. Такой подход стали называть управлением жизненным циклом информации ILM (Information Lifecycle Management). Согласно этой концепции, наиболее важная на текущий момент информация должна автоматически перемещаться в самую быструю, надежную и защищенную систему хранения данных. Менее важная информация, в свою очередь, перемещается в более дешевую и менее скоростную систему хранения. Архивные данные, например, следует записывать на магнитные ленты и удалять из рабочей системы, чтобы не снижать скорость доступа к самой критичной в данный момент информации. Уже ненужная информация будет автоматически удаляться из системы. И процесс этот должен быть цикличным.
+<p>Интересно, что для мэйнфреймов многие из проблем, которые еще только предстоит решать в системах с открытой архитектурой, в основном уже решены. Действительно, за время существования этих машин удалось получить представление о жизненном цикле данных, поэтому в основу мэйнфреймов положена не идея хранения, а более глубокая идея эффективного использования данных на протяжении их жизненного цикла. Ведь в корпоративные платформы на базе мэйнфреймов изначально заложены и автоматизированное управление накопителями на магнитных лентах, и автоматическое резервное копирование, и иерархическое управление системами хранения данных, и утилиты для манипулирования данными. Часть этих функций выполняется автоматически, без участия системного администратора, ответственного за хранение, - отсюда и высокая эффективность.
+<p>Все эти свойства мэйнфреймов сформировались в процессе их многолетнего совершенствования. Возьмем, к примеру, магнитные ленты: они использовались задолго до появления жестких дисков и потому были единственным средством резервного копирования. Когда появились диски, они вначале были дороги и ненадежны, и по этой причине ленты оставались обязательным средством для создания резервных копий. Когда-то процессы установки лент, размещения их в шкафах, периодическое обновление выполнялись вручную, и казалось, что этот тип устройств обречен на вымирание. Но от этого их спасло появление роботизированных библиотек. Наличие в мэйнфреймах каналов ввода-вывода с высокой пропускной способностью позволило наладить удаленное резервирование. Вслед за библиотеками возникла необходимость в процедурах соответствующей каталогизации и управления ими, иначе процесс поиска нужного файла мог занимать часы. В качестве одного из способов разрешения противоречия между объемами хранимых данных и временем доступа к ним стало использоваться управление иерархическим хранением HSM (Hierarchical Storage Management). В HSM реализуется политика архивирования редко используемых данных - с дисков они переписываются на ленты с компрессией.
+<p>Вообще говоря, концепция ILM - шаг вперед по сравнению с идеологией HSM. Большинство экспертов полагают, что ILM &quot;интеллектуализирует&quot; традиционное понятие HSM, так как новый подход не просто оперирует блоками данных, а нацелен на управление реальным содержанием данных на всем протяжении их жизненного цикла, начиная с момента создания. Дело в том, что ILM - это стратегия проактивного управления информацией, которая не сводится к какому-то определенному ПО или аппаратуре, это процесс.
+<p>Обсуждая концепцию ILM, можно выделить два основных аспекта: что это значит и насколько это нужно. Разумеется, управление жизненным циклом информации начинается с оценки и классификации имеющейся информации и ресурсов для ее хранения с точки зрения их бизнес-ценности. Первые два шага должна сделать любая организация, которая решила управлять своей информацией на основе ее жизненного цикла, а именно: определить цели управления информацией и классифицировать свою информацию на основе ее ценности для бизнеса. Конечно, стратегия ILM не реализуется по принципу &quot;все или ничего&quot;, ее можно внедрять поэтапно.
+<p>Не секрет, что многим пользователям необходимо дифференцированное обращение с данными. Главное, что должна будет обеспечить ILM, - это расширенный набор политик, которые сможет задавать пользователь. Определив политики размещения данных, для их реализации можно применять следующие технологические решения: различные способы автоматической интеллектуальной миграции данных с систем хранения одного класса на системы другого класса, средства их географически удаленного и локального зеркалирования, инструменты резервного копирования и архивирования и т. д.
+<p>Необходимость в управлении жизненным циклом информации связана не только с управлением контентом (управление записями, управление документами и другие подобные задачи); она обусловлена и требованием управления все возрастающими объемами данных, и обеспечением соответствия нормативам, отражающим изменившуюся роль машинных форм представления данных в современном мире.
+<p>Как известно, внимание компьютерной индустрии было последовательно приковано то к мощным Unix-серверам, то к системам хранения данных, а сегодня - к сетям хранения, однако очевидно, что это только средства, а основной продукт - это не вычисления и даже не данные, а полезная информация. Серверы же и системы хранения только образуют единую среду для работы с данными и для получения информации. Сегодня идеи ILM начали активно продвигать производители дисковых систем, ленточных библиотек и программных средств управления.
+<h3>Базовые понятия концепции ILM </h3>
+<p>Определение ILM до сих пор не устоялось, однако ясно, что за этим термином скрывается не только расширенная система документооборота, не продукт, а комбинация процессов и решений, имеющая целью предоставить информацию в нужном месте в нужное время и по оптимальной цене. Это достигается за счет непрерывной оптимизации всех процессов обработки информации на протяжении всего ее жизненного цикла с учетом политик, определяемых пожеланиями бизнеса, соглашений об уровне обслуживания и требований к снижению стоимости владения. Жизненный цикл информации, с точки зрения ее хранения, тесно связан с архитектурой данных, временем хранения информации и скоростью доступа к данным.
+<p>Особое значение имеет тип информации, например, рассчитанный на системы обработки неструктурированных или слабоструктурированных данных с гипертекстовой организацией (это, в частности, сообщения электронной почты). Сюда относятся и данные, сильно связанные с точки зрения их хранения: системы офисного документооборота, архивы медицинских данных, реляционные базы данных и т. п. Их обычно отличает отсутствие четкой общепринятой классификации прикладной информации. В отсутствие стандарта, регламентирующего классификацию и взаимосвязи информационных объектов, часто бывает затруднительно выделить устойчивые наборы этих объектов, которые могли бы перемещаться в хранилище по определенным правилам. В результате при работе с информацией такого типа навигационный доступ используется очень ограниченно и фактически не связан с классификацией. Отсюда широкое использование механизмов поиска при доступе к данным, многократное увеличение нагрузки на хранилище, необходимость держать в оперативном хранилище большой объем невостребованных данных, часто превышающий объем полезных данных. Время активной жизни данных в таких системах обычно определяется временем жизни какого-либо процесса или отчетным периодом.
+<p>ILM охватывает все процессы управления размещением, хранением, распределением, миграцией, архивированием и удалением данных в инфраструктуре предприятия. Кроме того, ILM реализует сервисы обработки данных в рамках общего подхода к предоставлению ресурсов. С каждым элементом корпоративных данных на каждом этапе их жизненного цикла соотносятся определенные параметры качества обслуживания: производительность носителя, доступность, уровень защиты, скорость восстановления, стоимость хранения и т. д. ILM-решения позволяют формировать корпоративные политики, задающие уровень обслуживания для данных различных приложений, и управлять этими данными в соответствии с заданными политиками на протяжении всего их жизненного цикла.
+<p>Одна из ключевых задач ILM на каждом этапе жизни информации состоит в гарантированном размещении данных на тех носителях, характеристики которых удовлетворяют заданным параметрам качества обслуживания (рис. 1). Тем самым ILM способствует оптимальному распределению ресурсов хранения между приложениями. Для решения этой задачи ILM-среда должна включать средства классификации корпоративной информации по степени ее значимости для бизнес-процессов компании и инструменты управления размещением данных на устройствах хранения в соответствии с этой классификацией. Например, данные от критичных бизнес-приложений ILM разместит на высокопроизводительном дисковом массиве с возможностью зеркалирования томов.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No11_2004/ILM/ris1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Скорость восстановления в зависимости от важности данных.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Функции ILM не ограничиваются только управлением хранением данных на определенных носителях. Требуется еще решать задачи интеллектуального управления потоками работ и бизнес-процессами, в которых задействованы эти данные. ILM управляет информацией на основе изменяющихся с течением времени критериев ее значимости для бизнес-процессов и потребностей приложений. Жизненный цикл данных (рис. 2) начинается с момента их создания в различных системах, таких, как электронная почта, ERP-системы, СУБД, финансовые приложения, системы обработки изображений и т. д. Затем под управлением ILM реализуются процессы доступа, распределения, сохранения и ликвидации данных. ILM позволяет задавать политики для такого управления, в которых специфицируются параметры качества сервиса данных: доступность, защищенность, скорость восстановления, производительность, местонахождение носителя и стоимость хранения.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No11_2004/ILM/ris2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Жизненный цикл информации.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Чтобы решать перечисленные выше задачи, ILM должна базироваться на инфраструктуре хранения, включающей устройства разных классов, использовать программный инструментарий управления хранением и увязывать между собой задачи управления инфраструктурой хранения и потребности бизнес-приложений, связанные с размещением, использованием, хранением и миграцией данных. Требуется отслеживать время нахождения конкретного информационного объекта на определенном уровне, частоту его использования, объем, возраст, легальность доступа и т. п., одновременно соизмеряя полученные данные с требуемыми параметрами стоимости и целесообразности хранения на том или ином уровне. Процессы миграции инициируются после анализа текущего состояния информационного объекта либо по событию извне, например, в соответствии с политиками, задающими пороговые значения параметров.
+<p>Содержание политик определяют внешние критерии, формируемые бизнесом: необходимый объем информации, требуемый для принятия решения; состав соглашений об уровне обслуживания; разграничение прав доступа и т. п. Первый критерий обычно формулируется на основе рекомендаций консультантов. А вот соглашения об уровне обслуживания могут означать, например, гарантированное время доступа к информационному объекту, причем права доступа зависят от требований к управлению и целостности данных.
+<p>В ILM обычно выделяют три уровня организации информационных объектов: том, файловая система и приложения. На базовом уровне система хранения осуществляет те или иные операции. Каждый из томов имеет свой идентификатор LUN (Logical Unit Number), позволяющий параллельно обрабатывать данные независимо от их физического размещения, создавать копии, хранить информацию о виртуальных носителях, вести мониторинг текущего состояния информационного объекта и т. п. С точки зрения приложения любые перемещения LUN с одного носителя на другой должны быть прозрачны, так как логический адрес объекта остается неизменным.
+<p>Информационные объекты файловой системы или базы данных - это файлы, каталоги, узлы, таблицы, метаданные. Как и для базового уровня, объекты файловой системы с точки зрения приложений должны быть нейтральны к конкретной физической реализации. Для этого существует пул метаинформации, позволяющей виртуализовать файловую систему, однако сегодня еще невозможно прямое обращение к классам хранения, а используется непрямая табличная адресация. Поэтому, в частности, атрибуты процессов в ILM вычисляются через таблицу указателей. Все три уровня информационной структуры могут существовать только вместе, что требует специального сервиса интеграции.
+<h3>ILM от EMC </h3>
+<p>Считается, что первой компанией, заговорившей об управлении жизненным циклом 
+  информации ILM, была StorageTek. Сегодня практически все ведущие компании индустрии 
+  приняли эту концепцию и в том или ином виде предлагают соответствующие решения. 
+  Наиболее активна в этой области корпорация EMC (<a href="http://www.emc.com">http://www.emc.com</a>), 
+  лидер рынка систем хранения данных, которая с помощью своих партнеров внедряет 
+  стратегии управления жизненным циклом информации, имея широкий и полный набор 
+  продуктов и услуг. Отметим, что ради добавления недостающих компонентов в портфель 
+  продуктов EMC приобрела такие известные компании, как Documentum, Legato и VMware. 
+<p>Как заявляют в ЕМС, стратегия корпорации в области разработки новых технологий базируется на концепции управления информацией на протяжении всего ее жизненного цикла, причем конечная цель - не поставка отдельных продуктов, а создание полного набора решений для управления информацией. По оценке руководства компании, на этом пути ей уже удалось решить ряд ключевых технологических задач - создать полностью совместимую платформу хранения данных, включающую широкий спектр систем SAN, NAS, CAS, а также ПО для управления ими.
+<p>Чтобы добиться эффективного программного управления сетевыми хранилищами данных, ЕМС приобрела компанию Legato Systems, предлагающую решения в области сохранности и повышения доступности критически важных данных. ПО EMC/Legato позволяет организовать централизованное управление системами хранения, резервное копирование и восстановление, обеспечить динамическую балансировку нагрузки и прозрачность для любых информационных систем и приложений.
+<p>Совместно с Cisco и Brocade решается задача построения динамически изменяемой инфраструктуры, когда все системы хранения данных представляются как один виртуальный массив. ПО компании VMware позволяет виртуализовать комплекс серверов, обрабатывающих информацию. Одна из важных задач, которая решается с использованием ПО Legato и Documentum, - это активное управление структурированными и неструктурированными данными на предприятии.
+<h3>Технологии Documentum </h3>
+<p>В январе 2004 г. ЕМС приобрела компанию Documentum (<a href="http://www.documentum.com">http://www.documentum.com</a>), 
+  оставив за ней самостоятельное управление и торговую марку. Считается, что к 
+  этому шагу ЕМС подтолкнули тенденции построения систем управления информацией 
+  на базе концепции ILM. Интеграция решений ЕМС и Documentum дает возможность 
+  предлагать рынку решения для создания единого информационного пространства и 
+  управления информацией на всех этапах деятельности предприятия. Платформа Documentum 
+  обеспечивает взаимодействие с пользователями, автоматизируя заданные сотрудниками 
+  бизнес-правила, сохраняя опыт и знания компании и предоставляя знания о контенте, 
+  достаточные для того, чтобы обеспечить интеллектуальное и автоматизированное 
+  управление жизненным циклом информации. 
+<p>Как известно, компания Documentum - разработчик популярной платформы для управления неструктурированным контентом (Enterprise Content Management), которая позволяет создать на предприятии единую информационную среду, где любые типы неструктурированной информации классифицируются согласно бизнес-правилам и к ним предоставляется доступ для всех авторизованных пользователей, приложений и информационных систем. Эта платформа имеет масштабируемую, открытую и защищенную архитектуру и способна управлять практически неограниченными объемами контента и бизнес-процессами предприятия.
+<p>С точки зрения пользователя платформа Documentum предлагает файловую систему, в которой классификация файлов не ограничивается стандартным набором атрибутов (имя, дата, автор, размер), а предусматривает набор предметно-ориентированных классификаторов, состав которых определяется бизнес-требованиями предприятия. Бизнес-требования содержат информацию, которая используется при проектировании и внедрении информационных систем (требования к аппаратной и программным платформам, типы содержания, бизнес-процессы, права доступа, требования к пользовательским интерфейсам и т.п.). Используя предметную классификацию, пользователь получает возможность быстрого поиска и доступа к информации из различных приложений. Примерами предметных классификаторов могут служить официальная нумерация документов, принадлежность к подразделениям компании, перечень получателей содержания, указание времени и даты публикации документа в Интернете, список связанных документов, журнал аудита действий над документом, таблица прав доступа, текущее состояние жизненного цикла и т. д.
+<p>С точки зрения компании задача платформы Documentum состоит в автоматизации жизненного цикла контента, включающего четыре основных этапа - создания, управления, доставки и архивации.
+<p>Этап создания контента обеспечивает наполнение корпоративного хранилища. Информационными источниками могут выступать различные объекты, равно как и каналы передачи нового контента могут быть разнородны. Контент может быть создан сотрудником в офисном приложении или в системе САПР, может быть получен по электронной почте или по факсу от внешнего контрагента, ERP-система может сформировать финансовый отчет и т. д. Платформа Documentum предлагает открытые интерфейсы, обеспечивающие пользователям и информационным системам прозрачный доступ к единому хранилищу контента. Пользователи, например, могут продолжать работать в своем привычном офисном приложении, но вместо файловой системы будут взаимодействовать с хранилищем Documentum, а значит, сразу же после сохранения документ может принимать участие в бизнес-процессах предприятия.
+<p>Как только контент попадает в корпоративное хранилище, функции управления начинают контролировать его существование на предприятии. Любой его элемент должен быть классифицирован на предметном уровне, чтобы его можно было привязать к требуемому бизнес-процессу и чтобы пользователь мог легко его найти. С любым контентом могут выполняться стандартные библиотечные функции: выписка на редактирование и регистрация новой версии, поиск, навигация по хранилищу, рассылка, копирование и перемещение, заполнение атрибутов учетной карточки и т. д. Платформа Documentum обеспечивает авторизацию пользователей, динамические права доступа к контенту, выполнение бизнес-правил, автоматизацию процессов, преобразование форматов контента и многое другое. Пользователи, имеющие дело с хранилищем, могут, как и прежде, работать в привычных для себя приложениях, в некоторых случаях изучив минимальный набор дополнительных функций, таких, как расширенный поиск по выбранным атрибутам, заполнение учетной карточки документа или работа с версиями.
+<p>Получателями контента, как и его авторами, могут быть внешние и внутренние пользователи или внешние и внутренние информационные системы. Формат, в котором осуществляется доставка контента, и канал его передачи могут быть различными. Внутренний пользователь может через стандартное клиентское приложение Documentum получить задание (например, указание утвердить присланный документ), внешний контрагент может получить электронное письмо, заказчик может зайти на Web-сайт и найти новую информацию, документ может быть распечатан, отправлен по почте и т. д. Платформа Documentum делает процесс подготовки и многоканальной рассылки контента частью корпоративных бизнес-процессов.
+<p>Для классификации неструктурированного контента выделяется пять категорий: традиционные документы, Web-контент, мультимедийный контент, официальная документация и содержание коллективной работы. Для каждой из категорий предлагаются свои механизмы управления, расширяющие базовый набор функций управления жизненным циклом, который одинаков для всех типов контента. К таким механизмам относятся службы обработки мультимедийных данных; управление коллективной работой через проектный портал; службы архивации официальных документов и гарантии их подлинности; портлеты доступа к функциям Documentum через порталы; службы сбора и рассылки контента по подписке; службы преобразования форматов контента; службы аннотирования; службы шифрования данных; службы контроля печати; службы динамической сборки документов и т. д.
+<h3>EMC Centera</h3>
+<p>По информации аналитических компаний, одним из типов данных, объем которых растет наиболее быстро, становится так называемый фиксированный контент - неизменяемое информационное наполнение. В это понятие включается любая оцифрованная информация, сохраненная для последующего использования: документы, сообщения электронной почты, контрольные изображения, потоковое видео и аудио, рентгеновские снимки, чертежи САПР и т. п. По оценкам специалистов, к концу этого года только на долю справочных файлов будет приходиться уже более половины всей информации, хранящейся в корпорациях и правительственных организациях.
+<p>Быстрое накопление фиксированного контента требует систем хранения новой категории, предназначенных для интерактивного поиска и безопасного хранения такой информации в течение многих лет. Корпорация ЕМС вместе с сервером Centera (рис. 3) ввела в лексикон специалистов и новую аббревиатуру - CAS (Content Addressed Storage, система хранения, адресуемая по контенту). Системы Centera CAS, выпущенные EMC после приобретения в 2001 г. компании FilePool, которая специализировалась на ПО для систем хранения, имеют много общего с архитектурой NAS. Они тоже построены на базе Ethernet и обрабатывают и передают файлы непосредственно прикладным программам. В последнее время аналогичные идеи выдвигали многие вновь образованные компании, а также некоторые разработчики, предлагающие серверы для справочных данных и инструментальные средства разметки и идентификации информации.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No11_2004/ILM/ris3.jpg" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Система Centera.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>CAS-системы для хранения и поиска объектов и доступа к данным используют адрес фиксированного контента, а не имя файла и его физическое местоположение. Поскольку зачастую накопление подобной информации не имеет никаких ограничений сверху по объему, CAS-система для хранения такой информации должна чрезвычайно просто масштабироваться до петабайтных емкостей и при этом обеспечивать время доступа в пределах секунды.
+<p>Система Centera Content Addressed Storage представляет собой аппаратно-программный комплекс на основе накопителей на жестких дисках. По мнению разработчиков, она способна надежно хранить сотни терабайт делового контента в течение месяцев, лет или даже десятилетий. Centera дополняет традиционные системы EMC CLARiiON и Symmetrix, которые используются для решений, ориентированных на обработку транзакций и интенсивное обновление информации. Точно так же файловые серверы Celerra и CLARiiON призваны обеспечивать оптимальный доступ на уровне файлов.
+<p>Традиционные системы дисковой памяти, использующие блочный или файловый тип доступа, хороши для построения систем емкостью в десятки терабайт, типичных для бизнес-приложений и средств совместной работы. Но сегодня компаниям также требуется поддерживать большие и быстрорастущие хранилища фиксированного контента с интерактивным сетевым доступом к нему для множества разнообразных клиентов. Становится все труднее управлять логикой размещения данных и масштабированием вместимости хранилищ, поддерживая при этом подлинность хранимого контента на протяжении всего срока хранения. По мнению специалистов EMC, с помощью ПО CentraStar и модульной дисковой архитектуры можно обеспечить управление физическими ресурсами хранения данных, прозрачное как для пользователя, так и для приложений. Приложения управления контентом могут легко стыковаться со средствами системы Centera, обеспечивая эффективное масштабирование до петабайтных емкостей хранения.
+<p>Подход EMC к хранению фиксированного контента обеспечивает пользователю определенные преимущества. Так, технология Centera значительно упрощает планирование системы и управление сотнями терабайт контента. Нет необходимости выбирать тип RAID, связывать LUN или создавать файловую систему, а пользовательские приложения освобождены от необходимости справляться со всеми сложностями управления системами хранения традиционных топологий. Любой объем, предоставленный системе, хранится таким способом, что он остается неизменным, а его неизменность заверяется, причем прозрачно для приложения пользователя.
+<p>Centera использует уникальные адреса, созданные на основе контента, что гарантирует наличие единственной копии хранимого информационного наполнения (и его дубликата для повышения надежности), вне зависимости от числа использований. Это может значительно уменьшить объем хранимой пользователем информации и становится ключевым фактором в снижении совокупной стоимости владения ею.
+<p>Одно из несомненных преимуществ - масштабируемость без реконфигурации. Действительно, Centera, основанная на избыточных массивах независимых узлов RAIN (Redundant Arrays of Independent Nodes), представляет собой высокомасштабируемую систему. Специалисты корпорации говорят о простоте ее установки и модернизации: технология позволяет устанавливать и модернизировать такие системы за час или менее.
+<p>С появлением Centera возникла новая парадигма доступа к данным, названная Content Addressing - адресация по контенту. Вместо того, чтобы навязывать приложению традиционную схему адресации при сохранении и выборке статического контента, Centera предоставляет программе архивации возможность использовать простой адрес. Когда эталонные данные сохраняются в хранилище Centera в первый раз, приложению передается &quot;квитанция о получении&quot;, которая уникальна, поскольку составляется на основе информационного наполнения самого объекта хранения. При последующем доступе к тем же данным просто предъявляется эта &quot;квитанция о получении&quot;, однозначно идентифицирующая объект для архива. Адресация по контенту существенно упрощает задачи управления ресурсами хранения, особенно при обработке сотен терабайт статических объектов.
+<p>Механизм сохранения контента показан на рис. 4. Centera сохраняет объект данных, известный также как BLOB (Binary Large OBject, большой двоичный объект). Приложение доставляет объект данных в программный интерфейс приложения Centera (API), который вычисляет некую &quot;квитанцию&quot;, т. е. адрес контента (CA) на основе двоичного представления объекта. Затем хранилище Centera сохраняет BLOB и его зеркальную копию. Адрес CA, уникальный для содержания объекта, и метаданные об этом объекте (имя файла, дата создания и т. п.) вставляются в XML-файл, называемый C-Clip Descriptor File (CDF), для которого, в свою очередь, вычисляется адрес контента. Стоит отметить, что C-Clip - это союз CDF и самого объекта. Только этот адрес, C-Clip CA, возвращается приложению после того, как две копии CDF и две копии BLOB успешно размещены в хранилище.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No11_2004/ILM/ris4.gif" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Механизм сохранения контента.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Запросы на поиск объекта данных возникают, когда приложение через API направляет адрес этого объекта в архив. В Centera не существует никакого централизованного каталога и не используется никаких путей или универсальных указателей ресурсов (URL). В качестве ссылки используется только контентный адрес C-Clip. Где именно в системе Centera физически хранятся данные, приложению неизвестно.
+<p>Адрес C-Clip CA сродни &quot;отпечатку пальца&quot; и служит гарантией подлинности сохраненного объекта (например, пользовательского файла BLOB). Если объект найден в архиве и изменен хотя бы на один бит, то при сохранении измененного объекта API системы Centera создаст новый CDF с новым контекстным адресом измененного BLOB. Первоначальный объект все еще остается неизменным и доступен по его первоначальному контекстному адресу. Такое применение оптического носителя с однократной записью (WORM) гарантирует уровень целостности информации и существование версий, которых файловые серверы предоставить не могут.
+<p>Еще одно достоинство метода доступа C-Clip в том, что если несколько клиентов сохраняют один и тот же BLOB в архиве Centera, будет сохранен только один образец этого объекта (плюс зеркальная копия), при том что каждый клиент, использующий ссылки, получит свой собственный адрес C-Clip CA, указывающий на общий объект. Это очень полезно для оптимизации использования емкости хранения, например, при архивировании приложений почтовых программ.
+<p>Таким образом, метод C-Clip CA использует уникальный идентификатор, обеспечивающий поиск объекта, где бы тот ни находился, причем точно в той форме, в какой он был сохранен, независимо от взаимного местоположения искомого контента и пользователя. Метод C-Clip гарантирует, что разработчикам приложений, пользователям и менеджерам систем хранения не придется думать о том, где физически или логически расположены данные.
+<p>Поскольку Centera использует схему независимой адресации, она обеспечивает подвижность данных, что облегчает создание простой и надежной топологии, с высокой устойчивостью и легко восстанавливаемой после катастрофического сбоя.
+<p>После того, как объект данных первоначально сохранен в локальной системе Centera, он может также асинхронно и автоматически копироваться на отдаленный сайт через глобальную сеть. Таким образом, объект постоянно находится как в локальной системе, так и в удаленной.
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6701.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Управление жизненным циклом информации
+</a><br><a href="detail.php@ID=6701.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Владислав Шаров 
+Каждый год в мире создаются тысячи петабайт новых данных. Согласно ряду экспертных оценок, объемы корпоративной информации ежегодно&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6701.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6701&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='02abc7895c5b62c2b53931d89cfb1481'><img src='../bitrix/tools/captcha.php@captcha_code=02abc7895c5b62c2b53931d89cfb1481' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

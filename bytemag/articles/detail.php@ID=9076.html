@@ -1,0 +1,601 @@
+<HTML>
+<HEAD>
+<title>Методы и средства анализа рисков и управление ими в ИС
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Необходимость инвестиций в информационную безопасность (ИБ) бизнеса не вызывает сомнений. Чтобы подтвердить актуальность задачи обеспечения безопасности бизнеса, воспользуемся отчетом ФБР, выпущенным по материалам опроса американских компаний (средний и" />
+<meta name="description" content="Необходимость инвестиций в информационную безопасность (ИБ) бизнеса не вызывает сомнений. Чтобы подтвердить актуальность задачи обеспечения безопасности бизнеса, воспользуемся отчетом ФБР, выпущенным по материалам опроса американских компаний (средний и" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398078837','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm9076' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=9076&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm9076"].SHOW_IMAGE.value="N"; document.forms["PrintForm9076"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm9076"].SHOW_IMAGE.value="Y"; document.forms["PrintForm9076"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(9076);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=9076.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=9076.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(9076);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6258.html'>Безопасность</a><br /></p><a href='../numbers/index.php@ID=11537.html'>№12 (88), декабрь 2005</a><h1>Методы и средства анализа рисков и управление ими в ИС
+</h1>12.12.2005<p></p><DIV class='article-text'><p>Необходимость инвестиций в информационную безопасность (ИБ) бизнеса не вызывает сомнений. Чтобы подтвердить актуальность задачи обеспечения безопасности бизнеса, воспользуемся отчетом ФБР, выпущенным по материалам опроса американских компаний (средний и крупный бизнес). Статистика инцидентов в области ИТ-секьюрити неумолима. Согласно данным ФБР, в нынешнем году 56% опрошенных компаний подвергались атаке (рис. 1).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2005/risks/ris1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Статистика инцидентов в области информационной безопасности. Источник: CSI/FBI 2005 Computer Crime and Security Survey.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Но как оценить уровень вложений в ИБ, который обеспечит максимальную эффективность вложенных средств? Для решения этой задачи существует только один способ - применять системы анализа рисков, позволяющие оценить существующие в системе риски и выбрать оптимальный по эффективности вариант защиты (по соотношению существующих в системе рисков к затратам на ИБ).
+<h3>Обоснование инвестиций </h3>
+<p>По статистике, самые серьезные препятствия на пути принятия каких-либо мер для обеспечения информационной безопасности в компании связаны с двумя причинами: ограничение бюджета и отсутствие поддержки со стороны руководства.
+<p>Обе эти причины возникают из-за непонимания руководством серьезности вопроса и неспособности ИТ-менеджера обосновать, зачем вкладывать деньги в информационную безопасность. Часто считается, что основная проблема заключается в том, что ИТ-менеджеры и руководители разговаривают на разных языках - техническом и финансовом, но ведь и самим ИТ-специалистам часто трудно оценить, на что потратить деньги и сколько их требуется для улучшения защищенности системы компании, чтобы эти расходы не оказались напрасными или чрезмерными.
+<p>Если ИТ-менеджер четко представляет себе, сколько денег компания может потерять в случае реализации угроз, какие места в системе наиболее уязвимы, какие меры можно принять для повышения уровня защищенности, не потратив при этом лишних денег, и все это подтверждено документально, то решение его задачи - убедить руководство обратить внимание и выделить средства на обеспечение ИБ - становится значительно более реальным.
+<p>Для решения такого рода задач разработаны специальные методы и построенные 
+  на их базе программные комплексы анализа и контроля информационных рисков. Мы 
+  рассмотрим систему CRAMM британской компании Insight Consulting (<a href="http://www.insight.co.uk">http://www.insight.co.uk</a>), 
+  американскую RiskWatch одноименной компании (<a href="http://www.riskwatch.com">http://www.riskwatch.com</a>) 
+  и российский пакет ГРИФ компании Digital Security (<a href="http://www.dsec.ru">http://www.dsec.ru</a>). 
+  Их сравнительные характеристики приведены в таблице. 
+<h4>Сравнительный анализ инструментальных средств анализа рисков </h4>
+<table border="1">
+  <tr> 
+    <td><b>Критерии сравнения</b></td>
+    <td><b>CRAMM</b></td>
+    <td><b>RiskWatch</b></td>
+    <td><b>ГРИФ 2005 Digital Security Office</b></td>
+  </tr>
+  <tr> 
+    <td>Поддержка</td>
+    <td>Обеспечивается </td>
+    <td>Обеспечивается</td>
+    <td>Обеспечивается</td>
+  </tr>
+  <tr> 
+    <td>Легкость работы для пользователя</td>
+    <td>Требует специальной подготовки и высокой квалификации аудитора</td>
+    <td>Требует специальной подготовки и высокой квалификации аудитора</td>
+    <td>Интерфейс ориентирован на ИТ-менеджеров и руководителей; не требует специальных 
+      знаний в области ИБ</td>
+  </tr>
+  <tr> 
+    <td>Стоимость лицензии за одно рабочее место, долл.</td>
+    <td>От 2000 до 5000 </td>
+    <td>От 10 000 </td>
+    <td>От 1000 </td>
+  </tr>
+  <tr> 
+    <td>Системные требования</td>
+    <td>
+      <p>ОС Windows 98/Me/NT/2000/XP<br>
+        Свободное дисковое пространство 50 Мбайт</p>
+      <p>Минимальные требования:<br>
+        частота процессора 800 МГц, 64 Мбайт памяти</p>
+      <p>Рекомендуемые требования:<br>
+        частота процессора 1000 МГц, 128 Мбайт памяти</p>
+    </td>
+    <td>ОС Windows 2000/XP<br>
+      Свободное дисковое пространство для инсталляции 30 Мбайт<br>
+      Процессор Intel Pentium или совместимый, 256 Мбайт памяти</td>
+    <td>
+      <p>ОС Windows 2000/XP</p>
+      <p>Минимальные требования:<br>
+        свободное дисковое пространство (для диска c данными пользователя) 300 
+        Мбайт, 256 Мбайт памяти<br>
+      </p>
+      <p>Рекомендуемые требования:<br>
+        свободное дисковое пространство (для диска с данными пользователя) 1 Гбайт, 
+        512 Мбайт памяти</p>
+    </td>
+  </tr>
+  <tr> 
+    <td>Функциональность</td>
+    <td> 
+      <p>Входные данные: 
+      <ul>
+        <li>ресурсы; </li>
+        <li>ценность ресурсов; </li>
+        <li>угрозы; </li>
+        <li>уязвимости системы; </li>
+        <li>выбор адекватных контрмер. </li>
+      </ul>
+      <p>Варианты отчетов:</p>
+      <ul>
+        <li>отчет по анализу рисков;</li>
+        <li>общий отчет по анализу рисков;</li>
+        <li>детализированный отчет по анализу рисков.</li>
+      </ul>
+    </td>
+    <td> 
+      <p>Входные данные:</p>
+      <ul>
+        <li>тип информационной системы;</li>
+        <li>базовые требования в области безопасности;</li>
+        <li>ресурсы;</li>
+        <li>потери;</li>
+        <li>угрозы;</li>
+        <li>уязвимости;</li>
+        <li>меры защиты;</li>
+        <li>ценность ресурсов;</li>
+        <li>частота возникновения угроз;</li>
+        <li>выбор контрмер.</li>
+      </ul>
+      <p>Варианты отчетов:</p>
+      <ul>
+        <li>краткие итоги;</li>
+        <li>отчет о стоимости защищаемых ресурсов и ожидаемых потерях от реализации 
+          угроз;</li>
+        <li>отчет об угрозах и мерах противодействия;</li>
+        <li>отчет о ROI</li>
+        <li>отчет о результатах аудита безопасности.</li>
+      </ul>
+    </td>
+    <td> 
+      <p>Входные данные:</p>
+      <ul>
+        <li>ресурсы;</li>
+        <li>сетевое оборудование;</li>
+        <li>виды информации;</li>
+        <li>группы пользователей;</li>
+        <li>средства защиты;</li>
+        <li>угрозы;</li>
+        <li>уязвимости;</li>
+        <li>выбор контрмер.</li>
+      </ul>
+      <p>Состав отчета:</p>
+      <ul>
+        <li>инвентаризация ресурсов;</li>
+        <li>риски по видам информации;</li>
+        <li>риски по ресурсам;</li>
+        <li>соотношение ущерба и риска информации и ресурса;</li>
+        <li>выбранные контрмеры;</li>
+        <li>рекомендации экспертов.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr> 
+    <td>Количественный/качественный метод</td>
+    <td>Качественная оценка</td>
+    <td>Количественная оценка</td>
+    <td>Качественная и количественная оценки</td>
+  </tr>
+  <tr> 
+    <td>Сетевое решение</td>
+    <td>Отсутствует</td>
+    <td>Отсутствует</td>
+    <td>Корпоративная версия Digital Security Office 2005</td>
+  </tr>
+</table>
+<h3>CRAMM </h3>
+<p>Метод CRAMM (CCTA Risk Analysis and Management Method) был разработан Агентством по компьютерам и телекоммуникациям Великобритании (Central Computer and Telecommunications Agency) по заданию британского правительства и взят на вооружение в качестве государственного стандарта. Начиная с 1985 г. он используется правительственными и коммерческими организациями Великобритании. За это время CRAMM приобрел популярность во всем мире. Фирма Insight Consulting занимается разработкой и сопровождением программного продукта, реализующего метод CRAMM.
+<p>Метод CRAMM (<a href="http://www.cramm.com">http://www.cramm.com</a>) не случайно 
+  выбран нами для более детального рассмотрения. В настоящее время CRAMM - это 
+  довольно мощный и универсальный инструмент, позволяющий, помимо анализа рисков, 
+  решать ряд других аудиторских задач, включая: 
+<ul><li>обследование ИС и выпуск сопроводительной документации на всех этапах его проведения;
+<li>аудит в соответствии с требованиями британского правительства, а также стандарта BS 7799:1995 Code of Practice for Information Security Management;
+<li>разработку политики безопасности и плана обеспечения непрерывности бизнеса.</ul>
+<p>В основе метода CRAMM лежит комплексный подход к оценке рисков, сочетающий количественные и качественные методы анализа. Метод универсален и подходит и для больших, и для малых организаций как правительственного, так и коммерческого сектора. Версии ПО CRAMM, ориентированные на разные типы организаций, отличаются друг от друга базами знаний (profiles): для коммерческих организаций имеется Commercial Profile, для правительственных - Government profile. Правительственный вариант профиля также позволяет проводить аудит на соответствие требованиям американского стандарта ITSEC ("Оранжевая книга"). Концептуальная схема проведения обследования по методу CRAMM показана на рис. 2.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2005/risks/ris2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Схема проведения обследования по методу CRAMM.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>При грамотном использовании метода CRAMM удается получать очень хорошие результаты, из которых, пожалуй, наиболее важный - возможность экономического обоснования расходов организации на обеспечение ИБ и непрерывности бизнеса. Экономически обоснованная стратегия управления рисками позволяет в конечном счете сохранить средства, избегая неоправданных расходов.
+<p>CRAMM предполагает разделение всей процедуры на три последовательных этапа. Задача первого этапа состоит в ответе на вопрос: "Достаточно ли для защиты системы применения средств базового уровня, реализующих традиционные функции безопасности, или необходимо проведение более детального анализа?" На втором этапе проводится идентификация рисков и оценивается их величина. На третьем этапе решается вопрос о выборе адекватных контрмер.
+<p>Методика CRAMM для каждого этапа определяет набор исходных данных, последовательность мероприятий, анкеты для проведения интервью, списки проверки и набор отчетных документов.
+<p>На первой стадии исследования выполняется идентификация и определение ценности защищаемых ресурсов. Оценка проводится по десятибалльной шкале, причем критериев оценки может быть несколько - финансовые потери, ущерб репутации и т. д. В описаниях CRAMM в качестве примера приводится такая шкала оценки по критерию "Финансовые потери, связанные с восстановлением ресурсов":
+<ul><li>2 балла - менее 1000 долл.;
+<li>6 баллов - от 1000 до 10 000 долл.;
+<li>8 баллов - от 10 000 до 100 000 долл.;
+<li>10 баллов - свыше 100 000 долл.</ul>
+<p>При низкой оценке по всем используемым критериям (3 балла и ниже) считается, что для рассматриваемой системы достаточно базового уровня защиты (для этого уровня не требуется подробной оценки угроз ИБ), и вторая стадия исследования пропускается.
+<p>На второй стадии идентифицируются и оцениваются угрозы в сфере ИБ, проводится поиск и оценка уязвимостей защищаемой системы. Уровень угроз оценивается по следующей шкале: очень высокий, высокий, средний, низкий, очень низкий. Уровень уязвимости оценивается как высокий, средний или низкий. На основе этой информации вычисляется оценка уровня риска по семибалльной шкале (рис. 3).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2005/risks/ris3.jpg"  alt=Fig.3></td></tr>
+<tr><td valign="bottom">Рис. 3. Вторая стадия исследования по методу CRAMM - оценка уровня риска.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>На третьей стадии CRAMM генерирует варианты мер противодействия выявленным рискам. Продукт предлагает рекомендации следующих типов:
+<ul><li>рекомендации общего характера;
+<li>конкретные рекомендации;
+<li>примеры того, как можно организовать защиту в данной ситуации.</ul>
+<p>CRAMM имеет обширную базу, в которой содержатся описания около 1000 примеров реализации подсистем защиты различных компьютерных систем. Эти описания можно использовать в качестве шаблонов.
+<p>Решение о внедрении в систему новых механизмов безопасности и модификации старых принимает руководство организации, учитывая связанные с этим расходы, их приемлемость и конечную выгоду для бизнеса. Задача аудитора состоит в том, чтобы обосновать рекомендуемые меры для руководства организации.
+<p>Если принято решение о внедрении новых контрмер и модификации старых, на аудитора может быть возложена задача подготовки плана внедрения и оценки эффективности использования этих мер. Решение этих задач выходит за рамки метода CRAMM.
+<p>К недостаткам метода CRAMM можно отнести следующие:
+<ul><li>метод требует специальной подготовки и высокой квалификации аудитора;
+<li>аудит по методу CRAMM - процесс достаточно трудоемкий и может потребовать месяцев непрерывной работы аудитора;
+<li>CRAMM в гораздо большей степени подходит для аудита уже существующих ИС, запущенных в эксплуатацию, нежели для ИС, находящихся на стадии разработки;
+<li>программный инструментарий CRAMM генерирует большое количество бумажной документации, которая не всегда оказывается полезной на практике;
+<li>CRAMM не позволяет создавать собственные шаблоны отчетов или модифицировать имеющиеся;
+<li>возможность внесения дополнений в базу знаний CRAMM недоступна пользователям, что вызывает определенные трудности при адаптации этого метода к потребностям конкретной организации;
+<li>ПО CRAMM не локализовано, существует только на английском языке;
+<li>высокая стоимость лицензии - от 2000 до 5000 долл.</ul>
+<h3>RiskWatch </h3>
+<p>ПО RiskWatch - это мощное средство анализа и управления рисками. В семейство RiskWatch входят программные продукты для проведения различных видов аудита безопасности. Оно включает в себя следующие средства аудита и анализа рисков:
+<ul><li>RiskWatch for Physical Security - для физических методов защиты ИС;
+<li>RiskWatch for Information Systems - для информационных рисков;
+<li>HIPAA-WATCH for Healthcare Industry - для оценки соответствия требованиям стандарта HIPAA (US Healthcare Insurance Portability and Accountability Act);
+<li>RiskWatch RW17799 for ISO 17799 - для оценки соответствия требованиям стандарта ISO 17799.</ul>
+<p>В методе RiskWatch в качестве критериев для оценки и управления рисками используются предсказание годовых потерь (Annual Loss Expectancy, ALE) и оценка возврата от инвестиций (Return on Investment, ROI).
+<p>Семейство программных продуктов RiskWatch имеет массу достоинств. RiskWatch помогает провести анализ рисков и сделать обоснованный выбор мер и средств защиты. В отличие от CRAMM, программа RiskWatch более ориентирована на точную количественную оценку соотношения потерь от угроз безопасности и затрат на создание системы защиты. Следует также отметить, что в этом продукте риски в сфере информационной и физической безопасности компьютерной сети предприятия рассматриваются совместно.
+<p>В основе продукта RiskWatch лежит методика анализа рисков, в которой можно выделить четыре этапа.
+<p>Первый этап - определение предмета исследования. Здесь описываются такие параметры, как тип организации, состав исследуемой системы (в общих чертах), базовые требования в области безопасности. Для облегчения работы аналитика в шаблонах, соответствующих типу организации ("коммерческая информационная система", "государственная/военная информационная система" и т. д.), есть списки категорий защищаемых ресурсов, потерь, угроз, уязвимостей и мер защиты. Из них нужно выбрать те, что реально присутствуют в организации.
+<p>Например, для потерь предусмотрены такие категории:
+<ul><li>задержки и отказ в обслуживании;
+<li>раскрытие информации;
+<li>прямые потери (например, от уничтожения оборудования огнем);
+<li>жизнь и здоровье (персонала, заказчиков и т. д.);
+<li>изменение данных;
+<li>косвенные потери (например, затраты на восстановление);
+<li>репутация.</ul>
+<p>Определение категорий защищаемых ресурсов в пакете RiskWatch иллюстрирует рис. 4.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2005/risks/ris4.jpg"  alt=Fig.4></td></tr>
+<tr><td valign="bottom">Рис. 4. Определение категорий защищаемых ресурсов в пакете RiskWatch.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Второй этап - ввод данных, описывающих конкретные характеристики системы. Они могут вводиться вручную или импортироваться из отчетов, созданных инструментальными средствами исследования уязвимости компьютерных сетей.
+<p>На этом этапе подробно описываются ресурсы, потери и классы инцидентов. Классы инцидентов получаются путем сопоставления категории потерь и категории ресурсов.
+<p>Для выявления возможных уязвимостей используется опросник, база которого содержит более 600 вопросов. Вопросы связаны с категориями ресурсов. Задается частота возникновения каждой из выделенных угроз, степень уязвимости и ценность ресурсов. Все это используется в дальнейшем для расчета эффекта от внедрения средств защиты.
+<p>Третий и, наверное, самый важный этап - количественная оценка. На этом этапе рассчитывается профиль рисков и выбираются меры обеспечения безопасности. Сначала устанавливаются связи между ресурсами, потерями, угрозами и уязвимостями, выделенными на предыдущих шагах исследования (риск описывается совокупностью этих четырех параметров).
+<p>Фактически риск оценивается с помощью математического ожидания потерь за год. Например, если стоимость сервера - 150 тыс. долл., а вероятность того, что он будет уничтожен пожаром в течение года, равна 0,01, то ожидаемые потери составят 1500 долл.
+<p>Общеизвестная формула m=p х v, где m - математическое ожидание, p - вероятность возникновения угрозы, v - стоимость ресурса, претерпела некоторые изменения в связи с тем, что RiskWatch использует определенные американским Институтом стандартов NIST оценки, называемые LAFE и SAFE. LAFE (Local Annual Frequency Estimate) показывает, сколько раз в год в среднем данная угроза реализуется в данном месте (например, в городе). SAFE (Standard Annual Frequency Estimate) показывает, сколько раз в год в среднем данная угроза реализуется в этой "части мира" (например, в Северной Америке). Вводится также поправочный коэффициент, который позволяет учесть, что при реализации угрозы защищаемый ресурс может быть уничтожен не полностью, а лишь частично.
+<p>Дополнительно рассматриваются сценарии "что, если...", которые позволяют описать аналогичные ситуации при условии внедрения средств защиты. Сравнивая ожидаемые потери при условии внедрения защитных мер и без них, можно оценить эффект от таких мероприятий.
+<p>RiskWatch включает в себя базы с оценками LAFE и SAFE, а также с обобщенным описанием различных типов средств защиты.
+<p>Эффект от внедрения средств защиты количественно описывается с помощью показателя ROI (Return on Investment - отдача от инвестиций), который показывает отдачу от сделанных инвестиций за определенный период времени. Рассчитывается этот показатель по формуле:
+<p><img src="../images/byte_archive/images/No12_2005/risks/formula.gif" alt=Formula>
+<p>где Costsi - затраты на внедрение и поддержание i-той меры защиты; Benefitsi - оценка той пользы (ожидаемого снижения потерь), которую приносит внедрение данной меры защиты; NVP (Net Value Present) дает поправку на инфляцию.
+<p>Четвертый этап - генерация отчетов. Возможны следующие типы отчетов:
+<ul><li>краткие итоги;
+<li>полные и краткие отчеты об элементах, описанных на стадиях 1 и 2;
+<li>отчет о стоимости защищаемых ресурсов и ожидаемых потерях от реализации угроз;
+<li>отчет об угрозах и мерах противодействия;
+<li>отчет о ROI;
+<li>отчет о результатах аудита безопасности.</ul>
+<p>Пример расчета показателя ROI для различных мер защиты приведен на рис. 5.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2005/risks/ris5.gif" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Показатель ROI для различных мер защиты, рассчитанный при помощи RiskWatch.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Таким образом, RiskWatch позволяет оценить не только риски, которые сейчас существуют на предприятии, но и ту выгоду, которую может принести внедрение физических, технических, программных и прочих средств и механизмов защиты. Подготовленные отчеты и графики дают материал, достаточный для принятия решений об изменении системы обеспечения безопасности предприятия.
+<p>Для отечественных пользователей проблема заключается в том, что получить используемые в RiskWatch оценки (такие, как LAFE и SAFE) для наших условий достаточно проблематично. Хотя сама методология может с успехом применяться и у нас.
+<p>Подводя итог, отметим, что, выбирая конкретную методику анализа рисков на предприятии и поддерживающие ее инструментальные средства, следует ответить на вопрос: нужна ли точная количественная оценка последствий реализации угроз или достаточно оценки на качественном уровне. Необходимо также учитывать следующие факторы: наличие экспертов, способных дать достоверные оценки объема потерь от угроз информационной безопасности, и наличие на предприятии достоверной статистики инцидентов в сфере информационной безопасности.
+<p>К недостаткам RiskWatch можно отнести следующее:
+<ul><li>данный метод подходит, если требуется провести анализ рисков на программно-техническом уровне защиты, без учета организационных и административных факторов;
+<li>полученные оценки рисков (математическое ожидание потерь) далеко не исчерпывают понимание риска с системных позиций - метод не учитывает комплексный подход к информационной безопасности;
+<li>ПО RiskWatch существует только на английском языке;
+<li>высокая стоимость лицензии - от 10 000 долл. за одно рабочее место для небольшой компании.</ul>
+<h3>ГРИФ </h3>
+<p>ГРИФ - это комплексная система анализа и управления рисками информационной 
+  системы компании. ГРИФ 2005 из состава Digital Security Office (<a href="http://www.dsec.ru/products/grif/">http://www.dsec.ru/products/grif/</a>) 
+  дает картину защищенности информационных ресурсов в системе и позволяет выбрать 
+  оптимальную стратегию защиты корпоративной информации. 
+<p>Система ГРИФ анализирует уровень защищенности ресурсов, оценивает возможный ущерб от реализации угроз ИБ и помогает управлять рисками, выбирая контрмеры.
+<p>Анализ рисков ИС проводится двумя способами: при помощи модели информационных потоков или модели угроз и уязвимостей, в зависимости от того, какими исходными данными располагает пользователь, а также от того, какие данные его интересуют на выходе.
+<h4>Модель информационных потоков </h4>
+<p>При работе с моделью информационных потоков в систему вносится полная информация обо всех ресурсах с ценной информацией, пользователях, имеющих доступ к этим ресурсам, видах и правах доступа. Заносятся данные обо всех средствах защиты каждого ресурса, сетевые взаимосвязи ресурсов, характеристики политики безопасности компании. В результате получается полная модель информационной системы.
+<p>На первом этапе работы с программой пользователь вносит все объекты своей информационной системы: отделы, ресурсы (к специфичным объектам данной модели относятся сетевые группы, сетевые устройства, виды информации, группы пользователей, бизнес-процессы).
+<p>Далее пользователю необходимо проставить связи, т. е. определить, к каким отделам и сетевым группам относятся ресурсы, какая информация хранится на ресурсе и какие группы пользователей имеют к ней доступ. Пользователь также указывает средства защиты ресурса и информации.
+<p>На завершающем этапе пользователь отвечает на список вопросов по политике безопасности, реализованной в системе, что позволяет оценить реальный уровень защищенности системы и детализировать оценки рисков.
+<p>Наличие средств информационной защиты, отмеченных на первом этапе, само по себе еще не делает систему защищенной в случае их неадекватного использования и отсутствия комплексной политики безопасности, учитывающей все аспекты защиты информации, включая вопросы организации защиты, физической безопасности, безопасности персонала, непрерывности ведения бизнеса и т. д.
+<p>В результате выполнения всех действий на данных этапах на выходе формируется полная модель информационной системы с точки зрения информационной безопасности с учетом реального выполнения требований комплексной политики безопасности, что позволяет перейти к программному анализу введенных данных для получения комплексной оценки рисков и формирования итогового отчета.
+<h4>Модель угроз и уязвимостей </h4>
+<p>Работа с моделью анализа угроз и уязвимостей подразумевает определение уязвимостей каждого ресурса с ценной информацией и соответствующих угроз, которые могут быть реализованы через данные уязвимости. В результате получается полная картина слабых мест в информационной системе и того ущерба, который может быть нанесен.
+<p>На первом этапе работы с продуктом пользователь вносит в систему объекты своей ИС: отделы, ресурсы (к специфичным объектам для данной модели относятся угрозы информационной системе и уязвимости, через которые реализуются угрозы).
+<p>Система ГРИФ 2005 включает обширные встроенные каталоги угроз и уязвимостей, в которых содержится около 100 угроз и 200 уязвимостей. Для максимальной полноты и универсальности данных каталогов эксперты Digital Security разработали специальную классификацию угроз DSECCT, в которой реализован многолетний практический опыт в области информационной безопасности. Используя эти каталоги, пользователь может выбрать угрозы и уязвимости, относящиеся к его информационной системе.
+<p>Далее пользователю необходимо проставить связи, т. е. определить, к каким отделам относятся ресурсы, какие угрозы действуют на ресурс и через какие уязвимости они реализуются.
+<p>Алгоритм системы ГРИФ 2005 анализирует построенную модель и генерирует отчет, который содержит значения риска для каждого ресурса. Конфигурация отчета может быть практически любой, что позволяет создавать как краткие отчеты для руководства, так и детальные отчеты для дальнейшей работы с результатами (рис. 6).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2005/risks/ris6.jpg"  alt=Fig.6></td></tr>
+<tr><td valign="bottom">Рис. 6. Пример отчета в системе ГРИФ 2005.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Система ГРИФ 2005 содержит модуль управления рисками, который позволяет проанализировать все причины того, что после обработки алгоритмом занесенных данных получается именно такое значение риска. Таким образом, зная причины, можно получить данные, необходимые для реализации контрмер и, соответственно, снижения уровня риска. Рассчитав эффективность каждой возможной контрмеры, а также определив значение остаточного риска, можно выбрать контрмеры, которые позволят снизить риск до необходимого уровня.
+<p>В результате работы с системой ГРИФ строится подробный отчет об уровне риска каждого ценного ресурса информационной системы компании, указываются все причины риска с подробным анализом уязвимостей и оценкой экономической эффективности всех возможных контрмер.
+<h4>*** </h4>
+<p>Лучшие мировые практики и ведущие международные стандарты в области ИБ, в частности ISO 17799, требуют для эффективного управления безопасностью информационной системы внедрения системы анализа и управления рисками. При этом можно использовать любые удобные инструментальные средства, но главное - всегда четко понимать, что система информационной безопасности создана на основе анализа информационных рисков, проверена и обоснована. Анализ и управление информационными рисками - ключевой фактор для построения эффективной защиты информационной системы.
+
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</A></b></li><li><b><A href='detail.php@ID=24095.html'>Сертифицированные системы обнаружения вторжений </A></b></li><li><b><A href='detail.php@ID=22469.html'>Новые технологии в Security operation center</A></b></li><li><b><A href='detail.php@ID=20887.html'>Агрессивность и мобильность: какие угрозы нас ждут в 2013-м</A></b></li><li><b><A href='detail.php@ID=20621.html'>Карты с дисплеем как новое средство защиты онлайн-банкинга</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=9076.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Методы и средства анализа рисков и управление ими в ИС
+</a><br><a href="detail.php@ID=9076.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Необходимость инвестиций в информационную безопасность (ИБ) бизнеса не вызывает сомнений. Чтобы подтвердить актуальность задачи обеспечения&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=9076.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=9076&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='09cc4edf9a3fa7fcae9d6b38ee1249ee'><img src='../bitrix/tools/captcha.php@captcha_code=09cc4edf9a3fa7fcae9d6b38ee1249ee' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

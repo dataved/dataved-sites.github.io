@@ -1,0 +1,452 @@
+<HTML>
+<HEAD>
+<title>Протоколы инкапсуляции для IP Storage
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Андрей Борзенко В последние годы гигантский рост потоков информации и масштабов систем хранения данных, обусловленный появлением нового класса приложений, работающих с корпоративными данными и Интернетом, привел к резкому увеличению потребностей в" />
+<meta name="description" content="Андрей Борзенко В последние годы гигантский рост потоков информации и масштабов систем хранения данных, обусловленный появлением нового класса приложений, работающих с корпоративными данными и Интернетом, привел к резкому увеличению потребностей в" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398083141','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6573' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6573&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6573"].SHOW_IMAGE.value="N"; document.forms["PrintForm6573"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6573"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6573"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6573);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6573.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6573.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6573);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11541.html'>№12 (41), декабрь 2001</a><h1>Протоколы инкапсуляции для IP Storage
+</h1>10.12.2001<p></p><DIV class='article-text'><p><i>Андрей Борзенко</i> 
+<p>В последние годы гигантский рост потоков информации и масштабов систем хранения данных, обусловленный появлением нового класса приложений, работающих с корпоративными данными и Интернетом, привел к резкому увеличению потребностей в системах хранения данных. При этом особенно быстро растут требования к сетевому хранению данных. По оценкам IDC, в 2001-2003 гг. объем хранилищ данных будет увеличиваться со скоростью примерно 75% в год.
+<p>Такой рост подчеркивает две очень важные проблемы: повышение важности данных и сложности управления растущим объемом информации. Для решения этих проблем все чаще применяются сетевые хранилища в виде сетей хранения данных (Storage Area Network, SAN), обеспечивающих хранение и защиту критически важной информации, а также доступ к ней и возможность управления. В соответствии с прогнозами IDC в 2004 г. на долю подобных сетевых хранилищ придется 67% всей хранимой информации.
+<p>Традиционный подход к корпоративным хранилищам данных заключается в непосредственном подключении серверов к локальной системе хранения. Системам хранения с непосредственным соединением (Direct Attached Storage, DAS) и построенным на их основе отдельным хранилищам свойственна ограниченная масштабируемость, сложность управления и повышенная опасность возникновения узких мест на серверах и в локальных сетях. Стандартная SAN защищает данные, обеспечивая резервные пути между клиентами и устройством хранения, а также удаленное зеркалирование на случай сбоев и резервное копирование, не снижающее производительность работы серверов приложений и базовой сети. Такие сетевые хранилища обеспечивают защиту от сбоев не только отдельных устройств, но и целых участков сети, а также облегчают операции архивирования данных. Кроме того, в системах сетевого хранения информации можно консолидировать хранилища, упростив таким образом управление ими. Централизованное управление объединенным пулом хранилищ зачастую более эффективно, чем отдельными напрямую подключенными подсистемами хранения. По мере необходимости можно легко выделять место в объединенном пуле, что упрощает администрирование и позволяет оптимизировать хранение данных.
+<p>Хотя существует много вариантов реализации сетей хранения данных, все их объединяют несколько общих свойств, благодаря которым SAN существенно отличается от модели хранения с непосредственным соединением с сервером. Базовое преимущество сетевой модели хранения - это максимальная производительность и эффективность использования ресурсов путем их объединения и централизованного управления данными и ресурсами хранения. SAN обеспечивает доступ к массивам хранения класса предприятия многим серверам, которые в совокупности полностью используют возможности этих хранилищ. Кроме того, благодаря доступу через сеть хранения можно полностью задействовать возможности большого массива, избегая снижения производительности при масштабировании. В отличие от описанной схемы, хранилища класса предприятия, использующие традиционную модель, подключаются к мощным серверам, но недостаточно эффективно используют крупные массивы данных.
+<p>SAN находят все более широкое применение в открытых гетерогенных средах, построенных на базе различных операционных систем и ориентированных на обеспечение высокой производительности и масштабируемости. В результате все важнее становится упростить управление SAN-сетями.
+<h3>Этап Fibre Channel </h3>
+<p>Первые сети хранения информации появились примерно три-четыре года назад. В те времена особое внимание уделялось перспективной шинной технологии Fibre Channel, обещавшей стать отличным транспортом для сетей хранения. Она позволяла передавать пакеты большего размера и на большее расстояние, чем стандартная архитектура шины SCSI.
+<p>Стандарт Fibre Channel обладает характеристиками архитектуры канала, при этом многие операции протокола (в частности, операции управления потоками данных, сегментация и повторная сборка пакетов, обработка ошибок) выполняются на уровне аппаратных средств. Поддержка доступа к данным на уровне блоков обеспечивает высокопроизводительную передачу больших объемов данных при минимальной нагрузке на сервер. В Fibre Channel также применяется высокоэффективный интерфейс устройств хранения с операционной системой, позволяющий использовать адаптеры основной, или ведущей, шины (Host Bus Adapter, HBA) для обработки ввода-вывода. Благодаря этому данная технология обеспечивает чрезвычайно малое время задержки и высокую реальную пропускную способность, разгружает процессоры на сервере и избавляет от потребности в сложных программных протоколах для предотвращения &quot;заторов&quot; трафика в сети и управления другими операциями. При работе с устройствами хранения доступ к ним обеспечивается на уровне блоков.
+<p>Неудивительно поэтому, что технология Fibre Channel стала для SAN стандартом де-факто. Она широко применяется в сетях хранения, работающих на скоростях передачи данных 1 и 2 Гбит/с. При поддержке полнодуплексной передачи на скорости 2 Гбит/с Fibre Channel теоретически способна поддержать на отдельном соединении полосу пропускания шириной до 200 Мбит/с. По опубликованным данным, фактически измеренная пропускная способность подобных систем достигала 195 Мбит/с, при этом нагрузка на центральный процессор не превышала 10%.
+<p>Однако Fibre Channel так и не смогла полностью оправдать возлагавшиеся на нее надежды. Она стала жертвой борьбы между претендентами на стандарт: разработчикам не удалось добиться совместимости создаваемых систем, что часто тормозило развертывание сетей хранения информации. К тому же на этот период пришлось бурное развитие технологии Gigabit Ethernet. Компании не слишком торопились модернизировать уже развернутые инфраструктуры ради перехода на волоконно-оптические каналы связи. Сказался и взрывоподобный рост популярности Интернета, в результате которого крупным корпорациям пришлось решать задачу управления огромными объемами данных не только на серверах своего предприятия, но и на распределенных узлах, географически разнесенных на большие расстояния.
+<h3>Снова IP </h3>
+<p>Тогда, видимо, и возникла идея управлять устройствами хранения с помощью проверенного временем протокола IP. Он должен обеспечить управляемость и совместимость сетей хранения при невысокой стоимости управления.
+<p>Как известно, IP - это основной сетевой протокол общего назначения. Благодаря повсеместному распространению в мире и способности работать практически в любых подсетях, протокол IP приобрел вес, дающий ему множество преимуществ по сравнению с другими сетевыми протоколами. IP стал стандартом корпоративных сетей; существуют поддерживающие IP магистральные линии, охватывающие весь земной шар. Немаловажно и наличие огромной армии технических специалистов с опытом работы с данным протоколом. Такая вездесущность обусловливает огромную и постоянно растущую поддержку IP-сетей производителями и разработчиками - широко распространены механизмы обеспечения качества обслуживания (Quality of Service, QoS), распределения приоритетов подключений и протоколы безопасности, доступные в IP-сетях. Данный протокол относительно недорог, ведь он базируется на стандартных, общепринятых технологиях создания подсетей, таких, как Ethernet.
+<p>Появление технологии IP Storage было логическим следствием возросших требований к сетевым хранилищам данных и повсеместного распространения протокола IP в качестве основного сетевого протокола общего назначения. На рынке уже появились первые реализации этой технологии, которые стандартизируются ассоциацией IETF (Internet Engineering Task Force). Известно, что на заре развития IP умами владела идея &quot;IP поверх всего&quot; - Ethernet, Token Ring, ATM и т. д. Теперь же, когда по IP-сетям передают видео, речевую информацию, а также данные на уровне блоков, приоритеты, кажется, поменялись, и сейчас говорят о подходе &quot;все поверх IP&quot;.
+<p>Благодаря уже существующей инфраструктуре локальных и глобальных сетей, а также соответствующей огромной базе знаний, перспективы использования протокола IP для сетевого хранения данных выглядят чрезвычайно привлекательно. При использовании единой сетевой технологии - как для локальных сетей, так и для SAN - отделы ИТ смогут избежать дублирования затрат и ресурсов: им не придется обслуживать и поддерживать оборудование, технический персонал и базу знаний одновременно для IP и Fibre Channel. Кроме того, небольшим компаниям, желающим воспользоваться преимуществами сетевого хранения, проще реализовать SAN на основе IP, а не Fibre Channel, хотя бы потому, что с IP они уже знакомы.
+<p>Поддержка хранения с доступом на уровне блоков по стандартным IP-сетям также позволит реализовать доступ к хранилищам на больших расстояниях. К тому же оптимизма в отношении спецификации Fibre Channel сейчас поубавилось, чему в немалой степени способствовала поддержка альтернативных технологий компаниями EMC и IBM, а также не столь крупными производителями, ставшими под знамена этих лидеров.
+<p>С другой стороны, возвращение аппаратных хранилищ в основную телекоммуникационную сеть выглядит весьма парадоксальным решением и даже противоречит самой концепции сети устройств хранения информации. Ведь такие сети создаются как раз для того, чтобы операции хранения данных, требующие огромной пропускной способности, не препятствовали обмену сообщениями и передаче другого трафика. И в самом деле, перевод устройств хранения в IP-сети ставит перед фирмами-производителями целый ряд технических проблем и вопросов стандартизации. Без их решения разработчикам едва ли удастся превратить сети хранения, строящиеся поверх IP, в универсальное средство подключения к сетям хранения, привлекательное для пользователей.
+<p>Одно из основных требований для обеспечения пересылки данных по IP-сетям - повысить надежность и эффективность самого протокола, чтобы он был в состоянии справиться со сложной задачей хранения данных.
+<h3>Концепция IP Storage </h3>
+<p>Вообще говоря, IP Storage - это совокупность технологий, которые обеспечивают доступ на уровне блоков к пересылаемым по IP-сетям данным систем хранения. В данной концепции ключевые фразы - это &quot;использование IP-сетей&quot; и &quot;доступ к системам хранения на уровне блоков&quot;. Впрочем, передача данных по сети на уровне блоков - совсем не новая идея. Этот подход в современных SAN-сетях используется, например, в рамках той же технологии Fibre Channel. Основное потенциальное преимущество IP Storage - расширенная совместимость и обеспечение взаимодействия различных сетей, а также создание SAN-сетей на базе единого стандарта и технологий, поддерживающих IP, например Ethernet.
+<p>Использование IP для пересылки данных также не ново. На протяжении многих лет для доступа к хранимым данным на уровне файлов применялись такие протоколы, как CIFS (Common Internet File System) и NFS (Network File System). Различие между этими протоколами и протоколами IP Storage заключается в способе доступа к данным, который осуществляется на уровне файлов или блоков.
+<p>CIFS и NFS поддерживают запросы на уровне файлов данных на сервере, который &quot;владеет&quot; файловой системой. Такие запросы предполагают наличие сетевого объекта, например, обычного файлового сервера или сетевого устройства хранения - файлера (Network Attached Storage, NAS). Он поддерживает файловую систему и предоставляет свои файлы другим узлам сети. Получив запрос (например, на открытие файла myfile.txt), файловый сервер или NAS-устройство (рис. 1) обращается к своим таблицам размещения файлов, преобразует логическое имя файла в перечень адресов физических блоков, соответствующих расположению данных на физическом носителе, и выполняет физический доступ на уровне блоков. Эти процедуры требуют процессорного времени сервера и из-за этого иногда существенно увеличивают время отклика при выполнении файловых операций.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/ip_storage/ris1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Доступ к данным на уровне файлов и блоков.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В базах данных, которые полагаются на быстрый (с минимальной задержкой выполнения транзакций) доступ к информации, подобные дополнительные операции недопустимы, поскольку в этом случае требуется прямой доступ на уровне блоков к физическим устройствам хранения. Такой тип запросов к устройствам хранения на уровне блоков данных и поддерживают SAN-сети. В свою очередь, протоколы IP Storage предоставляют средства инкапсуляции запросов на уровне блоков в IP-пакеты для пересылки их по стандартным сетям, поддерживающим другой известный протокол, TCP. Таким образом, обеспечивается поддержка SAN-запросов на уровне блоков в обычных IP-сетях.
+<p>В настоящее время наиболее перспективными считаются три протокола инкапсуляции 
+  для IP Storage:
+<ul>
+  <li>iSCSI</li>
+  <li>FC поверх TCP/IP (FCIP)</li>
+  <li>Internet FC Protocol (iFCP) </li>
+</ul>
+<h3>iSCSI </h3>
+<p>Протокол SCSI - сегодня основной метод обеспечения доступа к данным на уровне блоков между серверами. Более 100 миллионов SCSI-устройств непосредственно подключаются к индивидуальным системам, но при этом не позволяют другим удаленным компьютерам получить доступ к хранимым данным. Технология Fibre Channel дополняет возможности SCSI, повышая производительность и обеспечивая доступ к данным на уровне блоков между системами в локальной сети хранения.
+<p>Потребность рынка в средствах доступа к данным на уровне блоков, причем на больших расстояниях и с использованием общедоступных сетевых технологий, обусловила появление iSCSI - стандартного протокола доступа к данным на уровне блоков по действующим IP-сетям. В iSCSI предусматривается инкапсулирование SCSI-команд в TCP-пакеты, которые затем пересылаются стандартными средствами протокола IP. Благодаря iSCSI стираются физические границы сетей хранения, так как данные становятся доступными из любого места сети.
+<p>Напомним, что по IP-протоколу пакеты доставляются получателю не в строгой последовательности, их исходный порядок восстанавливается в точке получения. Спецификация SCSI, напротив, требует, чтобы пакеты следовали строго один за другим без задержек. Достаточно хотя бы одному пакету выбиться из общей последовательности - и все переданные данные будут испорчены или нарушится подключение. Задержка пакетов в технологии iSCSI компенсируется за счет того, что данные размещаются в памяти без учета их последовательности. Правда, новая спецификация требует увеличения размеров заголовка каждого пакета. Включенная в него дополнительная информация значительно ускоряет сборку пакетов на уровне ТСР, снижая тем самым запаздывание данных.
+<p>Протокол iSCSI обеспечивает доступ на уровне блоков через стандартные сети на основе Ethernet/IP независимо от того, где эти данные располагаются - на непосредственно подключенном SCSI-устройстве или в SAN на базе Fibre Channel. iSCSI предоставляет предприятиям и поставщикам услуг хранения (Storage Service Provider, SSP) возможность создавать глобальные сети хранения и централизованно управлять ими, используя существующую инфраструктуру IP-сетей. При использовании iSCSI обеспечивается передача данных в интрасети и доступ к системам хранения на больших расстояниях.
+<p>Данные и команды SCSI по IP-сетям пересылаются следующим образом. Когда приложение или пользователь инициирует запрос данных, файла или приложения, операционная система генерирует SCSI-команды и запрос данных. После этого команда и запрос инкапсулируются и к ним добавляется заголовок пакета. Пакеты пересылаются через Ethernet-соединение. На принимающей стороне пакет разбирается, расшифровывается (если он был зашифрован), из него выделяются команды и данные SCSI. Далее команды и данные SCSI направляются на SCSI-устройство хранения данных. В таком же порядке средства протокола iSCSI возвращают запрошенные данные.
+<p>Концепцию iSCSI можно расширить для создания виртуальной сети хранения средствами любого сетевого устройства. iSCSI взаимодействует с операционной системой через интерфейс устройств хранения, позволяя перенести операции ввода/вывода на ведущую шину и разгрузить таким образом центральный процессор на сервере. На рис. 2 показана схема размещения и транспортировки блоков данных SCSI в пакетах TCP/IP, а на рис. 3 - использование iSCSI-устройств в системах сетевого хранения данных на базе IP.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/ip_storage/ris2.gif" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Рис. 2. Схема размещения данных в пакетах iSCSI.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/ip_storage/ris3.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Использование iSCSI.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Итак, новый протокол призван выполнять преобразования, необходимые для того, чтобы использовать IP в качестве транспорта команд SCSI (для передачи которых в настоящее время применяется Fibre Channel). С помощью iSCSI осуществляется сквозная связь между хранилищем и клиентами; подобно Fibre Channel, этот протокол обеспечивает в архитектуре SAN взаимодействие через коммутаторы клиентских компьютеров и массивов хранения данных (в этом случае - поддерживающих iSCSI).
+<p>На рис. 4 показана упрощенная схема уровней протоколов iSCSI. Сервер в левой части рисунка содержит iSCSI-устройство - iSCSI-адаптер основной шины HBA или специальную программу, работающую на узле, оборудованном стандартными сетевыми адаптерами Ethernet. Команды SCSI инкапсулируются в блоки iSCSI PDU (Protocol Data Unit). В соответствии со стандартами IETF в протоколе iSCSI в качестве транспортного уровня используется TCP для обеспечения надежной доставки с сохранением последовательности пакетов.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/ip_storage/ris4.gif" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Уровни протокола iSCSI.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>После добавления заголовка TCP/IP пакеты с командами SCSI обрабатываются как обычные IP-пакеты и перенаправляются получателю (на основании его IP-адреса) средствами обычной инфраструктуры IP. Приняв пакет, получатель последовательно удаляет уровни, пока не &quot;доберется&quot; до команды SCSI-интерфейса. Таким образом, источник и получатель взаимодействуют так, как если бы они находились в одной локальной системе.
+<p>Что касается адаптеров основной шины HBA, то они использовались на протяжении многих лет для соединения серверов и систем хранения, поскольку способны существенно разгрузить центральный процессор, самостоятельно обслуживая операции ввода-вывода. Такие адаптеры применяются в средах с самыми разнообразными интерфейсами систем хранения - SCSI, Fibre Channel и т. п. Сетевые интерфейсные платы, которые обычно обеспечивают доступ к IP-сетям, в отличие от HBA не поддерживают операции низкоуровневых протоколов и не разгружают сервер от операций ввода-вывода в высокопроизводительных системах хранения данных.
+<p>В iSCSI используются преимущества глобальной адресации протокола IP. Устройства iSCSI обладают идентификаторами двух типов: iSCSI-имя и iSCSI-адрес. Все источники и получатели iSCSI получают постоянное имя iSCSI, аналогично тому, как в Fibre Channel они получают глобальное имя (WorldWide Name, WWN). iSCSI-имя указывает на конкретное устройство независимо от его местоположения или IP-адреса. Адрес iSCSI указывает на местоположение источника или получателя iSCSI и состоит из IP-адреса, номера порта и имени iSCSI-устройства. Вот пример.
+<pre>Формат адреса iSCSI:
+iSCSI://&lt;имя_домена&gt;:&lt;номер_порта&gt;/&lt;имя_iSCSI&gt;
+Имя iSCSI:
+fqn.com.diskvendor.diskarray.45678
+Адрес iSCSI:
+iSCSI://diskfarm1.acme.com:80/fqn.com.diskvendor.diskarray.45678</pre>
+<p>Компания IBM (<a href="http://www.ibm.com">http://www.ibm.com</a>) стала первым 
+  крупным производителем, предложившим рынку устройства с интерфейсом iSCSI. По 
+  мнению специалистов корпорации, технология iSCSI уже достаточно проработана 
+  и вполне готова к эффективному применению. В течение ближайших двух -- пяти 
+  лет у нее есть все шансы получить самое широкое распространение, точно так же, 
+  как это произошло с сетями хранения. Так, дисковые массивы TotalStorage IP 100i 
+  и 200i поддерживают открытые сети SAN, а подключение пользователей к сетям хранения 
+  и базам данных должно выполняться при помощи технологии iSCSI. В частности, 
+  модель TotalStorage IP Storage 200i рассчитана на системы хранения информации 
+  нижнего звена. Она базируется на двух процессорах и оснащена 1 Гбайт памяти 
+  (в максимальной конфигурации ее объем может быть удвоен). Количество дисков 
+  (с возможностями RAID 5) составляет от 6 до 48. Первоначально новинка должна 
+  пересылать данные со скоростью до 1 Гбит/с, однако позже, когда скорость обмена 
+  по сетям Ethernet возрастет до 10 Гбит/с, пропускная способность дискового массива 
+  IBM увеличится до этого значения. Максимальная емкость нового устройства, предназначенного 
+  для рабочих групп и корпоративных подразделений, составляет от 216 Гбайт до 
+  1,7 Тбайт. В качестве ПО поставляются ОС Linux и загружаемые клиентские модули 
+  iClients для Windows NT, Windows 2000 и Linux. 
+<h3>FCIP </h3>
+<p>Как следует из самого названия протокола (Fibre Channel поверх TCP/IP), его цель - передача кадров Fibre Channel через инфраструктуру IP. Данный протокол позволяет объединить &quot;островки&quot; SAN-сетей на базе Fibre Channel посредством IP-сетей и создания единого массива таких SAN. В таких расширенных массивах SAN сохраняется FC-адресация - по существу, речь идет о создании IP-туннелей между отдельными конечными точками FCIP. После установки туннелей FC-устройства рассматривают такие расширенные связи как обычные FC-соединения и применяют привычную адресацию. В стандартной реализации конечные точки FCIP будут применяться для создания соединений между двумя (или более) FC-коммутаторами, или межкоммутаторными соединениями (InterSwitch Link, ISL), в стандартной инфраструктуре IP. В результате удастся объединить два (или более) массива SAN в единую структуру.
+<p>На рис. 5 показано объединение трех &quot;островков&quot; SAN, подключенных к конечным точкам FCIP (или шлюзам), и создание единого массива SAN-сетей на базе Fibre Channel. FCIP-шлюзы инкапсулируют FC-кадры, после чего в качестве основного транспорта используется протокол TCP (вообще говоря, существуют реализации, основанные на протоколе UDP, однако в спецификации IETF предусмотрено применение только TCP). Пакет с внедренными FC-кадрами пересылается получателю через инфраструктуру IP как обычный IP-пакет.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/ip_storage/ris5.gif" alt=Fig.5></td></tr>
+<tr><td valign="bottom">Рис. 5. Пример работы протокола FCIP.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>После создания FCIP-туннелей связь между FC-устройствами выполняется &quot;прозрачно&quot;, т. е. все промежуточные преобразования для них незаметны. FC-коммутаторы рассматривают соединения как стандартные ISL-подключения и поэтому поддерживает обмен информацией с серверами имен, создавая единое пространство FC-имен.
+<p>FCIP базируется на многих уже существующих особенностях Fibre Channel, и вполне вероятно, что устройства с поддержкой этого протокола составят основную конкуренцию изделиям на основе iSCSI.
+<h3>iFCP </h3>
+<p>Последний протокол IP Storage - это нечто среднее между двумя ранее рассмотренными протоколами. Так же, как и FCIP, протокол iFCP инкапсулирует FC-кадры, пересылаемые через инфраструктуру IP. Поэтому в документах IETF определен общий формат инкапсулированных FC-кадров. Основное различие между ними - в схеме адресации. Протокол FCIP устанавливает туннели по схеме &quot;точка - точка&quot;, которые используются для объединения (поверх Ethernet) двух SAN на базе FC и создания единой, большей SAN. Между тем iFCP - это протокол, поддерживающий соединения шлюзов (т. е. действующий по схеме &quot;шлюз - шлюз&quot;), в нем совмещены схемы адресации Fibre Channel и IP, что позволяет перенаправлять FC-кадры соответствующим получателям. В отличие от FCIP, протокол iFCP в текущей версии использует схему адресации, позволяющую для каждой подключенной SAN сохранить собственное пространство имен.
+<p>На рис. 6 показаны три удаленные SAN-сети, соединенные через инфраструктуру IP посредством конечных точек (или порталов) iFCP. Каждый iFCP-портал представляет все устройства в своем локальном пространстве имен FC другим iFCP-порталам, подключенным к IP-сети. Каждый портал поддерживает таблицу удаленных устройств и представляет их как устройства локального пространства имен FC. Этот процесс прозрачен для реальных устройств локальной SAN, при этом удаленные устройства выглядят как локальные. При необходимости обратиться к удаленному устройству локальное устройство направляет FC-кадр по локальному FC-адресу удаленного устройства. Этот кадр поступает на локальный iFCP-портал, который помещает его в IP-пакет и перенаправляет соответствующему удаленному iFCP-порталу. Последний, в свою очередь, извлекает FC-кадр и пересылает устройству-получателю. Поскольку порталы должны понимать оба вида адресации - и Fibre Channel, и IP, - большинство реализаций будет также выполнять функции стандартных коммутаторов этих протоколов.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/ip_storage/ris6.gif" alt=Fig.6></td></tr>
+<tr><td valign="bottom">Рис. 6. Пример работы протокола iFCP.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h3>Проблемы IP Storage </h3>
+<p>IP Storage - очень молодая технология, и до начала ее широкого распространения необходимо решить с помощью стандартизации ряд связанных с нею проблем. Поскольку протокол IP не гарантирует доставку, в качестве основного транспортного протокола во всех трех протоколах IP Storage используется TCP, который гарантирует доставку с сохранением порядка пакетов при пересылке на большие расстояния в перегруженных IP-сетях. Это означает, что даже при нарушении порядка следования IP-пакетов уровень TCP предоставит протоколу более высокого уровня (в данном случае это SCSI) данные в правильном порядке. Для этого в TCP обычно применяется буфер восстановления последовательности пакетов. В нем хранятся пакеты, полученные с нарушением порядка следования. После получения всех пакетов последовательности TCP передает данные следующему уровню.
+<p>Этот процесс иногда оказывается сложным, и на его обслуживание тратится процессорное время, что может создавать задержки при выполнении операций. В результате ввод-вывод потребует больше дополнительных операций, чем обычная передача блоков в Fibre Channel или SCSI. Для решения этой проблемы требуется предусмотреть механизм разгрузки процессора от этой работы - TOE (TCP Offload Engine).
+<p>Рассматриваемые протоколы работают на основе IP, однако это не значит, что использование имеющихся в продаже стандартных сетевых адаптеров Ethernet - оптимальный выбор. С технической точки зрения использовать их вполне возможно, но стандартные адаптеры непригодны в ситуациях, в которых требуется обеспечить высокую производительность. Как говорилось выше, для разгрузки серверов от операций ввода-вывода в IP Storage необходим механизм TOE. Использование ранних реализаций TOE-устройств повысит стоимость оборудования и усложнит стандартные сетевые адаптеры. Широкое распространение технологий IP Storage зависит от того, будет ли соотношение цена/производительность этих усовершенствованных адаптеров основной шины сопоставимо с аналогичными показателями существующих технологий, например Fibre Channel.
+<p>Ранее SAN размещались в защищенных центрах хранения данных. Сегодня, когда устройства хранения могут физически располагаться где угодно, связываясь через стандартную инфраструктуру IP, вопрос безопасности выходит на первый план. Отрасль опять стоит перед старым, как мир, вопросом: каков приемлемый уровень безопасности и каковы приемлемые расходы на ее обеспечение.
+<p>Тот факт, что технологии основаны на IP, совсем не гарантирует, что они обеспечат совместимость, характерную для Интернета. Для успеха IP Storage необходимо также, чтобы фирмы-производители прилагали совместные усилия, добиваясь совместимости своих изделий.
+<h3>Возможные перспективы </h3>
+<p>В настоящее время, когда SAN уже довольно широко используются, существует потребность обеспечить связь между географически разделенными сетями хранения данных. Технологии IP Storage здесь как нельзя кстати. По мнению многих экспертов, они позволяют обеспечить совместный доступ к данным между различными Web-узлами большой корпорации, создать удаленное &quot;зеркало&quot; жизненно важных данных и т. п. Основа всех подобных решений - организация мостов/маршрутизаторов между Fibre Channel и IP для создания поверх IP-инфраструктуры SAN-соединений, связывающих между собой SAN-сети. По мнению ряда экспертов, для этой цели больше всего подходят протоколы FCIP и iFCP, тесно связанные с FCP, однако и iSCSI-устройства обладают неплохими возможностями.
+<p>Новая технология в принципе позволяет обеспечить ограниченную связь по IP между несколькими SAN. Возможно, что появятся решения, в которых iSCSI-платы интегрированы с NAS-устройствами: ведь новые технологии и необходимые TOE-устройства дополняют решения на базе NAS. Таким образом, будет создан единый многофункциональный комплекс, обеспечивающий доступ к данным как на уровне блоков, так и на уровне файлов. Это комплексное NAS-устройство с поддержкой доступа на обоих уровнях облегчило бы переход на сетевое хранение в системах с непосредственным подключением хранилищ.
+<p>SAN-сети на основе IP, ориентированные на рабочие группы и небольшие компании, могли бы внедряться в средах, где необходимо сетевое хранение данных, но развертывание новой сетевой технологии проблематично. В такой среде лучше всего использовать iSCSI. Есть основания полагать, что SAN-сети, основанные на iSCSI, не заменят SAN на базе Fibre Channel, а будут устанавливаться &quot;с нуля&quot; и станут сравнительно недорогим способом достижения преимуществ сетевого хранения данных.
+<p>Прогноз развития технологий представлен на рис. 7. Со временем, когда будут устранены препятствия на пути внедрения IP Storage, могут появиться полноценные глобальные SAN-сети со сквозными соединениями на основе IP. Среди рассмотренных трех технологий IP Storage протокол iSCSI лучше всего подходит для создания таких структур. SAN на основе IP будут включать iSCSI-адаптеры ведущей шины, которые избавят TCP от большинства дополнительных операций, и устройства хранения со встроенной поддержкой iSCSI, взаимодействующие на основе стандартной инфраструктуры IP. В дальнейшем многие из дополнительных функций IP, ранее используемых только в локальных сетях (агрегирование полосы пропускания, обеспечение гарантированного качества обслуживания и другие), станут применяться в SAN-сетях. Использование IP в качестве основного транспорта SAN позволяет создать самые разнообразные распределенные конфигурации. Например, можно связать несколько SAN-сетей для создания отказоустойчивой конфигурации или для совместного использования ресурсов, обеспечить доступ серверов к объединенным пулам данных в удаленных SAN-сетях (рис. 8).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/ip_storage/ris7.gif" alt=Fig.7></td></tr>
+<tr><td valign="bottom">Рис. 7. Развитие технологий систем сетевого хранения данных.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В дальнейшем будут появляться более быстрые соединения для ввода-вывода и эффективного использования процессоров на серверах. Кроме того, поддержка сетей в системах хранения данных может быть усовершенствована за счет оптимизации процедур управления сетями хранения, планирования мощностей хранения, повышения безопасности, QoS и производительности. Какая бы спецификация IP ни победила в развернувшейся борьбе, можно с уверенностью сказать, что Fibre Channel перестает быть синонимом систем распределенного хранения информации. Применение IP открывает перед компаниями широкий спектр возможностей, позволяя задействовать в этих целях самые разнообразные сетевые транспорты и линии связи. Все прогнозы показывают, что технология IP Storage будет играть ключевую роль в хранении данных.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6573.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Протоколы инкапсуляции для IP Storage
+</a><br><a href="detail.php@ID=6573.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Андрей Борзенко 
+В последние годы гигантский рост потоков информации и масштабов систем хранения данных, обусловленный появлением нового класса&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6573.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6573&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0b228e977b32745d70920dc3b5928a8c'><img src='../bitrix/tools/captcha.php@captcha_code=0b228e977b32745d70920dc3b5928a8c' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

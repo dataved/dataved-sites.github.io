@@ -1,0 +1,548 @@
+<HTML>
+<HEAD>
+<title>Аналитические возможности «1С:Предприятие 8.0»
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Никита Зайцев, менеджер проектов компании Saint-Petersburg.com wild@hare.ru От учета - к анализу и управлению Любая автоматизированная учетная система - от примитивного &amp;quot;складского калькулятора&amp;quot; до сложных комплексных решений - по" />
+<meta name="description" content="Никита Зайцев, менеджер проектов компании Saint-Petersburg.com wild@hare.ru От учета - к анализу и управлению Любая автоматизированная учетная система - от примитивного &amp;quot;складского калькулятора&amp;quot; до сложных комплексных решений - по" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082761','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6668' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6668&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6668"].SHOW_IMAGE.value="N"; document.forms["PrintForm6668"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6668"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6668"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6668);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6668.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6668.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6668);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11532.html'>№2 (66), февраль 2004</a><h1>Аналитические возможности «1С:Предприятие 8.0»
+</h1>10.02.2004<p></p><DIV class='article-text'><p><i>Никита Зайцев</i>,<br>
+  менеджер проектов компании Saint-Petersburg.com<br>
+  <a href="mailto:wild@hare.ru">wild@hare.ru</a>
+<h3>От учета - к анализу и управлению </h3>
+<p>Любая автоматизированная учетная система - от примитивного &quot;складского калькулятора&quot; 
+  до сложных комплексных решений - по сути делает только две вещи: принимает от 
+  пользователя данные и выдает пользователю данные. Одно из ключевых достоинств 
+  <b>правильной</b> учетной системы - способность не только выдать нужные данные 
+  в нужный момент, но выдать их в нужной <b>форме</b>. 
+<p>Предприятию на первых этапах его существования вполне хватает простейших учетных 
+  технологий, и требования, предъявляемые к учетным системам, при этом обычно 
+  невысоки. Приход, расход, остаток - дебит, кредит, баланс. Большего не требуется: 
+  информационные массивы невелики, а менеджмент сосредотачивает усилия на <b>физическом</b> 
+  управлении. 
+<p>Но рано или поздно перед любым предприятием (если, конечно, оно хочет оставаться 
+  на рынке и развиваться) встает задача перехода от <b>учетных</b> технологий 
+  к <b>управленческим</b>. А это значит, что требования к информационной системе 
+  возрастают на порядок: пользователю наряду с возможностью получить данные требуется 
+  возможность анализировать их. В чем разница? Получение данных предполагает наличие 
+  у пользователя точного знания о том, что именно и в каком виде он хочет получить. 
+  &quot;Анализ&quot; же отличается тем, что пользователю заранее неизвестно, какие именно 
+  данные и в каком виде ему понадобятся - условия задачи могут меняться (и обычно 
+  меняются) прямо по ходу ее выполнения. Эффективность анализа зависит от двух 
+  вещей: качества серого вещества в голове аналитика и качества инструментария, 
+  предоставленного аналитику информационной системой. 
+<p>Задачу можно сформулировать следующим образом. Предприятие владеет большим массивом структурированной информации, и процесс ее накопления продолжается непрерывно. Информационная система должна дать пользователю в руки инструменты анализа накопленной информации и минимизировать трудозатраты пользователя на технические операции с данными. Критерием оценки любой конкретной системы служит соотношение двух этих факторов: в богатейших функциональных возможностях не будет смысла, если кпд использующего их человека окажется низким.
+<p>Рассмотрим &quot;аналитические способности&quot; пакета &quot;1С: Предприятие 8.0&quot;.
+<h3>Общие сведения о V8 </h3>
+<p>&quot;1С:Предприятие 8.0&quot; (далее для краткости V8) можно рассматривать и как набор готовых прикладных решений, и как среду разработки приложений. Соответственно, обзор функционала будет разделен на две части: возможности, предоставляемые пользователю готовых решений, и возможности, предоставляемые разработчику ПО.
+<p>Функционал &quot;для пользователя&quot; мы рассмотрим на примере типовых решений &quot;Управление 
+  торговлей&quot; и &quot;Управление персоналом&quot;, а функционал &quot;для разработчика&quot; - на примере 
+  текущего релиза платформы (8.0.4). Базовые сведения о пакете &quot;1С: Предприятие 
+  8.0&quot; (для читателей, впервые знакомящихся с продуктом) приведены во врезке. 
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td bgcolor="#FFFFCC">
+      <h4>&quot;1С:Предприятие 8.0&quot; - базовые сведения и термины </h4>
+      <p>Платформа &quot;1С:Предприятие 8.0&quot;, вообще говоря, представляет собой предметно-ориентированную 
+        среду разработки экономического ПО. Но, поскольку созданные на ее основе 
+        приложения распространяются в виде готовых коробочных решений, этот пакет 
+        нельзя отнести к &quot;чистым&quot; средствам разработки. Более того, среда разработки 
+        не поставляется отдельно, а только в составе того или иного готового продукта. 
+      <p>Термин &quot;предметно-ориентированная&quot; означает, что программист при разработке 
+        полностью абстрагируется от физической структуры данных (таблиц, полей, 
+        низкоуровневых транзакций и т. п.) и работает с объектами - интерфейсными, 
+        системными и объектами метаданных. Фактически среда разработки V8 предоставляет 
+        программисту набор готовых классов и методов (а также технологий разработки 
+        и поддержки ПО), &quot;заточенный&quot; под решение учетных, управленческих и аналитических 
+        задач. Разработка ведется на собственном встроенном языке V8. Для извлечения 
+        данных используется специальный SQL-подобный язык запросов. 
+      <p>Приложения, созданные на основе V8, называются конфигурациями. Конфигурация 
+        представляет собой совокупность объектов метаданных, визуальных форм и 
+        программных модулей, управляющих поведением системы. 
+      <p>К основным объектам метаданных относятся: 
+      <ul>
+        <li>константа - произвольное именованное значение; 
+        <li>справочник - совокупность именованных полей произвольного типа, используется 
+          для ввода статической информации; элементы справочника могут группироваться 
+          и подчиняться друг другу; 
+        <li>регистр - &quot;хранилище данных&quot;, выполненное в виде многомерной матрицы; 
+          используется для хранения остатков, оборотов и движений, а также для 
+          фиксации изменения любых произвольных параметров во времени; 
+        <li>документ - совокупность именованных полей произвольного типа, используется 
+          для ввода динамической информации; документ имеет положение на временной 
+          оси и производит движения регистров.
+      </ul>
+      <p>Конфигурация, заполненная пользовательскими данными, называется информационной 
+        базой. Информационная база может хранить свои данные в файле (наподобие 
+        Microsoft Access), работая в файловом режиме, или в базе данных Microsoft 
+        SQL Server - в этом случае информационная база работает по клиент-серверной 
+        технологии, используя сервер приложений &quot;1С:Предприятие&quot; (трехуровневая 
+        архитектура). Прикладная часть (конфигурация) не зависит от способа хранения 
+        данных и с пользовательской точки зрения будет одинаково работать в любом 
+        из этих режимов. 
+    </td>
+  </tr>
+</table>
+<h3>Возможности для пользователя </h3>
+<h4>Классифицирование объектов </h4>
+<p>Любой объект, хранящийся в базе данных, по сути представляет собой набор именованных полей разных типов (в терминологии V8 такие поля называются реквизитами). Причем состав этих реквизитов для каждого конкретного объекта определяется разработчиком приложения, и пользователь не может его изменить в процессе работы с системой.
+<p>Например, реквизиты справочника контрагентов описывают все, что нам нужно знать о контрагенте, начиная от названия и номера банковского счета и заканчивая текущей стадией взаимоотношений с ним. Но предустановленного набора может оказаться недостаточно для задачи анализа: здесь может потребоваться ввод собственной классификации, возможно, и не одной. То же самое касается и документов: операционисту вполне хватает имеющегося набора реквизитов (которых может быть великое множество для сложных документов), но аналитику этого будет мало.
+<p>К услугам аналитика V8 предоставляет два классификационных механизма - механизм свойств и механизм категорий. Механизм свойств позволяет (не вмешиваясь в структуру метаданных конфигурации) задать объекту любое количество произвольных признаков, причем сгруппированных любым угодным пользователю образом. Значением свойства может быть величина любого поддерживаемого системой типа, как простого (число, строка, дата), так и агрегатного (перечисление, справочник) или даже составного (несколько разных типов). Более того, одному объекту можно присвоить сразу несколько значений одного свойства - в итоге классификация получается очень гибкой.
+<p>Механизм категорий устроен иначе: это обычный набор признаков (описываемых строковыми величинами). Значение в этом случае может принимать только булевский тип: объект или входит в данную категорию, или не входит.
+<p>Чтобы не возникало путаницы в случае больших и &quot;развесистых&quot; классификаторов, каждому свойству и каждой категории можно определить область действия: скажем, свойство А действительно только для справочников вида X и Y, а категория Б может применяться только для документов и справочников типа Z. Такой подход упрощает работу с классификатором - при вводе свойств и признаков конкретного объекта пользователю будут предложены только те варианты, которые назначены объектам данного типа.
+<p>При помощи этой системы можно создавать сколь угодно сложные конструкции. Например, можно описать такую ситуацию: Северо-Западный регион, крупный промышленный город, контрагент Иванов, имеет обыкновение задерживать платежи, рекламу и специальные предложения обычно игнорирует, а вот новогодние скидки на него действуют, и т. д. и т. п.
+<p>Гибкая система классифицирования, разумеется, ценна не сама по себе, хотя она и может работать источником справочной информации. Главная цель - в ином. Свойства и категории можно (и нужно) использовать при получении аналитических отчетов, в любом отчете можно задать фильтры и отборы по значениям свойств и вхождению объектов в ту или иную категорию. Одно дело - отчет по объему продаж за период, и совсем другое - тот же отчет, но разбитый, к примеру, по регионам. Или возьмем сравнение прибыли, полученной от разовых клиентов, с прибылью, полученной от клиентов давних и постоянных - да еще и с фильтром по тем сделкам, которые были заключены в рамках специальных маркетинговых акций.
+<p>Немаловажно, что все без исключения отчеты построены на основе одного и того же интерфейсного решения и механизм настройки у всех идентичный. Научившись работать с одним аналитическим отчетом, пользователь разом осваивает их все - это позволяет тратить время на изучение данных, а не интерфейса.
+<h4>Визуальное представление данных </h4>
+<p>Любимым аналитическим инструментом всех известных мне пользователей был и остается пакет Microsoft Excel. При этом из ста пользователей лишь единицы представляют себе более 90% возможностей пакета, и обратное соотношение тоже верно (обычно говорят о законе 10/90, но здесь действует скорее закон 1/90). Популярность Excel объясняется не способностью считать распределение по Гауссу и наличием встроенного VBA. Дело в другом: современные электронные таблицы позволяют представить данные в наиболее удобной для восприятия форме, причем сделать это быстро и просто. Редкий программист, занимающийся учетными системами, не слышал просьб типа &quot;пожалуйста, слейте нам это в табличный файл, а дальше мы уже сами&quot;.
+<p>Для вывода данных (печатные формы, отчеты, вообще любая выводимая информация) в V8 используется собственный механизм табличных документов. Внешне табличный документ V8 выглядит, простите за тавтологию, как обычный лист электронной таблицы, но есть и ряд существенных отличий: в ячейках не поддерживается вычисление формул, не предусмотрены и операции типа &quot;заполнить&quot;, &quot;заполнить прогрессией&quot; и т. п. Механизм таблиц V8 интегрирован в систему, и данные в таблицу поставляются &quot;изнутри&quot; (т. е. системой, а не пользователем).
+<p>Но это не отменяет надобности в удобном для пользователя визуальном представлении - и табличный документ V8 снабжен соответствующими возможностями. Во-первых, имеется группирование строк. Казалось бы, мелочь, но эта мелочь кардинально упрощает навигацию по объемным таблицам иерархической структуры (группа/подгруппа/элемент, и для каждого свой числовой показатель). Пример такой группировки показан на рис. 1.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2004/V8_dateanal/ris1.jpg" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Рис. 1. Группирование строк табличного документа.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Во-вторых, имеются диаграммы, которые можно строить буквально за три движения - мы просто выделяем нужную область, нажимаем соответствующую кнопку и указываем область размещения диаграммы. Механизм диаграмм V8 вполне соответствует современным требованиям к приложениям деловой графики - поддерживаются все необходимые типы и виды (гистограммы, круговые, биржевые, графики и т. д.), настраиваемые способы оформления (цвета, рамки, стили), диаграмма масштабируется, и любой ее параметр можно изменить в любой момент времени.
+<p>В-третьих, предусмотрены сводные таблицы, удобный и мощный инструмент анализа. Любую, сколь угодно большую и запутанную таблицу исходных данных можно свернуть в аккуратное подобие многомерного кубика Рубика - сторонами служат измерения (они же группировки), а на их &quot;пересечении&quot; располагаются кубики-значения. Дальше уже пользователь волен &quot;крутить&quot; этот кубик, как ему угодно: таблица сворачивается по измерениям (которые прямо в процессе можно добавлять, убирать и перетаскивать по осям координат), и при этом подсчитываются все перекрестные итоги, обновляемые при изменении структуры таблицы. На рис. 2 можно увидеть пример сводной таблицы V8 (распределение персонала согласно штатному расписанию).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2004/V8_dateanal/ris2.jpg" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Рис. 2. Сводная таблица V8.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Универсальный конструктор отчетов </h4>
+<p>Практика показывает, что предусмотренных в системе видов аналитической отчетности никогда не хватает. Находятся пользователи, которым нужно нечто, о чем разработчики не могли и помыслить. В этой ситуации у пользователя обычно есть два пути: либо заказать нужный функционал у разработчика (как вариант - потребовать, если разработчик входит в штат предприятия), либо собирать нужную информацию из нескольких других отчетов, используя в качестве инструмента интеграции все тот же пакет Excel.
+<p>V8 предлагает пользователю третий путь: сконструировать нужный отчет самостоятельно. Для этого используется инструмент под названием &quot;Консоль отчетов&quot; (рис. 3). Консоль основана на двух принципах. Во-первых, любые данные из учетной системы можно извлечь посредством запроса; во-вторых, любые данные, извлеченные из информационной системы посредством запроса, можно представить в удобной для пользователя форме.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2004/V8_dateanal/ris3.jpg" alt=Fig.3></td></tr>
+<tr><td valign="bottom">Рис. 3. Визуальное конструирование запроса.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Процесс работы с консолью выглядит следующим образом. Пользователь создает новый отчет, присваивает ему какое-то осмысленное имя. Далее самая сложная часть - необходимо написать запрос. Опытные пользователи могут писать запрос непосредственно в консоли, но для этого нужно в совершенстве знать язык запросов и разбираться в структуре метаданных конфигурации - для среднестатистического пользователя это нереально. Поэтому предусмотрен визуальный интерфейс, в котором пользователь задает все необходимые параметры - из каких таблиц и полей выбирать данные, как их связывать, группировать и фильтровать.
+<p>Когда запрос создан, остается только определить параметры отчета - какие-то дополнительные условия отбора, порядок следования полей, порядок сортировки и т. д. Теперь остается только выполнить запрос и получить результат в любом из трех видов - простая таблица, диаграмма или сводная таблица.
+<p>Освоив возможности конструктора запросов и сводной таблицы, можно создать достаточно сложный аналитический отчет буквально за считанные минуты. Результаты выполненного запроса показаны на рис. 4 (движение денежных средств компании по датам в разрезе структурных единиц). Конструирование такого отчета у опытного пользователя займет минут пять.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2004/V8_dateanal/ris4.jpg" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Выполнение запроса в консоли.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В числе явных достоинств консоли отчетов можно отметить следующие. Во-первых, V8 поддерживает русскую нотацию - идентификаторы объектов и свойств, операторы языка могут быть написаны кириллицей (и фирма &quot;1С&quot; настоятельно рекомендует пользоваться именно русской нотацией). Пользователи, не владеющие английским, легко смогут разобраться в материале.
+<p>Во-вторых, результат работы мастера запросов - это текст запроса. Отчет, таким образом, представляет собой обычный текстовый файл, который можно перенести в другую базу данных и обработать в имеющейся там консоли.
+<p>В-третьих, пользователь может сохранить в консоли неограниченное количество своих отчетов, разбив их на любое количество именованных групп. И наконец, отчеты можно добавлять копированием - существующий отчет копируется, в него вносятся какие-то изменения, и получается новый отчет, что очень удобно для выполнения разовых задач, имеющих небольшие различия.
+<p>По сути, &quot;Консоль отчетов&quot; - это встроенный клиент для быстрого извлечения и визуализации любой информации, хранящейся в информационной базе. Инструмент получился настолько удачным, что программиста V8 никакими силами невозможно заставить писать для пользователя какой-то дополнительный отчет: у пользователя уже все есть! Заметим в скобках, что при работе с предыдущей версией пакета &quot;1С:Предприятие 7.7&quot; эти задачи отнимали едва ли не половину рабочего времени. В совсем уж пиковом случае программист сам запустит &quot;Консоль&quot;, отладит там нужный запрос (благодаря встроенным механизмам проверки и отладки делается это за считанные минуты), а текст запроса вышлет пользователю. Функции настройки (фильтры, группировки, сортировки) и визуализации отчета (например, drill-down, механизм &quot;расшифровки&quot;) описывать и отлаживать не нужно, они предоставляются системой в готовом виде.
+<h3>Возможности для программиста </h3>
+<p>Не стоит забывать - все, что находится в распоряжении пользователя, было написано программистом. V8 - это вполне современная среда разработки, она предоставляет широкие возможности создателям программного обеспечения, ориентированного на задачи учета и управления. Описание этих возможностей займет не один том, и даже простое их перечисление выйдет далеко за рамки журнальной статьи. Поэтому ограничимся описанием только нескольких механизмов, имеющих непосредственное отношение к рассматриваемой теме.
+<p>Возможно, многие удивятся, но описанный выше универсальный конструктор отчетов не является частью платформы (&quot;движка&quot;) V8, а написан на встроенном языке и представляет собой прикладной объект. Как он выглядит &quot;с той стороны&quot;, можно увидеть из рис. 5.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2004/V8_dateanal/ris5.jpg" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Консоль отчетов со стороны среды разработки.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Создатели V8 сделали все, чтобы максимально упростить рутинные операции и позволить разработчику сосредоточиться на проектировании и генерации идей, не вдаваясь в детальное описание поведения каждого конкретного элемента. Для этого в платформе существуют &quot;низкоуровневые&quot; объекты, которые и берут на себя всю черновую работу - в частности, в процессе создания аналитической отчетности.
+<p>Каким бы продвинутым ни был пользователь и как бы хорошо он ни умел пользоваться конструкторами, необходимость в разработке дополнительных отчетов все равно будет возникать. Иногда требуются сложные расчеты, иногда вывод информации сопряжен с ее модификацией (допустим, когда отчет находит все документы с неким отклонением, разумно предусмотреть в нем функцию автоматического исправления), - причин может быть много, и программист в любом случае без работы не останется.
+<p>V8 предлагает разработчику готовые блоки практически для любой типовой задачи: все перечисленные выше объекты (таблица, сводная таблица, диаграмма) поставляются уже готовыми, и их нужно просто расположить в нужном месте, подключить к нужным источникам данных и обработчикам событий, а дальше они уже будут &quot;знать&quot;, как себя вести в той или иной ситуации.
+<p>Наиболее же интересен, с моей точки зрения, объект &quot;ПостроительОтчетов&quot;. В процессе создания отчета обычно требуется написать и отладить запрос к информационной базе, написать разбор результатов, их форматирование и вывод в табличную форму. Построитель отчетов позволяет одним махом избавиться от всей этой рутины, поскольку он сам умеет строить отчеты. От программиста требуется только написать (или создать конструктором) собственно запрос. Вот как выглядит самый простой случай использования построителя:
+<p>
+<pre>Построитель = Новый ПостроительОтчета(ТекстМоегоЗапроса);
+Построитель.Вывести();</pre>
+<p>
+<p>И все. Построитель сам создаст запрос, сам его выполнит, сам создаст табличный документ и сам выведет в него результаты (ориентируясь на структуру запроса).
+<p>Но это простейший случай. Общие же возможности Построителя отчетов очень и очень широки. Ему можно указать, какие именно данные из таблицы запроса должны попасть в отчет, в какой последовательности, в каком виде и формате, какой макет табличного документа нужно брать за основу - словом, любые аспекты его деятельности (при необходимости) поддаются ручному управлению из кода. &quot;Консоль отчетов&quot; (кстати, реализованная именно на Построителе отчетов) занимает менее тысячи строк кода.
+<p>Этот пример - неплохая иллюстрация к идеологии разработки, принятой в V8: ручное 
+  управление и сложный код требуются только там, где необходимо решать какие-то 
+  сложные, нетривиальные задачи. В относительно же простых, типовых случаях можно 
+  даже не говорить о программировании, а ограничиться настройкой. Конечно, для 
+  общесистемных приложений такой подход не годится, но в нише, которую занимает 
+  V8 (&quot;экономическое&quot; ПО), он наглядно доказал свою эффективность. 
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td bgcolor="#CCFFFF">
+      <h4>Производительность и масштабируемость при построении отчетов </h4>
+      <p>Помимо расширения функционального набора, разработчики новой версии &quot;1С:Предприятие 
+        8.0&quot; добивались существенного улучшения производительности и масштабирования 
+        прикладных решений по сравнению с версией 7.7. Осенью 2003 г. специалисты 
+        фирмы &quot;1С&quot; провели комплексное исследование возможностей системы на примере 
+        типовых решений &quot;Торговля и склад&quot; (для &quot;1С:Предприятия 7.7&quot;) и &quot;Управление 
+        торговлей&quot; (для &quot;1C:Предприятия 8.0&quot;). 
+      <p>Один из разделов тестирования был посвящен задачам построения отчетов, 
+        при этом в качестве основных были определены следующие цели: 
+      <ul>
+        <li>сравнение производительности двух решений при построении отчетов по 
+          остаткам и движениям регистра накопления; 
+        <li>оценка влияния различных факторов на производительность при построении 
+          отчета.
+      </ul>
+      <p>В качестве тестовых примеров использовались отчеты &quot;Ведомость по остаткам 
+        ТМЦ&quot; (версия 7.7) и &quot;Ведомость по товарам на складах&quot; (версия 8.0). Первая 
+        серия тестов была посвящена анализу зависимости времени построения отчета 
+        от величины периода при отборе данных по 10 элементам номенклатуры. Результаты, 
+        приведенные на рис. 6, показывают значительное увеличение скорости построения 
+        отчетов в новой версии. Кроме того, видно, что при увеличении продолжительности 
+        анализируемого периода от недели до года время выполнения отчета в версии 
+        7.7 увеличилось в 3,75 раза, тогда как в версии 8.0 - всего в 1,36 раза. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2004/V8_dateanal/ris6.gif" alt=Fig.6></td></tr>
+<tr><td valign="bottom">Рис. 6. Влияние продолжительности анализируемого периода на время построения отчета. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+      <p>На следующем графике (рис. 7) представлены результаты тестов, оценивающих 
+        влияние количества элементов номенклатуры в установленном отборе на время 
+        выполнения отчета (количество записей в регистрах накопления составило 
+        более 13 млн). И в этом случае версия 8.0 показала более высокую скорость 
+        построения отчета. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2004/V8_dateanal/ris7.gif" alt=Fig.7></td></tr>
+<tr><td valign="bottom">Рис. 7. Влияние числа элементов номенклатуры отбора на время построения отчета. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+      <p>Полный отчет о тестировании клиент-серверной версии &quot;1С:Предприятие 8.0&quot; 
+        для оценки производительности и масштабируемости находится по адресу <a href="http://v8.1c.ru/tests">http://v8.1c.ru/tests</a>. 
+    </td>
+  </tr>
+</table>
+<h3>Итоги знакомства </h3>
+<p>Итак, пакет &quot;1С: Предприятие 8.0&quot; содержит ряд средств, позволяющих не только 
+  получать &quot;готовые&quot; данные из информационной системы, но и заниматься их анализом 
+  и обработкой. По сравнению с предыдущей версией системы, &quot;1С:Предприятие 7.7&quot;, 
+  состав и возможности этих средств значительно расширены. Конечно, речь не идет 
+  о воспроизведении в системе всех возможностей узкоспециализированных &quot;аналитических&quot; 
+  программных продуктов - намного важнее то, что в V8 средства &quot;извлечения&quot; и 
+  анализа данных интегрированы в мощный программный комплекс, оптимизированный 
+  для решения задач учета и управления информационными потоками. При этом значительная 
+  часть задач анализа бизнес-информации может быть быстро и успешно решена встроенными 
+  средствами, непосредственно в процессе накопления данных, без приобретения сторонних 
+  аналитических пакетов и без трудозатрат на их стыковку с базовой информационной 
+  системой предприятия. 
+<p>Аналитический инструментарий V8 дает возможность пользователю не только самостоятельно 
+  конструировать и выполнять запросы к информационной базе, но и представлять 
+  результаты в удобном для дальнейшего рассмотрения виде. А встроенные в платформу 
+  специализированные объекты позволяют программисту избавиться от рутинных работ 
+  и высвободить время для решения более серьезных проблем. 
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6668.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Аналитические возможности «1С:Предприятие 8.0»
+</a><br><a href="detail.php@ID=6668.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Никита Зайцев,
+  менеджер проектов компании Saint-Petersburg.com
+  wild@hare.ru
+От учета - к анализу и управлению 
+Любая автоматизированная&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6668.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6668&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='03387ed8dfc5750fb7f6e44f17aaca00'><img src='../bitrix/tools/captcha.php@captcha_code=03387ed8dfc5750fb7f6e44f17aaca00' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

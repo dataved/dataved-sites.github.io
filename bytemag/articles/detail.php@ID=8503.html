@@ -1,0 +1,409 @@
+<HTML>
+<HEAD>
+<title>Архитектура Enterprise X-Architecture
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Андрей Борзенко В нынешней сложной экономической обстановке менеджеры по информатизации сталкиваются с множеством проблем, связанных с развитием ИТ-среды. Финансирование информационных технологий замораживается или урезается, управлять инфраструктурой" />
+<meta name="description" content="Андрей Борзенко В нынешней сложной экономической обстановке менеджеры по информатизации сталкиваются с множеством проблем, связанных с развитием ИТ-среды. Финансирование информационных технологий замораживается или урезается, управлять инфраструктурой" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398083056','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8503' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8503&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8503"].SHOW_IMAGE.value="N"; document.forms["PrintForm8503"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8503"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8503"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8503);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8503.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8503.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8503);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11561.html'>№7 (48), июль 2002</a><h1>Архитектура Enterprise X-Architecture
+</h1>20.07.2002<p></p><DIV class='article-text'><p><i>Андрей Борзенко</i> 
+<p>В нынешней сложной экономической обстановке менеджеры по информатизации сталкиваются с множеством проблем, связанных с развитием ИТ-среды. Финансирование информационных технологий замораживается или урезается, управлять инфраструктурой становится сложнее, при том, что число квалифицированных администраторов весьма ограниченно. В то же время руководство компаний нацеливает сотрудников ИТ-подразделений на более активное проникновение в сферу электронного бизнеса с целью использовать потенциал Интернета, беспроводных коммуникаций и электронной торговли. Возможно, сервер IBM eServer xSeries 440, базирующийся на технологии Enterprise X-Architecture (рис. 1), может стать весьма эффективным решением этой проблемы.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2002/summit/ris1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Архитектура Enterprise X-Architecture.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>На выставке CeBIT&#39;2002 корпорация IBM (http://www.ibm.com) впервые представила модель xSeries 440, выполненную на базе самых современных процессоров Intel (рис. 2). Новый сервер, ранее носивший кодовое название Vigil, существует в восьми-, 12- и 16-процессорных конфигурациях. Это первый сервер, в котором IBM применила набор микросхем собственной разработки - до сих пор в выпускавшихся корпорацией серверах Intel-архитектуры использовались чипсеты других компаний, в основном, конечно, Intel и ServerWorks (подразделение Broadcom).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2002/summit/ris2.jpg" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Сервер eServer xSeries 440.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Над созданием своего набора микросхем (кодовое название Summit) IBM трудилась почти три года. Одна из существенных особенностей этой архитектуры - объединение процессоров в группы по четыре. Между группами организованы высокоскоростные коммуникации. Из четырехпроцессорных блоков, в свою очередь, формируются 8-, 12- и 16-процессорные системы.
+<p>По мнению разработчиков, революционная технология и дизайн серверов этого семейства представляют собой новый этап в производстве стандартных высокопроизводительных вычислительных систем, сближая стандартные серверы с системами для корпоративных центров. Сервер xSeries 440 - масштабируемый корпоративный узел на основе технологии Enterprise X-Architecture, выполненный в едином стоечном корпусе высотой 4U и отличающийся высокой степенью масштабируемости, готовности, производительности и управляемости.
+<p>Гибкое разбиение xSeries 440 на разделы с разнообразными опциями обеспечивает масштабирование SMP-системы с числом процессоров до 16. Этот сервер стал первой системой IBM, реализованной на основе модульного подхода, что позволяет применять принцип &quot;оплата по мере развития&quot;: заказчики могут приобретать оборудование в расчете на реально требуемую производительность, не вкладывая средства &quot;на вырост&quot;. Такой тип масштабирования получил название XpandOnDemand (расширение по требованию). Для руководителей компаний масштабируемость xSeries 440 может существенно облегчить экономное планирование средств инвестирования в ИТ-технологии.
+<p>Руководство IBM подчеркивает значимость нового сервера в более чем 50-летней истории разработок и взаимодействия с корпоративными клиентами в подразделении IBM Server Group. Дело в том, что серверы семейства xSeries 440 предоставляют возможности, основанные на технологиях мэйнфреймов, всего лишь за часть стоимости настоящего мэйнфрейма. Архитектура Enterprise X-Architecture, построенная на стандартных процессорах, памяти и устройствах ввода-вывода, оптимально сочетает все эти технологии. Высокая готовность (OnForever, т. е. &quot;всегда в работе&quot;) в xSeries 440 достигается за счет применения отказоустойчивых подсистем и компонентов, связанных воедино; общие системы управления упрощают техническое обслуживание ИТ-инфраструктуры и высокую производительность труда пользователей. Технологии Active PCI-X и Active Memory повышают степень готовности систем, не только позволяя добавлять и заменять в горячем режиме адаптеры стандарта PCI-X, но и поддерживая горячую замену, зеркалирование и защиту памяти (Memory ProteXion). Будучи частью проекта eLiza, система xSeries 440 представляет в распоряжение пользователей новые инструменты повышения надежности на основе самоконфигурирования и &quot;самоисцеления&quot;. Инструментарий управления сервером, поставляемый с xSeries 440, упрощает ИТ-администраторам поддержку и мониторинг состояния серверов ответственных приложений, помогает им управлять инфраструктурой более рационально.
+<p>Высокая производительность xSeries 440 достигается не за счет применения сверхбыстродействующих компонентов и форсирования их режимов, а благодаря оптимизации системы на основе новаторских подходов. Одним из примеров может служить кэш-память четвертого уровня XceL4, ускоряющая работу сервера.
+<p>Машина xSeries 440, ориентированная в первую очередь на предприятия электронного бизнеса, представляет собой платформу для решения двух типов задач: объединения серверов и обработки приложений для крупных систем. Система может использоваться как единый мощный сервер, обрабатывающий, например, большие базы данных, или как средство консолидации множества небольших &quot;виртуальных&quot; серверов (скажем, нескольких серверов электронной почты) с целью снижения общих затрат. Сервер xSeries 440 работает в единой конфигурации SMP, он рассчитан на поддержку до четырех логических разделов или до 64 виртуальных разделов.
+<h3>Набор микросхем IBM XA-32 </h3>
+<p>Сердце новой системы - набор микросхем XA-32, который отличается прежде всего усовершенствованной логикой ядра. Именно она определяет взаимодействие различных компонентов системы, в частности, микропроцессоров, системного кэша, оперативной памяти и ресурсов ввода-вывода. XA-32 позволяет реализовать в серверах массовой архитектуры такие важные преимущества, как модульная конструкция узлов системы, логические разделы, высокопроизводительные кластеры и поддержка высокоскоростного удаленного ввода-вывода PCI-X.
+<p>Новый набор микросхем разработан в подразделении IBM Microelectronics Division (Остин, шт. Техас) и выпускается по самой современной медной технологии. Набор включает контроллер памяти (один контроллер обслуживает четыре процессора и располагается в пределах модуля SMP Expansion Module), контроллер процессора и кэш-памяти, контроллеры ввода-вывода (имеются два контроллера на одно шасси и плата ввода-вывода, которая управляет как шиной PCI-X, так и подсистемой Remote I/O).
+<h3>Кэш-память XceL4 Server Accelerator </h3>
+<p>Кэш-память XceL4 Server Accelerator ускоряет взаимодействие между процессорами, основной памятью и устройствами ввода-вывода. Каждый модуль SMP Expansion Module содержит XceL4 размером 32 Мбайт. XceL4 позволяет устранить узкие места, возникающие из-за того, что в конструкции сервера xSeries имеются 440 высокоскоростных компонентов, которые могут вызывать конфликты в памяти. В некоторых конфигурациях сервера xSeries 440 эта кэш-память позволяет повысить общее быстродействие системы на 20%. При переходе от четырех процессоров к восьми (как в случае добавления второго модуля SMP Expansion Module к базовому четырехпроцессорному блоку, так и при соединении в единую систему двух четырехпроцессорных серверов) пользователи выигрывают от добавления дополнительной кэш-памяти XceL4 объемом 32 Мбайт. В 16-процессорной конфигурации, также безотносительно к ее типу (2x8 или 4x4), выигрыш в быстродействии получается от использования буферной памяти XceL4 объемом 128 Мбайт.
+<h3>Подсистема памяти </h3>
+<p>Подсистема памяти xSeries 440 включает 16 разъемов для модулей DIMM на каждый блок CEC, разъемы сгруппированы в два банка. В каждом блоке CEC имеется по два порта памяти (по одному на каждый банк) и по одному контроллеру памяти. Поскольку в сервере xSeries 440 используется четырехкратное чередование адресов (four-way interleaving), необходимо устанавливать по четыре модуля памяти DIMM одинакового объема. В стандартной поставке предусмотрена установка восьми модулей DIMM (все по 512 Мбайт, что дает итоговый объем 2 Гбайт). Можно использовать модули DIMM объемом 512 Мбайт и 1 Гбайт, общий объем системной памяти в случае модулей DIMM 1 Гбайт и двух установленных блоков CEC составляет 32 Гбайт.
+<p>Одно из преимуществ xSeries 440 перед конкурирующими системами состоит в использовании памяти DDR 200 МГц, что обеспечивает более широкую полосу пропускания при использовании недорогих и широко доступных стандартных модулей памяти ECC SDRAM.
+<h3>Порты расширения SMP Expansion </h3>
+<p>Новое решение IBM позволяет создавать корпоративные масштабируемые вычислительные узлы на основе серверов высокой плотности размещения в стойке. Эти узлы могут составляться из четырехпроцессорных SMP-систем с процессорами, памятью и устройствами ввода-вывода, а в дальнейшем модернизироваться. Модули расширения SMP Expansion Module обеспечивают расширение узлов до уровня восьмипроцессорных SMP-систем, а соединяя с помощью портов SMP Expansion несколько систем, работающих под управлением одной ОС, можно строить и SMP-системы, имеющие вплоть до 16 процессоров.
+<p>Порты масштабирования SMP Expansion разработаны IBM для стыковки нескольких шасси серверов xSeries 440 и построения более крупной SMP-системы. Каждый модуль SMP Expansion Module состоит из трех портов расширения. Эти порты представляют собой двунаправленную высокоскоростную магистраль с полосой 3,2 Гбайт/с. В базовой четырехпроцессорной системе они могут использоваться для стыковки с другими xSeries 440 и создания высокопроизводительных кластеров или систем симметричной мультипроцессорной обработки на основе нескольких шасси. Но при добавлении второго модуля SMP Expansion Module эти порты становятся основным средством коммуникации между процессорами в верхнем блоке CEC и процессорами в нижнем блоке.
+<p>Соединяя порты верхнего и нижнего блоков, xSeries 440 позволяет построить восьмипроцессорную SMP-систему, а также обеспечить оптимальную производительность для выравнивания нагрузки. Третий порт используется только при конфигурировании четырех- или восьмипроцессорного узла в 16-процессорную SMP-систему.
+<h3>Новый модульный дизайн </h3>
+<p>В xSeries 440 применен новый конструктив, повышающий плотность размещения оборудования в стойке и предусматривающий модернизацию путем замены модулей. Шасси xSeries 440 обеспечивает быстрый и простой доступ без помощи инструментов к заменяемым в горячем режиме блокам питания, вентиляторам, устройствам ввода-вывода, модулям SMP Expansion Module и прочему оборудованию. При расширении конфигурации до восьми процессоров в шасси высотой 4U сервер обеспечивает самую высокую плотность для 8-процессорных стандартных серверов, при этом система вентиляции хорошо продумана. xSeries 440 устанавливается только в стойку IBM Netfinity Enterprise или в стандартную стойку Netfinity с комплектом расширения.
+<h3>Технология Active PCI-X </h3>
+<p>Об остроте проблемы недопущения простоев сказано уже много. Простои как таковые можно разделить на две категории: незапланированные (непредвиденные аварии: скажем, программные сбои, зависания и отказы оборудования) и запланированные (отключение системы для планового техобслуживания или модернизации). Один из способов сведения к минимуму как плановых, так и неплановых простоев - применение слотов PCI-X с возможностью горячего подключения и горячей замены. Использование этой технологии, известной как Active PCI-X, дает два важных преимущества. Во-первых, вышедшие из строя адаптеры PCI-X или PCI можно заменять, не прерывая работу системы. Во-вторых, добавление адаптеров PCI-X для наращивания мощности или производительности (например, установка нового сегмента Ethernet или нового адаптера RAID и подключение к нему набора жестких дисков) не требует остановки сервера и прекращения обслуживания пользователей.
+<p>В семействе xSeries сервер xSeries 440 - второй пример использования нового стандарта PCI-X (первым был xSeries 360, появившийся в ноябре 2001 г.). Новый сервер имеет шесть полноразмерных 64-разрядных разъемов Active PCI-X, поддерживающих замену и добавление плат и адаптеров в горячем режиме, при работающей ОС. Четыре шины ввода-вывода xSeries 440 позволяют использовать два адаптера для частоты 133 МГц (каждый разъем имеет свою собственную шину), две платы для частоты 100 МГц (соответствующие разъемы совместно используют одну шину) и две платы для шины 66 МГц (эти разъемы также разделяют одну шину). Все гнезда обеспечивают напряжение питания адаптеров только 3,3 В.
+<h3>Технология Active Memory </h3>
+<p>В xSeries 440 - впервые в классе стандартных серверов - обеспечивается возможность зеркалирования памяти (рис. 3), повышающая уровень готовности для решения ответственных задач в корпоративной среде. Технология Active Memory позволяет зеркалировать физическую память с использованием двух портов. Все системы xSeries 440 поставляются с отключенной опцией зеркалирования памяти, для включения механизма Active Memory необходимо изменить установки в BIOS. После изменения параметров BIOS системе требуется перезагрузка, после чего физическая память, доступная ОС, уменьшится вдвое, а все данные будут одновременно записываться в оба банка памяти.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2002/summit/ris3.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Зеркалирование памяти.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Необходимо внимательно проследить за тем, чтобы в каждый из резервированных банков были установлены равные объемы памяти - для гарантированного зеркалирования всех данных. Хотя частичное зеркалирование и поддерживается, резервироваться будет только часть памяти, равная объему памяти во втором банке. Например, если в первом банке установлено 4 Гбайт памяти (четыре модуля DIMM по 1 Гбайт), а во втором - всего 2 Гбайт (четыре DIMM по 512 Мбайт), то лишь первые 2 Гбайт памяти первого банка могут быть зеркалированы во второй. В отличие от технологии RAID в памяти (требующей использования дополнительных контроллеров резервирования памяти), технология Active Memory не оказывает негативного воздействия на производительность, связанного с разделением данных между несколькими контроллерами, и не влечет за собой дополнительного удорожания системы из-за применения нескольких контроллеров памяти.
+<p>Основное преимущество зеркалирования памяти состоит в том, что в случае отказа модуля DIMM система останется работоспособной, позволит администратору запланировать техническое обслуживание на удобное время и не приведет к возникновению непредусмотренных простоев. Второе преимущество зеркалирования памяти состоит в возможности установки новых модулей DIMM без отключения системы. Записывая данные в резервные порты, сервер xSeries 440 обеспечивает горячую замену памяти в любом из банков. Поскольку эта функция встроена в контроллер памяти, зеркалирование не зависит от действий ОС. Зеркалирование памяти работает на системах с ОС Linux так же легко, как и в среде Microsoft Windows. В скором времени возможность зеркалирования памяти будет обеспечена для заказчиков в виде модернизации BIOS.
+<p>Чтобы задействовать этот механизм, пользователь включает соответствующую опцию в BIOS и перезагружает систему. При обнаружении неисправного модуля DIMM этот модуль регистрируется подсистемой Light Path, а контроллер памяти переходит к считыванию из другого порта. Пользователь получает уведомление сервисного процессора или визуально определяет неисправность по состоянию светодиодов системы Light Path. Далее необходимо открыть верхнюю крышку и локализовать модуль с горящим светодиодом, указывающим на сбойный компонент. Убедившись, что светодиод, разрешающий горячую замену памяти, светится, пользователь открывает дверцу доступа к памяти, где расположен неисправный модуль DIMM, - открывание дверцы посылает сигнал выключения порта, при этом светодиоды питания порта и горячей замены памяти гаснут. Далее надо удалить неисправный модуль DIMM, установить новый и закрыть дверцу доступа. Закрытие дверцы посылает сигнал включения порта - загорается соответствующий светодиод питания, выполняются базовые тесты памяти, гаснет светодиод, указывавший на наличие ошибки в памяти DIMM. Данные копируются в этот порт со скоростью 1 Гбайт за 6 с. Светодиод разрешения горячей замены памяти вспыхивает во время тестирования и копирования данных. После завершения копирования светодиод Memory Hot Plug Enable будет гореть постоянно, а сервер xSeries 440 возвратится в режим зеркалирования.
+<h3>Технология Chipkill </h3>
+<p>Архитектура Enterprise X-Architecture знаменует собой третье поколение устройств, использующих технологию Chipkill. В данном случае эта технология интегрируется в наборе микросхем XA-32 - теперь пользователям больше не требуется приобретать дорогостоящие модули Chipkill DIMM. Поскольку алгоритм Chipkill теперь стал частью функциональности контроллера памяти, все его уникальные преимущества доступны при работе со стандартными готовыми модулями памяти ECC SDRAM. Применение нового, более надежного алгоритма не изменило самого принципа технологии Chipkill, предусматривающей коррекцию нескольких однобитовых ошибок и предотвращение отказов памяти.
+<p>Как известно, технология Chipkill разработана для повышения надежности операций с оперативной памятью. Это очень важно, если учесть стремительный рост емкости используемых модулей памяти. У DIMM-модуля объемом 1 Гбайт количество логических элементов в четыре раза выше, чем у модуля емкостью 128 Мбайт, - соответственно вчетверо увеличивается и вероятность ошибки. Технология Chipkill решает эти проблемы - модули на ее основе на ходу исправляют ошибки памяти, которые могли бы привести к краху системы.
+<p>В системе xSeries 440, целиком и полностью построенной на принципах X-Architecture, применена недорогая реализация технологии Chipkill - стоимость снижена благодаря использованию модулей памяти Chipkill с удвоенной скоростью передачи данных (DDR, Double Data Rate). Поскольку аппаратный контроллер Chipkill-памяти в данном случае установлен в системе, он обеспечивает коррекцию ошибок и для стандартных модулей DIMM. Это один из примеров того, как технология IBM помогает снизить стоимость ИТ-решений.
+<p>Оперативная память IBM Chipkill ECC начинает оправдывать себя, когда в модулях памяти на сервере в течение небольшого промежутка времени происходит больше ошибок, чем может &quot;отловить&quot; стандартная технология памяти. Механизм Chipkill в среднем в 100 раз более надежен, чем технология ECC. При возникновении ошибки памяти Chipkill автоматически отключает неисправный модуль, не прекращая работу сервера.
+<h3>Memory ProteXion </h3>
+<p>Технология Memory ProteXion - еще одно средство повышения надежности памяти. Она основана на использовании избыточных битов в пакете данных для обеспечения резервирования на случай отказа модуля DIMM (рис. 4). Подобно Chipkill, данная технология интегрирована в контроллер памяти набора микросхем XA-32, поэтому ее преимущества оказываются доступными и при использовании стандартной памяти ECC SDRAM.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2002/summit/ris4.gif" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Технология Memory ProteXion.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Особенности структуры потока данных приводят к тому, что при передаче конкретного пакета не все биты оказываются задействованы. Во многих современных решениях при использовании пакетов, состоящих из 72 битов, 64 бита приходятся на данные, 6 бит - на ECC. Оставшиеся 2 бита в стандартных серверах обычно не используются. Инженеры IBM нашли достойное применение этим битам - они служат для резервирования передачи данных, подобно технологии горячего резерва в массиве RAID. В случае обнаружения отказа микросхемы модуля DIMM контроллер памяти может перенаправить данные в обход неисправной микросхемы, используя запасные биты. Контроллер выполняет эту процедуру автоматически без выдачи сигнала тревоги соответствующим подсистемам. Предупреждение для инициализации замены этого модуля DIMM выдается только после второго отказа.
+<p>Технологии Active Memory, Chipkill и Memory ProteXion обеспечивают несколько уровней избыточности для подсистемы памяти, чего никогда ранее не встречалось в стандартных серверах на базе процессоров Intel. Соединение этих технологий в сервере xSeries 440 придает высочайшую надежность подсистеме памяти.
+<h3>Масштабирование по мере необходимости </h3>
+<p>Технология XpandOnDemand помогает заказчикам справляться с возрастающими требованиями к серверам по мере расширения бизнеса. XpandOnDemand предусматривает наращивание мощности путем простого масштабирования - компании могут приобрести для начала четырехпроцессорный блок и затем наращивать мощность блоками по четыре процессора вплоть до полной 16-процессорной конфигурации.
+<h3>Удаленный ввод-вывод </h3>
+<p>Технология удаленного ввода-вывода (Remote input-output) позволяет регулировать количество подключаемых периферийных устройств. Хотелось бы особо подчеркнуть важность этой технологии. Потребность в новых слотах PCI или PCI-X обычно бывает вызвана необходимостью расширения системы или повышения производительности. Много дополнительных слотов PCI-X, как правило, требуется в высокопроизводительных системах и кластерах, а также в средах SAN, где наличие нескольких резервных адаптеров для каждой функции - это необходимое условие высокой доступности системы. Дополнительные слоты PCI-X также требуются в случаях, когда заказчик планирует установить адаптеры SCSI RAID, волоконно-оптические адаптеры PCI с резервированием в средах SAN, несколько адаптеров Ethernet (часто с резервированием), высокоскоростные адаптеры для организации обмена данными в составе кластера (часто с резервированием и обеспечением отказоустойчивости) и интерфейсных адаптеров InfiniBand следующего поколения. Все подобные системы могут быстро израсходовать лимит слотов PCI-X, предусмотренных в типичном компактном сервере, оптимизированном для монтажа в стойку. Технология удаленного ввода-вывода позволяет разместить двенадцать слотов для адаптеров PCI/PCI-X вне сервера, на расстоянии нескольких метров от него, и подключить их к системе через высокоскоростной соединительный порт. Дополнительный модуль расширения IBM RXE-100 представляет собой элегантное и экономичное решение проблемы нехватки слотов PCI-X - с оплатой дополнительных возможностей по мере необходимости. Кроме того, RXE-100 защищает инвестиции заказчика, избавляя его от необходимости приобретать дополнительные мощности сразу же.
+<h3>Логические разделы </h3>
+<p>Система xSeries 440, обладающая возможностями гибкой конфигурации и объединения нескольких шасси, оптимально приспособлена для физического разбиения на разделы на уровне шасси (рис. 5). Каждый физический раздел при этом может иметь собственную копию ОС и сервисный процессор. Это позволяет строить на базе xSeries 440 такие сложные системы высокой готовности, как высокоскоростные кластеры, с использованием портов масштабирования в качестве высокоскоростного межсоединения. Можно выделить все 16 процессоров для одного экземпляра ОС или же разбить их на четыре физических раздела.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2002/summit/ris5.gif" alt=Fig.5></td></tr>
+<tr><td valign="bottom">Рис. 5. Конфигурирование физических разделов.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>ПО VMware ESX Server делает доступными возможности логического выделения разделов для стандартных серверов и позволяет создавать на основе единого физического устройства несколько виртуальных машин, способных работать в качестве независимых и безопасных серверов. VMware представляет собой слой виртуализации, который находится между ОС с прикладными программами и аппаратным обеспечением (рис. 6). Благодаря этому система xSeries 440 превращается в пул логических вычислительных ресурсов, который затем может динамически выделяться для любых ОС или приложений с варьируемой степенью детализации. При работе с VMware ESX Server 16-процессорную систему можно разбить на 64 виртуальных раздела.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2002/summit/ris6.gif" alt=Fig.6></td>
+<td valign="bottom">Рис. 6. Логические разделы.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Данная технология в значительной мере снижает затраты и сложность поддержки таких корпоративных приложений, как Web-серверы, серверы приложений, почтовые серверы и серверы баз данных. Кроме того, поскольку обеспечивается поддержка нескольких как сходных, так и разнородных ОС, системные администраторы могут оптимизировать работу приложения, запуская его на безопасных, выделенных виртуальных машинах. Например, некоторые приложения будут выполняться в среде Windows, а другие - в Linux.
+<p>При использовании VMware все приложения и ОС могут запускаться с одной и той же системы xSeries 440, что позволяет более эффективно загрузить оборудование, повысить надежность в сравнении с использованием большого числа менее надежных одноцелевых серверов.
+<h3>Управление системой </h3>
+<p>Адаптер удаленного администрирования Remote Supervisor Adapter содержит встроенный процессор управления системой и служит важнейшим средством снижения общей стоимости владения. С его помощью можно эффективно управлять расходами и контролировать вложения в информационные технологии. В сочетании с ПО IBM Director этот адаптер дает возможность отслеживать характеристики загруженности системы, планировать наращивание мощности, обнаруживать и устранять слабые звенья производительности.
+<p>Remote Supervisor Adapter имеет собственную ОС, независимую от центрального процессора. Поэтому служебный процессор работает и выдает информацию о состоянии системы (доступную через Web-браузер) даже тогда, когда система оказывается неработоспособной - это помогает свести простои к минимуму. Служебный процессор также управляет диагностической панелью (Light Path Diagnostics). Адаптер удаленного администрирования вставляется в специальный слот и не занимает разъема PCI-X.
+<p>Как известно, чем лучше поставлено управление системами, тем меньше простоев, тем выше уровень удовлетворенности пользователей и ниже расходы, связанные с непредвиденными обстоятельствами.
+<h4>* * * </h4>
+<p>Ни одна из технологий, используемых в xSeries 440, не является новшеством сама по себе - такие решения уже имеются в больших системах IBM. Новшеством данном стало их объединение в сервере на платформе Intel. Руководство IBM полагает, что в сегменте UNIX-серверов xSeries 440 смогут составить достойную конкуренцию продуктам не только Sun Microsystems, но и Unisys, чьи серверы ES7000 используют до 32 процессоров Intel.
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8503.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Архитектура Enterprise X-Architecture
+</a><br><a href="detail.php@ID=8503.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Андрей Борзенко 
+В нынешней сложной экономической обстановке менеджеры по информатизации сталкиваются с множеством проблем, связанных с развитием&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8503.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8503&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='052b46b5917729eb5041671696a52bbf'><img src='../bitrix/tools/captcha.php@captcha_code=052b46b5917729eb5041671696a52bbf' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

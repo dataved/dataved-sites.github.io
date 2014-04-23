@@ -1,0 +1,426 @@
+<HTML>
+<HEAD>
+<title>Технология Stratus Continuous Processing
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Сергей Петраков У сотрудников ИТ-подразделений, отвечающих за эксплуатационную поддержку технических средств, сегодня есть масса возможностей для построения высоконадежных систем - на рынке представлены серверы с высокой избыточностью, кластеры высокой" />
+<meta name="description" content="Сергей Петраков У сотрудников ИТ-подразделений, отвечающих за эксплуатационную поддержку технических средств, сегодня есть масса возможностей для построения высоконадежных систем - на рынке представлены серверы с высокой избыточностью, кластеры высокой" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082832','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8560' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8560&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8560"].SHOW_IMAGE.value="N"; document.forms["PrintForm8560"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8560"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8560"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8560);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8560.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8560.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8560);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11551.html'>№10 (62), октябрь 2003</a><h1>Технология Stratus Continuous Processing
+</h1>10.10.2003<p></p><DIV class='article-text'><p><i>Сергей Петраков</i>
+<p>У сотрудников ИТ-подразделений, отвечающих за эксплуатационную поддержку технических средств, сегодня есть масса возможностей для построения высоконадежных систем - на рынке представлены серверы с высокой избыточностью, кластеры высокой готовности и другие отказоустойчивые решения. Выбор в пользу какого-то одного решения обычно предполагает компромисс между приемлемым уровнем готовности и начальной стоимостью системы, а также затратами времени и усилий на ее внедрение и эксплуатационную поддержку.
+<p>Компания Stratus Technologies (<a href="http://www.stratus.com">http://www.stratus.com</a>) - один из лидеров на рынке отказоустойчивых технологий. Отказоустойчивость в компьютерах Stratus достигается благодаря оригинальному архитектурному решению, при этом немалую роль в непрерывном функционировании компьютерной системы в целом играет политика компании в области обслуживания пользователей. Компьютеры Stratus находят широкое применение в телекоммуникационных, банковских, биржевых и многих других решениях.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2003/stratus/ris1.jpg" alt=Fig.1></td>
+<td valign="bottom">Сервер Stratus ftServer 3300.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h3>Основы архитектуры </h3>
+<p>Для максимально надежной защиты сервера от сбоев требуется комплексное решение, включающее аппаратные средства, ПО и сервис. Системы Stratus ftServer включают в себя функции Continuous Processing - плод двадцатилетнего опыта разработок в области обеспечения непрерывного функционирования наиболее требовательных и ответственных приложений. Все элементы Continuous Processing работают согласованно, не просто сокращая до минимума незапланированные перебои в работе, а практически полностью исключая их. Предотвращение простоев - это ключевое отличие архитектуры систем ftServer от традиционных серверов и кластеров высокой доступности.
+<p>Отметим, что для реализации подобной отказоустойчивости клиенту не требуется вносить никаких изменений в стандартные приложения. Это обеспечивает существенное преимущество по сравнению с кластерами, для которых нужно создавать сценарии переключения при отказе, проводить их тестирование и модифицировать приложения в расчете на кластерную конфигурацию.
+<p>Функции Continuous Processing реализуются в системах ftServer с помощью трех основных элементов - технологии lockstep, ПО failsafe и архитектуры ActiveService (рис. 1).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2003/stratus/ris2.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Основные элементы архитектуры Stratus Continuous Processing.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Технология lockstep использует дублированные отказоустойчивые вычислительные компоненты, которые обрабатывают одни и те же команды в одно и то же время. При сбое компонента его дублер функционирует как активный резервный элемент, продолжающий нормальную работу системы и предотвращающий ее простои. Система также обнаруживает и исправляет неповторяющиеся аппаратные ошибки, которые могут вызвать сбой в работе ПО.
+<p>Программный комплекс failsafe, дополняющий технологию lockstep, предотвращает многие программные ошибки. Благодаря этому машины ftServer обрабатывают большинство ошибок прозрачно для ОС, связующего и прикладного ПО. Для обеспечения непрерывной защиты и целостности данных, находящихся в оперативной памяти, функции управления и диагностики собирают информацию о работе ПО, анализируют ее и сообщают о любых возникших проблемах. Кроме того, в failsafe входят &quot;усиленные&quot; драйверы устройств, которые, как утверждается, значительно повышают надежность работы в среде Windows.
+<p>Комбинация функций ActiveService обеспечивает так называемую встроенную обслуживаемость. Системы Stratus ftServer непрерывно ведут мониторинг своих операций. При обнаружении сбоя сервер корректно локализует его и автоматически инициирует звонок в центр поддержки Stratus.
+<p>Функции удаленной поддержки, реализуемые с помощью адаптера ftServer Access Adapter и глобальной сети ActiveService Network, позволяют сервисным инженерам Stratus диагностировать и решать 95% проблем в онлайновом режиме. При необходимости система автоматически заказывает для себя запасные части, заменяемые в горячем режиме, гарантируется их доставка в течение 24 ч в основные мировые центры. Пользователь может сам легко установить эти компоненты, при этом работа системы ftServer не прерывается. Защищенная утилита ActiveService Manager на базе Web позволяет Stratus совместно с авторизованными производителями быстро разрешать проблемы.
+<h3>Технология lockstep </h3>
+<p>Чтобы исключить единые точки отказа, в семействе ftServer используется дублирование компонентов, причем не только процессоров, дисков и вентиляторов, но и системных плат, памяти, шин и адаптеров ввода-вывода. Это обеспечивает продолжение работы даже в случае неисправности важного компонента. Аппаратные сбои автоматически устраняются системой ftServer без задержки на переключение и без потери данных.
+<p>Функции lockstep гарантируют, что все ошибки (в том числе и неповторяющиеся) будут обнаружены и при сбое модуля &quot;процессоры - память&quot; не произойдет прерывания в работе системы или потери данных или состояния.
+<p>Серверы ftServer снабжены единой консолью управления и выполняют одну копию каждого пакета ПО, что сокращает затраты на лицензирование ПО и упрощает администрирование по сравнению с многоузловыми кластерами.
+<p>Отказоустойчивая подсистема ввода-вывода физически отделена от подсистемы &quot;процессор - память&quot; (рис. 2). Аппаратная логика реализована в виде заказных микросхем ASIC - Stratus North PCI (SNP) и Stratus South PCI (SSP). Эти микросхемы выполняют роль PCI-моста между процессором и вводом-выводом, обеспечивая обнаружение основных ошибок, изоляцию сбоев и синхронизацию архитектуры lockstep. &quot;Северный&quot; мост SNP содержит основные интерфейсы PCI, функции управления прерываниями и логику порядка выполнения транзакций. &quot;Южный&quot; мост SSP содержит логику голосования, вторичные интерфейсы PCI и регистры ошибок. Мосты соединяют систему с резервированными модулями процессора и ввода-вывода через пассивную шину, реализованную в виде кабелей или объединительной панели.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2003/stratus/ris3.gif" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Рис. 2. Схема технологии lockstep.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Отказоустойчивость ввода-вывода повышается за счет дублирования шин PCI, адаптеров и устройств ввода-вывода. В базовой конфигурации ftServer имеются две независимые шины PCI (можно применить две дополнительные шины). Дублируются также PCI-адаптеры SCSI, Ethernet, удаленного администрирования и Fibre Channel. Во внутренних дисках применяется зеркалирование (RAID 1), при котором каждый диск подключается к двум независимым шинам SCSI.
+<p>Благодаря этому для любой логической операции ввода-вывода, включая операции с внутренними и внешними дисками, доступны несколько маршрутов. При любом сбое операции ввода-вывода она повторно выполняется с использованием альтернативного маршрута, что гарантирует успешное завершение.
+<h4>Резервирование DMR и TMR </h4>
+<p>В системах ftServer стандартно используется режим двойной модульной избыточности (DMR), при котором задействуются два блока &quot;центральный процессор - память&quot; (системная плата). Системы DMR предназначены для получения доступности на уровне &quot;пяти девяток&quot; (99,999%).
+<p>Для некоторых моделей ftServer как опция предлагается резервирование с тройной избыточностью, TMR. Здесь для дополнительного повышения надежности в систему добавляется третий блок &quot;центральный процессор - память&quot;. Если в конфигурации TMR произойдет сбой процессора или памяти, то система автоматически перейдет в режим DMR - полностью отказоустойчивого сервера с готовностью &quot;пять девяток&quot;. Системы TMR обеспечивают самый высокий уровень надежности для пользователей, которые работают с критически-важными приложениями.
+<p>Как говорилось выше, все системные платы работают в режиме lockstep с синхронизацией от одних системных часов. Логика обнаружения и изоляции сбоев сравнивает сигналы ввода-вывода на выходе всех системных плат, и любое несовпадение воспринимается как признак ошибки. Системы DMR используют логику обнаружения ошибок каждой системной платы, чтобы выяснить, в какой из них произошел сбой. Если сигнал об ошибке платы не обнаружен, то программный алгоритм определяет, какую плату нужно вывести из работы. В системах TMR для изолирования неисправной платы используется механизм голосования с тремя участниками.
+<h4>Применение стандартных компонентов </h4>
+<p>Архитектура ftServer дополняет преимущества традиционной архитектуры &quot;дублирование и резервирование&quot;, делая ее доступной на более простых конструкциях с меньшим числом компонентов. Применение стандартных модульных элементов не только сокращает стоимость систем Stratus, но и ускоряет разработку новых продуктов из серии ftServer и вывод их на рынок.
+<p>Продукты ftServer использует все преимущества стандартных компонентов и конструкции Intel-серверов. Их основные отличия от обычных стандартных серверов - отделение в ftServer ввода-вывода PCI от остальных компонентов системной платы, а также реализация на аппаратном уровне обнаружения отказов с помощью разработанных Stratus заказных интегральных микросхем ASIC.
+<p>Обеспечение отказоустойчивости при уменьшении числа компонентов удешевляет продукцию, но не уменьшает производительность и доступность системы.
+<h3>ПО failsafe </h3>
+<p>Системы ftServer поддерживают ОС Microsoft Windows 2000 Advanced Server, используя при этом дополнительные программные функции доступности, разработанными Stratus. Защита от отказов на программном уровне устраняет известные источники сбоев системы и приложений, сокращая до минимума простои при ремонте и обслуживании, и обеспечивает сохранность данных в оперативной памяти. В частности, ПО защищено от неповторяющихся аппаратных ошибок, а &quot;усиленные&quot; драйверы предотвращают программные сбои. Кроме того, информация о проблемах ПО собирается, анализируется и корректируется.
+<p>Разработанные Stratus программные усовершенствования никак не затрагивают исходный код ОС. В результате системы ftServer обеспечивают 100%-ную совместимость интерфейса Application Binary Interface (ABI) с Windows 2000. Все системы ftServer успешно прошли квалификационные тесты Windows и включены в список Microsoft Hardware Compatibility List (HCL). Это гарантирует выполнение любого приложения Windows 2000 на системах Stratus ftServer.
+<h4>Неповторяющиеся аппаратные ошибки </h4>
+<p>Оборудование и системное ПО ftServer предназначено для обнаружения, изоляции и автоматического исправления неповторяющихся ошибок, а также ошибок на аппаратном уровне. Поскольку обработка ошибок - хорошо известное слабое место архитектуры ПО, то маскирование неповторяющихся и аппаратных ошибок устраняет источники многих проблем. Оборудование и системное ПО ftServer обнаруживает и обрабатывает неповторяющиеся аппаратные и программные ошибки, которые в кластере и обычных серверах вызывают проблемы на уровне ОС, связующего и прикладного ПО.
+<h4>&quot;Усиленные&quot; драйверы </h4>
+<p>Хорошо известно, что многие сбои в работе ОС Windows вызваны ошибками в драйверах устройств. По оценкам самой Microsoft, именно из-за ошибок драйверов происходит 30% всех перезагрузок Windows NT 4. В ОС Windows 2000 драйверы стали значительно надежнее благодаря новым программам тестирования и сертификации, однако общая доля проблем, связанных с драйверами, не уменьшилась.
+<p>ПО Stratus ftServer решает эту проблему надежности среды Windows с помощью так называемых усиленных драйверов. При сбое адаптеры ввода-вывода изолируются от остальной системы. В адаптерах реализованы функции онлайновой диагностики и сервисный интерфейс, соответствующий модели драйверов Microsoft Windows Management Instrumentation (WMI).
+<p>Специалисты Stratus либо лицензируют исходный код драйвера, либо совместно с производителем драйвера реализуют дополнительную функциональность. Для поддержания доступности на максимальном уровне Stratus рекомендует использовать в системах ftServer только PCI-карты с усиленными драйверами устройств.
+<p>Для усиленных драйверов устройств характерны следующие функциональные усовершенствования:
+<ul><li>полная поддержка вставки и замены адаптеров в горячем режиме;
+<li>прозрачное переключение при отказе (исключение составляют ленточные накопители и асинхронные коммуникационные адаптеры);
+<li>возможность онлайновой диагностики;
+<li>поддержка онлайнового обновления микрокода;
+<li>мониторинг и составление отчетов с помощью WMI.</ul>
+<h4>Анализ и исправление проблем в ПО </h4>
+<p>Даже принятие специальных профилактических мер не может полностью исключить проблемы с ПО. Архитектура ftServer обеспечивает ряд преимуществ в решении таких проблем, позволяя точно разграничить программные и аппаратные конфликты. Поскольку системы ftServer автоматически обнаруживают, изолируют и устраняют неповторяющиеся аппаратные ошибки, категория проблемы определяется сразу. Это значительно ускоряет ее разрешение и делает его более эффективным. К тому же архитектура ftServer включает усовершенствования, сокращающие риск программных сбоев.
+<h4>Автоматическая перезагрузка </h4>
+<p>В тех маловероятных случаях, когда сбой ОС все же происходит, системы ftServer выполняют автоматическую перезагрузку и сохраняют информацию об отказе в одном из дублированных модулей &quot;центральный процессор - память&quot;. Дамп содержимого памяти ядра автоматически считывается после восстановления нормальной работы системы и приложений. При этом не требуется сложная операция передачи содержимого дампа - системы ftServer поддерживают удаленный анализ сбоев через сеть Stratus ActiveService Network.
+<p>ПО мониторинга ftServer идентифицирует многие из ошибок ПО и передает отчеты о них, что позволяет предпринять нужные действия до того, как проблема сказалась на работе приложений. В числе прочего это ПО также отслеживает конфигурацию системы и номера версий для идентификации возможной несовместимости.
+<h4>Системное ПО для переключения при отказах </h4>
+<p>Специальное системное ПО, разработанное в Stratus для семейства ftServer, обеспечивает переключение при отказах. Программы этого комплекса осуществляют мониторинг и управление сервером, позволяют применять удаленное обслуживание и поддержку, а также реализуют другие эффективные функции повышения доступности. Основные компоненты комплекта перечислены ниже.
+<p>ftServer Management Console (ftSMC) - подключаемый модуль для стандартной консоли Microsoft Management Console (MMC). Он реализует пользовательский интерфейс администратора для конфигурирования, управления и создания детальных отчетов о состоянии систем ftServer. Модуль выполняется локально на любой системе ftServer или удаленно на любой системе Windows 2000. Как локальные, так и удаленные системы ftServer могут управляться любой копией ftSMC.
+<p>Software Availability Manager (SAM) - инструментарий, который включает сервис Windows Service, выполняющийся при запуске системы, и подключаемый модуль для Microsoft Management Console (MMC). Сервис SAM ведет мониторинг работы критических ресурсов системы ftServer и состояния пользовательских приложений. Подключаемый модуль SAM можно настроить на посылку сообщения по электронной почте, на выполнение программы с учетом состояния приложений или на запись сообщений в журнал Event Log.
+<p>Агент Simple Network Management Protocol (SNMP)- расширяет возможности агента Microsoft SNMP Agent и позволяет консолям интегрированного управления других производителей выполнять мониторинг систем ftServer. Агент ftServer SNMP посылает оповещение в виде ловушки SNMP, если компонент системы изменил свое состояние на следующее: broken (неисправен), fixed (починен), removed (снят) и inserted (вставлен). Файл ftServer MIB позволяет программным пакетам интегрированного управления понять предупреждения Stratus.
+<h4>Поддержание целостности данных в памяти </h4>
+<p>Данные в оперативной памяти интенсивно используются во многих мощных критически важных приложениях, а их потеря приводит к потере транзакции или дополнительному простою. Системы ftServer защищают данные в памяти с помощью архитектуры lockstep, предусматривающей сохранение содержимого оперативной памяти как минимум в двух отдельных аппаратных компонентах.
+<p>При работе с обычными Windows-серверами после зависания системы пользователи должны сделать трудный выбор - либо не запускать приложения до тех пор, пока не будет сохранен дамп памяти для последующего анализа, либо сразу включить приложение, но при этом потерять те данные, которые могли бы помочь устранить повторение таких сбоев. При работе с ftServer эта дилемма устраняется - пользователи смогут сократить до минимума простои приложений и сохранить диагностическую информацию.
+<p>Снятие онлайнового дампа памяти основано на дублировании оборудования в отказоустойчивых системах ftServer. При программном сбое ОС ftServer выводит один из резервированных модулей &quot;процессор - память&quot; из работы и восстанавливает нормальный режим работы остальной части системы. В результате работа критически важного сервера быстро восстанавливается, данные сохраняются, по ним можно выяснить причину проблемы.
+<p>После восстановления нормальной работы системы и приложений с отключенного модуля &quot;процессор - память&quot; снимается стандартный дамп памяти ядра, затем модуль возвращается к обычной работе с дублированием. Система автоматически звонит в центр Stratus Customer Assistance Center (CAC) и передает туда отчет о проблеме. С помощью адаптера ftServer Access PCI, встроенного в архитектуру Stratus ActiveService Architecture, специалисты Stratus по сервисному обслуживанию немедленно начинают диагностировать дамп системы и управляют решением проблемы.
+<h4>ftMemory RAM Disk </h4>
+<p>При использовании факультативно поставляемого ПО ftMemory RAM Disk данные в памяти могут быть защищены и от программных сбоев, в том числе и сбоев ОС. В отличие от других виртуальных дисков RAM, эта программа сохраняет состояние нужного участка памяти в течение сбоя системы и перезагрузки, так что работу приложений и бизнес-операции можно возобновить без потери транзакций. Столь удобная функция выживаемости позволяет вместо хранения данных на диске использовать данные в памяти (для тех приложений, которым нужна такая возможность).
+<p>Функция ftMemory RAM Disk использует преимущества отказоустойчивой архитектуры системы ftServer, в которой имеется дублирование памяти, обеспечивая защиту всего содержимого ОЗУ от сбоев аппаратных компонентов. Системное ПО Stratus защищает данные ftMemory от сброса при перезапуске системы и сохраняет исходное состояние содержимого памяти. Для защиты содержимого памяти при сбое питания систему ftServer необходимо оборудовать бесперебойным источником питания (ИБП). Если ИБП выдает сигнал о разрядке батарей и инициирует отключение, то содержимое ftMemory RAM Disk автоматически копируется на диск. Данные из памяти также могут записываться на диск при обычном отключении Windows. При включении питания системы данные с диска записываются обратно в память и становятся доступными для приложений.
+<h4>Тестирование </h4>
+<p>В компании Stratus применяется процедура тщательного тестирования всей системы, включая опции оборудования и ПО, в различных конфигурациях, в том числе и максимально сложных. Системы тестируются при экстремальных нагрузках на процессоры и системы ввода-вывода; а условия возникновения ошибок повторно моделируются.
+<h3>Архитектура ActiveService </h3>
+<p>Как и при разработке других компонентов систем ftServer, при создании архитектуры ActiveService ставилась задача обеспечить обнаружение и разрешение проблем до того, как они приведут к простою системы. Эта архитектура сочетает автоматическое обнаружение и изоляцию сбоев, интегрированную удаленную поддержку call-home и онлайновую замену компонентов, т. е. встроенные функции обслуживаемости, которых нет у других серверов.
+<p>Концепция архитектуры ActiveService реализуется начиная с проектирования оборудования и расширяется с помощью глобальной сети Stratus ActiveService Network и ActiveService Manager на основе Web (рис. 3).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2003/stratus/ris4.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Основные составляющие Active Service Architecture.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h4>Встроенная обслуживаемость </h4>
+<p>Системы ftServer обеспечивают первый уровень поддержки клиентов. ПО сопровождения сервера работает прозрачно, постоянно проводит мониторинг и диагностику событий в системе, составляет отчеты о них, аккуратно изолируя сбои на уровне компонента. В случае ошибки или сбоя оборудования ftServer автоматически изолирует вызвавшие их условия и продолжает работу на втором резервном компоненте.
+<p>Сервер автоматически посылает отчет о любых нештатных ситуациях в центр Stratus Customer Assistance Center через защищенное коммутируемое соединение. Глобальная сеть ActiveService Network (раньше называвшаяся Stratus Service Network, или SSN) обеспечивает всемирную инфраструктуру для удаленного доступа к любой системе клиента. Авторизованные специалисты по поддержке могут круглосуточно в удаленном режиме проанализировать критичные проблемы без поездки в офис клиента. На практике сервисные инженеры Stratus способны удаленно диагностировать и устранить проблемы более чем в 95% случаев.
+<p>В тех ситуациях, когда для обслуживания требуется замена компонента, система ftServer автоматически оформляет заказ на нужный компонент, заменяемый в горячем режиме. В большинстве случаев он доставляется на следующий день. Поскольку замену компонентов ftServer, как правило, вполне в состоянии провести сами клиенты (принцип Customer Replaceable Unit, CRU), для замены не требуется вызывать сервисного инженера.
+<p>Система ftServer автоматически включает установленный новый компонент и синхронизирует его для lockstep с дублирующим устройством. В течение всего этого процесса система и приложения продолжают работу в нормальном режиме.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2003/stratus/ris5.jpg" alt=Fig.5></td>
+<td valign="bottom">Замена блока в сервере.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h4>ftServer Access Adapter </h4>
+<p>В системе ftServer также реализованы возможности управления типа out-of-band с помощью дублированных адаптеров ftServer Access PCI Adapter (ftSAA), обеспечивающих удаленную связь между Stratus ActiveService Network и системой клиента независимо от ее состояния. Устройство ftServer Access позволяет эксплутационному персоналу или сервисных инженерам удаленно включать и отключать питание системы, выполнять ее сброс и перезагрузку и управлять защитой входящей и исходящей связи через ActiveService Network. Для повышения надежности адаптеры выполнены в виде одноплатных компьютеров с независимым питанием и сетевыми соединениями.
+<h4>ActiveService Network </h4>
+<p>Сервисная инфраструктура Stratus, работающая круглосуточно и без выходных, должна обеспечивать максимальную продолжительность непрерывного функционирования критически важных приложений. Сеть ActiveService Network поддерживает защищенную непрерывную связь между серверами и техническими специалистами Stratus и CAC по всему миру.
+<p>ActiveService Network позволяет проводить онлайновый круглосуточный мониторинг системы и удаленное устранение неисправностей независимо от расположения клиента, что практически полностью устраняет задержки и затраты, неизбежные при обслуживании с выездом в офис клиента.
+<p>Авторизованные сервисные инженеры используют ActiveService Network для доступа к системам ftServer клиента, их анализа и конфигурирования. В этой сети используются такие мощные средства удаленного управления, как удаленный сброс, удаленная консоль, сбор и хранение информации, функции безопасности.
+<p>Технологии диагностики и анализа позволяют ActiveService Network определить причину сбоя и загрузить журнал регистрации ошибок и дампы системы. Сервисные инженеры Stratus могут также использовать сеть для инсталляции по мере необходимости программных &quot;заплаток&quot;, диагностических процедур и &quot;горячих&quot; исправлений.
+<h4>ActiveService Manager </h4>
+<p>Инструментарий ActiveService Manager дополняет возможности ActiveService Network. Он включает сервисные утилиты на базе Web, предназначенные для поддержки онлайнового управления вызовами для систем ftServer, - предусмотрено круглосуточное взаимодействие в режиме реального времени с центром поддержки Stratus CAC. ActiveService Manager позволяет клиентам просматривать талоны вызовов, которые система ftServer генерирует автоматически, а также создавать и обновлять вызовы поддержки, которые сразу же направляются к соответствующему сервисному специалисту Stratus. Кроме того, ActiveService Manager показывает полную историю инцидентов систем Stratus на предприятии клиента.
+<p>Поскольку крупномасштабное развертывание создает дополнительную нагрузку на ИТ-отделы, служба Stratus Worldwide Services предлагает различные услуги, ориентированные на максимальное повышение продолжительности бесперебойной работы и производительности компьютерных решений ftServer.
+<p>Центр Stratus Center for Fault-Tolerant Computing выполняет тестирование на производительность, совместимость и готовность, в том числе и для продуктов других компаний и приложений клиентов, а также предоставляет услуги портирования. Эти сервисы помогают клиентам внедрить надежные и эффективные по цене решения без привлечения дополнительных технических специалистов или заключения контрактов с несколькими фирмами на проектирование и инсталляцию приложений и инфраструктуры.
+<h3>*** </h3>
+<p>Семейство ftServer компании Stratus - это практичное и доступное по цене решение для достижения высокого уровня доступности в среде Windows. Для руководителей, отвечающих за принятие решений, очень важен тот факт, что функции Stratus Continuous Processing, работающие без вмешательства человека, упрощают развертывание системы, позволяя сократить ее стоимость, уменьшить затраты на текущую поддержку и потери из-за незапланированных простоев.
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8560.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Технология Stratus Continuous Processing
+</a><br><a href="detail.php@ID=8560.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Сергей Петраков
+У сотрудников ИТ-подразделений, отвечающих за эксплуатационную поддержку технических средств, сегодня есть масса возможностей для&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8560.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8560&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='013ebc4077f85905b8d4613cfb3f3e62'><img src='../bitrix/tools/captcha.php@captcha_code=013ebc4077f85905b8d4613cfb3f3e62' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

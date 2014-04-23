@@ -1,0 +1,592 @@
+<HTML>
+<HEAD>
+<title>Интересные алгоритмы шифрования, ч. 2
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="В первой части статьи (см. BYTE/Россия № 4'2006) были подробно описаны три алгоритма шифрования, по разным причинам представляющие интерес: Square, Skipjack и Blowfish. Рассмотрим еще три алгоритма, которые не менее интересны. Алгоритмы SHARK и SHARK*" />
+<meta name="description" content="В первой части статьи (см. BYTE/Россия № 4'2006) были подробно описаны три алгоритма шифрования, по разным причинам представляющие интерес: Square, Skipjack и Blowfish. Рассмотрим еще три алгоритма, которые не менее интересны. Алгоритмы SHARK и SHARK*" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398078817','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm9094' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=9094&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm9094"].SHOW_IMAGE.value="N"; document.forms["PrintForm9094"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm9094"].SHOW_IMAGE.value="Y"; document.forms["PrintForm9094"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(9094);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=9094.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=9094.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(9094);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6258.html'>Безопасность</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><br /></p><a href='../numbers/index.php@ID=11513.html'>№5 (93), май 2006</a><h1>Интересные алгоритмы шифрования, ч. 2
+</h1>Автор: Сергей Панасенко<br />17.05.2006<p></p><DIV class='article-text'><p>В первой части статьи (см. "BYTE/Россия" № 4'2006) были подробно описаны три алгоритма шифрования, по разным причинам представляющие интерес: Square, Skipjack и Blowfish. Рассмотрим еще три алгоритма, которые не менее интересны.
+<h3>Алгоритмы SHARK и SHARK* </h3>
+<p>Как и алгоритм Square, SHARK разработан Винсентом Риджменом (Vincent Rijmen) и Джоан Деймен (Joan Daemen) - будущими авторами стандарта AES (алгоритма Rijndael), правда, в соавторстве с еще тремя специалистами, представляющими Католический университет г. Лювен (Leuven) в Бельгии. Это немного более ранняя разработка, чем алгоритм Square, - SHARK появился в 1995 г.
+<p>Сходство между SHARK и Square наблюдается, как минимум, в следующем:
+<ul><li>оба алгоритма за один раунд обрабатывают блок целиком, а не половину, как сети Фейстеля;
+<li>в раунде алгоритма SHARK используются преобразования, весьма похожие и на Square, и на Rijndael: XOR с ключом, табличная замена и умножение на фиксированную матрицу.</ul>
+<p>Спецификация алгоритма не фиксирует его основные параметры. В частности, блок 
+  шифруемых данных имеет переменный размер mхn бит (значение <b>m</b> и <b>n</b> 
+  станет ясно из описания раунда алгоритма), а обработка данных выполняется с 
+  переменным числом раундов <b>R</b>. 
+<p>В каждом раунде алгоритма <b>r</b> выполняются следующие операции (рис. 1): 
+<p>1. Наложение ключа раунда <b>Kr</b> на обрабатываемый блок операцией XOR. Ключ 
+  раунда также имеет размер mхn бит; подробнее о вычислении ключей раунда будет 
+  сказано ниже. 
+<p>2. Табличная замена, выполняемая следующим образом:
+<ul><li>(mхn)-битный блок данных разбивается на n субблоков по m бит;
+  <li>каждый из них "прогоняется" через одну из таблиц замен <b>S1</b>… <b>Sn</b>; 
+  <li>результаты замен объединяются в (mхn)-битный блок.</ul>
+<p>3. Умножение данных на фиксированную матрицу <b>A</b> размером nхn бит. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/panas2/ris1.gif" alt=Fig.1></td>
+<td align="left" valign="bottom">Рис. 1. Раунд алгоритма SHARK.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Обрабатываемые данные можно представить в виде двухмерного байтового массива 
+  размером (m/8)xn байт (аналогично алгоритму Square) или в виде одномерного массива 
+  из n m-битных элементов. В последнем случае выполняемые в одном раунде операции 
+  можно описать следующей формулой: 
+<p><img src="../images/byte_archive/_Illustrations/No5_2006/panas2/formula.gif">
+<p> 
+<p>где X1…Xn, Y1…Yn, Kr1…Krn -- m-битные элементы входного значения, результата и ключа раунда соответственно.
+<p>После выполнения r раундов алгоритма выполняется финальное преобразование, состоящее из наложения ключа дополнительного раунда KR+1 и последующего умножения на обратную матрицу.
+<p>Для расшифрования обратные операции выполняются в обратной последовательности.
+<p>Фактически SHARK представляет собой не алгоритм шифрования, а некий шаблон для построения на его основе различных алгоритмов шифрования с описанной выше структурой. Такой вывод можно сделать из-за обилия переменных величин в структуре алгоритма; к переменным в нем относятся следующие параметры:
+<ul><li>описанные выше параметры n, m и r;
+  <li>значения таблиц замен. В описании алгоритма приводится пример таблицы замен, 
+    которая заменяет входное значение <b>x</b> обратной величиной в поле <b>GF(2m)</b>:<br>
+    <b>S(x) = x-1 mod 2m</b>.<br>
+Однако авторы алгоритма предположили, что при использовании такой таблицы замен возможны уязвимости, поэтому порекомендовали использовать таблицы с более сложным соотношением входного и выходного значений;
+<li>значения элементов матрицы A. При этом авторы алгоритма описали ряд критериев, которым должны соответствовать данные элементы для достижения высокой криптостойкости алгоритма;
+<li>размер ключа шифрования, который может достигать 2 х (R+1) х m х n бит (сумма размеров всех ключей раунда), - однако авторы алгоритма посоветовали ограничиться не более чем 128-битным ключом;
+<li>даже для процедуры расширения ключа авторы алгоритма предложили несколько возможных вариантов.</ul>
+<p>Исходные тексты одного из вариантов алгоритма SHARK, разработанные Винсентом 
+  Риджменом, можно загрузить по FTP с <a href="http://www.bytemag.ru/articles/ftp.esat.kuleuven.ac.be">ftp.esat.kuleuven.ac.be</a>. 
+<p>Помимо алгоритма SHARK, его авторы предложили еще алгоритм SHARK*, отличающийся от SHARK лишь зависимостью таблиц замен от ключа шифрования и также не снабженный исчерпывающим описанием.
+<p>Видимо, ввиду своей неопределенности, алгоритмы SHARK и SHARK* не вызвали большого интереса у криптоаналитиков; по крайней мере, не обнаружено широко известных работ, связанных с анализом криптостойкости или атаками на данные алгоритмы.
+<h3>Алгоритм RC5 </h3>
+<p>Алгоритм RC5 интересен по многим причинам. Во-первых, он создан известнейшим криптологом Роном Ривестом (Ron Rivest) - одним из разработчиков асимметричной системы RSA и одним из основателей одноименной фирмы (RSA Data Security), которая, несомненно, входит в число мировых лидеров рынка средств криптографической защиты информации. Аббревиатура RC обозначает, согласно разным источникам, либо Rivest Cipher, либо Ron's Code, т. е. в совокупности "шифр Рона Ривеста".
+<p>Во-вторых, аналогично предыдущим алгоритмам шифрования Рона Ривеста RC2 и RC4, алгоритм RC5 получил весьма широкое распространение: по количеству пользователей в мире он стоит в одном ряду с такими известными алгоритмами, как IDEA и Blowfish.
+<p>И наконец, на преобразованиях, используемых в RC5, основана последующая разработка компании RSA - алгоритм RC6, который стал финалистом конкурса AES по выбору нового стандарта шифрования США. RC6 не победил в конкурсе, но, видимо, превзойдет своего предшественника по широте использования.
+<h4>Структура алгоритма </h4>
+<p>Аналогично алгоритму SHARK, часть основных параметров алгоритма RC5 - переменные. Как пишет автор алгоритма, "RC5 - это несколько различных алгоритмов", поскольку, помимо секретного ключа, в число параметров алгоритма входят следующие:
+<ul>
+  <li>размер слова <b>w</b> - RC5 шифрует блоками по два слова, допустимы значения 
+    w 16, 32 или 64, причем рекомендуется значение 32; 
+  <li>количество раундов алгоритма <b>R</b> - в качестве значения допустимо любое 
+    целое число от 0 до 255 включительно; 
+  <li>размер секретного ключа в байтах <b>b</b> - любое целое значение от 0 до 
+    255 включительно.
+</ul>
+<p>Наиболее часто, чтобы уточнить параметры алгоритма, используемые в его конкретной реализации, применяется обозначение RC5-w/R/b; например, RC5-32/12/16 обозначает алгоритм RC5 с 64-битным блоком, 12 раундами и 128-битным (16-байтным) ключом. Данную комбинацию параметров Ривест рекомендует в качестве основного варианта алгоритма.
+<p>По мнению автора алгоритма, переменные параметры расширяют сферу использования алгоритма, а также сильно сокращают издержки, если необходим переход на более сильный вариант алгоритма - в отличие от DES (основная проблема которого - короткий 56-битный ключ), в программной или аппаратной реализации RC5, поддерживающей переменные параметры, легко было бы заменить ключ более длинным, таким образом устранив проблему. Вот что пишет об этом Рон Ривест: "Фиксированные параметры могут быть не менее опасны [переменных], поскольку их нельзя улучшить при необходимости. Рассмотрим проблему DES: его ключ слишком короток, и нет простого способа увеличить его".
+<p>Автор предусмотрел и проблему совместимости реализаций RC5 с различными параметрами - каждое зашифрованное сообщение рекомендуется предварять заголовком, содержащим список значений основных параметров алгоритма. Предполагается, что в этом случае для расшифрования сообщения следует установить параметры из заголовка, после чего (при наличии корректного ключа) сообщение легко будет расшифровать.
+<p>Структура алгоритма представлена на рис. 2. Алгоритм представляет собой сеть Фейстеля, в каждом раунде которой выполняются следующие операции:
+<p><b>A = ((A (+) B) <<< B) + K2*r mod 2w</b>, 
+<p><b>B = ((A (+) B) <<< A) + K2*r+1 mod 2w</b>, 
+<p>где r - номер текущего раунда, начиная с 1; Kn - фрагмент расширенного ключа; <<< n - операция циклического сдвига на x бит влево, где x - значение младших log2 w бит n.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/panas2/ris2.gif" alt=Fig.2></td>
+<td align="left" valign="bottom">Рис. 2. Структура алгоритма RC5.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Перед первым раундом выполняются операции наложения двух первых фрагментов расширенного ключа на шифруемые данные:
+<p><b>A = A + K0 mod 2w</b>, 
+<p><b>B = B + K1 mod 2w</b>. 
+<p>Стоит отметить, что под словом "раунд" в описании алгоритма Ривест понимает преобразования, соответствующие двум раундам обычных алгоритмов, структура которых представляет собой сеть Фейстеля (см. рис. 2). Это означает, что раунд алгоритма RC5 обрабатывает блок целиком, тогда как типичный раунд сети Фейстеля обрабатывает только один субблок - обычно половину блока, реже его четверть.
+<p>Алгоритм поразительно прост - в нем используются только операции сложения по модулю 2 и по модулю 2w, а также сдвиги на переменное число бит. Последняя из операций представляется автором алгоритма как революционное решение, не использованное в более ранних алгоритмах шифрования (до алгоритма RC5 такие операции использовались только в алгоритме Madryga, не получившем широкой известности): сдвиг на переменное число бит - это весьма просто реализуемая операция, которая, однако, существенно усложняет дифференциальный и линейный криптоанализ алгоритма. Простота алгоритма может рассматриваться как его важное достоинство - простой алгоритм легче реализовать и легче анализировать на предмет возможных уязвимостей.
+<p>Для расшифрования выполняются обратные операции в обратной последовательности, т. е. в каждом раунде r (с обратной последовательностью раундов) выполняются следующие операции:
+<p><b>B = ((B - K2*r+1 mod 2w) >>> A) (+) A</b>, 
+<p><b>A = ((A - K2*r mod 2w) >>> B) (+) B</b>, 
+<p>где >>> n - аналогичная описанной выше (<<< n) операция побитового циклического сдвига вправо.
+<p>Соответственно после R раундов выполняются следующие операции:
+<p><b>B = B - K1 mod 2w,</b> 
+<p><b>A = A - K0 mod 2w.</b> 
+<p>Алгоритм RC5 и некоторые его варианты запатентованы; патенты принадлежат фирме RSA Data Security.
+<h4>Процедура расширения ключа </h4>
+<p>Процедура расширения ключа незначительно сложнее собственно шифрования. Расширение ключа выполняется в несколько этапов.
+<p>Этап 1. Выравнивание ключа шифрования, в рамках которого ключ шифрования, если его размер в байтах b не кратен w/8 (т. е. размеру слова в байтах), дополняется нулевыми байтами до ближайшего большего размера c, кратного w/8.
+<p>Этап 2. Инициализация массива расширенных ключей <b>K0…K2*R+1</b>, которая 
+  выполняется следующим образом: 
+<p><b>K0 = Pw,</b> 
+<p><b>Ki+1 = Ki + Qw, </b>
+<p>где Pw и Qw - псевдослучайные константы, образованные путем умножения на 2w дробной части и последующего округления до ближайшего нечетного целого двух математических констант (e и f соответственно). В спецификации алгоритма приведены вычисленные константы для возможных значений w:
+<p><b>P16 = B7E1*, </b>
+<p><b>Q16 = 9E37, </b>
+<p><b>P32 = B7E15163, </b>
+<p><b>Q32 = 9E3779B9, </b>
+<p><b>P64 = B7E151628AED2A6B, </b>
+<p><b>Q64 = 9E3779B97F4A7C15. </b>
+<p><hr width="40%" align="left" noshade>
+* Шестнадцатеричные значения.
+<p>Этап 3. Циклически выполняются следующие действия:
+<p><b>A = Ki = (Ki + A + B) <<< 3, </b>
+<p><b>B = KCj = (KCj + A + B) <<< (A + B), </b>
+<p><b>i = i + 1 mod (2 * R + 1), </b>
+<p><b>j = j + 1 mod c,</b> 
+<p>где i, j, A и B - временные переменные, их начальные значения равны нулю; KC - выровненный на этапе 1 ключ шифрования.
+<p>Количество итераций цикла N определяется как <b>N = 3 * m</b>, где <b>m</b> 
+  - максимальное из двух значений: <b>c</b> либо (<b>2 х R + 1</b>). 
+<h4>Криптоанализ алгоритма </h4>
+<p>Считается, что именно революционная идея сдвига на переменное число бит привлекла внимание криптоаналитиков к алгоритму RC5 - он стал одним из алгоритмов, наиболее изученных на предмет возможных уязвимостей.
+<p>Начало криптоанализу алгоритма RC5 было положено сотрудниками RSA Laboratories (научного подразделения фирмы RSA Data Security) Бертоном Калиски-младшим (Burton S. Kaliski Jr.) и Икван Лайзой Ин (Yiqun Lisa Yin). В период с 1995 по 1998 г. они опубликовали ряд отчетов, в которых подробно проанализировали криптостойкость алгоритма RC5. Сделанные из них выводы приведены ниже.
+<p>RC5 почти невозможно вскрыть методом линейного криптоанализа. Во многом это свойство алгоритма предопределено наличием операции циклического сдвига на переменное число бит. Однако дальнейшие исследования показали, что существует класс ключей, при использовании которых алгоритм можно вскрыть линейным криптоанализом.
+<p>Дифференциальный криптоанализ существенно более эффективен при атаках на алгоритм RC5. Калиски и Ин предложили атаку на алгоритм RC5-32/12/16, для которой требовалось 263 пар выбранных открытых текстов и соответствующих им шифртекстов. Этот результат улучшили Ларс Кнудсен (Lars R. Knudsen) и Уилли Мейер (Willi Meier), которым для атаки потребовалось 254 выбранных открытых текстов. Они же нашли несколько классов слабых ключей, упрощающих дифференциальный криптоанализ. А наилучшим результатом стал криптоаналитический метод, предложенный криптологами Алексом Бирюковым (Alex Biryukov) и Эйялом Кушилевицем (Eyal Kushilevitz), в котором необходимо 244 выбранных открытых текстов для успешной атаки. Тем не менее все описанные выше атаки не слишком практичны - для их выполнения требуется огромное число выбранных открытых текстов. Бирюков и Кушилевиц считают, что для обеспечения полной невскрываемости алгоритма дифференциальным криптоанализом достаточно выполнения 18-20 раундов вместо 12.
+<p>На основании того факта, что на ряде платформ операция циклического сдвига на переменное число бит выполняется за различное число тактов процессора, изобретатель метода вскрытия алгоритмов шифрования по времени исполнения Пол Кохер (Paul C. Kocher) высказал предположение о возможности атаки по времени исполнения на алгоритм RC5 на таких платформах. Два варианта подобной атаки были сформулированы криптоаналитиками Говардом Хейзом (Howard M. Heys) и Хеленой Хандшух (Helena Handschuh), которые показали, что секретный ключ можно вычислить, выполнив около 220 операций шифрования с высокоточными замерами времени исполнения и затем от 228 до 240 тестовых операций шифрования. Однако Калиски и Ин предложили весьма простое "противоядие" - принудительно выполнять все сдвиги за одинаковое число тактов (т. е. взять наиболее медленный из возможных сдвигов - это, несомненно, несколько снизит среднюю скорость шифрования). Аналогичную методику противодействия атакам по времени исполнения советует и сам Кохер.
+<p>Таким образом, наиболее реальный метод взлома алгоритма RC5 (не считая вариантов с небольшим числом раундов и с коротким ключом) - полный перебор возможных вариантов ключа шифрования. Это означает, что у алгоритма RC5 практически отсутствуют недостатки с точки зрения стойкости. Косвенно этот вывод подтверждается тем, что достаточно много исследований стойкости алгоритма было направлено против вариантов с усеченным числом раундов: такие варианты обычно исследуются в случае отсутствия серьезных уязвимостей у полноценных вариантов алгоритма.
+<p>Было немало и других исследований данного алгоритма, причем подавляющее их большинство применялось к 64-битной версии алгоритма (для w = 32). Это не означает, что RC5 со 128-битным блоком шифруемых данных существенно менее изучен - результаты исследований показывают, что 128-битный вариант RC5 с достаточным числом раундов вскрыть существенно сложнее 64-битного. Например, Бирюков и Кушилевиц предложили атаку на алгоритм RC5-64/16/16 на основе 263 выбранных открытых текстов, что достаточно нереально для практического применения.
+<h4>Варианты RC5 </h4>
+<p>Структура алгоритма RC5, несмотря на свою простоту, представлялась многим криптологам как поле для возможных усовершенствований. Соответственно появилось множество известных вариантов алгоритма RC5, в которых преобразования в "пол-раундах" классического RC5 несколько изменены.
+<p>1. Алгоритм RC5XOR, в котором сложение с ключом раунда по модулю 2 заменено операцией XOR (рис. 3):
+<p><b>A = ((A (+) B) <<< B) Е K2*r mod 2w </b>**. 
+<p><hr width="40%" align="left" noshade>
+** Здесь и далее в качестве примера приведено только преобразование для вычисления левого субблока; правый вычисляется в следующей половине раунда аналогичным образом.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/panas2/ris3.gif" alt=Fig.3></td>
+<td align="left" valign="bottom">Рис. 3. Раунд RC5XOR.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Данный алгоритм оказался менее стоек, чем RC5, как к линейному, так и к дифференциальному криптоанализу. В частности, Бирюков и Кушилевиц предложили атаку методом дифференциального криптоанализа, вскрывающую алгоритм RC5XOR-32/12/16 на основе 228 выбранных открытых текстов.
+
+<p>2. RC5P, в котором сложение левого и правого обрабатываемых субблоков операцией XOR заменено сложением по модулю 2w (рис. 4):
+<p><b>A = ((A + B mod 2w) <<< B) + K2*r mod 2w</b>. 
+<p>Алгоритм оказался так же стоек, как и RC5, к линейному криптоанализу, но значительно слабее к дифференциальному.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/panas2/ris4.gif" alt=Fig.4></td>
+<td align="left" valign="bottom">Рис. 4. Раунд RC5P.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>3. RC5PFR, отличающийся от RC5 циклическим сдвигом на фиксированное, а не на переменное число бит (рис. 5):
+<p><b>A = ((A (+) B) <<< sr) + K2*r mod 2w</b>, 
+<p>где sr - число бит циклического сдвига, которое может быть различным в разных раундах алгоритма; в этом случае последовательность s1…sR будет дополнительным параметром алгоритма.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/panas2/ris5.gif" alt=Fig.5></td>
+<td align="left" valign="bottom">Рис. 5. Раунд RC5PFR.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Данный вариант алгоритма RC5 не слишком хорошо изучен, однако эксперты предполагают, что алгоритм RC5PFR нестоек к дифференциальному криптоанализу.
+<p>4. RC5KFR, в котором число бит сдвига - функция ключа шифрования KC, т. е. для каждого ключа шифрования число бит сдвига фиксировано (может быть различным для разных раундов алгоритма) (рис. 6):
+<p><b>A = ((A (+) B) <<< sr(КС)) + K2*r mod 2w</b>. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/panas2/ris6.gif" alt=Fig.6></td>
+<td align="left" valign="bottom">Рис. 6. Раунд RC5KFR.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>RC5KFR также не слишком изучен, однако считается, что во многих случаях (особенно при недостаточно большом количестве раундов) криптоанализ данного варианта алгоритма RC5 сводится к анализу алгоритма RC5PFR, что не внушает уверенности в его стойкости.
+<p>5. RC5RA, в котором циклический сдвиг происходит на переменное число бит, определяемое не значением младших log2 w бит другого субблока, а некоей функцией f(), обрабатывающей в качестве входного значения все биты другого субблока (рис. 7):
+<p><b>A = ((A (+) B) <<< f(B)) + K2*r mod 2w</b>, 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/panas2/ris7.gif" alt=Fig.7></td>
+<td align="left" valign="bottom">Рис. 7. Раунд RC5RA.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Этот вариант алгоритма тоже недостаточно изучен (и, видимо, уже не будет изучен, поскольку можно утверждать, что RC5 и его варианты сейчас представляют лишь исторический интерес). Но существует мнение, что алгоритм RC5RA может быть еще более стоек, чем RC5, против известных методов криптоанализа.
+<h4>Продолжение истории </h4>
+<p>Как было сказано выше, на основе алгоритма RC5 в 1998 г. был разработан алгоритм RC6. RC6 также основан на циклических сдвигах на переменное число бит. Подавляющее большинство криптоаналитических исследований алгоритма RC5 могут быть в различной мере применены и к RC6. У RC6 есть уже своя богатая история, которая заслуживает отдельного описания.
+<h3>Алгоритм Akelarre </h3>
+<p>Алгоритм Akelarre разработан коллективом испанских криптографов. Его отличительная особенность в том, что структура алгоритма фактически представляет собой комбинацию преобразований, использованных в двух более ранних алгоритмах, хорошо зарекомендовавших себя с точки зрения криптостойкости: IDEA (см. статью "Алгоритм шифрования IDEA", "BYTE/Россия", № 12/2005) и RC5.
+<p>Алгоритм шифрует данные блоками по 128 бит. Как и в алгоритме RC5, часть основных параметров алгоритма - переменные: может изменяться число раундов алгоритма R, а ключ шифрования иметь любой размер, кратный 64 битам (оптимальным считается 128-битный ключ).
+<h4>Структура алгоритма </h4>
+<p>Структура алгоритма (рис. 8) весьма похожа на структуру алгоритма IDEA. Разница 
+  между ними прежде всего в основных преобразованиях, используемых в каждом раунде 
+  алгоритма, а также в размере слова: 32 бита вместо 16-битного слова у IDEA. 
+  Шифруемый 128-битный блок разбивается на четыре субблока <b>A, B, C и D</b> 
+  по 32 бита, над которыми и выполняются криптографические преобразования. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/panas2/ris8.gif" alt=Fig.8></td>
+<td align="left" valign="bottom">Рис. 8. Структура алгоритма Akelarre.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Алгоритм состоит из начального преобразования, <b>R</b> раундов и финального 
+  преобразования. 
+<p>Начальное преобразование представляет собой наложение фрагментов расширенного 
+  ключа <b>K01…K04</b> на субблоки: 
+<p><b>A = A + K01 mod 232, </b>
+<p><b>B = B (+) K02, </b>
+<p><b>C = C (+) K03, </b>
+<p><b>D = D + K04 mod 232. </b>
+<p>В каждом раунде алгоритма r выполняются следующие преобразования.
+<p>1. Субблоки A, B, C, D объединяются в 128-битный блок, над которым выполняется 
+  циклический сдвиг на переменное число бит, определяемое семью младшими битами 
+  фрагмента ключа раунда <b>Kr1</b> (именно применяемые в данном алгоритме операции 
+  циклического сдвига на переменное число бит считаются заимствованными у алгоритма 
+  RC5). 
+<p>2. 128-битный блок снова разбивается на четыре фрагмента, после чего вычисляются следующие промежуточные величины:
+<p><b>T1 = A (+) C, </b>
+<p><b>T2 = B (+) D.</b> 
+<p>3. Значения <b>T1</b> и <b>T2</b>, а также 12 фрагментов ключа раунда Kr2…Kr13 
+  подаются на вход AR-модуля (addition-rotation structure), выполняющего операции 
+  сложения и циклического сдвига на переменное число бит. AR-модуль будет подробно 
+  описан ниже. 
+<p>4. Выходные значения раунда формируются следующим образом:
+<p><b>A = A (+) T2', </b>
+<p><b>B = B (+) T1', </b>
+<p><b>C = C (+) T2', </b>
+<p><b>D = D (+) T1', </b>
+<p>где <b>T1'</b> и <b>T2'</b> - выходные значения AR-модуля. 
+<p>AR-модуль предполагает выполнение следующих операций (здесь они разобраны на примере T1, аналогичные операции выполняются над T2, см. упрощенную схему на рис. 9).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/panas2/ris9.gif" alt=Fig.9></td>
+<td align="left" valign="bottom">Рис. 9. AR-модуль.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Шаг 1. 31 старший бит T1 циклически сдвигается влево на величину, определяемую текущим значением 5 младших бит T2.
+<p>Шаг 2. Результат предыдущего шага складывается с фрагментом ключа раунда Kr8:
+<p><b>T1 = T1 + Kr8 mod 232. </b>
+<p>Шаг 3. 31 младший бит T1 циклически сдвигается влево аналогично шагу 1.
+<p>Шаг 4. T1 складывается с фрагментом ключа раунда Kr9 аналогично шагу 2.
+<p>Шаг 5. 31 старший бит T1 циклически сдвигается влево аналогично шагу 1.
+<p>Шаг 6. T1 складывается с фрагментом ключа раунда Kr10 аналогично шагу 2.
+<p>Шаг 7. Шаги 3-6 повторяются с использованием Kr11 и Kr12. Затем повторяются шаги 3-5 с использованием фрагмента ключа раунда Kr13. Результат последнего повтора шага 5 становится выходным значением T1'.
+<p>Аналогичным образом обрабатывается T2, но с использованием фрагментов ключа раунда Kr2…Kr7 вместо Kr8…Kr13.
+<p>Финальное преобразование состоит из циклического сдвига 128-битного блока влево на количество бит, определяемое значением семи младших бит фрагмента ключа KF1, после чего выполняются следующие действия:
+<p><b>A' = A + KF2 mod 232, </b>
+<p><b>B' = B Е KF3, </b>
+<p><b>C' = C Е KF4, </b>
+<p><b>D' = D + KF5 mod 232</b>. 
+<h4>Расширение ключа </h4>
+<p>Как было сказано выше, алгоритм может использовать ключ любого размера, кратного 64 битам. Однако основной размер ключа - 128 бит, поэтому стоит рассмотреть процедуру расширения именно такого ключа. Данная процедура выполняется следующим образом (рис. 10).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/panas2/ris10.gif" alt=Fig.10></td></tr>
+<tr><td align="left" valign="bottom">Рис. 10. Расширение ключа алгоритма Akelarre.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Шаг 1. Ключ шифрования разбивается на восемь фрагментов по 16 бит KI1…KI8.
+<p>Шаг 2. Каждый 16-битный фрагмент возводится в квадрат с получением 32-битного значения, которое складывается с константами С0 и С1 следующим образом:
+<p><b>KTi = KIi2 + C1 mod 232, </b>
+<p><b>KTi' = KIi2 + C0 mod 232,</b> 
+<p>где константы C0 и C1 определены так:
+<p><b>C0 = A49ED284***, </b>
+<p><b>C1 = 735203DE.</b> 
+<p><hr width="40%" align="left" noshade>
+*** Шестнадцатеричные значения.
+<p>Шаг 3. Восемь младших и восемь старших бит временных значений KTi и KTi' формируют 
+  фрагменты предварительного расширенного ключа KE1…KE8: KEi - результат конкатенации 
+  следующих величин:
+<ul>
+  <li>8 младших бит KTi',</li>
+  <li>8 старших бит KTi',</li>
+  <li>8 младших бит KT(i mod 8)+1,</li>
+  <li>8 старших бит KT(i mod 8)+1. </li>
+</ul>
+<p>Шаг 4. Средние 16 бит временных значений обрабатываются аналогично KI1…KI8 для получения новых значений фрагментов предварительного расширенного ключа (с незначительными отличиями - см. рис. 10).
+<p>Шаг 5. Ключи K01…K04, Kr1…Kr13 (для каждого раунда) и KF1…KF5 заполняются поочередно вычисляемыми фрагментами KE1…KE8.
+<p>Процедура расширения ключа выглядит достаточно сложной. Однако данная процедура имеет существенный недостаток - по получаемым в результате криптоаналитических вычислений частям ключей раунда можно восстановить соответствующие им биты ключа шифрования; данное свойство эксплуатируется в описанных ниже атаках на алгоритм.
+<h4>Криптоанализ алгоритма </h4>
+<p>Алгоритм Akelarre был представлен в 1996 г., а уже в следующем году Нильс Фергюсон (Niels Ferguson) и Брюс Шнайер (Bruce Schneier) описали атаку на него, позволяющую вскрыть алгоритм на основе не более ста выбранных открытых текстов и требующую выполнения 242 операций шифрования. Фергюсон и Шнайер сделали вывод о неприменимости алгоритма Akelarre (поскольку найденная ими атака вполне реальна) и предложили несколько путей усовершенствования алгоритма, в том числе полную переработку особенно слабой процедуры расширения ключа. Разработчики Akelarre создали новую версию в том же 1997 г., однако и она оказалась довольно слабой.
+<p>Еще более серьезную атаку описали Ларс Кнудсен и Винсент Риджмен. Они нашли способ раскрытия ключа алгоритма с вероятностью около 70% на основе всего около 1000 блоков шифртекста при наличии некоторой информации о соответствующих им открытых текстах (например, достаточно знать, что это английский текст в ASCII-кодировке). Стоит сказать, что по сравнению с другими видами атак на алгоритмы шифрования атака на основе только шифртекста наиболее легко реализуема на практике, поскольку для получения нужной для атаки информации злоумышленнику достаточно простого прослушивания канала, по которому передается зашифрованная информация. Удивителен и тот факт, что обе атаки практически не зависят ни от числа раундов, ни от размера ключа алгоритма.
+<p>Статья с описанием атаки Кнудсена и Риджмена называется Two Rights Sometimes Make a Wrong, что можно перевести примерно так: "Иногда два плюса дают минус". Удивительно, но алгоритм Akelarre, сочетающий в себе преобразования двух хорошо известных и криптографически стойких алгоритмов, оказался впечатляюще слаб.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</A></b></li><li><b><A href='detail.php@ID=24095.html'>Сертифицированные системы обнаружения вторжений </A></b></li><li><b><A href='detail.php@ID=22469.html'>Новые технологии в Security operation center</A></b></li><li><b><A href='detail.php@ID=20887.html'>Агрессивность и мобильность: какие угрозы нас ждут в 2013-м</A></b></li><li><b><A href='detail.php@ID=20621.html'>Карты с дисплеем как новое средство защиты онлайн-банкинга</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</A></b></li><li><b><A href='detail.php@ID=25282.html'>Брандмауэр в Dr.Web для Android</A></b></li><li><b><A href='detail.php@ID=25260.html'>Новые угрозы атак на пользователей онлайн-банкинга </A></b></li><li><b><A href='detail.php@ID=25238.html'>Защита от DDoS-атак – комплексное решение «Билайн Бизнес» и Radware</A></b></li><li><b><A href='detail.php@ID=25227.html'>Сетевой червь в «Интернете вещей»</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=9094.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Интересные алгоритмы шифрования, ч. 2
+</a><br><a href="detail.php@ID=9094.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">В первой части статьи (см. "BYTE/Россия" № 4'2006) были подробно описаны три алгоритма шифрования, по разным причинам представляющие интерес: Square&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=9094.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=9094&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0aa72dae03fe03ad66a91d0c613261c1'><img src='../bitrix/tools/captcha.php@captcha_code=0aa72dae03fe03ad66a91d0c613261c1' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

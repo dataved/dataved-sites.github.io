@@ -1,0 +1,690 @@
+<HTML>
+<HEAD>
+<title>Поколение V: новый стандарт модульных систем хранения
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Игорь Колбин Эксперты полагают, что в будущем инфраструктура хранения данных будет представлять собой синтез управляющего ПО и мощных интеллектуальных систем хранения, которые обеспечат администрирование с минимальными затратами, дополненное гибкостью" />
+<meta name="description" content="Игорь Колбин Эксперты полагают, что в будущем инфраструктура хранения данных будет представлять собой синтез управляющего ПО и мощных интеллектуальных систем хранения, которые обеспечат администрирование с минимальными затратами, дополненное гибкостью" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082923','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8541' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8541&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8541"].SHOW_IMAGE.value="N"; document.forms["PrintForm8541"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8541"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8541"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8541);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8541.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8541.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8541);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11510.html'>№6 (58), июнь 2003</a><h1>Поколение V: новый стандарт модульных систем хранения
+</h1>10.06.2003<p></p><DIV class='article-text'><p><i>Игорь Колбин</i> 
+<p>Эксперты полагают, что в будущем инфраструктура хранения данных будет представлять собой синтез управляющего ПО и мощных интеллектуальных систем хранения, которые обеспечат администрирование с минимальными затратами, дополненное гибкостью расширения емкости, производительности и сетевых соединений.
+<p>В мае 2002 г. корпорация Hitachi Data Systems (<a href="http://www.hds.com">http://www.hds.com</a>) 
+  представила свою технологическую инициативу TrueNorth, ориентированную на открытые 
+  решения. Предполагается, что благодаря ей заказчики могут упростить, защитить 
+  и оптимизировать свои информационные инфраструктуры, снизить совокупную стоимость 
+  владения и ускорить возврат инвестированных средств. TrueNorth основывается 
+  на отраслевых стандартах, коллаборативной бизнес-модели с участием лидирующих 
+  на рынке независимых поставщиков ПО. Цель инициативы - создание единой архитектуры 
+  управления системами хранения данных. В частности, TrueNorth позволяет организациям 
+  интегрировать предпочтительные для них решения различных поставщиков и централизованно 
+  управлять ими посредством единой структуры. В рамках этой инициативы Hitachi 
+  Data Systems в конце прошлого года объявила о выпуске системы хранения Hitachi 
+  Freedom Storage Thunder 9500 V Series. Новинка, построенная по модульному принципу, 
+  обладает высоким быстродействием, обеспечивает централизованное управление и 
+  большую емкость при малой занимаемой площади. 
+<p>Специалисты Hitachi Data Systems признают, что никакой отдельно взятый производитель не в состоянии удовлетворить все требования, которые сегодняшние предприятия предъявляют к системам хранения. Руководство корпорации полагает, что использование испытанных технологий Hitachi Freedom Storage Lightning 9900 V Series в системах Thunder 9500 V Series заново определяет понятие модульных дисковых массивов. Новое семейство Thunder (&quot;Гром&quot;) наследует от серии Lightning (&quot;Молния&quot;) концепцию виртуальных портов, а также набор API-интерфейсов, утилит и инфраструктуру администрирования. Клиенты получают возможность выбрать оптимальное решение, соответствующее конкретным задачам бизнеса, защищая свои инвестиции в долговременной перспективе.
+<p>Для систем хранения Thunder 9500 V Series характерна высокая гибкость и производительность, достаточная для ресурсоемких приложений. Интеллектуальные функции Thunder 9500 V упрощают администрирование. Начиная с напольных модулей (типа deskside) эти системы хорошо масштабируются и модернизируются - их корпус занимает небольшую площадь и легко наращивается. Сфера применения Thunder 9500 V Series включает различные приложения, работающие с большими объемами данных, в таких областях, как биотехнологии, розничные продажи, здравоохранение, телевидение и т. п. Во многих случаях применение подобных устройств обеспечивает быстрое развертывание хранилищ данных, систем углубленного анализа данных, непрерывно функционирующих систем обработки транзакций и приложений для работы с потоковым мультимедиа.
+<h3>Архитектура Hi-PER </h3>
+<p>Thunder 9500 V Series по производительности примерно вдвое превосходит предшествующую систему благодаря использованию архитектуры Hi-PER (см. рисунок). Эта архитектура основана на применении массивов RAID и высокоскоростных межсоединений. Система снабжена буферной памятью объемом до 2 Гбайт на каждый контроллер. Дополнительная оптимизация параметров достигается за счет ПО FlashAccess, которое &quot;блокирует&quot; данные в кэш-памяти и обеспечивает малое время отклика. Высокая производительность в сочетании с большой емкостью и плотностью физического размещения делает Thunder 9500 V Series оптимальным решением для обслуживания интенсивного обмена данными в самых разных отраслях.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2003/hds5/ris1.gif" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Архитектура системы Hi-PER системы Thunder 9500 V Series.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Вот лишь некоторые функции и характеристики Thunder 9500 V Series:
+<ul>
+  <li>управление большими объемами данных с помощью единой консоли;</li>
+  <li>консолидация дискового пространства в пул;</li>
+  <li>упрощенная физическая структура, позволяющая снизить расходы;</li>
+  <li>применение технологии виртуализации хранения;</li>
+  <li>увеличение скорости обмена за счет применения высокопроизводительных контроллеров 
+    интерфейса;</li>
+  <li>высокая интегрируемость, позволяющая защитить инвестиции. </li>
+</ul>
+<p>Буква V в названии семейства не только обозначает &quot;пятое поколение&quot;, но и указывает на концепцию виртуализации (Virtualization). Виртуализация хранения повышает эффективность управления, упрощает инфраструктуру и оптимизирует использование ресурсов.
+<p>Поскольку все модели Thunder 9500 V Series основаны на единой архитектуре Hi-PER, они включают универсальные высокоэффективные дисковые полки и универсальный микрокод, что обеспечивает хорошую интегрируемость. Стоит еще раз отметить, что архитектура Hi-PER удовлетворяет требованиям управления информационной системой динамично развивающегося предприятия, начиная от приложений для коллективной работы и кончая системами автоматизации бизнес-процессов.
+<p>Все модели Thunder 9500 V Series имеют усовершенствованную модульную конструкцию. Поэтому они быстро устанавливаются, конфигурируются и расширяются, позволяя обеспечить непрерывность работы бизнес-приложений и всей информационной системы компании.
+<h3>Инфраструктура для развития бизнеса </h3>
+<p>Hitachi Data Systems предоставляет клиенту возможность выбрать для хранения данных мощную модель корпоративного класса Thunder 9570V или имеющие меньшую емкость заранее сконфигурированные модели Thunder 9531V, Thunder 9532V и Thunder 9533V. Эти системы позволяют реализовать высокий уровень доступности и производительности на базе таких технологий, как сети хранения данных (SAN) и подключаемые напрямую к сети системы хранения данных (NAS).
+<h4>Thunder 9531V, 9532V и 9533V </h4>
+<p>Системы хранения Thunder 9531V, Thunder 9532V и Thunder 9533V выпускаются по специальной цене сконфигурированными на заказ. Они имеют емкость в пределах от 360 Гбайт до 1 Тбайт (другие их характеристики приведены в таблице) и заключаются в корпуса для напольного размещения рядом со столом (deskside). Предусмотрена поддержка RAID уровней 0, 1, 1+0 и 5. Заметим, что каждая из трех моделей может быть модернизирована до системы Thunder 9570V.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2003/hds5/ris3.jpg" alt=Photo2></td>
+<td valign="bottom">Напольный вариант Thunder 9500 V Series.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Все три системы хранения могут стать удачным решением для сетей розничной торговли (имеются в виду как обычные, так и электронные магазины), стремящихся обеспечить высокое качество обслуживания клиентов. Они также прекрасно подойдут офисам компаний, которым для поддержания бизнеса нужна относительно небольшая емкость с возможностью ее наращивания. Заказчик может сам определить емкость, которая требуется ему сейчас, а впоследствии легко увеличивать ее по мере необходимости.
+<p>Эти три небольшие модульные конфигурации Thunder 9530 V Series, поставляемые готовыми к работе, реализуют одинаковую функциональность, включая замену компонентов в горячем режиме и архитектуру Hi-PER. Это позволяет обеспечить необходимый для непрерывности бизнеса круглосуточный доступ к данным. Все компоненты, отказ которых может привести к сбою всей системы, резервируются, в том числе в горячем режиме; таким образом, отсутствует единая точка отказа. К примеру, в системах используется зеркалированная кэш-память для записи с питанием от резервной батареи; при сбое в основном хост-компьютере происходит переключение на альтернативный; обновление микрокода осуществляется без прерывания работы.
+<p>Для Thunder 9530 V Series создано ПО мгновенного (Point-in-time) и удаленного копирования для резервирования и быстрого восстановления данных.
+<h4>Система хранения Thunder 9570V </h4>
+<p>Данная система корпоративного класса позиционируется как удобное в управлении решение для предприятий с большими объемами данных и высокой степенью консолидации. Thunder 9570V прекрасно справляется с приложениями, скажем, в области биотехнологий и аналитической обработки. Медицинские учреждения могут использовать систему для быстрого доступа к истории болезней пациента и для выставления счетов, медиа-компании - для трансляции и обработки мультимедийных потоков, редактирования аудио- и видеозаписей и т. п.
+<p>Thunder 9570V выпускается в стоечной конфигурации и обеспечивает высокое быстродействие и емкость при малой занимаемой площади. Устройство включает четыре порта 2 Гбайт/с и может содержать 224 диска (32 Тбайт) на каждую систему; буферная память имеет объем до 4 Гбайт. С помощью Thunder 9570V заказчик сможет консолидировать существующие системы хранения в одной стойке. Это сокращает не только первоначальную стоимость приобретения, но и совокупную стоимость владения в течение всего жизненного цикла системы. Упростив инфраструктуру информационной системы и управление, можно сэкономить на эксплуатационных расходах и затратах на приобретение ресурсов.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2003/hds5/ris2.jpg" alt=Photo1></td>
+<td valign="bottom">Система Thunder 9500 V Series в стойке.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Разработчики считают, что во многих случаях возможно заменить имеющиеся у заказчика несколько систем хранения на одну Thunder 9570V. Используемые в этой системе домены Host Storage Domains обеспечивают объединение в пул хост-компьютеров на уровне LUN для упрощения сетевой инфраструктуры соединений и оптимизации ее использования. При этом ПО Hitachi SANtinel гарантирует защиту от неавторизованного доступа к данным. Консолидация дисковых ресурсов и возможность совместного использования информации серверами на разных платформах сокращают ИТ-затраты. Уменьшается число операций управления и потребность в системных администраторах; кроме того, клиент может сэкономить на лицензировании и обслуживании.
+<h4>Технические характеристики систем Thunder 9500V </h4>
+<table border="1" bordercolor="#000099">
+  <tr>
+    <td> </td>
+    <td>Thunder 9531V </td>
+    <td>Thunder 9532V</td>
+    <td>Thunder 9533V</td>
+    <td>Thunder 9570V</td>
+  </tr>
+  <tr>
+    <td>Управляющий модуль/модули расширения</td>
+    <td>3 EIA</td>
+    <td>3 EIA</td>
+    <td>3 EIA</td>
+    <td>3 EIA</td>
+  </tr>
+  <tr>
+    <td>Максимальное число модулей расширения</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>14+1</td>
+  </tr>
+  <tr>
+    <td>Число дисковых накопителей</td>
+    <td>5</td>
+    <td>9</td>
+    <td>13</td>
+    <td>4-224</td>
+  </tr>
+  <tr>
+    <td>Физическая емкость, Гбайт</td>
+    <td>358</td>
+    <td>645</td>
+    <td>931</td>
+    <td>32 Тбайт</td>
+  </tr>
+  <tr>
+    <td>Емкость для RAID-0</td>
+    <td>Н/д</td>
+    <td>Н/д</td>
+    <td>Н/д</td>
+    <td>32 Тбайт</td>
+  </tr>
+  <tr>
+    <td>Емкость для RAID-5, Гбайт</td>
+    <td>201</td>
+    <td>410 </td>
+    <td>696 </td>
+    <td>30 Тбайт</td>
+  </tr>
+  <tr>
+    <td>Напольная модель</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>Максимальный размер кэш-памяти, Гбайт</td>
+    <td>1</td>
+    <td>2</td>
+    <td>2</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Число контроллеров</td>
+    <td>1</td>
+    <td>2</td>
+    <td>2</td>
+    <td>1 или 2</td>
+  </tr>
+  <tr>
+    <td colspan=5>Используемые жесткие диски</td>
+  </tr>
+  <tr>
+    <td>36 Гбайт 15 000 об./мин</td>
+    <td>Нет</td>
+    <td>Нет</td>
+    <td>Нет</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>73 Гбайт 10 000 об./мин</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>73 Гбайт 15 000 об./мин</td>
+    <td>Нет</td>
+    <td>Нет</td>
+    <td>Нет</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>146 Гбайт 10 000 об./мин</td>
+    <td>Нет</td>
+    <td>Нет</td>
+    <td>Нет</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>Максимальное число физических портов</td>
+    <td>1</td>
+    <td>2</td>
+    <td>2</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Скорость, Гбит/с</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Хостов на порт</td>
+    <td>128</td>
+    <td>128</td>
+    <td>128</td>
+    <td>128</td>
+  </tr>
+  <tr>
+    <td>Host Storage Domains</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>Число поддерживаемых ОС </td>
+    <td>14</td>
+    <td>14</td>
+    <td>14</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <td>F-порт, FL-порт</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>RAID-0, 1, 1+0 </td>
+    <td>Нет</td>
+    <td>Нет</td>
+    <td>Нет</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>RAID-5 </td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>Максимальное число групп RAID</td>
+    <td>1</td>
+    <td>2</td>
+    <td>2</td>
+    <td>45</td>
+  </tr>
+  <tr>
+    <td>Максимальное число LUN</td>
+    <td>256</td>
+    <td>256</td>
+    <td>256</td>
+    <td>512</td>
+  </tr>
+  <tr>
+    <td>Управление LUN </td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>Резервирование и замена всех компонентов в горячем режиме</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>Hitachi Dynamic Link Manager (переключение при отказе)</td>
+    <td>Опция</td>
+    <td>Опция</td>
+    <td>Опция</td>
+    <td>Опция</td>
+  </tr>
+  <tr>
+    <td>Поддержка VERITAS DMP</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>Поддержка большинства других функций переключения при отказе</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>Резервная батарея</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>Максимальное число модулей в горячем резерве</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <td>Сетевое соединение для обслуживания</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Hi-Track</td>
+    <td>Обязательно</td>
+    <td>Обязательно</td>
+    <td>Обязательно</td>
+    <td>Обязательно</td>
+  </tr>
+  <tr>
+    <td>TrueCopy </td>
+    <td>Нет</td>
+    <td>Нет</td>
+    <td>Нет</td>
+    <td>Опция</td>
+  </tr>
+  <tr>
+    <td>ShadowImage</td>
+    <td>Опция</td>
+    <td>Опция</td>
+    <td>Опция</td>
+    <td>Опция</td>
+  </tr>
+  <tr>
+    <td>Resource Manager</td>
+    <td>Стандартно</td>
+    <td>Стандартно</td>
+    <td>Стандартно</td>
+    <td>Обязательно*</td>
+  </tr>
+  <tr>
+    <td>HiCommand Device Manager</td>
+    <td>Опция</td>
+    <td>Опция</td>
+    <td>Опция</td>
+    <td>Опция</td>
+  </tr>
+  <tr>
+    <td>SANtinel</td>
+    <td>Стандартно</td>
+    <td>Стандартно</td>
+    <td>Стандартно</td>
+    <td>Опция</td>
+  </tr>
+  <tr>
+    <td>FlashAccess</td>
+    <td>Стандартно</td>
+    <td>Стандартно</td>
+    <td>Стандартно</td>
+    <td>Опция</td>
+  </tr>
+  <tr>
+    <td>SNMP</td>
+    <td>Стандартно</td>
+    <td>Стандартно</td>
+    <td>Стандартно</td>
+    <td>Опция</td>
+  </tr>
+</table>
+<h4>HiCommand Management Framework </h4>
+<p>HiCommand Management Framework - набор открытых и интуитивно понятных инструментов для эффективного управления хранением данных распределенных корпоративных приложений. Это ПО разработано на основе промышленных стандартов, включая Common Information Model (CIM), Simple Object Access Protocol (SOAP) и eXtensible Markup Language (XML). Оно соответствует инициативе Bluefin Storage Management Initiative ассоциации Storage Networking Industry Association (SNIA). Соответствие стандартам гарантирует совместимость не только с ПО Hitachi Data Systems, но и с продуктами независимых разработчиков ПО. Открытый набор интерфейсов API HiCommand обеспечивает приложениям режим plug and play - заказчики получают свободу выбора оптимальных средств управления средой хранения данных. HiCommand также позволяет реализовать полезные сервисы, включая автоматизацию на основе политик, которая применяет деловые правила к операциям системы хранения данных.
+<p>HiCommand Management Framework настраивается и легко интегрируется в существующую инфраструктуру для оптимизации управления хранением данных. Особенности этого ПО помогают уменьшить продолжительность обучения системных администраторов и сократить совокупную стоимость владения, повысить производительность системы хранения.
+<p>Модуль HiCommand Device Manager, оснащенный единым графическим интерфейсом пользователя, позволяет через IP-соединение конфигурировать, контролировать и настраивать системы Thunder 9500 V Series, Hitachi Freedom Storage Lightning 9900 V Series и Lightning 9900 Series, а также системы Sun StorEdge 9900 Series и T3. Система поддерживает ряд протоколов сетей хранения данных и методов подключения, используемых различными приложениями, что упрощает организацию комплексов хранения на базе SAN, NAS и iSCSI. Модель Thunder 9500 V Series стандартно способна работать с протоколами Fibre Channel для SAN, гигабитным Ethernet для NAS, iSCSI для открытых систем и SAN.
+<p>Благодаря архитектуре Hi-PER, полной поддержке Fibre Channel и высокопроизводительных дисков данные системы способны легко обеспечивать параллельный доступ к информации по нескольким протоколам и соединениям.
+<h3>Защита критически важной информации </h3>
+<p>Системы хранения Thunder 9500 V Series не только легко консолидируются и модернизируются, но и масштабируются без прерывания работы, поэтому приложения клиентов для групповой работы (такие, как Microsoft Exchange или Lotus Notes), хранилища данных, системы углубленного анализа данных, поддержки принятия решений и автоматизации бизнес-процессов (ERP) в ходе таких операций продолжают функционировать и остаются доступными.
+<p>Все критичные компоненты Thunder 9500 V Series резервированы; кроме того, система обеспечивает непрерывность бизнеса и защиту информации за счет быстрого резервного копирования и восстановления данных. Сервисное обслуживание также не требует прерывания работы системы благодаря архитектуре Hi-PER, технологии замены компонентов в горячем режиме и зеркалированной кэш-памяти. Мощный программный пакет Business Continuity Software Suite Thunder 9500 V Series позволяет добиться еще большей готовности данных и непрерывности работы критичных бизнес-приложений.
+<p>Thunder 9500 V Series поддерживает подключение к открытым системам как напрямую, так и через сеть, что облегчает и делает гибким процесс построения оптимальной инфраструктуры информационной системы, например, ориентированной на эффективную и надежную работу в условиях пиковых нагрузок.
+<h3>Программное обеспечение </h3>
+<p>В числе поддерживаемых Thunder 9500 V Series операционных систем стоит в первую очередь отметить Sun Solaris, Microsoft Windows (NT и 2000), IBM AIX, HP-UX, Sequent DYNIX/ptx, SGI IRIX, Novell NetWare, HP Tru64 Unix, Red Hat Linux, SuSE Linux, Turbolinux, HP OpenVMS, а также NCR MP-RAS.
+<p>Программные решения Hitachi Freedom Storage, предназначенные для обслуживания систем Thunder 9500 V Series, включают следующие пакеты: Storage Area Management, Business Continuity, Backup and Recovery, Data Movement, Performance Enhancement.
+<h4>Storage Area Management Suite </h4>
+<p>Пакет Storage Area Management Suite, включающий среду HiCommand Management Framework, инструментарий и диспетчер ресурсов Hitachi Resource Manager, решает многие проблемы управления хранением данных и позволяет сделать работу эффективнее. Открытая и расширяемая среда HiCommand Management Framework позволяет легко интегрировать и оптимизировать управление хранением для существующих инфраструктур и смешанных сред. Можно расширять HiCommand Management Framework, начав с модуля HiCommand Device Manager и вплоть до полного набора приложений для управления хранением данных.
+<p>Модули пакета позволяют клиенту практически из любой точки мира конфигурировать и контролировать системы Hitachi Freedom Storage Thunder 9200, Thunder 9500 V Series, Lightning 9900 V Series и Lightning 9900 Series, а также системы Sun StorEdge 9900 Series и T3. Работая на логическом или физическом уровне, Device Manager упрощает управление системами хранения данных, позволяя более эффективно использовать имеющиеся ИТ-ресурсы.
+<p>Идеальное решение для простых сред - Resource Manager, пакет утилит управления, включающий инструменты Hitachi FlashAccess, LUN Manage и SANtinel. Пакет рассчитан на системных администраторов, которым требуется гибкое удобное средство конфигурирования и обработки ошибок. Пользователи могут контролировать системы хранения и управлять ими с помощью графического интерфейса или командной строки. Resource Manager предоставляет важную информацию об использовании ресурсов (работа подсистемы ввода-вывода, использование кэш-памяти и степень готовности, а также оповещение о событиях), которая помогает оптимизировать производительность. Администраторы с помощью утилиты Password Protection могут авторизовать до 20 пользователей. SANtinel контролирует доступ хостов к LUN системы Thunder 9500 V Series в среде SAN, предотвращая для неавторизованных пользователей запись данных на диски, выделенные серверам.
+<p>Для гибкого конфигурирования системы хранения, обеспечивающего высокую и надежную производительность, можно использовать программу VERITAS Volume Manager, входящую в состав пакета VERITAS Foundation Suite.
+<h4>Business Continuity Suite </h4>
+<p>Грамотная стратегия обеспечения непрерывности бизнеса необходима любому предприятию. Реализовать ее поможет пакет Business Continuity Suite, базирующийся на технологии Hitachi TrueCopy (для системы Thunder 9570V). Он включает программное обеспечение Hitachi ShadowImage и Hitachi Dynamic Link Manager, сервис Hi-Track и сервисы защиты данных (Data Protection Services).
+<p>Инструментарий TrueCopy выполняет репликацию информации - либо локально между системами Thunder 9570V в пределах одного центра обработки данных, либо удаленно между географически распределенными площадками. Репликация при этом почти не влияет на производительность. TrueCopy эффективно защищает критически важные данные, созданные вплоть до момента сбоя, и устраняет необходимость в сложном ручном процессе восстановления с магнитной ленты.
+<p>Программа создает копии LUN внутри системы без прерывания сервисов и критически важных приложений. В результате можно чаще полностью выполнять резервное копирование и тестирование. Время развертывания приложений сокращается, а критически важная информация оказывается защищенной.
+<p>Еще одно средство, Hitachi Command Control Interface, дает возможность пользователям открытых систем запускать на своих хост-компьютерах программы для управления инструментами TrueCopy и ShadowImage. Благодаря этому можно автоматически выполнять в пакетном режиме операции копирования, используя интерфейс командной строки.
+<p>ПО Dynamic Link Manager обеспечивает автоматическое выравнивание нагрузок между каналами, переключение на резервный канал при отказе основного и восстановление. Это полностью исключает перегрузку одного канала при недозагрузке или недоступности других. Система профилактического обслуживания Hi-Track выполняет непрерывный мониторинг систем Thunder 9500 V Series и автоматически передает собранную информацию о состоянии аппаратуры в центр технической поддержки Hitachi Data Systems, который предпринимает необходимые действия для устранения потенциальных проблем. Эта схема сокращает время обнаружения и устранения неисправностей для поддержания высокой производительности системы.
+<h4>Backup and Recovery Suite </h4>
+<p>Сотрудничество Hitachi Data Systems с ее стратегическими партнерами расширяет для клиентов возможности оптимизации процессов, связанных с резервированием. Пакет VERITAS NetBackup обеспечивает быстрое и надежное резервное копирование и восстановление в гетерогенной среде, причем объемы данных могут исчисляться терабайтами и даже петабайтами. Опция VERITAS NetBackup Array Integration и программный агент VERITAS NetBackup ServerFree Agent, тесно интегрированные с функциями ShadowImage и Hitachi e-Copy, позволяют автоматизировать зеркальное копирование на системы Hitachi Freedom Storage без прерывания работы приложений. Для защиты данных предлагается также CommVault Galaxy.
+<h4>Performance Enhancement Suite </h4>
+<p>Этот мощный пакет включает программы FlashAccess и Dynamic Link Manager, ускоряющие доступ к хранящейся на системах Thunder 9500 V Series информации. FlashAccess помогает обеспечить необходимую максимальную физическую емкость и в то же время очень быстрый доступ к информации. Dynamic Link Manager автоматизирует балансировку нагрузки ввода-вывода, переключение с основного канала на резервный и восстановление основного канала после устранения сбоя.
+<p>Средства Performance Enhancement Suite вместе с технологией виртуализации Thunder 9500 V Series помогают избежать простоев, гарантируя достижение высокой производительности и масштабируемости без специальных настроек. В числе прочего программы пакета позволяют в режиме реального времени &quot;запирать&quot; данные в кэш-памяти, а также выполнять чтение и запись со скоростью кэш-памяти (это устраняет задержки, связанные с доступом к жесткому диску).
+<p>В заключение стоит еще раз отметить, что высококачественные модульные системы Hitachi оптимальны для задач консолидации хранения. Они хорошо подходят для построения централизованной системы хранения в больших и средних предприятиях, а также в распределенной среде в компаниях с развитой организационной инфраструктурой отделов и участков.
+
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8541.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Поколение V: новый стандарт модульных систем хранения
+</a><br><a href="detail.php@ID=8541.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Игорь Колбин 
+Эксперты полагают, что в будущем инфраструктура хранения данных будет представлять собой синтез управляющего ПО и мощных&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8541.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8541&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0b073ab55b984658a61e162c17ced962'><img src='../bitrix/tools/captcha.php@captcha_code=0b073ab55b984658a61e162c17ced962' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

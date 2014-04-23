@@ -1,0 +1,395 @@
+<HTML>
+<HEAD>
+<title>Технологические подходы к виртуализации ПО</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Сразу подчеркнем: на сегодняшний день нет устоявшейся классификации виртуализационных технологий и четкой системы определений и понятий. Это хорошо видно на примере англоязычной Wikipedia, которая на слово virtualization выдает несколько разноречивых" />
+<meta name="description" content="Сразу подчеркнем: на сегодняшний день нет устоявшейся классификации виртуализационных технологий и четкой системы определений и понятий. Это хорошо видно на примере англоязычной Wikipedia, которая на слово virtualization выдает несколько разноречивых" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398078582','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13246.html'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13654.html'>Технологии ABBYY обеспечивают оперативный доступ к архивным документам</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm14837' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=14837&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm14837"].SHOW_IMAGE.value="N"; document.forms["PrintForm14837"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm14837"].SHOW_IMAGE.value="Y"; document.forms["PrintForm14837"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(14837);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=14837.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=14837.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(14837);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a><br /></p><h1>Технологические подходы к виртуализации ПО</h1>Автор: Андрей Колесов<br />16.06.2009<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=14837&amp;PICTURE_ID=14838.html'><IMG src='../upload/iblock/26b/ris2-1-150.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 1. Модели управления виртуальными машинами и серверами: а) виртуальные машины – создание неоднородных вычислительных сред на базе разных гостевых ОС; б) виртуальные контейнеры – создание однородных вычислительных сред на базе ядра хостовой ОС.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=14837&amp;PICTURE_ID=14839.html'><IMG src='../upload/iblock/beb/ris2-2-150.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 2. Основные варианты управления виртуальными машинами: а) гипервизор первого типа (автономный), б) гипервизор второго типа (на базе хостовой ОС).</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=14837&amp;PICTURE_ID=14840.html'><IMG src='../upload/iblock/7b7/ris2-3-150.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 3. Структура решения Project Independence.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=14837&amp;PICTURE_ID=14841.html'><IMG src='../upload/iblock/407/ris2-4-150.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 4. Схема виртуализации приложений.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=14837&amp;PICTURE_ID=14842.html'><IMG src='../upload/iblock/f12/ris2-5-150.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 5. Схема реализации терминального доступа (виртуализация представлений): а) классический вариант с использованием ПК; б) вариант тонкого клиента NComputing.</b></TD></TR></TABLE><DIV class='article-text'>
+<p>Сразу подчеркнем: на сегодняшний день нет устоявшейся классификации виртуализационных технологий и четкой системы определений и понятий. Это хорошо видно на примере англоязычной Wikipedia, которая на слово virtualization выдает несколько разноречивых вариантов подборок статей по этой теме, причем некоторые записи выглядят утратившими актуальность или содержат противоречивые сведения. В этой статье мы приведем некоторый собственный упрощенный вариант классификации базовых подходов к реализации виртуализации ПО, с учетом информации из различных источников. </p>
+
+<h2>Виртуализация серверов</h2>
+
+<p>Основная идея здесь заключается в возможности параллельного запуска на одном физическом компьютере нескольких операционных сред. В настоящее время используются два основных подхода: виртуальные машины (ВМ) и виртуальные контейнеры (ВК). Принципиальное отличие между ними заключаются в том, что в первом случае для каждой ВМ используется собственный экземпляр ОС, а во втором все контейнеры работают с ядром одной ОС, используя лишь собственное окружение среды (рис. 1). </p>
+
+<p>Вполне очевидно, что вариант ВМ позволяет поддерживать неоднородные системы, а ВК &ndash; только однородные среды, т.е. механизм ВМ более универсален. Но зато ВК более эффективны с точки зрения быстродействия и затрат ресурсов на поддержку собственно механизма виртуализации. Сегодня ведущим стал подход ВМ, который используют практически все поставщики средств серверной виртуализации (VMware, Microsoft, Citrix и т.д.). Технологию контейнеров реализуют фактически только компания Parallels (для Linux и Windows) и Sun – для собственной Solaris. </p>
+
+<h3>Виртуальные машины</h3>
+
+<p>Для обозначения технологий поддержки исполнения ВМ в последние два года повсеместно используется термин гипервизор (hypervisor). Однако этот термин может употребляться как в широком, так и в узком смысле. </p>
+
+<p>Итак, в широком понимании, гипервизор – это программа или аппаратная схема, обеспечивающая или допускающая одновременное, параллельное выполнение нескольких или даже многих ОС на одном и том же хост-компьютере. Гипервизор также обеспечивает изоляцию ОС друг от друга, их защиту, разделение ресурсов между несколькими запущенными ОС и управление ресурсами (Wikipedia). В этом смысле термином &laquo;гипервизор&raquo; обозначается целый класс ПО, которое отвечает за процесс исполнения ВМ, чтобы отделить эту категорию продуктов от других компонентов системы виртуализационного ПО (в частности, от средств управления теми же гипервизорами и виртуальными средами). </p>
+
+<p>Для реализации технологий ВМ используются разные подходы, среди которых можно выделить два основных (рис. 2). В литературе до сих пор нет устоявшихся названий для них; мы возьмем за основу вариант, приведенный в Wikipedia. </p>
+
+<p><b>Гипервизор первого типа</b> (автономный, тонкий, исполняемый на &quot;голом железе&quot;, Type 1, native, bare-metal) – программа, исполняемая непосредственно на аппаратном уровне компьютера и выполняющая функции эмуляции физического аппаратного обеспечения и управления аппаратными средствами и гостевыми ОС (рис. 2а). Такой гипервизор сам по себе в некотором роде можно считать минимальной ОС. </p>
+
+<p><b>Гипервизор второго типа</b> (хостовый, монитор виртуальных машин, hosted, Type-2, Virtual Machine Monitor, VMM) – специальный дополнительный программный слой, расположенный поверх основной хостовой ОС, который в основном решает функции управления гостевыми ОС, а эмуляцию и управление аппаратурой берет на себя хостовая ОС (рис. 2б). </p>
+
+<p><b>Гипервизор гибридный</b> (Hybrid, Type-1+). Объединенный вариант первых двух, в котором функции управления аппаратными средствами возложены на тонкий гипервизор и специальную депривилегированную сервисную ОС, работающую под управлением тонкого гипервизора. Обычно гипервизор управляет напрямую процессором и памятью компьютера, а через сервисную ОС гостевые ОС работают с остальными аппаратными компонентами. </p>
+
+<p>В узком понимании &quot;гипервизор&quot; – это &quot;гипервизор первого типа&quot;. Именно он считается классическим вариантом реализации архитектуры ВМ, и именно он был впервые реализован компанией IBM в 1960 г. в системе CP/CMS, которая считается прародителем сегодняшней z/VM*. </p>
+
+<p>Виртуализация же систем x86 начиналась в конце 90-х с использования второго варианта, VMM, который долгое время доминировал на рынке (и остается пока единственным для рабочих станций). Именно с VMM начала свою деятельность в 1999 г. компания VMware, создав решение для ПК – Workstation. Затем появился вариант этой же технологии для серверов – GSX Server (теперь просто VMware Server), и лишь потом был создан настоящий гипервизор – ESX Server. </p>
+
+<p>Термин «гипервизор» стал употребляться применительно к x86-компьютерам лишь 3–4 года назад, с началом широкого использования именно этого подхода другими разработчиками для создания собственных продуктов, чтобы отличить его от традиционного для x86 варианта VMM. Отметим, что одна из ключевых характеристик VMM – спектр поддерживаемых хостовых ОС. В 2008 г. гипервизор первого типа стал доминирующим на рынке, и потому данным термином теперь обозначают все ПО для исполнения виртуальных машин. </p>
+
+<p>Здесь нужно сказать, что реализация механизма ВМ для компьютеров x86 была непростой задачей. Во-первых, нужно было преодолевать унаследованные особенности этой программно-аппаратной архитектуры, которая в начальном своем варианте была ориентирована на простейшие однозадачные режимы работы. Во-вторых, во многих отношениях ПК – это более сложное устройство, чем мэйнфрейм, хотя бы потому что в нем используется множество компонентов, причем от разных поставщиков. В-третьих, виртуализация требует достаточно глубокого проникновения в ядро ОС, которое является очень сложной программой, к тому же зачастую проприетарной. </p>
+
+<p>Принципиальной исторической проблемой архитектуры x86 была невозможность параллельного исполнения некоторых команд процессора в привилегированном режиме работы (что нужно было для работы нескольких ОС). Для ее разрешения использовались два основных метода виртуализации: полная виртуализация (Full, Native Virtualization) и паравиртуализация (paravirtualization). В первом случае конфликты исключались с помощью бинарной трансляции &quot;плохих команд&quot; на уровне гипервизора, во втором – за счет исключения этих команд путем коррекции ядра гостевой ОС. </p>
+
+<p>Однако в 2004-05 гг. Intel и AMD внесли коррективы в архитектуру своих процессоров, реализовав в них соответственно технологии Intel VT и AMD SVM, которые стали поддерживать параллельную работу ОС на аппаратном уровне. Это существенно упростило создание виртуализационных средств, что способствовало росту числа разработок в этой области. Но тут нужно отметить, что многие появившиеся в последнее время гипервизоры (например, Microsoft Hyper-V) изначально ориентированы на работу только с современными процессорами, поддерживающими архитектуру Intel VT или AMD SVM. </p>
+
+<h3>Варианты реализации гипервизорных решений </h3>
+
+<p>В настоящее время системы виртуализации серверов на базе хостового гипервизора (тип 2) уходят с рынка и используются только в унаследованных системах, для проведения макетных исследований или в каких-то нишевых задачах. В качестве примера можно привести VMware Server, Microsoft Virtual Server и Parallels Server for Mac. </p>
+
+<p>Доминирующее положение на рынке занимают виртуализационные решения на базе &quot;настоящего&quot; гипервизора (тип 1) – VMware ESX Server, Microsoft Hyper-V, Citrix XenServer, Oracle VM, Sun Logical Domains Hypervisor и т. д. Однако нужно подчеркнуть, что для реализации гипервизоров типа 1 также используются разные методы. В частности, это хорошо видно на примере VMware, которая отличается от варианта Microsoft и Citrix (последние два, наверное, правильнее относить к гипервизорам смешанного типа). </p>
+
+<p>Если говорить о законченном ВМ-решении, то оно обычно состоит из двух основных компонентов – среды исполнения ВМ (собственно гипервизор) и средства управления ВМ. В случае VMware ее ESX Server состоит из собственно гипервизора (ESXi) и сервисной консоли на базе ядра Linux. В силу архитектурных особенностей ESXi может использоваться автономно, без консоли, но в этом случае у него ограничены возможности управления системой (изначально ESXi был предназначен для &quot;встроенного&quot; применения, в качестве OEM-версии для производителей серверов, которые могли приделывать к нему свои средства управления). В XenServer и Hyper-V компоненты гипервизора и управления нельзя так же четко разделить, так как в них ядро ОС (соответственно Linux и Windows) задействовано для исполнения ВМ. </p>
+
+<p>Все эти нюансы важны в плане понимания не только моделей лицензирования (и того, что входит в состав &quot;бесплатных&quot; продуктов), но и текущих – а главное, потенциальных – технических возможностей различных решений. </p>
+
+<h3>Виртуальные контейнеры</h3>
+
+<p>Технология контейнеров использует метод виртуализации на уровне ядра ОС (operating system-level virtualization), что подразумевает использование одного ядра хостовой ОС для создания независимых параллельно работающих операционных сред. Для гостевого ПО создается только собственное сетевое и аппаратное окружение. </p>
+
+<p>Пионером освоения этой технологии для x86-серверов в начале текущего десятилетия стала компания Parallels (до 2008 г. называлась SWsoft) со своим продуктом Vituozzo. До недавнего временя она также использовала для обозначения этого подхода термины Virtual Environment и Virtual Privite Server. Название Virtuozzo порой используется как синоним всего этого направления виртуализации, поскольку все остальные средства намного уступают ему в популярности. Пакет Virtuzzo изначально был создан для Linux, в 2005 г. появилась версия для Windows, и примерно в то же время компания Sun реализовала Solaris Containers для свой ОС (тогда же появился и термин &quot;контейнеры&quot;). </p>
+
+<p>Технология ВК создает существенно меньшую (почти нулевую) дополнительную нагрузку (overhead) на компьютер по сравнению с гипервизорами. Ее недостаток – поддержка только однородных сред. Впрочем, для решения многих задач консолидации неоднородность нетипична. Тем не менее применение ВК существенно уступает по популярности варианту BM (фактически его применяют только хостинг-провайдеры), причем этот разрыв нарастает. В плане оценки перспективности ВК настораживает то, что сегодня ни один из ведущих игроков на этом рынке (VMware, Microsoft, Citrix) такой вариант виртуализации не предлагает и ничего не говорит о планах его реализации в будущем. </p>
+
+<h2>Виртуализация настольных ОС</h2>
+
+<p>Использование виртуализации для компьютеров архитектуры x86 началось именно с настольных систем, но фактически сразу же это направление ушло на второй план в общей проблематике, и только сейчас становится заметно повышение интереса к нему. </p>
+
+<p>Одно из объяснений заключается в том, что сама задача виртуализации ПК не столь актуальна (по сравнению с серверами), поскольку тут работа идет в однопользовательском режиме, в котором вполне справляются традиционные ОС. Поэтому для подавляющего числа обычных пользователей (тем более корпоративных) нет необходимости запускать несколько разных ОС. Поэтому виртуализация ПК применяется лишь при решении довольно специфических задач (разработка ПО, изучение и демонстрация ПО, поддержка учебных классов и т. п.). </p>
+
+<p>Второй важный момент: при всем кажущемся сходстве проблема виртуализации ПК отличается от серверов. Здесь не так важны вопросы эффективного использования вычислительных ресурсов, а главная сложность заключается в необходимости поддержки очень широкого спектра аппаратных компонентов. В результате сложилось так, что для ПК используется только метод виртуальных машин, причем исключительно в варианте гипервизора типа 2 с программной эмуляцией аппаратуры через хостовую ОС. </p>
+
+<p>Безусловный лидер в этой сфере &mdash; пионер x86-виртуализации WMware Workstation. В последние годы заметно растет также популярность Microsoft Visual PC, которая распространяется бесплатно. Для компьютеров Mac широко применяется решение Parallels Server. Начиная с 2008 г. корпорация Sun активно продвигает пакет Visual Box. </p>
+
+<p>Однако в последние годы стал расти интерес к использованию виртуализации настольных ОС в корпоративном секторе для широкого круга пользователей. Этому во многом способствовало появление проблем с поддержкой унаследованных приложений в Windows Vista, а также необходимостью решения на одном ПК корпоративных и персональных задач. </p>
+
+<p>Так или иначе, но в начале 2009 г. Citrix и VMware объявили о планах использования уже в текущем году гипервизоров для ПК. Работу в этом направлении Cirtix ведет совместно с корпорацией Intel в рамках Project Independence (проект &ldquo;Независимость&rdquo;). Его реализация позволит запускать на одном ПК две независимые виртуальные машины, одна из которых представляет собой образ персональной системы, где пользователь может делать все, что хочет, а вторая — корпоративный вариант системы, доставляемый на данное рабочее место из дата-центра (рис. 3). При этом в основной виртуальной машине можно будет работать с аппаратными компонентами, а не с эмулированными, в частности, можно полностью задействовать графический ускоритель компьютера для просмотра видео, современных игр и т. д. А в остальных виртуальных машинах будет поддерживаться режим эмуляции, т.е. корпоративная система будет исполняться в изолированном окружении, с полным обеспечением безопасности корпоративных приложений и защиты от угроз. </p>
+
+<h2>Виртуализация приложений</h2>
+
+<p>Виртуализация приложений подразумевает использование модели сильной изоляции прикладных программ с управляемым взаимодействием с ОС, при которой виртуализуется каждый экземпляр приложений, все его основные компоненты: файлы (включая системные), реестр, шрифты, INI-файлы, COM-объекты, службы (рис. 4). В каком-то смысле этот вид виртуализации можно считать упрощенным вариантом виртуальных контейнеров, но только для отдельного приложения. В отличие от виртуализации ОС, этот подход не обеспечивает поддержку унаследованных приложений; тут решается только задача надежной работы приложений в многозадачной среде. </p>
+
+<p>Приложение в этом случае исполняется без процедуры инсталляции в традиционном ее понимании и может запускаться прямо с внешних носителей (например, с флэш-карт или из сетевых папок). С точки зрения ИТ-отдела такой подход имеет очевидные преимущества: ускоряется развертывание настольных систем и появляется возможность управления ими, сводятся к минимуму конфликты между приложениями и потребность в тестировании их совместимости. Фактически именно такой вариант виртуализации используется в Microsoft Application Virtualization (ранее называлось Softgrid), VMware Thinstall, Symantec/Altiris Virtualization, Novell ZENworks Application Virtualization. </p>
+
+<h2>Виртуализация представлений</h2>
+
+<p>Этот термин ввела пару лет назад корпорация Microsoft для обозначения технологий поддержки терминального доступа, которые начали активно применяться для x86-компьютеров с конца 90-х гг. Основная идея здесь – разделение процессов исполнения приложения и визуализации пользовательского интерфейса, что обеспечивает перенос основной вычислительной нагрузки на сервер и позволяет применять тонкий клиент. </p>
+
+<p>Появление средств терминального доступа поначалу было связано в основном с задачей использования устаревших ПК и унаследованного ПО: настольные приложения исполнялись на серверах, а рабочие станции выступали фактически как терминалы, предоставляя пользовательский интерфейс. Но потом стали видны и другие, даже более важные преимущества централизованной обработки данных, в частности, в плане безопасности и снижения затрат на администрирование систем. </p>
+
+<p>Создание и развитие технологий терминального доступа связано с именами компаний Cirtix и Microsoft, имеющих многолетнюю историю стратегического сотрудничества в этой сфере, где Citrix занимает лидирующие позиции на уровне high-end решений со своим комплексом XenApp (ранее назывался Presentation Server), а Microsoft доминирует в low-сегменте с Windows Terminal Services. </p>
+
+<p>Однако в последние годы в этой сфере начинают активно действовать новые компании, в том числе производители аппаратных средств (HP, Sun, Wyse). Появляются новые игроки с качественно новыми решениями. И здесь нужно в первую очередь упомянуть о быстро набирающих популярность решениях компании NComputing. </p>
+
+<p>В несколько упрощенном виде терминальная технология позволяет преобразовать настольное приложение в клиент-серверный вариант за счет перехвата пользовательского интерфейса, который потом передается на ПК, где исполняется специализированным клиентским ПО под управлением стандартной ОС (рис. 5а). </p>
+
+<p>Решение NComputing – это специализированный программно-аппаратный комплекс, состоящий из программной среды виртуализации vSpace и терминальных устройств (до 30), к которым непосредственно подключаются монитор, клавиатура и мышь (рис. 5б). Иными словами, по сравнению с традиционным вариантом на клиентском месте вместо системного блока, ОС и клиентского ПО используется специализированное устройство. Ключевую роль в этом комплексе играет ПО vSpace, об архитектуре которого пока почти ничего не известно. Но скорее всего это ПО реализует некий смешанный вариант технологии виртуальных контейнеров и терминального сервера применительно к настольным системам. При этом обмен данными между сервером и терминалом выполняется с помощью патентованного протокола UXP, оптимизированного для обмена мультимедийной информацией. В целом очевидно, что NComputing уступает по универсальности (ограниченное число терминалов, подключаемых только в локальных сетях) традиционному варианту терминалов на базе ПК, но в то же время может эффективно применяться во многих реальных ситуациях. </p>
+
+<p></p>
+
+<p><em>* Термин «гипервизор» был специально придуман IBM в 1972 г., чтобы подчеркнуть отличие от термина «супервизор», традиционно обозначавшего ядро ОС, а точнее, менеджер ресурсов ядра в эпоху мэйнфреймов. Гипервизор представляет собой расширение и обобщение понятия супервизора: подобно тому, как супервизор в ядре ОС обеспечивает изоляцию пользовательских программ друг от друга, выделение и освобождение ресурсов для пользовательских процессов, так и гипервизор обеспечивает изоляцию и управление ресурсами для самих ОС как целого, вместе с их пользователями и процессами (Wikipedia).</em> </p>
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=21113.html'>Программные инструменты криминалистов: можно ли нарушить закон в онлайне и остаться непойманным?</A></b></li><li><b><A href='detail.php@ID=20694.html'>Национальные особенности рынка ECM/СЭД в России</A></b></li><li><b><A href='detail.php@ID=20562.html'>Корпоративная мультиплатформенность бизнес-приложений</A></b></li><li><b><A href='detail.php@ID=19146.html'>Что нового в новой версии виртуальной машины Oracle?</A></b></li><li><b><A href='detail.php@ID=17871.html'>Облачная стратегия Microsoft 2011</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24814.html'>Виртуализация для сервис-провайдеров – платформа Cisco ESP</A></b></li><li><b><A href='detail.php@ID=24808.html'>Горизонтально масштабируемые СХД NetApp и виртуализация для облачных инфраструктур</A></b></li><li><b><A href='detail.php@ID=24772.html'>Решение для виртуализации серверов HP Moonshot</A></b></li><li><b><A href='detail.php@ID=24427.html'>Новинки ViewSonic в области VDI и дисплейных технологий</A></b></li><li><b><A href='detail.php@ID=24343.html'>Cisco DaaS: виртуальные настольные системы как сервис</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=14837.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Технологические подходы к виртуализации ПО</a><br><a href="detail.php@ID=14837.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Сразу подчеркнем: на сегодняшний день нет устоявшейся классификации виртуализационных технологий и четкой системы определений и понятий. Это хорошо &hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=14837.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=14837&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='011ccc0b815ef0a5f4a8684ae7c63963'><img src='../bitrix/tools/captcha.php@captcha_code=011ccc0b815ef0a5f4a8684ae7c63963' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

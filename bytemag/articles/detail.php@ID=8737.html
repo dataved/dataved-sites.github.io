@@ -1,0 +1,486 @@
+<HTML>
+<HEAD>
+<title>Методы тестирования оптического кабеля
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Елена Андреева, к.ф-м.н., менеджер ЗАО «Перспективные технологии» andreeva@peterlink.ru Алексей Сергеев, инженер отдела активного оборудования ЗАО «Перспективные технологии» pfiber@nm.ru Оптические кабели находят все более широкое применение - от" />
+<meta name="description" content="Елена Андреева, к.ф-м.н., менеджер ЗАО «Перспективные технологии» andreeva@peterlink.ru Алексей Сергеев, инженер отдела активного оборудования ЗАО «Перспективные технологии» pfiber@nm.ru Оптические кабели находят все более широкое применение - от" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398077577','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13246.html'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13654.html'>Технологии ABBYY обеспечивают оперативный доступ к архивным документам</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8737' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8737&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8737"].SHOW_IMAGE.value="N"; document.forms["PrintForm8737"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8737"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8737"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8737);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8737.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8737.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8737);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a><br /></p><a href='../numbers/index.php@ID=11565.html'>№3 (44), март 2002</a><h1>Методы тестирования оптического кабеля
+</h1>10.03.2002<p></p><DIV class='article-text'><p><i>Елена Андреева</i>, <br>к.ф-м.н., менеджер ЗАО «Перспективные технологии»<br>
+<a href="mailto:andreeva@peterlink.ru">andreeva@peterlink.ru</a>
+<p><i>Алексей Сергеев</i>, <br>инженер отдела активного оборудования ЗАО «Перспективные технологии»<br>
+<a href="mailto:pfiber@nm.ru">pfiber@nm.ru</a>
+<p>Оптические кабели находят все более широкое применение - от магистральных линий и корпоративных систем передачи данных до локальных компьютерных сетей. Преимущество волоконной оптики несомненно: реализуемые в оптических каналах скорости передачи информации пока недостижимы для медных кабелей.
+<p>Немаловажно и то преимущество, что тестировать оптический кабель проще. Измерению подлежит меньшее число параметров, в большинстве случаев - только потери в кабеле, так как перекрестных помех в оптике нет. Кроме того, приборы для тестирования оптических каналов дешевле, чем для медных.
+<p>Несмотря на возрастающее разнообразие измерительных приборов, основным &quot;помощником&quot; специалиста по установке и эксплуатации волоконно-оптических систем служит оптический тестер - без преувеличения, самое распространенное рабочее средство измерения. Тестер используется при входном контроле параметров оптического кабеля, его монтаже, приемосдаточных испытаниях кабельной системы, контроле выходных параметров активного оборудования и обслуживании действующей линии. Преимущества этого скромного прибора - простота использования, малые габариты и масса, автономное питание и сравнительно низкая стоимость. Тестер обеспечивает достаточно высокую точность измерений, стабильность параметров в течение всего времени измерения, удобен в обращении, компактен и экономичен.
+<p>Для достоверного тестирования оптических волокон тестер следует подбирать в соответствии с активным оборудованием компьютерной сети. Так, например, если для передачи данных используется одномодовое активное оборудование и соответственно одномодовый кабель, то измерительный генератор также должен быть одномодовым. Кроме того, тестирование должно проводиться на длине волны передачи. Для того чтобы понять, что стоит за сухими цифрами и рекомендациями стандартов, рассмотрим подробнее &quot;начинку&quot; приборов.
+<p>Современное развитие ИТ влечет за собой рост и взаимопроникновение сетей передачи данных различного назначения. Локальные компьютерные сети включаются в корпоративные и ведомственные сети, объединяющие пользователей на большой территории. Это накладывает требования сертификации на компоненты кабельной системы как физической среды передачи данных и, следовательно, на контрольно-измерительное оборудование, используемое при тестировании сети. Требования к средствам измерений изложены в следующих законах и нормативных документах:
+<ol><li>&quot;Закон РФ об обеспечении единства измерений, 15.06.93&quot;.
+<li>&quot;Государственный надзор и ведомственный контроль за средствами измерений. Основные положения. ГОСТ 8.002-86. 21.02.1986&quot;.
+<li>&quot;Временные технические требования к оптическим средствам измерений, предназначенным для применения на Взаимоувязанной сети связи РФ с дополнением № 1. 1999&quot;.</ol>
+<h3>Оптический тестер как средство измерения излучаемой мощности</h3>
+<p>Тестер применяется для измерения мощности оптического излучения и определения потерь в волоконно-оптических световодах и кабелях. Исходя из этого, оптический тестер должен обеспечивать:
+<ul><li>большой динамический диапазон, достаточный для тестирования участков кабеля между усилителями;
+<li>требуемую точность измерения в соответствующем спектральном диапазоне;
+<li>возможность измерений в широком спектральном диапазоне;
+<li>долговременную стабильность параметров;
+<li>малое энергопотребление, обеспечивающее длительную работу от одного комплекта батарей.</ul>
+<p>По конструктивному исполнению тестеры подразделяются на два типа: комплекты из двух приборов - источника и измерителя и совмещающие в одном корпусе источник и измеритель. Тестеры в виде комплекта более универсальны, так как позволяют применять большее число методов измерений.
+<h4>Генераторы оптического излучения</h4>
+<p>Основные требования к генераторам излучения - обеспечение требуемой мощности в волоконном световоде и долговременной стабильности параметров излучения. Излучение может быть как непрерывным, так и модулированным последовательностью импульсов в виде меандра, следующих с частотой 270 Гц, 1 или 2 кГц. Обычно в качестве источников для тестеров используются полупроводниковые лазерные диоды или светодиоды; первые применяются в основном в одномодовых системах, а вторые - в многомодовых линиях связи небольшой протяженности. Лазерные диоды мощнее, и угловая апертура их излучения меньше, поэтому мощность в волоконном световоде выше, чем в случае светодиода. Однако стоимость лазеров выше, а обеспечить их стабильную работу довольно сложно.
+<p>Достигаемая на практике мощность излучения от лазерного источника в одномодовом волоконном световоде позволяет тестировать кабели длиной до 250 км, что достаточно при существующих длинах регенерационных участков на магистральных линиях связи. Для повышения временной стабильности параметров излучения применяют специальные меры. Резонатор лазера просветляется с одной стороны для согласования волноводных параметров с волоконным световодом и уменьшения отражений между выходной гранью лазера и торцом волокна, что снижает амплитудные и фазовые шумы источника. С другой стороны резонатора устанавливается фотодиод обратной связи. Обратная связь по фототоку позволяет контролировать выходную мощность лазера и компенсировать флуктуации, вызванные температурной чувствительностью полупроводниковой структуры. Совокупность этих мер обеспечивает стабильность энергетических параметров источника в течение длительного времени. Полупроводниковый лазер, сопряженный с волоконным счетоводом, показан на рис. 1.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2002/Optifiber/ris1.jpg" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Лазер, сопряженный с волокном.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Светодиодные полупроводниковые источники, применяемые в локальных компьютерных сетях, характеризуются более широкой диаграммой направленности, практически изотропной в азимутальном направлении. Уровень мощности, вводимой в стандартный многомодовый волоконный световод, в среднем на порядок ниже, чем в предыдущем случае. Так как длины сегментов компьютерных сетей на многомодовых кабелях в соответствии с действующими стандартами не превышают 2 км, этой мощности вполне достаточно для проведения измерений.
+<p>С точки зрения практики важна не столько мощность оптического излучения, введенного в световод, сколько динамический диапазон измерений для данного прибора, измеряемый в децибелах, - интервал между мощностью источника оптического излучения и порогом чувствительности измерителя оптической мощности. Динамический диапазон определяет максимальное затухание оптического сигнала, которое может быть измерено данным комплектом приборов.
+<h4>Измерители оптической мощности</h4>
+<p>Входящие в состав тестера измерители должны обеспечивать низкий порог чувствительности, широкий спектральный диапазон измерений, равномерную чувствительность в заданном спектральном диапазоне или на длинах волн калибровки.
+<p>Основной элемент измерителя - это фотодиод. Его базовая характеристика - чувствительность R, которая определяется как отношение фототока к падающей оптической мощности и измеряется в А/Вт:
+<pre>R~(((,</pre>
+<p>где ( - квантовая эффективность (отношение количества электронов на выходе фотодиода к количеству падающих на его фоточувствительную площадку квантов света), ( - длина волны оптического излучения. Для идеального фотодиода ( = 1. Спектральные зависимости чувствительности для некоторых типов фотодиодов представлены на рис. 2.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2002/Optifiber/ris2.gif" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Рис. 2. Спектральная зависимость чувствительности фотоприемников на основе Si, Ge и InGaAs.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В ближнем ИК-диапазоне квантовая эффективность высока у кремниевых фотодиодов. В области длин волн 1000-1600 нм высокой квантовой эффективностью характеризуются германиевые фотодиоды. Фотодиоды на основе тройных (InGaAs) и четверных (InGaAsP) соединений при прочих равных условиях могут использоваться в более широком спектральном диапазоне. Этим обусловлено все возрастающее применение в тестерах именно таких фотоприемников, и такая тенденция только усиливается в связи с развитием систем со спектральным уплотнением. Неравномерность спектральной чувствительности фотодиодов компенсируется за счет соответствующих схем обработки. Обычно устанавливается равная чувствительность в точках калибровки, например, 850, 1310 и 1550 нм. В приборах более высокого класса калибровку компенсации неравномерности можно проводить с заданным шагом по длине волны, например, 1 нм или 5 нм.
+<p>Применяемые в настоящее время фотоприемники имеют довольно широкую фоточувствительную площадку. Типовой размер такой площадки у фотодиода на основе InGaAs - 1 мм, на Si и Ge - 5 мм. Это существенно больше размеров модового пятна на выходе волоконного световода, что позволяет применять одни и те же измерители как на одномодовых, так и на многомодовых линиях. Максимальная допустимая для точных измерений мощность определяется границей линейности характеристики измерителя (с учетом неравномерного характера распределения мощности на выходе световода).
+<h3>Применение оптических тестеров</h3>
+<p>Основное назначение тестера - измерение мощности оптического излучения на выходе волоконно-оптической системы, определения затухания в ней и на отдельных компонентах кабельной системы и их соединениях. В настоящее время на российском рынке представлены измерительные приборы для волоконной оптики от десятков производителей; большинство из них иностранного производства. Параметры источников и приемников приведены в табл. 1 и 2.
+<h4>Таблица 1. Сравнительные характеристики некоторых источников оптического излучения</h4>
+<table border=1>
+<tr><td>Произво-дитель</td><td>&quot;Перспек-тивные техно-логии&quot;</td><td>ЛОНИИР</td><td>КБВП</td><td>Wavetek</td><td>ANDO</td><td>EXFO</td></tr>
+<tr><td>Марка</td><td>ПТ10ХY</td><td>Алмаз11</td><td>FOD 2107</td><td>OLS-6</td><td>AQ4251</td><td>FOT 700</td></tr>
+<tr><td>Тип источника</td><td>Лазер</td><td>Лазер</td><td>Лазер</td><td>Лазер</td><td>Лазер</td><td>Лазер</td></tr>
+<tr><td>Длина волны, нм</td><td>850, 1310, 1550</td><td>850, 1310, 1550</td><td>1550</td><td>1310, 1550</td><td>1310, 1550</td><td>1310, 1550</td></tr>
+<tr><td>Уровень выходного сигнала, дБ</td><td>? -6</td><td>? -3</td><td>-3</td><td>-7</td><td>-7</td><td>-4</td></tr>
+<tr><td>Нестабиль-ность выходного уровня, дБ</td><td>0,1</td><td>0,1</td><td>0,05</td><td>Н/д</td><td>0,05 (за 5 мин)</td><td>0,1 (за 8 ч)</td></tr>
+<tr><td>Ширина спектра излучения, нм</td><td>? 5</td><td>? 5</td><td>Н/д</td><td>Н/д</td><td>? 5</td><td>? 5</td></tr>
+<tr><td>Время непрерыв-ной работы от одного комплекта источников, ч </td><td>30</td><td>30</td><td>24</td><td>Н/д</td><td>15</td><td>Н/д</td></tr>
+<tr><td>Габариты, мм</td><td>120х60х22</td><td>195х100х41</td><td>150х90х30</td><td>185х95х49</td><td>265х88х43</td><td>235х125х60</td></tr>
+<tr><td>Масса, г</td><td>200</td><td>500</td><td>300</td><td>500</td><td>450</td><td>860</td></tr>
+</table>
+<p>
+<h4>Таблица 2. Сравнительные характеристики некоторых измерителей оптической мощности</h4>
+<table border=1>
+<tr><td>Производитель</td><td colspan=2>&quot;Перспективные технологии&quot;</td><td>ЛОНИИР</td><td>КБВП</td><td>W&G</td><td>EXFO</td></tr>
+<tr><td>Марка</td><td>ПТ2000</td><td>ПТ2010</td><td>Алмаз21</td><td>FOD 1202</td><td>OLP 18</td><td>FOT 10A</td></tr>
+<tr><td>Тип приемника</td><td>InGaAs</td><td>InGaAs</td><td>InGaAs</td><td>InGaAs</td><td>InGaAs</td><td>Ge</td></tr>
+<tr><td>Динамический диапазон, дБ</td><td>+3- -60</td><td>+10- -70</td><td>+3- -60</td><td>+3- -60</td><td>+26- -60</td><td>+6- -60</td></tr>
+<tr><td>Погрешность измерения относительных уровней, дБ</td><td>0,2</td><td>0,13</td><td>0,2</td><td>0,25</td><td>0,13</td><td>0,2</td></tr>
+<tr><td>Возможность усреднения</td><td>+</td><td>+</td><td>+</td><td>-</td><td>-</td><td>Н/д</td></tr>
+<tr><td>Диапазон длин волн, нм</td><td>800-1600</td><td>800-1600</td><td>800-1600</td><td>Н/д</td><td>800-1600</td><td>Н/д</td></tr>
+<tr><td>Основная относительная погрешность измерения на длине волны калибровки, дБ</td><td>0,5</td><td>0,25</td><td>0,5</td><td>Н/д</td><td>Н/д</td><td>Н/д</td></tr>
+<tr><td>Возможность усреднения результатов измерения</td><td>-</td><td>+</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>Наличие порта RS232 для связи с компьютером</td><td>-</td><td>+</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>Время непрерывной работы от одного комплекта батарей, ч</td><td>? 50 (комплект аккуму-ляторов)</td><td>? 40 (комплект аккуму-ляторов)</td><td>40</td><td>Н/д</td><td>12</td><td>Н/д</td></tr>
+<tr><td>Габариты, мм</td><td>120х60х22</td><td>120х60х22</td><td>195х100х41</td><td>150х90х30</td><td>185х95х49</td><td>Н/д</td></tr>
+<tr><td>Масса, г</td><td>200</td><td>200</td><td>Н/д</td><td>300</td><td>500</td><td>Н/д</td></tr>
+</table>
+<p>
+<p>Для работы в диапазонах 800, 1300, 1700 нм подходят тестеры с приемниками на основе InGaAs. Они более чувствительны, чем германиевые фотоприемники, и, как правило, обеспечивают большой динамический диапазон. Дополнительное преимущество фотоприемников на тройных структурах в том, что у них более гладкая спектральная зависимость чувствительности, и их можно использовать во всем спектральном диапазоне, а не только на длинах калибровки. Это свойство приобретает особую актуальность в связи с развитием систем со спектральным уплотнением.
+<p>Немаловажную роль играют схемные решения в приборах. Наибольшую точность измерений обеспечивают приемники с цифровой обработкой сигнала. Это, как правило, приборы, разработанные недавно. Современная электронная &quot;начинка&quot; обеспечивает уменьшение их габаритов и снижение энергопотребления.
+<p>В отдельный класс можно выделить приемники для измерения мощных оптических сигналов. Основные сферы их применения - системы кабельного телевидения (CATV), линии с оптическими усилителями на активных волокнах. Динамический диапазон таких приемников смещен в сторону больших мощностей (обычно на 20 дБ).
+<p>Приборы российского производства ПТ2000 и ПТ2010 (&quot;Перспективные технологии&quot;) и комплект Алмаз21 (ЛОНИИР) по своим параметрам не уступают зарубежным образцам, имеют все необходимые сертификаты и, что немаловажно для эксплуатации, техническую и гарантийную поддержку непосредственно от производителя. Измеритель ПТ2010 (рис. 3) позволяет проводить измерения в спектральных интервалах 800-900 нм, 1250-1350 нм и 1500-1650 нм с шагом 5 нм в каждом интервале. Цифровая обработка, во-первых, позволяет компенсировать неравномерность чувствительности фотодиода и повысить точность измерений, а во-вторых, обеспечивает стыковку прибора с компьютером.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2002/Optifiber/ris3.jpg" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Тестер ПТ2010: источник и измеритель.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h3>Измерение прямых потерь</h4>
+<p>Метод вносимых потерь (замещения) применяется для определения потерь на разъемном соединении (рис. 4) и в оптическом кабеле.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2002/Optifiber/ris4.gif" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Измерение потерь методом вносимых потерь (замещения).
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В первом случае источник соединяется с измерителем калибровочным шнуром и измеряется уровень мощности P1. Затем последовательно с калибровочным шнуром включается тестируемый объект и измеряется значение P2. Потери ( (дБ), внесенные разъемным соединением К1, определяются по формуле
+<pre>( = 10 lg (р1/р2),</pre>
+<p>где р1 и р2 измеряются в Вт, или по формуле
+<pre>( = P1 - P2,</pre>
+<p>где P1 и P2 измеряются в дБм. После этого измерения повторяются для второго коннектора К2 тестируемого шнура. Современные модели тестеров позволяют занести значение реперного сигнала P1 в память прибора, и в дальнейшем оно будет автоматически вычитаться из результатов измерений P2.
+<p>Во втором случае реперный уровень Р1 измеряется на двух соединенных между собой калибровочных шнурах. Затем вместо второго шнура, подключенного к приемнику, включается тестируемый кабель и фиксируется значение Р2. Величина потерь (12 определяется так же, как в первом случае. Затем выходы кабеля меняются местами и измерения повторяются, фиксируется значение (21. Потери в кабеле определяются как среднее между (12 и (21.
+<p>Тестирование соединительных шнуров и входной контроль кабеля проводятся по данному методу с помощью одного тестера или мультиметра, в то время как для измерений потерь в линии необходимо два тестера или мультиметра, по одному с каждой стороны. В последнем случае необходимо сличить показания приборов: реперный уровень P1 на измерителе первого тестера определяется по сигналу источника второго комплекта и наоборот. После этого бригады специалистов, работающие на двух противоположных концах линии, подключают последовательно ко всем волокнам кабеля сначала первый источник и второй измеритель и фиксируют значение (12. Затем подключают второй источник и первый измеритель и проводят измерения (21 во встречном направлении. Поскольку потери во встречных направлениях могут отличаться друг от друга, то результаты измерений (12 и (21 усредняются.
+<p>Измерение потерь проводится в соответствии с ГОСТ 26599-85 (&quot;Метод измерения вносимого затухания&quot;), ГОСТ 26814-86 (&quot;Кабели оптические. Методы измерения параметров&quot;) и ГОСТ 28871-90 (&quot;Аппаратура линейных трактов цифровых волоконно-оптических систем передачи. Методы измерения основных параметров&quot;). Зарубежные аналоги данных методов измерения потерь - это EIA FOTP (Fiber Optic Test Procedure) - 171; EAI/TIA FO 2.1 OFSTP-7 (для одномодовых световодов) и OFSTP-14 (для многомодовых световодов), а также TR NWT - 000326 (рекомендации Bellcore).
+<p><b>Метод обрыва</b>. Этот метод применяется для измерения потерь в оптических кабелях до их прокладки и оконцевания коннекторами. Он основан на сравнении уровня мощности на выходе длинного тестируемого отрезка кабеля с уровнем, измеренным на его коротком участке, который получается путем обрыва кабеля в начале измеряемого образца. Другими словами, сначала измеряется уровень P2 на выходе строительной длины кабеля. Затем волокно обрывают вблизи источника и измеряют P1 на этом коротком участке. Потери определяются аналогично предыдущему случаю. Этот метод считается более точным, чем метод вносимых потерь, но он требует качественной подготовки торцов волокна и строгого соблюдения правил измерения.
+<p><b>Метод сравнения (сличения).</b> Используется для определения потерь в кабеле. Сигнал от источника при помощи равноплечного ответвителя делится на два канала, один из которых подается непосредственно на измеритель и служит реперным уровнем, а второй вводится в оптический кабель и затем на вход того же измерителя. Разница значений мощности между первым и вторым каналами дает величину потерь в кабеле. Достоинство метода - высокая точность, так как исключается влияние флуктуаций выходной мощности источника с течением времени. Используется этот метод преимущественно на заводах при выходном контроле параметров кабеля, его испытаниях и т. д.
+<p><b>Метод сопряжения волокон.</b> Применяется для определения потерь в кабеле с числом волокон не менее трех. Источник и приемник подключаются к волокнам кабеля на одной стороне линии. На другой стороне линии волокна поочередно стыкуются между собой, так что сигнал, пришедший с первой стороны по одному волокну, возвращается обратно по другому волокну этого же кабеля. Обозначим как (12 результат измерения потерь при стыковке первого и второго световодов в кабеле: (12 = (1 + (2. Аналогично для других пар волокон: (13 = (1 + (3, (23 = (2 + (3. Тогда потери в одном световоде можно определить по результатам трех измерений - (12, (13 и (23:
+<pre>(1 = 0,5 ((12 - (23 + (13)
+(2 = 0,5 ((12 + (23 - (13)
+(3 = 0,5 (-(12+ (23 + (13).</pre>
+<p>Метод легко распространить на любое количество волокон. Его преимущество заключается в проведении всех измерений с одной стороны кабеля. Для тестирования кабелей на линиях большой протяженности можно пользоваться одним комплектом приборов (источник и измеритель). Легко повторить измерения в обратном направлении ((21, (32, (31). Ограниченная точность измерений этим методом обусловлена разбросом потерь на стыковке волокон с другой стороны кабеля. Поэтому метод используется при достаточной длине световодов в кабеле, когда вкладом этой погрешности (порядка 0,1 дБ) можно пренебречь.
+<h4>Измерение возвратных потерь</h4>
+<p>Уровень возвратных потерь (смеси отражений Френеля и обратного рассеяния Рэлея) на разъемных соединениях кабелей начинает играть все большую роль с повышением дальности передачи в магистральных линиях связи, развитием сетей кабельного телевидения и т. д. Обратные отражения попадают на источник (передатчик) сигнала, накапливаются при многократных стыковках и выступают как помеха по отношению к полезному сигналу.
+<p>Так как возвратные потери во много раз меньше прямого сигнала, для их измерений необходим тестер с большим динамическим диапазоном (не менее 60 дБ). Для повышения точности измерения обратных потерь должны выполняться два условия: во-первых, измеритель должен быть откалиброван по известному отражению; во-вторых, должны быть измерены фоновые излучения (фоновые обратные потери - паразитные отражения), которые необходимо вычесть из результатов измерения.
+<p>Величину обратных потерь измеряют по методике, называемой в зарубежных источниках OCWR (Optical Continious Wave Reflectometer) - рефлектометрия непрерывным излучением. Тестируемый кабель подключается к излучателю через равноплечный ответвитель. Другой выход ответвителя подключается к измерителю, с помощью которого регистрируется уровень оптического излучения, отраженного от соединения ответвителя и тестируемого кабеля. Для того чтобы определить обратные потери на входном конце кабеля, соединенном с ответвителем, необходимо исключить из результатов измерения отражение света от дальнего конца кабеля. Для этого применяются три метода (рис. 5).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2002/Optifiber/ris5.gif" alt=Fig.5></td></tr>
+<tr><td valign="bottom">Рис. 5. Измерение обратных потерь методами: изгиба волокна, иммерсионным и экспресс-методом (АРС - устройство подавления отражений).
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><b>Метод микроизгиба волокна.</b> Сигнал от стабилизированного источника подается на один из входов ответвителя, второй вход которого подключен к измерителю (рис. 5). Выход ответвителя стыкуется с испытуемым волокном. Чтобы устранить влияние отраженного от дальнего конца сигнала на результат измерения, в волокно вносятся потери методом неразрушающего изгиба. На практике это достигается намоткой части волокна на цилиндр малого диаметра или защемлением его в гребенчатой структуре. Все выходы ответвителя специальным образом подготовлены для уменьшения влияния аппаратных факторов на точность измерений.
+<p><b>Иммерсионный метод.</b> Оптическая схема подключения полностью аналогична предыдущей, только дальний конец волокна погружается в иммерсионную жидкость, имеющую показатель преломления такой же, как у волокна (рис. 5). Вследствие этого излучение выходит из световода без отражений от выходной грани и рассеивается в жидкости.
+<p><b>Метод экспресс-контроля.</b> Описанные выше методы позволяют индивидуально тестировать каждый торец, и в этом их преимущество, но при этом они требуют значительных затрат времени. На практике часто приходится тестировать большое количество шнуров на соответствие заданному стандарту. Например, если оба торца шнура имеют обратные потери не более -40 дБ, то такой шнур попадает в разряд SPS (Super Physical Contact), если не более -50 дБ - в разряд UPC (Ultra Physical Contact) и т. д. В таком случае используется ускоренный метод тестирования, когда измеряется уровень обратных потерь сразу на двух торцах (рис. 5). Результат измерений отличается от предыдущих на 3 дБ при условии равенства вкладов обоих торцов. Схема измерений упрощается: к выходному торцу тестируемого шнура подключается вспомогательный шнур со скошенным выходным торцом - APC (Angle Physical Contact). Обратные отражения от такого торца не превышают -65 дБ, и это значение ограничивает область применения и точность измерений данным методом. Метод экспресс-контроля широко используется при выходном контроле больших партий изделий. Если же какое-либо изделие по результатам тестирования отличается от остальных более чем в пределах допусков, оно тестируется одним из описанных выше методов.
+<p>Зарубежный аналог методики измерения обратных потерь - стандарт EIA/TIA FOTP-107.
+<h3>Поверка и калибровка оптических тестеров</h3>
+<p>Оптические тестеры обязательно должны проходить проверку на точность измерений. Параметры и периодичность измерений определяются стандартами. Для поверки используются рабочие эталоны второго порядка (образцовые средства измерений). Рабочий эталон - это, как правило, комплект приборов, состав которого подбирается в зависимости от поставленной задачи. Такой комплект проходит поверку в Госстандарте на эталонных приборах высшего разряда и, в свою очередь, выступает в качестве эталонного прибора для поверки измерительной аппаратуры организаций и предприятий. Далее рабочие эталоны применяются в поверочных и контрольно-измерительных лабораториях. Кроме того, такие приборы используются производителями при выходном контроле параметров выпускаемых волоконно-оптических компонентов и для поверочных испытаний рабочих средств измерения. Поскольку оптические тестеры - это основной прибор для измерения параметров волоконно-оптического кабеля, то наиболее распространенный комплект рабочего эталона представляет собой пару: источник - измеритель с соответствующими соединительными шнурами и аксессуарами, плюс образцовый аттенюатор. Дополнительно поставляется устройство для определения обратных потерь.
+<p>Методы тестирования кабелей и соединительных шнуров с помощью рабочего эталона аналогичны тестированию с помощью тестера, но точность при этом значительно выше. Для улучшения условий проведения поверочных и измерительных работ часто предусматривается дистанционное управление процессом с помощью компьютера. Он позволяет проводить измерения по алгоритмам, обеспечивающим наилучшую математическую обработку результатов.
+<p>Пример рабочего эталона 2-го разряда (производства компании &quot;Перспективные технологии&quot;) показан на рис. 6. Установка ПТ5000 используется для метрологической поверки рабочих средств измерений. Каждый такой комплект проходит сертификацию в системе Госстандарта и вносится в Госреестр. В настоящее время такие установки применяются в организациях ВНИИОФИ (Москва) и &quot;Тест-Петербург&quot; (Санкт-Петербург).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2002/Optifiber/ris6b.jpg" alt=Fig.6b></td>
+<td><img src="../images/byte_archive/images/No3_2002/Optifiber/ris6a.jpg" alt=Fig.6a></td></tr>
+<tr><td colspan=2 valign="bottom">Рис. 6. Рабочий эталон второго разряда и его использование для тестирования соединительных шнуров.
+<hr noshade align="left" size="0"></td></tr>
+</table>
+<p>
+<p>Для обеспечения единства измерений в системе Госстандарта существует поверочная схема для средств измерений средней мощности. Измерителям, внесенным в реестр Госстандарта и по результатам тестирования удовлетворяющим требованиям, которые предъявляются к приборам этой группы, выдается свидетельство о поверке. Если же имеющаяся у потребителя марка прибора не внесена в реестр Госстандарта, прибор может быть протестирован аналогичными методами и при положительном результате получает сертификат калибровки. Рекомендованная периодичность метрологической поверки составляет 12 месяцев.
+<p>Схема метрологической поверки средств измерений средней мощности оптического излучения в волоконно-оптических системах передачи по требованиям Госстандарта представлена на рис. 7.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2002/Optifiber/ris7.gif" alt=Fig.7></td>
+<td valign="bottom">Рис. 7. Поверочная схема Госстандарта.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Установка высшей точности предназначена для воспроизведения эталонной единицы средней мощности. В ней используется калориметрический (тепловой) принцип как наиболее точный и допускающий электрическую калибровку методом замещения. Диапазон воспроизводимых на установке высшей точности значений средней мощности составляет лишь 10-4-10-3 Вт на фиксированных длинах волн 850, 1300 и 1550 нм. Погрешность измерений не превышает 0.6*10-3.
+<p>Установка высшей точности разработана и обслуживается в ВНИИОФИ (Москва). Показательны результаты сличения эталонного преобразователя этой установки с эталоном NIST (США). При проведении измерений средней мощности оптического излучения на выходе одномодового волокна в диапазоне 10-4-10-3 Вт расхождение составило менее 0,2% и 0,1% на длинах волн 1300 и 1550 нм соответственно.
+<p>В качестве эталонов 1-го разряда применяются либо неселективные в диапазоне 600-1800 нм средства измерений, обеспечивающие в области 10-5-10-3 Вт точность измерений (0.3-1.5)*10-2, либо установки, работающие на фиксированных длинах волн, но в широком динамическом диапазоне 10-12-10-2 Вт. В первом случае могут использоваться калориметрические приемники, во втором - полупроводниковые фотодиоды.
+<p>При проведении поверочных испытаний используются два метода: прямых измерений и сличения. Поверку методом прямых измерений иллюстрирует рис. 8. При калибровке тестируемого приемника определяется зависимость его показаний от уровня подаваемого сигнала. При этом фиксируется не только погрешность показаний приемника, но и степень линейности его характеристики во всем динамическом диапазоне. Тестирование генератора включает проверку временной стабильности параметров его излучения. При поверке методом сравнения (рис. 9) исключается влияние соединительных шнуров.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2002/Optifiber/ris8.gif" alt=Fig.8></td></tr>
+<tr><td valign="bottom">Рис. 8. Поверка (калибровка) приемника и генератора оптической мощности методом прямых измерений (АТТ - аттенюатор оптической мощности).
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2002/Optifiber/ris9.gif" alt=Fig.9></td></tr>
+<tr><td valign="bottom">Рис. 9. Поверка (калибровка) приемника и генератора оптической мощности методом сравнения (АТТ - оптический аттенюатор).
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Точность приборов, на которых осуществляется поверка, должна быть выше, чем у тестируемых. Тогда вклад погрешности измерений самого эталонного прибора уменьшается.
+<p>Для применения на линиях, входящих в состав Взаимоувязанной сети связи России (ВСС), измерительные приборы должны проходить сертификацию по системе Госстандарта РФ с последующей периодической поверкой приборов. Кроме сертификации Госстандарта, приборы могут сертифицироваться различными ведомствами для подтверждения соответствия их параметров требованиям данной отрасли.
+<p>Приборы, прошедшие сертификацию, удовлетворяют требованиям обеспечения единства измерений на всей территории России, а также могут использоваться и за ее пределами. Так, результаты сравнительных испытаний тестеров серии ПТ и пяти импортных моделей показали полное совпадение результатов в пределах погрешности измерений приборов.
+<h4>* * *</h4>
+<p>В настоящее время инсталляторы и пользователи волоконной оптики имеют широкий выбор приборов, пригодных как для работы в полевых условиях, так и для прецизионных измерений. В то же время совокупность технических и нормативных требований, включающих сертификацию приборов в России, весьма сужает этот выбор. Заметим, что приборы, разработанные в России, удовлетворяют всем этим требованиям.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</A></b></li><li><b><A href='detail.php@ID=22430.html'>10-гигабитные коммутаторы для малых и средних локальных сетей</A></b></li><li><b><A href='detail.php@ID=20318.html'>IEEE 802.11ac – новый высокоскоростной стандарт Wi-Fi</A></b></li><li><b><A href='detail.php@ID=19942.html'>LTE в зеркале конгресса MWC 2012</A></b></li><li><b><A href='detail.php@ID=19426.html'>Тенденции и прогнозы телекоммуникационного рынка-2012 </A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8737.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Методы тестирования оптического кабеля
+</a><br><a href="detail.php@ID=8737.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Елена Андреева, к.ф-м.н., менеджер ЗАО «Перспективные технологии»
+andreeva@peterlink.ru
+Алексей Сергеев, инженер отдела активного оборудования ЗАО&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8737.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8737&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='047d73cc4da534715197edc2c0bc0331'><img src='../bitrix/tools/captcha.php@captcha_code=047d73cc4da534715197edc2c0bc0331' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

@@ -1,0 +1,642 @@
+<HTML>
+<HEAD>
+<title>Профессиональный Web-сервер - этапы подготовки и создания
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Александр Фролов, Григорий Фролов alexandre@frolov.pp.ru; http://www.frolov.pp.ru, http://www.datarecovery.ru В статье использованы отрывки из новой книги А. и Г. Фроловых &amp;quot;Создание Web-приложений&amp;quot;, которая выйдет в издательстве" />
+<meta name="description" content="Александр Фролов, Григорий Фролов alexandre@frolov.pp.ru; http://www.frolov.pp.ru, http://www.datarecovery.ru В статье использованы отрывки из новой книги А. и Г. Фроловых &amp;quot;Создание Web-приложений&amp;quot;, которая выйдет в издательстве" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398083230','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6531' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6531&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6531"].SHOW_IMAGE.value="N"; document.forms["PrintForm6531"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6531"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6531"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6531);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6531.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6531.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6531);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11523.html'>№4 (33), апрель 2001</a><h1>Профессиональный Web-сервер - этапы подготовки и создания
+</h1>04.04.2001<p></p><DIV class='article-text'><i>Александр Фролов, Григорий Фролов</i><br>
+<a href="mailto:alexandre@frolov.pp.ru">alexandre@frolov.pp.ru</a>;<br> <a href="http://www.frolov.pp.ru">http://www.frolov.pp.ru</a>, 
+  <a href="http://www.datarecovery.ru">http://www.datarecovery.ru</a></p>
+<hr width="40%" noshade align="left">
+<i>В статье использованы отрывки из новой книги А. и Г. Фроловых &quot;Создание Web-приложений&quot;, 
+которая выйдет в издательстве компьютерной литературы <a href="http://www.rusedit.ru">&quot;Русская 
+Редакция&quot;</a>. </i>
+<p></p>
+<p>В последние годы XX века появился и приобрел огромную популярность новый класс приложений - так называемые Web-приложения. Обеспечивая доступ через Интернет или интрасеть к информационным системам и базам данных, Web-приложения становятся одним из наиболее эффективных инструментов ведения современного бизнеса.</p>
+<p>Сегодня все большее и большее количество отечественных и зарубежных компаний проявляют интерес к бизнесу в Интернете. Причина этого - возможность предлагать товары и услуги по всему миру, не затрачивая на это огромные финансовые средства. Именно поэтому такая область программной индустрии, как создание Web-приложений, приобретает сегодня особое значение.</p>
+<p>Наиболее распространенные области применения Web-приложений - это Интернет-магазины, биржи, электронные конференции (доски объявлений), системы общения в реальном времени, предназначенные для обмена информацией между пользователями Интернета, системы видеоконференций, проводимых в Интернете, Интернет-телефония и т.д. </p>
+<p>По архитектуре и принципам работы Web-приложения заметно отличаются от обычных программ, работающих на ПК, рабочих станциях или серверах локальной сети. Помимо того, что Web-приложения всегда должны работать в многопоточном и многопользовательском режиме, при их разработке необходимо также учитывать ненадежность каналов передачи данных Интернета, а также относительно невысокую в среднем скорость передачи данных по таким каналам. </p>
+<p>Эти и некоторые другие особенности накладывают ограничения на технологии, применяемые при создании Web-приложений; как следствие, большинство хорошо проверенных и удобных методов и средств проектирования обычных приложений оказываются непригодными. Например, если нужно организовать доступ к базе данных через Интернет, то едва ли вам удастся ограничиться такими средствами быстрого проектирования приложений, как Borland Delphi, Microsoft Visual C++ или Microsoft Visual Basic (хотя отдельные компоненты Web-приложений можно создавать с применением этих инструментов).</p>
+<p>Как правило, Web-приложения и различные программы, ориентированные на Интернет, предполагают взаимодействие клиентских программ (например, браузера) и сервера. При этом клиентские программы работают на компьютерах пользователей, возможно, недорогих или устаревших. Что же касается серверов, то для них применяются высокопроизводительные компьютеры, подключенные к Интернету быстрыми каналами передачи данных.</p>
+<p>Иногда в прессе можно встретить утверждения о том, что со временем приложения, ориентированные на Интернет, вытеснят традиционные программы, такие как текстовые редакторы или электронные таблицы. На наш взгляд, если это и случится, то только тогда, когда рядовому пользователю станут по карману высокоскоростные каналы доступа в Интернет. Так что пока традиционные программы и приложения для Интернета не конкурируют, а органично дополняют друг друга. И такая ситуация, на наш взгляд, сохранится еще довольно долго.</p>
+<p>Системы асимметричного доступа в Интернет (с применением модема и спутниковых технологий) позволяют &quot;загружать&quot; данные из Интернета в компьютер пользователя поистине с &quot;космической&quot; скоростью, исчисляемой сотнями килобайт в секунду. К сожалению, в обратном направлении данные идут намного медленнее, так как они проходят через модем и обычную телефонную линию. Так что, несмотря на значительное ускорение процесса загрузки файлов и просмотра Web-страниц, асимметричный спутниковый доступ все же не позволяет создавать полноценные Интернет-приложения, заменяющие многие привычные для вас программы.</p>
+<p>Тем не менее для разработчика Web-приложений и программистов высокие скорости означают реальную возможность загрузки из Интернета программных продуктов и пакетов исправлений за приемлемое время. </p>
+<p>Что же касается подключения к Интернету небольших и средних компаний, то сегодня вполне доступен по ценам высокоскоростной доступ по обычной телефонной линии с применением технологии асимметричных абонентских цифровых линий ADSL. На линиях ADSL достигается скорость получения данных из Интернета порядка 7,5 Мбит/с, а в обратном направлении - до 1,5 Мбит/с. Единственный недостаток - относительно высокая стоимость трафика.</p>
+<h3>Этапы создания Web-приложения</h3>
+<p>Хотя создание простейших Web-серверов и домашних Web-страниц доступно многим, разработка Web-приложений - непростая задача. Если для создания обычного приложения достаточно какого-либо одного инструментального средства (Microsoft Visual C++, Microsoft FoxPro, Inprise Delphi и т.п.), то Web-программисту намного труднее: ему приходится иметь дело со многими, подчас не вполне совместимыми между собой технологиями.</p>
+<p>Из рис. 1 становится ясно, с чем придется столкнуться разработчику Web-приложений. На нем показаны возможные этапы создания типичного Web-приложения. Последовательность реализации этих этапов может быть разной (в зависимости от проекта), причем некоторые этапы могут выполняться одновременно.</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="http://www.bytemag.ru/images/byte_archive/images/No4/Web1/fig1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Этапы создания Интернет-магазина. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Разработка проекта</h4>
+<p>Разумеется, создание нового Web-приложения необходимо начинать с разработки проекта. На этом этапе следует выяснить, что же, собственно, нужно сделать и каким именно образом. Хотя этап разработки проекта обычно выполняется в тесном взаимодействии с заказчиком, далеко не всегда заказчик представляет себе возможности Интернет-технологий и свои реальные потребности. </p>
+<p>Не исключено, что заказчик сможет показать вам существующий Web-сайт, аналогичный по своему назначению тому, что ему требуется. Это избавит его от необходимости вникать в детали проекта, понятные вам, но неочевидные для него.</p>
+<p>Хорошо, если у вас уже есть опыт создания проектов. Тогда вы сможете предложить заказчику готовое решение, которое можно использовать после некоторых доработок. </p>
+<h4>Регистрация доменного имени</h4>
+<p>Создавая в Интернете Web-сервер, необходимо придумать для него новое доменное имя. Оно должно быть по возможности легко запоминающимся и отражать либо название компании, либо информационное содержание сайта. Разумеется, выбранное вами доменное имя не должно быть зарегистрировано ранее. </p>
+<h4>Разработка дизайна</h4>
+<p>Очень важный этап - разработка дизайна. Дизайн определяет внешний вид приложения, в котором оно предстанет перед пользователями. Возможно, у заказчика уже имеется разработанный ранее фирменный стиль. </p>
+<p>Заметим, что разработка хорошего дизайна под силу только специалисту (Web-дизайнеру), обладающему не только художественным вкусом, но и навыками работы с компьютерными инструментами, предназначенными для создания Web-страниц, изображений и анимации. Ограничения, накладываемые Web-приложениями, заставляют прибегать к специальным приемам, позволяющим, в частности, уменьшить размер файлов с рисунками и анимацией.</p>
+<h4>Размещение Web-сервера </h4>
+<p>Чтобы не заставлять посетителей долго ждать завершения загрузки страниц, ваш Web-сервер должен быть подключен к Интернету при помощи скоростного канала передачи данных. Такой канал стоит дорого, поэтому обычно Web-серверы размещаются на площадках провайдеров. Нет никакого резона размещать Web-сервер у себя дома, подключив его к Интернету через модем и телефонную линию. </p>
+<p>Обычно Web-сервер, играющий роль ядра Web-приложения, размещается на территории провайдера Интернета или в помещении компании, подключенной к Интернету скоростным каналом связи. При этом для него не всегда нужно покупать отдельный компьютер - можно воспользоваться сервером провайдера. В этом случае ресурсы одного, как правило, мощного компьютера будут разделяться между несколькими Web-приложениями, возможно, принадлежащими разным лицам или компаниям.</p>
+<h4>Установка и настройка </h4>
+<p>Сложные Web-приложения обращаются к базам данных, а также выполняют автоматическую рассылку или обработку почты. Для выполнения процедур установки и настройки Web-серверов и серверов баз данных, а также почтовых серверов требуется квалификация системного администратора. Вы можете сделать эту работу самостоятельно или нанять специалиста в другой компании. Учтите, что Web-сервер, однажды установленный и запущенный, требует постоянного сопровождения и, соответственно, постоянных финансовых затрат. </p>
+<h4>Интеграция с платежными системами</h4>
+<p>Проектирование Интернет-магазина требует проработки вопроса об оплате товара. Поскольку в России кредитные карточки пока еще не слишком широко распространены, большинство Интернет-магазинов - это по сути системы сбора заказов. Оплата же выполняется банковским переводом денежных средств или каким-либо другим традиционным способом.</p>
+<p>Если вы создаете Интернет-магазин с возможностью оплаты товара при помощи кредитных карточек, то необходимо проработать вопросы интеграции Web-приложения с одной из существующих платежных систем. </p>
+<h4>Разработка серверного и клиентского ПО</h4>
+<p>Такое сложное Web-приложение, интегрированное с базой данных, как Интернет-магазин, требует ежедневного обслуживания со стороны сотрудников магазина. Эти функции, а также функции обработки заказов и платежей возлагаются на работающее на сервере специальное Web-приложение, называемое еще бэк-офисом (поскольку оно не видно обычным посетителям Интернет-магазина, его работа происходит как бы &quot;за сценой&quot;).</p>
+<p>В противоположность бэк-офису, клиентская часть - это то самое Web-приложение, с которым работают посетители вашего Интернет-магазина или другого Web-приложения. Обычно оно намного проще серверного ПО, но к качеству его дизайна предъявляются повышенные требования. </p>
+<p>Витрины в Интернет-магазине относятся к клиентскому ПО. Как и в обычном магазине, они предназначены для предоставления потенциальным покупателям полной информации о товаре, а также для отбора приобретаемого товара в корзину (разумеется, в Интернет-магазине используется специальная &quot;электронная&quot; корзина).</p>
+<h4>Обработка изображений и звука</h4>
+<p>Важным этапом в создании Web-приложения может стать обработка исходных материалов. Если Web-приложение содержит много изображений или звуковых файлов, предварительная обработка этого материала может представлять собой непростую задачу и занять много времени. Например, в книжном Интернет-магазине могут продаваться тысячи книг. При этом посетители должны иметь возможность ознакомиться с внешним видом обложки каждой книги, так что при заполнении витрины магазина предстоит отсканировать или добыть каким-либо другим образом тысячи изображений обложек.</p>
+<h4>Создание или приобретение компонентов</h4>
+<p>Как правило, нет нужды разрабатывать все компоненты Web-приложения самостоятельно, хотя некоторые нестандартные компоненты, реализующие, например, бизнес-логику, вы должны будете создать сами. Большинство же стандартных задач (например, отправка почтовых сообщений Web-сервером) уже решались много раз, поэтому можно найти готовые программные модули. </p>
+<p>Готовые модули придется приобрести и для подключения к таким внешним системам, как платежные системы и биржи. Эти модули реализуют защищенные алгоритмы передачи данных (например, номеров кредитных карточек или приказов на приобретение или продажу ценных бумаг). Самостоятельная разработка таких модулей, как правило, чрезвычайно трудоемка, а порой даже невозможна.</p>
+<h4>Верстка статических страниц HTML</h4>
+<p>Для разработки Web-серверов, являющихся Web-приложениями, широко используется язык разметки гипертекста HTML. В большинстве случаев все, что видят посетители Web-сервера в окне браузера, представляет собой документы, составленные на языке HTML и содержащие внутри себя объекты различных типов (изображения, анимацию, формы для ввода информации и т.д.).</p>
+<p>Если Web-сервер хранит только статическую информацию, изменяющуюся лишь эпизодически, он может содержать набор одних только статических документов HTML (а также графических иллюстраций, звуковых файлов и т.п.). Для создания таких документов можно использовать практически любой текстовый редактор (даже простейший Microsoft Notepad), хотя есть и мощные средства визуального проектирования страниц HTML.</p>
+<p>Обычно статические страницы HTML создает Web-дизайнер, перерабатывая материал, полученный от заказчика. Этот процесс не требует никаких познаний в области программирования, но предполагает наличие художественного вкуса и навыков работы с программами обработки графики. </p>
+<p>Для того чтобы ваш Web-сайт выглядел профессионально, необходимо тщательно отредактировать размещенные на нем текстовые материалы на предмет стилистических, синтаксических, грамматических и орфографических ошибок. Необходимо также следить за лексикой и в зависимости от назначения Web-сайта в той или иной степени нормировать употребление жаргонных выражений.</p>
+<h4>Программирование динамических страниц</h4>
+<p>В тех случаях, когда Web-сервер должен не только &quot;поставлять&quot; информацию своим посетителям, но и получать от них какие-либо данные или файлы, необходимо создавать так называемое активное Web-приложение. Помимо статических страниц HTML, такое приложение содержит компоненты, динамически создающие страницы HTML &quot;на лету&quot;. Разработка таких компонентов требует обязательного участия профессионального программиста. Помимо традиционных языков программирования, таких как С++ или Pascal, Web-программист должен владеть языками, разработанными специально для проектирования Web-приложений: JavaScript, Visual Basic Scripting Edition, Perl, PHP и др.</p>
+<h4>Настройка процедур обслуживания</h4>
+<p>После запуска Web-приложения необходимо настроить такие процедуры обслуживания, как резервное копирование данных, хранящихся в СУБД, и файлов Web-сервера, рассылка новостей по электронной почте, фоновая статистическая обработка базы данных, автоматическое отслеживание работоспособности Web-сервера и т.п. Здесь потребуется квалификация программиста и системного администратора.</p>
+<h4>Тестирование и опытная эксплуатация</h4>
+<p>Известно, что любая более или менее сложная программа содержит ошибки. Web-приложения, как вы уже, наверное, поняли, весьма и весьма сложны. Возникающие в них ошибки могут носить случайный характер или проявляться только при высокой загруженности Web-сервера. Поэтому будьте готовы к тому, что наиболее коварные ошибки появятся уже после ввода системы в эксплуатацию. Наличие этапа опытной эксплуатации обязательно, и чем большее количество людей примет в нем участие, тем лучше.</p>
+<h4>Обучение персонала</h4>
+<p>Работа с бэк-офисом такого сложного Web-приложения, как Интернет-магазин, требует обучения сотрудников. Возможно, вам придется подготовить для них инструкции по выполнению тех или иных операций, например, добавления товара в базу данных, обработки заказов, печати счетов и т.п.</p>
+<h4>Организация рекламной кампании</h4>
+<p>Самый лучший Интернет-магазин останется без посетителей, если никто о нем не узнает. Существует много способов рекламы Web-сайтов, как в Интернете, так и в обычных средствах массовой информации. От того, насколько эффективно вы будете рекламировать свой сайт, будет зависеть его посещаемость и эффективность работы. Будьте готовы к тому, что реклама составит весьма заметную долю в общих затратах на создание Интернет-магазина или другого Web-приложения.</p>
+<h3>Приступаем к изучению Web-технологий</h3>
+<p>Чтобы быстрее добиться получения практического результата, мы предлагаем свой план изучения приемов разработки Web-приложений. Этот план предполагает постепенное продвижение от простого к сложному. </p>
+<h4>Первый этап: язык HTML и Web-сервер </h4>
+<p>Прежде всего вам предстоит изучить основы языка разметки гипертекста HTML (Hypertext Markup Language), являющегося одним из краеугольных камней многих Интернет-технологий. Именно с его помощью создаются страницы Web-серверов.</p>
+<p>На рис. 2 схематически показаны темы, которые мы рекомендуем изучить в рамках первого этапа. Стрелочками указана рекомендуемая последовательность изучения материала.</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="http://www.bytemag.ru/images/byte_archive/images/No4/Web1/fig2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Изучение HTML и способов установки Web-сервера. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Сам по себе язык HTML относительно несложен, однако эта простота обманчива. В силу ограниченности его возможностей и ряда других обстоятельств порой приходится немало потрудиться, чтобы получить желаемый результат. Одна и та же страница может по-разному отображаться в браузерах различных типов (и даже в браузерах одного и того же типа, но разных версий), поэтому вопросам совместимости с браузерами необходимо уделять особое внимание. </p>
+<p>Чтобы ускорить загрузку страниц, необходимо минимизировать общий объем расположенных на них иллюстраций. Эта работа предполагает знакомство с технологиями обработки изображений.</p>
+<p>Другой непростой вопрос - разработка дизайна страниц сервера, создаваемых с применением HTML. Дизайн предполагает определение внешнего вида страниц, выбор шрифтов для текста, создание графических иллюстраций, выбор размеров и взаимного расположения текстовых блоков и иллюстраций и т.п. </p>
+<p>Для разработки дизайна лучше всего обратиться к профессиональному Web-дизайнеру, знакомому с технологиями Интернета и языком разметки HTML. Обычный художник или дизайнер, конечно, сможет изобразить страницу, например, в виде рисунка, однако на реализацию его идей вам, возможно, придется затратить немало усилий. Причина этого в том, что художник, никогда не имевший дело с Web, не знает, какие дизайнерские приемы легко реализовать на страницах HTML, а какие - лишь с трудом или вовсе не удастся. Web-дизайнер же не только сможет подобрать легко реализуемый (и при этом привлекательный) дизайн, но и создать для вас макет страницы HTML, показав, каким именно образом его следует исполнять.</p>
+<p>Сейчас в продаже имеется несколько неплохих книг, посвященных искусству Web-дизайна. Советуем вам с ними ознакомиться перед тем, как обращаться к Web-дизайнеру с заказом.</p>
+<p>В крайнем случае, на этапе начального изучения можно попытаться скопировать частично или полностью дизайн какого-либо готового Web-сайта, однако коммерческие проекты создавать подобным образом недопустимо, поскольку вы можете вольно или невольно нарушить права собственности на копируемый внешний вид страниц или иллюстрации. </p>
+<p>Вам пригодятся навыки обработки графических иллюстраций, созданных самостоятельно или полученных от дизайнера или художника. Поэтому мы рекомендуем изучить основные приемы работы с графическим редактором Adobe Photoshop.</p>
+<p>И, наконец, первый этап изучения Web-технологий предполагает освоение методов установки и настройки Web-сервера, играющего центральную роль в работе Web-приложений. Следует научиться устанавливать такой сервер на вашем компьютере, чтобы использовать его как инструмент, необходимый для создания и отладки Web-приложений. Кроме того, следует иметь представление о том, как размещать реальные Web-серверы в Интернете и как &quot;выкладывать&quot; на них файлы.</p>
+<p>Завершив первый этап обучения, вы сможете самостоятельно открыть в Интернете свою персональную Web-страничку или персональный сайт. </p>
+<h4>Второй этап: активные Web-страницы</h4>
+<p>К сожалению, страницы, созданные только с применением языка HTML, статичны. Они не способны взаимодействовать с посетителями, получать и обрабатывать от них информацию. Статические страницы HTML обычно содержат только текст, изображения и ссылки, предназначенные для перехода на другие страницы, загрузки аудио- или видеофайлов.</p>
+<p>Для того чтобы &quot;оживить&quot; ваш сайт, помимо анимированных графических изображений, состоящих из нескольких сменяющих друг друга кадров, приходится прибегать к программированию на языках сценариев - JavaScript или Visual Basic Scripting Edition. </p>
+<p>Второй этап освоения Web-технологий следует начинать с изучения наиболее распространенного языка сценариев JavaScript, а также динамического языка разметки страниц DHTML (Dynamic HTML). Далее необходимо ознакомиться с аплетами Java, придающими динамичность страницам HTML и пригодными для решения ряда других задач.</p>
+<p>Клиентские сценарии размещаются внутри Web-страниц и запускаются (как интерпретируемые программы под управлением браузера) на компьютере посетителя Web-сайта. Существуют еще и серверные сценарии; о них мы скажем ниже. </p>
+<p>Если вы освоили языки JavaScript, DHTML и аплеты Java, это еще не означает, что вы можете приступить к созданию сложных Web-приложений. Тем не менее данный этап очень важен для дальнейшего изучения. </p>
+<p>К сожалению, различные браузеры по-разному интерпретируют клиентские сценарии, что приводит к появлению непростой проблемы совместимости. Для серверных сценариев, работающих под управлением Web-сервера, таких проблем не существует. </p>
+<h4>Третий этап: активный Web-сервер с базой данных MS SQL</h4>
+<p>Вооружившись знаниями HTML и JavaScript, вы можете смело переходить к следующему, третьему этапу освоения Web-программирования. Он предполагает изучение технологий, позволяющих получать данные от посетителей Web-сайта и обрабатывать их на Web-сервере, обращаясь при необходимости к СУБД. Мы полагаем нужным изучить на этом этапе активные серверные страницы ASP (Active Server Pages), применяемые в Web-сервере Microsoft Internet Information Server (IIS) для создания сложных интерактивных Web-приложений. </p>
+<p>Страницы ASP содержат только что упоминавшиеся серверные сценарии на языках JavaScript или VB Script. Поэтому, чтобы успешно создавать страницы ASP, вам необходимо освоить один из этих языков. Применение VB Script достаточно хорошо освещено в литературе и прежде всего в документации, поставляемой Microsoft. Кроме того, вам необходимо изучить средства создания страниц ASP, которые предоставляет программисту сервер IIS.</p>
+<p>Практически любой Интернет-магазин, а также сложные информационные Web-сайты хранят информацию в базах данных. Мы расскажем об использовании серверов СУБД Microsoft SQL Server 7.0 и SQL Server 2000, применяемых на платформе Microsoft Windows NT 4.0 и Windows 2000 Server. Что же касается сайтов, созданных с применением широко распространенной операционной системы Linux, то там популярны такие бесплатные или условно-бесплатные СУБД, как MySQL. </p>
+<p>Для доступа к данным, хранящимся в СУБД, используются специальные языки программирования. Например, в СУБД Microsoft SQL Server применяется язык Transact-SQL. Этому языку посвящено множество неплохих изданий, с которыми вам стоит ознакомиться перед разработкой Web-приложений с базами данных.</p>
+<p>Мы рассмотрим применение СУБД Microsoft SQL Server и объектов ADO (ActiveX Data Objects). Технология ADO предоставляет в распоряжение программиста простой и удобный набор объектов и интерфейсов, позволяющих эффективно выполнять все операции с базами данных из сценариев ASP.</p>
+<p>После успешного завершения третьего этапа обучения вам будет доступна разработка сложных интерактивных сайтов, например, Интернет-магазинов, информационно-поисковых и справочных систем, каталогов, рубрикаторов и т.п. Вы сможете располагать на Web-сервере такие распространенные компоненты, как ленты новостей, гостевые книги, форумы и системы голосования.</p>
+<h4>Четвертый этап: расширение возможностей Web-сервера</h4>
+<p>Хотя знания, полученные вами на третьем этапе, позволят создавать достаточно сложные Web-сайты, до разработки профессиональных Web-приложений еще далеко. Дело в том, что хотя возможности сценариев ASP и велики, все равно их оказывается недостаточно. Так или иначе, вам, скорее всего, придется создавать собственные расширения Web-сервера в виде дополнительных программных модулей. Этому мы предлагаем посвятить четвертый этап изучения Интернет-технологий (рис. 3).</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="http://www.bytemag.ru/images/byte_archive/images/No4/Web1/fig3.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Возможности расширения функциональности Web-сервера. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><b>Программы CGI.</b> Самый старый и распространенный способ расширения возможностей 
+  Web-сервера - создание так называемых программ CGI, реализующих стандартный 
+  шлюзовой интерфейс (Common Gateway Interface, CGI). Такие программы способны 
+  получать от посетителей различные данные и обрабатывать их, обращаясь при необходимости 
+  к базам данных и другим системным компонентам.</p>
+<p>Программы CGI можно составлять на различных языках программирования - С, С++, Perl, Pascal, Java и т.д. Язык Perl особенно удобен, так как, во-первых, он содержит множество необходимых для этой работы функций, а во-вторых, доступен в различных операционных системах, в том числе Linux, Solaris, Microsoft Windows NT/2000.</p>
+<p>Если вы разрабатываете программы CGI на языке С++, то можете использовать библиотеку стандартных шаблонов STL (Standard Template Library). Она заметно облегчит работу с такими структурами данных, как динамически расширяемые массивы, словари и списки.</p>
+<p><b>Расширения ISAPI.</b> ISAPI - это программный интерфейс сервера Microsoft 
+  IIS (Internet information Server Application Program Interface). По своим функциональным 
+  возможностям модули ISAPI аналогичны программам CGI, однако работают быстрее 
+  за счет того, что расположены в одном адресном пространстве с сервером IIS.</p>
+<p>Чтобы создавать расширения ISAPI, вы должны в совершенстве владеть языками программирования C и C++, а также функциями программного интерфейса ОС Microsoft Windows. Заметную помощь в организации обработки данных может оказать упомянутая выше библиотека шаблонов STL.</p>
+<p><b>Элементы управления ActiveX.</b> Современные версии ОС Microsoft Windows 
+  содержат множество программных компонентов, созданных с применением модели компонентных 
+  объектов COM (Component Object Model) и элементов управления ActiveX. Сервер 
+  Microsoft IIS предоставляет в распоряжение разработчиков сценариев ASP наборы 
+  готовых элементов управления ActiveX, предназначенные для выполнения самых разных 
+  функций, - таких, как обработка данных, полученных от посетителей сайта, и доступ 
+  к СУБД.</p>
+<p>Вы можете использовать готовые элементы управления ActiveX или создавать собственные (в частности, предназначенные для передачи электронной почты или выполнения каких-либо нестандартных операций). При этом имеет смысл использовать библиотеки шаблонов Microsoft ATL (Active Template Library) и STL, значительно облегчающие создание таких элементов в среде разработки Microsoft Visual Studio.</p>
+<p><b>Страницы PHP.</b> Еще один способ создания активных Web-серверов - использование 
+  технологии предварительной обработки гипертекста PHP. PHP - это сокращение от 
+  &quot;PHP: Hypertext Preprocessor&quot; (известно также как сокращение от Personal Home 
+  Page - персональные домашние странички). Эта технология во многом напоминает 
+  технологию ASP, однако использует свой язык программирования сценариев и доступна 
+  на многих платформах (в том числе Microsoft Windows и Linux).</p>
+<p>После завершения четвертого этапа обучения вы можете приступать к реализации довольно сложных коммерческих проектов в Интернете, таких как Интернет-магазины, принимающие платежи посредством кредитных карточек, содержащие списки рассылки и выполняющие фоновую обработку данных. Вы сможете создавать серверное ПО, способное обновлять через окно браузера не только текстовое, но и графическое содержимое сайта (например, рисунки обложек книг), а также решающее другие нестандартные задачи.</p>
+<h4>Пятый этап: будьте на переднем крае технологий Интернета</h4>
+<p>Технологии Интернета развиваются очень бурно, поэтому, чтобы не отстать, вам придется внимательно следить за всеми новшествами. И здесь, конечно, не обойтись без такого информационного ресурса, как Интернет. На пятом этапе мы рекомендуем изучить XML, VML, VRML, а также технологии передачи видео через Интернет в реальном времени.</p>
+<p><b>Расширяемый язык разметки XML.</b> Относительно недавно получил применение 
+  новый язык расширяемой разметки гипертекста XML (eXtensible Markup Language), 
+  являющийся подмножеством другого языка - стандартного языка обобщенной разметки 
+  документов SGML (Standard Generalized Markup Language). Этот язык, в частности, 
+  позволяет отделить представление данных от самих данных, что облегчает разработку 
+  Интернет-приложений. На базе XML создано немало стандартов обмена бизнес-информацией, 
+  которые позволяют интегрировать разнородные системы схожего назначения.</p>
+<p><b>Язык VML.</b> Вместе с браузером Microsoft Internet Explorer 5.0 появился 
+  векторный язык разметки VML (Vector Markup Language). Этот язык позволяет рисовать 
+  в окне браузера сложные векторные иллюстрации, не перегружая каналы данных большими 
+  объемами передаваемой информации. Например, для рисования графика Web-сервер 
+  передает браузеру лишь координаты его вершин, а не полное графическое изображение. 
+  В результате страница загружается намного быстрее.</p>
+<p>Заметим, что аналогичных результатов можно добиться с помощью аплетов Java, а также с помощью элементов управления ActiveX, расположенных на странице HTML. Оба этих способа, однако, не лишены недостатков. Например, по соображениям безопасности посетитель Web-сайта может отключить в своем браузере просмотр аплетов Java или запретить загрузку элементов управления ActiveX.</p>
+<p>Хотя теоретически аплеты Java (как и любые другие программы Java) должны быть работоспособны на любой компьютерной платформе в соответствии с принципом &quot;написано однажды, работает везде&quot;, на практике это не всегда так. Программы Java работают под управлением интерпретирующей программы - виртуальной машины Java. Реализации этой машины для разных платформ имеют свои особенности, что и накладывает ограничение на переносимость программ Java.</p>
+<p>Элементы управления ActiveX, встроенные в страницы HTML, загружаются в адресное пространство ОС посетителя Web-сайта и функционируют там подобно обычным программам, запущенным на локальном диске. Таким образом, они получают практически неограниченный доступ к ресурсам компьютера посетителя, что очень опасно. Несмотря на защиту элементов управления ActiveX от подделки при помощи технологии электронной цифровой подписи, многие посетители предпочитают не рисковать, отключая в настройках браузера возможность их загрузки.</p>
+<p>Что же касается языка VML, то он полностью исключает необходимость в аплетах Java или элементах управления ActiveX для рисования на страницах HTML векторных графических изображений. </p>
+<p>Тем не менее для просмотра страниц с графикой, реализованной средствами VML, у посетителя должен быть установлен браузер Microsoft Internet Explorer версии 5.0 или более поздней версии. </p>
+<p><b>Язык VRML.</b> Язык виртуального моделирования реальности VRML (Virtual 
+  Reality Modeling Language) позволяет создавать трехмерную интерактивную анимацию. 
+  Если вы когда-либо играли в трехмерные компьютерные игры, то знаете, что это 
+  такое.</p>
+<p>Помимо игр, виртуальная реальность может найти (и уже находит) применение в бизнесе, позволяя, например, представить на электронной витрине трехмерное изображение товара. </p>
+<p><b>Передача видео через Интернет в реальном времени.</b> По мере того как скоростные 
+  каналы Интернета становятся все более и более доступными, все шире и шире внедряются 
+  системы передачи видеоизображения через Интернет. Возможно, в будущем традиционное 
+  телевидение исчезнет, уступив место Интернет-телевидению, допускающему интерактивное 
+  взаимодействие с операторами студии или даже с артистами, играющими свои роли 
+  перед телекамерой. </p>
+<p><b>Технологии будущего.</b> Прослеживая общую тенденцию, мы предполагаем, что 
+  развитие этих технологий будет в значительной степени определяться распространенностью 
+  и доступностью скоростных каналов передачи данных (в том числе беспроводных), 
+  а также пропускной способностью основных магистралей Интернета. </p>
+<p>Уже сегодня мобильные телефоны умеют принимать и передавать информацию через Интернет, в том числе звуковую, а также обладают зачаточными способностями распознавания речи. Вероятно, в будущем человек будет меньше пользоваться клавиатурой и мышью, а больше микрофоном и другой звуковой аппаратурой.</p>
+<p>Чтобы ваши знания не устарели, постоянно следите за развитием Интернета и всего, что с ним связано. </p>
+<h3>Необходимое программное обеспечение</h3>
+<p>На первом этапе для обучения основам HTML вам будет достаточно установить на свой компьютер ОС Microsoft Windows любой современной версии и два наиболее распространенных браузера - Microsoft Internet Explorer версии 5.0 или более новой и Netscape Navigator версии не старее, чем 4.76. </p>
+<p>Для обработки графических изображений удобнее всего Adobe Photoshop версии 5.5 или 6.0, содержащей дополнительные возможности, удобные для Web-дизайнеров. Для создания статических страниц HTML можно воспользоваться средой разработки Web-сайтов Microsoft FrontPage 2000, входящей в состав Microsoft Office 2000. </p>
+<p>Примеры Web-приложений, которые мы будем рассматривать, были отлажены в среде Microsoft Windows 2000 Server, в состав которой входит Internet Information Server 5.0. В крайнем случае допустимо начинать работу в среде Microsoft Windows NT Server 4.0 с дополнительно установленным пакетом обновлений Service Pack 6.0 и Web-сервером IIS 4.0, входящим в комплект Microsoft Option Pack for Windows NT Server. </p>
+<p>Для работы с базами данных мы использовали Microsoft SQL Server 2000. Можно заменить эту СУБД на Microsoft SQL Server версии 7.0 (с пакетом обновления Service Pack 2) или даже на Microsoft SQL Server версии 6.5 (с пакетом обновления Service Pack 5), но при этом следует учитывать ограничения старых версий.</p>
+<p>Создание, редактирование и отладку страниц ASP лучше всего выполнять с помощью инструментального средства Microsoft InterDev версии 6.0, входящего в комплект Microsoft Visual Studio 6.0.</p>
+<p>Для изучения разделов, посвященных языку программирования Perl, мы пользовались интерпретатором ActivePerl версии 5.6, который можно бесплатно загрузить с Web-сайта сообщества ActiveState (http://www.activestate.com). Кроме того, вам потребуется средство предварительной обработки HTML-страниц PHP 4.0, также доступное через Интернет по адресу http://www.php.net.</p>
+<h3>Требования к компьютеру</h3>
+<p>Требования к конфигурации компьютера полностью определяются установленным ПО. Наиболее требовательна к ресурсам операционная система Microsoft Windows 2000 Server и СУБД Microsoft SQL Server 2000. Несмотря на то, что для этих программных средств рекомендуется объем оперативной памяти 256 Мбайт и более, в крайнем случае для разработки и отладки Web-приложений хватит и 128 Мбайт. В рабочий Web-сервер, предназначенный для коммерческих приложений, мы рекомендуем установить не менее 256 Мбайт оперативной памяти. </p>
+<p>Что касается дисковой памяти, то для разработки и изучения Web-технологий достаточно диска размером 10-15 Гбайт. Объем дисков для реализации коммерческих проектов полностью определяется объемом информации, хранимой на создаваемом вами Web-сайте. Хотя на первый взгляд эти требования достаточно высоки, сегодня, когда оперативная и дисковая память заметно подешевела, эти цифры не выглядят шокирующими.</p>
+<p>Для комфортной работы мы рекомендуем оборудовать компьютер процессором Pentium III с тактовой частотой не ниже 500 МГц, хотя в крайнем случае хватит и 350 Мгц. </p>
+<p>Необходимо также подумать о надежном подключении вашего компьютера или локальной сети к Интернету. Наилучший способ, несомненно, подключение по линии ADSL или ISDN; тем не менее можно работать и с модемом. Если вам удается соединиться с провайдером Интернета на скорости от 24 до 33,6 Кбит/с, этого достаточно. При ненадежном соединении стоит попробовать установить модем другого типа. Мы рекомендуем использовать профессиональные модели модемов: хотя их стоимость может превышать 200 долл., в некоторых случаях только с помощью таких модемов удается добиться сколько-нибудь надежного соединения.</p>
+<p>Те, кому посчастливилось подключить свою телефонную линию к современной цифровой АТС, могут попробовать установить модем с протоколом V.90, способным работать на скоростях 48-56 Кбит/с. В некоторых районах Москвы и в других городах России создаются домашние локальные сети, подключенные к Интернету. </p>
+<p>И, наконец, для ускорения загрузки страниц Web-сайтов и файлов мы рекомендуем установить систему асимметричного спутникового доступа, такую как НТВ Интернет (http://www.ntvi.ru). Хотя эта система и не даст никакого выигрыша при копировании файлов на создаваемые вами Web-сайты, она обеспечит реальную (и относительно недорогую по сравнению с другими системами быстрого доступа в Интернет) возможность загружать ПО и документацию большого объема за приемлемое время.</p>
+<p>Для подготовки графических иллюстраций следует обзавестись сканером и цифровым фотоаппаратом. Поскольку размер размещаемых в Интернете иллюстраций делают небольшим (с целью ускорения загрузки страниц HTML), можно использовать относительно недорогие модели цифровых фотоаппаратов.</p>
+<p>Кроме того, желательно подключить к компьютеру принтер. Помимо того, что он даст вам возможность распечатывать исходные тексты создаваемых программ и документацию, принтер позволит узнать, как выглядят страницы вашего сервера на печати.</p>
+<h3>Реальные примеры </h3>
+<p>В основу этой статьи и планирующейся к выпуску книги &quot;Создание Web-приложений&quot;, 
+  положен опыт создания реальных проектов в Интернете, накопленный нами и нашими 
+  партнерами, в частности, Web-студией Spektrum Web Development (<a href="http://www.spektrum.org.ru">http://www.spektrum.org.ru</a>). 
+  Ниже мы кратко расскажем о некоторых таких проектах в порядке возрастания сложности 
+  их реализации.</p>
+<h4>Наша домашняя Web-страничка</h4>
+<p>Свой первый опыт создания сайтов в Интернете мы получили в процессе работы 
+  над собственной домашней страничкой. Сейчас, после регистрации нашего собственного 
+  домена frolov.pp.ru, она преобразована в Web-сайт, расположенный по адресу <a href="http://www.frolov.pp.ru">http://www.frolov.pp.ru</a>.</p>
+<p>Как и любая домашняя страница, эта страница содержит персональную информацию, перечень наших проектов, предложения услуг и другую аналогичную информацию (рис. 4).</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4/Web1/fig4.gif" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Персональный Web-сайт авторов. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Начинающего разработчика Web-сайтов наша страничка может заинтересовать применением программ CGI, предоставленных провайдером бесплатно, таких как программа отправки содержимого формы по электронной почте и программа организации электронной конференции. </p>
+<h4>Сайт службы восстановления данных DataRecovery.Ru</h4>
+<p>Служба восстановления данных DataRecovery.Ru предоставляет услуги по ликвидации 
+  последствий сбоев программного обеспечения и аппаратуры, повлекших за собой 
+  потерю компьютерных данных. На Web-сайте службы DataRecovery.Ru (рис. 5, <a href="http://www.datarecovery.ru">http://www.datarecovery.ru</a>) 
+  посетители могут заполнить подробную анкету с описанием случившейся неприятности, 
+  а также вызвать через Интернет экстренную помощь. Сообщение об экстренном вызове 
+  передается оператору службы DataRecovery.Ru на пейджер или мобильный телефон. 
+  О том, как этого удалось добиться, мы расскажем в одной из следующих статей.</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4/Web1/fig5.gif" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Сайт службы восстановления данных DataRecovery.Ru. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Сайт компании NetTrader.Ru</h4>
+<p>Компания <a href="http://www.nettrader.ru">NetTrader.Ru</a> предоставляет услуги 
+  дисконтного брокера, позволяющие проводить торги ценными бумагами через Интернет 
+  в реальном времени. Посетители сайта компании (рис. 6) могут в реальном времени 
+  ознакомиться с котировками ценных бумаг, выдать приказы на их продажу или приобретение, 
+  управлять собственным счетом, получать различные отчеты и обширную аналитическую 
+  информацию. </p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4/Web1/fig6.gif" alt=Fig.6></td>
+<td valign="bottom">Рис. 6. Сайт компании NetTrader.Ru. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Данный сайт интересен тем, что в нем используются самые современные технологии компании Microsoft, такие как ASP, XML, VML и другие. В одной из следующих статей мы расскажем о том, как эти технологии применяются на сервере NetTrader.ru.</p>
+<p>Авторы участвовали в разработке справочной (рис. 7) и обучающей (рис. 8) систем на этом сайте. При создании справочной системы использовались фреймы, сценарии JavaScript и каскадные таблицы стилей CSS. На ее примере можно показать, как создавать иерархически организованное меню, предназначенное для навигации по разделам разветвленной справочной системы.</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4/Web1/fig7.gif" alt=Fig.7></td>
+<td valign="bottom">Рис. 7. Справочная система сайта NetTrader.Ru. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4/Web1/fig8.gif" alt=Fig.8></td>
+<td valign="bottom">Рис. 8. Обучающая система сайта NetTrader.Ru.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Обучающая система представляет собой набор связанных между собой последовательностей кадров с анимированными иллюстрациями. Каждая последовательность кадров рассказывает о выполнении тех или иных операций в системе NetTrader.Ru.</p>
+<h4>Сайт Центра эндохирургии и литотрипсии </h4>
+<p>Главная страница сайта Центра эндохирургии и литотрипсии (ЦЭЛТ), созданного компанией Spektrum Web Development, представлена на рис. 9. Сайт содержит подробную информацию о подразделениях центра с поэтажными планами, расписание приема врачей, цены и т.п.</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4/Web1/fig9.gif" alt=Fig.9></td>
+<td valign="bottom">Рис. 9. Сайт Центра эндохирургии и литотрипсии. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>На наш взгляд, для разработчиков Web-приложений особый интерес представляет метод, примененный в этом сервере для обновления текущей информации без привлечения дизайнеров и специалистов по HTML. Он предполагает использование серверных элементов управления ActiveX, разработанных компанией Spektrum Web Development для работы с текстовыми файлами и файлами изображений. Такие файлы загружаются на Web-сервер при помощи протокола FTP, при этом их содержимое автоматически появляется на страницах сайта. Операция загрузки файлов не требует привлечения высококвалифицированных сотрудников.</p>
+<h4>Система сайтов издательства &quot;Русская Редакция&quot;</h4>
+<p>Система Web-сайтов, разработанная для издательства &quot;Русская Редакция&quot;, представляет собой кластер из трех самостоятельных сайтов, два из которых предназначены для посетителей, а один - для &quot;служебного&quot; пользования. Этот кластер снабжен единой СУБД, реализованной на основе Microsoft SQL Server версии 7.0. Он имеет общий центр администрирования (серверное приложение), а также общие автоматические процедуры сопровождения, такие как резервное копирование данных, вычисление статистической информации, генерация прайс-листов и полных каталогов товара.</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4/Web1/fig10.gif" alt=Fig.10></td>
+<td valign="bottom">Рис. 10. Сайт издательства &quot;Русская Редакция&quot;. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>На сайте издательства &quot;Русская Редакция&quot; (рис. 10, <a href="http://www.rusedit.ru">http://www.rusedit.ru</a>) 
+  представлена информация о книгах и сериях книг, которая считывается из базы 
+  данных и отображается в окне браузера. Система поиска, предусмотренная на этом 
+  сайте, также работает с базой данных книг. Посетители могут искать книги по 
+  самым разным критериям, таким как название книги, фамилия автора, название издательства, 
+  слова, встречающиеся в аннотации, номер ISBN и т.д.</p>
+<p>Книжный Интернет-магазин IT Book (рис. 11, <a href="http://www.itbook.ru">http://www.itbook.ru</a>), 
+  созданный авторами статьи, обращается к той же базе данных, что и сайт издательства 
+  &quot;Русская Редакция&quot;.</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4/Web1/fig11.gif" alt=Fig.11></td>
+<td valign="bottom">Рис. 11. Книжный Интернет-магазин IT Book. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Посетители магазина могут просматривать базу данных книг с помощью иерархически организованного рубрикатора, находить книги по названию серии или пользуясь системой поиска, аналогичной той, которая работает на сайте издательства. Дополнительно можно искать книги по такому критерию, как уровень подготовленности читателя.</p>
+<p>Находясь на странице с подробной информацией о книге, посетители могут выставить ей оценку по пятибалльной шкале или написать свой отзыв. Вся эта информация будет доступна для просмотра другими посетителями сайта. Посетители могут также ознакомиться со списком названий других книг, чаще всего приобретаемых вместе с данной книгой. Это стало возможным благодаря статистической обработке информации о приобретаемых книгах, выполняемых каждые сутки в ночное время.</p>
+<p>Для отбора приобретаемого товара в магазине предусмотрена электронная корзина. При оформлении доставки общая стоимость покупки рассчитывается автоматически исходя из цены каждой книги, ее веса и региона, в который ее нужно доставить.</p>
+<p>Еще один интересный раздел Интернет-магазина (присутствующий и на сайте издательства) - лента новостей. Ее содержимое можно увидеть в правой части страниц, показанных на рис. 10 и 11. Ленту новостей заполняет администрация без привлечения Web-дизайнеров. Зарегистрированные посетители Интернет-магазина могут подписаться на получение сообщений ленты новостей по электронной почте.</p>
+<p>Бэк-офис. В нашем случае это обычный Web-сервер, взаимодействующий с той же самой базой данных, которую использует Интернет-магазин IT Book и сайт издательства &quot;Русская Редакция&quot;. На рис. 12 показана основная страница меню нашего бэк-офиса.</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4/Web1/fig12.gif" alt=Fig.12></td>
+<td valign="bottom">Рис. 12. Бэк-офис. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Здесь есть разделы, предназначенные для выполнения следующих операций:</p>
+<ul>
+  <li>работа с общей информацией, такой как сведения об издательствах, сериях 
+    книг и отзывах посетителей;</li>
+  <li>управление витринами Интернет-магазина и сайта издательства;</li>
+  <li>обработка заказов;</li>
+  <li>оформление доставки;</li>
+  <li>управление учетными записями администраторов системы и клиентов;</li>
+  <li>просмотр справочной информации по использованию функций бэк-офиса.</li>
+</ul>
+<p>Пользуясь браузером Microsoft Internet Explorer, администраторы системы могут добавлять и обновлять сведения об издательствах, сериях книг и книгах. При этом через окно браузера загружаются графические иллюстрации, такие как изображения обложек книг и логотипы серий.</p>
+<p>Специальный рубрикатор позволяет формировать иерархическую структуру рубрик произвольной вложенности. При этом любая книга может быть отнесена к одной или нескольким рубрикам.</p>
+<p>Система обработки заказов дает возможность оформлять и распечатывать счета, отправляемые покупателям. Стоимость покупки рассчитывается автоматически с учетом цены и веса книг, а также тарифных поясов.</p>
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6531.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Профессиональный Web-сервер - этапы подготовки и создания
+</a><br><a href="detail.php@ID=6531.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Александр Фролов, Григорий Фролов
+alexandre@frolov.pp.ru; http://www.frolov.pp.ru, 
+  http://www.datarecovery.ru
+
+В статье использованы отрывки&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6531.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6531&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0b9bdc2e32bfbd24f95bcdb6eea52576'><img src='../bitrix/tools/captcha.php@captcha_code=0b9bdc2e32bfbd24f95bcdb6eea52576' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

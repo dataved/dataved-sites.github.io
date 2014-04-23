@@ -1,0 +1,516 @@
+<HTML>
+<HEAD>
+<title>Microsoft SharePoint Portal как средство управления знаниями
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Иван Никитин, преподаватель Центра компьютерного обучения при МГТУ им. Баумана, MSCD, MSCT  nikitin@specialist.ru Информационные технологии давно уже нашли свое место в офисах современных компаний. Однако для того, чтобы получить от них" />
+<meta name="description" content="Иван Никитин, преподаватель Центра компьютерного обучения при МГТУ им. Баумана, MSCD, MSCT  nikitin@specialist.ru Информационные технологии давно уже нашли свое место в офисах современных компаний. Однако для того, чтобы получить от них" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398083107','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6580' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6580&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6580"].SHOW_IMAGE.value="N"; document.forms["PrintForm6580"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6580"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6580"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6580);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6580.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6580.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6580);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11566.html'>№2 (43), февраль 2002</a><h1>Microsoft SharePoint Portal как средство управления знаниями
+</h1>12.02.2002<p></p><DIV class='article-text'><p><i>Иван Никитин,</i> <br>
+преподаватель Центра компьютерного обучения при МГТУ им. Баумана, MSCD, MSCT 
+  <br>
+  <a href="mailto:nikitin@specialist.ru">nikitin@specialist.ru</a>
+<p>Информационные технологии давно уже нашли свое место в офисах современных компаний. Однако для того, чтобы получить от них максимальную отдачу, недостаточно поставить на рабочих местах ПК с пакетом офисных программ и соединить их кабелем. Необходимо также обеспечить эффективную коллективную работу сотрудников и автоматизировать деловые процессы в фирме. Подобное решение, как правило, приходит после первых же месяцев эксплуатации систем вычислительной техники на предприятии.
+<p>Многие предприятия решают подобные задачи своими силами, однако на рынке ПО уже давно существует целое направление - Collaboration Software (ПО поддержки сотрудничества), или groupware (групповое ПО), где представлены продукты различных производителей. Каждый программный продукт обладает своей функциональностью и призван решать определенный круг задач.
+<p>На наш взгляд, практически любое предприятие и/или организация, использующие средства вычислительной техники, проходят через этап проб, спонтанного использования разнородных программных продуктов для решения своих задач. Результатом обычно бывают громоздкие системы, построенные как конгломерат совершенно разнородных программных продуктов и приложений, плохо связанных между собой, каждое из которых решает свою узкую задачу. Как правило (я думаю, именно в России), многие на этом останавливаются и тратят основные усилия на поддержание подобной системы &quot;на плаву&quot;.
+<p>Другие организации, более &quot;продвинутые&quot; в системном подходе, пытаются найти какое-то более универсальное решение и использовать его. Такой подход обычно подталкивает их к системам управления знаниями, основные задачи которых мы попробуем сформулировать.
+<h3>Для чего нужно управлять знаниями </h3>
+<p>Одна из передовых организаций в развивающейся области управления знаниями - корпорация Delphi, возглавляемая Майклом Коулопоулосом (Michael Koulopoulos). Так, в этой компании была разработана структура эффективного управления знаниями, названная &quot;цепь знаний&quot;. Эта модель должна облегчить предприятиям определение основных проблем в их бизнесе и средств, которые позволяют с помощью знаний получить преимущество в конкурентной борьбе (рис. 1).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2002/spp/ris1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Цепь знаний позволяет определить основные задачи бизнеса.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В основу теории &quot;цепи знаний&quot; положены два принципа. 
+<ol>
+  <li>Организации должны сохранять баланс между своей внутренней и внешней деятельностью. 
+    Должен происходить двусторонний обмен знаниями между клиентами, партнерами 
+    и лицами, ответственными за принятие решений. . </li>
+  <li>Любая организация должна оперативно реагировать на ситуацию на рынке; соответственно, 
+    сотрудникам организации должен быть предоставлен доступ ко всей важной информации, 
+    как внутренней, так и внешней. </li>
+</ol>
+<p>Используя цепь знаний в качестве средства оценки и определения потребностей организации, можно констатировать, что многие существующие технологии представляют собой эффективные, но частные, локальные решения. Соответственно, цепь знаний позволяет объединить эти частные решения в единую систему, которую мы и будем называть системой управления знаниями. Ее упрощенную модель можно представить в виде той же схемы из четырех четвертей (рис. 2).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2002/spp/ris2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Модель системы управления знаниями.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h3>Что есть на рынке </h3>
+<p>На рынке группового ПО есть ряд ярких и серьезных продуктов. Это и &quot;старожил&quot; 
+  eRoom от eRoom Technology, в число пользователей которого входят такие известные 
+  фирмы, как HP, Cisco Systems и Ford Motors, и &quot;новичок&quot; Groove одноименной компании, 
+  привлекающий к себе внимание тем, что построен по бессерверной технологии Peer-to-Peer. 
+  Однако, несмотря на ощутимую конкуренцию в этом сегменте рынка, бесспорные лидеры 
+  здесь - Lotus Development (<a href="http://www.lotus.com">http://www.lotus.com</a>, 
+  с 1995 г. в составе IBM) и Microsoft (<a href="http://www.microsoft.com">http://www.microsoft.com</a>). 
+<p>Широко известный продукт Lotus Notes, появившийся в начале 90-х, что называется, попал в десятку, причем не только в переносном смысле - журнал Network Computing назвал Lotus Notes среди 10 важнейших продуктов последнего десятилетия. Позднее, в 1996 г., из него выделились серверная часть - Lotus Domino и клиентская - Lotus Notes Client.
+<p>Основная технология Microsoft для поддержки коллективной работы - Exchange Server. По-видимому, он будет флагманом данного направления и в будущем, но в начале 2001 г. он получил мощное подкрепление в борьбе за рынок корпоративных клиентов в виде нового серверного продукта - Microsoft SharePoint Portal Server 2001 (MS SPP Server). Это универсальный корпоративный портал, средство управления документами и мощная поисковая машина. В нем реализованы практически все функции Exchange, кроме почтового сервера, так что эти два продукта в определенном смысле конкурируют между собой, но новый пакет позиционируется Microsoft именно как сервер управления знаниями (knowledge management server).
+<h3>Основные функции SharePoint Portal </h3>
+<p>MS SPP Server рассчитан в первую очередь на крупные корпорации. Этот сервер представляет собой универсальное решение, которое призвано решать большинство поставленных задач по управлению знаниями. Коротко охарактеризуем его основные функции.
+<p><b>Средства поиска.</b> Извлечение текста проводится с применением новейших 
+  приемов вероятностного ранжирования. Средства поиска обеспечивают предоставление 
+  наиболее подходящих документов (best bets), поиск по свойствам и автоматическое 
+  распределение просматриваемых информационных ресурсов по категориям. 
+<p><b>Доступ к данным и функции индексирования.</b> Поиск и сбор данных для индексирования 
+  на файловых и Web-серверах, серверах Lotus Notes, удаленных серверах и в общих 
+  папках Microsoft Exchange для SharePoint Portal Server. 
+<p><b>Подписки.</b> Возможность подписки на документ, папку, категорию или запрос 
+  поиска позволяет получать оповещения о происшедших изменениях по электронной 
+  почте или непосредственно через портал. 
+<p><b>Категории.</b> Информационные ресурсы классифицируются в соответствии с 
+  набором категорий, определяемых заказчиком. Благодаря этому упрощается переход 
+  к необходимой информации. 
+<p><b>Индексирование с низкой задержкой.</b> Возможность вручную или по расписанию 
+  запускать процесс сбора информации для индексирования, а также поддержка системы 
+  адаптивного и добавочного сбора данных для индексирования обеспечивают получение 
+  самой свежей информации при выполнении поиска. 
+<p><b>Интеграция с Windows и Office.</b> Все функции управления документами доступны 
+  непосредственно из панели инструментов Microsoft Office 2000 и из Windows Explorer. 
+  Благодаря этому пользователи могут применять знакомые средства для управления 
+  документами. 
+<p><b>Расширяемость системы поиска.</b> Интерфейсы обработчика протоколов поиска 
+  позволяют подключаться к пользовательским источникам данных. Поддержка пользовательских 
+  типов источников данных обеспечивается через интерфейс IFilter. 
+<p><b>Извлечение и возврат документов.</b> Расширяет возможности Web-папок, давая 
+  пользователям возможность резервировать документы для обновления. 
+<p><b>Создание версий документов.</b> Возможность отслеживания изменений в документах, 
+  в том числе в метаданных (например, в ключевых словах), и присвоения версиям 
+  различных номеров для последующего аудита и выполнения отката. 
+<p><b>Профили документов.</b> Профили содержат обязательные и дополнительные метаданные 
+  о пользовательских типах документов. 
+<p><b>Совместная работа над документами.</b> Возможность выполнять совместную 
+  проверку и просмотр материалов с помощью имеющихся в Office средств организации 
+  обсуждений, а также документов в формате HTML. 
+<p><b>Безопасность.</b> Применение ролей, основанных на системе безопасности Microsoft 
+  Windows NT, гарантирует, что доступ к документу получат только пользователи, 
+  имеющие соответствующие полномочия. 
+<p><b>Управление жизненным циклом.</b> Сначала создаются наброски, они проходят 
+  проверку и редактирование и затем публикуются (возможно, с включением маршрута 
+  для утверждения). 
+<p><b>Портал на базе электронной инструментальной панели.</b> Гибкие порталы на 
+  основе Web-компонентов создаются с применением электронной инструментальной 
+  панели и интерфейсов информационных ресурсов, а также Web-компонентов, разработанных 
+  независимыми поставщиками или самой компанией. 
+<p><b>Web-хранилище</b> (Web Storage System). Наличие встроенных служб создания 
+  Web-приложений для совместной работы. 
+<p>Создание Web-узла с помощью MS SPP Server не требует специальных знаний, и решения на его базе можно достаточно быстро реализовать без специальных навыков программирования (рис. 3). Хотя при этом имеются возможности разработки специальных модулей с помощью разнообразного инструментария.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2002/spp/ris3.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Общий вид интерфейса портала SharePoint.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h3>Управление документами </h3>
+<p>Безусловно, одна из наиболее важных функций ПО коллективной работы - хорошо организованное хранение общих документов и файлов (рис. 4). MS SPP Server обеспечивает хранение корпоративных документов в общих папках. Можно создать любое число папок и хранить в них любое количество документов. Для контроля версий используется встроенный механизм, но при желании можно применять и внешний, например Microsoft SourceSafe. Причем команды взять/вернуть документ (check in/check out) доступны прямо из меню Файл приложений Office, т. е. для работы с документом даже не придется запускать браузер и посещать сайт.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2002/spp/ris4.gif" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Вид библиотеки документов сервера.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Версии документов помечаются как &quot;черновые&quot;, т. е. не предназначенные для публикации, и &quot;чистовые&quot;, которые публикуются на сервере и индексируются поисковой машиной (рис. 5). При необходимости можно просмотреть всю историю работы над документом - кто и когда его открывал, какие изменения вносил - и вернуться к любому прошлому варианту.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2002/spp/ris5.gif" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Вид документа в общей папке.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Очень важная функция MS SPP Server - маршрутизация документов. Допустим, к примеру, что в компании существует правило, по которому все коммерческие предложения, подготовленные менеджерами по продажам, должны проверяться коммерческим директором. Координатор рабочей области коммерческого отдела организует папку для предложений и задает для всех менеджеров по продажам роль Автор, чтобы они могли создавать в ней новые документы. Затем определяет маршрут документов в этой папке, указав, что все чистовые версии должны отсылаться на ревизию коммерческому директору и публиковаться на сервере лишь после его утверждения. И все - больше никогда клиент не получит устаревший или не проверенный руководством вариант документа.
+<p>Маршруты могут также разбиваться на несколько этапов, а ревизии допускаются как индивидуальные, так и групповые. Благодаря таким возможностям сервера на его основе легко построить автоматизированную систему документооборота без какого бы то ни было программирования.
+<p>Еще одна полезная функция - возможность указать шаблон для каждой папки (библиотеки), на основе которого должны создаваться документы. Многие компании сталкиваются с проблемой, когда однотипные документы, подготовленные их сотрудниками, оказываются по-разному оформленными. Это не так уж критично, но все-таки партнерам (да и руководству), скорее всего, будет приятнее получать, скажем, все пресс-релизы на стандартных бланках, содержащих логотип и контактную информацию. Чтобы этого добиться, достаточно указать для папки, в которой будут располагаться все пресс-релизы, необходимый шаблон документа. После этого работнику, готовящему очередной пресс-релиз, потребуется либо зайти на сервер MS SPP Server и нажать в нужной папке кнопку Создать новый документ, либо просто в Word выбрать опцию Создать по шаблону и указать шаблон прямо на сервере.
+<p>Поиск документов по их содержимому - одна из ключевых функций MS SPP Server. Индексировать можно не только документы, хранящиеся на сервере, но и файлы в папках Microsoft Exchange, Lotus Notes, библиотеках SharePoint Team Services* и даже произвольные сайты, в том числе из Интернета. Таким образом, поисковая система на базе MS SPP Server может охватить практически всю доступную компании информацию, а возможность автоматического выполнения заранее определенных поисковых запросов по заданному расписанию позволит, например, оперативно отслеживать все действия конкурирующих фирм.
+<p><hr width="40%" align="left" noshade>* SharePoint Team Services - это &quot;облегченный&quot; продукт на базе технологии SharePont. 
+  Он входит в состав FrontPage 2002 и предназначен для создания Web-сайтов для 
+  обеспечения коллективной работы групп до 75 человек. Подробнее см. <a href="http://www.bytemag.ru/Article.asp?id=499">&quot;Microsoft 
+  Office XP - платформа разработки приложений&quot;</a>, &quot;BYTE/Россия&quot; № 10/2001. 
+<p>Очень полезная функция MS SPP Server - подписка. На любой список, документ, папку, библиотеку или доску обсуждений можно &quot;подписаться&quot; - определить, какие изменения выбранного объекта (добавление, удаление, редактирование) вас интересуют, и получать уведомления по электронной почте всякий раз, когда данные изменения происходят. Вместо почтового клиента можно использовать специальный компонент Web Part, который отображает состояние всех выбранных подписок. Эта возможность освобождает пользователей от необходимости постоянно просматривать сайт в поисках новостей. Можно спокойно заниматься своим делом, а новости &quot;придут&quot; сами.
+<h3>Безопасность и распределение ролей </h3>
+<p>Сервер использует фиксированный набор ролей, которые можно назначать для узла рабочей области, т. е. на верхнем уровне, но обычно они используются на уровне папок рабочей области. Кроме того, можно полностью запретить пользователю или целой группе доступ к конкретному документу. В настоящее время реализованы три роли.
+· 
+<p><b>Coordinator</b> (координатор) рабочей области управляет документами в папке 
+  верхнего уровня и выполняет ряд административных задач, касающихся всей рабочей 
+  области: управляет источниками информации, профилями документов, категориями 
+  и подписками, настраивает электронные панели и распределяет роли. Роль координатора 
+  присваивается автоматически администратору, создавшему рабочую область. · 
+<p><b>Author</b> (автор) создает и редактирует документы в папке. Он может создавать, 
+  переименовывать и удалять папки, но не имеет права изменять роли или политику 
+  утверждения для созданных им папок. · 
+<p><b>Reader</b> (читатель) может искать и читать документы, но не может добавлять 
+  их в рабочую область с узла электронных панелей. Он не может извлекать, редактировать 
+  и удалять документы и не имеет права просматривать черновики. 
+<h3>Электронные инструментальные панели </h3>
+<p>Web-cайты MS SPP Server реализованы в виде узлов электронных инструментальных панелей, созданных с помощью технологии Microsoft SharePoint DashBoard*, что позволяет свести необходимую информацию воедино, сделать ее более доступной &quot;в одном месте и в одно время&quot; (рис. 6). Большинство операций пользователя реализуются через Web-компоненты DDB (Web Parts), которые могут компоноваться на экране произвольным образом.
+<p><hr align="left" noshade width="40%">
+* О технологии DDB см. также <a href="http://www.bytemag.ru/Article.asp?id=136">&quot;Digital Dashboard - окно в информационное пространство&quot;</a>, 
+&quot;BYTE/Россия&quot; №2/2001. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2002/spp/ris6.gif" alt=Fig.6></td>
+<td valign="bottom">Рис. 6. Пример электронной инструментальной панели.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Электронные инструментальные панели можно формировать непосредственно, путем сохранения офисных документов (чаще всего в формате Excel) в виде интерактивных Web-страниц. Для создания более сложных панелей или собственных Web-компонентов существуют средства разработки, входящие в состав выпуска Office XP Developer Edition (создание проектов типа DashBoard Project).
+<h3>Перспективы применения </h3>
+<p>Microsoft SharePoint Portal - новый продукт, и должно пройти некоторое время, чтобы заказчики к нему присмотрелись и приступили к внедрению. По опыту нашего Центра обучения можно сказать, что спрос на курсы вторичен по отношению к внедрению продукта. Однако, прогнозируя будущий интерес пользователей к новому серверу, осенью были подготовлены два сертифицированных курса по данной технологии: &quot;2095 - Implementing Microsoft SharePoint Portal&quot; (внедрение портала) и &quot;2382 - Developing Digital Dashboards&quot; (разработка инструментальных панелей). 24 декабря началось обучение первой группы специалистов из числа компаний -- партнеров Microsoft: &quot;Кречет&quot;, &quot;Крок&quot;, Scala, &quot;Ай-Ти&quot;, &quot;Найтвей Ойл&quot;, &quot;Бизнес Компьютер Центр&quot; и т. д. Группа собралась в рекордно сжатые сроки. Так что реализация конкретных проектов не за горами.
+<p> </p><table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr> 
+    <td> 
+      <h3>SharePoint Portal в &quot;Иркутскэнерго&quot; </h3>
+      <p><i>Андрей Колесов</i> 
+      <p>В ноябре 2001 г. на конференции &quot;Microsoft Платформа 2002&quot; директор по 
+        информационным технологиям &quot;Иркутскэнерго&quot; Илья Кириенко сделал доклад 
+        о пилотном внедрении SharePoint Portal на своем предприятии. &quot;Иркутскэнерго&quot; 
+        - крупнейшая энергетическая компания региона, в ее состав входят три ГЭС 
+        и 12 ТЭЦ, которые вырабатывают 8% электроэнергии России. 
+      <p>ИТ-инфраструктура предприятия представляет собой достаточно типичную 
+        ситуацию &quot;зоопарка&quot;: огромный набор бизнес-приложений, разрабатывавшихся 
+        в разное время, с помощью различных инструментов, и работающих на самых 
+        разных платформах: Novell Netware 3.x - 5.x, UNIX, FreeBSD, Sun Solaris, 
+        Microsoft Windows NT. В плане развития информационной системы проектного 
+        подразделения компании были поставлены следующие задачи:
+      <ul>
+        <li>управление проектами и коллективная работа над ними;</li>
+        <li>контроль за работой проектных групп;</li>
+        <li>поддержка документооборота;</li>
+        <li>интеграция используемых приложений;</li>
+        <li>наличие единой точки доступа к информации. </li>
+      </ul>
+      <p>Для реализации системы был выбран Microsoft SharePoint Portal 2001, на 
+        базе которого был выполнен пилотный проект (рис. 7) на базе двух серверов 
+        и 16 клиентских мест. В проекте задействованы 14 специалистов-пользователей, 
+        2 администратора и 2 сторонних специалиста. Консультантом проекта выступал 
+        сертифицированный партнер Microsoft компания НПФ &quot;Форус&quot;. 
+      <p>Итоги реализации пилотного проекта были признаны удовлетворительными, 
+        и в перспективе планируется расширить использование технологий Microsoft 
+        SharePoint Portal для подключения финансово-экономических подсистем, поддержки 
+        внутрикорпоративного документооборота, а также интеграции с другими бизнес-приложениями. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2002/spp/ris7.gif" alt=Fig.7></td>
+<td valign="bottom">Рис. 7. Структурная схема портала. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+    </td>
+  </tr>
+</table>
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6580.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Microsoft SharePoint Portal как средство управления знаниями
+</a><br><a href="detail.php@ID=6580.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Иван Никитин, 
+преподаватель Центра компьютерного обучения при МГТУ им. Баумана, MSCD, MSCT 
+  
+  nikitin@specialist.ru
+Информационные технологии&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6580.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6580&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0e4d06514dc501e6a6720b8b45cf8ff5'><img src='../bitrix/tools/captcha.php@captcha_code=0e4d06514dc501e6a6720b8b45cf8ff5' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

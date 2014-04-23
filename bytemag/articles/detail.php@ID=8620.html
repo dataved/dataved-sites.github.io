@@ -1,0 +1,466 @@
+<HTML>
+<HEAD>
+<title>Системы хранения данных EMC
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Александр Николов anikolov@bytemag.ru Вне всяких сомнений можно утверждать, что на сегодняшний момент эффективная инфраструктура централизованного хранения и доступа к корпоративным данным представляет собой неотъемлемую и весьма существенную часть" />
+<meta name="description" content="Александр Николов anikolov@bytemag.ru Вне всяких сомнений можно утверждать, что на сегодняшний момент эффективная инфраструктура централизованного хранения и доступа к корпоративным данным представляет собой неотъемлемую и весьма существенную часть" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082472','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8620' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8620&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8620"].SHOW_IMAGE.value="N"; document.forms["PrintForm8620"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8620"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8620"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8620);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8620.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8620.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8620);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11508.html'>№6 (82), июнь 2005</a><h1>Системы хранения данных EMC
+</h1>10.06.2005<p></p><DIV class='article-text'><p><i>Александр Николов</i>
+<br><a href="mailto:anikolov@bytemag.ru">anikolov@bytemag.ru</a>
+<p>Вне всяких сомнений можно утверждать, что на сегодняшний момент эффективная инфраструктура централизованного хранения и доступа к корпоративным данным представляет собой неотъемлемую и весьма существенную часть современной информационной системы любого предприятия. Функции надежного хранения, своевременного и быстрого доступа, его разграничения и сохранения конфиденциальности данных, обеспечиваемые современными системами хранения, можно рассматривать как немаловажные конкурентные преимущества компаний, позволяющие им добиваться успеха на основных рынках сбыта и успешно завоевывать новые в условиях современного информационного общества. Хорошо продуманная, скоординированная, четкая корпоративная политика в области хранения и обработки данных служит ключом к построению в условиях современной российской экономики эффективной компании европейского типа с гибкой структурой управления и прозрачным внутренним устройством, обладающей достаточным потенциалом для достойной конкуренции на интегрированном мировом рынке.
+<p>В рамках распределенной клиент-серверной архитектуры обработки данных, пришедшей на смену вертикально интегрированным решениям на базе мэйнфреймов, за последнее десятилетие был выработан универсальный подход к построению хранилищ данных, представляющий собой объединение множества специальным образом сконструированных систем хранения - так называемых NAS-серверов и серверов обработки данных - в рамках единой распределенной сетевой инфраструктуры посредством открытой архитектуры SAN.
+<p>За время, прошедшее с момента появления первых таких решений, рынок сетевых систем хранения данных успел набрать обороты, развиться и окрепнуть - по оценкам крупнейших аналитических агентств, сегодня его объемы исчисляются миллиардами долларов, а ведущие игроки входят в список самых крупных и влиятельных компаний ИТ-отрасли в целом. Один из бесспорных лидеров этого сегмента - корпорация EMC (<a href="http://www.emc.com">http://www.emc.com</a>), известная не только своими техническими решениями, но и инновационными технологиями построения хранилищ данных вкупе с комплексными программами интеграции, нацеленными на все значимые отрасли современной экономики. В силу известных ограничений данный обзор посвящен лишь одной из сторон деятельности EMC - системам хранения данных, поставляемым компанией (прочие аспекты ее деятельности, вероятно, будут рассмотрены в следующих публикациях).
+<p>Компания EMC предлагает весьма широкий спектр подключаемых к сети хранилищ, что позволяет удовлетворить практически любые требования средних и крупных заказчиков - от центров обработки данных до корпоративных филиалов. Все системы EMC совместимы с наиболее распространенными и отработанными инфраструктурными ИТ-решениями, в том числе с технологиями Microsoft, обеспечивают достаточный уровень доступности, масштабируемости и производительности и характеризуются широкими возможностями управления - благодаря большому набору функций управлять инфраструктурой можно с одной консоли. Разумеется, заказчикам предоставляются сервисное обслуживание и поддержка производителя, оказываемые компанией EMC в масштабе всего земного шара.
+<h3>Семейство NAS-систем </h3>
+<p>Серия <b>EMC NetWin</b>, включающая модели NetWin 110 и NetWin 200, нацелена 
+  на нишу небольших или удаленных офисов, региональных филиалов, подразделений 
+  компаний или быстро растущих предприятий с устаревшими файловыми серверами на 
+  базе платформ Microsoft Windows, Novell NetWare или Apple Macintosh, позволяя 
+  в рамках единого комплексного решения объединить данные нескольких подключенных 
+  к сети хранилищ. Мощная и достаточно недорогая система совмещает доступность 
+  и гибкость хранилищ CLARiiON с простотой ОС Microsoft Windows Storage Server 
+  2003, обеспечивая масштабируемость, надежность и высокую готовность, а также 
+  простоту управления ресурсами сервера обработки и хранилища данных с одной консоли 
+  через привычный Windows-интерфейс и надежную защиту данных с помощью ПО Legato 
+  Replistor для задач репликации и восстановления. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2005/emc_stor/ris1.jpg" alt=Fig.1></td>
+<td valign="bottom">NAS-система серии EMC NetWin.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Устройства серии NetWin поддерживают распространенные сетевые протоколы доступа к данным, такие, как CIFS, NFS, IPX, Appletalk, HTTP и FTP, имеют единственный блок переноса данных (на базе одного процессора Intel в случае NetWin 110 и двух процессоров у NetWin 200), масштабируются до 35 Тбайт и совместимы со всей серией массивов хранения данных CLARiiON, включая новую модель EMC CLARiiON AX100.
+<p>Устройства семейства NetWin, будучи NAS-системами начального уровня, обеспечивают простой и экономичный способ постепенно увеличивать объем хранилища, повышать его производительность и уровень обслуживания - по мере роста потребностей заказчиков используемую ими модель легко усовершенствовать до систем серии EMC NS700 или Celerra Clustered Network Server.
+<p>Серия систем <b>EMC NS/Шлюзовые</b>, включающая модели NS500G, NS700G и NS704G, 
+  задает новый стандарт для NAS-систем среднего уровня с полным набором современных 
+  функций и возможностей, включая улучшенную кластеризацию, высокую производительность, 
+  максимальную простоту использования, и с приемлемой стоимостью. Эти устройства 
+  наилучшим образом подходят для интеграции NAS-серверов в уже существующие на 
+  предприятии SAN-решения, типичная сфера их применения - среды с расширяющимся 
+  использованием файловых серверов и специальными требованиями к производительности, 
+  доступности и масштабируемости при использовании нескольких протоколов. Устройства 
+  серии NS/Шлюзовые позволяют объединить хранилища SAN и NAS в единую, легко управляемую 
+  систему сетевого хранения с высоким уровнем готовности, повысив эффективность 
+  инвестиций в системы хранения EMC CLARiiON CX и Symmetrix DMX и обеспечив им 
+  прозрачную интеграцию. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2005/emc_stor/ris2.jpg" alt=Fig.2></td>
+<td valign="bottom">Устройство из серии EMC NS.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Серия EMC NS/Шлюзовые позволяет заказчикам строить решения, подбирая модели по стоимости, продуктивности и специальным возможностям: шлюз начального уровня EMC NS500G обладает высокой производительностью и готовностью, прост в обслуживании и при этом поставляется по весьма низкой цене; система EMC NS700G предоставляет пользователю повышенную производительность и емкость вкупе с максимальными возможностями расширения; NAS-шлюз EMC NS704G отличается улучшенными возможностями кластеризации по схеме N+1, допускает расширение до четырех блоков переноса данных и имеет чрезвычайно высокую производительность (в три раза большую, чем у системы NS700G), ранее доступную только в системах NAS высшего уровня. Все решения серии поддерживают диски с интерфейсом как Fibre Channel, так и ATA - заказчики могут выбирать конфигурацию исходя из соотношения цена/производительность. Серия EMC NS/Шлюзовые обеспечивает доступ к данным с использованием множества протоколов, в число которых входят, в частности, сетевые протоколы NFS v2 и v3, CIFS, FTP, SNMP, NDMP, NTP, SNTP и TFTP.
+<p>Комплект поставки серии EMC NS/Шлюзовые включает ПО с интуитивно понятным Web-интерфейсом, которое позволяет решать сложные задачи администрирования, управляя системами этой серии либо как автономными устройствами, либо как частью единой инфраструктуры.
+<p>Главное же преимущество шлюзовых NAS заключается в одновременном повышении эффективности инвестиций в систему хранения, добавлении новых возможностей и консолидации хранимых данных.
+<p>Серия расширенных NAS-решений <b>EMC NS/Интегрированные </b>- это высокопроизводительные 
+  интегрированные NAS-системы среднего уровня для использования в специальных 
+  областях и особых местах размещения. Они представляют собой простые во внедрении 
+  и обслуживании решения типа &quot;все в одном&quot;, с высокой степенью готовности и выделенными 
+  сетевыми хранилищами EMC CLARiiON. Типичная сфера применения решений серии NS/Интегрированные 
+  - построение распределенной среды доступа к данным, удовлетворяющей некоторым 
+  специальным требованиям к производительности, доступности и масштабируемости 
+  при использовании нескольких протоколов доступа, когда инфраструктура SAN не 
+  является обязательным условием. 
+<p>В рамках серии доступны две модели - система начального уровня NS500, представляющая собой экономичное решение для консолидации данных в распределенной среде хранения, и NS700 с более высокой производительностью и емкостью. Младшая модель отличается высокой готовностью и простотой управления при весьма низкой цене. Это полнофункциональное NAS-решение интегрируется с сетевым хранилищем CLARiiON CX500 и позволяет значительно повысить производительность по сравнению с хранилищем, подключаемым напрямую. Старшая модель - высокопроизводительное встроенное NAS-устройство с выделенным хранилищем CLARiiON CX700. Обе они доступны в конфигурации с одним или двумя блоками переноса данных и с дисками стандартов Fibre Channel или ATA по выбору. Для обеспечения высокой степени готовности и непрерывного доступа к файлам серия NS/Интегрированные допускает прозрачное динамическое переключение на &quot;горячий&quot; резервный блок переноса данных. Предусмотрены также RAID-защита на аппаратном уровне, возможность замены компонентов без прекращения работы, резервная батарея для процессора хранилища и функции расширенного управления томами.
+<p>Все системы серии поддерживают протокол iSCSI в среде как Windows, так и Linux, что позволяет без труда объединять уже развернутые подключенные напрямую серверы и хранилища данных в единую интегрированную среду. Помимо этого, предусмотрена возможность доступа к данным по протоколам NFS v2 и v3, CIFS, FTP, SNMP, NDMP, NTP, SNTP или TFTP.
+<p>В случае изменения характера решаемых заказчиком задач любую систему серии NS/Интегрированные можно обновить до шлюзовой конфигурации, что дает заказчикам дополнительные гарантии защиты инвестиций.
+<p>Система <b>EMC Celerra Clustered Network Server</b> (CNS) - шлюзовое NAS-решение 
+  с числом блоков переноса данных от 2 до 14, обеспечивающее до 325 000 операций 
+  в секунду и поддерживающее до 224 прямых сетевых соединений. Она интегрируется 
+  с системами сетевого хранения Symmetrix или CLARiiON, обеспечивая высокую надежность, 
+  масштабируемость и производительность. Устройство поддерживает следующие сетевые 
+  протоколы доступа к данным: NFS v2/v3, CIFS, FTP, SNMP, NDMP, NTP, SNTP и TFTP. 
+  Типовая область применения Celerra CNS - крупные серверные среды общего назначения, 
+  где обязательна платформа для поддержки критичных высокопроизводительных приложений 
+  обслуживания файлов. 
+<h3>Сетевые хранилища EMC CLARiiON </h3>
+<p>Семейство сетевых систем хранения данных среднего уровня EMC CLARiiON предоставляет широкий диапазон решений, выполненных на основе мощной, проверенной временем архитектуры седьмого поколения. В рамках семейства заказчики могут подобрать наиболее подходящее им по производительности, возможностям и цене устройство - от системы начального уровня EMC CLARiiON AX100 до старшей модели CX700.
+<p>Устройства серии <b>CLARiiON AX</b> предлагают эффективное решение задач сетевого 
+  хранения данных, обладающее хорошими техническими показателями при доступной 
+  цене. Модель AX100 обеспечивает все преимущества сетевого хранения - консолидацию, 
+  автоматизацию и улучшенную защиту данных, объединенные в одном мощном и экономичном 
+  решении. Она совместима с серверными платформами Windows, Linux и NetWare и 
+  допускает их подключение к хранилищу с использованием технологии SAN или NAS, 
+  а также напрямую. 
+<p>Модели AX100 выпускается в двух разновидностях: CLARiiON AX100SC с одним RAID-контроллером - недорогое решение, снабженное лишь основными функциями обеспечения целостности данных, основанными на механизме хранения с избыточностью, организованной по стандарту RAID 5, и защите данных в кэш-памяти за счет ее питания от независимой аккумуляторной батареи. Второй вариант, CLARiiON AX100 с двумя RAID-контроллерами, - это более мощное решение, имеющее дополнительные функции: дублирующие друг друга процессоры, работающие по схеме &quot;активный-активный&quot;, и зеркалируемая кэш-память с двумя независимыми источниками питания для обеспечения высокой доступности и сквозной защиты данных в критичных для бизнеса приложениях.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2005/emc_stor/ris3.jpg" alt=Fig.3></td>
+<td valign="bottom">Система CLARiiON AX100.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Встроенный в систему функционал позволяет легко устанавливать, конфигурировать и контролировать AX100 без дополнительных затрат - интерфейс управления, основанный на использовании &quot;мастеров&quot;, чрезвычайно упрощает настройку и мониторинг работы массива. Использование так называемых моментальных снимков позволяет в определенные моменты времени создавать резервные образы хранимых данных, которые можно использовать для восстановления в случае сбоя. Рациональная конструкция модели AX100 позволяет установить в компактном корпусе высотой 2U, предназначенном для монтажа в 19-дюйм стойку, до двенадцати накопителей с интерфейсом Serial ATA, доведя тем самым суммарную емкость хранилища до 3 Тбайт, при этом наращивание объема значительно упрощается за счет поддержки виртуальных томов.
+<p>Системы среднего уровня <b>CLARiiON CX</b> используют современные технологии, 
+  реализующие новый уровень защиты хранимых данных, включая полную и инкрементную 
+  репликацию и зеркалирование в любое время и на любом расстоянии. Последние решения 
+  семейства CX - модели CX300, CX500 и CX700 - обеспечивают весьма высокую скорость 
+  работы, постоянную доступность и целостность данных, а также увеличенную масштабируемость 
+  - от 5 до 240 дисков в одной системе с возможностью расширения по мере необходимости. 
+  Кроме того, все семейство CX, от систем начального уровня до корпоративных решений, 
+  использует расширение LUN (metaLUN), в оперативном режиме повышающее доступность 
+  хранимой информации. В серии CX реализованы технические решения - например, 
+  объединение в одном массиве дисков с интерфейсами ATA и Fibre Channel, - за 
+  счет которых достигается гибкость и экономия средств при построении систем хранения. 
+  Наконец, с помощью программных инструментов EMC Navisphere Management Suite 
+  среда хранения данных CLARiiON CX обеспечивает пользователям простой Web-интерфейс 
+  для мониторинга, конфигурации и управления всеми своими функциями и приложениями 
+  из любого узла и в любое время. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2005/emc_stor/ris4.jpg" alt=Fig.4></td>
+<td valign="bottom">Система CLARiiON CX500.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Дополнительное преимущество серии CLARiiON CX - возможность перехода с уже существующих систем на новые без предварительного перемещения имеющихся данных, без потери совместимости программных средств разных поколений и перерыва на модернизацию аппаратного или программного обеспечения, что позволяет защитить прошлые, настоящие и будущие инвестиции заказчиков.
+<p>Система сетевого хранения данных CX300, новый продукт серии CLARiiON CX, - одно из самых передовых решений в своем классе. От предшественника модель CX300 отличается большими функциональными возможностями, расширенным объемом хранения (до 13 Тбайт) и повышенной производительностью при той же цене.
+<p>Система оптимизирована для работы в средах Windows, Unix, Linux и NetWare для рабочих групп, может содержать от 5 до 60 накопителей, обеспечивает скорость передачи данных 680 Мбит/с и позволяет выполнять до 50 000 операций ввода-вывода в секунду. Она обладает хорошей производительностью, реализует (с помощью программы SnapView) услуги локальной репликации, основанные на массивах, а также (с помощью программы PowerPath) услуги динамического выравнивания нагрузки и поиска нескольких резервируемых путей подключения к хранилищу. CX300 имеет типовой для всей серии CLARiiON CX интерфейс управления, основанный на Интернет-технологиях.
+<p>Благодаря использованию недорогих дисков с ATA-интерфейсом длительность операций резервного копирования и восстановления данных сокращается с многих часов до нескольких секунд, за счет чего можно рентабельно хранить больше информации в оперативном режиме, так как системы CLARiiON с дисками ATA обладают лучшей производительностью и доступностью данных по сравнению с накопителями на магнитной ленте. Кроме того, в одном массиве можно совмещать ATA-диски с дисками Fibre Channel при 100%-ной совместимости ПО.
+<p>Система сетевого хранения данных CLARiiON CX500 представляет собой расширение младшей модели CX300 с добавлением некоторых новых технических возможностей и функционала, переводящих ее на следующий уровень. Благодаря четырехкратному преимуществу в вычислительной мощности процессора и 4-Гбайт кэшу CX500 демонстрирует высокий уровень производительности и наилучшие показатели экономичности хранения. В системе можно использовать большое количество дисков - в относительно компактном пространстве 19-дюйм стойки высотой 25U можно разместить от 5 до 120 накопителей. Вместе с CX500 поставляется ПО со всеми теми же функциональными возможностями, что и у старшей модели CLARiiON CX700.
+<p>Система CX500 спроектирована для упрощения консолидации данных путем одновременной поддержки до 128 узлов и сертифицирована для работы в распространенных серверных средах, включая платформы Windows, Unix, Linux и NetWare. Это весьма гибкое решение, которое может функционировать в рамках SAN, NAS или DAS-решений, а также в сетях прямого доступа, использующих протокол iSCSI.
+<p>Сетевое хранилище данных CLARiiON CX700, вершина линейки CLARiiON CX, благодаря большим вычислительным возможностям, высокой производительности и экономичной цене установило новый стандарт для систем хранения среднего уровня. Модель CX700 предназначена для громоздких приложений, работающих с большими корпоративными базами данных. Имея четыре процессора с частотой 3 ГГц и восемь внутренних дисковых портов Fibre Channel, система обеспечивает более высокую вычислительную мощность и производительность, чем любой конкурирующий с ней продукт. Кроме того, приобретая CX700, заказчики получают максимальную масштабируемость - устройство линейно расширяется по накопителям до 240 дисков с возможностью кэширования, пиковой производительностью до 200 000 операций ввода-вывода в секунду и скоростью передачи данных 1520 Мбит/с. Для упрощения консолидации данных система спроектирована таким образом, что позволяет одновременно использовать до 256 узлов.
+<p>CLARiiON CX700 поставляется с полным пакетом программ EMC Navisphere Management Suite, предназначенным для автоматизированного управления хранением данных и построенным на Интернет-технологиях. Кроме того, в комплект входит ПО SnapView для локальной, основанной на массивах репликации данных, программа MirrorView для непрерывной защиты бизнес-приложений путем синхронного и асинхронного зеркального отображения данных, инструментарий PowerPath для динамического выравнивания нагрузки и контроля за процессом ввода-вывода, а также модуль metaLUN для расширения объема хранения и управления несколькими массивами.
+<h3>Сетевые системы хранения EMC Symmetrix </h3>
+<p>Устройства серии <b>EMC Symmetrix DMX</b> - это ведущие решения класса high-end 
+  для надежного хранения данных, призванные удовлетворить самые высокие требования, 
+  которые заказчики могут предъявить к системам хранения. Они характеризуются 
+  сверхвысокой производительностью, самой высокой надежностью, непрерывной защитой 
+  критически важных бизнес-процессов и богатейшим набором возможностей используемого 
+  ПО. 
+<p>Система Symmetrix DMX наилучшим образом проявляет себя в условиях, когда в соответствии с соглашениями об уровне сервиса заказчикам требуется решение самого высокого уровня производительности и надежности, функционирующее в режиме 24х7х365 без отказов и сбоев в работе. На данный момент покупателям доступны конфигурации из весьма широкого спектра - от эффективной модульной модели DMX800 до решений класса high-end в виде интегрированных систем DMX1000 с одним отсеком, DMX2000 с двумя отсеками и DMX3000 с тремя отсеками, предназначенных для наиболее критичных сред хранения данных.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2005/emc_stor/ris5.jpg" alt=Fig.5></td><td><img src="../images/byte_archive/images/No6_2005/emc_stor/ris6.jpg" alt=Fig.6></td></tr>
+<tr><td valign="bottom">Модульная система Symmetrix DMX800.
+<hr noshade align="left" size="0">
+</td>
+<td valign="bottom">Интегрированная система Symmetrix DMX1000 с одним отсеком.
+<hr noshade align="left" size="0">
+</td>
+</tr></table>
+<p>
+<p>Все системы Symmetrix DMX построены в архитектуре Symmetrix Direct Matrix - испытанной временем технологии хранения данных, обеспечивающей наиболее высокую производительность для операций ввода-вывода, благодаря чему они характеризуются постоянной высокой продуктивностью вне зависимости от уровня нагрузки. Чрезвычайно гибкая архитектура DMX легко масштабируется вверх и вниз, что позволяет создавать конфигурации согласно конкретным требованиям.
+<p>Решения DMX работают в любых обстоятельствах - улучшенные характеристики надежности, система обеспечения целостности данных, включающая организацию их полной избыточности, упреждающий мониторинг, обнаружение и исправление ошибок позволяют им функционировать даже в самом сложном окружении. Используя возможности безопасной модернизации и конфигурирования в оперативном режиме, заказчики смогут значительно сократить полную стоимость владения системой хранения и прочие издержки, а также исключить плановые и внеплановые простои.
+<p>Решения Symmetrix DMX поставляются с набором ПО для автоматизированного управления процессом хранения данных, работающим в рамках интеллектуальной оперативной среды хранения Enginuity и полностью совместимым с предыдущими версиями. Устройства DMX обладают исключительно гибкими возможностями организации и настройки каналов передачи данных - пользователи могут подключать систему хранения к мэйнфреймам, каналам Fibre Channel открытых SAN-систем или, используя встроенный адаптер Gigabit Ethernet, интегрировать ее в решения для дистанционного зеркалирования на базе протоколов FCIP и iSCSI. В этих случаях конфигурирование интерфейсов ввода-вывода выполняется с помощью средств FICON или ESCON.
+<p>С целью повышения доступности данных и непрерывности операций ввода-вывода программы семейства SRDF, которые служат в решениях Symmetrix DMX для дистанционной репликации данных, позволяют копировать и пересылать любое количество данных в любое время и на любое расстояние. Кроме того, они могут взаимодействовать с программами семейства TimeFinder для локальной репликации данных, снижая тем самым общие затраты на репликацию.
+<p>Серия Symmetrix DMX делает системы хранения данных класса high-end доступными любым организациям, в том числе компаниям с растущими требованиями к уровню обслуживания. Заказчики могут выбирать решения, пригодные для построения любой высокопроизводительной системы хранения данных, в самом широком диапазоне конфигураций и типоразмеров. Например, в системы DMX800 может входить от 8 до 120 накопителей общей емкостью более 17,5 Тбайт. В свою очередь, интегрированные системы DMX с одним, двумя и тремя отсеками доступны в конфигурациях, оптимизированных по производительности, - в них устанавливается от 48 до 576 дисков суммарной емкостью до 84 Тбайт в одной системе.
+<h3>Системы хранения EMC Centera CAS </h3>
+<p>С помощью EMC Centera - системы, основанной на технологии Content Addressed Storage (CAS), - пользователи могут организовать быстрый оперативный доступ ко всему фиксированному контенту с масштабируемостью до петабайтных объемов. EMC Centera - это простое и безопасное решение для рентабельного хранения, защиты и удаления широкого диапазона фиксированных цифровых данных, к которым относятся рентгеновские снимки, архивы электронной и голосовой почты, электронные документы, широковещательные информационные потоки, выходные данные мэйнфреймов и многое другое. С помощью решений из серии EMC Centera Compliance Edition заказчики могут построить систему хранения данных, соответствующую самым строгим нормативным требованиям.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2005/emc_stor/ris7.jpg" alt=Fig.7></td>
+<td valign="bottom">Система хранения EMC Centera.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+
+<h4>*** </h4>
+<p>В завершение стоит отметить, что данный обзор, &quot;за бортом&quot; которого остались многие технические и технологические аспекты, дает читателям лишь общее представление о решениях корпорации EMC в области хранения данных. Круг предлагаемых компанией систем не ограничивается перечисленными в обзоре устройствами: например, доступны также высокопроизводительные модели уровня high-end Symmetrix 3000, Symmetrix 5000, Symmetrix 8000 и Symmetrix z8000, обеспечивающие максимальный уровень производительности при работе с корпоративными данными, их надежную сохранность и доступ в круглосуточном режиме 365 дней в году. В последующих номерах журнала мы планируем подробнее рассмотреть наиболее интересные с технической точки зрения и востребованные на российском ИТ-рынке модели.
+
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8620.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Системы хранения данных EMC
+</a><br><a href="detail.php@ID=8620.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Александр Николов
+anikolov@bytemag.ru
+Вне всяких сомнений можно утверждать, что на сегодняшний момент эффективная инфраструктура централизованного&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8620.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8620&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0fc5401c6a49c947c2aad3e6a947c74d'><img src='../bitrix/tools/captcha.php@captcha_code=0fc5401c6a49c947c2aad3e6a947c74d' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

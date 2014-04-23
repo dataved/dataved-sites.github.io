@@ -1,0 +1,444 @@
+<HTML>
+<HEAD>
+<title>Экономические аспекты вычислений как услуги</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Настоящая статья представляет собой попытку рассмотреть на примерах бизнес-модели и моделирование систем для услуги вычислений по запросу. Основное внимание уделялось формированию цен на услуги, перераспределению ресурсов и расходам, связанным с" />
+<meta name="description" content="Настоящая статья представляет собой попытку рассмотреть на примерах бизнес-модели и моделирование систем для услуги вычислений по запросу. Основное внимание уделялось формированию цен на услуги, перераспределению ресурсов и расходам, связанным с" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082104','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm12188' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=12188&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm12188"].SHOW_IMAGE.value="N"; document.forms["PrintForm12188"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm12188"].SHOW_IMAGE.value="Y"; document.forms["PrintForm12188"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(12188);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=12188.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=12188.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(12188);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><br /></p><a href='../numbers/index.php@ID=12148.html'>№6 (116), июнь 2008</a><h1>Экономические аспекты вычислений как услуги</h1>Автор: Жан-Поль Дегабриэль, Дэвид Пим<br />18.06.2008<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=12188&amp;PICTURE_ID=12189.html'><IMG src='../upload/iblock/217/1-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 1. Модель предоставления «вычислений по запросу».</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=12188&amp;PICTURE_ID=12190.html'><IMG src='../upload/iblock/494/2-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 2. Зависимость дохода от числа используемых машин.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=12188&amp;PICTURE_ID=12191.html'><IMG src='../upload/iblock/15e/3-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 3. Зависимость доли отклоненных запросов от числа используемых машин.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=12188&amp;PICTURE_ID=12192.html'><IMG src='../upload/iblock/afc/4-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 4. Размер дохода при различных уровнях обслуживания.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=12188&amp;PICTURE_ID=12193.html'><IMG src='../upload/iblock/865/tbl1-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Таблица 1. Стоимость работ в зависимости от объема и уровня обслуживания</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=12188&amp;PICTURE_ID=12194.html'><IMG src='../upload/iblock/3f7/tbl2-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Таблица 2. Характеристики уровней обслуживания </b></TD></TR></TABLE><DIV class='article-text'> 
+<p><em>Настоящая статья представляет собой попытку рассмотреть на примерах бизнес-модели и моделирование систем для услуги вычислений по запросу. Основное внимание уделялось формированию цен на услуги, перераспределению ресурсов и расходам, связанным с мерами упреждающей защиты.</em> </p>
+ 
+<p>По ожиданиям многих ИТ-специалистов, вычисления по запросу, или &laquo;вычисления как услуга&raquo; (Utility Computing), станут одним из новых важных источников дохода на рынке ИТ-услуг. Многие провайдеры услуг уже вышли на этот рынок, другие все еще изучают его потенциал. Большая часть исследований сосредоточена на возможных бизнес-моделях и ценообразовании в рамках этих моделей, архитектуре инфраструктуры и безопасности таких услуг. Поскольку существует множество альтернативных способов организации и предоставления вычислений как услуги, мы предлагаем методологию моделирования, с помощью которой можно изучить эти способы и их взаимодействие. В качестве платформы для моделирования и проведения расчетов мы использовали Demos 2000 [2]. Мы рассматривали главным образом &laquo;чистку&raquo; системы в целях безопасности, перераспределение ресурсов и ценообразование для вычислений как услуги. </p>
+ 
+<h3>Вычисления по запросу </h3>
+ 
+<p>Вычисления по запросу &mdash; это скорее иной подход к вычислительным ресурсам, чем новая технология вычислений. Главная его идея состоит в том, чтобы предложить вычислительный ресурс как услугу, оплачиваемую в зависимости от ее потребления, как электричество или газ. Тогда компаниям больше не нужно будет инвестировать в инфраструктуру, обеспечивать ее функционирование, обслуживание и защиту, чтобы иметь в своем распоряжении вычислительные ресурсы. Существует ряд услуг, которые возможно предоставлять в соответствии с парадигмой вычислений по запросу. Услуги сопровождения данных предлагают хранение больших объемов данных и широкую полосу пропускания &mdash; идеальные условия, например, для целей резервного копирования. Более распространены, однако, вычислительные услуги. Они предлагают вычислительную мощность, обычно из расчета процессорных часов, что очень удобно для рендеринга фильмов и других приложений с интенсивными вычислениями. На более высоком уровне стоят услуги аренды приложений. В этом случае провайдер услуг предлагает некое фирменное ПО вместе с аппаратным обеспечением, на котором оно работает. Типичные примеры приложений, предлагаемых по этой модели, &mdash; это системы управления взаимоотношениями с клиентами (CRM), СУБД и программы онлайн-бухгалтерии. </p>
+ 
+<p>Инфраструктура обычно размещается в <i>центре обработки данных</i>, где провайдеру услуг удобно обеспечить управление ею и сопровождение, а клиент получает доступ к ресурсам дистанционно. В вычислительных услугах (которые мы в основном рассматриваем в данной статье) клиенты могут иметь разный уровень дистанционного доступа. На одном краю спектра модель <i>аренды вычислительных ресурсов</i> (Farm Renting), когда клиенту выделяется сеть из нескольких машин &mdash; так называемая ферма (farm), над которой он имеет полный контроль. На другом краю &mdash; <i>модель представления работ</i> (Job Submission), когда клиент через Web-интерфейс представляет для выполнения свое приложение вместе с управляющим сценарием. Результаты вычисления клиент также получает через Web-интерфейс. Модель аренды фермы позволяет клиенту отлаживать свое приложение до и во время выполнения работы, тогда как по модели представления работ приложение не должно содержать никаких ошибок. С другой стороны, модель представления работ связана с меньшей открытостью и, следовательно, лучше защищена. Более того, она позволяет лучше задействовать инфраструктуру, поскольку не требует назначать фиксированные объемы ресурсов. Можно также использовать схему <i>перераспределения ресурсов </i>(Resource Flexing), дополнительно выделяя простаивающие ресурсы для выполнения работ в периоды низкой нагрузки. В целом это должно увеличить количество доступных ресурсов в тот момент, когда поступает следующий запрос на выполнение работ, тем самым обеспечивая максимальную производительность инфраструктуры. </p>
+ 
+<h3>Защита инфраструктуры вычислений по запросу </h3>
+ 
+<p>На рынке вычислений по запросу уже существует довольно заметная конкуренция, на нем работает ряд поставщиков, предлагающих набор различных услуг. Однако безопасности в этой сфере пока не уделяется особого внимания. Многие провайдеры заявляют, что их услуги защищены, но никто из них не указывает, какие конкретно меры защиты приняты. Можно сказать почти наверняка, что когда вычисления по запросу станут более распространенными, произойдет ряд инцидентов, связанных с безопасностью, в которых клиентам будет нанесен значительный финансовый ущерб, а репутация поставщиков услуг пострадает. Так что к тому времени, когда рынок вычислений по запросу станет еще более конкурентным, доверие может стать тем фактором, который будет влиять на выбор поставщика услуг. </p>
+ 
+<p>Существует ряд мер безопасности, защищающих инфраструктуру вычислений по запросу. Они включают, в числе прочего, сканирование загружаемых файлов на предмет вредоносного программного кода, шифрование и аутентификацию при взаимодействии между машинами (к примеру, посредством IPSec, TLS или SSH), разделение ферм (с помощью маршрутизаторов/межсетевых экранов и/или виртуальных локальных сетей), средства IDS/ IPS/AIS и системную &laquo;чистку&raquo; (scrubbing). В нашем анализе мы рассматриваем главным образом системную чистку, выделив четыре ее уровня. </p>
+ 
+<p><b>Повторное использование системы.</b> Этот уровень обеспечивает наименьшую степень защиты. Клиенту предоставляется машина с уже использованной ОС; для него создается новая учетная запись пользователя, а учетные записи предыдущих пользователей блокируются. Из-за уязвимостей в ОС может оказаться, что предыдущие пользователи инфицировали систему вредоносным кодом или же текущий пользователь имеет доступ к данным предыдущих пользователей. В первом случае риск можно уменьшить путем сканирования загружаемых данных. Помимо нарушения конфиденциальности вредоносный код может также снизить производительность машин. Стоит отметить, что если предыдущие пользователи просто удалят свои данные (без перезаписи поверх них), то данные становятся доступны последующим пользователям, но если они их сохраняют, то другие пользователи не могут напрямую получить к ним доступ. </p>
+ 
+<p><b>Обновление системы. </b>Клиенту предлагается машина с заново установленной ОС. В принципе это должно устранить риск заражения системы вредоносным кодом и гарантировать, что она работает с максимальной производительностью. Однако клиент все еще имеет возможность восстановить данные предыдущих клиентов. </p>
+ 
+<p><b>Очистка. </b>Этот подход предполагает удаление данных таким образом, чтобы их нельзя было восстановить обычными средствами ОС (т. е. не путем физического доступа к носителю). Для этой цели обычно достаточно одной перезаписи во всем пространстве памяти системы. Это более интенсивный процесс по сравнению с обновлением ОС, когда перед установкой операционной системы стирается только файловая таблица (FAT). </p>
+ 
+<p><b>Санация.</b> Этот способ имеет целью защиту от восстановления данных даже в том случае, если у злоумышленника есть физический доступ к носителю. Обычно это достигается посредством множества перезаписей либо стиранием магнитной записи. </p>
+ 
+<p>Очистка и санация затрагивают не только внешние устройства хранения. Оперативная память и другие буферы памяти (например, буфер памяти сетевого адаптера) также могут содержать конфиденциальную информацию. К примеру, Министерство обороны США составило &laquo;матрицу санации&raquo; (Sanitization Matrix) [1], в которой перечислены процедуры, пригодные для очистки и санации различных средств хранения. </p>
+ 
+<h3>Ценообразование для вычислений по запросу </h3>
+ 
+<p>Как и в случае любой другой услуги общего пользования, конкретная бизнес-модель и цены на услугу играют решающую роль в ее успехе. Бизнес-модель должна отвечать потребностям заказчиков, в частности, в плане доступности, масштабируемости и удобства использования. Лучше всего разработаны бизнес-модели подписки (Subscription) и учета объема использования (Metered Usage). Встречаются также гибриды этих двух подходов: модель подписки с учетом объема (Metered Subscription) обычно применяют Интернет-провайдеры и операторы мобильной связи. Более детальное обсуждение бизнес-моделей для вычислений по запросу можно найти в [3]. </p>
+ 
+<p>В работе [5] Лоу и Байд предлагают стратегию ценообразования на основе аукциона. Утверждается, что эта схема должна обеспечить баланс между спросом и предложением. Есть все же некие тонкие различия между традиционными продажами с аукциона (скажем, на овощном рынке) и рынком вычислений по запросу. На рынке вычислений потребление товара может быть сильно растянуто во времени; следовательно, текущий спрос окажет влияние и на будущее предложение, не только на текущее. Рынок аукционного типа можно сравнить с системой управления с обратной связью. Задержка в контуре обратной связи снижает устойчивость системы, приводя к колебательному поведению, в результате которого система отклоняется от точки равновесия. Еще одно различие состоит в том, что покупатели вычислительных услуг порой появляются редко, и в этом случае покупатель, скорее всего, не будет иметь конкурентов или же торги придется продлить, что негативно скажется на доступности услуги. Кроме того, аукционная схема не позволяет учесть риска ситуации, когда провайдер, приняв относительно небольшой заказ на вычисления, через некоторое время оказывается не в состоянии выполнить более крупный (и более прибыльный) заказ. В работе [4] Палеолого указывает на неприменимость традиционного метода ценообразования <i>&laquo;себестоимость плюс...&raquo;</i> к вычислениям как услуге. Вместо этого предлагается метод ценообразования <i>&laquo;цена при риске&raquo;</i>, который принимает во внимание неопределенность при назначении цены. </p>
+ 
+<p>Наш вклад состоит в том, чтобы продемонстрировать, как компьютерное моделирование на основе исполнимых моделей [2] может помочь на стадии принятия решения о цене. Мы создали модель услуги вычислений по запросу, которую можно использовать, к примеру, для расчета параметров <i>вычислительной мощности</i> и<i> выигрыша за счет мультиплексирования</i>, используемых в методе &laquo;цена при риске&raquo;. Она годится для количественной оценки выигрыша от стратегии перераспределения ресурсов или стоимости введения одной из схем системной чистки, обсуждавшихся выше. В нашей модели мы задаем для каждого запроса на работу определенный <i>уровень обслуживания</i>. Это определяет количество ресурсов, которые следует назначить для выполнения данной работы. В целом, чем быстрее выполнена работа, тем лучше для клиента. Следовательно, клиентам нужны услуги, которые требуют больше ресурсов в относительно короткие периоды времени. Но такой профиль спроса снижает эффективную мощность инфраструктуры. Ввиду этого мы принимаем ряд свойств, которыми должна обладать обоснованная схема ценообразования: </p>
+ 
+<ul> 
+  <li>она должна способствовать постоянной нагрузке, избегая нежелательных профилей нагрузки; </li>
+ 
+  <li>стоимость выполнения работы должна быть пропорциональна ее объему; </li>
+ 
+  <li>стоимость выполнения работы должна увеличиваться с ростом качества обслуживания (QoS). </li>
+ </ul>
+ 
+<p>Мы реализовали две сходные схемы ценообразования, которые следуют этим правилам. </p>
+ 
+<p><b>Схема № 1</b>. Цена работы назначается за процессорный час в зависимости от уровня обслуживания. Уровень обслуживания в свою очередь определяет, сколько машин (в среднем) будет выделено для данной работы. Возможный недостаток этой схемы в том, что клиент может разбить свою работу на несколько более мелких и подать на них заявки одновременно как на отдельные работы с более низким уровнем обслуживания. В итоге он фактически получает тот же уровень обслуживания по более низкой цене. </p>
+ 
+<p>Возьмем в качестве примера данные из табл. 1. Клиент A размещает заказ на работу в 1000 процессорных часов при уровне обслуживания 2. Его работа занимает 20 ч, и плата за нее составляет 1200 фунтов стерлингов. Клиент B разбивает свою работу в 1000 процессорных часов на пять работ по 200 процессорных часов и размещает их одновременно при уровне обслуживания 1. Работа занимает те же 20 ч, но с него берется плата лишь в 1000 фунтов. </p>
+ 
+<p><b>Схема № 2.</b> Цена назначается за процессорный час в зависимости от уровня обслуживания. Уровень обслуживания определяет количество времени, необходимое для выполнения работы. Поэтому количество выделенных на эту работу машин также зависит от объема работы. Конечно, не каждый заказ выполняется с самым высоким уровнем обслуживания. Более крупные заказы получают более высокий уровень за свои деньги. Это может показаться несправедливым, однако это разумно, если учесть, что клиент должен всегда получать лучшее обслуживание, чем он получил бы, вложив средства в собственную инфраструктуру. </p>
+ 
+<h3>Модель </h3>
+ 
+<p>Данная модель была реализована с помощью языка моделирования Demos 2000 [2]. В нашу модель (рис. 1) входит четыре основных объекта: &laquo;Клиенты&raquo;, &laquo;Фермы&raquo; (&laquo;Вычислительные ресурсы&raquo;), &laquo;Процессы чистки&raquo; и &laquo;Распределитель&raquo; (Allocator). </p>
+ 
+<p>Единственное назначение клиентов &mdash; генерировать заказы на работу. Каждый клиент делает запросы независимо, причем интервал времени между запросами задается экспоненциальным распределением. Запрос на выполнение работы описывается двумя параметрами: объем работы W в процессорных часах и уровень обслуживания QoS. Параметр QoS интерпретируется в соответствии с принятой схемой ценообразования, но в целом чем выше QoS, тем быстрее выполняется работа. </p>
+ 
+<p>Вычислительные фермы формируются распределителем в ответ на принятые от клиентов заказы. Каждая ферма соответствует одной работе и после ее выполнения высвобождается. Процесс управления фермами реализован как цикл, непрерывно ждущий инструкций (в форме синхронизаций), главным образом от распределителя. Определено пять видов инструкций. </p>
+ 
+<p><b>Аренда истекла</b> &mdash; сигнализирует, что время, выделенное для данной работы, подошло к концу. В ответ на это ферма высвобождает свои машины и прекращает работу. </p>
+ 
+<p><b>Работа завершена</b> &mdash; сигнализирует о том, что работа выполнена; в этом случае ферма высвобождает свои машины, но продолжает существовать, пока не будет получено сообщение &laquo;Аренда истекла&raquo;. Включен также параметр состояния, указывающий на актуальность сообщения. Сигнал считается актуальным, если параметр состояния соответствует текущему состоянию фермы. </p>
+ 
+<p><b>Инструкция по ресурсам</b> &mdash; дает ферме указание взять либо высвободить определенное количество машин. Инструкция по ресурсам изменяет текущее состояние фермы и назначает новое время для инструкции &laquo;Работа завершена&raquo;. </p>
+ 
+<p><b>Запрос на перераспределение</b> &mdash; запрашивает у фермы машины, которые у нее в данный момент загружены работой, но которые она может вернуть распределителю для выполнения других заказов. </p>
+ 
+<p><b>Запрос о работе</b> &mdash; запрашивает ферму о том, сколько процессорных часов ей необходимо для завершения работы. Эта информация нужна распределителю, чтобы понять, в какую ферму лучше добавить простаивающие машины в ходе перераспределения. </p>
+ 
+<p>Процессы чистки создаются распределителем, чтобы выполнить чистку группы машин, прежде чем включить их в ферму. Машины берутся из пула ресурсов и удерживаются процессом чистки в течение периода времени, заданного параметром модели scrubTime. Варьируя этот параметр, можно смоделировать любую из четырех описанных выше схем чистки. По завершении процесс чистки просматривает &laquo;Список чистки&raquo;, чтобы определить, в какую ферму (или фермы) следует направить машины. Наконец, процесс чистки высвобождает машины, посылает соответствующие сигналы вида &laquo;Инструкция по ресурсам&raquo; в нужные хозяйства и завершается. </p>
+ 
+<p>Распределитель служит ядром всей модели и управляет большинством остальных объектов. Его основные обязанности таковы: обработка запросов на работы, управление ресурсами и их перераспределение, а также ведение журналов записей (таких, как список ферм и список чистки). Принятая в данной модели стратегия перераспределения использует алгоритм переназначения машин только в одну ферму. Если группа машин простаивает, распределитель просматривает список ферм и обращается к каждой с запросом о работе. Все простаивающие машины передаются в ферму с максимальным ожидаемым временем жизни. Время жизни L фермы F, имеющей MF машин и рабочую нагрузку WF, задается выражением: </p>
+ 
+<p>L = (WF &mdash; MF ? TS) / (MF + MI), где MI &mdash; число простаивающих машин, TS &mdash; время чистки. Это схема с нулевым риском, так как каждой ферме всегда назначено достаточно машин, чтобы выполнить работу за выделенное ей время. </p>
+ 
+<p>Работа модели в целом представлена на рис. 1, где показан поток информации между объектами и жизненный цикл машин. Клиенты отправляют запросы на работу (W, QoS) в распределитель. Распределитель выясняет, сколько машин потребуется для выполнения заказа, и проверяет, сколько машин доступно. Для начала он проверяет, сколько машин простаивает. Если их недостаточно, он просматривает список чистки на предмет машин, предназначенных для перераспределения. Если количество таких машин вместе с простаивающими оказывается недостаточным, то распределитель просматривает список ферм, выясняя, какие фермы имеют машины, доступные для перераспределения, и посылает им запрос на перераспределение. Фермы в ответ сообщают, сколько машин они могут высвободить (при этом завершив свою работу вовремя). Если общее количество машин достаточно, чтобы выполнить заказ, он передается ферме; в противном случае запрос на работу отклоняется. Процесс чистки создан для очистки простаивающих машин и машин, полученных от других ферм, а машины, прошедшие другой процесс чистки, перенаправляются в новую ферму путем корректировки списка чистки. Распределитель работает в бесконечном цикле, ожидая заказов на работу и других сообщений (например, уведомления о выполнении работ). При каждом запросе к нему он проверяет, есть ли простаивающие машины, и выполняет процедуру перераспределения. </p>
+ 
+<h3>Результаты </h3>
+ 
+<p>Данная модель имеет несколько потенциальных применений. Вот некоторые из задач, решаемых с ее помощью. </p>
+ 
+<ul> 
+  <li>Определить вероятность того, что число машин будет достаточным, чтобы обслужить все запросы (для конкретного их распределения). </li>
+ 
+  <li>Рассчитать выигрыш в вычислительной мощности, которого можно достичь за счет определенной стратегии перераспределения. </li>
+ 
+  <li>Определить, какие расценки следует установить для конкретных уровней обслуживания. </li>
+ 
+  <li>Количественно оценить результат внедрения схемы чистки в архитектуру с перераспределением. </li>
+ 
+  <li>Оценить параметры, необходимые для расчета по методу &laquo;Цена при риске&raquo;. </li>
+ 
+  <li>Получить данные для подготовки Соглашения об уровне обслуживания (SLA). </li>
+ </ul>
+ 
+<p>Разработанная нами тестовая модель прогонялась несколько раз, с различным числом машин. Использовалась схема ценообразования, описанная выше как схема №2 (цена для каждого уровня обслуживания указана в табл. 2). Вероятность, соответствующая каждому уровню обслуживания, есть вероятность того, что запрос на работу требует данного уровня обслуживания. На рис. 2 показано, каков был доход при каждом прогоне по мере увеличения количества машин. Эксперимент был повторен при значении времени чистки 1 ч вместо 5 ч и еще раз &mdash; без перераспределения. На рис. 3 представлены полученные в ходе тех же трех экспериментов оценки доли отклоненных запросов. </p>
+ 
+<p>На рис. 2 красная и синяя кривые достигают наибольшей возможной величины дохода, тогда как зеленый график приближается к этому максимуму медленнее. Видно также, что доход несколько увеличивается при сокращении времени чистки. Вместо того чтобы сопоставлять доход, достигнутый для каждой конфигурации, мы можем провести сравнение в терминах инвестиций. В частности, мы можем сравнить, какая инфраструктура понадобится, чтобы выполнить один и тот же объем работ и, следовательно, получить одинаковый доход. Например, из рис. 3 видно, что для конфигурации из 5000 машин с перераспределением доля отклоненных работ составляет 7,9%. С другой стороны, в конфигурации без перераспределения требуется 6000 машин, чтобы достичь почти такого же уровня отклоненных работ (6,7%). Следовательно, такой сценарий потребует увеличения инвестиций на 20%, чтобы достичь того же дохода, что и в архитектуре с перераспределением. </p>
+ 
+<p>Как уже говорилось выше, высокие значения QoS снижают эффективную вычислительную мощность инфраструктуры. Это, конечно, должно быть отражено в ценах на услуги. С помощью нашей модели можно количественно оценить эффективную вычислительную мощность, достигаемую при каждом QoS, а следовательно, определить справедливую цену для каждого уровня обслуживания. Модель была скорректирована таким образом, чтобы каждый QoS добавлял по 10 пенсов к цене процессорного часа. Затем она прогонялась восемь раз, причем в каждом прогоне все работы выполнялись при одном конкретном уровне обслуживания. Рис. 4 показывает, какой доход достигается для каждого уровня обслуживания. В качестве отправной точки для справедливой схемы ценообразования мы можем скорректировать стоимость каждого уровня обслуживания так, чтобы по всем столбцам предельный уровень дохода был одинаков. Например, согласно этим результатам, уровень обслуживания 8 должен стоить в три раза дороже, чем уровень обслуживания 7. </p>
+ 
+<p>Рис. 4 демонстрирует довольно неожиданный эффект, заключающийся в том, что при переходе с уровня обслуживания 4 на более низкие (до уровня 1) доход снижается. В нашей модели клиент платит за услуги по завершении работы. Период прогона при моделировании составлял 2 года, а время выполнения работ варьируется от 1 дня до 6 месяцев в зависимости от уровня обслуживания. Таким образом, при более низких уровнях обслуживания к концу прогона накапливается больший объем работы, который на данный момент еще не оплачен. Эта ситуация может создать серьезную проблему с потоком наличности. К этому можно еще добавить инфляцию и затраты на сопровождение, которые также успевают вырасти при более длинном периоде вычислений. Таким образом, если клиенты будут платить по завершении работы, услуги с уровнем обслуживания с 1 по 4 будут неконкурентоспособны. Кроме того, можно обойти эту проблему, перейдя на бизнес-модель, в которой клиент платит либо авансом, либо частями по мере выполнения работы. </p>
+ 
+<h3>Другие исследования </h3>
+ 
+<p>Хороший обзор различных подходов к ценообразованию и бизнес-моделей для вычислений по запросу можно найти в [7]. В работе [8] описан прототип инфраструктуры вычислений &laquo;по требованию&raquo; Oceano, разработанный в IBM. Модель Oceano, включающая такие функции, как чистка и перераспределение, вполне согласуется с нашей моделью вычислений как услуги, хотя она ориентирована на Web-сервисы, а не на вычислительные ресурсы. Авторы [6] предлагают схему планирования на основе затрат, чтобы улучшить внутренний поток работ. Потенциально можно попытаться расширить эту схему, дополнив ее стратегией перераспределения. </p>
+ 
+<h3>Выводы и направления дальнейшей работы </h3>
+ 
+<p>Мы показали, что моделирование дискретных событий потенциально полезно при экономическом анализе в сфере ИТ и информационной безопасности. В данной статье мы изучили пример вычислений как услуги и показали, как наша простая модель может помочь в принятии бизнес-решений и в исследовании более широкого пространства возможностей. </p>
+ 
+<p>При анализе мы поставили себе цель сделать модель возможно более простой. В ней не учитываются два фактора &mdash; фрагментирование ферм и атомная природа транзакций (неделимость операций) в распределенных заданиях. Алгоритм перераспределения передает машины из одной фермы в в другую, никак не учитывая расположение машин, что приводит к фрагментированию ферм. Главным образом это вызвано тем, что в DEMOS 2000 трудно ассоциировать элементы ресурсов с определенным их местоположением. Таким образом, в нашей модели не отражен дополнительный сетевой трафик, который может быть следствием конкретного алгоритма перераспределения. Во-вторых, распределенные задания обычно составлены из более мелких неделимых транзакций. Однако в модели допускается, что выполнение работы можно разбивать на сколь угодно малые операции. По-видимому, это будет нетрудно учесть, внеся в модель некоторые изменения. Другое ограничение состоит в том, что стратегия перераспределения реализована в допущении, будто задания можно распределять произвольно. К сожалению, это применимо только к ограниченному множеству проблем, таких, как исчерпывающий поиск криптографического ключа. Следовательно, упомянутый в разделе &laquo;Результаты&raquo; 20%-ный прирост в использовании инфраструктуры есть по сути верхний предел выигрыша от перераспределения, которого можно достичь за счет реализованного алгоритма перераспределения. Таким образом, если стоимость внедрения такой схемы перераспределения больше, чем стоимость расширения вычислительной инфраструктуры на 20%, то данная схема, очевидно, нежизнеспособна. </p>
+ 
+<p>Направления дальнейшей работы могут быть связаны с дополнением модели, с тем чтобы она отражала эти факторы. Стратегию перераспределения можно расширить до схемы перераспределения с участием нескольких ферм, где простаивающие машины распределяются между множеством ферм, а не передаются одной из них. Можно также исследовать рискованное перераспределение, допускающее, что некоторые работы не будут выполнены вовремя. Кроме того, модель можно дополнить, включив в нее затраты на сопровождение и модернизацию ресурсов, чтобы детально изучить вопросы бесперебойного ведения бизнеса. Можно также использовать более общую модель для описания задач, например, представленную в [6]. Наконец, следует отметить, что модель легко адаптировать к описанию других видов услуг вычислений по запросу, таких, как Web-сервисы. </p>
+ 
+<p><em>Мы благодарны Крису Дэлтону, Брайану Монахану, Крису Тофтсу и Майку Йеруорту за их советы по некоторым аспектам данной статьи. </em></p>
+ 
+<p><em>Jean Paul Degabriele, David Pym. Economic Aspects of a Utility Computing Service. Trusted Systems Laboratory, HP Laboratories, Bristol.</em></p>
+ <blockquote> 
+  <h3>Источники дополнительной информации </h3>
+ 
+  <ol> 
+    <li>DoD 5220.22-M National Industrial Security Program Operating Manual (NISPOM). См. также <a target="_blank" href="http://www.usaid.gov/policy/ads/500/d522022m.pdf">http://www.usaid.gov/policy/ads/500/d522022m.pdf</a>. </li>
+   
+    <li>A. Christodolou, R. Taylor, C. Tofts. Demos 2000. См. <a target="_blank" href="http://www.demos2k.org">http://www.demos2k.org</a>. </li>
+   
+    <li>M. A. Rappa. The utility business model and the future of computing services // IBM Systems Journal, vol. 43, No. 1, 2004. См. также http://www.research.ibm.com/journal/sj/431/ rappa.html. </li>
+   
+    <li>G. A. Paleologo. Price-at-Risk: A methodology for pricing utility computing services // IBM Systems Journal, vol. 43, No. 1, 2004. См. также <a target="_blank" href="http://www.research.ibm.com/journal/sj/ 431/paleologo.html">http://www.research.ibm.com/journal/sj/ 431/paleologo.html</a>. </li>
+   
+    <li>C. Low, A. Byde. Market-Based Approaches to Utility Computing // Technical Report HPL-2006-23, HP Laboratories, Bristol. См. также <a target="_blank" href="http://www.hpl.hp.com/techreports/2006/ HPL-2006-23.pdf">http://www.hpl.hp.com/techreports/2006/ HPL-2006-23.pdf</a>. </li>
+   
+    <li>Jia Yu, Rajkumar Buyya, Chen Khong Tham. Cost-based Scheduling of Scientific Workflow Applications on Utility Grids // Proc. of the 1st International Conference on e-Science and Grid Computing (e-Science 2005), Dec. 2005, pp. 140&ndash;147. </li>
+   
+    <li>R. Buyya, D. Abramson, J. Giddy, H. Stockinger. Economic models for resource management and scheduling in Grid computing // Concurrency and Computation: Practice and Experience 2002; 14(13&ndash;15): 1507&ndash;1542. </li>
+   
+    <li>K. Appleby, S. Fakhouri, L. Fong, G. Goldszmidt, M. Kalantar, S. Krishnakumar, D. Pazel, J. Pershing, B. Rochwerger. Oceano &mdash; SLA Based Management of A Computing Utility // 7th IFIP/IEEE Intl. Symp. on Integrated Network Management, May 2001, pp. 855&mdash;868. </li>
+   </ol>
+ </blockquote></DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25261.html'>Сетевые новинки Dell для дата-центров </A></b></li><li><b><A href='detail.php@ID=24909.html'>Комплекс ETegro Technologies для облачных ЦОД</A></b></li><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24693.html'>Услуга разработки концепции модульного ЦОД </A></b></li><li><b><A href='detail.php@ID=24608.html'>Комплексная платформа для управления инфраструктурой ЦОД от Schneider Electric и HP</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=12188.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Экономические аспекты вычислений как услуги</a><br><a href="detail.php@ID=12188.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Настоящая статья представляет собой попытку рассмотреть на примерах бизнес-модели и моделирование систем для услуги вычислений по запросу. Основное …</a></td></tr><tr><td align="right"><a href="detail.php@ID=12188.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=12188&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='00f3b78fd922d3e8fd321060155e1da8'><img src='../bitrix/tools/captcha.php@captcha_code=00f3b78fd922d3e8fd321060155e1da8' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

@@ -1,0 +1,411 @@
+<HTML>
+<HEAD>
+<title>Защита электропитания — теория и практика
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Василий Мочар, ведущий эксперт аналитической компании ITResearch, expert@itresearch.ru На надежности работы оборудования, кроме «внутренних» причин, самым непосредственным образом сказываются и внешние факторы. От таких явлений, как природные" />
+<meta name="description" content="Василий Мочар, ведущий эксперт аналитической компании ITResearch, expert@itresearch.ru На надежности работы оборудования, кроме «внутренних» причин, самым непосредственным образом сказываются и внешние факторы. От таких явлений, как природные" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082590','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8598' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8598&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8598"].SHOW_IMAGE.value="N"; document.forms["PrintForm8598"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8598"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8598"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8598);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8598.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8598.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8598);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11538.html'>№12 (76), декабрь 2004</a><h1>Защита электропитания — теория и практика
+</h1>15.12.2004<p></p><DIV class='article-text'><p><i>Василий Мочар,</i>
+<br>ведущий эксперт аналитической компании ITResearch,
+<br><a href="mailto:expert@itresearch.ru">expert@itresearch.ru</a>
+<p>На надежности работы оборудования, кроме «внутренних» причин, самым непосредственным образом сказываются и внешние факторы. От таких явлений, как природные катаклизмы или «человеческий фактор», на 100% уберечься нельзя в принципе. Но чаще всего причиной проблем становится некачественное электропитание, и здесь уже святая обязанность ИТ-менеджера — обеспечить отсутствие перебоев и выходов за регламентируемые параметры.
+<p>Характеристики электрического тока регламентируются ГОСТом 13109-87 (изменения напряжения допускаются в пределах +-10%, частоты — +-1 Гц; коэффициент нелинейных искажений — <8%). Если требования производителя какого-то оборудования жестче, чем требования ГОСТа, желательно сразу обеспечить требуемый режим работы (иначе можно потерять гарантию).
+<p>Все проблемы с электропитанием решаются с помощью источников бесперебойного питания (ИБП), или UPS. Можно также использовать сетевые фильтры, но они, в целом защищая от «плохого» электропитания, не способны обеспечить беспрерывную работу оборудования.
+<p>Существуют две группы ИБП — переменного и постоянного тока. Последние представляют собой электропитающую систему, дооборудованную аккумуляторами, и используются большей частью в секторе телекоммуникаций и связи, а также в различного типа устройствах сигнализации. В отличие от них, ИБП переменного тока ориентированы в первую очередь именно на защиту от внешних факторов и используются существенно шире. Собственно, эти устройства мы и рассматриваем в данном обзоре.
+<h3>Практика защиты</h3>
+<p>Один из регулярно проводимых компанией ITResearch (<a href="../bitrix/rk.php@id=723&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[723]+[TOP]+ITResearch_+имидж,+верхний,+15.10-31.12&amp;goto=http%253A%252F%252Fwww.itresearch.ru%252F+.html">http://www.itresearch.ru</a>) опросов российских ИТ-менеджеров (в нем участвуют предприятия малого и среднего бизнеса из различных регионов и отраслей промышленности) был посвящен организации систем бесперебойного электропитания (СБЭП). Не углубляясь в тонкости, отметим один из интереснейших выводов исследования.
+<p>Отправной точкой при организации СБЭП, несомненно, служит качество электрической сети. Хорошими свои электрические сети считают только 19% ИТ-менеджеров, еще 50% оценивают их как неплохие. И почти треть всех компаний считает, что качество электрических сетей, от которых запитано их оборудование, неудовлетворительно. Исходя из формальной логики, следовало бы ожидать, что именно последние защищены «по максимуму». Однако это оказалось не совсем так.
+<p>По данным опроса, доля реально защищенных серверов фактически не зависит от качества сети, примерно одинакова и близка к 100%. В целом следует признать, что к защите серверов ИТ-менеджеры компаний подходят со всей серьезностью. Но к менее критичному оборудованию отношение совсем другое.
+<p>Тенденция к увеличению процента иной защищенной техники при ухудшении качества электросети прослеживается вполне отчетливо. Однако даже в случае плохой сети, как видно из рисунка, защищено всего лишь 40% ПК и 23% периферии (принтеров, копиров…). В случае неплохой сети, как и следовало ожидать, получены промежуточные цифры, и нужно все же признать, что они ближе к показателям для плохой, чем для хорошей сети (это немаловажный вывод!).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/Ups.gif" alt=Fig.></td>
+<td valign="bottom">Процент защищенной техники в сетях различного качества. Источник: ITResearch
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Безусловно, вызывает интерес довольно большая разница в доле защищенных ПК — почти в 30% — при переходе от хорошей к плохой электрической сети. Однако гораздо более важно, что даже в самых неблагоприятных (объективно или субъективно) внешних условиях 60% ПК и 77% периферии остается незащищенными. И это не может не внушать опасения.
+<h3>Российский рынок ИБП</h3>
+<p>По данным ITResearch, за первое полугодие 2004 г. в России было продано почти 628 тыс. ИБП на сумму чуть более 95 млн долл. Показатели аналогичного периода прошлого года были превышены на 18,5% в натуральном выражении и на 19,4% — в денежном. Это означает, что данный рынок развивается довольно быстро, причем без существенного изменения цен и технологической структуры (что привело бы к разным темпам роста денежных и натуральных показателей). Стоит отметить, что сравнение объемов продаж ИБП с показателями компьютерного рынка в целом дает коэффициент 0,37 — это отличный показатель, свидетельствующий о растущей популярности ИБП у широких масс потребителей.
+<p>Анализ модельных рядов показывает, что товарное предложение на рынке ИБП полностью сформировалось, а его структура в последнее время меняется очень незначительно. По итогам первого полугодия текущего года в сегменте однофазных устройств на российском рынке ИБП было представлено 118 моделей (459 мощностных модификаций), а в сегменте трехфазных — 25 моделей и 151 модификация по мощности. Таким образом, весь спектр товарного предложения на рынке ИБП насчитывает 143 модели (610 модификаций по мощности).
+<p><hr width="40%" align="left" noshade>
+Более подробно об этом см. в издании «Бестселлеры ИТ-рынка».
+<p>За последние годы наиболее жесткая борьба разворачивается в нижнем ценовом сегменте ИБП line-interactive с аппроксимированной синусоидой. Об этом свидетельствует как насыщенность модельных рядов в этом сегменте, так и то, что новые производители, выходя на наш рынок, начинают именно с него, а в случае успеха пробуют осваивать и другие сегменты.
+<p>
+<table border="0" bgcolor="#FFFFCC">
+<tr><td>
+<h4>Классификация ИБП</h4>
+<p>В нормативных документах — стандарте IEC 62040-3 (введенном в 1999 г.) и его европейском эквиваленте ENV 50091-3 — определены следующие основные типы ИБП: резервные (Passive Standby), линейно-интерактивные (Line-Interactive) и ИБП с двойным преобразованием энергии (Double Conversion). В сложившейся у нас практике резервные ИБП чаще всего называют off-line, а за ИБП с двойным преобразованием энергии закрепилось название on-line.
+<p>Компания ITResearch применяет технологическую сегментацию рынка, в основу которой положены принцип архитектурного исполнения электрической схемы устройства (off-line, line-interactive, on-line), тип инвертора (в ИБП line-interactive применяются инверторы, дающие чистую или аппроксимированную синусоиду), конструктивное исполнение корпуса (Tower — башня, Rack Mount — для установки в стойку или RT (Rack/Tower) — универсальное исполнение). В сегменте on-line можно выделить четыре основные группы устройств:
+<ul><li>однофазные ИБП с двойным преобразованием (башенное исполнение);
+<li>однофазные ИБП с двойным преобразованием для установки в стойку;
+<li>модульные системы;
+<li>трехфазные ИБП.</ul>
+<p>Модульные системы существуют в однофазных и трехфазных вариантах. К этой же группе относятся масштабируемые архитектуры типа APC ISX или Liebert Foundation.
+<p>По классификации European Committee for Electrotechnical Standardization (CENELEC) существует девять основных аварийных ситуаций в сетях электропитания:
+<ol><li>Power failure (Исчезновение напряжения)
+<li>Power Sag (Провал напряжения)
+<li>Power Surge (Всплеск напряжения)
+<li>Undervoltage (Низкий уровень напряжения)
+<li>Overvoltage (Высокий уровень напряжения)
+<li>Switching transient (Переходные процессы при коммутации)
+<li>Line noise (Электромагнитные и радиочастотные помехи)
+<li>Frequency variation (Искажение частоты)
+<li>Harmonic distortion (Нелинейные искажения напряжения).</ol>
+<p>Резервные ИБП должны защищать оборудование от первых трех неполадок в сети, линейно-интерактивные — от первых пяти, а ИБП с двойным преобразованием — от всех девяти потенциальных аварийных ситуаций.
+</td></tr></table>
+<h3>Игроки рынка</h3>
+<p>В первом полугодии 2004 г. на рынке присутствовали 16 торговых марок, продукция которых продавалась в значительных объемах: APC, Centralion, Chloride, GE DE, Inelt, Ippon, Liebert, Mandex Trading (торговые марки Akita, Plus UPS и Predator), MGE, NeuHaus, NeWave, PowerCom, PowerMan, Powerware, Riello, Sven. В сегменте off-line предлагалась продукция только компаний APC, Liebert, MGE и Powerware. В сегменте line-interactive, наоборот, не представлены только компании Chloride и NeWave. В сегменте on-line, к которому относится 46% моделей, представлено большинство торговых марок, за исключением Ippon, Mandex Trading, PowerMan, Sven.
+<p>Самый широкий ассортимент традиционно предлагает компания APC (<a href="http://www.apc.ru">http://www.apc.ru</a>) — 21 модель и более 70 модификаций по мощности. Кроме того, для системы бесперебойного питания InfraStruXure невозможно учесть число модификаций по мощности, поскольку ее модульная архитектура позволяет гибко конфигурировать общую мощность системы, устанавливая силовые блоки разного номинала. Таким образом, компания APC предлагает и массово продает ИБП различных классов с наиболее широким охватом потребительских групп, но тем не менее не становится абсолютным монополистом, так как на рынке есть сильные игроки, предлагающие альтернативную продукцию, но только в ограниченном числе технологических сегментов.
+<p>Например, компания PowerCom (<a href="http://www.pcm.ru">http://www.pcm.ru</a>), имея 12 моделей с 75 модификациями по мощности, сосредоточилась в основном на легких line-interactive и on-line ИБП, относящихся к типу недорогих устройств для широкого потребителя. Вместе с тем распространение устройств класса on-line средней мощности, таких, как серия ONL, ориентированных на защиту более серьезного оборудования в корпоративном секторе рынка, требует определенного уровня доверия клиентов, что не позволит компании массово продавать ИБП откровенно низкого уровня. И мы видим, как год за годом PowerCom смещается из сегмента low-end в средний ценовой сегмент. На первых этапах этого процесса отрыв компании от других игроков массового рынка был практически незаметен, но сейчас можно сказать, что перепозиционирование произошло.
+<p>Компания MGE (<a href="http://www.mgeups.ru">http://www.mgeups.ru</a>) продает на рынке 15 моделей (71 модификация по мощности). Основные ее силы традиционно сосредоточены на тяжелых ИБП для корпоративного сектора, хотя компания и планирует усилить акцент на устройства для домашнего пользователя. Устройства MGE рассчитаны на пользователей, готовых доплачивать за марку и собственное спокойствие, но в этом есть свой резон, поскольку декларируется использование комплектующих более высокого качества. Более того, жесткие европейские стандарты производства не дают производителям выработать стратегию агрессивной экономии.
+<p>В нижнем ценовом сегменте, где представлена в первую очередь продукция азиатских производителей, появился новый игрок — торговая марка Sven (<a href="http://www.sven.ru">http://www.sven.ru</a>), предлагающая модельные ряды, сходные с PowerMan, Ippon, Plus UPS. Под торговой маркой Sven продаются line-interactive ИБП двух технологических подсегментов: с аппроксимированной синусоидой и с чистой синусоидой. Акцент в данных устройствах делается прежде всего на емкость аккумуляторных батарей, хотя линейки и находятся на близких ценовых уровнях.
+<p>Компании Powerware (<a href="http://www.powerware.com/russia">http://www.powerware.com/russia</a>), GE DE (<a href="http://www.geindustrial.com">http://www.geindustrial.com</a>), Chloride (<a href="http://www.chloride.ru">http://www.chloride.ru</a>), Liebert (<a href="http://www.liebert.com">http://www.liebert.com</a>), хотя и предлагают довольно широкие модельные ряды, основной акцент все же делают на корпоративные рынки, главным образом на сегмент тяжелых ИБП: здесь им принадлежит 71% моделей и более 63% модификаций по мощности для трехфазных устройств.
+<p>У компаний NeuHaus (<a href="http://www.neuhaus.ru">http://www.neuhaus.ru</a>) и Inelt (<a href="http://www.inelt.ru">http://www.inelt.ru</a>), которые также предлагают тяжелые ИБП, ассортимент все же несколько смещен в сторону более легких устройств, что подтверждают и новинки, представленные ими в сегменте line-interactive c аппроксимированной синусоидой, — NeuHaus SmartLine2 и Inelt SmartStation RT и RX U. Всего компания Inelt предлагает 14 моделей и по этому показателю находится на третьем месте на российском рынке.
+<p>
+<table border="0" bgcolor="#CCFFFF"><tr><td>
+<h4>Альтернативная классификация</h4>
+<p>В 2001 г. была сделана попытка модифицировать стандарт и придумать классификацию, которая более точно описывала бы потребительские свойства ИБП. При этом новая классификация не выходит за рамки стандарта IEC 62040-3.
+<p>Новый подход основан на трехуровневой системе индексов, позволяющих более точно описать потребительские характеристики ИБП. На первом шаге определяется степень зависимости выхода ИБП от питающих сетей (от входа), на втором — форма выходного сигнала ИБП, на третьем шаге — динамические характеристики ИБП. К примеру, тип ИБП может обозначаться так: VFI SS 111, VI SX 122.
+<p>Расшифровка обозначений в новой классификации:
+<p><b>Шаг 1</b>
+<p>VFI (Voltage and Frequency Independent) — выходное напряжение и частота на выходе ИБП не зависят от входной сети.
+<p>VI (Voltage Independent) — выход ИБП зависит от частоты входа, но напряжение поддерживается в заданных пределах за счет пассивного или активного регулирования.
+<p>VFD (Voltage and Frequency Dependent) — выходное напряжение и частота на выходе ИБП зависят от входной сети.
+<p><b>Шаг 2</b>
+<p>SS — синусоидальная форма выходного сигнала (КГИ<8%) при линейной и нелинейной нагрузке;
+<p>XX — несинусоидальная форма выходного сигнала при нелинейной нагрузке;
+<p>YY — несинусоидальная форма выходного сигнала при любой нагрузке.
+<p><b>Шаг 3</b>
+<p>1 — Нормальный режим — автономный режим — bypass-режим;
+<p>2 — 100%-ное изменение линейной нагрузки в нормальном или автономном режиме (худший параметр);
+<p>3 — 100%-ное изменение нелинейной нагрузки в нормальном или автономном режиме (худший параметр).
+<p>Типы VFD, VI и VFI в принципе соответствуют «классическим» резервным, интерактивным и on-line ИБП, а дополнительные индексы позволяют специалисту быстро определять качество источника и сопоставлять его с потребностями своей системы. Однако, несмотря на свою достаточность и даже избыточность, новая классификация имеет довольно серьезный недостаток: она интуитивно не понятна, и ее легко освоить только достаточно узкому кругу профессионалов.
+</td></tr></table>
+<h3>Резервные ИБП</h3>
+<p>Инвертор резервного ИБП подключен параллельно сетевому источнику и действует как источник резервного питания. В режиме Normal нагрузка подключена к питающей сети через узел, в состав которого могут входить коммутатор, фильтр, регулятор. В режиме Stored energy, когда параметры питающей сети не соответствуют требованиям системы, инвертор, преобразуя постоянное напряжение батарей в переменное, обеспечивает питание нагрузки от батарей.
+<p>Преимущества резервных ИБП: простое техническое решение, а следовательно, низкая цена и малые размеры. К недостаткам относятся большое время переключения на питание от батарей (у современных моделей оно составляет в среднем около 4 мс, однако в зависимости от характера нагрузки процесс перехода на резервное питание может затянуться до 10 мс), отсутствие изоляции нагрузки от электросети и невозможность стабилизации частоты выходного напряжения. Кроме того, в сетях с частыми и значительными отклонениями напряжения от номинального батареи эксплуатируются в очень неблагоприятном режиме, и срок их службы сокращается. В целом ИБП этого класса можно характеризовать как компромисс между приемлемым уровнем защиты от неполадок в электросети и ценой. Мощность выпускаемых устройств колеблется от 220 до 2000 В.А.
+<p>ИБП данного класса предназначены в первую очередь для защиты такого оборудования, как ПК, рабочие станции, офисные АТС, кассовые аппараты, домашняя видео/аудиотехника. Основные параметры, на которые следует обращать внимание при покупке таких устройств, — мощность, диапазон входного напряжения без перехода на питание от батарей, время резервирования и время переключения на работу от батарей.
+<p>Безусловным лидером данного сегмента рынка заслуженно считается компания APC. Из устройств других производителей здесь можно принимать во внимание только ИБП Powerware 3110.
+<h3>Линейно-интерактивные ИБП</h3>
+<p>В устройствах этого типа инвертор также подключен параллельно сетевому питанию. Однако он выполняет функции не только резервного источника питания, но и зарядного устройства, действуя как конвертор. В режиме Normal нагрузка запитывается от сети через основной (normal AC) вход ИБП. Одновременно инвертор, работая в реверсивном режиме как конвертор, заряжает аккумулятор. Когда отсутствует напряжение на обоих входах, источник переходит в режим Stored energy, и энергия, запасенная в аккумуляторе, через инвертор поступает к нагрузке. При этом коммутаторы, подключенные к входам ИБП, разомкнуты. Если питающее напряжение отсутствует только на входе normal AC, то ИБП переходит в режим байпаса (bypass). В этом режиме питание нагрузки осуществляется только от резервного источника сетевого напряжения, которое подается на вход bypass AC.
+<p>В ИБП этого класса имеются дополнительные узлы (бустеры и триммеры), позволяющие расширить диапазон входного напряжения, при котором напряжение на выходе поддерживается на приемлемом уровне без перехода на питание от батарей. Бустер (booster) при понижении напряжения на входе ИБП отвечает за повышение напряжения на его выходе. Триммер (trimmer) выполняет противоположную функцию — при повышенном напряжении в сети он понижает выходное напряжение ИБП. Однако, как и для резервных ИБП, при расширении входного диапазона увеличиваются пределы стабилизации напряжения на выходе устройства, поскольку возможности регулирования довольно ограниченны. Слишком большие колебания выходного напряжения могут отрицательно сказаться на подключенной нагрузке.
+<p>К недостаткам линейно-интерактивных ИБП относятся отсутствие изоляции нагрузки от электросети, сложность стабилизации частоты выходного напряжения (для большинства устройств в силу особенностей технического решения это вообще невозможно). Стабилизация выходного напряжения относительно номинального значения выполняется весьма посредственно: типовое значение данного параметра для устройств этого класса — не менее 5—7%. Кроме того, линейно-интерактивные ИБП неэффективны при работе с нагрузкой с высокой степенью нелинейности.
+<p>В целом линейно-интерактивные ИБП обеспечивают приемлемый уровень защиты электропитания и служат недорогой альтернативой более сложным системам, предназначенным для работы с чувствительной к неполадкам в электросети нагрузкой. Как правило, мощность выпускаемых устройств составляет от 250 до 10 000 В.А.
+<p>При питании от батарей выходное напряжение инвертора номинально равно действующему значению напряжения, однако форма огибающей напряжения может заметно отличаться от синусоиды. В простых моделях линейно-интерактивных ИБП огибающая может быть практически прямоугольной (меандр) или ступенчато приближаться к синусоиде, а в более совершенных моделях это будет точная синусоида. Для питания обычных ПК допустимо напряжение с прямоугольной огибающей.
+<p>В наиболее массовом сегменте интерактивных ИБП с аппроксимированной синусоидой активно конкурируют компания APC с моделью Back-UPS RS, PowerCom со своими Black Knight, King и King Pro, PowerMan с устройством Back Pro, а также Ippon с моделью Back Power Pro. Среди более «продвинутых» ИБП с чистой синусоидой безусловный лидер — ИБП APC Smart-UPS.
+<h3>ИБП с двойным преобразованием</h3>
+<p>В данных ИБП инвертор включен в цепь последовательно между источником и нагрузкой. В режиме Normal нагрузка постоянно получает питание по цепи выпрямитель-инвертор, где переменный ток преобразуется в постоянный и наоборот — т. е. происходит двойное преобразование. В режиме Stored energy, когда параметры питающей сети не соответствуют требованиям, нагрузка переходит на питание от аккумулятора через инвертор, который поддерживает выходное напряжение в заданных пределах. Режим Bypass имеет место в том случае, когда инвертор по каким-либо причинам не может обеспечить нагрузку требуемой мощностью (перегрузка, разряд аккумулятора) или отсутствует питающее напряжение на входе normal AC.
+<p>Даже при больших отклонениях входного напряжения ИБП продолжает питать нагрузку чистым синусоидальным стабилизированным напряжением (как правило, отклонения амплитуды выходного напряжения не превышают 5% устанавливаемого пользователем номинального значения даже при работе на нелинейную нагрузку). Благодаря используемой схеме такое понятие, как время переключения на резервное питание от батарей, для ИБП данного класса просто не имеет смысла. На рынке представлены ИБП как с кремниевыми тиристорными (SCR) выпрямителями, так и с современными IGBT-выпрямителями (биполярные транзисторы с изолированным затвором). Управляющие блоки используют микропроцессоры или цифровые сигнальные процессоры (Digital Signal Processor, DSP).
+<p>Основное преимущество ИБП с двойным преобразованием напряжения — надежная защита нагрузки практически от любых неполадок в сети электропитания. Кроме того, напряжение на выходе ИБП стабилизируется с высокой степенью точности независимо от состояния электросети или нагрузки.
+<p>Недостатки ИБП этого класса — относительно низкий кпд (около 88% при том, что у современных устройств он составляет 92—93%), более сложная по сравнению с ИБП других классов электрическая схема и, как следствие, высокая цена. Кроме того, мощные ИБП вносят большие искажения во входную сеть, и для их устранения приходится устанавливать дополнительные фильтры.
+<p>ИБП с двойным преобразованием имеют наиболее широкий спектр применений и соответственно отличаются самым большим разнообразием архитектуры и дизайна. Основное различие связано с фазностью устройств. В зависимости от того, сколько фаз на входе и на выходе имеет ИБП on-line, они делятся на источники 1:1, 3:1 и 3:3. Первая подгруппа запитывается от обычной электрической сети напряжением 220 В, а трехфазные ИБП (с фазностью 3:1 и 3:3) — от сети 380 В. Однофазные ИБП устанавливаются непосредственно перед защищаемым контуром, и их достаточно легко перепрофилировать, а трехфазные ИБП становятся частью всей инженерной инфраструктуры. Естественно, возможны и смешанные случаи, когда мощные трехфазные on-line ИБП служат для защиты индивидуальной нагрузки, например, в промышленности, но чаще всего их действительно используют для построения централизованной или групповой СБЭП (система бесперебойного электропитания). Следует отметить, что на базе достаточно мощных (а они имеются на рынке) однофазных on-line устройств также можно построить централизованную СБЭП, но эти исключения все же подтверждают правило.
+<p>Еще одно технологическое деление проводится по конструктивному исполнению — башенные (Tower) устройства или монтируемые в стойку (RM). Связано это с тем, что RM-источники, в отличие от башенных ИБП, по большому счету нельзя рассматривать как самостоятельные устройства. Сама концепция их применения предполагает, что устройство предназначено для работы внутри стойки с защищаемым оборудованием, этот ИБП не будет никуда перемещаться, и его обслуживание, в первую очередь смена аккумуляторных батарей, может быть затруднено. В связи с этим башенная и RM-модификации ИБП могут заметно различаться по конструкции и по стоимости (последняя у RM традиционно выше). Следует отметить, что относительно недавно появилась тенденция выпускать некоторые ИБП в универсальном корпусе RT (Rack/Tower), допускающем их использование и в том, и в другом варианте. Таковы, например, устройства Liebert GXT 2U, MGE UPS Systems Comet EX RT, Powerware 9125, APC Smart-UPS RT.
+<p>ИБП on-line могут обеспечивать избыточную надежность системы за счет резервирования внутренних модулей системы (построения массивов электропитания) или использования двух или более параллельных ИБП.
+<p>В сегменте малых и средних мощностей, а также в условиях ограниченных габаритов СБЭП, доминируют модульные системы, которые в России предлагают компании APC (Symmetra), Invensys Powerware (PW 9170), Liebert (Nfinity), NeWave (ConceptPower). Такие источники выполнены в виде распределяющих между собой нагрузку модулей, которые вставляются в стойку. Поскольку отдельные модули имеют меньшую массу и дешевле, чем весь источник, это позволяет мобильнее и с меньшими затратами наращивать мощность системы. Избыточность означает, что используется большее число модулей по сравнению с тем, которое необходимо для работы системы при полной нагрузке. Таким образом, все модули «страхуют» друг друга. Если один модуль выйдет из строя или будет удален, остальные сразу же начнут поддерживать полную нагрузку. Какой именно модуль вышел из строя, не имеет значения, потому что все другие модули постоянно включены и работают на общую нагрузку. В этом отношении модульные системы — точное подобие RAID-массивов и имеют не меньшую надежность.
+<p>Апологет модульных систем, компания APC, недавно вывела на рынок массив электропитания Symmetra LX — результат модернизации системы Symmetra Power Array, представляющий собой однофазные или трехфазные модульные блоки вертикального и стоечного исполнения мощностью от 4 до 16 кВ.А. Еще в одной разработке компании — Symmetra MW (мегаваттная Symmetra) используются силовые трехфазные модули мощностью 66,7 кВ.А и массой всего 65 кг.
+<p>Что касается мощных трехфазных систем, здесь пока в основном используются параллельные (часто встречается обозначение RPA — Redundant Parallel Architecture) системы с резервированием. Сейчас на российском рынке представлено более 20 моделей трехфазных ИБП различных производителей, и все они позволяют строить RPA-системы. Следует отметить, что технология «параллелизации» сегодня активно внедряется и в классе однофазных систем средней мощности, и практически все ведущие производители имеют в своем арсенале однофазные устройства, позволяющие добиться избыточности и резервирования.
+<p>Нельзя не упомянуть также систему InfraStruXure компании APC, которую уже не назовешь просто ИБП, поскольку это настраиваемая архитектура для создания готовых решений из стандартизованных компонентов. Эта система отвечает новейшему течению на рынке — предлагать законченную инфраструктуру для консолидированного в одном месте высокотехнологичного оборудования. И здесь имеются в виду не только полноценные центры данных, которых не так уж много, не только сетевое и серверное оборудование в банках и у операторов связи, а фактически все серверные комнаты даже в самых небольших компаниях.
+<p>Такие полноценные инфраструктурные решения, как ISX от APC или Foundation от Liebert, пока по плечу только технологическим лидерам рынка, имеющим к тому же достаточно средств на маркетинг этих систем. Естественно, к таковым относятся не только две названные выше компании, но пока лишь они «ввязались» в эту игру, а APC вообще объявила данное направление стратегическим в развитии компании.
+<p>По объективным причинам ISX пока получается ощутимо дороже, чем равная ей по мощности СБЭП, реализованная стандартным образом. Естественно, если посчитать дополнительные расходы на установку системы кондиционирования, стойки, установку и обслуживание системы и т. п., то получается, что все далеко не так плохо и решение APC вполне конкурентоспособно (стоимость владения может оказаться даже ниже, чем для традиционных систем). Но чтобы донести эту мысль до потребителей, нужно немало усилий и опять-таки денег. Если у APC хватит сил и воли продержаться этот сложный начальный период, то можно рассчитывать, что через несколько лет логика поставки не «урезанных» СБЭП, а полноценных инфраструктурных решений, таких, как ISX, получит в отрасли признание.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8598.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Защита электропитания — теория и практика
+</a><br><a href="detail.php@ID=8598.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Василий Мочар,
+ведущий эксперт аналитической компании ITResearch,
+expert@itresearch.ru
+На надежности работы оборудования, кроме «внутренних»&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8598.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8598&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0bcce40ba3e0b68bfe027d151130e848'><img src='../bitrix/tools/captcha.php@captcha_code=0bcce40ba3e0b68bfe027d151130e848' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

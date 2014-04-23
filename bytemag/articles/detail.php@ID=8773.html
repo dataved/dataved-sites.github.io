@@ -1,0 +1,936 @@
+<HTML>
+<HEAD>
+<title>Выбор сетевого сканера для анализа защищенности сети
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="&gt;Алексей Марков, к. т. н., доцент, Сергей Миронов, Валентин Цирлов ЗАО «НПП «Безопасные информационные технологии» http://www.npp-bit.ru Сегодня развитие информационных систем и технологий сопровождается ростом доли угроз, связанных с наличием" />
+<meta name="description" content="&gt;Алексей Марков, к. т. н., доцент, Сергей Миронов, Валентин Цирлов ЗАО «НПП «Безопасные информационные технологии» http://www.npp-bit.ru Сегодня развитие информационных систем и технологий сопровождается ростом доли угроз, связанных с наличием" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398077533','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13246.html'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13654.html'>Технологии ABBYY обеспечивают оперативный доступ к архивным документам</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8773' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8773&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8773"].SHOW_IMAGE.value="N"; document.forms["PrintForm8773"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8773"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8773"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8773);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8773.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8773.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8773);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a><br /></p><a href='../numbers/index.php@ID=11508.html'>№6 (82), июнь 2005</a><h1>Выбор сетевого сканера для анализа защищенности сети
+</h1>10.06.2005<p></p><DIV class='article-text'><p><i>>Алексей Марков</i>, к. т. н., доцент,
+<br><i>Сергей Миронов, Валентин Цирлов</i>
+<br>ЗАО «НПП «Безопасные информационные технологии»
+<br><a href="http://www.npp-bit.ru">http://www.npp-bit.ru</a>
+<p>Сегодня развитие информационных систем и технологий сопровождается ростом доли угроз, связанных с наличием уязвимостей программных ресурсов. Широкое распространение средств реализации таких угроз, в том числе вирусного типа, делает чрезвычайно актуальным применение различных систем анализа защищенности. При аудите безопасности, аттестации и сертификации информационных систем широко используются сетевые сканеры уязвимостей (vulnerability scanner), позволяющие проводить инвентаризацию сети и идентификацию уязвимостей [1]. В настоящее время на рынке программных средств представлено достаточно много подобных сканеров: от условно-бесплатных и с открытым кодом до специализированных комплексов аудитора информационной безопасности. В данной статье рассмотрены особенности сетевых сканеров, функционирующих в среде Windows.
+<h3>Возможности сетевых сканеров </h3>
+<p>Сетевые сканеры - это средства анализа защищенности сети путем сканирования и зондирования сетевых ресурсов с целью выявления их уязвимостей. Применение сканеров позволяет прежде всего решать следующие задачи:
+<ul><li>инвентаризация ресурсов, включающих устройства сети, ОС, службы и ПО;
+<li>идентификация и анализ уязвимостей;
+<li>подготовка отчетных материалов, возможно, с описанием проблем и вариантами их устранения [2-4].</ul>
+<p>Чтобы проанализировать эффективность решения этих задач, мы выбрали пять сканеров:
+<ol>
+  <li>&quot;Ревизор сети&quot; 1.2.1.0 (&quot;ЦБИ-сервис&quot;, <a href="http://www.cbi-info.ru">http://www.cbi-info.ru</a>); 
+  <li>XSpider 7.0 (Positive Technologies, <a href="http://www.ptsecurity.ru">http://www.ptsecurity.ru</a>); 
+  <li>Retina 4.9.221 (eEye Digital Security, <a href="http://www.eeye.com">http://www.eeye.com</a>); 
+  <li>Tenable NeWT 2.0 (Tenable Network Security, <a href="http://www.tenablesecurity.com">http://www.tenablesecurity.com</a>); 
+  <li>Internet Scanner 7.0 (Internet Security Systems, <a href="http://www.iss.net">http://www.iss.net</a>).
+</ol>
+<p>Предпочтение при выборе отдавалось отечественным сканерам, проходящим сертификацию в нашей стране, - XSpider и &quot;Ревизор сети&quot;. Выбор Internet Scanner (IS) обусловлен его лидирующим положением по объему продаж и декларируемому количеству обнаруживаемых уязвимостей [5]. Из стоимостных соображений в список был включен широко известный и доступный на некоммерческой основе сканер NeWT (Windows-порт Nessus). Кроме того, был добавлен достаточно распространенный сканер Retina [5, 6]. Все сканеры функционируют в среде Windows и имеют нераспределенную архитектуру (табл. 1).
+<h4>Таблица 1. Характеристики сравниваемых сетевых сканеров </h4>
+<table border="1">
+  <tr>
+    <td><b>Оцениваемый фактор</b></td>
+    <td>Ревизор сети</td>
+    <td>XSpider</td>
+    <td>Retina</td>
+    <td>NeWT</td>
+    <td>IS</td>
+  </tr>
+  <tr>
+    <td>Поддержка CVE (MITRE)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>+</td>
+    <td>+</td>
+    <td>+</td>
+  </tr>
+  <tr>
+    <td>Примерные требования к объему дискового пространства, Мбайт</td>
+    <td>50 </td>
+    <td>10 </td>
+    <td>30 </td>
+    <td>45 </td>
+    <td>300</td>
+  </tr>
+  <tr>
+    <td>Механизм обновлений</td>
+    <td>Удаленный сервер</td>
+    <td>Удаленный/ локальный сервер</td>
+    <td>Удаленный сервер</td>
+    <td>Удаленный сервер</td>
+    <td>Удаленный сервер</td>
+  </tr>
+  <tr>
+    <td>Ориентировочная стоимость лицензии на 100 IP-адресов, у.е.</td>
+    <td>4000</td>
+    <td>1200</td>
+    <td>4080</td>
+    <td>Бесплатно для сетей класса С; 1200 - полная лицензия</td>
+    <td>11319 </td>
+  </tr>
+</table>
+<p>Отметим, что при испытаниях не ставилась цель провести всестороннее академическое 
+  исследование сканеров; не проверялись также возможности сканеров как инструмента 
+  хакерских атак. Поэтому в качестве среды испытаний были выбраны типовые объекты 
+  информационных систем, в реальности часто подлежащие проверкам по безопасности. 
+  Испытательный стенд включал подсеть класса C с рабочими станциями, функционирующими 
+  под управлением ОС Microsoft Windows 95/98/NT 4.0 SP1 Server/2000 Professional/Server 
+  2003, MCBC 3.0, Red Hat Linux 7.1. Выбор отечественной защищенной МСВС не случаен 
+  - эта ОС рекомендована для построения автоматизированных систем в защищенном 
+  исполнении по линии госзаказа. Помимо стандартных служб, использовались почтовые 
+  серверы Kerio 5.5.0, Merak 4.4.1, Web-серверы Apache 2.0.50, IIS 2.0, IIS 6.0, 
+  FTP-сервер BlackMoon 2.2.3, Microsoft SQL Server 8.00.760. Установка всех средств 
+  и систем выполнялась в режимах по умолчанию. Нестандартные серверные компоненты 
+  и средства межсетевого экранирования отсутствовали, параметры протоколов стека 
+  TCP/IP были установлены в значения по умолчанию. 
+<p>В ходе тестов некоторые параметры настройки подсистем защиты изменяли в сторону снижения степени безопасности, с тем чтобы контролировать возможности сканеров, позволяющие выявлять ошибки администрирования.
+<p>К основным проверкам были отнесены следующие:
+<ol><li>Оценка качества сканирования портов и возможности идентификации ОС и сервисов;
+<li>Оценка возможности обнаружения уязвимостей;
+<li>Анализ удобства интерфейса и полноты формирования отчетов.</ol>
+<h3>Методика оценки </h3>
+<p>Процедура <b>оценки качества инвентаризации ресурсов</b> была разбита на следующие 
+  проверки: 
+<ul><li>сканирование TCP- и UDP-портов;
+<li>идентификация ОС;
+<li>идентификация TCP- и UDP-сервисов.</ul>
+<p>Для первой проверки удобнее использовать сканеры портов (например, nmap), однако сканеры уязвимости определяют активные сетевые сервисы, используя результаты, полученные на этапе сканирования портов. Поэтому данная проверка представляется важной.
+<p>Сканирование TCP- и UDP-портов проводилось при фиксированной конфигурации испытательного стенда, затем результаты были сопоставлены с реальным перечнем открытых портов, полученных с использованием штатных средств соответствующей ОС. Экспертные оценки выставлялись следующим образом: +1 балл - правильно определенный открытый порт; -1 - закрытый порт, ошибочно определенный как открытый, или открытый порт, ошибочно определенный как закрытый.
+<p>Идентификация ОС - это базовая задача при сборе информации об удаленном компьютере. Качество идентификации ОС служит хорошим показателем возможностей идентификации сервисов в целом, поскольку определение точной версии ОС требует достаточно сложных комплексных методов.
+<p>Качество идентификации ОС оценивалось по результатам сканирования в баллах по следующей шкале: +3 балла за точно идентифицированную ОС (с точностью до версии); +1 балл за правильно идентифицированное семейство ОС; 0 за выдачу списка возможных семейств (например, Windows и HP), в котором содержится правильный ответ; -1 балл за неправильно идентифицированную ОС.
+<p>Дополнительно был проведен анализ возможностей идентификации ОС с нестандартным набором сетевых сервисов и нестандартными параметрами протоколов стека TCP/IP.
+<p>Идентификация сервисов - одна из основных задач любого сканера, так как без корректного определения версий активных сетевых служб невозможно выполнить анализ их уязвимостей. Возможности идентификации сервисов анализировались путем сканирования компьютеров из тестовой подсети, на которых были сконфигурированы дополнительные серверные компоненты. Результаты сканирования сравнивались с реальным перечнем.
+<p>Качество идентификации сервисов оценивалось в соответствии со следующей градацией: +3 балла за точно идентифицированный сервис (с точностью до версии); +1 балл за точно идентифицированное семейство сервисов; -1 балл за неидентифицированный сервис; -3 балла за ошибочно идентифицированный сервис.
+<p>Выбор системы баллов обусловлен тем, что практическое значение может иметь только точная идентификация TCP- или UDP-сервиса. Идентификация семейства сервисов, наверное, в ряде случаев полезна, однако явно недостаточна.
+<p><b>Качество обнаружения уязвимостей</b> - это основная характеристика сканера 
+  безопасности, но она труднее всего поддается формальной оценке. Для анализа 
+  были отобраны хорошо известные уязвимости для данных версий продуктов. Оценки 
+  выставлялись по следующим правилам: + 2 балла за точно идентифицированную уязвимость; 
+  -1 балл за ложное срабатывание; -2 балла за существующую, но не идентифицированную 
+  уязвимость. 
+<p>Было решено не учитывать степень критичности уязвимостей по причине условности такого деления, а также их различия для разных продуктов. При этом очевидно, что любая некорректность при идентификации уязвимостей нежелательна.
+<p>При <b>анализе удобства работы</b> учитывались следующие факторы: 
+<ul><li>наличие планировщика (для проведения тестирования по расписанию);
+<li>возможность создания профилей проверок (пользовательских наборов проверок);
+<li>возможность генерации отчета для технического специалиста, содержащего подробную информацию о проведенных проверках и их результатах;
+<li>возможность генерации отчета для руководителя, содержащего обобщенную высокоуровневую информацию об исследованной системе и о результатах проверок;
+<li>возможность приостановки сканирования;
+<li>возможность пересканирования отдельных сервисов (что может быть полезно, например, в случае перезагрузки целевого компьютера).</ul>
+<p>Помимо этого, для каждого из сканеров эксперты выставляли субъективную оценку удобства интерфейса пользователя.
+<h3>Результаты </h3>
+<h4>Сканирование портов </h4>
+<p>При сканировании TCP-портов все сканеры, за исключением Internet Scanner, в целом справились со сканированием портов; незначительно лидировал в этом тесте XSpider (табл. 2). В лабораторных условиях продукт ISS показал неожиданно низкий результат.
+<p>Результаты сканирования UDP-портов оказались неудовлетворительными для всех сканеров. Лучше других показали себя &quot;Ревизор сети&quot; и Internet Scanner, однако оба сканера выдали ошибочные сообщения при сканировании рабочих станций в среде МСВС. Таким образом, победителей в данном тесте просто нет.
+<h4>Таблица 2. Результаты сканирования портов (в баллах) </h4>
+<table border="1">
+  <tr> 
+    <td> </td>
+    <td>Windows 2000 Professional SP3</td>
+    <td>МСВС 3.0</td>
+    <td>Windows Server 2003 </td>
+    <td>Общий балл</td>
+  </tr>
+  <tr> 
+    <td colspan="5">
+      <div align="center"><b>TCP-сканирование</b></div>
+    </td>
+  </tr>
+  <tr> 
+    <td>Ревизор сети</td>
+    <td>+1 </td>
+    <td>+18 </td>
+    <td>+7 </td>
+    <td>+26 </td>
+  </tr>
+  <tr> 
+    <td>XSpider</td>
+    <td>+3 </td>
+    <td>+12 </td>
+    <td>+17 </td>
+    <td>+32 </td>
+  </tr>
+  <tr> 
+    <td>Retina</td>
+    <td>+3 </td>
+    <td>+22 </td>
+    <td>+5 </td>
+    <td>+30 </td>
+  </tr>
+  <tr> 
+    <td>NeWT</td>
+    <td>+1 </td>
+    <td>+10 </td>
+    <td>+17 </td>
+    <td>+28 </td>
+  </tr>
+  <tr> 
+    <td>IS</td>
+    <td>-5 </td>
+    <td>-28 </td>
+    <td>-5 </td>
+    <td>-38 </td>
+  </tr>
+  <tr> 
+    <td colspan="5">
+      <div align="center"><b>UDP-сканирование</b></div>
+    </td>
+  </tr>
+  <tr> 
+    <td>Ревизор сети</td>
+    <td>0 </td>
+    <td>Ошибка </td>
+    <td>-6 </td>
+    <td>-</td>
+  </tr>
+  <tr> 
+    <td>XSpider</td>
+    <td>-5 </td>
+    <td>-14 </td>
+    <td>-16 </td>
+    <td>- 35 </td>
+  </tr>
+  <tr> 
+    <td>Retina</td>
+    <td>-6 </td>
+    <td>-16 </td>
+    <td>-20 </td>
+    <td>- 42 </td>
+  </tr>
+  <tr> 
+    <td>NeWT</td>
+    <td>-6 </td>
+    <td>-16 </td>
+    <td>-16 </td>
+    <td>- 38 </td>
+  </tr>
+  <tr> 
+    <td>IS</td>
+    <td>+4 </td>
+    <td>Ошибка</td>
+    <td>-20 </td>
+    <td>-</td>
+  </tr>
+</table>
+<h4>Идентификация ОС </h4>
+<p>При идентификации ОС сканеры удовлетворительно определили ОС линейки Windows, показав менее точные результаты в случае Linux. Лучшие результаты (табл. 3) продемонстрировал сканер NeWT, который определил все системы с точностью до версии или версии ядра. XSpider стабильно определил семейство ОС. Недостаточно высокими оказались результаты &quot;Ревизора сети&quot;.
+<h4>Таблица 3. Результаты идентификации ОС (в баллах) </h4>
+<table border="1">
+  <tr> 
+    <td> </td>
+    <td>Windows&#39;95 OSR2</td>
+    <td>Windows&#39;98</td>
+    <td>Windows NT 4.0 Server SP1</td>
+    <td>Windows 2000 Professional SP3</td>
+    <td>Windows Server 2003</td>
+    <td>MCBC 3.0</td>
+    <td>Red Hat Linux 7.1</td>
+    <td>Общий балл</td>
+  </tr>
+  <tr> 
+    <td>Ревизор сети</td>
+    <td>-1</td>
+    <td>-1</td>
+    <td>0</td>
+    <td>+1</td>
+    <td>0</td>
+    <td>-1</td>
+    <td>-1</td>
+    <td>-3</td>
+  </tr>
+  <tr> 
+    <td>XSpider</td>
+    <td>+1</td>
+    <td>+1</td>
+    <td>+3</td>
+    <td>+1</td>
+    <td>+1</td>
+    <td>+1</td>
+    <td>+1</td>
+    <td>+9</td>
+  </tr>
+  <tr> 
+    <td>Retina</td>
+    <td>-1</td>
+    <td>-1</td>
+    <td>+3</td>
+    <td>+3</td>
+    <td>+3</td>
+    <td>-1</td>
+    <td>-1</td>
+    <td>+5</td>
+  </tr>
+  <tr> 
+    <td>NeWT</td>
+    <td>+3</td>
+    <td>+3</td>
+    <td>+3</td>
+    <td>+3</td>
+    <td>+3</td>
+    <td>+3</td>
+    <td>+3</td>
+    <td>+21</td>
+  </tr>
+  <tr> 
+    <td>IS</td>
+    <td>-1</td>
+    <td>-1</td>
+    <td>+3</td>
+    <td>+3</td>
+    <td>+3</td>
+    <td>-1</td>
+    <td>-1</td>
+    <td>+5</td>
+  </tr>
+  <tr> 
+    <td colspan="9">
+      <div align="center"><b>Нестандартная настройка стека</b></div>
+    </td>
+  </tr>
+  <tr> 
+    <td>Ревизор сети</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td>-3</td>
+    <td>-3</td>
+    <td> </td>
+    <td> </td>
+    <td>-6</td>
+  </tr>
+  <tr> 
+    <td>XSpider</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td>+1</td>
+    <td>+1</td>
+    <td> </td>
+    <td> </td>
+    <td>+2</td>
+  </tr>
+  <tr> 
+    <td>Retina</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td>-1</td>
+    <td>-1</td>
+    <td> </td>
+    <td> </td>
+    <td>-2</td>
+  </tr>
+  <tr> 
+    <td>NeWT</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td>+3</td>
+    <td>+3</td>
+    <td> </td>
+    <td> </td>
+    <td>+6</td>
+  </tr>
+  <tr> 
+    <td>IS</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td>-1</td>
+    <td>-1</td>
+    <td> </td>
+    <td> </td>
+    <td>-2</td>
+  </tr>
+</table>
+<h4>Идентификация сервисов </h4>
+<p>При идентификации TCP-сервисов (табл. 4) с заметным отрывом лидировали XSpider и NeWT (более 80% правильных откликов). Весьма низкий результат показал IS - ни один сервис не был идентифицирован с точностью до версии.
+<p>Результаты идентификации UDP-сервисов оказались отрицательными для всех сканеров: не было идентифицировано и половины сервисов. Значительное число ошибочно определенных несуществующих сервисов - на счету &quot;Ревизора сети&quot;. Лучший результат принадлежит XSpider, но такое &quot;лидерство&quot; вряд ли можно признать удовлетворительным (победителя в данном тесте опять-таки нет).
+<h4>Таблица 4. Результаты идентификации сервисов (в баллах) </h4>
+<table border="1">
+  <tr> 
+    <td> </td>
+    <td>Windows NT 4.0 Server SP1</td>
+    <td>Windows 2000 Professional SP3</td>
+    <td>Windows Server 2003</td>
+    <td>MCBC 3.0</td>
+    <td>Общий балл</td>
+  </tr>
+  <tr> 
+    <td colspan="6">
+      <div align="center"><b>TCP-сервисы</b></div>
+    </td>
+  </tr>
+  <tr> 
+    <td>Ревизор сети</td>
+    <td>+24</td>
+    <td>+10</td>
+    <td>+5</td>
+    <td>+19</td>
+    <td>+58</td>
+  </tr>
+  <tr> 
+    <td>XSpider</td>
+    <td>+33</td>
+    <td>+26</td>
+    <td>+42</td>
+    <td>+10</td>
+    <td>+111</td>
+  </tr>
+  <tr> 
+    <td>Retina</td>
+    <td>+23</td>
+    <td>+22</td>
+    <td>+12</td>
+    <td>+24</td>
+    <td>+81</td>
+  </tr>
+  <tr> 
+    <td>NeWT</td>
+    <td>+30</td>
+    <td>+24</td>
+    <td>+30</td>
+    <td>+22</td>
+    <td>+106</td>
+  </tr>
+  <tr> 
+    <td>IS</td>
+    <td>+8</td>
+    <td>+3</td>
+    <td>-5</td>
+    <td>+11</td>
+    <td>+17</td>
+  </tr>
+  <tr> 
+    <td colspan="6">
+      <div align="center"><b>UDP-сервисы</b></div>
+    </td>
+  </tr>
+  <tr> 
+    <td>Ревизор сети</td>
+    <td>+1</td>
+    <td>+1</td>
+    <td>0</td>
+    <td>-66</td>
+    <td>-64</td>
+  </tr>
+  <tr> 
+    <td>XSpider</td>
+    <td>-1</td>
+    <td>-3</td>
+    <td>-7</td>
+    <td>-2</td>
+    <td>-13</td>
+  </tr>
+  <tr> 
+    <td>Retina</td>
+    <td>-5</td>
+    <td>-5</td>
+    <td>-9</td>
+    <td>-2</td>
+    <td>-21</td>
+  </tr>
+  <tr> 
+    <td>NeWT</td>
+    <td>-5</td>
+    <td>-3</td>
+    <td>-9</td>
+    <td>-12</td>
+    <td>-29</td>
+  </tr>
+  <tr> 
+    <td>IS</td>
+    <td>-5</td>
+    <td>-5</td>
+    <td>-9</td>
+    <td>-12</td>
+    <td>-31</td>
+  </tr>
+</table>
+<h4>Анализ уязвимостей </h4>
+<p>По результатам анализа уязвимостей можно выделить NeWT, XSpider и Retina при явном лидерстве первого (табл. 5). IS показал в целом недостаточно высокие результаты, однако существенно лучше остальных справился с анализом конфигураций механизмов безопасности Windows (некорректные настройки политики паролей и разделяемые ресурсы).
+<p>Меньше всего ложных срабатываний отмечено у XSpider и IS. Весьма много ложных срабатываний показал &quot;Ревизор сети&quot;, обнаруживший уязвимости несуществующих сервисов. Так, даже после корректной идентификации Web-сервера сканер обнаружил уязвимости для совершенно другого сервера.
+<h4>Таблица 5. Показатели возможностей обнаружения уязвимостей (в баллах) </h4>
+<table border="1">
+  <tr>
+    <td> </td>
+    <td>Windows NT 4.0 Server SP1</td>
+    <td>Windows 2000 Professional SP3</td>
+    <td>Windows Server 2003</td>
+    <td>MCBC 3.0</td>
+    <td>Общий балл</td>
+  </tr>
+  <tr>
+    <td>Ревизор сети</td>
+    <td>-5</td>
+    <td>-1</td>
+    <td>-2</td>
+    <td>-1</td>
+    <td>-9</td>
+  </tr>
+  <tr>
+    <td>XSpider</td>
+    <td>-4</td>
+    <td>0</td>
+    <td>+2</td>
+    <td>+8</td>
+    <td>+6</td>
+  </tr>
+  <tr>
+    <td>Retina</td>
+    <td>0</td>
+    <td>-3</td>
+    <td>+2</td>
+    <td>+3</td>
+    <td>+2</td>
+  </tr>
+  <tr>
+    <td>NeWT</td>
+    <td>-8</td>
+    <td>+9</td>
+    <td>+14</td>
+    <td>+11</td>
+    <td>+26</td>
+  </tr>
+  <tr>
+    <td>IS</td>
+    <td>+8</td>
+    <td>-11</td>
+    <td>-7</td>
+    <td>-5</td>
+    <td>-20</td>
+  </tr>
+</table>
+<h4>Сравнение генераторов отчетов </h4>
+<p>Сравнительный анализ генераторов отчетов (табл. 6) показал, что все сканеры обеспечивают формирование отчетных форм и экспорт их в HTML, однако наиболее полно этот механизм реализован у IS: отчет содержит подробные пошаговые инструкции по устранению выявленных уязвимостей, имеет удобную структуру и может быть экспортирован во все распространенные форматы. Чрезвычайно лаконично организован отчет NeWT.
+<p>Относительно интерфейса следует указать, что крайне удобная возможность пересканирования отдельного сервиса присутствует только у XSpider. Из наиболее досадных недостатков интерфейса можно отметить трудно интерпретируемые переводы на русский язык названий служб в &quot;Ревизоре сети&quot;, например: &quot;Протокол загрузки сервера&quot;, &quot;Протокол пересылки файлов&quot; и т. д.
+<h4>Таблица 6. Оценка удобства и полноты интерфейса (в баллах) </h4>
+<table border="1">
+  <tr>
+    <td>Оцениваемый фактор</td>
+    <td>Ревизор сети</td>
+    <td>XSpider</td>
+    <td>Retina</td>
+    <td>NeWT</td>
+    <td>IS</td>
+  </tr>
+  <tr>
+    <td>Наличие планировщика </td>
+    <td>-</td>
+    <td>+2 </td>
+    <td>+2 </td>
+    <td>-</td>
+    <td>+2 </td>
+  </tr>
+  <tr>
+    <td>Возможность создания профилей проверок </td>
+    <td>+ 3 </td>
+    <td>+ 3 </td>
+    <td>+ 3 </td>
+    <td>+ 3 </td>
+    <td>+ 3 </td>
+  </tr>
+  <tr>
+    <td>Возможность генерации отчета для технического специалиста </td>
+    <td>+ 3 </td>
+    <td>+ 3 </td>
+    <td>+ 3 </td>
+    <td>+ 3 </td>
+    <td>+ 4 </td>
+  </tr>
+  <tr>
+    <td>Возможность генерации отчета для руководителя</td>
+    <td>+ 3 </td>
+    <td>+ 3 </td>
+    <td>+ 3 </td>
+    <td>-</td>
+    <td>+ 3 </td>
+  </tr>
+  <tr>
+    <td>Возможность приостановки сканирования </td>
+    <td>-</td>
+    <td>+2 </td>
+    <td>-</td>
+    <td>+2 </td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Возможность пересканирования отдельных сервисов </td>
+    <td>-</td>
+    <td>+2 </td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Удобство интерфейса пользователя </td>
+    <td>+4 </td>
+    <td>+5 </td>
+    <td>+4 </td>
+    <td>+3 </td>
+    <td>+4 </td>
+  </tr>
+  <tr>
+    <td>Документация на русском языке</td>
+    <td>+2 </td>
+    <td>+2 </td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Общий балл</td>
+    <td>+15 </td>
+    <td>+22 </td>
+    <td>+15 </td>
+    <td>+11 </td>
+    <td>+16 </td>
+  </tr>
+</table>
+<p>Следует отметить недостатки, присущие всем сканерам, а именно: отсутствуют 
+  возможности автоматизации исправлений и автоматизированный контроль изменений 
+  в ресурсах сети после последнего сканирования; нет также возможности добавить 
+  собственные проверки. Демо-версии продуктов имеются только у XSpider, NeWT, 
+  IS. 
+<h3>Итоги </h3>
+<p>В заключение следует сказать, что трудно выделить абсолютно лучший сканер безопасности - все сканеры по-разному справляются с различными задачами. Их достоинства и недостатки в сравнении иллюстрирует многопараметрическая диаграмма (см. рисунок).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2005/bit.gif" alt=Fig.></td>
+<td valign="bottom">Результаты сравнительного анализа сканеров.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В то же время можно сделать некоторые общие выводы.
+<p>1. Все сканеры недостаточно качественно идентифицируют UDP-сервисы, что, очевидно, связано с особенностями метода UDP-сканирования.
+<p>2. Сканеры лучше работают с ОС линейки Windows NT, чем с Linux. Возможно, этот результат связан с большей стандартизованностью ОС Microsoft.
+<p>3. Самый дорогостоящий сканер IS продемонстрировал в ряде случаев весьма невысокие результаты, тогда как представитель семейства Nessus, доступный на некоммерческой основе, оказался одним из лучших.
+<p>4. В лабораторных условиях NeWT и XSpider обеспечили наилучшие показатели (разница между ними находится в пределах статистической погрешности), хорошие результаты показал сканер Retina, несколько отстают IS и &quot;Ревизор сети&quot;.
+<p>Таким образом, проведенное исследование позволяет говорить о целесообразности 
+  использования нескольких сканеров уязвимостей при аудите безопасности или в 
+  ходе аттестационных и сертификационных испытаний информационных систем и межсетевых 
+  СЗИ. 
+<p>
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h3>Источники дополнительной информации </h3>
+      <ol>
+        <li>Марков А. С., Ермолаев С. А. Инструментальные средства аттестации 
+          программных ресурсов объектов информатизации. InformationSecurity, 2004, 
+          № 4, 5. 
+        <li>Лукацкий А. В. Сканеры не только ищут дыры в вашей сети. PCWeek/RE, 
+          №33, 2002. 
+        <li>Применение сканеров для анализа защищенности компьютерных сетей: Материалы 
+          курса. М.: Информзащита, 2004. 
+        <li>Зима В. М., Котухов М. М., Ломако А. Г., Марков А. С., Молдовян А. 
+          А. Разработка систем информационно-компьютерной безопасности. СПб: ВКА 
+          им. А.Ф.Можайского, 2003. - 327 с. 
+        <li>Snyder J. We tested five VA scanners to see how well they illuminate 
+          holes in your systems. How Vulnerable? Information Security, 2003, March. 
+        <li>Сравнение сетевых сканеров безопасности. М.: Positive Technologies, 
+          2003; <a href="http://www.ptsecurity.ru/compare2.asp">http://www.ptsecurity.ru/compare2.asp</a>.
+      </ol>
+    </td>
+  </tr>
+</table>
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</A></b></li><li><b><A href='detail.php@ID=22430.html'>10-гигабитные коммутаторы для малых и средних локальных сетей</A></b></li><li><b><A href='detail.php@ID=20318.html'>IEEE 802.11ac – новый высокоскоростной стандарт Wi-Fi</A></b></li><li><b><A href='detail.php@ID=19942.html'>LTE в зеркале конгресса MWC 2012</A></b></li><li><b><A href='detail.php@ID=19426.html'>Тенденции и прогнозы телекоммуникационного рынка-2012 </A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8773.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Выбор сетевого сканера для анализа защищенности сети
+</a><br><a href="detail.php@ID=8773.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">>Алексей Марков, к. т. н., доцент,
+Сергей Миронов, Валентин Цирлов
+ЗАО «НПП «Безопасные информационные технологии»
+http://www.npp-bit.ru
+Сегодня&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8773.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8773&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='023d6ad2b2731b105187af4fb674697e'><img src='../bitrix/tools/captcha.php@captcha_code=023d6ad2b2731b105187af4fb674697e' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

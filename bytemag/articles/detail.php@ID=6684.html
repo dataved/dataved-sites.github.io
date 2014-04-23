@@ -1,0 +1,496 @@
+<HTML>
+<HEAD>
+<title>InterSystems Ensemble - платформа для интеграции и разработки приложений
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Вадим Федоров, консультант по продуктам, InterSystems Corporation vadim@intersystems.ru Интеграция корпоративных приложений Бурное развитие информационных технологий в последние 10-15 лет привело к тому, что сейчас на крупных предприятиях" />
+<meta name="description" content="Вадим Федоров, консультант по продуктам, InterSystems Corporation vadim@intersystems.ru Интеграция корпоративных приложений Бурное развитие информационных технологий в последние 10-15 лет привело к тому, что сейчас на крупных предприятиях" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082690','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6684' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6684&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6684"].SHOW_IMAGE.value="N"; document.forms["PrintForm6684"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6684"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6684"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6684);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6684.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6684.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6684);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11509.html'>№6 (70), июнь 2004</a><h1>InterSystems Ensemble - платформа для интеграции и разработки приложений
+</h1>10.06.2004<p></p><DIV class='article-text'><p><i>Вадим Федоров</i>,<br>
+  консультант по продуктам, InterSystems Corporation<br>
+  <a href="mailto:vadim@intersystems.ru">vadim@intersystems.ru</a>
+<h3>Интеграция корпоративных приложений </h3>
+<p>Бурное развитие информационных технологий в последние 10-15 лет привело к тому, что сейчас на крупных предприятиях работает множество различных информационных систем (ИС). Разрозненные приложения, разработанные в разное время, на базе разных технологий, разными компаниями; системы управления предприятиями от известных поставщиков, новейшие B2B- и B2C-решения, порталы - все эти приложения оказалось крайне сложно заставить работать вместе. Однако, чтобы выжить в конкурентной борьбе, предприятия должны развиваться, решать все новые и новые задачи, непрерывно совершенствовать существующие бизнес-процессы, а это практически невозможно, если на предприятии используется набор разрозненных систем. Интеграция корпоративных приложений (Enterprise Application Integration) как раз и позволяет решить задачи, которые бизнес ставит перед ИТ.
+<p>Единственная альтернатива интеграции - начать внедрять все процессы автоматизации на предприятии заново, с &quot;чистого листа&quot;. Но готовы ли ИТ-директора пуститься в такую авантюру? Как правило, нет. Ведь даже если предположить, что существует некое приложение, способное решить все задачи бизнеса, то остаются проблемы сроков внедрения и стоимости подобной системы. И при этом никто не гарантирует, что через некоторое время не возникнет новых информационных потребностей, для которых единой системы будет недостаточно, или не произойдет слияния с какой-нибудь другой компанией, в которой успешно используются приложения других поставщиков. Исследования показывают, что в настоящий момент интеграция приложений стоит гораздо выше в списке приоритетов ИТ-директоров, чем разработка и внедрение новых приложений. Естественно, вышесказанное не означает, что не нужно разрабатывать и внедрять новые системы, просто процессы интеграции и разработки сейчас связаны гораздо теснее, чем раньше.
+<p>Интеграцию корпоративных приложений не стоит воспринимать только как обмен данными между существующими системами. Сейчас основная цель интеграционных проектов - возможность адаптироваться к изменяющимся требованиям бизнеса. И в рамках интеграции корпоративных приложений в настоящее время решаются не только собственно проблемы интеграции приложений, но и такие новые задачи, как управление бизнес-процессами, разработка композитных приложений и мониторинг бизнес-активности. Интересно проследить, как с течением времени изменялось само понятие интеграции корпоративных приложений.
+<p>Основная задача интеграции корпоративных приложений - <b>координация транзакционных 
+  данных</b> систем, работающих на предприятии, при сохранении целостности как 
+  самих данных, так и бизнес-транзакций. Изначально для интеграции приложений 
+  служили специализированные интерфейсы, через которые системы обменивались данными. 
+  Чем больше систем, которые нужно интегрировать, тем сложнее применять подобный 
+  подход. Появление интеграционных брокеров, или брокеров сообщений, значительно 
+  упростило обмен данными между системами, так как уменьшилось количество специализированных 
+  интерфейсов, которые нужно разрабатывать. Использование центрального сервера 
+  интеграции значительно упрощает сопровождение и развитие системы. 
+<p>В конце 90-х гг. стало понятно, что требуется не только осуществлять обмен 
+  данными между системами, но и управлять продолжительными по времени бизнес-процессами, 
+  которые могут затрагивать сразу несколько приложений на предприятии. Моделирование, 
+  автоматизация, оптимизация бизнес-процессов в рамках всей организации образуют 
+  еще одну задачу интеграции корпоративных приложений - <b>управление бизнес-процессами</b> 
+  (Business Process Management, BPM). 
+<p><b>Разработка композитных приложений</b> позволяет развивать корпоративную 
+  ИС, объединяя функциональность существующих приложений и данных с новой бизнес-логикой 
+  и пользовательскими интерфейсами (например, портальным приложением). В рамках 
+  интеграции корпоративных приложений задачи разработки и интеграции сближаются. 
+  Разработка композитных приложений стала серьезной альтернативой созданию &quot;полностью 
+  новых&quot; приложений. 
+<p><b>Мониторинг бизнес-активности</b> (Business Activity Monitoring) - результат 
+  конвергенции бизнес-аналитики (Business Intelligence) и интеграции приложений 
+  в режиме реального времени. Цель мониторинга бизнес-активности - предоставить 
+  оперативную информацию о процессах, протекающих в корпоративной ИС, что позволяет 
+  снизить издержки и ускорить выполнение самых важных бизнес-процессов. 
+<p>Необходимость решать все эти задачи в рамках интеграции корпоративных приложений 
+  заставляет очень внимательно относиться к выбору ПО для интеграционных проектов. 
+  Для решения отдельных задач интеграции можно использовать системы гарантированной 
+  доставки сообщений, интеграционные брокеры, средства моделирования бизнес-процессов, 
+  серверы приложений, портальные системы, средства бизнес-аналитики. Но при таком 
+  подходе возрастает сложность проекта - слишком много различных инструментальных 
+  средств придется использовать при разработке, а после внедрения нужно будет 
+  еще и поддерживать отдельные компоненты интеграционного решения. Из-за этой 
+  сложности множество проектов интеграции не были выполнены или не достигли всех 
+  своих целей. Необходима <b>единая универсальная платформа бизнес-интеграции</b>, 
+  которая объединила бы все эти разрозненные технологии в едином продукте, позволяющем 
+  решить все задачи интеграции корпоративных приложений. 
+<h3>InterSystems Ensemble </h3>
+<p>Как раз к таким продуктам и относится InterSystems Ensemble - новый продукт 
+  корпорации InterSystems (<a href="http://www.intersystems.com">http://www.intersystems.com</a>), 
+  представляющий собой платформу интеграции приложений, которая объединяет функциональность 
+  сервера интеграции, сервера приложений, высокопроизводительную объектную базу 
+  данных и интегрированную среду разработки и управления, предлагая все это в 
+  виде целостного продукта. Объединение технологий обеспечивает этой платформе 
+  мощность, необходимую для простой интеграции самых сложных систем и быстрой 
+  разработки композитных приложений. 
+<p>Ensemble состоит из следующих ключевых элементов (рис. 1): библиотека и средства разработки адаптеров, абстракция (универсальная архитектура сервисов), координация, оркестровка бизнес-процессов, встроенное хранилище, средства интеграции и разработки, утилиты мониторинга и администрирования. Чтобы понять, как перечисленные выше основные задачи интеграции корпоративных приложений решаются с помощью Ensemble, рассмотрим подробно эти элементы.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2004/Intersys/ris1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Архитектура InterSystems Ensemble.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Адаптеры </h4>
+<p>Адаптер - это программа, соединяющая Ensemble c интегрируемыми приложениями, технологиями или источниками данных. Библиотека адаптеров Ensemble состоит из более чем 250 адаптеров. Несмотря на то, что каждый адаптер имеет свои уникальные атрибуты (определяемые приложением, источником данных или технологией, подключение к которым он обеспечивает), все адаптеры имеют общий набор возможностей, гарантирующих простую, согласованную модель интеграции, и обеспечивают надежность и управляемость операций.
+<p>Шесть классов адаптеров Ensemble обеспечивают самые широкие возможности взаимодействия. Адаптеры данных позволяют подключить унаследованные нереляционные, реляционные и объектные базы данных. Естественно, InterSystems предлагает и адаптер к собственному продукту - постреляционной СУБД Cache. Адаптеры приложений обеспечивают интеграцию с популярными корпоративными приложениями, такими, как решения SAP, а также продуктами специализированных поставщиков, например, i2. Транзакционные системные адаптеры для таких систем, как Bea Tuxedo и CICS, позволяют новым приложениям взаимодействовать с унаследованными системами, в то же время сохраняя транзакционную целостность системы обработки транзакций. Адаптеры эмуляции позволяют взаимодействовать с приложениями (например, на IBM 3270), эмулируя работу пользователя. Адаптеры протоколов дают возможность использовать специализированные (часто специфические для определенной отрасли) протоколы, например, SWIFT для банковской сферы или HL7 для здравоохранения. Технологические адаптеры обеспечивают привязку ко всему спектру технологий: от низкоуровневых протоколов коммуникации до систем электронной почты.
+<p>Использование библиотеки адаптеров Ensemble позволяет заметно ускорить процессы интеграции, так как вместо создания специализированного интерфейса нужно просто подключить и настроить соответствующий адаптер.
+<p>Наличие готовых адаптеров ускоряет процесс интеграции, но в большинстве интеграционных проектов требуется также подключение к уникальным приложениям, для которых приходится создавать специализированные адаптеры. В состав Ensemble входит средство разработки Adapter SDK, что обеспечивает быстрое создание новых адаптеров. Поддержка объектной модели в Ensemble существенно ускоряет этот процесс: для разработки адаптера можно унаследовать разрабатываемый адаптер от соответствующих системных классов и реализовать необходимые методы.
+<h4>Абстракция </h4>
+<p>В Ensemble реализована универсальная архитектура сервисов, которая обеспечивает унифицированный доступ к широкому спектру ресурсов, подключенных через адаптеры. Все эти разнообразные ресурсы сделаны доступными в виде согласованного набора классов, несмотря на различия их внутренних архитектур.
+<p>Представьте себе, например, проект интеграции, который должен объединить SAP, унаследованное приложение на мэйнфрейме, с базой данных Adabas; Windows-приложение, предоставляющее набор Web-сервисов; Java-приложение, построенное с использованием технологий J2EE; и реляционное приложение с набором хранимых процедур. В среде Ensemble функциональность и данные в этих приложениях доступны как набор классов со своими свойствами и методами. Аналитик или разработчик может работать с этими классами. Универсальная архитектура сервисов позволяет ему абстрагироваться от сложности множества языков, объектных моделей, баз данных, платформ и других технологий, использованных для построения и развертывания исходных приложений.
+<p>Помимо этой &quot;входящей&quot; абстракции, платформа Ensemble обеспечивает и &quot;исходящую&quot; абстракцию. Когда ресурсы уже доступны как классы Ensemble, с ними можно работать из внешних или композитных приложений через интерфейс ActiveX, ODBC, JDBC, XML, Web-сервисы, через специализированные объектные интерфейсы из .NET- или Java-приложений, EJB-серверов и т. д.
+<p>Платформа Ensemble поддерживает также абстракцию данных, обеспечивая доступ к нескольким физическим базам данных, использующим различные СУБД, как к единой &quot;федеративной&quot; базе данных.
+<h4>Координация </h4>
+<p>Платформа Ensemble поддерживает как синхронную, так и асинхронную интеграцию приложений. Для поддержки асинхронной и управляемой событиями интеграции система обмена сообщениями платформы Ensemble маршрутизирует сообщения к определенным бизнес-процессам в зависимости от типа и содержания сообщений. Поддерживается управление очередями сообщений, гарантированная доставка сообщений, обеспечивается целостность бизнес-транзакций.
+<p>В Ensemble существуют также мощные функции преобразования данных для преодоления различий в семантике приложений и схемах данных. Для преобразований могут использоваться простые формулы или таблицы соответствия (внутренние либо внешние); кроме того, преобразования можно расширить до любой степени сложности путем добавления специализированных функций.
+<h4>Оркестровка </h4>
+<p>Для моделирования бизнес-процессов в Ensemble используется специализированный 
+  язык Business Process Language (BPL), описывающий бизнес-процессы в XML-документе. 
+  Ensemble BPL основан на языке Business Process Execution Language for Web Services 
+  (BPEL4WS) - современнoм стандарте для моделирования сложных бизнес-процессов. 
+<p>
+<table width="100%" border="0" bgcolor="#CCFFFF">
+  <tr>
+    <td>
+      <h4>Язык BPEL4WS </h4>
+      <p>Business Process Execution Language for Web Services (BPEL4WS) - язык, 
+        предложенный IBM, Microsoft, BEA Systems и рядом других организаций. Он 
+        позволяет определить бизнес-процессы, которые охватывают несколько Web-сервисов 
+        и стандартизуют обмен сообщениями внутри организации и между партнерами. 
+        BPEL4WS предназначен для описания оркестровки, т. е. взаимодействия Web-сервисов 
+        друг с другом на уровне сообщений, включая бизнес-логику и кооперацию 
+        при выполнении сложных процессов в пределах одного предприятия. BPEL4WS 
+        базируется на таких стандартах, как XML Scheme, SOAP и WSDL. 
+      <p>
+    </td>
+  </tr>
+</table>
+<p>Используя графические средства моделирования бизнес-процессов Ensemble, аналитики 
+  имеют возможность задавать последовательности работ и потоки информации на BPL 
+  (рис. 2). При этом они могут сконцентрироваться именно на бизнес-процессах, 
+  так как взаимодействие Ensemble с приложениями осуществляется на уровнях координации 
+  и адаптеров. Кроме того, аналитики и разработчики могут непосредственно создавать 
+  XML-документы на BPL, что позволяет реализовать более сложные бизнес-процессы. 
+  Поскольку Ensemble позволяет работать со стандартным языком BPEL4WS, можно использовать 
+  средства управления бизнес-процессами третьих фирм. Наконец, есть возможность 
+  написать код для создания наиболее сложных бизнес-процессов и логики интеграции. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2004/Intersys/ris2.jpg" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Рис. 2. Создание диаграммы на Business Process Language в InterSystems Ensemble.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Платформа Ensemble предоставляет возможности для определения логики интеграции посредством графических диаграмм, XML-документов и кода. Совмещение этих трех подходов позволяет эффективно реализовывать самые разнообразные интеграционные проекты на платформе Ensemble.
+<h4>Хранение </h4>
+<p>В отличие от других платформ интеграции, в ядро Ensemble встроена высокопроизводительная объектная база данных, которая используется для хранения метаданных, сообщений, информации, необходимой для интеграции, и данных композитных приложений.
+<p>Компоненты интеграции хранятся в общем репозитории метаданных Ensemble: классы сообщений и связанные с ними функции трансформации, маршруты сообщений, списки подписчиков, описание адаптеров и их конфигурационные параметры, модели бизнес-процессов, новая бизнес-логика композитных приложений и т. д. Все эти компоненты представлены как набор классов со своими свойствами и методами, которые могут использоваться в процессе интеграции и разработки композитных приложений.
+<p>Хранение состояния длительно выполняющихся бизнес-процессов во встроенной базе данных повышает надежность Ensemble и устойчивость к аппаратным сбоям.
+<p>Высокопроизводительная встроенная объектная база данных позволяет хранить не только метаданные, но и все сообщения между интегрируемыми системами и бизнес-процессами. Хранилище сообщений Ensemble, где долговременно хранятся и индексируются с помощью Bitmap-индексов все сообщения, предоставляет доступ в реальном времени как к текущим, так и к ранее обработанным сообщениям для аудита, управления и мониторинга бизнес-активности.
+<p>Встроенные в Ensemble средства разработки позволяют из готовых компонентов быстро построить Web-приложение для мониторинга бизнес-активности, а поскольку встроенная база данных полностью поддерживает SQL, можно использовать встроенные или внешние инструменты для создания отчетов и любые средства бизнес-аналитики. Все это дает Ensemble богатые возможности для решения задач мониторинга бизнес-активности.
+<p>Интегрированные приложения часто имеют свои собственные требования к хранению данных, которые варьируются от кросс-программных индексов, позволяющих нескольким приложениям работать совместно, до особо часто запрашиваемой информации, для которой унаследованные приложения не могут обеспечить надлежащую производительность. Встроенная база данных платформы Ensemble удовлетворяет эту потребность с помощью встроенных функций хранения, уменьшая стоимость и устраняя накладные расходы по сравнению с традиционной базой данных.
+<h4>Разработка </h4>
+<p>Платформа Ensemble содержит полнофункциональную среду разработки для создания адаптеров, задания логики интеграции, создания композитных приложений и построения порталов (рис. 3).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2004/Intersys/ris3.jpg" alt=Fig.3></td></tr>
+<tr><td valign="bottom">Рис. 3. Среда разработки и интеграции Ensemble Studio.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Среда разработки позволяет аналитикам использовать средства моделирования бизнес-процессов в виде диаграмм на Business Process Language или XML-документов (причем, поскольку поддерживается индустриальный стандарт BPEL4WS, можно использовать и инструментальные средства третьих фирм), а разработчикам - создавать код на встроенных языках реализации бизнес-логики Object Script и Basic.
+<p>Композитные приложения можно создавать на платформах .NET, Java или при помощи других средств разработки. Благодаря универсальной архитектуре сервисов все ресурсы Ensemble доступны разработчику через удобные и быстрые интерфейсы.
+<p>Важную роль в интеграционных проектах играют Web-сервисы, крайне удобные для взаимодействия систем в режиме реального времени. Ensemble может быть и источником, и потребителем Web-сервисов. Каждый класс и бизнес-процесс Ensemble можно представить как Web-сервис. Поддерживаются также оркестровка Web-сервисов c помощью BPEL4WS и стандарт UDDI. С помощью Web-сервисов можно создавать и композитные приложения нового поколения в соответствии с набирающей популярность архитектурой, ориентированной на службы (Service Oriented Architecture).
+<p>В отличие от средств интеграции корпоративных приложений, предлагающих исключительно &quot;инструментальный&quot; подход, Ensemble предоставляет единую среду разработки, которая позволяет быстро решить все задачи интеграционного проекта - от построения адаптеров, моделирования и оркестровки бизнес-процессов до создания новых композитных приложений.
+<h4>Управление </h4>
+<p>Управлять интегрированными приложениями бывает достаточно сложно, поскольку они, как правило, связывают между собой компоненты разных приложений, не предназначенные для совместной работы, и зачастую работают на нескольких аппаратных платформах и с разными операционными системами. Для решения этой задачи Ensemble содержит портал (рис. 4) с набором утилит мониторинга и администрирования, которые можно использовать через браузер.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2004/Intersys/ris4.jpg" alt=Fig.4></td></tr>
+<tr><td valign="bottom">Рис. 4. Утилиты администрирования InterSystems Ensemble.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>С помощью портала управления и мониторинга Ensemble решаются такие задачи, как управление бизнес-процессами, событиями, задачами, сообщениями (просмотр и поиск как текущих, так и уже обработанных сообщений), и многие другие. Кроме того, существует специальная утилита Visual Trace (рис. 5), которая позволяет и разработчикам, и администраторам отслеживать движение каждого сообщения между приложениями и бизнес-процессами.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2004/Intersys/ris5.jpg" alt=Fig.5></td></tr>
+<tr><td valign="bottom">Рис. 5. Ensemble Visual Trace.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>При необходимости портал можно легко расширить, встроив в него дополнительные приложения для решения особых задач, уникальных для конкретного интеграционного проекта. Кроме того, среда Ensemble поддерживает популярные пакеты мониторинга и управления от третьих фирм и стандартные интерфейсы управления, такие, как SNMP.
+<h4>*** </h4>
+<p>Таким образом, архитектура InterSystems Ensemble позволяет решать все основные задачи интеграции корпоративных приложений: координации данных, управления бизнес-процессами, разработки композитных приложений, мониторинга бизнес-активности, и подходит для интеграционных проектов разной сложности.
+<p>Компании сегодня все меньше заинтересованы в краткосрочных проектах связывания 
+  отдельных информационных систем: такие интеграционные решения крайне сложно 
+  использовать, сопровождать и развивать. Использование единой мощной платформы 
+  для интеграции и разработки не только позволит снизить сроки и стоимость интеграционного 
+  проекта, но и обеспечит надежную основу для дальнейшего развития ИТ на предприятии. 
+<p>
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h4>Источники дополнительной информации </h4>
+      <ol>
+        <li>Материалы сайта InterSystems (<a href="http://www.intersystems.ru/ensemble/index.html">http://www.intersystems.ru/ensemble/index.html</a>). 
+        <li>Trevor Matz. Universal business integration. An idea whose time has 
+          come. Business Integration journal. March 2004. 
+        <li>Ensemble White Paper. Evaluating integration brokers. Applying the 
+          Gartner Group&#39;s Technical selection criteria to Ensemble. Gartner Group, 
+          2003. 
+        <li>Ensemble White Paper. InterSystems Ensemble: Integration for Today&#39;s 
+          Rapidly Changing Enterprise. IDC, 2003.
+      </ol>
+</td>
+  </tr>
+</table>
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6684.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">InterSystems Ensemble - платформа для интеграции и разработки приложений
+</a><br><a href="detail.php@ID=6684.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Вадим Федоров,
+  консультант по продуктам, InterSystems Corporation
+  vadim@intersystems.ru
+Интеграция корпоративных приложений 
+Бурное развитие&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6684.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6684&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0e691cfb37cafdd313dea53cfe4e87ad'><img src='../bitrix/tools/captcha.php@captcha_code=0e691cfb37cafdd313dea53cfe4e87ad' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

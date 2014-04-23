@@ -1,0 +1,510 @@
+<HTML>
+<HEAD>
+<title>Решения для динамического центра обработки данных
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Владислав Шаров На Европейском Форуме IDC в прошлом году технический директор Fujitsu Siemens Computers (http://www.fujitsu-siemens.com) доктор Джозеф Регер, высказываясь по поводу существующего ныне мнения о том, что &amp;quot;информационные" />
+<meta name="description" content="Владислав Шаров На Европейском Форуме IDC в прошлом году технический директор Fujitsu Siemens Computers (http://www.fujitsu-siemens.com) доктор Джозеф Регер, высказываясь по поводу существующего ныне мнения о том, что &amp;quot;информационные" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082410','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8629' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8629&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8629"].SHOW_IMAGE.value="N"; document.forms["PrintForm8629"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8629"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8629"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8629);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8629.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8629.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8629);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11492.html'>№9 (85), сентябрь 2005</a><h1>Решения для динамического центра обработки данных
+</h1>11.09.2005<p></p><DIV class='article-text'><p><i>Владислав Шаров</i> 
+<p>На Европейском Форуме IDC в прошлом году технический директор Fujitsu Siemens 
+  Computers (<a href="http://www.fujitsu-siemens.com">http://www.fujitsu-siemens.com</a>) 
+  доктор Джозеф Регер, высказываясь по поводу существующего ныне мнения о том, 
+  что &quot;информационные технологии не имеют большого значения&quot;, в частности, особо 
+  подчеркнул, какую большую выгоду могут принести информационные технологии благодаря 
+  тому, что с их помощью удается внедрять инновации в производственную деятельность 
+  предприятий. И это не только материальная прибыль. Сегодня компании все больше 
+  внимания уделяют глобальным стратегиям развития и освоению новой продукции, 
+  решений и услуг. ИТ-менеджеры и ИТ-подразделения нуждаются в помощи для того, 
+  чтобы пользователи их услуг смогли получить преимущества от оптимизации информационной 
+  инфраструктуры. 
+<p>По словам д-ра Регера, если компании стремятся сократить полную стоимость владения, информационную инфраструктуру необходимо развивать в контексте повышения эффективности производственной деятельности, ускорения бизнес-процессов и поддержания целостности бизнеса. Чтобы достичь этой цели, подчеркнул он, необходимо знать, как определенные решения могут помочь компаниям снизить стоимость их инфраструктуры и облегчить внедрение инноваций в производственную деятельность в целом. Компании должны сконцентрироваться на трех ключевых технологиях: виртуализации, автоматизации и интеграции. Они позволят упростить информационную инфраструктуру, изменять ее конфигурацию в зависимости от выполняемых задач, а также создадут возможности для автономной работы. В результате можно будет добиться существенного сокращения совокупной стоимости владения, убежден доктор Регер.
+<h3>Стратегия TRIOLE </h3>
+<p>Группа компаний Fujitsu, в которую входят Fujitsu (Япония/Океания), Fujitsu Computer Systems (Северная Америка), Fujitsu Services (EMEA) и Fujitsu Siemens Computers (EMEA), разработала свою глобальную стратегию совершенствования и внедрения продуктов, решений и услуг для оптимизации ИТ-инфраструктуры. Эта стратегия, названная TRIOLE, в первую очередь предназначена для снижения совокупной стоимости владения (Total Cost of Ownership, TCO) и предоставления группам разработчиков дополнительных возможностей для создания инновационных предложений, повышающих эффективность, скорость реакции и непрерывность бизнеса. TRIOLE также составляет часть долгосрочного плана Fujitsu Siemens Computers в сфере критически важных для бизнеса вычислений (Business Critical Computing, BCO) и охватывает широкий диапазон линеек продуктов ведущего европейского поставщика ИТ-решений уровня серверов, мэйнфреймов, систем хранения и промежуточного уровня.
+<p>По мнению руководства корпорации, обладая более чем 25-летним опытом работы в сфере ИТ, начиная от уровня мэйнфреймов и заканчивая промышленными инфраструктурами, Fujitsu Siemens Computers накопила множество знаний по технологиям развертывания и управления сложными ИТ-инфраструктурами и решениями. Теперь можно сочетать накопленный опыт с новыми лучшими в своем классе технологиями и предоставлять адаптированные ИТ-решения, помогающие снизить совокупную стоимость владения, улучшить уровень обслуживания и увеличить прибыльность бизнеса.
+<p>Собственно, стратегия TRIOLE и являет собой ответ на сложности ИТ-бизнеса. Потребителям часто приходится решать следующие непростые задачи: как увеличить эффективность ИТ при том, что требуется &quot;сделать больше за меньшие деньги&quot;, как адаптировать существующую ИТ-инфраструктуру к меняющимся потребностям бизнеса и как наилучшим образом обеспечить непрерывность бизнеса.
+<p>Стратегия TRIOLE базируется на трех основных технологиях, касающихся следующих аспектов: виртуализация, автоматизация и интеграция (рис. 1). В данном случае виртуализация означает отделение приложений и данных от выделенных систем. Под автоматизацией подразумевается автоматическая адаптация к изменениям ИТ-среды. И наконец, интеграция определяет скорость, дешевизну и низкие риски при развертывании данных технологий. В результате пользователи получают более гибкую среду.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2005/triole/ris1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Компоненты стратегии TRIOLE.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Немаловажно и то, что стратегия TRIOLE использует уже существующие решения. Интеграция собственных предложений Fujitsu Siemens Computers с ведущими продуктами в области программного, аппаратного обеспечения и предоставления услуг, а также интеграция партнеров - важнейший элемент данной стратегии, обеспечивающий максимальное качество. Уже сегодня TRIOLE предоставляет полный набор продуктов и решений, гарантируя тем самым немедленную отдачу.
+<p>Один из примеров использования стратегии TRIOLE для виртуализации - решение FlexFrame for mySAP Business Suite. Совместная разработка Fujitsu Siemens Computers, Network Appliance и SAP, FlexFrame - это первая реализация концепции адаптивных вычислений в SAP на основе инициативы SAP NetWeaver. В этом решении устаревшая среда, состоящая из множества выделенных сложных серверов, заменяется на модульную концепцию, включая оборудование с поддержкой современной технологии критически важных для бизнеса вычислений, например, серверы Primergy на базе Intel (в том числе и блейд-серверы) и устройства хранения Network Appliance. Решение FlexFrame упрощает ИТ-инфраструктуру и одновременно реализует подготовку оборудования к работе по запросу и другие функции автоматизации, снижающие TCO.
+<p>Еще одним примером виртуализации может служить виртуальный ленточный массив CentricStor, позволяющий подключать множество серверных платформ к системам резервного копирования напрямую и единообразно. Снижая время простоя сервера за счет гораздо более быстрой процедуры резервирования, CentricStor улучшает продуктивность работы пользователей. Высокая степень автоматизации процесса резервного копирования означает меньшие затраты на администрирование.
+<p>Что касается автоматизации, крупные фермы самоустанавливающихся блейд-серверов Primergy (&quot;ИТ управляет ИТ&quot;) позволяют развертывать несколько сотен серверов в течение часа.
+<p>TRIOLE предлагает ключевой вариант быстрой интеграции компонентов ИТ-инфраструктуры - с помощью комплексного набора ПО промежуточного уровня openSEAS, ведущего в отрасли средства. Оно дает возможность интегрировать устаревшие системы и приложения с новыми решениями, а также с Web- и мобильными компонентами. За счет этого можно быстрее вносить изменения в ИТ-инфраструктуру, в то же время защищая уже сделанные инвестиции.
+<p>Использование TRIOLE подразумевает и поддержку будущих ИТ-инфраструктур. Ключевой элемент данной стратегии - четкая схема прогнозирования будущих решений и продуктов, обеспечивающая дополнительную эффективность, скорость реакции бизнеса и надежность всех составляющих ИТ-инфраструктуры. Чтобы бизнес мог реагировать на изменения еще быстрее, группа компаний Fujitsu также планирует представить структурированный процесс для предварительного тестирования типичных строительных блоков ИТ-инфраструктуры в лабораториях и их документирования в пригодном для повторного использования виде. Это позволит потребителям и партнерам ускорить развертывание ИТ-инноваций. Все эти разработки преследуют четкую цель: снижение эксплуатационных расходов и рабочей нагрузки с одновременным предоставлением потребителям дополнительных средств и возможностей для быстрого реагирования на меняющиеся требования бизнеса.
+<p>В этом году Fujitsu Siemens Computers продемонстрировала основные решения и представила важнейшие компоненты для построения динамического центра обработки данных. В таком центре все аппаратные вычислительные ресурсы и устройства хранения данных объединены в пулы и выделяются для использования по запросу. Назначение ресурсов для сервисов происходит автоматически на основании предопределенных правил. Если в систему входят новые пользователи, поступают запросы на увеличение вычислительной мощности или дискового пространства, все действия по динамическому выделению необходимого ресурса выполняются автоматически. Полностью динамический центр обработки данных пока еще остается концепцией, но Fujitsu Siemens Computers стала первой компанией, предложившей ряд реализаций этой концепции, доступных в клиентских центрах обработки данных. В рамках стратегии TRIOLE, направленной на оптимизацию ИТ-инфраструктуры, Fujitsu Siemens Computers совместно со своими партнерами разрабатывает первые образцы продукции и решения, которые можно использовать как компоненты для построения динамического центра обработки данных. Эти компоненты разрабатываются на базе самых современных технологий виртуализации и автоматизации. Базируясь на TRIOLE, эти компоненты будут легко интегрироваться в существующие ИТ-инфраструктуры и в то же время станут основой для динамического центра обработки данных будущего. Применяя технологии виртуализации и автоматизации для серверов под управлением Solaris, Linux, Windows и BS2000, а также для самых современных систем хранения данных, можно достичь самых высоких уровней эффективности, гибкости и надежности.
+<h3>FlexFrame 3.1 для PrimePower </h3>
+<p>Весной этого года Fujitsu Siemens Computers расширила свое решение FlexFrame для создания ИТ-инфраструктуры добавлением поддержки ОС Solaris. Это событие открыло дорогу для развития распределенных вычислений и стало следующим логическим шагом в реализации стратегии компании, нацеленной на создание комплексных ИТ-решений. В этом контексте адаптивные вычисления можно рассматривать как дополнительное качество распределенных вычислений. Еще одно расширение FlexFrame, направленное на ускорение продвижения передовых решений на рынок, основано на том, что новая версия FlexFrame 3.1 поддерживает серверы PrimePower на базе процессора SPARC64 под управлением ОС Solaris.
+<p>Серверы PrimePower с 1998 г. выступают как предпочтительная платформа для ОС 
+  Solaris. Они отличаются высокой производительностью и выпускаются в конфигурациях 
+  от двухпроцессорных до 128-процессорных систем. Вычислительные возможности серверов 
+  подкрепляются высоким уровнем надежности обработки данных в секторе RISC/Unix-серверов. 
+  Стопроцентная совместимость с ОС Solaris гарантируется для всего семейства серверов 
+  PrimePower, при этом все системы сертифицированы в рамках программы Solaris 
+  Hardware Partner Program (SHWP) корпорации Sun Microsystems (<a href="http://www.sun.com">http://www.sun.com</a>). 
+  Любые приложения, разработанные с использованием стандартных интерфейсов программирования 
+  (API) и двоичных интерфейсов (ABI) ОС Solaris, будут работать в системах PrimePower, 
+  не требуя модификаций. Это в полной мере относится, конечно, и к промежуточному 
+  ПО Sun Microsystems. 
+<p>Напомним, что FlexFrame for mySAP Business Suite - первая в мире реализация 
+  ИТ-инфраструктуры, обеспечивающей адаптивные вычисления для приложений SAP (рис. 
+  2). Эта система, составная часть SAP NetWeaver, представляет собой совместный 
+  проект технологических партнеров - компаний Fujitsu Siemens Computers и Network 
+  Appliance (NetApp, <a href="http://www.netapp.com">http://www.netapp.com</a>). 
+  Она обеспечивает существенное сокращение совокупной стоимости владения для вычислительной 
+  среды в целом благодаря уменьшению затрат на внутреннюю интеграцию. Таким образом, 
+  FlexFrame для mySAP Business Suite позволяет организациям следовать стратегии 
+  роста и быстро реагировать на изменения бизнес-среды. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2005/triole/ris2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Инфраструктура FlexFrame.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В соответствии со стратегией TRIOLE в системе FlexFrame применяется известный подход консолидации сценариев инфраструктуры SAP. Решение заключается в виртуализации, т. е. в отделении сервисов SAP от физических компьютеров. Использование технологии модульных серверов обеспечивает высокий уровень гибкости для концепции адаптивных вычислений. Автоматизация инфраструктуры SAP (аппаратно-программной) реализована с помощью интегрированного уровня управления, представленного узлами управления Fujitsu Siemens Computers. Основная задача узлов управления состоит в мониторинге доступных ресурсов, необходимых потребителям (серверам и экземплярам сервисов SAP) в каждый момент времени. Интегрированные автономные агенты (Autonomous Agents) обеспечивают быструю и простую настройку всей инфраструктуры на базе правил и политик.
+<p>Автономные агенты - компонент любого решения FlexFrame. Они обеспечивают функционирование системы практически без вмешательства человека. Степень автономности можно настраивать в зависимости от требований безопасности или работоспособности с помощью информационных сообщений. Их можно автоматически переносить на другие узлы в случае отказа системы.
+<p>FlexFrame обеспечивает мониторинг, управление и преодоление отказа следующих важнейших сервисов SAP:
+<ul><li>DHCP;
+<li>TFTP/FTP;
+<li>маршрутизатор SAP (первичный экземпляр SAP);
+<li>автономные агенты с высокой доступностью (замена кластерных агентов SAP);
+<li>управление базой данных (интерфейсные сервисы баз данных для экземпляров SAP).</ul>
+<p>В число важнейших функций FlexFrame для mySAP входят инициирование преодоления отказа узла приложений, системы управления базой данных или центрального экземпляра (перенос сервисов на резервный узел); добавление экземпляров серверов приложений, СУБД или центрального экземпляра по требованию, а также останов сервисов и возвращение ресурсов в пул.
+<p>Автономные агенты FlexFrame работают в резервных узлах (узлах управления) и обеспечивают гибкое и высоконадежное функционирование mySAP Business Suite. Преимущество автономных агентов FlexFrame заключается в гибкой интеграции новых узлов и экземпляров приложений. Экземпляры приложений и СУБД могут распределяться по всем требуемым узлам, имеющимся в FlexFrame. Реализованный в системе алгоритм предусматривает локальный перезапуск или автоматическое перемещение отказавшего сервиса в другой узел FlexFrame прямо во время работы. Предусмотрена загрузка в серверы или модульные серверы преконфигурированных образов ОС с сетевых устройств хранения данных. Этот механизм называется &quot;совместно используемая ОС&quot;, а индивидуальные настройки выполняются узлами управления, на которых работают автономные агенты. Благодаря автономным агентам FlexFrame существенно снижается необходимость непосредственного вмешательства администратора. Кроме того, повышается работоспособность системы и снижаются затраты на эксплуатацию приложений.
+<p>Среди преимуществ для пользователей можно особо отметить следующие:
+<ul><li>возрастание работоспособности сервисов SAP;
+<li>снижение затрат на эксплуатацию приложений (сокращение совокупной стоимости владения в среднем на 30%);
+<li>отсутствие ручного конфигурирования;
+<li>функции самовосстановления для отказавших сервисов;
+<li>переключение (автоматическое перемещение) сервисов SAP на другой узел;
+<li>возможность посылки предупреждающих сообщений по электронной почте, SMS-сообщений или прерываний SNMP, которые можно настроить по времени или по сложности проблемы. Сообщения также можно записывать в файл с настраиваемой структурой для дальнейшей обработки.</ul>
+<p>Решение FlexFrame состоит из серверов приложений и баз данных с разной степенью производительности, сетевых устройств хранения данных и экземпляров управления с резервированием. Для этого решения реализованы автономные агенты FlexFrame. Они заключают в себе устройства хранения данных, серверы и соответствующие сетевые соединения и отвечают за быструю и гибкую настройку автономных функций для наиболее экономичного функционирования приложений SAP. Автономные агенты FlexFrame выполняют мониторинг центральных экземпляров SAP, экземпляров приложений SAP и систем управления базами данных maxDB или Oracle. Механизмы самовосстановления автоматически запускают эти сервисы в случае возникновения проблем. Автономные агенты приложений выполняют также мониторинг сервисов SAP и в случае возникновения проблем запускают функции самовосстановления, обеспечивая доступность сервисов для отклика. Агенты установлены на узлах приложений и узлах управления решения FlexFrame.
+<p>FlexFrame Autonomous Messenger функционирует как центральная консоль, которая обрабатывает все сообщения, посылаемые автономными агентами FlexFrame. Она предусматривает быструю и простую интеграцию с существующими консолями управления информационными ресурсами предприятия.
+<p>Таким образом, FlexFrame 3.1 - важнейшая составная часть стратегии TRIOLE, которая направлена на проектирование, разработку и внедрение продукции, услуг и сервисов, дающих пользователям возможность оптимизации своей ИТ-инфраструктуры. Теперь данное решение объединяет серверную технологию PrimePower, mySAP Business Suite, ОС Solaris и систему хранения данных NetApp. Пользователи получили решение, которое обеспечивает существенное сокращение совокупной стоимости владения для вычислительной среды в целом благодаря уменьшению затрат на внутреннюю интеграцию. FlexFrame для mySAP Business Suite позволяет организациям следовать стратегии роста и быстро реагировать на изменения бизнес-среды. Кроме этого, FlexFrame 3.1 поддерживает смешанную вычислительную среду: серверы Primergy (Intel), Linux и PrimePower (SPARC64, Solaris).
+<p>Возможность адаптивных вычислений для приложений SAP и их адаптация на уровне ИТ-инфраструктуры благодаря FlexFrame позволяют существенно повысить гибкость инфраструктуры за счет упрощения внедрения и эксплуатации бизнес-приложений и сокращения эксплуатационных затрат. Такие результаты достигаются благодаря полной виртуализации решений mySAP Business Suite и отделению сервисов от ресурсов инфраструктуры, к которым относятся вычислительные ресурсы, сеть, устройства хранения данных, средства контроля и управления системой. Доступность этих ресурсов обеспечивается за счет инновационных принципов автономных систем - виртуализации и автоматического предоставления ресурсов. Система уже работает более чем у 50 клиентов по всему миру. На практике показано, что благодаря преимуществам FlexFrame для mySAP Business Suite сокращение совокупной стоимости владения достигает 60%.
+<h3>PrimeCenter LC </h3>
+<p>Для того чтобы решить проблемы с охлаждением в центрах обработки данных, Fujitsu Siemens Computers разработала стойку PrimeCenter LC с водяным охлаждением. Код LC означает жидкостное охлаждение, и в двух новых 19-дюйм серверных стойках (высотой 38 и 46 U) использована технология охлаждения Cool-safe.
+<p>Новое решение позволяет справляться с постоянно растущим тепловыделением серверов, их подсистем и компонентов (таких, как процессоры и память) более эффективно, чем с помощью традиционных систем вентиляторов и кондиционирования воздуха. Вместо того чтобы охлаждать постоянно нагревающееся помещение, по технологии Cool-safe выделяемое системой тепло поглощается специальными теплообменниками с водяным охлаждением.
+<p>Этот метод имеет многочисленные преимущества. Помимо намного лучших охлаждающих свойств воды по сравнению с воздухом, для этого метода требуется гораздо более простая инфраструктура, поскольку стойки PrimeCenter LC не дают дополнительной нагрузки на системы кондиционирования воздуха компьютерной комнаты. Это значительно снижает структурные и пространственные требования и энергопотребление, позволяя сократить общие расходы на эксплуатацию.
+<p>Холодные стойки PrimeCenter LC можно безопасно размещать намного ближе друг 
+  к другу, чем стандартные стойки с воздушным охлаждением, благодаря чему в одной 
+  и той же комнате помещается в три раза больше серверов, чем раньше. Рейтинг 
+  безопасности IP52, определяющий степень защищенности от пыли и влаги, позволяет 
+  применять такие стойки даже в сборочных цехах и других местах за пределами серверной 
+  комнаты. Отметим, что рейтинг внешней защиты, система классификации эффективности 
+  корпусов в плане защиты от попадания твердых и жидких веществ, основаны на признанном 
+  стандарте IEC 60529, опубликованном Международной комиссией по электротехнике 
+  (<a href="http://www.iecq-cecc.org">http://www.iecq-cecc.org</a>). 
+<p>Дополнительное преимущество заключается в полной герметичности системы - это означает, что стойку PrimeCenter LC требуется заполнять водой только один раз. Кроме того, новая система имеет пониженный вдвое (или на 10 дБА) уровень шума.
+<p>Как отмечают разработчики, в новых стойках PrimeCenter LC используется весь обширный опыт Fujitsu Siemens Computers в производстве продукции для центров обработки данных. Модульная конструкция стоек обеспечивает полную интеграцию гетерогенных систем, в том числе серверов Primergy и PrimePower, систем хранения SAN и NAS, концентраторов, консольных коммутаторов и других устройств, подключаемых к стандартной электросети.
+<p>Новая серверная технология более надежна и долговечна, а также обеспечивает более высокий уровень готовности, сокращая потребности в администрировании и техническом обслуживании и уменьшая совокупную стоимость владения.
+<h3>Система CentricStor V3.1 </h3>
+<p>Как известно, CentricStor (<a href="http://www.centricstor.com">http://www.centricstor.com</a>) 
+  - это виртуальная ленточная система, предназначенная для консолидации устройств 
+  на магнитных лентах в среде открытых систем и мэйнфреймов (рис. 3). В CentricStor 
+  используются виртуальные ленточные приводы, обеспечивающие для всех подключенных 
+  систем высокопроизводительные функции с постоянной готовностью для резервного 
+  копирования и архивирования ресурсов в сетях хранения данных. Универсальное 
+  подключение обеспечивает различным серверам и приложениям одновременный доступ 
+  к виртуальным архивам без реальных ленточных дисководов для каждой отдельной 
+  системы. Решение CentricStor прозрачно интегрируется в существующие ИТ-инфраструктуры, 
+  не требуя модификации существующих сценариев работы приложений и резервного 
+  копирования. Посредством CentricStor в современных компьютерных центрах можно 
+  консолидировать среды хранения данных на меньшем числе физических ленточных 
+  дисководов и библиотек, уменьшая окна резервного копирования и значительно сокращая 
+  время восстановления данных. В результате получается среда, требующая меньших 
+  капиталовложений и ресурсов, позволяющая экономить время и деньги и уменьшающая 
+  риски. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2005/triole/ris3.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Блок-схема системы CentricStor.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Кроме того, CentricStor - отказоустойчивое решение, обеспечивающее защиту от катастроф. Оно сочетает в себе производительность дисков и надежность магнитных лент благодаря технологии резервного копирования &quot;диск-диск-лента&quot; (Disk-to-Disk-to-Tape, D2D2T) и встроенным функциям управления жизненным циклом информации (Information Lifecycle Management, ILM). CentricStor поддерживает самые передовые в отрасли приложения для резервного копирования, основные системные платформы и основные автоматизированные ленточные системы. Многие европейские клиенты уже используют системы CentricStor (рис. 4) для организации защиты данных и консолидации устройств хранения данных и удовлетворены работой системы. Эта мощная виртуальная ленточная система была также успешно представлена в Японии, США и странах Юго-Восточной Азии.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2005/triole/ris4.jpg" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Система CentricStor.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В прошлом году Fujitsu Siemens Computers объявила о добавлении в CentricStor нескольких важных функций, в числе которых поддержка ОС IBM VM (Virtual Machine) и VSE (Virtual Storage Extended) и приложений для резервного копирования. Дополнительная поддержка ОС VM и VSE включает приложения для резервного копирования Dynam-T, VM-Backup и EPIC. Виртуальные библиотеки на ленточных носителях CentricStor по-прежнему поддерживают ОС MVS, OS/400 и BS2000, а также широкий набор открытых систем (Unix, Linux, Windows) и такие приложения для резервного копирования, как Legato NetWorker, Tivoli Storage Manager, Veritas NetBackup, HP Data Protector и CA BrightStor ARCserve. Основные платформы для автоматизации ленточных носителей и ленточные дисководы от таких известных компаний, как StorageTek, ADIC и IBM, также можно подключать к инфраструктуре. По имеющейся информации, в мире по-прежнему функционируют сотни узлов VM и VSE, причем во многих из них используются устаревшие ленточные технологии, а автоматизация не поддерживается. Благодаря виртуальным решениям CentricStor эти узлы будут поддерживать автоматизацию с помощью современных высокопроизводительных решений для консолидации ленточных носителей на уровне предприятия, позволяя решить проблемы с хранением данных максимально эффективно и без неоправданных затрат.
+<p>По данным отчета Gartner Research за август 2004 г., рынок открытых систем начинает одобрительно относиться к использованию виртуальных ленточных устройств. CentricStor уже поддерживает лидирующие на рынке приложения резервного копирования для открытых систем. Так, обеспечена поддержка системы BrightStor ARCserve Backup компании Computer Associates и семейства продукции Legato Xtender. Появление дисков с интерфейсом Serial ATA благоприятно сказалось на этом секторе, позволив ликвидировать узкие места и сократить время простоя системы при резервном копировании, а также обеспечив быстрое восстановление больших объемов данных. В дальнейшем скорость передачи данных вырастет еще больше благодаря высокопроизводительным дискам с волоконно-оптическим интерфейсом.
+<p>Благодаря дополнительной поддержке соглашений об уровне сервиса (Service Level Agreements, SLA) CentricStor имеет широкие возможности для управления жизненным циклом информации. С появлением CentricStor версии 3.0 система Virtual Tape Appliance начала предоставлять улучшенные уровни масштабируемости как по производительности и емкости, так и по стоимости. Увеличение производительности помогает снизить накладные расходы на плановое резервное копирование информации и сократить время ее восстановления. Дополнительная возможность автоматического восстановления после сбоев обеспечивает наивысший уровень работоспособности и позволяет свести к минимуму время восстановления работоспособности системы в случае аварии для любых конфигураций - от начального уровня до профессиональных. В CentricStor версии 3.0 была объявлена поддержка SLA на уровне дисковой кэш-памяти. Строго дифференцированным пользовательским данным различных типов, предназначенным для решения различных производственных задач, теперь можно присваивать разные приоритеты. Быстрое восстановление обеспечивается за счет нового способа работы с дисковой кэш-памятью: определенная информация постоянно хранится в дисковой кэш-памяти. Появился еще один уровень сервиса - импорт и экспорт отдельных магнитных лент, которые можно отправлять в хранилище.
+<p>В новой версии 3.1 предусмотрена защита от катастроф, а также существенно расширены функциональные возможности для поддержки бесперебойного круглосуточного функционирования бизнес-приложений и более гибкого обеспечения необходимых уровней сервиса. С выпуском CentricStor 3.1 компания Fujitsu Siemens Computers как поставщик решений для хранения данных сделала существенный шаг вперед в области защиты данных и гибкости уровней сервиса для важных бизнес-применений. Благодаря новой функции зеркалирования кэш-памяти теперь можно синхронно передавать данные во второй кластер, находящийся на другой площадке, даже на большие расстояния посредством оптоволоконного двухгигабитного сетевого соединения. Это означает, что данные в такой системе CentricStor сохранятся даже при полном разрушении одной из площадок.
+<p>CentricStor обеспечивает пользователям повышенный уровень безопасности и защиты от катастроф для всех данных в реальном времени. Благодаря тому, что данные на обеих площадках всегда идентичны, процедуры перезапуска и восстановления после аварий существенно упростились и ускорились. Не требуется никаких изменений в приложениях или в процедурах резервного копирования. Новая версия CentricStor 3.1 уже доступна для заказа.
+<p>Еще одно новшество, повышающее гибкость системы, состоит в том, что размер виртуальных томов теперь может достигать 200 Гбайт. Размер виртуального тома - это атрибут групп виртуальных томов, он не зависит от типа реальных ленточных носителей, используемых в системе. Эта возможность позволяет более гибко адаптировать CentricStor к потребностям пользователей и упрощает ее адаптацию для имеющихся решений резервного копирования. CentricStor 3.1 может одновременно работать с широким диапазоном виртуальных ленточных устройств с различными уровнями сервиса. Благодаря такой возможности это решение становится идеальной платформой для консолидации всех устройств хранения данных, даже в вычислительных средах с высокой степенью гетерогенности.
+<p>&quot;Благодаря функциям защиты данных и восстановления после сбоев мы расширили свое технологическое лидерство в области виртуальных ленточных технологий, - заявил доктор Хельмут Бек (Helmut Beck), вице-президент по системам хранения данных компании Fujitsu Siemens Computers. - Система CentricStor способна помочь нашим клиентам достичь трех целей: они смогут выбирать наиболее экономически выгодные системы хранения данных, они смогут достичь наивысшего уровня защиты данных, а кроме того, они получат решение для эффективного управления всем жизненным циклом информации&quot;.
+<p>Суммируя, можно сказать, что благодаря новой версии CentricStor центры обработки 
+  данных и провайдеры услуг смогут достичь максимального уровня бесперебойности 
+  работы и легко адаптироваться к потребностям новых приложений. Новая версия 
+  также более гибко отражает концепции управления жизненным циклом информации. 
+  Например, на уровне дисковой кэш-памяти система CentricStor обеспечивает выполнение 
+  расширенных соглашений об уровне сервиса для любого виртуального тома. Благодаря 
+  возможности назначения приоритетов можно надежно разграничить данные разных 
+  клиентов или приспособиться к требованиям, предъявляемым различными подразделениями. 
+  Дисковая кэш-память - стратегия, согласно которой определенные данные хранятся 
+  на производительных дисковых носителях, - гарантирует немедленную доступность 
+  данных. Зеркалирование в реальном времени обеспечивает постоянный уровень сервиса 
+  даже в случае полного разрушения одной из площадок хранения данных. 
+<p>
+<table width="100%" border="0" cellpadding="1" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h4>Система защиты данных DataFort </h4>
+      <p>Fujitsu Siemens Computers и компания Decru (<a href="http://www.decru.com">http://www.decru.com</a>), 
+        разработчик систем для защиты данных, предложили высокоскоростное и простое 
+        в использовании решение для защиты резервных копий важной корпоративной 
+        информации. Любой пользователь виртуальной системы на ленточных носителях 
+        CentricStor теперь может автоматически шифровать свои магнитные ленты 
+        с помощью системы защиты данных DataFort, созданной в компании Decru. 
+        Сочетание CentricStor и системы DataFort позволяет очень просто организовать 
+        надежную защиту данных и систему управления жизненным циклом информации 
+        для всех важных вторичных (nearline) данных. Шифрование выполняется по 
+        алгоритму AES-256. 
+      <p>
+    </td>
+  </tr>
+</table>
+<h3>Мэйнфрейм BS2000/OSD </h3>
+<p>Бизнес-сервер SX150 (рис. 5) превосходит по производительности своих предшественников практически на 40%. Система построена на базе процессорной технологии SPARC64 V. Данный сервер поддерживает параллельную работу нескольких ОС и приложений в изолированных аппаратных разделах в среде BS2000/OSD и Solaris. Такая возможность увеличивает гибкость динамического центра обработки данных и позволяет, например, связать новые приложения, ориентированные на работу в Интернете, с приложениями для мэйнфреймов. Это особенно привлекательно для средних предприятий, которые ищут пути консолидации своих серверов и интеграции жизненно важных бизнес-приложений в решения для электронного бизнеса или просто хотят получить дополнительные вычислительные мощности.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2005/triole/ris5.jpg" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Мэйнфрейм SX150.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Производительность однопроцессорной конфигурации составляет 105 RPF, а полной конфигурации - до 430 RPF. Напомним, что относительный коэффициент полезного действия RPF (Relative Performance Factor) - это используемая Fujitsu Siemens Computers единица производительности, которая вычисляется на базе результатов стандартного отраслевого теста производительности приложений для обработки транзакций. Одна единица RPF соответствует приблизительно 1,5 MIPS (миллионов команд в секунду).
+<p>На момент своего объявления SX150 стал самым мощным мэйнфреймом в линейке SX. Интеллектуальная концепция разделов обеспечивает максимальную гибкость при установке систем, позволяет эффективно использовать ресурсы и упрощает постоянную адаптацию к изменяющимся потребностям в производительности. Благодаря технологии BS2000 для виртуализации серверов, консолидации кросс-систем и динамической адаптации ресурсов сервер SX150 становится неотъемлемой частью линейки серверов компании Fujitsu Siemens Computers для динамического центра обработки данных.
+<p>Новые функции динамического реконфигурирования аппаратного обеспечения сокращают до минимума время простоя для технического обслуживания. Эти функции также создают дополнительные возможности оптимизации ресурсов кросс-систем в зависимости от рабочей нагрузки. Кроме того, они способствуют повышению работоспособности и полезного применения системы в целом. Еще одна отличительная особенность SX150 заключается в более эффективном выполнении криптографических алгоритмов. В результате повышается уровень безопасности при отправке и приеме уязвимых данных. За счет портов стандарта Fibre Channel, которые имеются во всех текущих моделях BS2000/OSD, можно использовать современные концепции хранилищ данных, например, архитектуру &quot;сервер - хранилище данных&quot;. Современная технология локальных сетей Gigabit Ethernet обеспечивает быстродействующие сетевые подключения.
+<p>Бизнес-сервер SX150 поддерживает ОС OSD/XC v2.0, которая имеет ту же функциональность, что и самая современная ОС BS2000/OSD v6.0. Это открывает неограниченные возможности для всей линейки SX, так как двоичная совместимость бизнес-серверов SX позволяет запускать под управлением OSD/XC существующие приложения клиентов. Гибридная архитектура SX также обеспечивает защиту капиталовложений, упрощая организацию связи существующих приложений для среды BS2000/OSD с новыми открытыми приложениями для среды Solaris.
+<p>Бизнес-сервер SX 150 расширяет линейку продукции BS2000 начального и среднего уровня компании Fujitsu Siemens Computers. Совместно с серией S серверов высшего класса клиенты получат широкий выбор надежных платформ, которые могут удовлетворить все их потребности уровня мэйнфреймов.
+<h3>Экосистема модульных серверов </h3>
+<p>За последние несколько лет клиентские информационные структуры получили значительные преимущества благодаря стандартизации серверов, вычислительной среды и приложений. Модульные системы на базе компонентов Intel стали хорошей платформой для стандартизации различных сценариев консолидации, поэтому рынок массовых серверов все больше и больше смещается в этом направлении. Модульная концепция (рис. 6) во многом изменила образ мыслей руководителей ИТ-подразделений предприятий. Она позволяет сократить расходы благодаря стандартизации серверов, совместному использованию компонентов инфраструктуры, таких, как источники питания, вентиляторы, консольные коммутаторы и интегрированная подсистема ввода-вывода для доступа к локальным сетям и сетям хранения данных (LAN/SAN). Но наиболее существенно здесь интегрированное централизованное управление модульными серверами. Это позволяет администрировать все имеющиеся серверы с одного рабочего места как отдельные устройства и не создает ограничений для масштабирования и организации пулов или групп серверов.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2005/triole/ris6.gif" alt=Fig.6></td></tr>
+<tr><td valign="bottom">Рис. 6. Компоненты экосистемы модульных серверов.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>С целью сокращения расходов на администрирование виртуализация серверов уже реализована: в каждом корпусе модульных серверов предусмотрены интегрированные модули управления серверами (Management Blade, MMB), поэтому число серверов теперь не имеет значения. Сочетание этой новой аппаратной архитектуры с интеллектуальными решениями для управления создает базу для успешной реализации решений, повышающих гибкость инфраструктуры центров обработки данных.
+<p>В результате консолидации оборудования (серверов, хранилищ данных, аппаратной среды) с помощью модульной архитектуры в сочетании с возможностями управления и решениями Fujitsu Siemens Computers для развертывания и автоматизации образуется полностью виртуализованная инфраструктура центра обработки данных, обладающая высокой степенью гибкости и возможностями самоуправления.
+<p>Концепция модульных серверов - это инфраструктура, в которой функционирование подсистемы ввода-вывода отделено от вычислительных функций, выполняемых процессорами. Для удовлетворения возрастающих запросов необходимы масштабируемость, простота установки и подготовки к работе, которые обеспечивают необходимый уровень гибкости информационных систем. Так, днем устройство может быть Web-сервером, а ночью стать сервером приложений с совершенно другим IP-адресом и именем хоста. И все это без какого-либо физического вмешательства, а только по команде системы дистанционного администрирования.
+<p>Весь входной и выходной трафик данных для модульных серверов передается через интегрированные системы коммутации. В экосистемах модульных серверов BX600 предусмотрены системы коммутации для подключений TCP/IP и Fibre Channel с резервированием, которые обеспечивают связь с внешним миром. Отделение источников питания, вентиляторов и централизованных управляющих серверов от модульных серверов увеличивает гибкость инфраструктуры и сокращает стоимость эксплуатации. Модульная концепция BX600 защищает капиталовложения клиентов в серверы компании Fujitsu Siemens Computers, позволяя без всяких ограничений проводить модернизацию вычислительных серверов по мере появления новых технологий или таких компонентов инфраструктуры, как серверы-коммутаторы FC.
+<p>Благодаря эксплуатационным характеристикам архитектуры экосистема легко удовлетворяет требованиям концепции адаптивных вычислений. Она также поддерживает принцип увеличения мощности сервера по требованию ESCoD (Enhanced Server Capacity on Demand).
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8629.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Решения для динамического центра обработки данных
+</a><br><a href="detail.php@ID=8629.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Владислав Шаров 
+На Европейском Форуме IDC в прошлом году технический директор Fujitsu Siemens 
+  Computers (http://www.fujitsu-siemens.com) 
+&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8629.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8629&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='09a638f4af6f1ec8e3bdcffac915bb35'><img src='../bitrix/tools/captcha.php@captcha_code=09a638f4af6f1ec8e3bdcffac915bb35' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

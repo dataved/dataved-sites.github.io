@@ -1,0 +1,592 @@
+<HTML>
+<HEAD>
+<title>Второе поколение дисковых массивов с коммутируемой архитектурой
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Павел Карнаух, директор центра технической поддержки компании S&T International pavel.karnaukh@snt.com.ru Весной 2002 года на выставке NetWorld+Interop компания Hitachi Data Systems (HDS, http://www.hds.com) сделала три объявления. Первые" />
+<meta name="description" content="Павел Карнаух, директор центра технической поддержки компании S&T International pavel.karnaukh@snt.com.ru Весной 2002 года на выставке NetWorld+Interop компания Hitachi Data Systems (HDS, http://www.hds.com) сделала три объявления. Первые" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398083022','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6613' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6613&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6613"].SHOW_IMAGE.value="N"; document.forms["PrintForm6613"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6613"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6613"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6613);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6613.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6613.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6613);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11552.html'>№10 (51), октябрь 2002</a><h1>Второе поколение дисковых массивов с коммутируемой архитектурой
+</h1>11.11.2002<p></p><DIV class='article-text'><p><i>Павел Карнаух</i>,<br>
+  директор центра технической поддержки компании S&T International<br>
+  <a href="mailto:pavel.karnaukh@snt.com.ru">pavel.karnaukh@snt.com.ru</a>
+<p>Весной 2002 года на выставке NetWorld+Interop компания Hitachi Data Systems 
+  (HDS, <a href="http://www.hds.com">http://www.hds.com</a>) сделала три объявления. 
+  Первые два касались инициативы Hitachi TrueNorth - создания нового поколения 
+  средств управления системами хранения на базе ПО HiCommand, третье анонсировало 
+  выход новой серии интеллектуальных систем хранения данных Hitachi Lightning 
+  9900V. 
+<p>Большинство аналитиков одобрили намерение компании развивать средства управления на базе стандартов, разработанных ассоциацией Storage Networking Industry Association (SNIA). В основе стратегии Hitachi Data Systems лежит использование объектно-ориентированной модели Common Information Model (CIM) и протокола Simple Object Access Protocol (SOAP), позволяющих достичь высокого уровня совместимости с продуктами независимых разработчиков средств управления.
+<p>Неявным результатом анонсирования инициативы TrueNorth стало некоторое изменение имиджа HDS. Компания, ранее воспринимавшаяся в основном как поставщик высокопроизводительных и надежных систем хранения, заявила о своих претензиях на лидерство в области автоматизации корпоративных сетей хранения данных (SAN Automation).
+<p>Сравнение подходов Hitachi Data Systems и других компаний к решению этого вопроса, безусловно, требует детального анализа. Однако в данной статье я бы хотел остановиться на &quot;аппаратной&quot; части анонса, сделанного HDS. С выходом новой линейки Lightning 9900V сложилась достаточно редкая для компьютерной отрасли ситуация, когда одна компания технологически опережает своих конкурентов на два поколения.
+<h3>Состав серии Lightning 9900V </h3>
+<p>Системы хранения Lightning 9900V поставляются в двух модификациях (табл. 1). Модель 9980 - многостоечная система с 32 интерфейсами Fibre Channel, FICON или ESCON и возможностью наращивания памяти до 74,7 Тбайт, а кэша - до 64 Гбайт. Модель 9970 - одностоечная система с масштабируемостью до 9,3 Тбайт, кэшем 16 Гбайт и 24 интерфейсами Fibre Channel, FICON или ESCON. В отличие от 9980 более простая система 9970 ориентирована на корпоративных пользователей, у которых объемы данных относительно невелики.
+<h4>Таблица 1. Характеристики моделей Hitachi Lightning 9980 и 9970 </h4>
+<table width="100%" border="1" bordercolor="#000066">
+  <tr> 
+    <td width="45%"><b>Основные характеристики</b></td>
+    <td width="26%"><b>Lightning 9980</b></td>
+    <td width="29%"><b>Lightning 9970</b></td>
+  </tr>
+  <tr> 
+    <td width="45%">Макс. полоса пропускания, Гбайт/с</td>
+    <td width="26%">15,9 </td>
+    <td width="29%">7,9 </td>
+  </tr>
+  <tr> 
+    <td width="45%">Макс. объем кэша, Гбайт</td>
+    <td width="26%">До 64 </td>
+    <td width="29%">До 32 </td>
+  </tr>
+  <tr> 
+    <td width="45%">Макс. объем управляющей памяти, Гбайт</td>
+    <td width="26%">До 3 </td>
+    <td width="29%">До 3 </td>
+  </tr>
+  <tr> 
+    <td colspan="3"><b>Дисковая емкость</b></td>
+  </tr>
+  <tr> 
+    <td width="45%">Макс. &quot;сырая&quot; емкость, Тбайт</td>
+    <td width="26%">74,7 </td>
+    <td width="29%">9,3 </td>
+  </tr>
+  <tr> 
+    <td colspan="3">Максимальная емкость для RAID-5, Тбайт</td>
+  </tr>
+  <tr> 
+    <td width="45%">Open Systems<br>
+      S/390-compatible</td>
+    <td width="26%">64,3<br>
+      61,1 </td>
+    <td width="29%">6,8<br>
+      6,4 </td>
+  </tr>
+  <tr> 
+    <td colspan="3">Максимальная емкость для RAID-1+, Тбайт</td>
+  </tr>
+  <tr> 
+    <td width="45%">Open Systems<br>
+      S/390-compatible</td>
+    <td width="26%">37,0<br>
+      34,6 </td>
+    <td width="29%">4,5<br>
+      4,2 </td>
+  </tr>
+  <tr> 
+    <td width="45%">Поддерживаемые диски </td>
+    <td colspan="2">36 Гбайт (15 000 об./мин), 73 Гбайт (10 000 об./мин)</td>
+  </tr>
+  <tr> 
+    <td width="45%">Диски &quot;горячего&quot; резерва </td>
+    <td width="26%">До 16</td>
+    <td width="29%">До 4</td>
+  </tr>
+  <tr> 
+    <td colspan="3"><b>Интерфейсы ввода-вывода</b></td>
+  </tr>
+  <tr> 
+    <td width="45%">Общее количество</td>
+    <td width="26%">До 32</td>
+    <td width="29%">До 24</td>
+  </tr>
+  <tr> 
+    <td width="45%">Fibre Channel (1 или 2 Гбит/с)<br>
+      ESCON<br>
+      FICON</td>
+    <td width="26%">До 32<br>
+      До 32<br>
+      До 32</td>
+    <td width="29%">До 24<br>
+      До 24<br>
+      До 24</td>
+  </tr>
+  <tr> 
+    <td colspan="3"><b>Поддерживаемые платформы</b></td>
+  </tr>
+  <tr> 
+    <td colspan="3">HP-UX, Sun Solaris, Microsoft Windows NT/2000, Novell NetWare, 
+      Linux, Compaq Tru64 UNIX, IBM AIX, Sequent DYNIX/ptx, SGI IRIX, OpenVMS, 
+      OS/390, MVS/ESA, MVS/XA, TPF/MPLF, VM/ESA, VM/XA, VM/HPO, VSE/ESA, VSE/SP</td>
+  </tr>
+</table>
+<p>Модели 9970 и 9980 серии 9900V по назначению соответствуют моделям 9910 и 9960 
+  продуктовой линейки предыдущего поколения. Дисковые массивы 9960/9980 предназначены 
+  для построения хранилищ данных большого объема, при создании которых максимальное 
+  внимание уделяется вопросам производительности, отказоустойчивости и масштабируемости. 
+  Системы 9910/9970 функционально и архитектурно аналогичны &quot;старшим&quot; моделям 
+  и, как правило, используются в организациях, предъявляющих высокие требования 
+  к надежности и производительности систем хранения, но не обрабатывающих большие 
+  объемы данных. 
+<p>В дальнейшем при обсуждении характеристик систем хранения серий 9900 и 9900V будут иметься в виду соответственно модели 9960 и 9980.
+<h3>Традиционная архитектура систем хранения данных масштаба предприятия </h3>
+<p>Традиционная архитектура high-end-систем хранения данных, примером которых могут служить Hitachi Freedom 7700е или EMC Symmetrix 8000, достаточно проста. Обмен данными с серверами осуществляется через подсистему ввода-вывода. Для обмена данными с мэйнфреймами используются интерфейсы ESCON и FICON, для подключения &quot;открытых&quot; систем - Fibre Channel (1 или 2 Гбит/с), возможна поддержка SCSI. Запросы от серверов поступают на интерфейсные процессоры системы хранения (в терминологии HDS - Client-Host Interface Processor, CHIP), которые при чтении определяют наличие (cache hit) или отсутствие (cache miss) запрашиваемых данных в кэш-памяти, а при записи просто помещают данные в кэш.
+<p>После этого происходит подкачка данных с дисков в кэш или, наоборот, сброс данных на диск. Обмен данными между дисками и кэш-памятью контролируется соответствующими процессорами (в терминологии HDS - Array Control Processor, ACP) вместе с дисками, образующими дисковую подсистему. Важно отметить, что для оптимизации операций чтения и записи все пользовательские данные проходят через кэш.
+<p>В традиционных системах хранения информация передается по шине. Как правило, шин в системе несколько - от двух до четырех, и их суммарная пропускная способность не превышает 1,5 Гбайт/с. Полезная пропускная способность относительно невелика, так как по шинам передаются не только пользовательские, но и управляющие данные.
+<h3>Архитектура Lightning 9900 </h3>
+<p>Система Hitachi Freedom Storage Lightning 9900, анонсированная в июне 2000 г., была первым продуктом, построенным на основе коммутируемой архитектуры, и до выхода серии 9900V оставалась самой мощной корпоративной системой хранения данных в мире.
+<p>Внутренняя архитектура, используемая в Lightning 9900, ориентирована на поддержку &quot;тяжелых&quot; приложений с интенсивным вводом-выводом, выполняющихся как на &quot;открытых&quot; системах, так и на мэйнфреймах. В ее основе лежит коммутируемая сеть Hi-Star (Hierarchical Star Network), обеспечивающая множественные избыточные неблокируемые каналы передачи данных между подсистемой ввода-вывода, кэш-памятью и дисковой подсистемой. Внутренняя пропускная способность Lightning 9900 может достигать 6,4 Гбайт/с: из них 3,2 Гбайт/с приходятся на передачу данных и еще 3,2 Гбайт/с - на передачу управляющей информации.
+<h4>Усовершенствования в 9900V </h4>
+<p>По сравнению с системами хранения данных предыдущего поколения пропускная способность систем Lightning 9900V увеличена более чем в 2,5 раза. Агрегированная пропускная способность систем хранения Lightning 9900V составляет 15,9 Гбайт/с (10,6 Гбайт/с для передачи данных и 5,3 Гбайт/с для передачи управляющей информации). Разумеется, такая скорость достигается только в полной конфигурации системы, с использованием всех четырех пар дисковых адаптеров ACP и четырех пар интерфейсных процессоров CHIP. Это означает, что при конфигурировании системы можно выбирать между наиболее производительным и наиболее эффективным по стоимости вариантами. Внутренняя пропускная способность увеличивается с добавлением каждого нового модуля ввода-вывода или дисковой подсистемы.
+<h4>Архитектура Hi-Star II </h4>
+<p>Отметим, что каждая система Lightning 9900V - это фактически двухузловой кластер, хотя и не кластер в традиционном смысле этого слова. В данном случае важно, что все активные компоненты дискового массива - карты ввода-вывода, дисковые контроллеры, модули кэш-памяти - физически продублированы. Например, восьмипортовый модуль Fibre Channel представляет собой две четырехпортовые карты, которые устанавливаются в разные слоты системы; дисковые контроллеры ACP также устанавливаются только попарно и т. д. Все компоненты объединены высокоскоростной коммутируемой сетью Hi-Star II и представляют собой единое целое.
+<p>Архитектура Hi-Star II (рис. 1), используемая в системах Lightning 9900V, в основном идентична архитектуре Hi-Star систем серии 9900, появились лишь два серьезных отличия: количеств каналов обмена данными удвоилось, а их тактовая частота увеличилась. Hi-Star II состоит из двух коммутируемых сетей - Cache-HSN и Control Memory-HSN.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2002/HDS/ris1.jpg" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Рис. 1. Архитектура HDS Lightning 9900V.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Cache-Hierarchical Star Network </h4>
+<p>Сеть Cache-HSN (C-HSN) используется для обмена данными между процессорами ACP/CHIP и кэш-памятью. Она состоит из четырех кэш-коммутаторов (CSW), образующих единую коммутирующую матрицу. CSW выполняют функции мультиплексирования, арбитража каналов и коммутации.
+<p>Каждый CSW обеспечивает мультиплексирование между восемью каналами обмена данными с кэшем и восемью каналами обмена с процессорами. В результате коммутирующая матрица состоит из 16 каналов к ACP, 16 каналов к CHIP и 32 каналов к модулям кэша, работающих на скорости 332 Мбайт/с (16 бит + 2 бита четности при частоте 166 МГц). Таким образом, максимальная суммарная пропускная способность C-HSN равна 10,6 Гбайт/с, и одновременно могут выполняться 32 операции ввода-вывода (таково общее количество каналов между кэш-коммутаторами CSW и портами модулей кэш-памяти).
+<h4>Control Memory-Hierarchical Star Network </h4>
+<p>Сеть Control Memory-HSN (CM-HSN) обеспечивает обмен контрольной информацией между процессорами и управляющей памятью (control memory). Управляющая память содержит системные метаданные - информацию о состоянии кэша, содержащихся в нем данных, конфигурации системы и т. п. - и состоит из двух областей, зеркально копирующих друг друга. Таким образом, системные данные полностью отделены от пользовательских; при их обработке используются как раздельные сети, так и отдельные области памяти.
+<p>Сеть CM-HSN намного проще, чем Cache-HSN. Она не использует коммутаторов и состоит из множественных каналов &quot;точка-точка&quot;, соединяющих процессоры и управляющую память. Каждый процессор (ACP или CHIP) соединен двумя 4-битными каналами с каждой из областей управляющей памяти, т. е. суммарно к управляющей памяти ведет 32 комбинированных 8-битных (+ 1 бит четности) канала общей пропускной способностью 5,3 Гбайт/с.
+<p>Такая, на первый взгляд несколько странная, топология сети облегчает работу с зеркальными копиями управляющей памяти.
+<h4>Кэш и управляющая память </h4>
+<p>Сеть Cache-HSN позволяет одновременно выполнять множество высокоскоростных операций обмена данными с кэшем, а значит, при увеличении размера кэш-памяти увеличивается и количество пользовательских запросов, которые можно обслужить одновременно.
+<p>Система Lightning 9900V поддерживает до 64 Гбайт кэша данных (ожидается, что к концу 2002 г. будет объявлена поддержка 128 Гбайт), распределенных по четырем модулям, перекрестно соединенным с процессорами дисковой подсистемы и подсистемы ввода-вывода. При выполнении операции записи данные дублируются и записываются в различные модули кэша, где и находятся до непосредственной записи на диск.
+<p>Используемые системой интеллектуальные алгоритмы кэширования значительно увеличивают общую производительность. При произвольном доступе к данным проводится постоянный мониторинг доступа, динамически изменяются критерии &quot;подкачки&quot; данных, с тем чтобы максимально повысить процент попаданий в кэш. При обнаружении последовательного характера доступа используется алгоритм read ahead and delete beyond, обеспечивающий быстрое считывание данных и эффективное освобождение кэша для других запросов.
+<p>Кэш-память используется для оптимизации доступа как к пользовательским данным, так и к управляющей информации, например, таблицам адресации. Это особенно важно для так называемых cache-centric (требующих буферизации) систем с глобальным кэшем, обеспечивающих связь &quot;каждый-с-каждым&quot; между портами дисковой подсистемы и подсистемы ввода-вывода. Дополнительно к 64 Гбайт кэша данных Lightning 9900V содержит набор резервированных кэш-модулей (до 3 Гбайт), содержащих управляющие данные. Заметим: в системах других производителей для хранения пользовательской и управляющей информации обычно используется единый кэш. В таких системах управляющая информация в зависимости от размера кэша может занять до 50% его объема, что значительно снижает производительность.
+<p>Кэш-память не является энергонезависимой, и при пропадании питания данные могут быть потеряны. Чтобы избежать этого, в Lightning 9900V применяются резервированные батареи, обеспечивающие 48-часовую сохранность данных. В том (маловероятном) случае, когда питание отсутствует более 48 ч, возможна горячая замена батарей.
+<h4>Дисковая подсистема </h4>
+<p>Установленные в дисковой подсистеме Lightning 9900V жесткие диски с двойным подключением (dual ported/dual active) для передачи данных используют две петли с арбитражным доступом Fibre Channel (FC-AL). Каждая пара дисковых контроллеров ACP подключена восемью FC-петлями к дисковым группам (array groups), состоящим из четырех дисков. Каждая FC-петля обслуживается собственным 64-разрядным процессором MIPS частотой 160 МГц и механизмом восстановления данных.
+<p>ACP постоянно контролирует загрузку FC-петель и определяет лучший путь для доступа к дискам. Использование дисков с двойным подключением позволяет использовать все восемь FC-петель в паре ACP для повышения производительности и отказоустойчивости. Разумеется, одна дисковая группа не может использовать восемь FC-петель одновременно, так как диски не могут одновременно обмениваться данными через оба порта. Однако, как правило, каждая пара ACP обслуживает несколько (до 64) дисковых групп, полностью утилизирующих все FC-петли. Таким образом, при использовании всех четырех пар ACP пропускная способность дисковой подсистемы составляет 3,2 Гбайт/с (4x800 Мбайт/с).
+<p>Lightning 9900V поддерживает до 1024 дисков - примерно в 2,5 раза больше, чем конкурирующие системы IBM и EMC. В настоящее время доступны диски 36 Гбайт (15 000 об./мин) и 72 Гбайт (10 000 об./мин). Ожидается, что к концу 2002 г. будет объявлена поддержка дисков 147 Гбайт (10 000 об./мин).
+<p>В Lightning 9900V можно использовать RAID 5 и RAID 1+ - улучшенную версию RAID 1+0, обеспечивающую повышенный уровень надежности и производительности. Заметим, что эффективные алгоритмы управления кэшем в системах Lightning 9900 позволяют избежать падения производительности на операциях записи при использовании RAID 5, характерного для других систем.
+<h4>Подсистема ввода-вывода </h4>
+<p>Подсистема ввода-вывода Lightning 9900V основана на архитектуре &quot;лезвий&quot; (blade), поддерживающей различные протоколы, включая Fibre Channel 1 и 2 Гбит/с, ESCON и FICON. Коммутируемая архитектура с разделением пользовательских и управляющих данных позволяет быстро разрабатывать &quot;лезвия&quot; с поддержкой новых протоколов, таких, как iSCSI. По оценкам некоторых аналитиков, выпуск &quot;лезвий&quot;, обеспечивающих функциональность iSCSI и NAS (Network Attached Storage), ожидается в начале 2003 г.
+<p>В настоящее время система поддерживает до 32 портов ввода-вывода, каждый из которых обслуживается собственным процессором MIPS (200 МГц). Стоит отметить, что в системах Lightning предыдущего поколения в подсистеме ввода-вывода и дисковой подсистеме использовались процессоры Intel i960, работающие на частоте 80 МГц. Использование более мощных процессоров позволило увеличить скорость обмена данными на уровне отдельных интерфейсов.
+<p>В новых системах применяется очень интересная концепция виртуальных портов (Virtual Storage Port, VSP) и серверных доменов хранения (Host Storage Domains, HSD). Она предусматривает дополнительный уровень виртуализации на уровне системы хранения, позволяющий разделять один физический порт Fibre Channel между серверами с различными ОС, тем самым значительно сократив расходы на создание гетерогенных сетей хранения. В системах хранения других производителей для каждой серверной платформы (например, Windows, HP-UX и Solaris) необходимо выделять отдельный порт.
+<p>С точки зрения администратора системы работа с виртуальными портами выглядит следующим образом. Несколько серверов объединяются в группу - серверный домен хранения. На уровне физического порта Fibre Channel определяется несколько (128 на порт, 4096 на систему) виртуальных портов, каждому из которых ставится в соответствие уникальный набор логических томов (Logical Unit, LUN). После этого домену хранения разрешается доступ к соответствующим виртуальным портам.
+<p>Такая схема виртуализации дает возможность, в частности, выделить каждому серверу свой собственный виртуальный порт и собственный нулевой логический том (LUN 0). Использование LUN 0 требуется в некоторых случаях, например, если с системы хранения выполняется загрузка операционной системы.
+<h4>Программное обеспечение </h4>
+<p>Интеллектуальность дискового массива зависит от функциональности поставляемого вместе с ним ПО - без него система хранения была бы всего лишь очень надежной и быстрой дисковой стойкой. Речь идет не столько о системе управления дисковым массивом и сетью хранения данных, сколько о функциях, &quot;зашитых&quot; в микрокод и предназначенных для выполнения основной задачи - обеспечения безопасного хранения и непрерывного доступа к данным. Ниже перечислены некоторые наиболее интересные компоненты и функции ПО Lightning 9900V.
+<p>ShadowImage - средство создания одной или нескольких копий данных внутри системы хранения. Копирование выполняется на аппаратном уровне и может использоваться для решения самых разных задач, например, для организации бессерверного резервного копирования (поддерживается ведущими поставщиками соответствующих продуктов - Legato Systems и Veritas), для циклической отладки сложных программных комплексов на копии реальных данных и т. п.
+<p>TrueCopy - средство для синхронной или асинхронной репликации данных между системами хранения Lightning 9900V, причем системы могут быть удалены на значительные расстояния. Максимальное расстояние зависит от используемой технологии (ESCON или Fibre Channel), типа оптоволокна, сетевого оборудования и т. д. Как правило, оно не превышает 100 км для синхронного режима репликации и практически не ограничено для асинхронного режима. Пропускная способность традиционных сетей хранения достаточно быстро падает с ростом расстояния между узлами, но новые технологии передачи блочных данных по IP-сетям - iSCSI и iFCP - позволяют решить проблему. В ходе проекта Promontory, организованного Hitachi Data Systems, Nishan Systems и другими поставщиками, была продемонстрирована репликация данных на тысячи километров со скоростью, близкой к теоретическому максимуму. Основное применение репликация данных находит при создании резервных вычислительных центров, продолжающих работать, если основной центр по каким-то причинам вышел из строя.
+<p>FlashAccess - средство принудительного блокирования данных в кэше, при котором соответствующие данные целиком закачиваются в кэш-память. Значительно увеличивает производительность ввода-вывода и уменьшает задержки, так как обмен данными происходит без обращения к дисковой подсистеме.
+<p>Cruise Control - средство контроля и анализа доступа к системе хранения на уровне логических томов. В случае необходимости перемещает тома между дисковыми группами. Таким образом, проводится динамическая балансировка нагрузки внутри системы хранения для достижения заданного уровня производительности.
+<p>Priority Access - средство контроля и анализа доступа к системе хранения на уровне портов ввода-вывода. При этом различным серверам может быть принудительно назначен различный уровень качества сервиса (QoS).
+<p>Dynamic Link Manager - ПО для обеспечения отказоустойчивости и балансировки нагрузки, устанавливаемое на серверы, подключенные к сети хранения.
+<h4>Надежность и сервисная поддержка </h4>
+<p>Одним из основных требований при разработке системы Lightning 9900V был бесперебойный доступ к данным даже в случае множественных отказов подсистем. Все элементы системы, в том числе области кэша, используемые для записи и хранения управляющей информации, как минимум дублированы, а использование коммутируемой архитектуры позволяет &quot;обходить&quot; отказавшие компоненты без существенных потерь в производительности.
+<p>Система не имеет активного элемента, сбой которого мог бы привести к потере данных. Предусмотрена возможность замены всех компонентов системы и модернизации микрокода без перерыва в доступе к данным. В принципе потеря данных возможна в случае одновременного отказа двух дисков в одной RAID-группе. Это крайне маловероятно, так как RAID-группа в системах Lightning 9900V состоит не более чем из восьми дисков, а вероятность отказа даже одного диска крайне мала. Например, в компании Volvo, одном из крупнейших заказчиков HDS (около 20 систем хранения общей емкостью более 45 Тбайт), за год выходит из строя 1-2 диска.
+<p>Тем не менее система Lightning 9900V поддерживает до 16 дисков в горячем резерве (hot-spare). Эти диски &quot;глобальны&quot;, т. е. могут заменить любой вышедший из строя диск, независимо от его принадлежности к конкретной RAID-группе.
+<p>Все системы хранения Lightning 9900V обеспечиваются трехгодичной сервисной поддержкой в режиме 24x7 и комплектуются системой удаленной диагностики Hi-Track, которая постоянно контролирует состояние системы и передает собранные данные в сервисный центр HDS. Большинство возникающих проблем разрешается удаленно, в случае же выхода из строя какого-либо компонента замена для российских клиентов осуществляется со склада московского сервисного центра.
+<h3>Производительность систем HDS </h3>
+<p>Инженеры Hitachi Data Systems провели два неформальных тестирования систем хранения, причем не настраивая системы для достижения наивысшей производительности. Главной целью испытаний было исследование масштабируемости систем с традиционной шинной архитектурой, систем с коммутируемой архитектурой 1-го поколения Lightning 9960 и систем с коммутируемой архитектурой 2-го поколения Lightning 9980.
+<h4>Тест № 1 </h4>
+<p>В этом тесте моделировалась одновременная работа с двумя типами баз данных - системой обработки транзакций (On-Line Transaction Processing, OLTP) и системой поддержки принятия решений (Decision Support System, DSS). Нагрузка OLTP (аналог TPC-C) имитировалась на платформе HP/9000-K460; нагрузка DSS (полное сканирование таблицы в 600 млн строк) - на двух серверах Sun E3000.
+<p>Поочередно тестировались системы Freedom 7700E и Lightning 9960 в практически одинаковой - за исключением используемых дисков - конфигурации. Система хранения и серверы были соединены восемью каналами Fibre Channel.
+<p>Тестируемая конфигурация не использовала масштабирование дисков - другими словами, данные каждого приложения находились на собственных дисковых группах. Приложения совместно использовали лишь контроллер памяти и две АСР-пары (всего было четыре АСР-пары).
+<h4>Тестирование Freedom 7700E </h4>
+<p>После перезагрузки всех систем стартовало приложение OLTP. Производительность приложения составила 1900 транзакций/мин.
+<p>Через 45 мин стартовало приложение DSS. Его производительность составила 128 Мбайт/с (около 1,3 млн строк в секунду). Производительность приложения OLTP уменьшилась до 1200 транзакций/мин (рис. 2).
+<p>После завершения работы приложения OLTP производительность приложения DSS возросла до 153 Мбайт/с (1,6 млн строк в секунду).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2002/HDS/ris2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Тест 1 - HDS Freedom 7700E.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Тестирование Lightning 9960 </h4>
+<p>После перезагрузки всех систем стартовало приложение OLTP. Производительность приложения составила 2350 транзакций/мин.
+<p>Через 45 мин стартовало приложение DSS, производительность которого составила 220 Мбайт/с (около 2,3 млн строк в секунду). Производительность приложения OLTP не изменилась (рис. 3).
+<p>После завершения работы приложения OLTP производительность приложения DSS осталась на уровне 220 Мбайт/с.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2002/HDS/ris3.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Тест 1. HDS Lightning 9960.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Тест №2 </h4>
+<p>В этом тесте также моделировалась одновременная работа с двумя типами баз данных - системой обработки транзакций OLTP и системой поддержки принятия решений DSS. Нагрузка OLTP (имитация работы 7200 пользователей) моделировалась на четырех четырехпроцессорных серверах под управлением Windows 2000; нагрузка DSS (полное сканирование таблицы в 1,2 млрд строк) - на двух восьмипроцессорных серверах Sun E6500.
+<p>Испытания проводились по следующей методике: стартовало первое приложение, через некоторое время - второе, затем - третье и т. д. Целью теста было определение максимально допустимой нагрузки на систему хранения, при которой приложения начинали бы негативно влиять друг на друга. В качестве критерия допустимости было выбрано время отклика при выполнении транзакции OLTP, не превышающее 1 с.
+<p>Поочередно тестировались системы Lightning 9960 и Lightning 9980; конфигурации их приведены в табл. 2.
+<h4>Таблица 2. Конфигурации тестируемых систем Lightning 9960 и Lightning 9980 
+</h4>
+<table width="100%" border="1">
+  <tr> 
+    <td><b>Параметр</b></td>
+    <td><b>Lightning 9960</b></td>
+    <td><b>Lightning 9980</b></td>
+  </tr>
+  <tr> 
+    <td>Кэш-память, Гбайт</td>
+    <td>32 </td>
+    <td>24 </td>
+  </tr>
+  <tr> 
+    <td>Число интерфейсов FC</td>
+    <td>32</td>
+    <td>16</td>
+  </tr>
+  <tr> 
+    <td>Число дисков</td>
+    <td>256 (72 Гбайт)</td>
+    <td>256 (72 Гбайт)</td>
+  </tr>
+  <tr> 
+    <td>Число ACP</td>
+    <td>4</td>
+    <td>4</td>
+  </tr>
+</table>
+<p>В тестируемых конфигурациях не использовалось масштабирование дисков - другими 
+  словами, данные каждого приложения находились на собственных дисковых группах. 
+  Приложения совместно использовали лишь контроллер памяти и дисковые контроллеры 
+  АСР. 
+<h4>Испытания Lightning 9960 </h4>
+<p>После перезагрузки всех систем стартовало первое приложение OLTP (имитация работы 1800 пользователей). Производительность приложения составила 2200 транзакций/мин со средним временем отклика 0,3 с (рис. 4).
+<p>Второе приложение OLTP, как и все последующие, стартовало с интервалом 30 мин. Совокупная производительность приложений составила 4400 транзакций/мин со средним временем отклика 0,3 с.
+<p>Затем стартовало первое приложение DSS. Его производительность составила 320 Мбайт/с (около 2,85 млн строк в секунду). При этом совокупная производительность приложений OLTP по-прежнему составляла 4400 транзакций/мин, но время отклика увеличилось до 0,45 с.
+<p>Стартовало третье приложение OLTP. Совокупная производительность приложений увеличилась до 6500 транзакций/мин (вместо ожидаемых 6600 транзакций/мин), а среднее время отклика увеличилось до 1,4 с и превысило максимально допустимую величину. Производительность приложения DSS упала до 300 Мбайт/с.
+<p>Стартовало четвертое приложение OLTP. Совокупная производительность приложений увеличилась, но только до 8000 транзакций/мин вместо ожидаемых 8800. Среднее время отклика увеличилось до 2,6 с. Производительность приложения DSS упала до 280 Мбайт/с.
+<p>Стартовало второе и последнее приложение DSS. Совокупная производительность приложений DSS составила 440 Мбайт/с, при этом производительность первого приложения упала до 220 Мбайт/с. Совокупная производительность приложений OLTP упала с 8000 до 6800 транзакций/мин. Среднее время отклика увеличилось до неприемлемого значения 7 с.
+<p>В этот момент Lightning 9960 испытывает исключительно высокую нагрузку, состоящую из смеси операций последовательного чтения и произвольного чтения/записи. Общая степень загрузки процессоров системы составляет около 85%.
+<p>После достижения пика нагрузки происходит постепенное, с 15-минутным интервалом, отключение приложений OLTP и DSS.
+<p>На следующем этапе продолжает работать только одно приложение DSS. Производительность его составляет 330 Мбайт/с (около 2,9 млн строк в секунду). Через 15 мин приложение завершает работу.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2002/HDS/ris4.gif" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Тест 2. HDS Lightning 9960.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Испытания Lightning 9980 </h4>
+<p>После перезагрузки всех систем стартовало первое приложение OLTP (имитация работы 1800 пользователей). Производительность приложения составила 2200 транзакций/мин со средним временем отклика 0,3 с (рис. 5).
+<p>Второе приложение OLTP, как и все последующие, стартовало с интервалом 30 мин. Совокупная производительность приложений составила 4400 транзакций/мин со средним временем отклика 0,3 с.
+<p>Стартовало первое приложение DSS. Его производительность составила 380 Мбайт/с (около 3,4 млн строк в секунду), что превышает результат предыдущего испытания примерно на 50 Мбайт/с. При этом совокупная производительность приложений OLTP по-прежнему составляет 4400 транзакций/мин, время отклика - по-прежнему 0,3 с.
+<p>Стартовало третье приложение OLTP. Совокупная производительность приложений увеличилась до ожидаемых 6600 транзакций/мин, а среднее время отклика не изменилось и по-прежнему составляло 0,3 с. Производительность приложения DSS также не изменилась.
+<p>Стартовало четвертое приложение OLTP. Совокупная производительность приложений увеличилась до ожидаемых 8800 транзакций/мин. Среднее время отклика составляло 0,3 с. Производительность приложения DSS не изменилась.
+<p>Стартовало второе и последнее приложение DSS. Совокупная производительность приложений DSS составила 740 Мбайт/с, при этом производительность первого приложения несколько снизилась - до 370 Мбайт/с (3,3 млн строк в секунду), что значительно превышает максимальный результат, достигнутый в ходе предыдущего теста. Совокупная производительность приложений OLTP по-прежнему составляет 8800 транзакций/мин. Среднее время отклика впервые за время теста увеличилось на 0,08 с - до 0,38 с.
+<p>На этом этапе Lightning 9980 находится под нагрузкой, состоящей из смеси операций последовательного чтения и произвольного чтения/записи. Общая загрузка процессоров системы составляет менее 35%.
+<p>После достижения пика нагрузки проводится постепенное, с 15-минутным интервалом, отключение приложений OLTP и DSS.
+<p>На следующем этапе продолжает работать только одно приложение DSS. Производительность приложения составляет 380 Мбайт/с (3,4 млн строк в секунду). Через 15 мин приложение завершает работу.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2002/HDS/ris5.gif" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Тест 2. HDS Lightning 9980.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h3>Заключение </h3>
+<p>В настоящее время компания Hitachi Data Systems выступает как технологический лидер на рынке корпоративных систем хранения данных. Объявив о выпуске второго поколения дисковых массивов с коммутируемой архитектурой, HDS еще более оторвалась от конкурентов, которые пока не могут предложить решение с аналогичными характеристиками.
+<p>Теоретическое превосходство систем с коммутируемой архитектурой подтверждается результатами двух проведенных испытаний. В первом тесте система Freedom 7700E показала значительное снижение производительности при одновременном выполнении двух приложений. Хотя 7700E - одна из лучших &quot;традиционных&quot; систем хранения, здесь проявляются существенные ограничения архитектуры с использованием разделяемой шины. Примерно таким же образом вели бы себя и системы хранения других производителей.
+<p>Lightning 9960 продемонстрировала преимущество коммутируемой архитектуры - два параллельно выполнявшихся приложения практически не оказывали влияния друг на друга.
+<p>Во втором тесте участвовали системы хранения данных с коммутируемой архитектурой первого и второго поколений. Lightning 9960 показала очень хороший результат - практически линейную масштабируемость при выполнении трех приложений и дальнейший полуторакратный рост производительности. Тем не менее при выполнении второй половины теста время отклика превысило максимально допустимое значение.
+<p>Новая система Lightning 9980 продемонстрировала беспрецедентную масштабируемость, в частности, линейный рост производительности в течение всего теста. При этом Lightning 9980 использовала в два раза меньше портов ввода-вывода и на треть меньше кэш-памяти, чем Lightning 9960.
+<p>По результатам испытаний можно сделать следующие выводы. Во-первых, при проектировании корпоративных сетей хранения, объединяющих десятки высокопроизводительных серверов, максимум внимания необходимо уделять масштабируемости центральной системы хранения данных. Основной оцениваемый при этом параметр - пропускная способность системы. Во-вторых, шинная архитектура традиционных систем хранения накладывает существенные ограничения на возможность их использования для консолидации данных предприятия. В-третьих, системы с коммутируемой архитектурой второго поколения уже сегодня могут обеспечить практически линейную масштабируемость при выполнении смеси задач, требующих как последовательного, так и произвольного доступа к данным.
+<p>Дополнительную информацию о системах хранения Hitachi Data Systems можно получить в S&T International - российском представительстве австрийской компании S&T AG.
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6613.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Второе поколение дисковых массивов с коммутируемой архитектурой
+</a><br><a href="detail.php@ID=6613.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Павел Карнаух,
+  директор центра технической поддержки компании S&T International
+  pavel.karnaukh@snt.com.ru
+Весной 2002 года на выставке&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6613.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6613&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='05427c5f6697013cf915ec0b02c2bc64'><img src='../bitrix/tools/captcha.php@captcha_code=05427c5f6697013cf915ec0b02c2bc64' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

@@ -1,0 +1,494 @@
+<HTML>
+<HEAD>
+<title>Технология Grid Computing
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Олег Таковицкий В науке, технике и бизнесе сейчас растет число задач, требующих сверхмощных вычислительных ресурсов и высокопроизводительных сетей. В ответ на это требование появляются все более мощные компьютеры и сложные программы, однако существует" />
+<meta name="description" content="Олег Таковицкий В науке, технике и бизнесе сейчас растет число задач, требующих сверхмощных вычислительных ресурсов и высокопроизводительных сетей. В ответ на это требование появляются все более мощные компьютеры и сложные программы, однако существует" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082899','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8546' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8546&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8546"].SHOW_IMAGE.value="N"; document.forms["PrintForm8546"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8546"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8546"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8546);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8546.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8546.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8546);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11502.html'>№7 (59), июль 2003</a><h1>Технология Grid Computing
+</h1>10.07.2003<p></p><DIV class='article-text'><p><i>Олег Таковицкий</i> 
+<p>В науке, технике и бизнесе сейчас растет число задач, требующих сверхмощных вычислительных ресурсов и высокопроизводительных сетей. В ответ на это требование появляются все более мощные компьютеры и сложные программы, однако существует ряд задач, решение которых не под силу даже современным суперкомпьютерам. Как правило, проблемы здесь связаны с интенсивными вычислениями или обработкой громадных массивов данных. Постепенно приходит понимание того, что при довольно высокой цене предлагаемые архитектуры обладают ограниченной масштабируемостью, а их развитие отстает от развития элементной базы. В то же время для решения ряда задач, связанных, например, с прогнозированием природных явлений, обработкой данных о высокоэнергетических ядерных реакциях, эволюции галактик и т. п., все чаще требуются вычислительные мощности принципиально иного уровня.
+<p>Не секрет, что сегодня в разных организациях сосредоточено много вычислительных средств, которые далеко не всегда используются по назначению. Эти компьютеры могут находиться в разных местах, выполнять разные приложения, использовать разные средства хранения информации и системы доступа. С другой стороны, есть ряд интересных задач глобального масштаба, для решения которых требуются разнообразные компьютерные ресурсы и большие вычислительные мощности, причем выполнение этих задач можно распараллеливать. Во многом именно поэтому специалисты видят выход в использовании технологии Grid Computing, т. е. распределенной работы в сетях вычислительных ресурсов, иначе называемых вычислительными решетками.
+<p>При организации вычислений сегодня все чаще применяется разделение работ, данных и процессорных мощностей, а также иные схемы взаимодействия, предусматривающие использование распределенных ресурсов. При этом приходится обращать особое внимание на обеспечение связи между системами.
+<p>Классическая схема Grid Computing основана на использовании распределенных процессорных мощностей и распределенных систем хранения. Это позволяет эффективно задействовать незанятые вычислительные ресурсы, которые могут быть разбросаны по всему миру. Впрочем, сегодня системы, построенные на принципах Grid Computing, или просто Grid, создаются чаще всего внутри предприятий - в основном по соображениям безопасности.
+<p>Современные Интернет-технологии не обеспечивают интегрированного подхода к координированному использованию ресурсов на множестве узлов для выполнения вычислений. А вот технология Grid подразумевает слаженное взаимодействие множества ресурсов, гетерогенных по своей природе и расположенных в многочисленных, возможно, географически удаленных административных доменах. Пулы ресурсов могут объединять от единиц до нескольких тысяч элементов. При этом вероятно снижение производительности по мере увеличения пула. Следовательно, приложения, требующие объединения большого числа географически удаленных ресурсов, должны быть минимально чувствительными к времени задержки. Говоря о динамичности и адаптивности, отметим, что при объединении большого количества ресурсов отказы элементов - это не исключение, а скорее правило. Поэтому управление ресурсами или приложениями должно осуществляться динамически, чтобы извлечь максимум производительности из ресурсов и сервисов, доступных в каждый конкретный момент.
+<p>Действительная сила технологии Grid скрывается за самим словом &quot;ресурсы&quot;, которые понимаются предельно широко. Сюда, пожалуй, входит все, что участвует в компьютерной обработке данных. Так, к ресурсам следует отнести коммуникации, системы хранения, хранилища данных, информационные системы, а также программные фонды. Например, если приложение анализа данных понимать как ресурс, то это означает возможность удаленного доступа к нему без установки на компьютер пользователя.
+<p>Надо сказать, что имеющиеся в мире Grid-системы гармонично дополняют ряд используемых сегодня вычислительных архитектур. Здесь можно упомянуть серверы с симметричной многопроцессорной архитектурой (общая память, сильные связи между процессорами, центральный коммутатор с низкой латентностью). На этих системах функционируют большие базы данных, сложные аналитические и вычислительные задачи, требующие согласованных операций над большими объемами данных. Кроме того, упомянем вычислительные кластеры, состоящие из нескольких узлов (чаще всего многопроцессорных), связанных внешним коммутатором. Такие системы решают задачи, в которых взаимодействие между отдельными вычислительными узлами организовано в виде передачи сообщений и которые могут быть разделены на относительно независимые этапы вычислений. Наконец, системы Grid Computing, в которых время взаимодействия между узлами измеряется миллисекундами и секундами, не предназначены для решения параллельных задач, а нацелены по большей части на выполнение пакетных заданий, - здесь каждая отдельная задача выполняется целиком на одном узле. Система управления вычислительной сетью занимается диспетчеризацией отдельных заданий, а не взаимосвязью между отдельными блоками одной задачи.
+<p>Концепция Grid Computing чрезвычайно привлекательна. Не случайно практически все гранды индустрии, в том числе Hewlett-Packard, IBM и Sun Microsystems, обратили свои взоры в сторону данной технологии. И все же первоначально идея Grid воплотилась в общественном проекте SETI@home.
+<p>Вообще говоря, одна из самых больших проблем в Grid Computing - это обеспечить 
+  различным группам пользователей (так называемым &quot;виртуальным организациям&quot;) 
+  совместное использование географически удаленных ресурсов при совместной работе. 
+  При этом подразумевается отсутствие не только центрального расположения, но 
+  и централизированного контроля, а в общем случае - и атмосферы доверия в рабочих 
+  отношениях. 
+<p>
+<table width="100%" border="0" bgcolor="#CCFFFF">
+  <tr>
+    <td>
+      <h4>Поиск братьев по разуму </h4>
+      <p>Известно, что персональные компьютеры нередко используются владельцами 
+        крайне неэффективно, по большей части простаивая. Кстати, любопытно, что 
+        чем крупнее вычислительная система, тем, как правило, меньше ее простой. 
+        Этим и воспользовались энтузиасты проекта SETI@home. 
+      <p>Вообще говоря, целью научной инициативы SETI (Search for Extraterrestrial 
+        Intelligence - поиск внеземного разума) было определить, существует ли 
+        во Вселенной разумная жизнь. Для поиска внеземного разума научные группы 
+        SETI используют множество методов - многие из них предполагают изучение 
+        миллиардов радиочастот, наводняющих Вселенную, с тем чтобы выяснить, не 
+        передает ли другая цивилизация какой-нибудь радиосигнал; некоторые группы 
+        в рамках SETI ищут сигналы в пульсирующем свете, исходящем от звезд. 
+      <p>В процессе поиска внеземного разума задействованы сотни тысяч подключенных 
+        к Интернету компьютеров. Принять участие в этом проекте можно, запустив 
+        на своем ПК бесплатную программу, скачивающую и анализирующую данные, 
+        полученные от радиотелескопа; при этом постоянное подключение к Интернету 
+        совершенно необязательно. Каждый участник имеет хоть и небольшой, но захватывающий 
+        воображение шанс, что именно его компьютер обнаружит чуть слышный &quot;шепот&quot; 
+        цивилизации, находящейся далеко за пределами Земли. Проект SETI@home был 
+        запущен 17 мая 1999 года. Сейчас в нем участвуют свыше 2 млн человек из 
+        более чем двухсот стран.
+    </td>
+  </tr>
+</table>
+<h3>Grid-архитектура </h3>
+<p>Система Grid прежде всего должна устанавливать, контролировать и использовать отношения между ресурсами любых потенциальных участников совместного проекта. Центральной проблемой здесь считается обеспечение взаимодействия (интероперабельности) между различными платформами, языками и программными средами. В сетевой среде интероперабельность означает работу по общим протоколам. Именно протоколы регламентируют взаимодействие элементов распределенной системы, а также структуру передаваемой информации. Следовательно, Grid-архитектура - это прежде всего система протоколов, которые и должны определять базовый механизм взаимодействия. На основе стандартных протоколов можно строить стандартные сервисы, разрабатывать интерфейсы прикладного программирования API (Application Programming Interface) и инструментальные средства разработки SDK (Software Development Kits). Ядром многоуровневой модели (рис. 1) служат протоколы Resource и Connectivity, которые обеспечивают разделение индивидуальных ресурсов. Уровень Collective отвечает за координацию использования имеющихся ресурсов, а доступ к ним осуществляется с помощью протоколов Fabric.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2003/Grid/ris1.gif" alt=Fig.N></td>
+<td valign="bottom">Рис. 1. Многоуровневая архитектура Grid.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h4>Управление локальными ресурсами </h4>
+<p>Итак, уровень Fabric обеспечивает доступ к разделяемым ресурсам, востребованный протоколами более высокого уровня. Спектр ресурсов весьма широк - это могут быть компьютеры, устройства массовой памяти, каталоги, сетевые ресурсы и т. п. При этом ресурс может быть логической сущностью (например, распределенной файловой системой) или физической (кластером или пулом компьютеров). Реализация такого ресурса может включать внутренние протоколы (например, Network File System или протокол управления кластером), однако подобные протоколы остаются вне Grid-архитектуры. Компоненты уровня Fabric реализуют локальные операции, специфические для каждого данного ресурса (логического или физического). Как видно из рис. 1, этот уровень по своим функциям аналогичен канальному уровню эталонной модели OSI и по сути представляет собой набор интерфейсов для управления локальными ресурсами.
+<h4>Коммуникации и безопасность </h4>
+<p>Уровень Connectivity - это ядро коммуникаций, он содержит протоколы аутентификации, которые требуются для выполнения специфических для Grid сетевых транзакций. Коммуникационные протоколы отвечают за обмен данными с уровнем Fabric. В их функции входят транспорт, маршрутизация и присвоение имен. Что касается защищенности, то здесь речь идет о единой идентификации, авторизации и защищенной передаче сообщений. Инфраструктура поддержки включает централизованную выдачу сертификатов, управление сертификатами и ключами и т. д.
+<h4>Совместное использование ресурсов </h4>
+<p>В иерархии уровней Resource располагается над уровнем Connectivity. С помощью коммуникационных и аутентификационных протоколов, входящих в Connectivity, он проводит согласование методов безопасности, инициализацию и мониторинг ресурсов и управление ими. Для доступа к локальным ресурсам и дальнейшего управления Resource вызывает соответствующие функции уровня Fabric. Заметим, что протоколы уровня Resource предназначены исключительно для работы с локальными ресурсами, они не учитывают глобальное состояние системы и не отслеживают атомарные операции, выполняемые объединенными ресурсами. Этим занимается уровень Collection, который мы рассмотрим ниже.
+<p>Уровень Resource включает два основных класса протоколов. Это информационные протоколы, предназначенные для получения информации о структуре и состоянии ресурса, его конфигурации, текущей загрузке и политиках (к примеру, стоимости), и протоколы управления, обеспечивающие согласованность доступа к разделяемому ресурсу и определяющие необходимые операции, которые ресурс должен выполнить (скажем, инициализация процесса или доступ к данным).
+<h4>Координация ресурсов </h4>
+<p>Если уровень Resource отвечает за взаимодействие с единичным ресурсом, то следующий в иерархии уровень, Collective, содержит протоколы, интерфейсы и сервисы, такие, как API и SDK (рис. 2), не связанные с каким-либо специфическим ресурсом. Это своего рода глобальные спецификации, которые отвечают за взаимодействие всех элементов пула ресурсов, что и отражено в самом названии Collective. В качестве примера глобальных функций и сервисов, реализуемых протоколами этого уровня, можно назвать службу директорий, распределение ресурсов, планирование и брокерские услуги, службы мониторинга, диагностики, репликации данных, коллективной авторизации.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2003/Grid/ris2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Протоколы, сервис и API.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h4>Уровень приложений </h4>
+<p>Application - высший уровень Grid-архитектуры. Он включает пользовательские приложения, которые исполняются в среде объединенных ресурсов. В процессе исполнения приложения вызывают службы нижележащих протоколов. На каждом из уровней имеются вполне определенные протоколы для взаимодействия с необходимыми службами - управлением ресурсами, доступом к данным, обнаружением ресурса и т. п. Данные структуры могут сами определять протоколы, службы и иметь собственные интерфейсы прикладного программирования.
+<h3>Grid-службы </h3>
+<p>Технологии и инфраструктуры Grid Computing поддерживают совместное и скоординированное использование разнородных ресурсов в динамических, распределенных &quot;виртуальных организациях&quot; с различными правилами работы. Это позволяет создавать из географически рассредоточенных компонентов виртуальные вычислительные системы, способные совместно поддерживать требуемый уровень обслуживания. Свободно распространяемый инструментарий Globus Toolkit стал фактическим стандартом конструирования Grid-систем. На его основе созданы самые разные проекты, от систем обеспечения работы научных групп, которым требуется удаленный доступ к специализированным экспериментальным лабораториям, до систем распределенной аналитической обработки больших объемов информации.
+<p>Инструментарий Globus Toolkit включает:
+<ul>
+  <li>построенный на основе HTTP протокол резервирования вычислительных ресурсов 
+    GRAM (Globus Toolkit Resource Allocation Management);</li>
+  <li>расширенную версию протокола для передачи файлов GridFTP;</li>
+  <li>службу аутентификации и безопасности GSI (Grid Security Infrastructure);</li>
+  <li>средства распределенного доступа к информации на основе протокола LDAP;</li>
+  <li>средства удаленного доступа к данным через последовательный и параллельный 
+    интерфейс GASS (Globus Access to Secondary Storage);</li>
+  <li>средства резервирования ресурсов GARA (Globus Reservation and Allocation). 
+  </li>
+</ul>
+<p>Эволюция технологии Grid Computing привела к возникновению архитектуры Open Grid Services Architecture (OGSA). Основанная на ней Grid-система предоставляет обширный набор служб, которые &quot;виртуальные организации&quot; могут объединять различными способами. Концепции и технологии архитектуры OGSA были разработаны специалистами в области Grid и Web-сервисов. OGSA определяет единообразную семантику предоставления сервисов, стандартные механизмы для создания, именования и обнаружения экземпляров Grid-сервисов, обеспечивает независимость от местонахождения и связывание различных протоколов, поддерживает интеграцию с базовыми механизмами нижележащих платформ. Работы в области Grid Computing направлены сегодня на существенное расширение состава сервисов. Главная цель работ в этом направлении - возможность управлять информационной системой не как совокупностью компьютеров и дисков, а как набором служб, каждая из которых использует определенный объем ресурсов. Grid Computing - это возможность виртуализации вычислительных мощностей информационной системы.
+<p>Если стандарты Web-сервисов фиксируют форму интерфейсов служб, то OGSA задает стандарты семантики их взаимодействия, наборы обязательных интерфейсов. При этом определяется понятие Grid-сервиса, или Grid-службы. К числу стандартных относятся интерфейсы, связанные с обнаружением или динамическим созданием служб, управлением, уведомлением. К этому перечню со временем должны добавиться интерфейсы, связанные с авторизацией и управлением параллельным выполнением.
+<p>Подготовка технических спецификаций OGSA ведется в рамках организации Global 
+  Grid Forum (<a href="http://www.gridforum.org">http://www.gridforum.org</a>), 
+  разрабатывающей стандарты для Grid-сообщества; эталонная реализация технологии 
+  свободно распространяется через сайт Globus Project (<a href="http://www.globus.org">http://www.globus.org</a>). 
+<p>
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h4>Стандарт платформы Grid </h4>
+      <p>Инструментарий с открытым кодом Globus Toolkit, разработанный совместно 
+        Калифорнийским университетом и Аргоннской национальной лабораторией, стал 
+        фактическим стандартом платформы Grid-сетей, получившим поддержку ведущих 
+        компаний США и Японии. Компании Hewlett-Packard, Cray, SGI, Sun Microsystems, 
+        Veridian, Fujitsu, Hitachi, NEC, IBM и Microsoft создают оптимизированные 
+        варианты Globus Toolkit для своих платформ. Компания Platform Computing 
+        планирует совместно с разработчиками инструментария создать его коммерческую 
+        версию. Работа над Globus Toolkit шла в течение шести лет, ее результатом 
+        стало появление набора протоколов, служб и приложений, обладающих открытой 
+        архитектурой и реализующих основную концепцию Grid как надежной масштабируемой 
+        среды координированного совместного использования ресурсов в динамичных 
+        многоячеечных &quot;виртуальных организациях&quot;. 
+      <p>
+    </td>
+  </tr>
+</table>
+<p>OGSA поддерживает создание, обслуживание и применение наборов сервисов для 
+  &quot;виртуальных организаций&quot;, предлагая общее представление для вычислительных 
+  ресурсов и памяти, сетей, программ, баз данных и т. п. Все эти ресурсы трактуются 
+  как сетевые службы, предлагающие свои возможности посредством обмена сообщениями. 
+<p>Ориентация на службы обеспечивает стандартные механизмы определения интерфейсов, независимость от местонахождения, адаптацию к локальным службам ОС и единообразную семантику. Такой подход также упрощает виртуализацию за счет объединения разнородных реализаций под общим интерфейсом.
+<p>Виртуализация поддерживает согласованный доступ к ресурсам на множестве гетерогенных платформ, позволяет определять отображение множества логических экземпляров ресурсов на один и тот же физический и помогает управлению ресурсами в &quot;виртуальной организации&quot;, компонуя ресурсы более низкого уровня. Благодаря виртуализации появляется возможность объединять базовые сервисы и формировать более сложные службы. Виртуализация Grid-служб позволяет легко отображать общую семантику поведения сервисов на оригинальные механизмы платформы.
+<p>Возможность виртуализовать и комбинировать службы зависит не только от определения стандартных интерфейсов; необходимы также стандартные функции взаимодействия служб, например, единые механизмы обнаружения свойств служб. С этой точки зрения OGSA определяет Grid-службу как Web-сервис, предоставляющий множество специфицированных интерфейсов и поддерживающий специфицированные соглашения.
+<p>OGSA определяет стандартное поведение и соответствующие интерфейсы. Приложениям необходим механизм обнаружения доступных служб, определения их характеристик и конфигурирования запросов к этим службам. Требуется соответствующее средство и для динамического создания новых экземпляров службы и управления ими. OGSA устанавливает стандартный интерфейс Factory и стандартную семантику службы. Сервисы OGSA могут создаваться и уничтожаться динамически. Их можно удалять явно; они также могут быть удалены или стать недоступными из-за возникновения системной ошибки, например, в случае сбоя в операционной системе. Сервисы, входящие в набор динамических распределенных служб, должны иметь возможность асинхронно уведомлять друг друга о серьезных изменениях в своем состоянии. OGSA определяет общие абстракции и интерфейсы служб для подписки на такие уведомления и для их доставки.
+<p>В производственных средах, возможно, потребуется выполнять мониторинг больших наборов экземпляров Grid-служб и управлять ими. Соответствующие операции определяет интерфейс управляемости.
+<p>Архитектура Open Grid Services Architecture позволяет не только интегрировать ресурсы в распределенных гетерогенных динамических &quot;виртуальных организациях&quot; внутри одного предприятия, но и поддерживать совместное использование внешних ресурсов и коммуникации с поставщиками услуг.
+<h3>Вклад лидеров отрасли </h3>
+<p>Корпорация IBM (<a href="http://www.ibm.com">http://www.ibm.com</a>) по праву 
+  считается одним из самых активных участников продвижения технологии Grid Computing. 
+  Именно она инициировала первые Grid-разработки. IBM входит в проект Globus Project, 
+  нацеленный на создание ПО управления Grid-сетями с открытым исходным кодом. 
+  Специалисты Globus и IBM представили спецификации версии 3.0 программного инструментария 
+  Grid-систем, которая отличается от предыдущих версий главным образом наличием 
+  архитектуры Open Grid Services. IBM участвовала и в создании документа The Physiology 
+  of the Grid, в котором описывается OGSA. Этот документ по сути представляет 
+  собой план унификации Web-сервисов и Grid-систем на базе языка Web Services 
+  Description Language и других технологий. 
+<p>В начале 2003 года IBM предложила несколько Grid-систем, облегчающих предприятиям ряда отраслей реализацию идеи суперкомпьютеров, составленных из большого числа не очень мощных машин, подсоединенных к сети. Эти системы включают компьютеры IBM и ПО компаний, специализирующихся на Grid-технологиях; они ориентированы на предприятия из сферы финансовых услуг, автомобильной и аэрокосмической промышленности, а также на научные организации, органы государственного управления и т. п. В процессе разработки этих систем IBM сотрудничала с пятью компаниями - Platform Computing, DataSynapse, Avaki, Entropia и UnitedDevices. Созданная в результате система Information Access Grid, предназначенная для сферы государственного управления, позволяет эффективно объединять разрозненные базы данных и упрощает извлечение информации благодаря унифицированному интерфейсу. Заказчикам из автомобильной и аэрокосмической отраслей IBM предлагает две Grid-системы: одна из них позволяет инженерам объединять компьютеры, занятые вычислениями, с помощью другой конструкторы из разных организаций могут совместно работать над одним и тем же проектом. Исследователи в области биотехнологий могут приобрести систему Analytics Acceleration Grid Computing для ускорения вычислений, относящихся к генетике или поиску новых лекарств, и Information Accessibility Grid - для обмена данными, в том числе недоступными стандартными способами. Финансовым учреждениям IBM предлагает систему Analytics Acceleration для ускорения торговых операций. Система IT Optimization Grid поможет заказчикам объединить компьютеры пользователей и системы хранения данных в распределенные вычислительные сети.
+<p>Сравнительно недавно появились отраслевые решения для нефтяной и электронной 
+  промышленности, высшего образования и агрохимии. Новые предложения Grid будут 
+  включать архитектуру OGSA. Подразделение IBM Global Services обеспечивает поддержку 
+  всех элементов внедрения Grid на оборудовании и ПО как самой IBM, так и других 
+  производителей. Поскольку ни одна компания не может в одиночку полноценно провести 
+  внедрение Grid-вычислений в коммерческом секторе, IBM представила инициативу 
+  по построению экосистемы Grid Computing, охватывающей производителей ПО и бизнес-партнеров, 
+  которые помогут разрабатывать коммерческие решения Grid. К инициативе присоединились 
+  около четырех десятков компаний, строящих фундамент для разработки экосистемы 
+  IBM Grid. Недавно к ним примкнула и Cisco Systems (<a href="http://www.cisco.com">http://www.cisco.com</a>), 
+  которая совместно с IBM будет разрабатывать расширенные Grid-сервисы для сетей 
+  хранения данных SAN. 
+<p>Разумеется, IBM не единственная компания, активно продвигающая идею Grid-вычислений. 
+  Деятельность компании Hewlett-Packard (<a href="http://www.hp.com">http://www.hp.com</a>) 
+  в области Grid Computing - это не только участие в инициативах по стандартизации 
+  ПО Grid, но и поддержка соответствующих программных технологий на аппаратных 
+  платформах НР (высокопроизводительных серверах, кластерах и системах хранения), 
+  а также альянсы с производителями коммерческих продуктов для реализации идей 
+  Grid Computing, участие в научных проектах и т. д. 
+<p>Кроме того, HP предлагает собственную концепцию технологии Grid Computing - UDC (Utility Data Center). Она подразумевает коммерческое использование Grid Computing как технологии, которая обеспечивает минимальную нагрузку на средства передачи данных, решает проблемы защиты, распараллеливания баз данных и т. д.
+<p>Нewlett-Рackard обеспечивает поддержку Globus Toolkit на своих платформах под управлением операционных систем HP-UX, Linux и Tru64 Unix. Кроме того, специалисты HP находят перспективной интеграцию технологий Grid и Web-сервисов в соответствии с открытой архитектурой OGSA. Корпорация участвует в разработке OGSA и будет поддерживать эту архитектуру на своих системах. Она также предлагает широкий спектр услуг консалтинга для анализа возможностей, проектирования и развертывания Grid-решений на различных компьютерных платформах.
+<p>Технология управления распределенными ресурсами - важная составляющая и в стратегии 
+  N1 корпорации Sun Microsystems (<a href="http://www.sun.com">http://www.sun.com</a>), 
+  направленной прежде всего на обеспечение управляемости информационной инфраструктуры 
+  в условиях возрастающей нагрузки и увеличения числа компонентов сети. На сегодня 
+  в Sun Microsystems накоплен значительный опыт динамического управления вычислительными 
+  ресурсами внутри компьютера. В свою очередь применение технологий Grid позволяет 
+  строить систему управления географически распределенными вычислительными ресурсами. 
+  Тем не менее в Sun рассматривают технологии Grid Computing как дополнение к 
+  существующему ряду продуктов корпорации - этот ряд включает мощные SMP-серверы 
+  с масштабируемой операционной системой Solaris, средства для построения вычислительных 
+  кластеров HPC Cluster Tools и пакет управления вычислительными ресурсами Solaris 
+  Resource Manager. Кстати, Sun эксплуатирует собственную Grid-сеть, объединяющую 
+  более 6000 процессоров и 210 Тбайт данных. Каждый день эта система обсчитывает 
+  десятки тысяч задач электронного проектирования, при этом средняя загрузка процессоров 
+  составляет около 98%. 
+<p>Sun Microsystems различает три основные категории Grid-сетей (рис. 3):
+<ul>
+  <li>относительно простая вычислительная сеть, предоставляющая ресурсы пользователям 
+    одной рабочей группы, одного департамента, одного проекта (Cluster Grid);</li>
+  <li>вычислительная сеть корпоративного уровня, охватывающая несколько групп, 
+    работающих над различными проектами (Enterprise Grid);</li>
+  <li>сеть, в которой участвуют несколько независимых организаций, предоставляющих 
+    друг другу свои ресурсы. Эти организации установили определенные правила обмена 
+    ресурсами, определенные протоколы взаимодействия (Global Grid). </li>
+</ul>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2003/Grid/ris3.gif" alt=Fig.3></td></tr>
+<tr><td valign="bottom">Рис. 3. Категории Grid-сетей.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Основные программные продукты Sun Microsystems для Grid Computing были анонсированы еще в сентябре 2000 года, после приобретения компании Gridware, которая к тому времени уже в течение пяти лет занималась разработками в этой области. Продукт Sun Grid Engine предназначен в первую очередь для сетей среднего размера, охватывающих отдел или небольшое предприятие. Данный продукт распространяется бесплатно, его можно загрузить с Web-сайта корпорации. Если же у предприятия возникает необходимость связать несколько таких сетей воедино и управлять политиками использования корпоративной сети Grid Computing, то необходимо расширить такое решение, приобретя коммерческий продукт Sun Grid Engine Enterprise Edition.
+<p>Сейчас в мире несколько тысяч систем используют ПО Sun Microsystems. В числе их владельцев - академические и учебные организации, например, суперкомпьютерный центр в Сан-Диего, суперкомпьютерный центр штата Огайо, Университет Эдинбурга, а также крупные коммерческие пользователи.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8546.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Технология Grid Computing
+</a><br><a href="detail.php@ID=8546.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Олег Таковицкий 
+В науке, технике и бизнесе сейчас растет число задач, требующих сверхмощных вычислительных ресурсов и высокопроизводительных сетей&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8546.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8546&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='07b653b2f130e084d2ab45627dd80507'><img src='../bitrix/tools/captcha.php@captcha_code=07b653b2f130e084d2ab45627dd80507' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

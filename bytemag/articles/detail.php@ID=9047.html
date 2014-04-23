@@ -1,0 +1,497 @@
+<HTML>
+<HEAD>
+<title>Открытые ключи - опасности и защита от них
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Сергей Панасенко, начальник отдела разработки ПО фирмы &amp;quot;Анкад&amp;quot; develop@ancud.ru Электронная цифровая подпись (ЭЦП), как и любые криптографические алгоритмы с открытым ключом (см. &amp;quot;Современные алгоритмы шифрования&amp;quot;" />
+<meta name="description" content="Сергей Панасенко, начальник отдела разработки ПО фирмы &amp;quot;Анкад&amp;quot; develop@ancud.ru Электронная цифровая подпись (ЭЦП), как и любые криптографические алгоритмы с открытым ключом (см. &amp;quot;Современные алгоритмы шифрования&amp;quot;" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398078867','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm9047' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=9047&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm9047"].SHOW_IMAGE.value="N"; document.forms["PrintForm9047"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm9047"].SHOW_IMAGE.value="Y"; document.forms["PrintForm9047"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(9047);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=9047.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=9047.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(9047);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6258.html'>Безопасность</a><br /></p><a href='../numbers/index.php@ID=11501.html'>№7 (71), июль 2004</a><h1>Открытые ключи - опасности и защита от них
+</h1>10.07.2004<p></p><DIV class='article-text'><p><i>Сергей Панасенко</i>, <br>
+  начальник отдела разработки ПО фирмы &quot;Анкад&quot;
+<br>
+  <a href="http://www.bytemag.ru/articles/develop@ancud.ru">develop@ancud.ru</a> 
+<p>Электронная цифровая подпись (ЭЦП), как и любые криптографические алгоритмы 
+  с открытым ключом (см. <a href="http://www.bytemag.ru/Article.asp?id=1945">&quot;Современные алгоритмы 
+  шифрования&quot;</a>, &quot;BYTE/Россия&quot; № 8&#39;2003 и <a href="http://www.bytemag.ru/Article.asp?id=2398">&quot;Цифровая 
+  подпись - как это делается&quot;</a>, &quot;BYTE/Россия&quot; № 1&#39;2004), удобна для распределения 
+  ключей &quot;на лету&quot;. Такие алгоритмы защиты особенно актуальны при работе через 
+  Интернет: свой открытый ключ можно послать любому адресату непосредственно перед 
+  отправкой ему подписанного сообщения (или, что еще удобнее, разместить на каком-либо 
+  ресурсе Сети). 
+<p>Но вспомним тезис, претендующий сегодня на то, чтобы быть аксиомой: &quot;Принципы доступности, удобства, быстродействия и функциональности вычислительной системы антагонистичны принципам ее безопасности&quot; (Медведовский И. Д., Семьянов П. В., Леонов Д. Г. Атака на Internet. М.: ДМК, 2000). Иными словами, за удобство работы в сети придется заплатить существенным ослаблением безопасности. Увы, это утверждение справедливо практически повсеместно. И при использовании ЭЦП, и при асимметричном шифровании появляется риск подмены открытых ключей. Правда, последствия его для данных методов защиты различны: для ЭЦП это подделка подписи, для асимметричного шифрования - возможность расшифровать сообщение, предназначенное легальному владельцу секретного ключа, парного подменяемому.
+<p>Сценарий таких действий прост (рис. 1). Предположим, есть два пользователя i и j, каждый из которых имеет по паре ключей, при этом у пользователя j есть открытый ключ Kpi для проверки ЭЦП пользователя i. Далее предположим, что злоумышленник может перехватить этот ключ Kpi в процессе его передачи от пользователя i пользователю j или получить доступ к этому ключу, хранящемуся у пользователя j. В любом случае злоумышленник считает из ключа его реквизиты (например, фамилию владельца, место работы и т. д.) и создаст свою пару ключей - Ksi&#39; и Kpi&#39;, в которые запишет известные ему реквизиты пользователя i. Затем он подменит посланный пользователю j открытый ключ Kpi своим фальшивым открытым ключом Kpi&#39;, имеющим реквизиты пользователя i.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2004/panas_sert/ris1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Подмена открытого ключа.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Любое сообщение злоумышленник будет подписывать своим секретным ключом Ksi&#39; (причем для пользователя j эта подпись выглядит так, как если бы она была поставлена пользователем i). Подпись такого сообщения, проверяемая этим пользователем j, будет верна, поскольку ему был послан фальшивый ключ Kpi&#39;, парный столь же фальшивому ключу Ksi&#39;.
+<p>Подмена открытого ключа раскроется только после того, как настоящий пользователь i пошлет пользователю j сообщение, подписанное истинным ключом Ksi. Но ситуация может находиться под контролем злоумышленника достаточно долго, тем более что он вполне может заранее оценить необходимое время сеансов связи, проанализировав интенсивность документооборота между пользователями i и j, а также рассчитать время, в течение которого подмена ключа не будет обнаружена. Проблема также существенно усугубляется, если злоумышленник имеет техническую возможность перехватывать сообщения, посылаемые пользователем i пользователю j.
+<p>Описанная угроза успешно устраняется путем сертификации открытых ключей. В настоящее время наиболее популярны два основных способа сертификации: двухуровневая и так называемая инфраструктура открытых ключей.
+<h3>Двухуровневая сертификация </h3>
+<p><i>Сертификация ключа</i> - это подтверждение подлинности открытого ключа и 
+  хранимой совместно с ним служебной информации, в том числе и о его принадлежности. 
+  Данная процедура обычно выполняется путем вычисления ЭЦП сертифицируемого ключа 
+  и его реквизитов с помощью специального секретного ключа-сертификата, доступного 
+  только сертификационному центру (уполномоченному на данную операцию лицу или 
+  организации). 
+<p>Иными словами, сертификация открытого ключа - это по сути &quot;подписывание&quot; открытого ключа электронной подписью, вычисленной на секретном ключе сертификационного центра (рис. 2).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2004/panas_sert/ris2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Сертификация открытых ключей.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>ЭЦП открытого ключа в системах с сертификацией ключей - это неотъемлемая часть 
+  ключа. Открытый ключ без ЭЦП считается недействительным и не должен использоваться 
+  ни в качестве ключа проверки ЭЦП, ни для шифрования сообщений в криптосистемах 
+  асимметричного шифрования. При этом открытый ключ в паре с сертифицирующей его 
+  ЭЦП часто называют просто <i>сертификато</i>м, или <i>сертификатом ключа</i>. 
+<p>Открытый ключ сертификационного центра (парный секретному, на котором проводится 
+  сертификация других открытых ключей) используется для проверки целостности сертифицированных 
+  открытых ключей. Его обычно называют <i>ключом-сертификато</i>м. 
+<p>Чтобы обеспечить успешную защиту от подмены открытых ключей с помощью их сертификации, необходимо придерживаться следующих несложных правил.
+<p>Правило первое: каждый раз, верифицируя ЭЦП какую-либо информацию, <b>необходимо 
+  контролировать соответствие сертификации открытого ключа</b>, с помощью которого 
+  эта ЭЦП проверяется. Если целостность открытого ключа нарушена (т. е. сертифицирующая 
+  ЭЦП открытого ключа неверна), следует считать ЭЦП информации недостоверной, 
+  а информацию - подложной, независимо от результатов верификации той ЭЦП, которая 
+  относится к информации. Обычно по факту обнаружения открытого ключа с фальшивой 
+  сертифицирующей ЭЦП в организациях проводится расследование причин его появления. 
+<p>Правило второе: <b>защита от подмены ключа-сертификата</b>, с помощью которого 
+  проверяется ЭЦП остальных открытых ключей. Обычно с этой целью ключ-сертификат 
+  хранят на том же персональном носителе, что и секретный ключ пользователя. 
+<p>Аналогичным образом необходимо контролировать целостность и принадлежность открытых ключей и при асимметричном шифровании.
+<p>Возможны два варианта двухуровневой сертификации: когда имеется третья доверенная сторона и когда она отсутствует.
+<h4>Отсутствие доверенной стороны </h4>
+<p>Рассмотрим криптосистему, в которой все пользователи равноправны и используют ЭЦП для контроля авторства и целостности сообщений или документов (рис. 3). Предположим, в системе появился и зарегистрировался новый пользователь, который рассылает всем остальным свой открытый ключ для проверки ЭЦП его сообщений. Каждый из старых пользователей обязан сделать следующее:
+<ul><li>подписать полученный открытый ключ нового пользователя своим секретным ключом и только после этого записать его, например, на жесткий диск ПК;
+<li>используя открытый ключ нового пользователя, каждый раз проверять его ЭЦП с помощью собственного открытого ключа, который в данном случае играет роль ключа-сертификата.</ul>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2004/panas_sert/ris3.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Сертификация в отсутствие доверенной стороны.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Естественно, для двустороннего обмена заверенными сообщениями новый пользователь обязан выполнять аналогичные действия с открытыми ключами старых пользователей.
+<p>К сожалению, данному варианту сертификации присущи серьезные недостатки, первый из которых ставит под сомнение возможность распределения открытых ключей &quot;на лету&quot;. Дело в том, что никакой защиты от перехвата открытых ключей нет - ведь их сертификация выполняется уже после получения. Поэтому открытые ключи следует передавать из рук в руки. Передача их по сети возможна, но при этом необходимо по обычной (не электронной) почте отправить сопроводительное письмо.
+<p>Вся защита открытых ключей от подмены перекладывается на ключ-сертификат, которым служит собственный открытый ключ. Поэтому последний должен храниться на том же персональном ключевом носителе, где и секретный ключ пользователя. Если же злоумышленник сумеет подменить ключ-сертификат, могут пострадать и остальные открытые ключи, сертификация которых проверялась с его помощью.
+<p>В принципе при небольшом числе пользователей сети все открытые ключи остальных пользователей можно записать на персональный ключевой носитель (если на нем достаточно памяти). В этом случае их можно не сертифицировать, если криптосистема позволяет применять несертифицированные открытые ключи.
+<p>Как уже упоминалось выше, допускается передача открытых ключей и по недоверенной связи (например, по электронной почте). Но тогда одновременно с открытым ключом обязательно нужно послать сопроводительное письмо по доверенной связи (например, заказным письмом). В нем обычно содержится распечатка всего ключа (включая любую хранящуюся в файле ключа дополнительную информацию - реквизиты пользователя, срок действия и т. д.), а также список полномочий пользователя (какого рода документы данный пользователь имеет право подписывать).
+<p>После получения открытого ключа (по электронной почте) и сопроводительного письма пользователь визуально или с помощью специального ПО сравнивает соответствие образа присланного ключа с записанным в сопроводительном письме. При любом несовпадении присланный ключ считается недействительным. Если несовпадений нет, проводится сертификация присланного открытого ключа (как описано выше).
+<h4>Конфликтные ситуации </h4>
+<p>Предположим, что описанная выше схема не помогла и обнаружился документ, ЭЦП которого при проверке сертифицированным открытым ключом Kpi (см. рис. 3) пользователем j оказалась верна, однако пользователь i впоследствии стал утверждать, что его ЭЦП под данным документом поддельная. Как разрешить данную конфликтную ситуацию?
+<p>Прежде всего ЭЦП спорного документа еще раз проверяется открытым ключом Kpi. Если ЭЦП неверна, то считается, что виноват пользователь j, поскольку он либо неправильно интерпретировал результат первой проверки ЭЦП, либо допустил двойную подмену хранящегося у него Kpi (т. е. сначала на фальшивый ключ Kpi&#39;, а потом обратно). Если ЭЦП все-таки верна, проверяется соответствие хранящегося у пользователя j ключа Kpi его распечатке в сопроводительном письме. Если ключи не совпадают, то опять-таки виноват пользователь j, поскольку допустил подмену хранящегося у него открытого ключа Kpi. В противном случае считается, что виноват пользователь i, поскольку он либо допустил несанкционированное использование его секретного ключа Ksi злоумышленником, либо просто отказывается от легально подписанного им документа.
+<p>Как видно, при использовании сертифицированных открытых ключей достаточно легко найти виновника конфликтной ситуации. Обычно различные средства ЭЦП сопровождаются документацией, разъясняющей пользователям порядок безопасного хранения ключей, их сертификации, разбора конфликтных ситуаций и т. д.
+<h4>Наличие доверенной стороны </h4>
+<p>Предположим, что существует некая третья доверенная сторона - <i>центр сертификации</i> 
+  ключей (часто его называют также СЦ - сертификационный центр, или УЦ - удостоверяющий 
+  центр; последний термин, в частности, используется в отечественном законе об 
+  ЭЦП). Назначение СЦ - сертификация открытых ключей всех пользователей системы 
+  и распространение сертифицированных открытых ключей. 
+<p>Рассмотрим процесс сертификации и распространения ключей через СЦ (рис. 4), воспользовавшись тем же примером, в котором в криптосистему добавляется новый пользователь. Последний прежде всего создает персональную дискету с собственными секретным и открытым ключами и сопроводительное письмо (аналогичное тому, что и при сертификации без СЦ). Сопроводительное письмо вместе с открытым ключом по электронной почте пересылается в СЦ. Кроме того, сопроводительное письмо направляется в СЦ обычной почтой или с курьером. В СЦ проверяется идентичность открытого ключа, пришедшего по электронной почте, тому, что находится в сопроводительном письме.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2004/panas_sert/ris4.gif" alt=Fig.4></td></tr>
+<tr><td valign="bottom">Рис. 4. Сертификация открытых ключей в СЦ.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>После успешной проверки СЦ рассылает сертифицированный открытый ключ нового пользователя и его сопроводительное письмо (подписанное секретным ключом СЦ) всем старым пользователям системы. Такая рассылка из СЦ вполне допустима по электронной почте, поскольку у всех зарегистрированных ранее пользователей есть ключ-сертификат, с помощью которого они могут проверить подпись полученной из СЦ информации.
+<p>В завершение процедуры СЦ передает новому пользователю по электронной почте сертифицированные открытые ключи всех пользователей, сертифицированные файлы с полномочиями пользователей и ключ-сертификат. Кроме того, обычной почтой или с курьером ему посылается сопроводительное письмо, содержащее распечатку ключа-сертификата. Пользователь сверяет соответствие ключа-сертификата сопроводительному письму, затем проверяет с помощью ключа-сертификата ЭЦП открытых ключей всех пользователей и файлов их полномочий. Начинать использовать ЭЦП в системе разрешается только при положительном результате всех проверок.
+<h4>Центр генерации ключей </h4>
+<p>В описанном выше случае предполагается, что пары ключей генерируются пользователями 
+  самостоятельно. Однако их можно создавать и централизованно - в <i>центре генерации 
+  ключей</i> (ЦГК). Такой центр чаще всего применяется, если работа с ЭЦП происходит 
+  в криптосистеме, действующей в рамках одной организации. 
+<p>В функции ЦГК обычно входят генерация ключей, рассылка секретных ключей пользователям (только в зашифрованном виде или передачей из рук в руки), а также передача открытых ключей в СЦ. Часто СЦ и ЦГК бывают совмещены (представляют собой одно рабочее место).
+<p>Однако следует помнить, что генерация и сертификация ключей - это такие операции, неправильное выполнение которых может пагубно отразиться на безопасности всей системы. Поэтому рабочее место, где размещен СЦ и/или ЦГК, должно соответствовать ряду требований. Во-первых, во избежание вмешательства злоумышленника в процесс генерации ключей или перехвата ключей следует физически отделить данный компьютер от любых сетей. Во-вторых, необходимо установить на нем защиту от несанкционированного доступа и обеспечить контроль целостности запускаемых программ (чтобы злоумышленник не сумел внедрить на нем программные закладки).
+<p>Очевидно, что двухуровневая сертификация не лишена некоторых недостатков. Этот подход исключает безопасное применение открытых ключей пользователей, не входящих в замкнутую криптосистему, - необходима процедура регистрации, требующая передачи информации по доверенным каналам связи (например, заказное письмо) или &quot;из рук в руки&quot;. Кроме того, необходимо организовать защиту ключа-сертификата от подмены.
+<p>Подчеркнем, что описанные в статье схемы - отнюдь не единственно возможные. Существует немало других вариантов подобной сертификации; необходимо лишь убедиться в уровне безопасности того способа, который предполагается использовать, и в его соответствии конкретной криптосистеме.
+<h3>Инфраструктура открытых ключей </h3>
+<p>Инфраструктура открытых ключей (Public Key Infrastructure, PKI) представляет собой набор программных агентов и правил, предназначенных для управления ключами, политикой безопасности и собственно обменом защищенными сообщениями. Компоненты структуры PKI (рис. 5) имеют следующее назначение.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2004/panas_sert/ris5.gif" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Структура PKI.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><i>Каталог сертификатов</i> - это общедоступное хранилище сертификатов пользователей, 
+  каждый из которых состоит из открытого ключа, заверенного ЭЦП сертификационного 
+  центра, и набора дополнительной информации (реквизиты пользователя и т. д.). 
+  Существует общепризнанный международный формат сертификатов, описанный в стандарте 
+  X.509 (его можно найти по адресу <a href="http://www.ietf.org/rfc/rfc2459.txt">http://www.ietf.org/rfc/rfc2459.txt</a>). 
+<p><i>Центр сертификации</i> (Certification Authority, CA) - организационная единица, 
+  назначение которой - сертификация открытых ключей пользователей (т. е. получение 
+  из открытого ключа сертификата в формате, определенном в X.509) и их опубликование 
+  в каталоге сертификатов. 
+<p><i>Центр регистрации</i> (Registration Authority, RA) - другая организационная 
+  единица, обеспечивающая регистрацию пользователей системы. 
+<p><i>Пользователь</i> в терминах структуры PKI - это владелец какого-либо сертификата 
+  (такой пользователь подлежит регистрации) или любой пользователь, запрашивающий 
+  сертификат, хранящийся в каталоге сертификатов. 
+<p>Как известно, открытые ключи вычисляются по определенным алгоритмам из соответствующих 
+  им секретных ключей и используются в основном для следующих целей:
+<ul>
+  <li>проверки ЭЦП данных или другого открытого ключа;
+  <li>шифрования данных, направляемых владельцу секретного ключа, парного открытому: 
+    расшифровать данные можно только с использованием данного секретного ключа;
+  <li>вычисления ключа парной связи с целью последующего шифрования или расшифровывания данных с помощью алгоритма симметричного шифрования.</ul>
+<p>Во всех этих случаях совершенно необходимо подтверждение целостности и установление принадлежности открытого ключа конкретному пользователю. Некая третья доверенная сторона (Trusted Third Party, TTP), в данном случае CA, должна подтвердить, что владелец открытого ключа - это именно тот пользователь, информация о котором содержится в сертификате, а также что открытый ключ соответствует секретному ключу данного пользователя.
+<p>Таким образом, цифровой сертификат содержит три главные составляющие: информацию о пользователе - владельце сертификата, открытый ключ пользователя и сертифицирующую ЭЦП двух предыдущих составляющих, вычисленную на секретном ключе CA.
+<p>PKI подразумевает, что все сертификаты конкретной PKI (а свою PKI может иметь любая организация или компания) организованы в иерархическую структуру (пример иерархии сертификатов двух PKI показан на рис. 6). Иерархическая схема PKI предусматривает существование четырех типов сертификатов.
+<p><i>Сертификат пользователя</i> - описан выше. 
+<p><i>Сертификат CA</i> - должен быть доступен для проверки ЭЦП сертификата пользователя 
+  и, в свою очередь, должен быть подписан секретным ключом CA верхнего уровня. 
+  При этом данную ЭЦП (подписанную секретным ключом CA верхнего уровня) также 
+  следует проверять, а потому необходимо, чтобы был доступен сертификат CA верхнего 
+  уровня, - и так далее. 
+<p><i>Самоподписанный сертификат</i> - корневой для всей PKI. Это по определению 
+  доверенный сертификат: если результат проверки цепочки сертификатов CA показывает, 
+  что один из них подписан корневым секретным ключом, процесс проверки ЭЦП сертификатов 
+  на этом завершается. 
+<p><i>Кросс-сертификат</i> можно назвать средством расширения, поскольку он позволяет 
+  распространить действие конкретной PKI на другую путем взаимоподписания корневых 
+  сертификатов двух PKI. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2004/panas_sert/ris6.gif" alt=Fig.6></td></tr>
+<tr><td valign="bottom">Рис. 6. Иерархия сертификатов.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Процедура проверки ЭЦП электронного документа происходит в системе PKI следующим образом. Сначала проверяется ЭЦП конкретного документа, а затем ЭЦП сертификата, с помощью которого проверялась предыдущая ЭЦП. Последняя проверка повторяется в цикле до тех пор, пока цепочка сертификатов не приведет к корневому.
+<p>ЭЦП документа признается верной лишь в том случае, если верна не только она, но и все проверяемые в данном процессе ЭЦП сертификатов. При обнаружении неверной ЭЦП любого из сертификатов неверными считаются все ЭЦП, проверенные на предыдущих шагах.
+<p>Заметим, что корневых сертификатов может быть несколько: каждая организация (или организационная единица) вправе устанавливать свои корневые сертификаты (один или несколько). Стандартом предусмотрено и наличие корневого сертификата для всего сообщества пользователей Интернета.
+<h3>Формат электронных сертификатов X.509 </h3>
+<p>В настоящее время для сертификации открытых ключей применяется стандарт X.509 версии 3. В предыдущей, второй, версии отсутствовали расширения, а в версии 1 - еще и ряд дополнительных полей. В X.509 версии 3 определено, что в цифровом сертификате обязательно присутствие следующих полей:
+<ul><li>номер версии формата, которому соответствует сертификат;
+<li>серийный номер сертификата - уникальный номер, присваиваемый каждому сертификату, выпускаемому конкретным CA;
+<li>идентификатор CA, который выпустил данный сертификат (т.е. сгенерировал пару ключей и подписал открытый ключ). Данное поле в паре с предыдущим образуют уникальный идентификатор сертификата;
+<li>срок действия сертификата, указывающий диапазон дат начала и окончания действия данного сертификата;
+<li>персональные данные пользователя, которому принадлежит сертификат, и собственно открытый ключ пользователя;
+<li>расширения формата, код алгоритма, примененного при вычислении сертифицирующей ЭЦП, и сертифицирующая ЭЦП.</ul>
+<p>Все поля сертификата записываются по принципу TLV (tag-length-value - код-длина-идентификатор), который в настоящее время широко применяется для различных форматных записей, особенно в области коммуникаций.
+<p>Отметим также, что в третьей версии X.509 указано, что не следует более издавать сертификаты версии 2, а версия 1 сохраняется только для обеспечения совместимости с существующими приложениями, которые используют сертификаты X.509 данной версии.
+<h4>Расширения сертификатов </h4>
+<p>Расширения сертификатов версии 3 существенно увеличивают возможности обработки сертификатов, позволяя уточнить правила и области применения конкретного сертификата и задать необходимые параметры. Приведем лишь основные расширения, предусмотренные стандартом.
+<p>Идентификатор ключа CA дает возможность указать конкретный секретный ключ центра сертификации, на котором вычислялась ЭЦП данного сертификата, из существующего набора ключей CA (каждый CA может иметь несколько ключей).
+<p>Назначение ключа характеризует область его применения. Фактически в данное поле записана битовая маска, которая определяет одну или несколько возможных целей использования данного сертификата и парного ему секретного ключа. В число возможных вариантов входят вычисление и проверка ЭЦП, шифрование данных, шифрование других ключей, сертификация ключей и т. д.
+<p>Альтернативные данные пользователя, как явствует из названия, содержат любую альтернативную информацию о владельце сертификата, например, электронный и IP-адрес и т. д. Значение поля данного расширения может присутствовать наравне с полем &quot;Персональные данные пользователя&quot; основного формата, использоваться вместо него или отсутствовать вообще.
+<p>Альтернативное имя CA относится к CA, выпустившему сертификат.
+<p>В дополнение к указанным основным расширениям формата стандарт X.509 устанавливает ряд других. Более того, любая PKI-система (например, инфраструктура открытых ключей конкретной организации) может вводить свои расширения, в зависимости от конкретных условий применения цифровых сертификатов.
+<h4>Списки отозванных сертификатов </h4>
+<p>Любой сертификат может быть отозван раньше времени окончания срока его действия (что означает запрет на его использование в дальнейшем), как минимум, по одной из двух причин: скомпрометирован соответствующий сертификату секретный ключ или изменились персональные данные владельца сертификата.
+<p>Стандарт X.509 предусматривает, что CA регулярно публикуют списки отозванных сертификатов (Certificate Revocation List, CRL), если не используются иные методы приостановки действия сертификатов. CRL может быть и пустым, если в отзыве нет необходимости. Во избежание ложных отзывов сертификатов каждый CRL снабжается сертифицирующей ЭЦП CA, который его выпустил.
+<p>Любое PKI-ориентированное приложение в процессе проверки ЭЦП цепочки сертификатов (например, согласно описанному выше алгоритму проверки ЭЦП электронного документа) обязано также проверять отсутствие всех сертификатов проверяемой цепочки в текущих CRL. В случае обнаружения отозванного сертификата все ЭЦП, проверенные на предыдущих шагах, считаются неверными.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</A></b></li><li><b><A href='detail.php@ID=24095.html'>Сертифицированные системы обнаружения вторжений </A></b></li><li><b><A href='detail.php@ID=22469.html'>Новые технологии в Security operation center</A></b></li><li><b><A href='detail.php@ID=20887.html'>Агрессивность и мобильность: какие угрозы нас ждут в 2013-м</A></b></li><li><b><A href='detail.php@ID=20621.html'>Карты с дисплеем как новое средство защиты онлайн-банкинга</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=9047.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Открытые ключи - опасности и защита от них
+</a><br><a href="detail.php@ID=9047.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Сергей Панасенко, 
+  начальник отдела разработки ПО фирмы &quot;Анкад&quot;
+
+  develop@ancud.ru 
+Электронная цифровая подпись (ЭЦП), как и любые&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=9047.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=9047&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='019b85a53787254900be66b7903b224e'><img src='../bitrix/tools/captcha.php@captcha_code=019b85a53787254900be66b7903b224e' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

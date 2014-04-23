@@ -1,0 +1,454 @@
+<HTML>
+<HEAD>
+<title>Технология RAID DP
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="* По материалам компании Network Appliance. Традиционная технология RAID с одиночной проверкой четности защищает от сбоя одного жесткого диска, но если во время восстановления этого диска выйдет из строя еще один или произойдет" />
+<meta name="description" content="* По материалам компании Network Appliance. Традиционная технология RAID с одиночной проверкой четности защищает от сбоя одного жесткого диска, но если во время восстановления этого диска выйдет из строя еще один или произойдет" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082595','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6702' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6702&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6702"].SHOW_IMAGE.value="N"; document.forms["PrintForm6702"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6702"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6702"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6702);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6702.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6702.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6702);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11544.html'>№11 (75), ноябрь 2004</a><h1>Технология RAID DP
+</h1>10.11.2004<p></p><DIV class='article-text'><p><hr align="left" noshade width="40%">
+* По материалам компании Network Appliance. 
+<p>Традиционная технология RAID с одиночной проверкой четности защищает от сбоя 
+  одного жесткого диска, но если во время восстановления этого диска выйдет из 
+  строя еще один или произойдет некорректируемая ошибка чтения бита, не исключается 
+  даже полная потеря части данных RAID-массива или тома. Поскольку емкость современных 
+  дисков постоянно увеличивается, а вероятность возникновения ошибки в бите остается 
+  постоянной, то по мере появления все новых накопителей растет и риск неисправимых 
+  битовых ошибок, а в результате эффективность защиты у RAID с одиночной четностью 
+  оказывается недостаточной. Следующий уровень защиты данных с помощью RAID - 
+  это RAID с двойной четностью (RAID Double Parity). 
+<p>Обычный массив RAID с одиночной четностью защищает от одиночных ошибок (полного выхода из строя диска или ошибки чтения бита). В обоих случаях для восстановления данных используются данные и контрольные суммы с исправных дисков массива или тома. Если возникла ошибка чтения бита, то восстановление происходит практически мгновенно и массив или том не прекращают своей обычной работы. Но в случае неисправности диска нужно восстановить все его данные на запасном диске, поэтому до того, как эта операция завершится, массив или том остаются в незащищенном деградированном состоянии. Такая деградация - слабое место RAID с одиночной четностью, не соответствующее требованиям современных дисковых архитектур.
+<p>Дисковые архитектуры, как и другие компьютерные технологии, продолжают развиваться. По емкости сегодняшние диски на несколько порядков превосходят накопители тех времен, когда появились первые RAID-массивы. Однако рост емкости дисков не сопровождался улучшением их надежности, и, что еще более важно, вероятность однобитовых ошибок увеличивалась пропорционально емкости. Три этих фактора - большая емкость, тот же уровень надежности и увеличение числа однобитовых ошибок по мере появления все больших дисков - значительно снизили эффективность применения RAID с одиночной четностью для защиты данных.
+<p>С учетом того, что сегодня диски выходят из строя так же часто, как и тогда, когда технология RAID только начала использоваться для защиты данных, значение RAID сохраняется: если диск выходит из строя, то RAID просто восстанавливает его данные на запасном диске по контрольным данным и остальным дискам массива или тома. Но многократное увеличение емкости дисков с момента появления RAID привело к тому, что теперь восстановление данных с отказавшего диска происходит намного дольше (достаточно сравнить, например, время восстановления дисков емкостью 274 Гбайт и 36 Гбайт). Еще одна причина более медленного восстановления - это то, что сейчас часто используются диски самой большой емкости с интерфейсом ATA, которые работают медленнее SCSI-дисков и уступают им по надежности.
+<h3>Схемы защиты </h3>
+<p>Существуют различные варианты расширения RAID с одиночной четностью для защиты данных по мере роста емкости дисков. Один из них состоит в том, чтобы устанавливать диски минимальной емкости, ускоряя тем самым восстановление данных после сбоя, однако на практике этот подход затруднен по нескольким причинам. Во-первых, плотность размещения критически важна для центров обработки данных с ограниченным пространством, а использование маленьких дисков означает уменьшение плотности хранения на единицу площади. Во-вторых, производители систем хранения могут использовать только те продукты, которые выпускают производители дисков, а диски малой емкости уже трудно найти на рынке.
+<p>Другой вариант защиты данных на больших дисках с помощью RAID с одиночной четностью более практичен, но после появления RAID DP и он по ряду причин стал менее привлекателен. Суть его в том, что, ограничивая размер массивов или томов, можно сократить время восстановления. Точно так же, как большой диск восстанавливается дольше, чем маленький, массив или том, построенный из большего числа дисков, потребует больше времени на восстановление данных на одном вышедшем из строя диске, чем массив или том с меньшим числом дисков. Однако у небольших массивов есть два неустранимых недостатка - во-первых, выход из строя одного диска в небольшом массиве или томе заметно уменьшает полезную емкость и увеличивает общую стоимость владения (TCO); во-вторых, производительность таких массивов и томов обычно хуже, что негативно отражается на работе пользователей.
+<p>Наиболее надежная реализация RAID с одиночной четностью - это RAID 1, или зеркалирование. При использовании RAID 1 строится зеркальная копия всех данных массива или тома на другом массиве (томе). Хотя зеркалирование по RAID 1 обеспечивает максимальную защиту от сбоев дисков, стоимость внедрения этого варианта очень высока, поскольку требуется вдвое больше емкости. Выше уже говорилось, что использование небольших массивов и томов для улучшения отказоустойчивости приводит к росту TCO из-за того, что уменьшается полезная емкость на каждый потраченный доллар. Так что с точки зрения совокупной стоимости владения зеркалирование RAID 1, требующее удвоения емкости, - это неоптимальное решение.
+<h3>Защита данных с помощью RAID DP </h3>
+<p>Итак, в нынешних условиях увеличение емкости диска ухудшает защиту данных, 
+  поэтому покупатели и аналитики требуют от производителей нового, более эффективного 
+  и доступного по цене решения, улучшающего надежность RAID. Учитывая эти проблемы, 
+  компания Network Appliance (NetApp, <a href="http://www.netapp.com">http://www.netapp.com</a>) 
+  разработала новый тип RAID под названием RAID DP (RAID Double Parity), значительно 
+  улучшающий защиту от отказов дисков по сравнению с обычным RAID (он используется 
+  сейчас во всех линейках систем хранения Network Appliance). Если сравнивать 
+  показатели среднего времени между потерей данных (Standard Mean Time To Data 
+  Loss, MTTDL), то при использовании одних и тех же дисков надежность у RAID DP 
+  в 10 000 лучше, чем у обычного RAID. При этом RAID DP обеспечивает значительно 
+  более высокий уровень защиты по сравнению с RAID 1, но по цене RAID 4. С точки 
+  зрения TCO RAID DP - это самый выгодный вариант построения систем хранения с 
+  высокой надежностью. 
+<p>Варианты RAID, которые использует NetApp, - это модификация уровня RAID 4, при котором данные записываются в горизонтальные ряды и для каждого ряда вычисляется контрольная сумма, хранимая на специальном диске. Тем не менее в модифицированном NetApp RAID 4, как и в других традиционных вариантах RAID, используется схема с одиночной четностью, не способная обеспечить защиту от сбоев нескольких дисков.
+<p>Хорошо известно, что обычно проверка четности повышает отказоустойчивость, а RAID с одиночной четностью улучшает защиту данных. С учетом хорошей репутации RAID с одиночной четностью концепция RAID с двойной четностью представляется более привлекательной схемой защиты, что показывает приведенный выше пример с MTTDL. Но что же представляет собой RAID DP?
+<p>Если говорить упрощенно, в RAID DP добавляется второй диск для записи контрольных сумм четности для каждой группы RAID в томе. Группа RAID - это основание, на котором строятся тома. Каждая обычная группа NetApp RAID 4 состоит из нескольких дисков с данными и одним диском четности с контрольными суммами, а тома строятся из одной или нескольких групп RAID 4. Если диск четности тома RAID 4 хранит контрольные суммы для строк дисков в группе RAID 4, то на дополнительный диск четности RAID DP записываются контрольные суммы четности, вычисляемые по диагонали для дисков группы RAID DP. При таком двойном вычислении контрольной суммы (традиционной по горизонтали и дополнительной по диагонали) защита данных обеспечивается даже при выходе из строя двух дисков из одной группы RAID.
+<p>RAID DP по-прежнему применяет традиционную структуру RAID 4 с вычислением четности по горизонтали, т. е. реализация RAID 4 в системах хранения NetApp при переходе к RAID DP не меняется. Тот же самый процесс, при котором данные записываются по горизонтальным рядам и четность вычисляется для каждого ряда, в RAID DP служит исходным элементом двойной четности. При выходе одного диска из строя либо при ошибке чтения (из-за дефектного блока) или однобитовой ошибке данные восстанавливаются с помощью обычного RAID 4, механизм RAID DP не используется. В этом случае четность по диагонали RAID DP просто вводит дополнительный уровень защиты.
+<h4>Контроль четности в RAID 4 </h4>
+<p>Чтобы лучше понять принципы RAID DP и двойной проверки четности, рассмотрим схему 1, которая иллюстрирует работу горизонтальной проверки четности, используемой в традиционных решениях NetApp RAID 4. На ней показана традиционная группа RAID 4 с проверкой четности по рядам для группы из четырех дисков с данными (первые четыре колонки, обозначенные буквой D) и один диск для хранения контрольной суммы проверки четности по рядам (последняя колонка P). Ряды состоят из стандартных блоков по 4 Кбайт, как в традиционной для NetApp реализации RAID 4. Второй ряд заполнен выборочными данными из каждого 4-Кбайт блока и контрольной суммой четности, рассчитанной для данных в ряд, которая хранится в соответствующем блоке диска четности. В данном случае контрольная сумма четности равна сумме значений в каждом горизонтальном блоке (3 + 1 + 2 + 3 = 9). На практике четность вычисляется с использованием операции &quot;исключающего ИЛИ&quot; (XOR), но суммирование устроено достаточно просто и хорошо подходит для целей данного примера.
+<p><img src="../images/byte_archive/images/No11_2004/RAID/ris1.gif" alt=Scheme1><br>Схема 1
+<p>Если произошел одиночный сбой и нужно восстановить данные, выполняется процесс, обратный вычислению четности. Например, если выйдет из строя первый диск, то RAID 4 восстановит значение в первой колонке, равное 3, путем вычитания из контрольной суммы значений для остальных дисков (9 - 3 - 2 - 1 = 3). Этот пример восстановления с помощью RAID с одиночной точностью поможет понять, как устроена защита данных от множественных ошибок.
+<h4>Двойной контроль в RAID DP </h4>
+<p>На схеме 2 к существующей группе RAID 4 добавлены одна диагональная полоска (синие блоки) и второй диск четности DP (шестая колонка). Из схемы 2 видно, что RAID DP - это частный случай основного решения RAID 4 с горизонтальной четностью.
+<p><img src="../images/byte_archive/images/No11_2004/RAID/ris2.gif" alt=Scheme2><br>Схема 2
+<p>Контрольная сумма четности по диагонали вычисляется по тому же алгоритму XOR, что и выше, и хранится на втором диске четности (1 + 2 + 2 + 7 = 12). Отметим, что диагональная полоска включает контрольную сумму четности по рядам в диагональную контрольную сумму четности. Механизм обработки дисков RAID DP такой же, как и в обычном RAID 4, включая диски с данными и диск четности. Из схемы 3 видно, как добавляются к контрольной сумме остальные данные для каждого блока и создаются соответствующие контрольные суммы четности по рядам и диагональным полоскам.
+<p><img src="../images/byte_archive/images/No11_2004/RAID/ris3.gif" alt=Scheme3><br>Схема 3
+<p>Из схемы 3 также видно, что в RAID DP диагональные полоски &quot;обертываются&quot; на краях конструкции четности по рядам. Однако две важные особенности RAID DP, позволяющие провести восстановление после сбоя двух дисков, не столь очевидны. Первая особенность заключается в том, что в каждую диагональную полоску не включается только один диск, причем для разных полосок эти пропущенные диски не совпадают. Как следствие, возникает вторая особенность - есть одна диагональная полоска, для которой контрольная сумма четности не вычисляется и не хранится на втором диске диагональной четности. В нашем примере эта диагональная полоска состоит из незакрашенных блоков. Далее из примера восстановления мы увидим, что пропуск одной диагональной полоски не влияет на способность RAID DP восстановить все данные в случае сбоя двух дисков.
+<p>Важно отметить, что те же особенности диагональной полоски RAID DP используются в реальных системах хранения, в которых в группы RAID объединены десятки дисков и миллионы горизонтальных рядов с данными образуют группы RAID 4. Проиллюстрировать работу RAID DP проще на небольшом примере, но подчеркнем, что восстановление групп RAID большого размера происходит точно так же, независимо от числа дисков в группе RAID.
+<p>Доказать, что RAID DP действительно восстанавливает все данные в случае сбоя двух дисков, можно двумя способами: используя математические теоремы и доказательства либо просто проследив, как будет происходить восстановление в случае сбоя двух дисков. Мы используем второй способ для доказательства правильности концепции двойной четности RAID DP.
+<h4>Восстановление RAID DP </h4>
+<p>Вернемся к схеме 3 и обсудим, что произойдет, если в нормально работающей группе RAID выйдут из строя два диска - в первых двух колонках диаграммы все данные будут утрачены (схема 4).
+<p><img src="../images/byte_archive/images/No11_2004/RAID/ris4.gif" alt=Scheme4><br>Схема 4
+<p>После такого сбоя RAID DP сначала ищет первое звено цепочки, с которой можно начать восстанавливать содержимое дисков. Допустим, восстановление решено начать с первого блока синей диагональной полоски. Напомним, что RAID 4 восстановит данные после сбоя одного диска только в том случае, когда все остальные диски продолжают работу. Из схемы 4 мы видим, что отсутствует только один из синих блоков. При наличии четырех из пяти элементов полоски RAID DP располагает всей информацией, необходимой для восстановления потерянного синего блока. На схеме 5 показано, как эти данные восстановлены на запасном диске, который устанавливается в режиме горячей замены.
+<p><img src="../images/byte_archive/images/No11_2004/RAID/ris5.gif" alt=Scheme5><br>Схема 5
+<p>Данные из потерянного синего диагонального блока восстанавливаются при помощи той же арифметики, которую мы использовали выше (12 - 7 - 2 - 2 = 1). После восстановления потерянной информации синей диагональной полоски начинается процесс восстановления по горизонтальной четности в рядах: восстанавливается серый блок слева от восстановленного синего блока (9 - 3 - 2 - 1 = 3), как показано на схеме 6.
+<p><img src="../images/byte_archive/images/No11_2004/RAID/ris6.gif" alt=Scheme6><br>Схема 6
+<p>Затем RAID DP идет по этой цепочке, определяя, нельзя ли восстановить другие диагональные полоски, и повторяет процесс для потерянного серого блока, расположенного ниже восстановленного сначала синего блока (схема 7).
+<p><img src="../images/byte_archive/images/No11_2004/RAID/ris7.gif" alt=Scheme7><br>Схема 7
+<p>После этого у RAID DP оказывается достаточно информации для восстановления по горизонтальной четности незакрашенного блока в первой колонке (схема 8).
+<p><img src="../images/byte_archive/images/No11_2004/RAID/ris8.gif" alt=Scheme8><br>Схема 8
+<p>Как отмечалось выше, белая диагональная полоска не сохраняется, и другие диагональные блоки в существующей цепочке восстановить нельзя. В таком случае RAID DP будет искать новую цепочку, с которой она начнет восстанавливать диагональные блоки. В данном примере она определяет, может ли восстановить отсутствующие данные в желтой диагональной полоске, как показано на схеме 9.
+<p><img src="../images/byte_archive/images/No11_2004/RAID/ris9.gif" alt=Scheme9><br>Схема 9
+<p>После восстановления потерянных диагональных блоков снова начинается процесс восстановления блоков горизонтальной полоски по контрольной сумме. Когда восстановлен потерянный блок из диагональной полоски, то уже имеется достаточно информации для восстановления отсутствующего блока из горизонтальной полоски (схема 10).
+<p><img src="../images/byte_archive/images/No11_2004/RAID/ris10.gif" alt=Scheme10><br>Схема 10
+<p>После восстановления блока в горизонтальной полоске начинается восстановление диагональной четности для восстановления отсутствующего диагонального блока. RAID DP может продолжать текущую цепочку в красной диагональной полоске, как видно из схемы 11.
+<p><img src="../images/byte_archive/images/No11_2004/RAID/ris11.gif" alt=Scheme11><br>Схема 11
+<p>После восстановления диагонального блока снова начинается восстановление по блокам в горизонтальных полосках с помощью горизонтальной четности. Схема 12 показывает, что с помощью RAID DP успешно восстанавливаются все данные, потерянные в результате отказа двух дисков.
+<p><img src="../images/byte_archive/images/No11_2004/RAID/ris12.gif" alt=Scheme12><br>Схема 12
+<p>Этот пример подробно демонстрирует работу RAID DP, но следует обратить внимание на следующие неочевидные особенности этой технологии. При отказе двух дисков RAID DP автоматически повышает приоритет процессов восстановления, чтобы они выполнялись быстрее. В результате на восстановление после сбоя двух дисков уходит чуть больше времени, чем на восстановление после одиночного сбоя. Вторая особенность обработки двойного сбоя диска состоит в том, что чаще всего при таком отказе второй диск выходит из строя чуть позже первого, и потому удается восстановить часть информации с первого диска с помощью традиционной проверки четности по рядам. RAID DP автоматически подстраивается под такие события, начиная восстановление с того момента, когда два элемента потеряны в результате сбоя второго диска.
+<p>Использование RAID DP не требует дополнительных затрат или нового оборудования. Единственное, что нужно сделать для работы RAID DP, - это установить ОС Data ONTAP (специализированная ОС компании Network Appliance) версии 6.5 или более поздней.
+<h4>Уровни защиты RAID DP </h4>
+<p>На самом низком уровне RAID DP обеспечивает защиту либо от сбоя двух дисков из одной группы RAID, либо от сбоя одного диска с последующей (до завершения восстановления) ошибкой чтения из дефектного блока или однобитовой ошибки. Более высокий уровень защиты достигается при использовании RAID DP вместе с ПО SyncMirror. В такой конфигурации обеспечивается защита от одновременного сбоя пяти дисков с последующей (до завершения восстановления) ошибкой чтения из дефектного блока или однобитовой ошибки.
+<p>Для создания тома в группах RAID на базе RAID DP надо выбрать опцию в FilerView при создании тома или добавить ключ -t raid_dp к традиционной команде vol create в интерфейсе командной строки. Таким образом, команда будет иметь вид: vol create volume_name -t raid_dp X (X - число дисков в томе). В системах NearStore по умолчанию создаются тома RAID DP. В листинге показан результат команды vol status в случае, когда четырехдисковая группа RAID создана для тома с именем test, а второй диск четности для диагональной четности обозначается dparity.
+<p><table border="0" bgcolor="#CCCCCC">
+<tr>
+    <td> 
+      <h4>Результат команды vol status </h4>
+      <pre>Volume test (online, raid_dp) (zoned checksums)
+Plex /test/plex0 (online, normal, active)
+RAID group /test/plex0/rg0 (normal)</pre>
+      <table border="1">
+        <tr>
+          <td>RAID Disk</td>
+          <td>Device</td>
+          <td>HA</td>
+          <td>SHELF</td>
+          <td>BAY</td>
+          <td>CHAN</td>
+          <td>Used (MB/blks)</td>
+          <td>Phys (MB/blks)</td>
+        </tr>
+        <tr>
+          <td>dparity</td>
+          <td>v0.2</td>
+          <td>V1</td>
+          <td>0</td>
+          <td>1</td>
+          <td>FC:A</td>
+          <td>36/74752</td>
+          <td>42/87168</td>
+        </tr>
+        <tr>
+          <td>parity</td>
+          <td>v0.3</td>
+          <td>V0</td>
+          <td>0</td>
+          <td>3</td>
+          <td>FC:A</td>
+          <td>36/74752</td>
+          <td>42/87168</td>
+        </tr>
+        <tr>
+          <td>data</td>
+          <td>v0.6</td>
+          <td>V1</td>
+          <td>0</td>
+          <td>2</td>
+          <td>FC:A</td>
+          <td>36/74752</td>
+          <td>42/87168 </td>
+        </tr>
+        <tr>
+          <td>data</td>
+          <td>v0.4</td>
+          <td>V1</td>
+          <td>0</td>
+          <td>4</td>
+          <td>FC:A</td>
+          <td>36/74752</td>
+          <td>42/87168 </td>
+        </tr>
+      </table>
+          </td>
+  </tr>
+</table>
+
+<h3>Преобразование существующих томов </h3>
+<p>После того, как устройство хранения переведено на ОС Data ONTAP 6.5, существующие тома легко преобразуются в RAID DP с помощью команды vol options volume_name raidtype raid_dp. После введения этой команды том сразу же будет обозначаться как RAID DP, но все контрольные суммы диагональных полосок должны быть рассчитаны и записаны на втором диске четности - только тогда будет работать защита RAID DP от сбоя двух дисков. Эти расчеты требуют времени и немного снижают производительность систем хранения. Продолжительность операции и ее влияние на производительность зависят от типа системы хранения (например, NearStore или FAS 960) и ее загрузки. Чтобы преобразование в RAID DP не слишком сильно сказывалось на операциях пользователей и приложений, рекомендуется его проводить в нерабочее время.
+<p>Для перехода от RAID 4 к RAID DP надо выполнить следующие требования. Поскольку преобразование происходит на уровне томов, нужен отдельный накопитель для второго диска диагональной четности в каждой группе RAID 4 в томе. Емкость этих накопителей должна быть не меньше, чем у дисков, используемых как диски четности рядов в обычном RAID 4.
+<p>Тома можно преобразовать обратно в RAID 4 командой vol с опцией volume_name raidtype raid4. В этом случае преобразование происходит мгновенно, поскольку диски с контрольными суммами обычного RAID 4 сохраняются и в RAID DP. Если группа RAID DP преобразуется в RAID 4, то в каждой группе RAID второй диск четности с контрольными суммами по диагонали освобождается и помещается в пул запасных дисков. Важно отметить, что для возврата к предыдущей версии Data ONTAP, не поддерживающей RAID DP, сначала нужно преобразовать тома RAID DP в тома RAID 4.
+<p>С точки зрения управления и операций разницы между томами RAID DP и RAID 4 нет, поэтому администраторам систем хранения NetApp не придется вносить существенных изменений в свои процедуры. В системе могут быть одновременно тома RAID 4 и RAID DP, но для управления ими администратор будет использовать одни и те же команды. Например, если тому RAID DP нужно выделить дополнительную емкость, то команда vol add volume_name X (X - число добавляемых дисков) выполняется точно так же, как для тома RAID 4.
+<p>Для RAID DP требуется два диска четности на каждую группу RAID, что влияет на эффективность использования емкости, хотя имеются способы свести к минимуму влияние этого фактора. В частности, NetApp рекомендует использовать группу RAID самого большого допустимого размера. Например, для NearStore R200 разрешается строить группы RAID DP не более чем из 14 дисков. Если следовать этой рекомендации, разница в эффективности использования емкости R200 в конфигурациях RAID DP и RAID 4 составит всего лишь несколько сотен гигабайт, что на несколько порядков меньше емкости самой системы.
+<p>Производительность томов RAID DP сравнима с показателями томов RAID 4. Производительность операции чтения практически одинакова для каждого типа групп RAID. В зависимости от типа чтения RAID DP выполняет эту операцию на 2-3% медленнее RAID 4 из-за необходимости записи на второй диск диагональной четности тома. Загрузка центрального процессора при переходе на RAID DP с RAID 4 практически не меняется.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6702.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Технология RAID DP
+</a><br><a href="detail.php@ID=6702.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">
+* По материалам компании Network Appliance. 
+Традиционная технология RAID с одиночной проверкой четности защищает от сбоя 
+  одного жесткого&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6702.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6702&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0ada5deba6081121bb686af9b89313be'><img src='../bitrix/tools/captcha.php@captcha_code=0ada5deba6081121bb686af9b89313be' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

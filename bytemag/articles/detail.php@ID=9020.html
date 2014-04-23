@@ -1,0 +1,943 @@
+<HTML>
+<HEAD>
+<title>Сохранность и восстановление компьютерных данных: теория и практика
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Александр Фролов, Григорий Фролов alexandre@frolov.pp.ru http://www.frolov.pp.ru, http://www.DataRecovery.ru В первой статье, посвященной восстановлению данных, мы расскажем о причинах, по которым чаще всего пропадают данные с дисков рабочих" />
+<meta name="description" content="Александр Фролов, Григорий Фролов alexandre@frolov.pp.ru http://www.frolov.pp.ru, http://www.DataRecovery.ru В первой статье, посвященной восстановлению данных, мы расскажем о причинах, по которым чаще всего пропадают данные с дисков рабочих" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398078888','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm9020' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=9020&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm9020"].SHOW_IMAGE.value="N"; document.forms["PrintForm9020"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm9020"].SHOW_IMAGE.value="Y"; document.forms["PrintForm9020"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(9020);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=9020.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=9020.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(9020);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6258.html'>Безопасность</a><br /></p><a href='../numbers/index.php@ID=11557.html'>№1 (30), январь 2001</a><h1>Сохранность и восстановление компьютерных данных: теория и практика
+</h1>10.01.2001<p></p><DIV class='article-text'><p><i>Александр Фролов, Григорий Фролов </i><br>
+<a href="mailto:alexandre@frolov.pp.ru">alexandre@frolov.pp.ru</a><br>
+<a href="http://www.frolov.pp.ru">http://www.frolov.pp.ru</a>, 
+<a href="http://www.DataRecovery.ru">http://www.DataRecovery.ru</a> 
+<p>
+<p>В первой статье, посвященной восстановлению данных, мы расскажем о причинах, по которым чаще всего пропадают данные с дисков рабочих станций и серверов, приведем некоторые рекомендации по увеличению надежности хранения данных и посоветуем, что предпринять, если вы обнаружили, что некоторые или все ваши файлы исчезли. 
+<h2>Почему пропадают данные </h2>
+<p>Хотя надежность современных компьютерных систем в целом достаточно высока, время от времени в них происходят сбои, вызванные неисправностью аппаратных средств, ошибками в программном обеспечении, компьютерными вирусами, а также ошибками пользователей, системных администраторов и технического персонала. <p>Анализируя причины возникновения встречавшихся в нашей практике аварийных ситуаций, приводивших к потере данных, можно сказать, что все перечисленные сбои случаются примерно с одинаковой вероятностью. 
+<h3>Отказы аппаратных средств </h3>
+<p>Исчезновение данных может быть вызвано отказом различных устройств - жестких дисков и дисковых контроллеров, соединительных кабелей, оперативной памяти или центрального процессора компьютера. Внезапное отключение электропитания при отсутствии источника бесперебойного питания - также одна из наиболее распространенных причин исчезновения данных. В зависимости от того, что происходило в компьютере на момент отказа, последствия могут оказаться более или менее тяжелыми. 
+<h4>Отказы дисковых контроллеров </h4>
+<p>Чаще всего нам встречались случаи потерь данных при отказах дисковых контроллеров. При этом в момент аварии контроллер выполнял операцию записи, которая завершалась с ошибками. Как следствие, оказывались разрушенными системные области диска, после чего все данные или часть их становились недоступны. 
+<p>Заметим, что дисковые контроллеры современных файловых серверов, таких, как Compaq Proliant, протоколируют сбои аппаратных средств и позволяют выполнять диагностику. Это дает возможность обнаружить опасные симптомы еще до того, как они приведут к отказу. Например, в одной компании на протяжении нескольких недель контроллер диска записывал в системный журнал сообщения о возможном отказе кэш-памяти, встроенной в контроллер. И когда эта память, наконец, отказала, пропало несколько гигабайт важных данных. 
+<p> 
+<table width="100%" border="0">
+<tr bgcolor="#FFFF99"> 
+<td>
+<h3>Зеркальные диски </h3>
+<p>Наиболее простой способ увеличения надежности хранения данных - подключить к одному контроллеру два жестких диска и средствами ОС выполнить их зеркальное отображение. При этом один диск играет роль основного, а другой дублирует всю информацию, записываемую на основной диск. При выходе из строя основного диска его функции автоматически переходят к зеркальному диску, в результате чего система продолжает работать без аварийной остановки. 
+<p>К сожалению, зеркальные диски не помогут при сбое контроллера или ПО. Фактически данная технология поможет вам застраховаться только от такой неприятности, как поломка одного жесткого диска из зеркальной пары. 
+<p>Если каждый из зеркальных дисков будет подключен к своему контроллеру, то надежность возрастет. Теперь система продолжит работу при выходе из строя не только одного диска, но и одного дискового контроллера. <p>Такие ОС, как Microsoft Windows NT и Novell NetWare способны создавать зеркальные диски программным путем без применения дополнительного оборудования. 
+</td>
+</tr>
+</table>
+<p> 
+<h4>Отказы кэш-памяти </h4>
+<p>Как вы, вероятно, знаете, кэш-память значительно ускоряет операции записи данных на диск и чтения с диска за счет временного хранения данных в очень быстрой оперативной памяти. Если данные кэшируются при чтении, то отказ кэш-памяти не приведет к их потере, так как на диске они останутся в неизменном виде. Что же касается кэширования при записи, то эта операция несет в себе потенциальную опасность. 
+<p>Кэширование при записи предполагает, что данные вначале записываются в оперативную память, а затем, когда для этого возникает подходящий случай, переписываются на жесткий диск. Программа, сохраняющая данные на диске, получает подтверждение окончания процесса записи, когда данные оказываются в кэш-памяти. При этом фактическая запись их на диск произойдет позже. Так вот, если отказ кэш-памяти случится в &quot;неподходящий&quot; момент, то программа (или ОС) будет полагать, что данные уже записаны на диск, хотя фактически это не так. В результате могут оказаться разрушенными важнейшие внутренние структуры файловой системы. 
+<p>Операционные системы обычно выполняют дополнительное кэширование данных, записываемых на диск или считываемых с диска, в основной оперативной памяти компьютера. Поэтому отказы оперативной памяти, а также внезапное отключение электропитания могут привести (и обычно приводят!) к возникновению фатальных неисправностей файловой системы. Именно поэтому так важно снабжать компьютеры, и особенно серверы, устройствами бесперебойного питания. Кроме того, такие устройства должны быть в состоянии корректно завершать работу ОС компьютера без вмешательства человека. Только в этом случае отключения электропитания не приведут к потере данных. 
+<h4>Неисправности электроники в дисках </h4>
+<p>Несколько слов заслуживают неисправности, возникающие в самих дисковых устройствах. Помимо механических повреждений, вызванных небрежным обращением с дисками, возникают отказы электронных схем, расположенных как вне, так и внутри герметичного корпуса диска. Отказы таких электронных схем могут привести, а могут и не привести к потере данных. В нашей практике встречались случаи, когда после замены электроники удавалось полностью восстановить данные, переписав их на другой диск. 
+<h4>Замена контроллера диска </h4>
+<p>Иногда данные пропадают после замены дискового контроллера на контроллер другого 
+типа (такая проблема обычно возникает с контроллерами SCSI). Операционная система 
+в этих случаях просто отказывается монтировать диск. Выбрав правильный тип контроллера, 
+обычно удается легко ликвидировать данную проблему, однако так бывает не всегда. 
+<h4>Проблемы с контроллерами дисковых массивов RAID </h4>
+<p>Особо стоит отметить контроллеры дисковых массивов RAID. Существуют RAID-массивы 
+нескольких типов (их организация описана во врезке). Отметим, что RAID-массивы 
+позволяют увеличить надежность хранения данных, скорость чтения и записи за 
+счет добавления избыточности. 
+<p>В простейшем случае RAID-массив может состоять из двух дисков, дублирующих 
+всю сохраняемую информацию. При выходе из строя одного диска данные сохранятся 
+на другом. Другие типы массивов (например, RAID5) хранят контрольные суммы данных 
+и, кроме того, распределяют отдельные блоки файлов по нескольким дискам, используя 
+для этого довольно сложный алгоритм. Цель одна - предотвратить потери данных 
+при возникновении сбоя в одном физическом диске массива. 
+<p>Несмотря на повышенную надежность, обеспечиваемую RAID-массивами по сравнению 
+с обычными дисками, такие массивы все же не могут гарантировать полную безопасность 
+данных. Во-первых, может выйти из строя контроллер массива RAID, в результате 
+чего данные будут записываться на диск с ошибками, а во-вторых, могут отказать 
+сразу (или поочередно) два диска. Вторая ситуация маловероятна, но первая нам 
+встречалась. 
+<p>Кроме того, контроллеры RAID никак не защитят Ваши данные от ошибок в программах 
+и операционных системах, от нападения компьютерных вирусов, ошибок пользователей 
+или системных администраторов. 
+<p>
+<table width="100%" border="0">
+<tr bgcolor="#FFFF99"> 
+<td>
+<h3>Дисковые массивы RAID </h3>
+<p>В критически важных случаях для увеличения надежности хранения информации обычно 
+используют так называемые массивы дисковых накопителей RAID (Redundant Arrays 
+of Inexpensive Disks - массивы недорогих дисков с избыточностью). 
+<p>RAID-массивы состоят из нескольких жестких дисков, подключенных к одному интеллектуальному 
+контроллеру. Контроллер может реализовать один из нескольких алгоритмов хранения 
+данных, предполагающих увеличение надежности за счет введения избыточности. 
+При этом выход из строя одного или двух дисков (в зависимости от алгоритма) 
+не приведет к нарушению общей работоспособности массива. 
+<p>Существует несколько категорий массивов RAID, обозначаемых как RAID 0, RAID 
+1, RAID 2, RAID 3, RAID 4 и RAID 5. Все они используют различную технику повышения 
+надежности. 
+<p>В массивах RAID любой категории надежность достигается за счет чередования 
+(striping) - разделения данных одного и того же файла сразу на несколько дисков. 
+Помимо повышения надежности, такое разделение приводит к увеличению скорости 
+считывания файла, так как его фрагменты могут считываться одновременно с разных 
+дисков. 
+<p>Хотя ОС Microsoft Windows NT может создавать массивы RAID 0, RAID 1 и RAID 
+5 программным путем, целесообразно применять для этого специальные дисковые 
+контроллеры, называемые RAID-контроллерами. При этом достигается максимальная 
+гибкость и производительность, а также обеспечивается дополнительный контроль 
+целостности данных. 
+<h4>Массив RAID 0 </h4>
+<p>В массивах RAID 0 применяется простейшая техника чередования данных, при которой 
+для записи файла последовательно используются дорожки с одинаковыми номерами, 
+но расположенные на разных дисках. В массиве RAID 0 можно объединять два или 
+более диска. 
+<p>В массивах RAID 0 данные записываются без избыточности, поэтому повышения надежности 
+не происходит . Тем не менее, такие массивы увеличивают скорость доступа к информации 
+за счет того, что операции записи и чтения различных фрагментов файлов выполняются 
+одновременно. 
+<h4>Массив RAID 1 </h4>
+<p>В массивах RAID 1, которые должны содержать не менее двух дисков, применяется 
+дублирование информации на зеркальных дисках. При этом контроллер может распараллеливать 
+операции чтения, что повышает скорость выполнения этой операции. 
+<p>Увеличение надежности хранения данных достигается за счет двойных затрат дисковой 
+памяти. 
+<h4>Массив RAID 2 </h4>
+<p>Массивы RAID 2 предлагают дополнительное увеличение надежности хранения информации 
+за счет использования техники исправления ошибок с помощью кодов коррекции ECC 
+(Error Correction Code). Часть накопителей дискового массива используется для 
+хранения кодов коррекции. Если в одном из накопителей возникает сбой, информация 
+восстанавливается по кодам коррекции. 
+<h4>Массив RAID 3 </h4>
+<p>В этих массивах один из дисков применяется для хранения контрольных сумм. На 
+него записывается сумма данных по модулю 2, вычисленная с применением логической 
+операции XOR. Массивы RAID 3 должны содержать не менее трех дисков. 
+<h4>Массив RAID 4 </h4>
+<p>Массив устроен и работает аналогично массиву RAID 3, однако в отличие от него 
+не способен выполнять одновременные операции чтения и записи над несколькими 
+дисками сразу. 
+<h4>Массив RAID 5 </h4>
+<p>Массивы RAID 5 используются чаще всего. При относительно небольших затратах 
+они обеспечивают высокую надежность хранения данных, а также способны выполнять 
+операции записи и считывания одновременно на разные диски. Это достигается применением 
+техники чередования данных не только для записи файлов, но и для записи контрольных 
+сумм. 
+<p>Массив RAID 5 должен содержать не менее трех дисков, причем выход из строя 
+одного диска не сказывается на общей работоспособности системы. Однако одновременная 
+поломка двух или более дисков приводит к необратимым разрушениям данных. 
+</td>
+</tr>
+</table>
+<p> 
+<h4>Сбои, возникающие из-за пыли </h4>
+<p>Несмотря на то что корпуса современных серверов специальным образом защищены 
+от проникновения пыли (для этого на вентиляторы устанавливают специальные воздушные 
+фильтры), пыль все же проникает в компьютер. Она оседает на системной плате, 
+конструктивных элементах корпуса и контроллерах. Так как в пыли есть металлические 
+частички, она может вызывать замыкания между соединительными линиями, расположенными 
+на системной плате или на платах контроллеров. 
+<p>Когда компьютер переносят с одного места на другое, комочки пыли перекатываются 
+внутри корпуса и могут привести к замыканию. Именно так пропали данные на сервере 
+у одного из наших клиентов после перестановки сервера из одной стойки в другую. 
+<p>Чтобы уменьшить вероятность возникновения сбоев из-за пыли, используйте в ответственных 
+случаях специальные пылезащищенные корпуса и периодически выполняйте профилактические 
+работы, удаляя пыль при помощи специального &quot;компьютерного&quot; пылесоса. 
+<h3>Ошибки в программном обеспечении </h3>
+<p>Известно, что практически во всех более или менее сложных программах (а также 
+в ОС, представляющих собой комплекс многих программ) имеются ошибки. Причина 
+этого очевидна - программы составляют люди, а людям свойственно ошибаться. Поэтому 
+бесполезно искать программы без ошибок. Но можно найти такие программы, в которых 
+ошибки не сказываются или оказываются некритичными для использования этих программ 
+по назначению. 
+<p>С точки зрения безопасности данных наиболее опасны ошибки в ОС, в драйверах, 
+а также такие ошибки, которые могут привести к полному &quot;зависанию&quot; компьютера 
+и потере данных, хранящихся в кэш-памяти. Так как в ОС Microsoft Windows драйверы 
+(дисковые, видеоадаптера и др.) работают в привилегированном кольце защиты, 
+сбой в драйвере может повредить всю операционную систему. 
+<p>Чтобы уменьшить вероятность возникновения потерь данных в результате программных 
+ошибок, мы рекомендуем устанавливать самые свежие пакеты исправлений ОС и самые 
+свежие драйверы, полученные непосредственно от производителей оборудования. 
+<p>Приобретая компьютер для ответственных приложений, обязательно проверьте список 
+оборудования, совместимого с вашей ОС. Если выбранное оборудование не входит 
+в этот список, ОС, возможно, не будет с ним работать или (что хуже) будет работать 
+с ошибками. В результате в самый неподходящий момент компьютер может &quot;зависнуть&quot;, 
+а данные - исчезнуть. 
+<h3>Компьютерные вирусы </h3>
+<p>О том, что компьютерные вирусы повреждают данные, знают практически все. Однако, 
+к сожалению, не все выполняют даже элементарные требования, значительно уменьшающие 
+вероятность вирусного заражения. 
+<p>При организации антивирусной защиты прежде всего необходимо определить возможные 
+пути проникновения вирусов: дискеты, компакт-диски, электронная почта, серверы 
+Web и др. Далее, исходя из этого анализа, следует подобрать наиболее подходящее 
+антивирусное ПО, установив его на каждый компьютер вашей сети. При этом необходимо 
+строго соблюдать рекомендации, приведенные в описании выбранного антивируса. 
+Малейшее отклонение - и все усилия по антивирусной защите могут быть сведены 
+к нулю. 
+<p>Необходимо также периодически обновлять антивирусную базу данных вашей программы, 
+причем в сети это нужно делать на всех серверах и всех рабочих станциях. Антивирусная 
+база данных содержит описание признаков, по которым антивирусная программа ищет 
+вредоносные модули. Так как каждый день в мире появляются десятки новых вирусов, 
+задача периодического обновления антивирусной базы данных представляется нам 
+весьма актуальной. 
+<p>Современные антивирусные программы &quot;умеют&quot; обновлять антивирусную программу 
+через Интернет или интрасеть. Такая возможность особенно важна в крупных сетях, 
+состоящих из сотен серверов и тысяч рабочих станций, когда обновление вручную 
+превращается в невыполнимую задачу. 
+<h3>Ошибки пользователей и системных администраторов </h3>
+<p>Как мы уже говорили, человеку свойственно ошибаться. Разумеется, это касается 
+не только программистов, оставляющих ошибки в своих программах, но и пользователей 
+и системных администраторов. 
+<h4>Случайное удаление файлов или каталогов </h4>
+<p>Наиболее распространенная ошибка пользователя - случайное удаление файла или 
+папки с файлами. Одно неверное движение мыши - и дело сделано. Бывает, что даже 
+опытные системные администраторы совершают такую ошибку. 
+<p>Застраховаться от случайного удаления файла или каталога, расположенного на 
+локальном диске рабочей станции, позволяет обычная &quot;мусорная корзина&quot; (Recycle 
+Bin) ОС Microsoft Windows. Можно дополнительно установить одну из продвинутых 
+версий корзины, например, Norton Protected Recycle Bin. В большинстве случаев 
+удаленные файлы оказываются в этой корзине, откуда их легко восстановить. Тем 
+не менее, ряд программ игнорируют корзину, удаляя файлы без возможности восстановления. 
+<p>Сходная проблема возникает и в том случае, если пользователь случайно удалил 
+файл или папку в сетевом каталоге, расположенном на дисках сервера. При этом 
+мусорная корзина, установленная на рабочей станции, никак не поможет в восстановлении 
+файлов, удаленных из сетевых каталогов. 
+<p>Тем не менее, даже если удаленный файл отсутствует в корзине или корзина была 
+по ошибке опорожнена, ситуацию еще можно исправить, если после стирания не добавлять 
+на диск новые файлы. Для восстановления файлов можно использовать специальные 
+утилиты, например, EraseUndo for NTFS (созданную одним из авторов этой статьи 
+для восстановления файлов, удаленных из разделов файловой системы NTFS) или 
+Easy Recovery, способную восстанавливать файлы и в разделах FAT16/FAT32. 
+<h4>Ошибки в технологии резервного копирования данных </h4>
+<p>Без преувеличения можно сказать, что единственный по настоящему надежный способ 
+обеспечения сохранности данных - это их периодическое резервное копирование 
+на сменные носители, такие как магнитные ленты, магнитооптические диски, диски 
+CD-R и т.д. 
+<p>Почему единственный? Потому, что на сегодняшний день и аппаратное, и программное 
+обеспечение компьютерных систем ненадежно. Пользователи и системные администраторы 
+тоже ненадежны, так как могут ошибаться. Если же у Вас есть актуальная резервная 
+копия данных, то с нее данные можно быстро восстановить. 
+<p>Почему необходимо выполнять копирование на сменные носители данных? Причина 
+этого в том, что, только вынув носитель данных из компьютера и убрав его в надежное 
+место, Вы можете быть уверены, что &quot;сошедшая с ума&quot; ОС, вирус, а также кто-то 
+из пользователей или системных администраторов не испортит записанные на нем 
+данные. 
+<p>Некоторые недальновидные пользователи и системные администраторы копируют файлы 
+в другой раздел того же самого жесткого диска, на котором хранятся их актуальные 
+экземпляры, или на другой физический диск. Хотя копирование данных на другой 
+диск и может помочь, если исходный станет неисправным, от ошибок в ОС, программах 
+или от нашествия компьютерных вирусов такие меры не спасут. 
+<p>Очень важно правильно выбрать периодичность резервного копирования. При этом 
+надо исходить из периодичности обновления информации на дисках, а также из необходимой 
+степени надежности. Если данные обновляются часто, можно выполнять копирование, 
+например, каждый день на новые носители с циклом от 3 до 7 дней. Кроме того, 
+дополнительно можно делать (и хранить отдельно) недельные и месячные копии. 
+На все это может потребоваться довольно много магнитных лент, однако затраты 
+не будут напрасными. Обладая таким многодневным архивом, вы сможете при необходимости 
+поднять любую версию файлов, если окажется, что актуальная копия оказалась уничтоженной 
+несколько дней назад. 
+<p>Если к сохранности данных предъявляются повышенные требования, имеет смысл 
+установить для копирования сразу два стримера и копировать одновременно на две 
+магнитные ленты. Если одна из лент не прочитается, у вас останется другая. 
+<p>Хотя для выполнения резервного копирования в простейших случаях можно использовать 
+встроенные средства ОС, например, Windows NT Backup, лучше установить одну из 
+серьезных систем резервного копирования, такую как ArcServe. В этом случае на 
+один стример можно выгрузить данные со всех серверов и рабочих станций сети, 
+а также выбрать нужный вам график выполнения копирования. 
+<p>Чтобы быть уверенным в том, что резервное копирование действительно завершилось 
+без ошибок, необходимо внимательно просмотреть журнал программы, выполняющей 
+копирование. Если речь идет о крупной сети или об архивировании важных данных, 
+то такую операцию необходимо выполнять каждый день, например, утром. 
+<p>Обязательно попробуйте восстановить сделанную резервную копию, желательно на 
+другой диск или другой сервер. А лучше всего проделывать операцию пробного восстановления 
+на регулярной основе. 
+<p>Многим системным администраторам наши советы по резервному копированию могут 
+показаться банальными, однако в большинстве случаев потери данных связаны именно 
+с тем, что резервное копирование либо не выполнялось совсем, либо выполнялось 
+неправильно. 
+<p>Известны случаи, когда руководители компаний пытались сэкономить несколько 
+тысяч долларов на покупке качественного стримера и ПО к нему и при этом теряли 
+сопоставимые суммы на восстановлении разрушенных данных. Что характерно, после 
+первого же случая такие руководители покупали стример. Вот уж воистину - скупой 
+платит дважды. 
+<p>В том случае, когда покупка дорогостоящего стримера вам абсолютно не по карману, 
+рассмотрите возможность архивирования данных на таких устройствах, как ZIP, 
+магнитооптические диски, диски CD-R, CD-RW, и, в крайнем случае, на обычных 
+дискетах. 
+<h2>Если данные уже пропали </h2>
+<p>Тогда эти данные придется восстанавливать. Скажем сразу, что восстановление 
+файловой системы вручную доступно только опытным пользователям. Если вы не знакомы 
+в деталях со структурой файловых систем, для восстановления потерянных данных 
+лучше всего обратиться к специалистам. 
+<p>Принимая решение о том, кому доверить восстановление данных, учтите, что стоимость 
+данных, хранящихся на дисках компьютера, может многократно превышать стоимость 
+самого компьютера. При этом прикиньте, во что обойдется вам повторный ввод данных 
+с учетом зарплаты сотрудников, а также убытков, связанных с задержкой в работе 
+компьютерной системы. 
+<p>Результат проведения восстановительных работ во многом зависит от того, что 
+вы успеете или чего не успеете предпринять, прежде чем носители с разрушенной 
+информацией окажутся в службе восстановления данных. Для того, чтобы не осложнить 
+ситуацию неумелыми действиями, мы рекомендуем вам при возникновении аварийной 
+ситуации соблюдать несколько простых правил. 
+<h3>Правила поведения в аварийной ситуации </h3>
+<h4>Правило №1 </h4>
+<p>Если вы вдруг обнаружили, что с дисков сервера или персонального компьютера 
+исчезли важные файлы, что диск не читается вовсе или издает подозрительные звуки, 
+прежде всего <em>не впадайте в панику</em>. В лихорадочных попытках немедленно 
+восстановить данные, применяя по очереди все доступные вам автоматические программы 
+восстановления, вы рискуете окончательно разрушить логическую структуру файловой 
+системы. Не исключено, что после этого восстановление файлов станет невозможным. 
+<h4>Правило №2 </h4>
+<p>Самое лучшее, что вы можете сделать, если пропали важные файлы или диск с важной 
+информацией стал издавать подозрительные звуки, - это немедленно <em>выключить 
+компьютер и обратиться в службу восстановления данных</em>. Не пытайтесь открыть 
+корпус диска - это можно делать только в специальном помещении при полном отсутствии 
+пыли. 
+<p>Причиной стука может послужить выход из строя электронных схем, расположенных 
+в герметично закрытом корпусе диска. Не исключено, что такой диск можно отремонтировать 
+в специальной &quot;чистой комнате&quot;, где обеспечивается отсутствие пыли. 
+<h4>Правило №3 </h4>
+<p>Ни в коем случае не допускайте, чтобы после очередной перезагрузки ОС Microsoft 
+Windows автоматически запустилась утилита ремонта файловой системы CHKDSK или 
+SCANDISK. Для этого откажитесь от ее запуска, нажав клавишу пробела в &quot;синем 
+экране&quot; при загрузке Windows NT или сделав соответствующий выбор при загрузке 
+Windows 95/98/ME. 
+<p>Если утилита CHKDSK запустится автоматически, то в случае тяжелых повреждений 
+файловой системы она не сможет ее &quot;отремонтировать&quot;. Хуже того: пытаясь это 
+сделать, утилита CHKDSK может сильно осложнить ситуацию, сделав восстановление 
+файлов невозможным или чрезвычайно непростым делом. 
+<h4>Правило №4 </h4>
+<p>Никогда <em>не применяйте </em>для восстановления важных файлов утилиты, <em>изменяющие 
+содержимое восстанавливаемого диска</em>. Прежде всего это упомянутые выше утилиты 
+CHKDSK и SCANDISK. Не мeнее опасны и такие программы, как Norton Disk Doctor, 
+PC Tools и First Aid. 
+<p>Все эти утилиты могут разрушить внутреннюю структуру файловой системы, после 
+чего не исключено, что вы потеряете свои данные окончательно. 
+<h4>Правило №5 </h4>
+<p>Если вы случайно удалили файл с диска персонального компьютера, ни в коем случае 
+нельзя допустить, чтобы на него были <em>записаны новые файлы или изменены существующие</em> 
+файлы. В противном случае данные стертого файла будут перезаписаны, и его восстановление 
+станет проблематичным. 
+<p>В том случае, когда файл удален из сетевого каталога сервера, необходимо как 
+можно быстрее завершить работу последнего. В противном случае другие пользователи 
+могут перезаписать секторы диска, хранящие данные стертого файла, после чего 
+последний будет потерян навсегда. 
+<p>Ни в коем случае не запускайте и утилиты дефрагментации дисков, такие, как 
+DEFRAG. После этой процедуры в секторы, хранящие данные стертого файла, будет 
+перезаписана информация из других файлов. 
+<h4>Правило №6 </h4>
+<p>Ни при каких обстоятельствах <em>не устанавливайте на диск с потерянными файлами 
+никакие дополнительные программы</em>. Не пытайтесь избавиться от проблемы переустановкой 
+существующих программ или операционной системы. Все эти действия только усугубляют 
+ситуацию. 
+<h4>Правило №7 </h4>
+<p>Всегда <em>восстанавливайте архивную копию</em> с магнитной ленты <em>на другой 
+жесткий диск</em>, а не на тот же самый, с которого пропали нужные файлы. При 
+этом если вдруг окажется, что на ленте старая информация или что лента не читается, 
+у вас останется шанс восстановить файлы с разрушенного диска, обратившись в 
+службу восстановления данных. Отформатировав исходный диск и перезаписав поверх 
+расположенных там данных файлы с резервной копии, вы почти наверняка лишитесь 
+такого шанса. 
+<h4>Правило №8 </h4>
+<p>Если у вас возникло подозрение, что вышел из строя контроллер диска типа SCSI, 
+<em>не пытайтесь заменять его на контроллер SCSI другого типа</em>. Вам нужно 
+приобрести точно такой же контроллер, который был установлен до возникновения 
+неисправности, или отремонтировать старый. Особенно важно соблюдать это правило 
+в тех случаях, когда вышел из строя контроллер массива дисков RAID. 
+<h4>Правило №9 </h4>
+<p>Сохраните на другом физическом диске наиболее важные файлы, если это еще возможно. 
+<p>В том случае, когда в процессе работы вы получили сообщение о недоступности 
+диска в результате ошибки аппаратуры (например, &quot;Hard Disk Failed&quot;), первым 
+делом постарайтесь <em>сохранить на другом физическом диске </em>наиболее важные 
+файлы. Можно выполнить копирование файлов по локальной сети на диски другого 
+компьютера или записать их на внешнее устройство, например, ZIP или CD-RW. 
+<p>После копирования самых необходимых файлов завершите работу ОС, выключите компьютер 
+и обратитесь в службу восстановления данных. 
+<h4>Правило №10 </h4>
+<p>Если неисправность обнаружилась при загрузке компьютера, проанализируйте появившееся 
+сообщение об ошибке и обязательно запишите его полностью. 
+<p>Если загрузка ОС стала невозможна, не исключено, что возникла проблема с настройкой 
+параметров BIOS или с разрушением главной загрузочной записи Master Boot Record, 
+расположенной в самом первом секторе диска. 
+<p>Ниже перечислены сообщения об ошибках, возникающих в этих случаях. 
+<p> 
+<p><code>Hard Disk(s) Fail (80) или Invalid Drive Specification </code> 
+<p> 
+<p>Возникла ошибка в параметрах BIOS. Возможно, это произошло в результате выхода 
+из строя элемента питания, расположенного на системной плате компьютера. 
+<p>При появлении этого сообщения необходимо запустить программу BIOS Setup и выполнить 
+конфигурирование дисков. В зависимости от версии BIOS Setup эта операция выполняется 
+либо в ручном, либо в автоматическом режиме. 
+<p> 
+<p><code>Disk Boot Failure </code> 
+<p> 
+<p>Возможно, разрушена главная загрузочная запись Master Boot Record. 
+<p>После повторной настройки параметров BIOS выполните повторную попытку загрузить 
+операционную систему. Если она закончится неудачно, обращайтесь в службу восстановления 
+данных. 
+<p>При появлении сообщения Disk Boot Failure есть шанс восстановить файлы из раздела 
+FAT, загрузив ОС MS-DOS с системной дискеты. Таким способом, однако, невозможно 
+восстановить файлы из раздела NTFS, создаваемого Microsoft Windows NT и Windows 
+2000. В этом случае при появлении сообщения Disk Boot Failure обращайтесь в 
+службу восстановления данных. 
+<p>Если при загрузке ОС Windows NT и Windows 2000 на &quot;синем экране&quot; появляются 
+сообщения о нарушении файловой системы NTFS, немедленно выключите компьютер, 
+не допуская запуска утилиты автоматического восстановления CHKDSK, и обратитесь 
+в службу восстановления данных. Утилита CHKDSK бессильна в случае тяжелых повреждений 
+структуры файловой системы NTFS, но может окончательно разрушить ваши данные. 
+<h4>Правило №11 </h4>
+<p>Чтобы ускорить восстановление данных, прежде чем обращаться за помощью в службу 
+восстановления данных, выполните небольшую подготовительную работу. 
+<p><strong>1. Составьте список имен файлов и каталогов, подлежащих восстановлению. 
+</strong> 
+<p>Не исключено, что отдельные файлы придется &quot;собирать&quot; по частям, а это длительная 
+и трудоемкая операция. Поэтому важно иметь список наиболее важных файлов, подлежащих 
+восстановлению в первую очередь. 
+<p><strong>2. Извлеките жесткий диск и контроллер (для дисков SCSI) из системного 
+блока. </strong> 
+<p>Вы можете привезти в службу восстановления весь системный блок или только жесткий 
+диск (диски). Если необходимо восстановить информацию с диска SCSI или дискового 
+массива RAID, обязательно привезите дисковый контроллер. 
+<p>Хотя вы можете отправить диск и контроллер из другого города по почте, нет 
+никакой гарантии, что по дороге диск не будет поврежден в результате небрежной 
+транспортировки. Поэтому лучше привезите его сами или передайте с посыльным. 
+<p><strong>3. Подготовьте диск для сохранения восстановленных файлов. </strong> 
+<h3>Автоматическое восстановление данных при помощи утилит </h3>
+<p>В настоящее время разработано несколько утилит, позволяющих выполнить восстановление 
+данных в некоторых простейших случаях. Это прежде всего восстановление случайно 
+удаленных файлов и каталогов, а также восстановление разделов диска, частично 
+разрушенных в результате аппаратных или программных сбоев. 
+<p>Использование таких утилит, как правило, не предполагает наличия специальных 
+знаний о внутренних структурах файловых систем, поэтому ими может воспользоваться 
+практически каждый. Следует, однако, заметить, что в случае обширных повреждений 
+файловой системы автоматическое восстановление обычно не удается. Поэтому если 
+вы испробовали несколько утилит и у вас ничего не получилось, обращайтесь в 
+службу восстановления. 
+<p>Как правило, создатели всех утилит восстановления данных в разделах NTFS не 
+обладают полной информацией о внутренних структурах этой файловой системы - 
+поскольку Microsoft не опубликовала полных ее спецификаций. В результате утилиты 
+не всегда работают так, как хотелось бы. 
+<h4>Утилита EasyRecovery 5.0 </h4>
+<p>Утилита EasyRecovery 5.0 (рис. 1) разработана компанией ONTRACK Data International. 
+Демонстрационную версию программы можно загрузить с сервера <a href="http://www.ontrack.com">http://www.ontrack.com</a>. 
+<p> 
+<p>  
+<table width="100%" border="0">
+<tr> 
+<td><img src="http://212.188.13.9/images/No1/Datarec/pic1.gif" alt=Fig. 1></td>
+<td valign="bottom">Рис. 1. Утилита восстановления данных EasyRecovery 5.0. 
+<hr noshade align="left" size="0">
+</td>
+</tr>
+</table>
+<p> 
+<p>Процесс восстановления данных выполняется с помощью мастера, одно из окон которого 
+показано на рис. 1. Этот мастер очень прост в использовании. Вначале Вам предлагается 
+выбрать восстанавливаемый раздел (причем это может быть раздел в формате FAT12, 
+FAT16, FAT32 или NTFS). Затем программа выполняет довольно длительное сканирование, 
+составляя список файлов и каталогов, расположенных в данном разделе. В зависимости 
+от емкости диска сканирование может продолжаться от нескольких минут до нескольких 
+часов. 
+<p>Внешний вид списка, созданного в результате сканирования, показан на рис. 2. 
+В этом списке можно отметить только стертые файлы (если Вы восстанавливаете 
+случайно удаленные файлы или каталоги), а также любые другие (если выполняется 
+восстановление частично разрушенного раздела диска). Далее Вам только остается 
+указать в поле Destination путь к каталогу для записи восстановленных файлов 
+и, щелкнув кнопку Next, ждать завершения процесса. 
+<p> 
+<table width="100%" border="0">
+<tr> 
+<td><img src="http://212.188.13.9/images/No1/Datarec/pic3.gif" alt=Fig. 2></td>
+<td valign="bottom">Рис. 2. Файлы, найденные программой EasyRecovery 5.0. 
+<hr noshade align="left" size="0">
+</td>
+</tr>
+</table>
+<p> 
+<p>Заметим, что в комплекте EasyRecovery 5.0 предусмотрена программа, создающая 
+загрузочный диск. С его помощью можно попытаться восстановить данные, если из-за 
+серьезных повреждений файловой системы компьютер не может загрузиться с жесткого 
+диска. 
+<h4>Утилита EraseUndo for NTFS 1.0 </h4>
+<p>Эта простая условно-бесплатная утилита позволяет восстановить файлы, случайно 
+удаленные из разделов NTFS (рис. 3). Вы сможете загрузить ее с сервера <a href="http://www.frolov.pp.ru">http://www.frolov.pp.ru</a>. 
+<p> 
+<p>  
+<table width="100%" border="0">
+<tr> 
+<td><img src="http://212.188.13.9/images/No1/Datarec/pic2.gif" alt=Fig. N></td>
+<td valign="bottom">Рис. 3. Условно-бесплатная утилита EraseUndo for NTFS 
+1.0. 
+<hr noshade align="left" size="0">
+</td>
+</tr>
+</table>
+<p> 
+<p>Пользоваться этой утилитой очень просто. Выберите в списке Drive to unerase 
+нужный диск с файловой системой NTFS, укажите шаблон имени восстанавливаемых 
+файлов в поле Filename pattern, а также количество дней, прошедших с момента 
+изменения удаленного файла (в поле Files was deleted...). 
+<p>Для запуска процесса поиска стертых файлов щелкните кнопку Search. Через некоторое 
+время в нижней части окна утилиты появится список найденных файлов. Вам предоставляется 
+возможность выбирать в этом списке по одному файлу и сохранять на другом диске 
+при помощи кнопки EraseUndo!. 
+<p>Работа утилиты основана на том факте, что при удалении файла из раздела NTFS 
+сам файл не уничтожается, а о том, что он удален, делается отметка в главной 
+файловой таблице (Master File Table, MFT). Утилита EraseUndo for NTFS просматривает 
+MFT, отыскивая там файлы, помеченные как удаленные, и предоставляет пользователю 
+возможность их восстановления. 
+<p>Заметим, что далеко не всегда удается восстановить файлы подобным образом, 
+так как поверх них могут оказаться записаны другие файлы. 
+<h4>Утилита CrashUndo 2000 for NTFS </h4>
+<p>Мы в своей работе для восстановления данных пользуемся утилитой CrashUndo 2000 
+for NTFS, реализованной в виде консольной программы и предназначенной для запуска 
+в среде Microsoft Window NT и Windows 2000 (рис.4). Пока, однако, у нас нет планов относительно 
+распространения этой утилиты. 
+<p> 
+<table border="0">
+<tr> 
+<td><img src="http://212.188.13.9/images/No1/Datarec/pic4.gif" alt=Fig. 4></td>
+<td valign="bottom">Рис. 4. Утилита CrashUndo 2000 for NTFS. 
+<hr noshade align="left" size="0">
+</td>
+</tr>
+</table>
+<p> 
+<p>Утилита CrashUndo 2000 for NTFS текущей версии может восстанавливать данные, 
+расположенные в разделах NTFS, созданных Microsoft Windows NT и на базовых дисках 
+Windows 2000. 
+<p>Запустив утилиту, можно выбрать логический или физический диск, подлежащий 
+восстановлению. Таким образом, утилита позволяет прочитать данные даже с таких 
+дисков, которые ОС отказывается монтировать. Далее утилита позволяет просмотреть 
+список файлов, имена которых удовлетворяют заданному шаблону, и переписать эти 
+файлы в заданный каталог на другом диске. 
+<p>Операция переписывания файлов выполняется вместе с анализом за один проход, 
+поэтому полное восстановление всех сохранившихся файлов выполняется примерно 
+со скоростью копирования файлов. В отличие от аналогичных утилит программа CrashUndo 
+2000 for NTFS лишь минимально пользуется необходимой системной информацией и 
+потому может восстанавливать файлы даже при значительных повреждениях файловой 
+системы. В частности, она восстанавливает дерево каталогов, даже если отдельные 
+ветви этого дерева оказываются разрушены (имена разрушенных каталогов, конечно, 
+не сохраняются). 
+<h2>Истории со счастливым концом </h2>
+<p>Конечно, не каждая работа по восстановлению данных заканчивается успехом. Например, 
+в нашей работе был случай, когда диск вначале отформатировали, затем загрузили 
+на него старую резервную копию с магнитной ленты, а лишь затем обратились к 
+нам, … но было уже поздно. Если бы администратор ограничился только форматированием 
+диска, мы бы восстановили данные полностью, но загрузка файлов с магнитной ленты 
+не оставила для этого ни одного шанса. 
+<p>Тем не менее, в целом удачных случаев больше, чем неудачных. Мы расскажем только 
+о некоторых из них. 
+<h3>Восстановление файлов из раздела NTFS </h3>
+<p>Некая компания использовала сервер с ОС Microsoft Windows NT Server 4.0 и двумя 
+жесткими дисками SCSI. Диски отображались друг на друга зеркально средствами 
+ОС. И никаких резервных копий на магнитные ленты или как-либо еще ни разу не 
+делалось. 
+<p>Как-то раз этот сервер переставили с одного места на другое (в другую стойку), 
+после чего оказалось, что ОС наотрез отказывается загружаться. 
+<p>Когда открыли корпус сервера, оказалось, что он полон пыли. Вероятно, при переносе 
+компьютера пыль попала на контроллер диска или системную плату, что вызвало 
+сбой при загрузке ОС. В результате системные области NTFS оказались частично 
+разрушены, причем как на основном диске, так и на зеркальном. При этом зеркало 
+точно отразило все искажения, появившиеся на основном диске. 
+<p>Для восстановления файлов нам понадобилось знание внутренних структур файловой 
+системы NTFS, описание которых отсутствует в документации компании Microsoft. 
+Так как работы выполнялись при помощи примитивного редактора диска Microsoft 
+DiskProbe, на восстановление нескольких десятков файлов ушло примерно трое суток 
+чрезвычайно интенсивной работы. 
+<p>Опыт, полученный в результате этих мучений, привел нас к мысли о необходимости 
+создания программной утилиты, способной в некоторых случаях автоматизировать 
+самые рутинные операции. Приблизительно через полгода была готова первая версия 
+такой утилиты, получившей название CrashUndo for NTFS (&quot;Отмена краха NTFS&quot;). 
+Мы также создали упрощенный вариант этой утилиты, способный восстанавливать 
+только стертые файлы в исправных разделах NTFS. Утилита получила название EraseUndo 
+for NTFS. 
+<h3>Восстановление данных с массива RAID </h3>
+<p>В системный блок &quot;серой&quot; сборки был вставлен довольно старый контроллер Malex., 
+подключенный к диску SCSI объемом 4 Гбайт. Этот диск был заполнен файлами документов, 
+баз данных и архивами. 
+<p>В результате сбоев в контроллере системные области NTFS оказались разрушенными 
+в такой степени, что ОС отказывалась монтировать диск и запускать &quot;штатную&quot; 
+утилиту восстановления chkdsk.exe. 
+<p>При помощи одной из первых версий программы CrashUndo for NTFS нам удалось 
+восстановить по одному около 1000 файлов, на что ушла примерно неделя. Работы 
+сильно осложнялись тем обстоятельством, что дисковый контроллер работал очень 
+нестабильно, а купить такой же, но исправный, было негде (попалась очень старая 
+модель контроллера). Примерно каждые два-три часа контроллер приходилось вынимать 
+из системного блока и подвергать &quot;мануальной терапии&quot; - мы шевелили микросхемы, 
+установленные на панельках, чистили разъемы и выполняли другие &quot;шаманские&quot; действия. 
+Тем не менее практически все необходимые файлы были восстановлены. 
+<h3>Еще один массив RAID </h3>
+<p>Информация на массиве RAID оказалась разрушена в результате экспериментов, 
+проведенных системным администратором с ОС Microsoft Windows 2000: перед тем 
+как обновить версию ОС, он выполнил резервное копирование данных… на тот же 
+самый диск, где находилась обновляемая ОС. 
+<p>В результате после установки два из трех разделов диска оказались недоступны. 
+Утилиты восстановления Tiramisu и Easy Recovery оказались бессильными перед 
+этими разделами, конвертированными Windows 2000 в новый формат. 
+<p>Получив у &quot;потерпевшего&quot; дисковый массив вместе с контроллером, мы установили 
+его в свой стенд и воспользовались программой CrashUndo for NTFS новой версии. 
+Программа смогла восстановить все файлы, разложив их по каталогам в том порядке, 
+в котором они находились до краха файловой системы. 
+<h3>И снова сбой контроллера массива RAID </h3>
+<p>И снова этот сбой произошел в контроллере Malex. К контроллеру было подключено 
+несколько дисков для образования массива RAID уровня 5. 
+<p>После возникновения сбоя в контроллере полностью пропал доступ к разделам NTFS. 
+Общий объем данных, записанных на этих разделах, достигал нескольких десятков 
+гигабайт. И конечно, никаких резервных копий не делалось… 
+<p>Контроллер был отремонтирован, но доступ к разделам так и не появился. Как 
+нам рассказал заказчик, вслед за этим на сервер была установлена ОС Windows 
+2000, после чего появилась возможность прочитать только некоторые файлы. 
+<p>В результате сложной многодневной работы нам удалось восстановить примерно 
+50 Гбайт данных, причем некоторые файлы пришлось &quot;собирать&quot; вручную. 
+<h3>Решение проблем в разделе FAT </h3>
+<p>Нам приходилось восстанавливать и диски FAT, созданные в ОС MS-DOS или Windows 
+95/98. Один из таких случаев был связан с перестановкой диска IDE из одного 
+компьютера в другой. В результате сбоя питания, который произошел в самый неподходящий 
+момент, оказались частично разрушены обе таблицы размещения файлов FAT, расположенные 
+в системной области диска. Попытки восстановить информацию утилитой Norton Disk 
+Doctor к успеху не привели. 
+<p>Зная имена файлов, подлежащих восстановлению, нам удалось &quot;собрать&quot; некоторые 
+файлы буквально по секторам, достраивая вручную таблицу FAT. 
+<h3>Восстановление тома Volume Set </h3>
+<p>Как известно, Windows NT позволяет объединять несколько разделов диска в один 
+логический том, или набор томов (Volume Set). Эта особенность очень полезна, 
+если вам нужно хранить на сервере файлы огромного размера, не помещающиеся на 
+одном диске. Заметим, что современные накопители большого объема во многих случаях 
+позволяют обойтись без создания набора томов. 
+<p>В данном случае пользователь создал набор томов на своем портативном компьютере, 
+и потерял доступ к нему после переустановки ОС. Выяснилось, что созданный набор 
+объединял два фрагмента диска, один из которых имел размер 2 Гбайт, а другой 
+- 4 Мбайт (!). На вопрос, зачем это было нужно, заказчик ответил, что хотел 
+использовать незадействованный фрагмент диска размером 4 Мбайт. Можно поспорить, 
+стоило ли поступать подобным образом, но, строго говоря, этот набор томов был 
+создан по всем правилам. 
+<p>Проблемы начались, когда заказчик попытался полностью переустановить ОС Windows 
+NT. При этом он забыл (или не знал), что информация о расположении фрагментов 
+набора томов хранится в базе данных реестра Windows NT. Переустановив ОС, заказчик 
+уничтожил старую базу данных реестра и вместе с ней сведения о наборе. В результате 
+он потерял доступ к данным, накопленным в течение примерно трех лет. 
+<p>Нам удалось восстановить информацию о размещении набора томов при помощи стандартной 
+утилиты FTEdit, входящей в комплект Resource Kit for Windows NT, и сделать несколько 
+резервных копий важнейших каталогов. 
+<h3>Восстановление удаленного файла в разделе NTFS </h3>
+<p>Один из инцидентов был связан со случайным удалением файла, который должен 
+был быть отправлен как вложение в сообщение электронной почты при помощи программы 
+Microsoft Outlook Express 5.0. 
+<p>Отправляемый файл вначале положили на &quot;рабочий стол&quot; Windows NT, а затем вставили 
+в текст подготовленного, но еще не отправленного почтового сообщения. Полагая, 
+что файл, вставленный в сообщение, был скопирован, исходный файл удалили в &quot;мусорную 
+корзину&quot;. После этого корзина была очищена. 
+<p>Далее события развивались следующим образом. При попытке отправить электронное 
+письмо было получено сообщение о том, что файл приложения не найден. И действительно, 
+этот файл, находившийся ранее на &quot;рабочем столе&quot;, был удален. Как оказалось, 
+другой копии файла на диске не было. Чтобы &quot;достать&quot; файл из опустошенной мусорной 
+корзины, нам пришлось использовать утилиту восстановления удаленных файлов. 
+<h2>Продолжение следует </h2>
+<p>Хотя упомянутые выше утилиты во многих случаях позволяют восстановить данные 
+в автоматическом режиме, при тяжелых повреждениях файловой системы не обойтись 
+без знания внутренних структур данных FAT и NTFS. В следующих статьях мы планируем 
+рассмотреть наиболее важные структуры данных, а также приемы восстановления 
+файлов вручную, доступные опытным системным администраторам. 
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</A></b></li><li><b><A href='detail.php@ID=24095.html'>Сертифицированные системы обнаружения вторжений </A></b></li><li><b><A href='detail.php@ID=22469.html'>Новые технологии в Security operation center</A></b></li><li><b><A href='detail.php@ID=20887.html'>Агрессивность и мобильность: какие угрозы нас ждут в 2013-м</A></b></li><li><b><A href='detail.php@ID=20621.html'>Карты с дисплеем как новое средство защиты онлайн-банкинга</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=9020.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Сохранность и восстановление компьютерных данных: теория и практика
+</a><br><a href="detail.php@ID=9020.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Александр Фролов, Григорий Фролов 
+alexandre@frolov.pp.ru
+http://www.frolov.pp.ru, 
+http://www.DataRecovery.ru 
+
+В первой статье, посвященной&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=9020.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=9020&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0181ba4b177378531bb7d3da30fd1ba8'><img src='../bitrix/tools/captcha.php@captcha_code=0181ba4b177378531bb7d3da30fd1ba8' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

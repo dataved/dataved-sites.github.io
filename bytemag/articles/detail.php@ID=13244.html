@@ -1,0 +1,403 @@
+<HTML>
+<HEAD>
+<title>Открытые решения Sun Microsystems для хранения данных</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Активно разрабатывая открытые системы хранения данных, Sun Microsystems стремится использовать в них преимущества ПО с открытым исходным кодом, открытых форматов и программных интерфейсов приложений. С момента своего основания в 1982 г. корпорация" />
+<meta name="description" content="Активно разрабатывая открытые системы хранения данных, Sun Microsystems стремится использовать в них преимущества ПО с открытым исходным кодом, открытых форматов и программных интерфейсов приложений. С момента своего основания в 1982 г. корпорация" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082087','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm13244' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=13244&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm13244"].SHOW_IMAGE.value="N"; document.forms["PrintForm13244"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm13244"].SHOW_IMAGE.value="Y"; document.forms["PrintForm13244"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(13244);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=13244.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=13244.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(13244);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><br /></p><a href='../numbers/index.php@ID=13166.html'>№11 (120), ноябрь 2008</a><h1>Открытые решения Sun Microsystems для хранения данных</h1>Автор: Олег Спиряев<br />14.11.2008<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=13244&amp;PICTURE_ID=13241.html'><IMG src='../upload/iblock/b46/26-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Модульная ленточная библиотека Sun StorageTek SL3000.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=13244&amp;PICTURE_ID=13242.html'><IMG src='../upload/iblock/f9f/27-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Модульная ленточная библиотека Sun StorageTek SL8500.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=13244&amp;PICTURE_ID=13243.html'><IMG src='../upload/iblock/eac/28-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Массив хранения данных Sun Storage J4200.</b></TD></TR></TABLE><DIV class='article-text'>
+<p><em>Активно разрабатывая открытые системы хранения данных, Sun Microsystems стремится использовать в них преимущества ПО с открытым исходным кодом, открытых форматов и программных интерфейсов приложений.</em> </p>
+ 
+<p>С момента своего основания в 1982 г. корпорация Sun Microsystems (<a target="_blank" href="http://www.sun.com">www.sun.com</a>) следует концепции &laquo;Настоящая сеть &mdash; это компьютер&raquo;. Последовательная реализация этой идеи выдвинула Sun на позиции ведущего поставщика высококачественных программных и аппаратных средств, а также услуг, определивших лицо сегодняшнего Интернета и позволяющих компаниям всего мира реализовать свои самые смелые планы. </p>
+ 
+<p>Не секрет, что данные &mdash; самый важный ресурс практически любой компании. При этом с каждым годом данных создается все больше и больше, и они нуждаются в архивировании, управлении и защите. В начале этого года Sun Microsystems объявила о том, что она передает сообществам по хранению данных OpenSolaris и Java.net исходный код для Sun StorageTek 5800 (ранее известной как проект Honeycomb), первой в мире интегрированной системы хранения и архивирования данных под управлением ОС Solaris, которая была создана с использованием ПО с открытым исходным кодом. Помимо этого корпорация передала код на рассмотрение в Ассоциацию сетевых технологий хранения данных (Storage Networking Industry Association, SNIA). Группа открытого кода ПО Fedora Commons также передает свои программные решения сообществу OpenSolaris и Java.net и, в свою очередь, будет использовать исходный код для Sun StorageTek 5800 в собственных разработках. Кроме того, ведущий производитель решений для библиотечных технологий компания VTLS (<a target="_blank" href="http://www.vtls.com">www.vtls.com</a>) перенесла свое приложение VITAL на систему Sun StorageTek 5800 под управлением ОС Solaris 10 или Linux с открытыми репозиториями на базе Fedora. </p>
+ 
+<p>Теперь разработчики могут бесплатно загрузить открытую версию кода Sun StorageTek 5800 и убедиться на собственном опыте в том, насколько простыми и эффективными становятся хранение и восстановление данных с фиксированным содержимым и метаданных. Коммерческая версия StorageTek 5800 предоставляет пользователям еще более высокий уровень надежности, готовности и удобства обслуживания RAS (Reliability, Availability, Serviceability), а также исключительную защиту данных от повреждения и утраты. </p>
+ 
+<p>Возрастающая потребность в переводе данных в цифровой вид и длительном хранении изображений, записей, пользовательских и корпоративных цифровых данных, данных исследований и высокопроизводительных вычислений превращает процесс управления хранением данных на базе файлов в серьезную проблему. Отказоустойчивый, простой в управлении исходный код Sun StorageTek 5800 &mdash; это оптимальное решение по сравнению с закрытыми, дорогими проприетарными предложениями, которые в значительной степени ограничивают пользователей в выборе других решений. По мнению Грэма Ловелла, старшего директора направления серверов и приложений для хранения Sun Microsystems, популярная система Sun StorageTek 5800, созданная в рамках проекта Honeycomb, произвела переворот на рынке решений для хранения, управления и архивирования данных с фиксированным содержимым &mdash; ведь корпорация сделала решения для хранения таких данных бесплатными и открытыми. Цель передачи исходного кода к этой технологии нового поколения &mdash; поддержать создание сообществ, которым будет легче решать вопросы в области хранения данных с фиксированным содержимым и которые помогут пользователям сэкономить средства, отказавшись от внедрения закрытых коммерческих технологий. </p>
+ 
+<h2>Виртуализация серверов и систем хранения </h2>
+ 
+<p>Sun Microsystems и VMware (<a target="_blank" href="http://www.wmware.com">www.wmware.com</a>) заключили OEM-соглашение, цель которого &mdash; расширить ассортимент обеих компаний в области решений для виртуализации. Теперь аппаратные системы Sun будут сопровождаться пакетом приложений VMware Infrastructure с полной поддержкой Sun Microsystems. Напомним, что компания VMware &mdash; мировой лидер в области разработки решений виртуализации, от настольных систем до центров обработки данных. Компании различных масштабов используют решения VMware, чтобы сократить капитальные затраты и эксплуатационные расходы, обеспечить непрерывность бизнес-процессов, укрепить информационную безопасность и снизить негативное воздействие на окружающую среду. </p>
+ 
+<p>Новое соглашение позволит заказчикам наиболее полно реализовать преимущества высокой производительности, широких возможностей масштабирования и энергоэффективности серверов Sun x64, одновременно внедряя современные виртуализационные решения VMware для оптимизации использования вычислительных ресурсов, увеличения операционной эффективности и адаптируемости бизнеса к ситуации на рынке. Кроме того, системные интеграторы и партнеры получают в свое распоряжение комплексное решение, разработанное двумя ведущими производителями отрасли, и техническую поддержку профессионального уровня. Эксперты отмечают, что популярность приложений для виртуализации VMware на серверах Sun x64 и в системах хранения данных определяется низким уровнем капитальных и текущих затрат, бесперебойностью бизнес-процессов, высокой безопасностью и возможностью создания центров обработки данных, наиболее полно соблюдающих экологические требования. </p>
+ 
+<p>Сейчас Sun Microsystems и VMware по-прежнему развивают масштабную программу сертификации решений VMware для работы на системах Sun. Кроме того, обе компании продолжат работу по обеспечению эффективности и стабильности работы ОС Solaris в качестве гостевой системы в приложениях для виртуализации VMware, а также бесперебойного функционирования системы VMware Infrastructure в качестве управляющего средства на серверах Sun x64. Компании планируют совместную работу в области конфигурирования, внедрения и отслеживания состояния систем управления для решений обеих сторон. </p>
+ 
+<p>Sun также предлагает собственный полнофункциональный комплект ПО для виртуализации, в состав которого входят унифицированные инструменты управления и виртуализации ОС, серверов, систем хранения данных, настольных компьютеров и микропроцессорных решений &mdash; как готовых систем, так и отдельных компонентов. На конференции VMworld Europe корпорация представила программный пакет для виртуализации Sun Virtual Desktop Infrastructure (VDI) 2.0. Для обеспечения безопасного доступа к централизованным средам рабочих станций посредством множества сетевых подключений это программное решение использует системы VMware ESX Server и VMware VirtualCenter. Соглашение с VMware обеспечивает уверенность в профессиональной поддержке и позволяет заказчикам приобретать комплексные решения непосредственно у Sun Microsystems &mdash; в том числе тонкие клиенты Sun Ray, пакет Sun VDI 2.0 и приложения для виртуализации VMware. </p>
+ 
+<h2>Новые решения Open Archive </h2>
+ 
+<p>Как известно, архивы &mdash; один из наиболее динамичных сегментов на рынке систем хранения данных, стимулируемый невероятным ростом объемов неструктурированных данных, увеличением сроков их хранения, стремлением компаний использовать цифровые активы для развития бизнеса, необходимостью соблюдения нормативных требований и потребностью в общей оптимизации систем хранения. В феврале 2008 г. Sun Microsystems объявила о выпуске дополнений к своему набору открытых решений для архивирования &mdash; масштабируемой, энергосберегающей модульной библиотеки среднего класса и ленточного привода четвертого поколения с возможностью быстрого доступа. Кроме того, корпорация представила усовершенствования, которые повышают уровень безопасности архивных данных, и многоуровневое устройство архивирования, работающее как с Solaris 10, так и с другими популярными ОС. </p>
+ 
+<p>Новая энергосберегающая система Sun StorageTek SL3000 представляет собой первую в мире библиотеку среднего класса, которая обеспечивает готовность уровня предприятия и позволяет наращивать емкость и производительность, не нарушая непрерывности бизнес-процессов. Кроме того, новая технология поддерживает различные возможности создания разделов для консолидации имеющихся ресурсов библиотеки и открытые системы и среды класса мэйнфреймов. Многофункциональная библиотека SL3000 имеет лучшие в своем классе показатели энергопотребления и плотности размещения ресурсов. По мнению Джона Бенсона, старшего вице-президента подразделения систем хранения данных Sun Microsystems, благодаря широкому ассортименту инновационных, масштабируемых решений с открытой архитектурой современные компании смогут повышать эффективность своей ИТ-инфраструктуры даже в условиях экспоненциального роста объемов данных и непрерывного увеличения сроков их хранения. Как самый активный разработчик открытых систем хранения данных Sun Microsystems стремится создавать решения для архивирования, использующие преимущества ПО с открытым исходным кодом, открытых форматов и программных интерфейсов приложений; это позволит заказчикам корпорации не только обойтись без дорогостоящего перехода на новые технологии в будущем, но и не связывать себя ограничениями, свойственными дорогим проприетарным предложениям конкурентов. </p>
+ 
+<p>Предлагаемые решения подтверждают стремление Sun Microsystems внедрить конструктивные инновации корпоративных систем архивирования в сетевую экономику, чтобы предложить заказчикам системы, способные масштабироваться до уровня петабайт, с более мощными средствами управления экспоненциально растущими объемами данных для &laquo;бессрочного&raquo; хранения, а также предоставить им возможности эффективного поиска контента в данных различного типа. </p>
+ 
+<p>Модульная ленточная библиотека <span style="font-weight: bold;">StorageTek SL3000</span> &mdash; это первая библиотека среднего класса, которая поддерживает масштабирование без нарушения работы, экономит до 50% места и снижает расход энергии до 10 раз по сравнению с сопоставимыми библиотеками других производителей. Созданная на базе модульной ленточной библиотеки Sun StorageTek SL8500, она впервые для библиотек среднего класса предоставляет до 3000 разъемов для модернизации без остановки работы системы и поддерживает технологию Any Cartridge, Any Slot (возможность устанавливать любой картридж в любой разъем) для консолидации и использования уже имеющегося оборудования. Самая гибкая в отрасли система разбиения на разделы в этой библиотеке облегчает управление архивными данными. Кроме того, сокращение времени доступа к данным (повышение производительности системы &laquo;картридж-привод&raquo;) за счет технологии Centerline достигает 50%. </p>
+ 
+<p>Ленточный привод <span style="font-weight: bold;">Sun StorageTek T9840D</span> &mdash; единственный ленточный привод с быстрым доступом к данным, среднее время доступа у него в несколько (до четырех) раз меньше по сравнению с традиционными ленточными приводами. Привод StorageTek T9840D обеспечивает экономичное хранение данных для создания архивных хранилищ второго уровня (nearline). Это первое устройство, которое допускает повторное использование и переформатирование носителей для четырех поколений ленточных приводов, что резко повышает окупаемость. Кроме того, ленточный привод T9840D поддерживает встроенные функции шифрования для защиты важных архивных данных. </p>
+ 
+<p>Система <span style="font-weight: bold;">Sun Crypto Key Management System </span>(KMS) 2.0 &mdash; первое решение для управления ключами шифрования, предоставляющее единую централизованную архитектуру ключей для ленточных приводов различных производителей, в том числе HP LTO, Sun StorageTek T9840D и T10000. По сравнению с предыдущей версией система KMS 2.0 более проста в использовании, обеспечивает более высокую безопасность и масштабируемость и поддерживает широкий набор функций сетевого доступа и устройств. Sun Crypto Key Management System 2.0, конструктивно совместимая с гораздо большим (до 30 раз) числом устройств, чем конкурирующие решения, стала первой открытой системой управления ключами шифрования. Тем самым Sun Microsystems предоставляет заказчикам возможность отказаться от использования продукции только одного производителя при долгосрочном хранении архивных данных. </p>
+ 
+<p>Система <span style="font-weight: bold;">Sun Customer Ready Infinite Archive System</span> &mdash; первое на рынке многоуровневое устройство архивирования, предлагающее набор надежных политик для автоматизации перемещения архивных данных между различными уровнями системы хранения. Заказчики смогут оперативно внедрить систему и оценить преимущества экономичности многоуровневого решения для архивирования по сравнению с альтернативными более дорогими (на величину до 70%) решениями, в которых все архивы хранятся исключительно на дисках. Система, созданная на базе ПО Sun Storage Archive Manager (SAM), предлагает опциональные уровни производительности и емкости дисковых накопителей, а также позволяет хранить менее активно используемые архивные данные на ленточных носителях. </p>
+ 
+<p>Sun Microsystems &mdash; единственный крупный поставщик, использующий открытый подход к системам архивирования. Благодаря этому ее заказчики могут внедрять компоненты для архивирования в имеющиеся окружения и использовать инновации, опыт и поддержку сообщества разработчиков ПО Sun Microsystems с открытым исходным кодом. Оборудование и ПО корпорации для систем хранения данных способно работать со всеми основными ОС, включая Solaris 10. Как ИТ-поставщик, открывший исходные коды своего ПО для систем хранения данных, Sun Microsystems помогает заказчикам и сообществу разработчиков проводить индивидуальную модификацию продукции и расширять ее возможности в соответствии с потребностями, обеспечивая непрерывную защиту инвестиций в ПО и поддержку. Файловая система Solaris ZFS упрощает управление системой хранения и данными, обеспечивая безопасность и целостность данных, практически неограниченную масштабируемость и автоматизированное управление требовательными приложениями сегодня и в обозримом будущем. ОС Solaris 10 с файловой системой Solaris ZFS &mdash; это единственная ОС, выполняющая сквозное вычисление контрольных сумм для всех данных, чтобы гарантировать их целостность. </p>
+ 
+<p>В дополнение к своим решениям для архивирования корпорация предоставляет сервисы поддержки. Благодаря более чем 35-летнему опыту работы компании с системами хранения профессиональные специалисты службы Sun Service являются экспертами как по дисковым, так и по ленточным решениям для архивирования. Многие из компонентов Sun Microsystems (в том числе и система SL3000) поставляются с пакетом Performance Pack, дающим право на дополнительные скидки: зачастую это означает бесплатное повышение уровня поддержки, если сервис был приобретен вместе с системой. Заказчики могут выбрать увеличение объемов ленточного хранения; тем самым корпорация упрощает для них процесс физического переноса лент из старых библиотек в новую систему SL3000 и помогает скоординировать переход от старых технологий к новым. При переносе данных Sun Microsystems помогает свести к минимуму простои, обеспечивая работоспособность приложений в ходе этого процесса, что экономит клиентам время и средства. </p>
+ 
+<h2>Новые сервисы и инструменты OpenSolaris </h2>
+ 
+<p>Современная индустрия систем хранения данных в значительной степени остается закрытой и проприетарной, где большинство пользователей привязано к одному определенному поставщику. В конце апреля Sun Microsystems объявила о выпуске новых мощных средств разработки и о расширении профессиональных сервисов, которые помогут разработчикам эффективнее использовать преимущества сообществ, создающих ПО с открытым кодом. Эти сообщества играют важную роль в изменении экономической перспективы систем хранения данных. Более 3 тыс. участников и 30 проектов активно растущего сообщества OpenSolaris оказывают широкую поддержку разработчикам и компаниям и дают возможность использовать альтернативное ПО с открытым исходным кодом вместо дорогого проприетарного ПО. </p>
+ 
+<p>Корпорация сделала открытой новую платформу разработки систем хранения данных, чтобы существенно увеличить ее производительность и экономическую эффективность для потребителей. Кроме того, эта инициатива создает новый безграничный мир для разработчиков, предоставляя им возможности разработки новых приложений и инноваций в области систем хранения данных. Благодаря открытым платформам разработчики могут использовать одни и те же аппаратные средства в различных целях путем несложной доработки ПО &mdash; такая возможность отсутствует в проприетарных решениях. Исполнительный вице-президент Sun Microsystems по вычислительным системам Джон Фаулер отмечает, что индустрия систем хранения данных претерпевает радикальные изменения, подобные тем, которые десять лет назад происходили в индустрии серверов. ОС Solaris, файловая система ZFS и работа сообщества разработчиков решений хранения данных OpenSolaris обеспечивают надежную масштабируемость уровня предприятия и другие преимущества, предоставляя экономичный способ использования открытой архитектуры без снижения качества и надежности. Корпорация создала основу для этого важного преобразования индустрии, организовав сообщество разработчиков решений хранения данных в рамках сообщества OpenSolaris. Существующие решения &mdash; например, популярный сервер Sun Fire x4500 (проект Thumper), первый в мире гибрид сервера и системы хранения данных, &mdash; и возможности файловой системы Solaris ZFS в ОС Solaris позволяют снизить затраты на величину до 90% за счет использования ПО с открытым исходным кодом в системах на базе отраслевых стандартов. </p>
+ 
+<p>Sun Microsystems представила новые инструменты для разработчиков и руководства, помогающие эффективно решать различные вопросы, связанные с разработкой. Новые средства разработки, видеоматериалы и онлайновые руководства предоставляют разработчикам инструменты для оперативного и эффективного создания стабильных систем хранения данных. Так, руководство &laquo;Создание сервера хранения данных под управлением ОС OpenSolaris менее чем за 10 минут&raquo; предназначено для того, чтобы разработчики могли ознакомиться с простыми командами ОС Solaris для управления данными (ZFS, NFS, CIFS, COMSTAR). Руководство &laquo;Простые шаги создания сетевых систем хранения данных (NAS)&raquo; описывает шаги, необходимые для оперативного создания сетевых систем хранения данных на базе ОС OpenSolaris. </p>
+ 
+<p>Расширены и возможности сервисов Sun Microsystems для ускорения разработки новых приложений открытых систем хранения, что поможет пользователям безопасно переходить на открытую архитектуру хранения данных. Как при создании открытой системы хранения данных на базе проприетарной системы, так и при переносе данных эти сервисы предоставляют технический опыт в области открытых систем хранения данных и будут и дальше расширять возможности открытых систем хранения в соответствии с потребностями сообщества. </p>
+ 
+<p>Пользователи решений корпорации экономят средства за счет использования открытых систем хранения Gracenote, SearchForce, DigiTar, Joyent и других лидеров индустрии, использующих решения для открытых систем хранения Sun, такие как сервер Sun Fire x4500 и технология Solaris ZFS. Это позволяет отказаться от проприетарных систем хранения данных. </p>
+ 
+<p>Эксперты подчеркивают, что Sun Microsystems создала платформу, которая способна сделать индустрию хранения данных более демократичной. Необходимый уровень поддержки ОС, который требуется для эффективной работы любой компании, и помощь сообщества разработчиков решений хранения данных OpenSolaris позволяют значительно сократить время разработки и средства. </p>
+ 
+<p>Инициатива Sun Microsystems Open Storage, насчитывающая более 3 тыс. участников и множество крупных проектов (SVM, UFS, NFS, ZFS и т. д.), сформировала одно из самых быстрорастущих в мире сообществ, создающих ПО с открытым исходным кодом. Лидеры индустрии систем хранения данных, такие как Hitachi Data Systems, Qlogic и Emulex, также предоставили свое ПО сообществу OpenSolaris. В числе участников сообщества &mdash; и поставщик решений хранения данных компания Nexenta (<a target="_blank" href="http://www.nexenta.org">www.nexenta.org</a>), которая использует ОС OpenSolaris и инновационную технологию ZFS при создании ПО для сетевых систем хранения данных. Компания LiveAmmo (<a target="_blank" href="http://www.liveammo.com">www.liveammo.com</a>), предоставляющая услуги обучения, использует ОС OpenSolaris в проекте COMSTAR, предоставляя клиентам возможности экономичной оптоволоконной инфраструктуры сетевых систем хранения данных. Технологии хранения данных OpenSolaris применяют в своих разработках самые разные ИТ-компании: это, например, лидер в области систем баз данных компания MySQL; компании управления контентом Drupal, Confluence и Alfresco, провайдер систем управления взаимодействиями с клиентами (CRM) SugarCRM и другие. </p>
+ 
+<p>Многие аналитики полагают, что сейчас наступил наиболее благоприятный момент для перехода на открытые системы хранения данных. С ними соглашается исполнительный директор Nexenta Эвен Пауэлл, который отмечает, что его компания, являясь членом сообщества OpenSolaris с 2006 г., использовала преимущества ядра Solaris и инновации технологии ZFS, чтобы предложить своим заказчикам программное решение NexentaStor, впервые сделавшее систему хранения данных уровня предприятий доступной для всех. В сочетании с высокой производительностью на базе отраслевых стандартов и серверами хранения данных с высокой плотностью хранения решение NexentaStor экономит предприятиям время и средства по сравнению с традиционными системами хранения, учитывая, что объем данных растет быстрее, чем развивается архитектура традиционных систем, и быстрее, чем может себе позволить бюджет предприятий. </p>
+ 
+<h2>Развитие концепции Open Storage </h2>
+ 
+<p>В этом году ИТ-индустрия переживает настоящую революцию в области внедрения открытых систем хранения данных. Ожидается, что к 2010 г. общий объем рынка Open Storage превысит 10 млрд долл., а совокупные темпы годового роста рынка систем начального уровня в течение следующих трех лет составят 23%. Такие высокие показатели во многом объясняются исключительной гибкостью ПО с открытыми исходными кодами и значительной экономией, которую можно получить, используя его в системах хранения данных и массивах общего назначения. </p>
+ 
+<p>В июле Sun Microsystems объявила о дальнейшем расширении ассортимента продукции на базе открытой платформы систем хранения данных Open Storage. Эти решения включают новую линейку экономичных массивов хранения данных и новую высокопроизводительную модель популярного семейства серверов Sun Fire X4500 (проект Thumper). Системы, входящие в линейку продукции Sun Storage J4000, станут одними из самых масштабируемых и надежных компонентов для организации инфраструктуры хранения данных; при использовании вместе с серверами корпорации, ОС OpenSolaris и Solaris ZFS они позволяют добиться десятикратной экономии по сравнению с традиционными массивами. Решение Sun Fire X4540 имеет один из самых высоких показателей плотности хранения данных, позволяет на 30&ndash;50% снизить расходы на электроэнергию и охлаждение и при этом в два раза дешевле, чем традиционные системы хранения. Новые компоненты обладают большой емкостью и плотностью монтажа и предоставляют клиентам дополнительные преимущества за счет эффективности систем хранения общего назначения и ПО с открытыми исходными кодами. </p>
+ <blockquote> 
+  <h3>Решения для архивирования данных </h3>
+ 
+  <p>Sun Microsystems предлагает решения архивирования и защиты данных, позволяющие эффективно и экономически выгодно управлять бурно растущими объемами центров обработки данных. Инновационные решения корпорации для хранения данных основаны на использовании открытых исходных кодов и аппаратных платформах хранения данных, обеспечивающих значительные экономические преимущества и защиту инвестиций по сравнению с конкурирующими решениями. </p>
+ 
+  <p>С 2004 г. было продано более 10 тыс. ленточных библиотек Sun StorageTek SL500 &mdash; этот факт подчеркивает бессменное лидерство корпорации на рынке автоматизированных решений для хранения данных на магнитной ленте. Библиотеки SL3000, основанные на модульных библиотеках Sun StorageTek SL8500, позволяют компаниям более экономически выгодно развивать свою ИТ-инфраструктуру. Они обеспечивают самые гибкие возможности создания разделов, облегчая управление процессами архивирования данных и делая их более эффективными, а поддерживаемая технология CenterLine способна на 50% увеличивать скорость доступа к данным. </p>
+ </blockquote> 
+<p>Компания PixelPark AG, Университет штата Орегон и портал IT.com были одними из первых клиентов, которые смогли на практике убедиться в гибкости и экономичности нового семейства Sun Storage J4000; фактически они смогли сэкономить еще больше благодаря совместному использованию серверов Sun Fire и ОС Solaris. Отметим, что компания PixelPark (<a target="_blank" href="http://www.pixelpark.com">www.pixelpark.com</a>) &mdash; лидер по предоставлению сервисов в области ИТ-инфраструктуры в Германии. По словам ее директора по ИТ Торлейфа Уийка, системы Sun StorageTek J4000 позволили PixelPark в значительной степени сэкономить средства на приобретение дополнительных аппаратных средств. Затраты на хранения 1 Гбайт данных составляют менее 1 долл. Кроме большого объема дисковой памяти для хранения своих огромных массивов данных компания получила высокую производительность. Высокая плотность монтажа к тому же позволяет сэкономить полезное место в стойке. Этот массив совместим со множеством систем, поэтому можно добавлять к нему самые разные компоненты, используя их совместно по мере развития бизнеса. </p>
+ 
+<p>Университет штата Орегон, который уже давно использует решения Sun Microsystems, обратился в корпорацию с задачей создать решение для поддержке работы океанических обсерваторий. Эти научные институты постоянно записывают большие потоки сложных, многомерных данных, и им требовался новый подход к управлению хранением информации. По отзывам исследователей, массив Sun StorageTek J4500 обеспечил им высокую надежность, исключительную производительность и простоту управления. Например, теперь не требуется изменять конфигурацию базовых устройств хранения данных при добавлении новых дисков к пулу систем хранения на базе ОС Solaris ZFS, так как полная емкость массива J4500 находится в постоянной доступности. </p>
+ 
+<p>К ассортименту продукции на базе платформы Open Storage добавлены новые системы: Sun Storage J4200 (до 12 устройств на один модуль, до 48 устройств SAS/SATA); Sun Storage J4400 (до 24 устройств на модуль, до шести портов SAS, до 192 3,5-дюйм устройств SAS/SATA) и Sun Storage J4500 в корпусе высотой 4 RU с одной из самых высоких плотностей размещения &mdash; 48 устройств на модуль, до четырех портов SAS, до 480 3,5-дюйм устройств SATA). Реализована также новая технология подключений: адаптер Sun StorageTek SAS RAID HBA позволяет напрямую подключать системы Sun Storage J4000 к серверам через один или несколько высокоскоростных интерфейсов, обеспечивая высокую степень масштабируемости при добавлении внешних устройств хранения. Системы семейства Sun Storage J4000 можно подключать к серверам с ОС Solaris, Linux или Windows, а также использовать среды Open Storage и OpenSolaris. </p>
+ 
+<p>Еще один продукт корпорации, Sun Fire X4540 &mdash; это единственное решение, которое сочетает в себе функции сервера и системы хранения, поддерживая установку до 48 дисков в одном корпусе. Именно Sun Microsystems первой выпустила на рынок гибридный комплекс, сочетающий сервер и систему хранения. Он обладает одним из самых высоких уровней производительности, высокой емкостью, экономит электроэнергию и пространство. Sun Fire X4540 &mdash; первый сервер Open Storage, в котором компоненты сервера и системы хранения интегрированы на базе отраслевых стандартов и реализована открытая архитектура. Он работает под управлением ОС Solaris OS и Solaris ZFS. Достоинства этой системы &mdash; высокая производительность и низкая цена. Sun Fire X4540 предназначен для самого быстро растущего сегмента рынка систем хранения &mdash; недорогих, но высокоемких дисковых систем на базе технологии SATA. Благодаря близкому размещению дисков и вычислительных компонентов Sun Fire X4540 отлично подходит для высокопроизводительных вычислений, распределенного хранения, систем управления интеллектуальными ресурсами предприятия, потоковой обработки видео, хранилищ данных и других областей. Новая система Sun Fire X4540 доступна по той же цене, что и Sun Fire X4500; при этом ее производительность по сравнению с предыдущим поколением увеличилась в два раза, а энергопотребление осталось на низком уровне. Сервер хранения данных Sun Fire X4540 сертифицирован на совместимость со следующим ПО: СУБД MySQL, хранилище данных Greenplum, защищенный поиск данных CopperEyes и система резервного копирования Zmanda ZRM для MySQL. </p>
+ 
+<h3>Усовершенствованное решение для управления доступом </h3>
+ 
+<p>Компании продолжают тратить значительные средства на обеспечение безопасности и соответствия нормативам. Благодаря тесной интеграции функций администрирования и управления ролями Sun Microsystems может предложить своим клиентам более высокий уровень автоматизации этих процессов. Такие решения помогают клиентам справляться с актуальными проблемами идентификации: они упрощают процедуры приема на работу и увольнения сотрудников, поддержку соответствия внутренним политикам аудита, а также снижают затраты, связанные с управлением доступом. Этим летом Sun Microsystems объявила о выходе Sun Identity Manager 8.0 &mdash; новейшей версии своего ПО для администрирования. Благодаря ряду усовершенствований и внедрению новых функциональных возможностей, таких как экспорт данных и функции аттестации, ПО Sun Identity Manager 8.0 стало первым решением для администрирования пользователей на основе ролей. В результате компании смогут использовать бизнес-роли как для управления жизненным циклом идентификации, так и для проверки идентификационных данных в масштабах всего предприятия и корпоративных сетей. Система тесно интегрирована с решением Sun Role Manager, чтобы помочь предприятиям наиболее эффективно решать задачи аттестации и проверки данных идентификации. Кроме того, важные изменения в системе оперативной отчетности позволяют проводить анализ данных о предоставлении прав доступа, чтобы усилить контроль за процессами администрирования и проверки, обеспечить соответствие нормативам и сократить затраты. </p>
+ 
+<p>Sun Identity Manager 8.0 предоставляет компаниям новые возможности согласованного, автоматизированного и экономически эффективного расширения Интернет-сервисов и обеспечения соответствия правительственным нормативам (таким как SOX, HIPPA и Basel II). При этом также возрастает продуктивность работы сотрудников и уменьшаются риски, связанные с безопасностью. В Sun Identity Manager 8.0 реализованы следующие новые функции. </p>
+ 
+<p><span style="font-weight: bold;">Экспорт данных</span> &mdash; экспорт журналов событий и данных идентификации во внешние хранилища данных и системы управления интеллектуальными ресурсами предприятия для дальнейшего анализа. Преимущества: безотказная система отчетности и управления правами доступа. </p>
+ <blockquote> 
+  <h3>Преимущества открытых решений Sun </h3>
+ 
+  <p>Напомним, что Sun Microsystems предлагает одни из самых масштабируемых и надежных массивов для хранения данных, которые в сочетании с серверами корпорации позволяют достичь значительной экономии. По сравнению с традиционными системами хранения начального уровня семейство Sun Storage J4000 обеспечивает вдвое более высокую плотность размещения компонентов, в три раза более разнообразные возможности подключения, в два раза более высокую готовность и увеличенную до 10 раз емкость. К тому же стартовая цена этого нового семейства начинается от 3 тыс. долл., а стоимость хранения 1 Гбайт составляет менее 1 долл. Sun Storage J4000 также экономит свободное пространство в стойке, обеспечивая рекордную плотность размещения: до 12 жестких дисков в модуле высотой 1RU. При использовании совместно с OpenSolaris и с новыми серверами корпорации затраты на хранение данных можно сократить на величину до 90%. К тому же в отличие от традиционных систем хранения среды Sun Open Storage позволяют свободно сочетать различные компоненты и повторно использовать аппаратные средства, добавляя новое ПО по мере роста потребностей бизнеса. </p>
+ </blockquote> 
+<p><span style="font-weight: bold;">Комплексная аттестация</span> &mdash; интеграция с Sun Role Manager для создания законченного решения сертификации прав доступа и автоматического установления исключений. </p>
+ 
+<p><span style="font-weight: bold;">Оптимизация интеграции бизнес-ролей</span> &mdash; интеграция с Sun Role Manager позволяет импортировать предопределенные бизнес-роли для автоматизации администрирования и аудита на уровне бизнес-ролей. </p>
+ 
+<p>Основной компонент решения корпорации для управления доступом, система Sun Identity Manager 8.0, доступна как отдельный продукт, а также в составе комплекса Sun Java Identity Management Suite, включающего Sun Role Manager, Sun Java System Access Manager, Sun Java System Federation Manager и Sun Java System Directory Server. Стоимость зависит от условий приобретения &mdash; на основе подписки или лицензирования. </p>
+ 
+<p>Благодаря усовершенствованиям, реализованным в системах Sun Identity Manager и Sun Role Manager, корпорация стала одним из первых поставщиков комплексных решений для управления идентификацией уровня предприятия. Решения Sun Microsystems помогут компаниям упростить имеющиеся процессы управления доступом, повысить эффективность аудита и сократить затраты. Комплексная система для идентификации на основе ролей открывает дополнительные возможности администрирования пользователей. Это одна из наиболее универсальных систем для организации &laquo;замкнутого&raquo; цикла обеспечения соответствия нормативам, которая имеет функцию проактивной проверки и исправления неправильно предоставленных прав. Развитая система подготовки отчетов позволяет организациям всегда соответствовать нормативам и поддерживать свою конкурентоспособность. </p>
+ 
+<p>Напомним, что технологии Sun Microsystems используют более 5 тыс. организаций во всем мире, в том числе компании из списка Fortune 100, для управления идентификацией миллиардов пользователей. Решения корпорации обеспечивают им защищенный доступ к данным, постоянное соответствие нормативам и интеграцию. </p>
+ </DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25195.html'>СХД HP для малого и среднего бизнеса</A></b></li><li><b><A href='detail.php@ID=24808.html'>Горизонтально масштабируемые СХД NetApp и виртуализация для облачных инфраструктур</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24655.html'>SSD-хранилище «Облакотеки» </A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=13244.html" target="_blank"><img src="../upload/iblock/7df/26-1-1.jpg" alt="Открыть материал" style="width:50px; height:50px; border:1px solid #000; float:left; margin:0 5px 5px 0;"></a><a href="detail.php@ID=13244.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Открытые решения Sun Microsystems для хранения данных</a><br><a href="detail.php@ID=13244.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Активно разрабатывая открытые системы хранения данных, Sun Microsystems стремится использовать в них преимущества ПО с открытым исходным кодом &hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=13244.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=13244&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='08dbc15f04854a298a06024f8da89874'><img src='../bitrix/tools/captcha.php@captcha_code=08dbc15f04854a298a06024f8da89874' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

@@ -1,0 +1,463 @@
+<HTML>
+<HEAD>
+<title>Мониторинг бизнес-активности и платформа InterSystems Ensemble
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Вадим Федоров, консультант InterSystems Corporation vadim@intersystems.ru Управлять компанией в режиме реального времени - сложная, но крайне важная для бизнеса задача. На предприятиях, которые эффективно управляются в режиме реального времени" />
+<meta name="description" content="Вадим Федоров, консультант InterSystems Corporation vadim@intersystems.ru Управлять компанией в режиме реального времени - сложная, но крайне важная для бизнеса задача. На предприятиях, которые эффективно управляются в режиме реального времени" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082393','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6741' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6741&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6741"].SHOW_IMAGE.value="N"; document.forms["PrintForm6741"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6741"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6741"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6741);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6741.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6741.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6741);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11492.html'>№9 (85), сентябрь 2005</a><h1>Мониторинг бизнес-активности и платформа InterSystems Ensemble
+</h1>11.09.2005<p></p><DIV class='article-text'><p><i>Вадим Федоров</i>, <br>
+  консультант InterSystems Corporation <br>
+  <a href="mailto:vadim@intersystems.ru">vadim@intersystems.ru</a>
+<p>Управлять компанией в режиме реального времени - сложная, но крайне важная для бизнеса задача. На предприятиях, которые эффективно управляются в режиме реального времени, постоянно отслеживаются все важные для бизнеса события, идентифицируются проблемы и новые возможности для развития бизнеса. От того, насколько оперативно сотрудники предприятия могут отреагировать на бизнес-события, во многом зависит эффективность работы компании.
+<p>Решение задачи мониторинга бизнес-активности позволяет в режиме реального времени отслеживать и обрабатывать важнейшие бизнес-события (новая сделка, изменение цепочки поставок, изменение законодательства, запрос на доработку информационной системы и т. д.). Информация обрабатывается и предоставляется пользователям, которые оперативно выполняют соответствующие ответные действия. Системы мониторинга способствует принятию быстрых, обоснованных и четких управленческих решений. Результат - конкурентные преимущества, которые получает предприятие.
+<p>Концепция мониторинга бизнес-активности (Business Activity Monitoring, BAM) была предложена аналитической компанией Gartner, которая определяет BAM как концепцию предоставления доступа в режиме реального времени к наиболее важным индикаторам производительности бизнеса с целью увеличения скорости и эффективности бизнес-операций.
+<p>Мониторинг бизнес-активности концентрируется на мониторинге, фильтрации и представлении событий. Типичный сценарий BAM упрощенно можно представить следующим образом: ПО оценивает происходящие на предприятии события, используя набор правил, которые определяют, как фильтровать события, каких пользователей и в каком формате уведомлять. Для решения задачи мониторинга бизнес-активности используется целый ряд смежных технологий: системы управления бизнес-процессами для получения информации о состоянии процессов и о событиях, происходящих в них, средства интеграции корпоративных приложений для доступа к разнообразным источникам данных и интегрированным приложениям, а также инструменты бизнес-аналитики (business intelligence) для анализа информации.
+<p>Мониторинг бизнес-событий тесно связан с интеграцией корпоративных приложений: для полноценного обеспечения такого мониторинга событий в реальном времени на крупном предприятии необходимо интегрировать все используемые информационные системы.
+<p>Платформа для интеграции и разработки InterSystems Ensemble в числе прочего позволяет создавать и решения для мониторинга бизнес-активности. С точки зрения интеграции корпоративных приложений BAM можно считать одной из задач интеграции, наряду с координацией данных, управлением бизнес-процессами и разработкой композитных приложений (это приложения, использующие функционал и данные интегрированных систем). InterSystems Ensemble в рамках одного продукта предоставляет средства для решения всех этих задач интеграции корпоративных приложений, что позволяет создавать на основе существующих приложений новые решения, повышающие эффективность бизнеса.
+<h3>Влияние событий на бизнес и ИТ </h3>
+<p>Ключевое понятие мониторинга бизнес-активности - событие. Таким образом, прежде чем детально рассматривать концепцию BAM, необходимо подробно остановиться на событиях и управляемой событиями архитектуре.
+<p>События все больше влияют на функционирование предприятий. "Событийный" подход в бизнесе и ИТ в ближайшее время будет стремительно набирать популярность, так как он обеспечивает поддержку динамических сложных бизнес-процессов. Управляемые событиями бизнес-процессы отражают процессы реального мира, в которых события играют важную роль.
+<p>Понятие "событие" описывает, например, коммерческую сделку, окончание института или нажатие клавиши клавиатуры компьютера. Событие может, в свою очередь, включать в себя другие события, однако, как правило, не имеет смысла анализировать их на более детализированном уровне. События не бывают мгновенными, они представляют собой результат выполнения процессов. Например, окончание института - результат выполнявшегося определенное время процесса.
+<p>Некоторые предприятия уже используют управляемые событиями бизнес-процессы. Например, в ряде авиакомпаний события служат для реализации "событийной" стратегии управления стоимостью билетов. В рамках данной стратегии цена билета постоянно регулируется в соответствии со спросом на билеты на конкретный рейс и на конкретную дату. Такой подход позволяет увеличить прибыль, повышая цену билета, если спрос велик, и понижая ее для увеличения спроса, если заказов мало. Для реализации подобной стратегии требуется специальное ПО, которое отслеживает события, касающиеся продажи билетов на каждый рейс и на каждую дату. Руководство компании, сотрудники отделов по продаже билетов могут получать информацию на специальных инструментальных панелях (dashboards), которые постоянно обновляются, обеспечивая сотрудникам актуальную информацию о продаже билетов. Это позволяет оперативно реагировать на потенциальные проблемы и уделять большее внимание тем событиям, которые невозможно просчитать заранее. Управляемые событиями бизнес-процессы "реагируют" на происходящие события. Возникающие проблемы обнаруживаются раньше, чем в обычных системах, следовательно, сотрудники могут оперативно предпринять соответствующие действия.
+<p>Стратегия бизнеса, ориентированная на события, часто подразумевает сокращение времени выполнения бизнес-процесса. Например, производство продукции в соответствии с заказами клиентов целесообразно, если время производства измеряется часами, а не днями. События позволяют обеспечить гибкость экземпляров - каждый экземпляр бизнес-процесса рассматривается индивидуально (например, каждый автомобиль окрашивается в свой цвет) - и гибкость процессов - процесс изменяется в ответ на запросы потребителей (например, линия сборки автомобилей перенастраивается для производства мини-вэнов вместо седанов).
+<p>Набирающие популярность управляемые событиями бизнес-процессы сегодня все сильнее влияют на информационные технологии. Многие аспекты ориентированной на события стратегии бизнеса могут быть реализованы, только если приложения также ориентированы на события. Иными словами, управляемые событиями бизнес-процессы требуют управляемых событиями приложений. Но традиционная архитектура статична и недостаточно гибка для реализации активного поведения, которое требуется для автоматизации ориентированных на события бизнес-процессов. Управляемые событиями приложения позволяют быстро модифицировать процессы и обрабатывать ошибки и исключительные ситуации, которые "разрушили" бы традиционные процессы. Аналитическая компания Gartner предлагает для создания таких приложений управляемую событиями архитектуру (Event Driven Architecture), которая позволяет наилучшим образом обрабатывать события. Самый яркий пример приложений, основанных на управляемой событиями архитектуре, - системы для мониторинга бизнес-активности (BAM).
+<h3>Развитие систем BAM </h3>
+<p>Несмотря на то, что технология BAM появилась всего несколько лет назад, в своем развитии она уже прошла несколько этапов.
+<p>Первое поколение систем мониторинга бизнес-активности обеспечивает "захват" бизнес-событий, обрабатывает эти события и предоставляет информацию пользователям на специальных инструментальных панелях. Бизнес-события извлекаются из различных приложений и источников данных, фильтруются, объединяются со связанной информацией и преобразуются, формируя информацию для пользователей. Как правило, для создания пользовательского интерфейса систем BAM используются портальные технологии, поддерживающие создание персонифицированных интерфейсов. Руководители компании и ответственные за бизнес-процессы получают доступ к инструментальным панелям, на которых располагаются графические компоненты, облегчающие восприятие информации (диаграммы, графики, отчеты). Кроме того, для информирования пользователей используются такие каналы, как электронная почта, мобильная связь и т. д.
+<p>В качестве примера рассмотрим реализацию задачи мониторинга бизнес-активности в крупной медицинской лаборатории, которая специализируется на проведении длительных и сложных тестов. Информация о результатах обработки тестов должна быть предоставлена врачам и пациентам. Изменения статуса медицинских тестов отображаются на инструментальных панелях портального приложения и рассылаются по электронной почте врачам и пациентам. Для решения этой задачи необходимо отслеживать события в многочисленных медицинских приложениях. События - изменения статуса тестов - обрабатываются, дополняются необходимыми данными, и информация предоставляется заинтересованным пользователям. Кроме того, информация о событиях доступна и другим приложениям, например, через Web-сервисы.
+<p>Следующий этап развития BAM дает пользователям возможность не только получать информацию о событиях на предприятии, но и предпринимать на основании полученной информации ответные действия, влияющие на работу предприятия. От системы требуется не только предоставить информацию о бизнес-событиях с помощью электронной почты или инструментальных панелей в корпоративном портале (что, естественно, помогает пользователю), но и обеспечить возможность немедленно повлиять на протекающие на предприятии процессы. В противном случае пользователи будут получать огромное количество информации, которую они просто не успеют обработать, а следовательно, будут вынуждены ее игнорировать. Инструментальные панели и уведомления помогают принимать решения, но затем пользователи должны действовать вне системы мониторинга бизнес-активности (например, звонить по телефону, посылать письма по электронной почте, работать с внешней системой). Во внешней системе контекст бизнес-события может потеряться, и пользователю не всегда просто осуществить ответные действия в нескольких системах в соответствии с полученной информацией.
+<p>Таким образом, возможность ответного действия добавляет возможность обрабатывать большую часть ситуаций в режиме реального времени, значительно повышая эффективность работы сотрудников.
+<p>В качестве примера можно привести решение мониторинга бизнес-активности в телекоммуникационной компании, задача которого - автоматизировать процесс обработки заказов. Пользователи составляли заказы таким образом, что возникало большое количество исключительных ситуаций, которые требовалось обрабатывать вручную, что приводило к увеличению издержек. Мониторинг бизнес-активности позволил идентифицировать заказы, которые могли привести к исключительным ситуациям. Когда обнаруживалось такое исключение, автоматически запускался бизнес-процесс дополнительной обработки заказов, в частности, происходил поиск информации в базе знаний по решению исключительных ситуаций. И только те исключения, которые не удавалось исправить автоматически, направлялись к ответственным менеджерам, что привело к существенному снижению расходов на обработку заказов и удовлетворению клиентов.
+<p>Дальнейший уровень развития - это предсказывающий и адаптивный мониторинг бизнес-активности, с помощью которого пользователю предоставляется информация с несколькими возможными вариантами ответных действий, что позволяет оптимизировать бизнес-процессы в реальном времени. Например, вместо простого уведомления о том, что запасы товара снизились, пользователь получает от системы BAM информацию о том, что запасы малы, так как среднее количество заказов увеличилось в последние три недели на 50%. В соответствии с этой тенденцией и ситуацией в других регионах система рекомендует перенести товары со склада в регионе А в регион Б.
+<p>Для того чтобы обеспечить такой уровень мониторинга бизнес-активности, пользователям нужно предоставить возможность получать детализированную информацию, связанную с бизнес-событиями, анализировать тенденции и оценивать различные варианты развития событий. Если система BAM использует мощный математический аппарат, то появляется возможность адаптировать алгоритмы, обучаясь по мере обработки бизнес-событий, происходящих в режиме реального времени. Подобные системы мониторинга бизнес-активности применимы, например, в системах управления рисками.
+<h3>Ключевые элементы BAM </h3>
+<p>В мониторинге бизнес-активности можно выделить следующие этапы: захват события, установка контекста, аналитика в реальном времени, представление информации и ответные действия (рис. 1). Рассмотрим эти этапы подробнее.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2005/BAM/ris1.jpg" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Этапы мониторинга бизнес-активности.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Первый этап - <b>захват события</b>. В рамках BAM осуществляется мониторинг 
+  процессов, автоматизированных каким-либо приложением или средством управления 
+  бизнес-процессами, и захватываются интересующие события. Более открытые системы 
+  мониторинга бизнес-активности позволяют захватывать события в любой информационной 
+  системе предприятия и в разнообразных источниках данных (корпоративные хранилища 
+  данных, системы контрагентов, Web-сервисы в Интернете и т. д.). 
+<p>Как только события захвачены, необходимо предоставить для них контекст, чтобы эти события можно было анализировать. Для мониторинга бизнес-активности может потребоваться дополнительная информация. Например, если захвачено такое бизнес-событие, как новая сделка, может потребоваться дополнительная информация о клиенте, связанных заказах этого продукта, уровне запасов и т. д. Контекст может поступить как из исторических данных, так и из оперативного источника в режиме реального времени, так что при мониторинге бизнес-активности требуется получать связанную информацию без задержки.
+<p>Основной этап мониторинга бизнес-активности - <b>аналитика в реальном времени</b>. 
+  Бизнес-события анализируются, устанавливается связь между ними, применяются 
+  правила для получения ключевых показателей производительности (key performance 
+  indicators, KPI). Аналитика в режиме реального времени часто сочетается с анализом 
+  исторических данных, включая доступ к хранилищам данных. На данном этапе формируется 
+  очищенная информация, которая будет передана заинтересованному пользователю 
+  или системе для дальнейшей обработки. 
+<p>Мониторинг бизнес-активности обеспечивает также <b>представление информации</b>. 
+  Как правило, используются несколько каналов уведомления пользователей, которые 
+  могут получать информацию в виде писем электронной почты, на портальных приложениях 
+  и беспроводных устройствах. Ведущие решения позволяют представить ключевые показатели 
+  производительности и другую информацию о событиях в персонифицированных порталах, 
+  на инструментальных панелях, построенных с использованием графических компонентов 
+  (диаграммы, графики, отчеты). Подобные порталы обычно обеспечивают пользователям 
+  и средства принятия решений в ответ на события. Кроме того, системы мониторинга 
+  бизнес-активности часто включают средства интеграции с ведущими средствами бизнес-аналитики 
+  и построения отчетов, чтобы обеспечить представление детализированной информации. 
+<p>Заключительный этап мониторинга бизнес-активности - <b>ответные действия</b>. 
+  Для того чтобы пользователи могли отреагировать на полученную информацию о бизнес-событии 
+  в режиме реального времени, им нужна возможность оперативно запускать бизнес-процессы. 
+  Эти процессы могут управлять взаимодействием с внешними приложениями и другими 
+  пользователями. Ответные действия порождают новые события, которые, в свою очередь, 
+  отслеживаются и обрабатываются в рамках решения задачи BAM. 
+<p>Для того чтобы эффективно решать задачи мониторинга бизнес-активности, необходимы 
+  следующие компоненты:
+<ul>
+  <li>средства интеграции корпоративных приложений (Enterprise Application Integration) 
+    для захвата событий в любом приложении и источнике данных на предприятии;
+  <li>системы интеграции корпоративной информации (Enterprise Information Integration) 
+    для извлечения контекста событий из разнообразных источников данных;
+  <li>аналитические средства для анализа событий и исторических данных в реальном 
+    времени;
+  <li>портальные решения для представления информации пользователям;
+  <li>системы управления бизнес-процессами, посредством которых, используя полученную информацию, можно влиять на выполнение бизнес-процессов на предприятии.</ul>
+<p>Если взглянуть на интеграцию корпоративных приложений более широко, то окажется, что в современных платформах для интеграции и разработки композитных приложений в той или иной степени присутствуют все перечисленные выше компоненты. Хотя задачи BAM могут решаться и вне рамок интеграции, мониторинг бизнес-активности все чаще рассматривается как задача интеграции корпоративных приложений. В данной статье мы рассматриваем мониторинг бизнес-активности как одну из задач интеграции корпоративных приложений, наряду с координацией данных, управлением бизнес-процессами и разработкой композитных приложений.
+<p>Мониторинг бизнес-активности тесно связан с другими задачами интеграции. Решение задачи координации данных позволяет захватывать бизнес-события в интегрированных приложениях и источниках данных на предприятии. В рамках разработки композитных приложений часто создаются портальные решения, используемые в том числе для представления получаемой при мониторинге бизнес-активности информации пользователям. Мониторинг бизнес-активности связан и с управлением бизнес-процессами. Во-первых, BAM позволяет собрать информацию, необходимую для оптимизации бизнес-процессов. Во-вторых, благодаря ему появляется возможность влиять на бизнес-процессы, используя получаемую оперативную информацию.
+<p>Таким образом, на интеграционной платформе проекты создания решений для мониторинга бизнес-активности можно выполнить гораздо быстрее и эффективнее, чем при использовании разрозненного набора инструментальных средств.
+<h3>InterSystems Ensemble и мониторинг бизнес-активности </h3>
+<p>InterSystems Ensemble - единственная платформа интеграции приложений, которая объединяет в целостном продукте функциональность сервера интеграции, сервера приложений, высокопроизводительную объектную базу данных и интегрированную среду разработки и управления (рис. 2). Такое объединение технологий обеспечивает эффективное решение основных задач интеграции корпоративных приложений: координации данных, управления бизнес-процессами, разработки композитных приложений и мониторинга бизнес-активности.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2005/BAM/ris2.jpg" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Интеграционная платформа InterSystems Ensemble.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>При создании решений BAM на основе интеграционной платформы InterSystems Ensemble используются следующие компоненты Ensemble.
+<p><b>Полнофункциональная среда интеграции и разработки</b> обеспечивает быструю 
+  разработку композитных приложений, интеграционных адаптеров, бизнес-процессов, 
+  а также компонентов Ensemble, предназначенных для решения задач мониторинга 
+  бизнес-активности: бизнес-метрик и инструментальных панелей. 
+<p><b>Универсальная архитектура сервисов</b> обеспечивает унифицированный объектный 
+  доступ к широкому спектру ресурсов (приложения, источники данных), подключенных 
+  к Ensemble через адаптеры. В Ensemble работа со всеми разнообразными интегрированными 
+  ресурсами существенно облегчается, так как они доступны аналитикам и интеграторам 
+  в виде согласованного набора классов. Универсальная архитектура сервисов значительно 
+  облегчает захват бизнес-событий в интегрированных приложениях. 
+<p><b>Хранилище</b> - высокопроизводительная объектная база данных, предназначенная 
+  для хранения метаданных, сообщений, состояний бизнес-процессов, данных композитных 
+  приложений. Хранилище данных - один из основных источников информации о бизнес-событиях. 
+<p><b>Средства управления</b> - портал управления Ensemble, Web-приложение, обеспечивающее 
+  мониторинг и администрирование интеграционных решений. 
+<p>Рассмотрим основные возможности InterSystems Ensemble в создании решений для мониторинга бизнес-активности.
+<p>В хранилище Ensemble содержатся все сообщения, которыми обмениваются Ensemble и интегрированные системы. В сообщениях отражается информация о бизнес-событиях. Каждый тип сообщения - это класс Ensemble, каждое сообщение - экземпляр соответствующего класса. Хранение сообщений не только обеспечивает высокую производительность и надежность интеграционного решения, но и позволяет реализовать практически любой сценарий обработки бизнес-событий. Хранилище предоставляет реляционный и объектный интерфейс к сообщениям Ensemble, в результате чего можно использовать для анализа бизнес-событий любые средства создания аналитических приложений (OLAP, data mining).
+<p>Кроме того, InterSystems Ensemble предоставляет собственные средства для создания приложений BAM. Бизнес-события отслеживаются и обрабатываются с помощью специальных компонентов InterSystems Ensemble - сервисов бизнес-метрик. Последние собирают информацию, необходимую для того, чтобы вычислить значение ключевых показателей эффективности (KPI) предприятия. В классе сервиса бизнес-метрик в Ensemble задается набор бизнес-метрик, которые соответствуют определенным KPI.
+<p>Класс сервиса бизнес-метрик через заданный администратором интервал времени запускает процесс вычисления бизнес-метрик. Для вычисления их значений Ensemble может обращаться к интегрированным приложениям, запрашивать данные из внешних баз данных, получать данные из собственного хранилища (в нем содержится информация о метаданных, сообщениях, состоянии бизнес-процессов) и запускать любой другой код Ensemble (например, математический алгоритм, который вычислит значения бизнес-метрик по заданным входным данным).
+<p>Вычисленные значения бизнес-метрик сохраняются в хранилище Ensemble и могут использоваться для формирования информации о бизнес-событиях для пользователей.
+<p>Хранилище Ensemble обеспечивает быстрый конкурентный доступ к значениям бизнес-метрик без необходимости их повторного вычисления (повторное вычисление бизнес-метрик происходит независимо от обращений через заданные администратором интервалы времени).
+<p>Для того чтобы пользователи могли осуществлять мониторинг бизнес-активности, необходимо создать специализированный пользовательский интерфейс, содержащий инструментальные панели (dashboards), на которых в режиме реального времени отображается подготовленная информация о бизнес-событиях. Пользовательский интерфейс можно создавать с помощью любого современного средства разработки. Ensemble предоставляет объектный и реляционный доступ к значениям бизнес-метрик из приложений Java, .NET, C++ и т. д. В Ensemble также можно создать Web-сервис, который будет возвращать значения запрашиваемых бизнес-метрик.
+<p>Ensemble предоставляет и свои собственные средства для создания инструментальных панелей. В частности, можно создавать Web-страницы, на которых в режиме реального времени будут отображаться значения бизнес-метрик. В состав Ensemble входит набор графических компонентов, которые обеспечивают быстрое создание инструментальных панелей. Инструментальные панели Ensemble (рис. 3) основаны на технологии SVG (Structured Vector Graphics) и не требуют дополнительных Java- или ActiveX-компонентов.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2005/BAM/ris3.jpg" alt=Fig.3></td></tr>
+<tr><td valign="bottom">Рис. 3. Инструментальная панель (dashboard) Ensemble.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Инструментальные панели Ensemble могут быть встроены в портал управления Ensemble, предназначенный для администрирования и мониторинга интеграционного решения, и в любое композитное приложение, с которым работают пользователи.
+<p>Ensemble обеспечивает не только отображение информации на инструментальных панелях, но и позволяет при захвате определенного события автоматически или по сигналу пользователя, получившего сообщение об этом событии, выполнить заранее заданное действие. Это может быть как отправка уведомления сотрудникам с помощью SMS или по электронной почте, так и более сложное действие - например, бизнес-процесс Ensemble, который, в свою очередь, обратится к интегрированным системам и/или запустит другие бизнес-процессы.
+<p>На базе InterSystems Ensemble можно создавать сложные адаптивные системы мониторинга бизнес-активности, с помощью которых пользователи, получив некую информацию, могут влиять на выполнение бизнес-процессов в организации.
+<h3>Заключение </h3>
+<p>Мониторинг бизнес-активности тесно связан с такими задачами интеграции корпоративных приложений, как координация данных, управление бизнес-процессами и разработка композитных приложений. В настоящее время мониторинг бизнес-активности может рассматриваться как одна из задач интеграции корпоративных приложений.
+<p>Ensemble предоставляет все возможности для создания систем мониторинга бизнес-активности. Вместе с тем с помощью InterSystems Ensemble решаются и другие задачи интеграции корпоративных приложений. Решение основных задач интеграции с помощью единого продукта - платформы для интеграции и разработки композитных приложений InterSystems Ensemble позволяет быстро выполнять интеграционные проекты любой сложности и создавать новые эффективные бизнес-решения.
+<p>
+<table width="100%" border="0" cellpadding="1" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h4>Источники дополнительной информации </h4>
+      <ol>
+        <li>Материалы сайта InterSystems Corporation (<a href="http://www.intersystems.ru/ensemble/index.html">http://www.intersystems.ru/ensemble/index.html</a>). 
+        <li>InterSystems Corporation. Ensemble White Paper. Enabling the real 
+          time enterprise business activity monitoring with Ensemble (<a href="http://www.intersystems.com/ensemble/technology/realtime_bam/RealTime_BAM_WP.pdf">http://www.intersystems.com/ensemble/technology/realtime_bam/<br>RealTime_BAM_WP.pdf</a>). 
+        <li>Trevor Matz. Universal business integration. An idea whose time has 
+          come. Business Integration journal. March 2004 (<a href="http://www.bijonline.com/Article.asp?ArticleID=869">http://www.bijonline.com/Article.asp?ArticleID=869</a>). 
+        <li>Вадим Федоров. InterSystems Ensemble - платформа для интеграции и 
+          разработки приложений. "BYTE/Россия" № 6, 2004 (<a href="../index.html@ID=602776.html">http://www.bytemag.ru/?ID=602776</a>). 
+        <li>Gartner Research. The Growing Role of Events in Enterprise Application. 
+          9 July 2003. 
+        <li>Gartner Group. Ensemble White Paper. Evaluating integration brokers. 
+          Applying the Gartner Group's Technical selection criteria to Ensemble. 
+        <li>IDC. Ensemble White Paper. InterSystems Ensemble: Integration for 
+          Today's Rapidly Changing Enterprise.
+      </ol>
+    </td>
+  </tr>
+</table>
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6741.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Мониторинг бизнес-активности и платформа InterSystems Ensemble
+</a><br><a href="detail.php@ID=6741.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Вадим Федоров, 
+  консультант InterSystems Corporation 
+  vadim@intersystems.ru
+Управлять компанией в режиме реального времени - сложная, но&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6741.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6741&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0f537507266febe9f69bfd9c5c121fcc'><img src='../bitrix/tools/captcha.php@captcha_code=0f537507266febe9f69bfd9c5c121fcc' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

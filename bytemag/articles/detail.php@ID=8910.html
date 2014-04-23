@@ -1,0 +1,538 @@
+<HTML>
+<HEAD>
+<title>Создание отчетов в средствах разработки Microsoft
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Антон Смольянинов, начальник отдела исследований компании Digital Design askrd@digdes.com Современные приложения предоставляют множество способов доступа к интересующей пользователя информации. Для работы с данными разрабатываются" />
+<meta name="description" content="Антон Смольянинов, начальник отдела исследований компании Digital Design askrd@digdes.com Современные приложения предоставляют множество способов доступа к интересующей пользователя информации. Для работы с данными разрабатываются" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398077686','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13246.html'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13654.html'>Технологии ABBYY обеспечивают оперативный доступ к архивным документам</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8910' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8910&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8910"].SHOW_IMAGE.value="N"; document.forms["PrintForm8910"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8910"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8910"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8910);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8910.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8910.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8910);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6256.html'>Средства разработки</a><br /></p><a href='../numbers/index.php@ID=11514.html'>№5 (81), май 2005</a><h1>Создание отчетов в средствах разработки Microsoft
+</h1>10.05.2005<p></p><DIV class='article-text'><p><i>Антон Смольянинов</i>, <br>
+  начальник отдела исследований компании Digital Design
+<br>
+  <a href="mailto:askrd@digdes.com">askrd@digdes.com</a> 
+<p>Современные приложения предоставляют множество способов доступа к интересующей пользователя информации. Для работы с данными разрабатываются специализированные программы. Обычные офисные средства, такие, как Microsoft Office, содержат интегрированные возможности для извлечения данных. В конечном счете всегда можно попросить администратора извлечь из базы данных ту информацию, которая в данный момент необходима пользователю.
+<p>Тем не менее наиболее распространенным и привычным способом работы с разнообразной информацией остается традиционная отчетная форма. С одной стороны, многие пользователи, особенно старшего поколения, все еще не находят в себе сил отказаться от стандартной бумажной формы представления отчета. С другой стороны, отчет - это прежде всего средство консолидации информации, зачастую различной специфики.
+<p>Требование предоставить отчетную функциональность часто фигурирует при разработке 
+  современных программных продуктов. В конечном счете все это привело к тому, 
+  что рынок оказался буквально наводнен как компонентами для надстройки приложений 
+  средствами поддержки отчетов, такими, как инструментарий Databeacon (<a href="http://www.databeacon.com">http://www.databeacon.com</a>), 
+  так и довольно мощными продуктами, поддерживающими цикл управления отчетами, 
+  где в числе лидеров следует назвать широко известные продукты Business Objects 
+  (<a href="http://www.businessobjects.com">http://www.businessobjects.com</a>). 
+<p>Подобные средства есть и в составе Microsoft Visual Studio .NET (VS.NET). Одно из них, называемое Crystal Reports for Microsoft Visual Studio .NET (CRVS), - это разработка Business Objects и поставляется по схеме лицензирования. Другое средство, Microsoft Reporting Services (MSRS), представляет собой полноценную платформу, базирующуюся на СУБД Microsoft SQL Server.
+<h3>Crystal Reports for Microsoft Visual Studio .NET </h3>
+<h4>Построение отчетов </h4>
+<p>История связи продуктов Crystal Decisions (см. также врезку &quot;Продукты Crystal Reports&quot;) со средствами разработки Microsoft ведет свое начало с 1993 г. Именно тогда компоненты Crystal Reports впервые появились в Visual Basic 3.0. С 1996 г. ПО Crystal Reports входит в состав пакета средств разработки Visual Studio, а в 2002 г. стало частью VS.NET и .NET Framework, получив при этом официальное название CRVS. Появление компонентов Crystal Reports было отмечено в VS.NET 2003, и, вполне вероятно, они войдут в состав выходящего в этом году VS.NET 2005.
+<p>Основное назначение компонентов CRVS - поддержка разработки отчетной функциональности приложения. Предполагается, что в соответствии с требованиями будет разработан специализированный шаблон отчета - файл с расширением .rpt, задающий размещение данных на странице отчета (рис. 1). Кроме того, шаблон указывает, какие структуры данных служат источником для данных отчета. В дальнейшем шаблон передается на вход компонентам CRVS, которые извлекают данные из источника и на их основании формируют структуру итогового отчета. Для отображения отчета служит специальная программа просмотра (viewer), которая встраивается в разрабатываемое приложение (поддерживаются как Web-, так и Windows-приложения).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/vsnet_rs/ris1.jpg" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Рис. 1. Архитектура Crystal Reports for Microsoft Visual Studio .NET.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Фактически процесс разработки сводится к вызову нескольких строчек кода, большая же часть работы выполняется при помощи &quot;Дизайнера отчетов&quot;, встроенного в VS.NET. Таким образом, для создания шаблона отчета не нужно уметь программировать на платформе Microsoft .NET (MS.NET). При желании шаблон отчета можно включить в состав приложения, предоставив возможность его изменять. Это весьма удобно, так как в этом случае процедуру сопровождения разработанного приложения всегда можно поручить инженеру по внедрению.
+<p>Как говорилось выше, компоненты CRVS можно использовать для разработки как Web-ориентированных, так и обычных Windows-приложений, называемых в последнее время модным словом &quot;умные&quot; (smart) приложения. С точки зрения работы с данными компоненты Crystal Reports можно использовать в двух режимах работы - Push Model и Pull Model.
+<p>Push Model - модель работы с промежуточной структурой данных. При этом данные для отчетов формируются в виде привычной для .NET Framework структуры данных, называемой DataSet. Приложение берет на себя всю логику подготовки входных данных для построения отчетов. Это удобно тем, что данные могут быть сформированы абсолютно любым способом, а не только за счет прямого доступа к источнику данных. Тем не менее, если отчет получается достаточно большим, приходится заполнять довольно громоздкую структуру.
+<p>Pull Model - запрос данных по требованию. В этом случае шаблон отчета, передаваемый компонентам Crystal Reports, берет на себя работу, связанную с извлечением данных из источника. Данный подход весьма эффективен для отображения многостраничных отчетов, так как при этом из источника извлекаются только данные для отображаемых страниц.
+<p>Кроме формирования и отображения отчета, компоненты CRVS поддерживают экспорт полученных данных в форматы PDF, HTML, XLS, RTF и DOC, который может выполняться программно, что позволяет полностью скрыть использование приложением компонентов Crystal Reports. В этом случае приложение может создавать необходимые файлы отчетов прямо в каталоге файловой системы. Это очень удобно для пакетного режима создания файлов отчетов, когда пользователю нужно сформировать группу отчетов без их предварительного просмотра для последующей передачи результатов заинтересованным лицам.
+<p>Отметим вкратце достоинства и недостатки CRVS. Несомненное достоинство состоит в тесной интеграции как с .NET Framework, так и с VS.NET, что позволяет разработчику приложения создавать отчет, не отрываясь от средств разработки. Решения на основе компонентов CRVS неплохо масштабируются, поскольку это свойство заложено в архитектуру как Crystal Reports, так и Microsoft .NET. Не вызывает трудностей реализация сложных и интерактивных отчетов, коль скоро &quot;кубики&quot; для их создания, такие, как интерактивные управляющие элементы, уже присутствуют в CRVS.
+<p>А теперь &quot;ложка дегтя&quot; - речь пойдет о лицензировании CRVS. Лицензия на данный 
+  продукт, поставляемая с VS.NET, ограничивает его использование только однопроцессорными 
+  рабочими станциями. Кроме того, поддерживается одновременный запрос на построение 
+  отчетов не более пяти пользователей (five-user license). В случае необходимости 
+  дополнительные лицензии можно приобрести отдельно, однако данное ограничение 
+  снижает масштабируемость решений, использующих CRVS. Информацию о поддержке 
+  и лицензировании CRVS можно найти по адресу <a href="http://support.microsoft.com/kb/317789">http://support.microsoft.com/kb/317789</a>. 
+<p>Относительный недостаток данного продукта - тщательно скрываемая его производителем реализация ядра компонентов на предыдущем поколении технологий Microsoft (он разработан с использованием Win32 и языка C++). Классы .NET, &quot;оборачивающие&quot; вызовы библиотек динамической загрузки, делают программное использование Crystal Reports достаточно простым. Однако работающий в ядре неуправляемый (unmanaged) код может привести к нестандартным инфраструктурным проблемам, таким, как конкурирование динамической сборки мусора в платформе .NET и традиционного алгоритма работы с памятью. Двигаясь по пути решения этой проблемы, производитель начал постепенный переход на платформу .NET, выпустив в рамках версии 1.1 (поставляемой в составе VS.NET 2003) компоненты, неуправляемый код которых помещен прямо в сборки .NET. Эта модификация должна по крайней мере упростить процедуру развертывания, позволяя переносить с приложением, использующим компоненты Crystal Reports, только сборки .NET. Ожидается, что полный переход CRVS на платформу .NET будет завершен в версии 2.7, которая, вполне вероятно, войдет в состав VS.NET 2005.
+<p>Несмотря на то что архитектура компонентов CRVS позволяет организовать сценарий многоуровневого распределения процессов формирования итогового отчета, все же данный продукт не подходит для организации всего цикла управления отчетами. Для решения этой задачи предназначена платформа MSRS*.
+<p>
+<hr align="left" noshade width="40%">
+* CRVS имеет еще то достоинство, что эти средства интегрированы в Visual Studio 
+  .NET и поставляются в составе издания Professional. Чтобы расширить свои возможности, 
+  разработчик может перейти к полнофункциональным коммерческим версиям продуктов 
+  Crystal Reports. - Прим. ред. 
+<h4>Пример использования </h4>
+<p>В качестве примера посмотрим, во что обойдется реализация простого отчета, содержащего одну таблицу. Представим себе, что существует база данных Microsoft SQL Server, содержащая данные о текущем уровне технических знаний персонала. Для каждого сотрудника в базе хранится список технологий, которыми он владеет, а также уровень владения ими. Уровень владения отражается с помощью одной из двух оценок: самооценки (данной сотрудником самому себе) и &quot;оценки 360&quot;, полученной в результате опроса людей, работающих совместно с этим сотрудником.
+<p>Оценки сотрудников можно разделить на пять основных типов (в порядке убывания знаний):
+<ul><li>эксперт в данном вопросе - консультирует своих коллег;
+<li>есть опыт использования - владеет технологией, использует ее в работе;
+<li>есть знания, достаточные для использования, - хорошее знакомство с технологией;
+<li>знаком - знакомство с технологией, понимание того, что она собой представляет;
+<li>не знаком - отсутствие знакомства с технологией.</ul>
+<p>Задача состоит в следующем: руководителю предприятия необходимо узнать, кто из сотрудников лучше всего знаком с Microsoft Project - широко известным продуктом для планирования. Список сотрудников нужно отсортировать в порядке убывания знаний. Для упрощения задачи используем режим Push Model, т. е. в качестве отправной точки возьмем готовую структуру данных (DataSet).
+<p>Создание отчета начинается с подготовки его шаблона. Для этого воспользуемся &quot;Дизайнером отчетов&quot; (рис. 2). Чтобы получить связь с данными в источнике, следует импортировать структуру данных в шаблон отчета. После этого в левой верхней панели мы увидим структуру, а также набор полей, который в нее входит. Размещая поля на странице отчета, мы связываем данные в источнике с их размещением в шаблоне отчета. Для конструирования сложных отчетов можно использовать элементы управления, расположенные на левой нижней панели.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/vsnet_rs/ris2.jpg" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Рис. 2. Создание отчета при помощи &quot;Дизайнера отчетов&quot; Crystal Reports. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В результате работы &quot;Дизайнера отчетов&quot; получается файл с расширением .rpt, содержащий созданный дизайн шаблона отчета. Для отображения отчета следует включить в состав приложения программу просмотра, называемую CrystalReportViewer и находящуюся в пространстве имен CrystalDecisions.Web - для Web-приложений и CrystalDecisions.Windows.Forms - для Windows-приложений.
+<p>Затем необходимо выполнить несколько простых действий:
+<ul><li>создать программное представление отчета на основании его шаблона (ReportDocument);
+<li>заполнить данными структуру DataSet и передать ее ReportDocument с помощью метода SetDataSource;
+<li>отобразить отчет в программе просмотра (выполняется это с помощью указания свойству ReportSource объекта ReportDocument).</ul>
+<p>При отображении отчета обозреватель использует компоненты CRVS, структуру данных и шаблон для отображения готового отчета (рис. 3).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/vsnet_rs/ris3.jpg" alt=Fig.3></td></tr>
+<tr><td valign="bottom">Рис. 3. Вид готового отчета (вариант для Web-приложения). 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h4>Продукты Crystal Reports </h4>
+      <p>С момента своего выхода на рынок в начале 90-х годов программа Crystal 
+        Reports заняла лидирующие позиции в сегменте средств формирования отчетов 
+        и удерживает их по сей день. Во многом этот успех обеспечен долголетним 
+        сотрудничеством ее разработчика (сначала Crystal Services, потом Crystal 
+        Decisions) с ведущими поставщиками средств разработки и СУБД: еще в середине 
+        90-х OEM-версия Crystal Reports входила в состав почти 150 продуктов нескольких 
+        десятков производителей (Microsoft, Borland, Sybase и т. п.) и уже давно 
+        стала стандартом де-факто для Windows-разработчиков. За 10 лет присутствия 
+        Crystal Reports на рынке было продано более 4 млн лицензий. 
+      <p>В начале века Crystal Decisions предлагала на рынке три основных продукта: 
+        Crystal Reports, Crystal Analysis (бизнес-аналитика) и Crystal Enterprise 
+        (инструментальная Web-платформа для различных архитектур - Java, .NET, 
+        COM), которые поставлялись также в составе объединенного пакета Crystal 
+        Suite. В конце 2003 г. Crystal Decisions была куплена компанией Business 
+        Objects (<a href="http://www.businessobjects.com">http://www.businessobjects.com</a>), 
+        которая выпустила новую версию Crystal Suite 10. В январе 2005 г. на рынок 
+        вышла следующая версия продукта, но уже под новой торговой маркой - BusinessObjects 
+        XI. Crystal Reports 11 также выпускается как отдельный продукт в нескольких 
+        изданиях - Standard, Professional, Developer, Advanced Developer. 
+      <p>Вариант Crystal Reports for .NET 2003 (помимо VS.NET, он входит в состав 
+        Borland C#Builder и Delphi) по своим функциональным возможностям примерно 
+        аналогичен выпуску Crystal Reports 8.5 Standard Edition. 
+    </td>
+  </tr>
+</table>
+<p>  
+<h3>Microsoft Reporting Services </h3>
+<h4>Управление отчетами </h4>
+<p>Не секрет, что основу множества программных систем составляет ядро, предназначенное для хранения данных. Использование в его качестве промышленной СУБД обеспечивает будущей системе надежный фундамент, неотъемлемую часть успешной разработки. Этот подход - построение продукта вокруг СУБД - и лег в основу разработки MSRS*. Прямым следствием этого стал благополучный выпуск продукта, а насколько применение данного подхода сделает его успешным и востребованным - покажет ближайшее будущее.
+<p>
+<hr align="left" noshade width="40%">
+* Обзор MSRS можно также найти в статье <a href="http://www.bytemag.ru/Article.asp?id=2501">&quot;Средства 
+создания отчетов от Microsoft&quot;</a>, &quot;BYTE/Россия&quot; № 3&#39;2004. 
+<p>Любой из серверных продуктов, выпускаемых самой Microsoft, нуждается в отчетной функциональности, которую ранее было принято брать из первых оказавшихся под рукой средств. Мы помним отчеты в формате HTML, выгрузку данных в Excel и Word. В подобных условиях не может быть и речи не только о единой службе - поставщике любых типов отчетов, но и о консолидации содержащихся в них данных.
+<p>Осознание этой проблемы привело к тому, что в январе 2004 г. состоялся выпуск платформы для управления отчетами MSRS. В середине 2004 г. платформа получила первый пакет обновлений. В настоящий момент MSRS интегрируется с такими продуктами, как Microsoft CRM 1.2, Exchange Server 2003 и Operations Manager 2005.
+<p>Главная задача MSRS - обеспечить комплексный подход к управлению отчетами и поддержку всего жизненного цикла отчетов (рис. 4), включающего создание отчетов, управление ими и доставку отчетов.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/vsnet_rs/ris4.jpg" alt=Fig.4></td></tr>
+<tr><td valign="bottom">Рис. 4. Архитектура платформы Microsoft Reporting Services. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Как видно из рис. 4, в ядре MSRS находятся следующие службы:
+<ul><li>извлечение информации из источников;
+<li>обработка данных и формирование отчета;
+<li>доставка отчета;
+<li>поддержка интегрированной безопасности.</ul>
+<p>Создание отчета, как и в случае CRVS, начинается с подготовки шаблона размещения 
+  данных на странице отчета. Для подготовки шаблона используется &quot;Дизайнер отчетов&quot; 
+  (Report Designer). Данный инструмент тесно интегрирован с VS.NET и инсталлируется 
+  при установке компонентов MSRS. Результатом его работы становится файл шаблона 
+  отчета с расширением .rdl, содержащий описание структуры будущего отчета на 
+  XML-ориентированном языке Report Definition Language (подробное его описание 
+  можно найти по адресу <a href="http://www.microsoft.com/sql/reporting/techinfo/rdlspec.asp">http://www.microsoft.com/sql/reporting/techinfo/rdlspec.asp</a>). 
+<p>Кроме размещения данных, в шаблоне отчета описывается связь с источниками данных, такими, как SQL Server 7.0 и 2000, SQL Server 2000 Analysis Services, Oracle, а также любыми источниками OLE DB и ODBC.
+<p>&quot;Дизайнер отчетов&quot; позволяет создать будущий шаблон за три шага:
+<ul><li>определение источников данных;
+<li>размещение данных из источников на различных листах отчета;
+<li>предварительный просмотр будущего отчета.</ul>
+<p>Особенно удобна функция предварительного просмотра, позволяющая видеть будущий отчет и исправлять допущенные в процессе создания недочеты. Следует также отметить, что шаблон отчета может принимать информацию, на основании которой формируется содержимое отчета. Это свойство позволяет реализовать параметризованные отчеты.
+<p>После создания шаблона для формирования итогового отчета следует использовать &quot;Менеджер отчетов&quot; (Report Manager). Согласно представленной ранее схеме службы MSRS, данный компонент взаимодействует с сервером отчетов, выполняющим всю работу по извлечению данных и формированию результатов. &quot;Менеджер отчетов&quot; имеет Web-ориентированный интерфейс, позволяющий выполнять следующие операции:
+<ul><li>помещать шаблон отчета на сервер;
+<li>управлять иерархией размещения отчетов;
+<li>формировать выбранный пользователем отчет;
+<li>разграничивать доступ к отдельным отчетам, каталогам отчетов, а также источникам данных (используется ролевая модель, базирующаяся на интегрированной безопасности Windows);
+<li>определять методику доставки отчета потребителям (&quot;подписку&quot;).</ul>
+<p>&quot;Менеджер отчетов&quot; умеет представлять данные своего интерфейса в HTML-формате, а также конвертировать в файлы PDF, XLS, XML, CSV и популярные графические форматы.
+<p>Как же быть с традиционными Windows-приложениями? В настоящий момент Microsoft предлагает решение, основанное на внедрении в Windows-приложения управляющего элемента ActiveX для просмотра Web; доступ к данным организован посредством получения HTML от того же &quot;Менеджера отчетов&quot;. Пример реализации такого приложения включен в поставку MSRS.
+<p>Из достоинств MSRS отметим, что продукт поддерживает процесс получения отчетов пользователями системы. MSRS успешно используется как в специализированных проектах, нацеленных на предоставление отчетной функциональности, так и там, где пользователь, владеющий VS.NET, хочет иметь возможность самостоятельно конструировать отчеты.
+<p>У продукта, разумеется, есть и недостатки. Например, тесная интеграция с SQL 
+  Server, выступающим в качестве хранилища отчетов, не позволяет применять MSRS 
+  там, где данная СУБД отсутствует либо ее использование не планируется. Другой 
+  существенный минус - недоступность редактора шаблонов отчетов в отсутствие VS.NET. 
+  Это не дает возможности пользователям будущей системы создавать и редактировать 
+  шаблоны отчетов. Для решения этой проблемы можно разработать свой редактор, 
+  формирующий XML-описание шаблона отчета. Некоторые из производителей, например, 
+  Cizer Software, уже воспользовались этим (см. <a href="http://www.cizer.com/PortalCSVS/DesktopDefault.aspx?tabindex=1&tabid=30">http://www.cizer.com/PortalCSVS/DesktopDefault.aspx?tabindex=1&tabid=30</a>). 
+<p>Безусловный недостаток MSRS - Web-ориентированность &quot;Менеджера отчетов&quot;, а также отсутствие полноценного управляющего элемента для отображения отчетов в Windows-приложениях. Решение этой проблемы заложено в архитектуру MSRS в виде доступа к серверу отчетов при помощи технологии Web-сервисов. Как обещает Microsoft, такое средство должно появиться в выходящем в этом году Microsoft SQL Server 2005.
+<p>Среди небольших проблем следует также отметить отсутствие экспорта отчета в формат RTF и DOC, отсутствие возможности печати HTML-представления отчета, а также невозможность локализации интерфейса &quot;Менеджера отчетов&quot;. Хочется надеяться, что данные проблемы будут решены в будущих версиях и пакетах обновления.
+<p>Тем не менее MSRS обладает хорошей расширяемостью, что, наряду с тем фактом, что продукт полностью разработан с использованием .NET Framework, делает его весьма универсальным и удобным в использовании.
+<h4>Пример использования </h4>
+<p>Для иллюстрации использования MSRS воспользуемся тем же примером, на котором демонстрировали возможности CRVS.
+<p>Прежде всего создадим шаблон отчета, воспользовавшись VS.NET и &quot;Дизайнером отчетов&quot; (Report Designer). Для этого укажем источник данных для будущего отчета (рис. 5). Затем с помощью вкладки Data &quot;Дизайнера отчетов&quot; укажем процедуру для извлечения информации, выполняющую всю логику формирования готовой для отображения структуры данных (рис. 6).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/vsnet_rs/ris5.jpg" alt=Fig.5></td></tr>
+<tr><td valign="bottom">Рис. 5. Указание источника данных для отчета. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/vsnet_rs/ris6.jpg" alt=Fig.6></td></tr>
+<tr><td valign="bottom">Рис. 6. Выбор процедуры извлечения информации в &quot;Дизайнере отчетов&quot;. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>На левой панели можно увидеть поля структуры данных, которую возвращает процедура EmployeesAnalystQueryProc. Эти поля служат основой для связывания данных с их размещением на странице отчета. Следует отметить - и это демонстрирует раскрывающийся список - что источником данных может быть не только процедура.
+<p>После этого мы получаем возможность конструировать структуру отчета на базе информации, предоставляемой процедурой EmployeesAnalystQueryProc. Для этого служит вкладка Layout &quot;Дизайнера отчетов&quot; (рис. 7). При конструировании шаблона отчета мы пользуемся панелью инструментов, содержащей элементы управления для отображения данных в отчете. Как видно из рис. 7, среди них есть такие &quot;кубики&quot;, как Image (Изображение), List (Список) и т. п. В процессе конструирования обязательно нужно связать элементы отчета с полями структуры данных, которую возвращает процедура EmployeesAnalystQueryProc.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/vsnet_rs/ris7.jpg" alt=Fig.7></td></tr>
+<tr><td valign="bottom">Рис. 7. Размещение данных на странице отчета. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В процессе создания шаблона отчета можно удобно и быстро посмотреть на то, что получается. Для этого существует вкладка Preview (рис. 8). В связи с тем, что данный отчет является параметризированным, в верхней части видна панель настройки параметров, передаваемых отчету. При нажатии на клавишу View Report на этой панели отчет заполняется данными, и в нижней части окна VS.NET появляется внешний вид будущего отчета.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/vsnet_rs/ris8.jpg" alt=Fig.8></td></tr>
+<tr><td valign="bottom">Рис. 8. Предварительный просмотр отчета. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В результате выполненных действий мы получаем шаблон отчета для формирования итогового отчета. Шаблон следует поместить на сервер отчетов. Это можно сделать при помощи команды Upload file, воспользовавшись &quot;Менеджером отчетов&quot;, либо, что гораздо проще, с помощью контекстного меню и команды Deploy VS.NET (рис. 9).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/vsnet_rs/ris9.jpg" alt=Fig.9></td></tr>
+<tr><td valign="bottom">Рис. 9. Развертывание отчета. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>После этой операции шаблон отчета помещается на сервер отчетов, и теперь можно увидеть готовый отчет, содержащий данные, выбрав его в &quot;Менеджере отчетов&quot; (рис. 10). Обратите внимание на панель навигации, которая выводится в верхней части страницы отчета. Эта панель позволяет организовать постраничный просмотр отчета и (с помощью команды Select a format в раскрывающемся списке) преобразовать отчет в любой из представленных форматов данных.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/vsnet_rs/ris10.jpg" alt=Fig.10></td></tr>
+<tr><td valign="bottom">Рис. 10. Вид готового отчета. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Резюмируя, следует сказать, что и MSRS, и CRVS не только содержат средства для табличного представления данных, но и поддерживают реализацию интерактивных отчетов.
+<h3>Рекомендации по выбору </h3>
+<p>Прежде всего отметим, что предлагаемые рекомендации основаны на функциональных особенностях каждого из продуктов, а также на опыте их использования.
+<p>MSRS подходит для проектов, в которых либо уже используется Microsoft SQL Server, либо существует возможность его задействовать. MSRS предоставляет разработчику максимум возможностей для поддержки всего цикла управления отчетами. Можно уверенно утверждать, что MSRS в качестве основы таких проектов обеспечит надежную базу для разработки отчетной функциональности приложения. Кроме этого, в будущем пользователи смогут получить удобную возможность разработки собственных отчетов, а также поддержку создания на основе MSRS отчетов для других приложений.
+<p>Не стоит забывать о недостатках MSRS. Если вам нужен &quot;Дизайнер отчетов&quot; и вы не можете позволить себе обучать сотрудников работе с VS.NET, то следует обратить внимание на рынок компонентов других производителей.
+<p>Если большая часть объема функциональности вашего приложения - это работа с разными по своей структуре отчетами, и при этом данные для них годятся MSRS в качестве источника, то можно уверенно констатировать, что вам и будущим пользователям приложения сильно повезло. Кроме полноценной отчетной системы, в качестве бесплатного бонуса они получают достаточно универсальное средство для конвертирования отчетов в широкий спектр форматов.
+<p>С другой стороны, если вы не можете позволить себе Microsoft SQL Server и, как следствие, MSRS, следует обратить внимание на возможности CRVS. Быть может, вашему приложению, не слишком сложному с точки зрения управления жизненным циклом отчетов, будет достаточно встроенной поддержки отчетной функциональности.
+<p>Обзорный характер статьи, к сожалению, не предполагает подробного рассмотрения всех возможностей компонентов. Например, мы не упомянули о том, что Crystal Reports позволяет организовать взаимодействие с помощью актуальной технологии Web-служб, а MSRS имеет расширяемую программную модель. Тем не менее будем надеяться, что представленной информации вполне достаточно, чтобы сделать правильный выбор.
+
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=16073.html'>Intel Parallel Composer – отладка параллельных программ</A></b></li><li><b><A href='detail.php@ID=15724.html'>Intel Parallel Inspector – поиск ошибок многопоточности</A></b></li><li><b><A href='detail.php@ID=15064.html'>Intel Parallel Amplifier – профилировщих многопоточных приложений</A></b></li><li><b><A href='detail.php@ID=14909.html'>Intel Parallel Inspector – поиск ошибок доступа к памяти</A></b></li><li><b><A href='detail.php@ID=14743.html'>Intel Parallel Studio – инструмент для создания параллельных приложений</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8910.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Создание отчетов в средствах разработки Microsoft
+</a><br><a href="detail.php@ID=8910.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Антон Смольянинов, 
+  начальник отдела исследований компании Digital Design
+
+  askrd@digdes.com 
+Современные приложения предоставляют множество&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8910.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8910&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='06847f1ac4f0da06daac9a38ab1487c1'><img src='../bitrix/tools/captcha.php@captcha_code=06847f1ac4f0da06daac9a38ab1487c1' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

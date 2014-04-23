@@ -1,0 +1,576 @@
+<HTML>
+<HEAD>
+<title>Многоядерные процессоры
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Алексей Борзенко, к. т. н., доцент РРТА Как утверждают многие эксперты, в течение ближайших двух лет почти все микропроцессоры, устанавливаемые в настольных ПК, рабочих станциях и серверах, будут иметь два ядра или даже больше. И надо сказать, что" />
+<meta name="description" content="Алексей Борзенко, к. т. н., доцент РРТА Как утверждают многие эксперты, в течение ближайших двух лет почти все микропроцессоры, устанавливаемые в настольных ПК, рабочих станциях и серверах, будут иметь два ядра или даже больше. И надо сказать, что" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082490','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8614' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8614&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8614"].SHOW_IMAGE.value="N"; document.forms["PrintForm8614"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8614"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8614"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8614);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8614.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8614.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8614);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11514.html'>№5 (81), май 2005</a><h1>Многоядерные процессоры
+</h1>10.05.2005<p></p><DIV class='article-text'><p><i>Алексей Борзенко</i>, <br>
+  к. т. н., доцент РРТА
+<p>Как утверждают многие эксперты, в течение ближайших двух лет почти все микропроцессоры, устанавливаемые в настольных ПК, рабочих станциях и серверах, будут иметь два ядра или даже больше. И надо сказать, что основания для таких прогнозов весьма весомые. Производительность двухъядерного процессора может быть почти в два раза выше, чем у одноядерного, а его стоимость будет намного ниже, чем у двух процессоров, имеющих по одному ядру. При размещении двух процессоров на одном кристалле скорость обмена информацией между ними возрастает, а совместное использование кэш-памяти может еще более повысить эффективность обработки данных. Кроме того, двухъядерные процессоры занимают меньше места, потребляют меньше энергии и рассеивают меньше тепла, нежели отдельные процессоры. Добавим еще, что, по имеющейся информации, процессоры на базе нескольких ядер хорошо подходят для обработки транзакций, а также для обслуживания баз данных и научных применений.
+<h3>Технологии многопоточности </h3>
+<p>Основные направления развития архитектуры современных микропроцессоров определяются стремлением к увеличению их производительности. Последнюю можно повышать, например, наращивая тактовую частоту и/или увеличивая число команд, выполняемых за один такт. Наращивание тактовой частоты имеет технологические ограничения, а росту производительности подобных суперконвейерных процессоров препятствуют архитектурные барьеры (простои конвейеров, задержки при непопадании в кэш-память и т. п.). Второму пути отвечают суперскалярные процессоры, которые могут выполнять несколько команд за такт за счет использования нескольких функциональных исполнительных устройств. Однако реальные коды программ не обеспечивают эффективную загрузку процессоров, поэтому исполнительные устройства часто простаивают.
+<p>Одно из решений данной проблемы связано с реализацией концепции &quot;параллелизма на уровне тредов&quot; TLP (Thread Level Parallelism). Если программные коды не в состоянии загрузить работой все или даже большинство функциональных устройств, то можно разрешить процессору выполнять более чем одну задачу (тред, или поток), чтобы дополнительные потоки загрузили простаивающие устройства. Здесь нетрудно усмотреть аналогию с многозадачной ОС: чтобы процессор не простаивал, когда задача оказывается в состоянии ожидания (например, завершения ввода-вывода), ОС переключается на выполнение другой задачи. Более того, некоторые механизмы диспетчеризации в ОС (например, квантование) имеют аналоги в многопотоковой архитектуре (MTA - MultiThreading Architecture). Очевидно, архитектура, поддерживающая TLP, должна гарантировать, что треды не будут использовать одновременно одни и те же ресурсы, для чего требуются дополнительные аппаратные средства (например, дублирование регистровых файлов). Однако оказалось, что можно реализовать МТА на базе современных суперскалярных процессоров, и это требует лишь относительно небольших аппаратных доработок, что резко повышает привлекательность МТА в глазах проектировщиков.
+<p>При использовании базового типа TLP в микропроцессоре имеется не менее двух аппаратных контекстов тредов. Контекст включает, в частности, регистры общего назначения, счетчик команд, слово состояния процесса и т. п. В любой момент времени работает только один тред - тот, чей контекст активен. Он выполняется до возникновения определенной ситуации (например, выполнения команды загрузки регистра при отсутствии данных в кэш-памяти). В этом случае процессор заменяет контекст треда на контекст другого треда и начинает выполнение последнего. Поскольку при непопадании в кэш-память операции с памятью могут потребовать до сотни тактов процессора, его простои по причине ожидания данных могли бы быть весьма значительными. Современные процессоры, имеющие возможности спекулятивного внеочередного выполнения команд, в подобной ситуации могут продолжить выполнение других команд, но на практике число независимых команд быстро исчерпывается и процессор останавливается.
+<p>Наиболее продвинутой стала архитектура с одновременным выполнением тредов - SMT (Simultaneous Multi-Threading). Само ее название указывает на допустимость одновременного выполнения нескольких потоков. В этом случае на каждом новом такте на выполнение в какое-либо исполнительное устройство может направляться команда любого потока. По сравнению с суперскалярными процессорами, поддерживающими внеочередное спекулятивное выполнение команд и использующими механизм переименования регистров, для SMT необходимы, в частности, следующие аппаратные средства:
+<ul><li>несколько счетчиков команд (по одному на поток) с возможностью выбора любого из них на каждом такте;
+<li>средства, ассоциирующие команды с потоком, которому они принадлежат (необходимы, в частности, для работы механизмов предсказания переходов и переименования регистров);
+<li>несколько стеков адресов возврата (по одному на поток) для предсказания адресов возврата из подпрограмм;
+<li>специальная дополнительная память в процессоре (в расчете на каждый поток) для процедуры удаления из буфера выполненных вне очереди команд.</ul>
+<p>Одна из основных особенностей SMT у многих современных процессоров - переименование регистров, когда логические (архитектурные) регистры отображаются в физические, с которыми и ведется реальная работа. Техника переименования регистров может, очевидно, применяться для того, чтобы избежать прямого дублирования файлов регистров как части аппаратного контекста потока.
+<p>Технология Hyper-Threading (HT) была создана корпорацией Intel (<a href="http://www.intel.com">http://www.intel.com</a>) 
+  в целях повышения производительности и эффективности серверных систем. Она дополнила 
+  традиционную многопроцессорность, обеспечивая более высокий параллелизм и запас 
+  производительности для ПО с поддержкой тредов. Вообще говоря, HT стала одной 
+  из форм синхронной многопотоковой технологии SMT, где множество потоков, создаваемых 
+  программными приложениями, могут выполняться одновременно на одном процессоре 
+  (рис. 1). Это достигается за счет дублирования архитектурного состояния при 
+  совместном использовании единого набора ресурсов процессора. Архитектурное состояние 
+  контролирует последовательность выполнения программы или треда, а ресурсы, необходимые 
+  для их выполнения, являются функциональными модулями процессора, реализующими 
+  то или иное действие: сложение, перемножение, загрузку и т. п. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/mcp/ris1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Обработка потоков в процессоре Intel Pentium 4 с технологией HT.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>При диспетчеризации тредов ОС воспринимает два отдельных архитектурных состояния как два &quot;логических&quot; процессора. Программные приложения, способные работать с несколькими процессорами, могут без изменений выполняться на удвоенном числе логических процессоров, имеющихся в системе. Каждый логический процессор отвечает на прерывания независимо от других. Первый логический процессор может отслеживать потоки одной программы, в то время как второй логический процессор занимается потоками другой программы.
+<p>Поскольку оба процессора совместно используют единый набор ресурсов исполнения, второй тред может задействовать ресурсы, которые при обработке одного треда находились бы в простое. Результатом этого становится увеличение загрузки ресурсов исполнения в пределах каждого физического процессора. Такое улучшение использования ресурсов процессора приводит и к повышению пропускной способности при обработке многопоточных приложений. Например, один логический процессор может выполнять операции с плавающей точкой, а второй в то же время выполняет сложение и операцию загрузки.
+<p>Новых схем HT привносит совсем немного - в основном это дублирование регистров и назначение ресурсов потокам. При этом дублируются как видимые, так и внутренние (физические) регистры. Начальные стадии конвейера не меняются, однако атрибуты (биты, указывающие на принадлежность к определенному потоку), конечно же, присутствуют. Исполнительное ядро, включая все исполнительные устройства, также не изменяется - эти ресурсы разделяются между двумя потоками. Блок процессора, отвечающий за восстановление архитектурного состояния на основании выполненных внеочередным, спекулятивным образом микроопераций, работает последовательно (по потокам). Среди добавленных в процессор компонентов стоит упомянуть средства APIC (Advanced Programmable Interrupt Controller) - назначение прерываний для обработки разными процессорами в мультипроцессорной системе.
+<p>Технология HT расширяет возможности мультипроцессорных систем, поскольку ОС может запланировать одновременное выполнение отдельных тредов не только на каждом физическом процессоре, но и одновременно на каждом логическом процессоре. Это улучшает общие характеристики системы, поскольку многочисленные треды могут быть отправлены на исполнение быстрее, учитывая, что системе доступно в два раза больше логических процессоров. При этом все они по-прежнему совместно используют один набор ресурсов для выполнения программ, поэтому применение еще одного физического процессора со своим собственным выделенным набором ресурсов выполнения в общем случае позволяет достичь более высоких уровней производительности (рис. 2). HT расширяет возможности многопроцессорности, обеспечивая более высокую степень параллелизма в расчете на каждый процессор, доступный системе.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/mcp/ris2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Обработка потоков в двухъядерном процессоре Intel.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+
+<h3>IBM шагает впереди </h3>
+<p>В 2001 г. корпорация IBM (<a href="http://www.ibm.com">http://www.ibm.com</a>) 
+  разработала свой первый универсальный двухъядерный (dual-core) процессор POWER4, 
+  предназначенный для серверов IBM eServer линеек pSeries и iSeries. Устройство 
+  POWER4 было уникально хотя бы тем, что в нем даже один кристалл - это уже мультипроцессорная 
+  система: в одном корпусе содержалось два 64-разрядных микропроцессора. Собственно, 
+  архитектуру кристалла POWER4 отличало несколько современных решений: суперскалярная 
+  структура, внеочередное исполнение команд, большая кэш-память на кристалле, 
+  специализированный порт для основной памяти, а также высокоскоростные линки 
+  для объединения микропроцессоров в системы с архитектурой распределенной разделяемой 
+  памяти. Каждый процессор POWER4 имел два конвейерных блока для работы с 64-разрядными 
+  операндами с плавающей точкой, выбирающих на исполнение по пять команд каждый, 
+  и два блока для работы с памятью. Процессоры содержали раздельную кэш-память 
+  команд и данных 1-го уровня емкостью по 64 Кбайт каждая. Кроме того, имелась 
+  разделяемая (общая) кэш-память 2-го уровня на кристалле (емкостью 1,4 Мбайт) 
+  и внешняя кэш-память 3-го уровня (емкостью 32 Мбайт). Совместный доступ к внешней 
+  кэш-памяти выполнялся по технологии DSI (Distributed Switch Interconnect). 
+<p>Одной из отличительных особенностей POWER4 стало наличие кэш-памяти 2-го уровня, разделяемой двумя процессорами кристалла, а также внешними процессорами других кристаллов через линки шириной 128 разрядов, работающие на тактовой частоте более 500 МГц (что обеспечивает пропускную способность свыше 10 Гбайт/с). При объединении четырех кристаллов и их специальном размещении проводники линков могли быть достаточно короткими и прямыми, что важно при работе на высоких тактовых частотах.
+<p>Физически кэш-память 2-го уровня емкостью около 1,4 Мбайт состояла из нескольких одинаковых блоков, доступ к которым выполнялся через коммутатор с пропускной способностью на уровне 100 Гбайт/с. Протокол когерентности обеспечивал размещение данных, поступивших по линкам, в том блоке кэш-памяти, который использовался для размещения данных последним. Порт кристалла POWER4, предназначенный для подключения кэш-памяти 3-го уровня емкостью до 32 Мбайт, имел ширину 128 разрядов для каждого из двух направлений пересылки данных. Порт функционировал не на полной тактовой частоте процессоров кристалла, но тем не менее при передаче обеспечивал пропускную способность на уровне 13-14 Гбайт/с. Теги кэш-памяти 3-го уровня были расположены внутри кристалла, что ускоряло реализацию протокола когерентности. Скорость передачи данных между кэш-памятью 3-го уровня и основной памятью могла достигать 12,8 Гбайт/с.
+<p>Каждый сдвоенный процессор POWER4 был упакован в керамический мультипроцессорный модуль (размером 4,5х4,5 дюйма) вместе с тремя другими кристаллами. Эта базовая строительная единица называлась MCM (MultiChip Module). Такой модуль, содержащий четыре микросхемы POWER4, в итоге объединял восемь процессоров. Многослойный керамический корпус модуля MCM содержал магистрали, соединяющие микросхемы между собой, а также с модулями кэш-памяти и высокоскоростным коммутатором для связи с удаленными процессорами. Четыре микросхемы POWER4, образующие восьмипроцессорную конфигурацию, были расположены в МСМ под углом 90° друг относительно друга, что позволяло минимизировать длину шин расширения, соединяющих микросхемы между собой. Шины расширения связывали между собой и модули МСМ. В этих шинах использовалась уникальная технология волновой конвейеризации (wave pipelining), обеспечивающая очень низкие величины задержек.
+<p>Стоит отметить, что наряду с параллелизмом на уровне команд процессор POWER4 использовал и параллелизм на уровне тредов. Базовая многопоточность использовалась еще в процессорах PowerPC RS IV (S-Star) - в этом случае в каждый момент времени выполнялся только один поток команд, но если при выполнении команды этого потока возникала значительная задержка (например, в кэше отсутствовали необходимые данные), то процессор переключался на другой поток, что уменьшало его простаивание. Однако оба потока совместно использовали многие системные ресурсы (например, архитектурные регистры), поэтому на переключение между потоками тратилось несколько тактов.
+<p>Динамическое выявление параллелизма в POWER4 позволяло предотвращать простои процессора при трудно выявляемых статически исключительных ситуациях, например, при промахе в кэш-памяти. Хотя каждое из двух процессорных ядер выполняло свой поток команд, все же при задержке выполнения одного потока ресурсы обслуживающего его ядра нельзя было передать другому потоку.
+<p>Одновременная многопоточность SMT, при которой процессорное ядро может запрограммировать порядок параллельного выполнения команд из нескольких потоков, впервые появилась только в POWER5. Как известно, технология SMT позволяет системе динамически подстраиваться - если возникает длительная задержка при выполнении команды одного треда, то все ее исполнительные блоки временно передаются другому потоку. Теоретически SMT можно реализовать не только для двух, но и для большего числа потоков, однако разработчики POWER5, видимо, посчитали, что это слишком усложнит механизм многопоточности, но не даст серьезного выигрыша в производительности.
+<p>В POWER5 каждое процессорное ядро может одновременно обрабатывать два потока команд, т. е. работает как два логических процессора, а сам кристалл - как четыре логических процессора. Команды обоих потоков извлекаются из одной и той же кэш-памяти команд 1-го уровня и вместе загружаются в исполнительные блоки. Теоретически оба потока команд после считывания из кэш-памяти команд должны проходить через конвейер и использовать ресурсы физического процессора без конфликтов между потоками. В этом случае применение SMT удваивает производительность процессора. Однако если между потоками возникнет конфликт из-за ресурсов процессора, то одному из них придется ждать, и прирост производительности оказывается меньше 100%.
+<p>SMT организует выполнение команд из потоков следующим образом. Несколько команд из каждого потока можно загрузить в набор конвейеров в течение каждого такта, причем любые пять команд из обоих потоков, представляющие до двух операций загрузки и сохранения, двух операций двоичной арифметики, двух операций с плавающей точкой и ветвление, допустимо загрузить в один конвейер в течение одного такта. За один такт по стадиям конвейера проходит только одна команда из одного из потоков. Физический процессор определяет порядок выполнения команд на основе набора правил с учетом зависимости операндов, времени ожидания обработки команд и необходимости внеочередного выполнения некоторых команд.
+<p>Каждый физический процессор содержит кэш-память данных и команд 1-го уровня, которые совместно используются обоими логическими процессорами. Как говорилось выше, кэш-память 2-го уровня у физических процессоров (ядер) POWER5 общая, поэтому она совместно используется четырьмя потоками команд. Для улучшения производительности SMT при выполнении различных приложений в POWER5 реализованы динамическая балансировка ресурсов и подстраиваемый приоритет потоков.
+<h3>Многоядерные SPARC </h3>
+<p>В начале 2004 г. Sun Microsystems (<a href="http://www.sun.com">http://www.sun.com</a>) 
+  выпустила оснащенный двумя ядрами процессор UltraSparc IV для серверов Sun Fire 
+  V, а уже осенью представила проект процессора нового поколения - UltraSPARC 
+  IV+ (Panther). Он выполнен на базе технологии CMT (Chip Multithreading - многопотоковость 
+  на кристалле, рис. 3) и знаменует собой очередной шаг в реализации стратегии 
+  Throughput Computing (&quot;высокая пропускная способность&quot;). UltraSPARC IV+ разработан 
+  на базе 90-нм производственной технологии Texas Instruments. По сравнению с 
+  процессором UltraSPARC IV он позволяет удвоить производительность приложений 
+  благодаря увеличению объема кэш-памяти и буферов, улучшенному механизму прогнозирования 
+  ветвления, расширенным возможностям упреждающей выборки из памяти и новым вычислительным 
+  возможностям. Кроме того, в UltraSPARC IV+ применяется новая трехуровневая иерархия 
+  кэш-памяти, включающая интегрированную на кристалле кэш-память 2-го уровня объемом 
+  2 Мбайт и внешнюю кэш-память 3-го уровня объемом 32 Мбайт. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/mcp/ris3a.gif" alt=Fig.3a></td><td rowspan=3 valign="bottom">Рис. 3. Работа обычного процессора без CMT (а) и обработка потоков в одноядерном (б) и многоядерном (в) процессоре с технологией CMT.
+<hr noshade align="left" size="0">
+</td></tr>
+<tr><td><img src="../images/byte_archive/images/No5_2005/mcp/ris3b.gif" alt=Fig.3b></td></tr>
+<tr><td><img src="../images/byte_archive/images/No5_2005/mcp/ris3c.gif" alt=Fig.3c></td></tr>
+</table>
+<p>
+<p>Подобно UltraSPARC IV, новый процессор имеет два ядра, интегрированных на одном кристалле. Однако интерфейс памяти у него изменился: UltraSPARC IV+ будут поддерживать память DDR DRAM, тогда как нынешние варианты кристаллов работают с менее скоростной памятью SDRAM.
+<p>Кроме новых функций увеличения производительности, процессор UltraSPARC IV+ имеет значительно более высокую тактовую частоту (первоначально 1,8 ГГц), что обеспечивает наивысшую пропускную способность по сравнению с другими моделями процессоров UltraSPARC. По сравнению с UltraSPARC IV производительность каждого потока выросла примерно вдвое. В то же время наличие целого ряда средств повышения надежности, работоспособности и удобства обслуживания позволяет назвать этот процессор самым надежным среди всех моделей UltraSPARC. Так же, как процессор UltraSPARC IV, новый UltraSPARC IV+ обеспечивает бинарную совместимость с предыдущими поколениями процессоров архитектуры SPARC. Благодаря этому пользователи сохранят инвестиции в средства разработки и прикладное ПО. Кроме того, пользователям будет легко модернизировать существующие системы, повысив их производительность и надежность, - новые процессоры могут устанавливаться в существующие системы семейства Sun Fire и работать вместе с уже установленными в системе процессорами UltraSPARC IV и UltraSPARC III. Основа системы не изменится, может потребоваться только замена блока питания или системы охлаждения.
+<p>Проект Niagara - главная часть работы Sun, нацеленной на сохранение актуальности семейства процессоров SPARC на фоне широкой популярности архитектуры х86 от Intel и AMD и растущей мощности процессоров POWER от IBM. Выпуск кристаллов Niagara планируется на 2006 г. и должен стать еще одной демонстрацией преимуществ технологии CMT. В более долгосрочной перспективе, в 2008 г., планируется выпустить второе поколение процессора Niagara II и микросхемы с кодовым названием Rock.
+<p>Другая часть стратегии Sun Microsystems связана с партнерством с корпорацией Fujitsu с целью совместной разработки серверов на базе ее будущего процессора SPARC64 VI (Olympus). При разработке нового процессора Fujitsu пошла по хорошо проторенной дорожке: SPARC64 VI несет на одном кристалле два ядра с архитектурой SPARC64 V, представленной компанией год назад и за это время успевшей себя хорошо зарекомендовать в производительных серверах PrimePower корпорации Fujitsu Siemens Computers. В настоящее время Fujitsu изготавливает процессоры SPARC V+ (с повышенным быстродействием) по технологическому процессу 90 нм, что означает возможность разместить больше элементов на той же площади кристалла. Такие кристаллы работают с тактовой частотой 1,89-2,16 ГГц и оснащены встроенной кэш-памятью объемом 3-4 Мбайт, тогда как у предыдущих моделей SPARC64 V, выполненных с учетом проектных норм 130 нм, тактовая частота составляла 1,35 ГГц, а объем кэш-памяти - 2 Мбайт. Стоит отметить, что будущие кристаллы SPARC VI будут работать на тактовых частотах не ниже 2,39 ГГц и иметь объем встроенной кэш-памяти до 6 Мбайт. Они будут оснащаться развитыми средствами повышения надежности и использоваться в семействе серверов с числом процессоров до 128.
+<h3>Многоядерные решения AMD </h3>
+<p>Ответ со стороны компании Advanced Micro Devices (<a href="http://www.amd.com">http://www.amd.com</a>) 
+  последовал летом 2004 г. В конце августа общественности был продемонстрирован 
+  оснащенный двумя ядрами 64-разрядный процессор AMD Opteron (с поддержкой системы 
+  команд x86). На демонстрации, состоявшейся в офисе корпорации в Остине, был 
+  представлен сервер HP ProLiant DL585 с четырьмя двухъядерными процессорами Opteron, 
+  изготовленными по технологии &quot;кремний на изоляторе&quot; (SOI) с соблюдением проектных 
+  норм 90 нм. По словам представителей корпорации, переход в новую, более эффективную 
+  среду вычислительной обработки, основанную на существующей инфраструктуре систем 
+  AMD и стандартной архитектуре, достаточно прост, и корпоративные клиенты могут 
+  рассчитывать на увеличение вычислительных мощностей без издержек в виде повышенного 
+  энергопотребления или тепловыделения. Ожидается, что двухъядерный процессор 
+  AMD Opteron для серверов и рабочих станций, широкий выпуск которого планируется 
+  в середине нынешнего года, будет обладать наилучшей производительностью в расчете 
+  на ватт мощности среди аналогичных продуктов на рынке. 
+<p>Надо сказать, что AMD заложила фундамент для создания процессоров с двумя ядрами еще несколько лет назад, когда снабдила свои одноядерные процессоры AMD64 встроенной инфраструктурой, пригодившейся сейчас для поддержки второго ядра на той же микросхеме. По словам одного из экспертов, двигаясь от теории двухъядерных технологий к практике, AMD убеждается в том, что нынешние инвестиции в логику ядра и технологию платформы будут приносить пользу на протяжении долгого времени.
+<p>Двухъядерные процессоры (рис. 4) представляют собой естественное расширение технологии AMD64 с архитектурой прямых соединений. AMD не только первой среди всех компаний удалось устранить узкие места в работе внешней шины, характерные для архитектуры x86; она также первой успешно объединила два ядра на одном кристалле вместе с контроллером памяти, подсистемой ввода-вывода и другими процессорами - это позволит улучшить общесистемную производительность и повысить эффективность обработки.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/mcp/ris4.gif" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Блок-схема двухъядерного процессора Opteron. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<table width="100%" border="0" bgcolor="#CCFFCC">
+  <tr>
+    <td>
+      <h4>Архитектура Direct Connect </h4>
+      <p>Архитектура Direct Connect позволяет подключить несколько процессоров, 
+        контроллер памяти и модули ввода-вывода напрямую. Она нейтрализует недостатки 
+        современных системных архитектур и устраняет узкие места при обмене данными. 
+        Считается, что данная архитектура сокращает задержки при обращении к памяти; 
+        а поскольку средства ввода-вывода непосредственно подключаются к центральному 
+        процессору, улучшается баланс между производительностью процессора и пропускной 
+        способностью подсистемы ввода-вывода. В свою очередь, все процессоры соединяются 
+        непосредственно друг с другом, что обеспечивает практически линейное повышение 
+        производительности для симметричных многопроцессорных систем. 
+      <p>
+    </td>
+  </tr>
+</table>
+<p>Очередная демонстрация возможностей двухъядерных процессоров AMD64 состоялась 
+  на конференции LinuxWorld в Бостоне (шт. Массачусетс, США) на примере четырех 
+  систем с двухъядерными процессорами AMD Opteron. Этими системами стали суперкомпьютер 
+  Cray XD1, рабочая станция HP xw9300 с двумя двухъядерными процессорами Opteron 
+  и технологией NVIDIA SLI dual PCI Express, сервер HP ProLiant DL585 с четырьмя 
+  двухъядерными процессорами и сервер Sun Fire V40z, также с четырьмя двухъядерными 
+  процессорами. 
+<p>По словам одного из руководителей корпорации, двухъядерные процессоры будут востребованы корпоративными клиентами в первую очередь благодаря своей высокой удельной мощности при низком энергопотреблении. Технологические образцы двухъядерных процессоров AMD Opteron начали поступать в распоряжение партнеров компании в январе этого года, а выпуск полной гаммы таких процессоров для одно-, двух-, четырех- и восьмипроцессорных серверов намечен на середину 2005 г. Все процессоры рассчитаны на стандартный 940-контактный разъем (Socket 940). Именно за счет этого должна достигаться повышенная отдача от инвестиций - ведь существующие процессоры AMD Opteron, изготовленные по процессу 90 нм, также рассчитаны на разъем Socket 940.
+<p>Двухъядерные процессоры AMD64 совместимы с приложениями AMD64 для платформы x86, и многие ведущие разработчики ПО, включая Microsoft, Novell, Red Hat и Sun Microsystems, последовали рекомендациям AMD и пересмотрели свои схемы лицензирования, привязав их к числу физических процессоров. Это должно упростить массовое распространение многоядерных процессоров.
+<p>В конце февраля AMD уже продемонстрировала очередную новинку - двухъядерный процессор AMD Athlon 64, изготовленный по технологии 90 нм. Корпорация планирует начать массовый выпуск двухъядерных процессоров AMD64 (разъем Socket 939) для клиентских систем во второй половине 2005 г.
+<h3>Многоядерное будущее с Intel </h3>
+<p>На весеннем Форуме Intel для разработчиков руководство корпорации рапортовало о завершении пилотного этапа выпуска процессоров с двумя ядрами (рис. 5) и обнародовало планы производства многоядерных процессоров. В общей сложности речь шла о 15 многоядерных проектах, которые полным ходом идут в корпорации Intel и рассчитаны на серверы, рабочие станции, настольные ПК, мобильные и сетевые платформы. Подчеркивалось, что многоядерные процессоры станут действительно движущими силами платформ Intel для цифрового дома и офиса, мобильных и корпоративных платформ. Благодаря им у пользователей появится широкий спектр новых возможностей для одновременного выполнения нескольких задач.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2005/mcp/ris5.jpg" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Двухъядерный процессор Intel.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Надо отметить, что Intel довольно давно работает над концепцией параллелизма и аппаратными средствами реализации многопоточности. Так, к 1994 г. в процессоре Intel Pentium уже был реализован параллелизм на уровне команд - архитектурная особенность, при которой команды одного потока кода извлекаются, выполняются параллельно, а затем объединяются в прежнем порядке. В 1994 г. корпорация реализовала двухпроцессорную обработку (два полноценных процессора, вставляющихся в два разъема системной платы), создав аппаратную многопоточную среду для серверов и рабочих станций. В 1995 г. был представлен процессор Pentium Pro, поддерживавший эффективное объединение уже четырех процессоров на одной системной плате, что обеспечило более высокую скорость обработки данных в многопоточных приложениях, ориентированных на серверные платформы и рабочие станции.
+<p>Эти усилия стимулировали разработку однопроцессорных технологий, обеспечивающих более высокую степень параллелизма на уровне потоков, для массовых платформ. В начале нынешнего века корпорация реализовала технологию HT в микроархитектуре Intel NetBurst (для процессоров Pentium 4 и Xeon) как инновационный способ достижения более высокой степени параллелизма на уровне потоков в процессорах для массовых систем. В корпорации поняли, что технология HT естественным образом ведет к разработке многоядерных процессоров, отличающихся более высокими степенями параллелизма.
+<p>Для перевода своей полупроводниковой индустрии на выпуск многоядерных процессоров с 2000 г. Intel вложила более 35 млрд долл. в исследования и разработки по этой тематике. Сегодня у Intel 11 фабрик, изготавливающих микропроцессоры, на четырех из них выпускаются подложки диаметром 300 мм. Из таких больших подложек выходит в 2,5 раза больше кристаллов, чем получалось раньше из подложек диаметром 200 мм; благодаря этому стоимость производства одной микросхемы снижается на 30%. Уже выпущены десятки миллионов процессоров по технологическому процессу 90 нм, и в этом году начнется их производство с соблюдением проектных норм 65 нм.
+<p>По прогнозам, в 2006 г. двухъядерные процессоры будут использоваться в 70% 
+  настольных компьютеров и ноутбуков и в 85% серверов. В ПК и серверах будущего 
+  будут применяться двухъядерные и многоядерные процессоры Intel, поддерживающие 
+  такие инновационные технологии, как ускоренный ввод-вывод, виртуализация, безопасность 
+  и усовершенствованная технология памяти. 
+<p>
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h4>Технология ускорения ввода-вывода </h4>
+      <p>Технология ускорения ввода-вывода I/OAT (Intel I/O Acceleration Technology) 
+        появилась в то время, когда потребности приложений (таких, как электронная 
+        коммерция, обмен сообщениями, приложения для кластеров устройств хранения 
+        данных и серверов) начали обгонять способность серверов к реагированию 
+        и их возможности в части быстрого и надежного обмена сетевыми данными 
+        с приложениями. В то время как производительность серверных процессоров 
+        и пропускная способность сетей за последние годы значительно выросли, 
+        основной метод обмена данными остался прежним. Сегодня вся тяжесть обработки 
+        данных, доступа к памяти и реализации протоколов обмена для каждого пакета 
+        данных лежит на серверном процессоре. В результате работа серверных приложений 
+        замедляется, а время отклика, надежность и удобство работы перестают отвечать 
+        потребностям пользователей. 
+      <p>Для решения этой проблемы в технологии ускорения ввода-вывода Intel применяется 
+        общеплатформенный подход. Задача управления данными распределяется между 
+        всеми компонентами платформы - процессором, набором микросхем, сетевым 
+        контроллером и ПО. Общеплатформенный подход позволяет снизить нагрузку 
+        на процессор и ускорить обмен данными. Загруженность процессора снижается 
+        благодаря тому, что набор микросхем и сетевой контроллер получают возможность 
+        считывать данные из памяти и записывать их в память. 
+      <p>Intel также оптимизировала протокол TCP/IP - открытый &quot;свод правил&quot;, 
+        который позволяет компьютерам всех типов обмениваться данными, общаясь 
+        на одном языке. В результате загруженность процессоров в серверах архитектуры 
+        Intel снизилась наполовину, а вычислительные ресурсы высвободились для 
+        решения других задач. В среднем такой подход позволяет ускорить обмен 
+        данными между платформой и приложениями на 30% и освобождает процессор 
+        для выполнения другой вычислительной работы. 
+      <p>Кроме того, подход, применяемый в технологии I/OAT, позволяет отказаться 
+        от искусственных надстроек, применяемых в существующих технологиях, - 
+        таких, как механизмы разгрузки TCP (TCP offload engine, TOE). Как известно, 
+        TOE - это специализированные дорогостоящие микросхемы, предназначенные 
+        для разгрузки процессора при обработке протокола TCP/IP, но они не решают 
+        двух основных проблем, связанных с процессором: снижения системных издержек 
+        и организации доступа к памяти. В результате TOE эффективны только для 
+        таких приложений, где велика информационная составляющая пакетов данных 
+        - например, для высокопроизводительных систем управления базами данных 
+        или для хранилищ данных. 
+      <p>Корпорация Microsoft обещает обеспечить встроенную поддержку технологии 
+        I/OAT в будущих версиях ОС Windows Server. В этих версиях также будет 
+        использоваться технология, которая позволяет сбалансировать трафик TCP/IP 
+        при использовании многоядерных процессоров. 
+      <p>
+    </td>
+  </tr>
+</table>
+<p>Платформа под кодовым названием Richford будет содержать два процессора Intel 
+  Itanium под кодовым названием Tukwila, которые предполагается выпустить в 2007 
+  г., а за ними последуют процессоры Intel Itanium следующего поколения под кодовым 
+  названием Poulson. 
+<p>Первые двухъядерные процессоры Intel Xeon MP (кодовое название Paxville) будут анонсированы в I квартале 2006 г., а масштабные программы предоставления образцов этих процессоров предприятиям и разработчикам ПО стартуют уже в конце 2005 г. Платформа под кодовым названием Reidland будет базироваться на процессорах Intel Xeon MP, содержащих более двух ядер, известных под кодовым названием Whitefield. Эти многоядерные процессоры будут выпущены в 2007 г. Процессоры Intel Xeon MP предназначены для серверов с четырьмя и более процессорами.
+<p>Платформа под кодовым названием Bensley, ориентированная на массовые двухпроцессорные серверы, появится в I квартале 2006 г. и будет основана на двухъядерном процессоре Intel Xeon под кодовым названием Dempsey. Процессоры Dempsey также будут использоваться в производительных платформах для рабочих станций (кодовое название Glidewell).
+<p>Платформа для цифрового офиса под кодовым названием Lyndon появится позднее 
+  в нынешнем году и будет построена на наборах микросхем серии Intel 945/955 и 
+  процессорах Pentium 4 5xx/6xx, а также новых двухъядерных процессорах Pentium 
+  D (кодовое название Smithfield). Платформа Lyndon будет поддерживать технологии 
+  Intel Active Management Technology и Virtualization Technology.
+<p>
+<table width="100%" border="0" bgcolor="#CCFFFF">
+  <tr>
+    <td>
+      <h4>Судьба системной шины </h4>
+      <p>Чтобы в полной мере реализовать потенциал роста производительности, обеспечиваемый 
+        несколькими ядрами, необходим способ предоставить процессору достаточное 
+        количество данных. По мнению экспертов, существующая архитектура системной 
+        шины Intel способна удовлетворить требования максимум четырех ядер, в 
+        зависимости от их частоты. В этой архитектуре системная шина связывает 
+        центральный процессор с основной памятью. Контроллер памяти, входящий 
+        в состав соответствующих наборов микросхем, отвечает за координацию трафика 
+        данных при его передаче из памяти в центральный процессор. Некоторые компании, 
+        в частности, AMD, Sun Microsystems и IBM, уже интегрировали контроллеры 
+        памяти в кристаллы центральных процессоров. Напомним, что интегрированный 
+        контроллер памяти сокращает уровень задержки (время, требуемое для передачи 
+        порции данных от одного компонента системы другому). 
+      <p>По прогнозам аналитиков, Intel в конечном счете должна отказаться от 
+        архитектуры системной шины просто для того, чтобы поддерживать производительность 
+        процессоров на необходимом уровне. Решение корпорации интенсифицировать 
+        разработку своих многоядерных архитектур позволит рано или поздно реализовать 
+        эту концепцию. Так, Intel планирует выпустить двухъядерные процессоры 
+        в 2005 г., что, как предполагается, позволит сохранить архитектуру системной 
+        шины. Но четырехъядерные процессоры, выпуск которых намечен на 2007 г., 
+        станут первыми, в которых может быть использован единый системный интерфейс 
+        между несколькими такими процессорами. 
+      <p>Как полагают, интегрированный контроллер мог бы позволить Intel увеличить 
+        производительность серверных приложений, интенсивно использующих память, 
+        и обеспечить доставку данных к нескольким ядрам, запланированным для процессоров 
+        Xeon и Itanium этого поколения. Фактически процессор Itanium образца 2007 
+        г. может иметь до восьми ядер. 
+      <p>Впрочем, эксперты не исключают и иной сценарий. Intel может сохранить 
+        свою системную шину за счет добавления к процессорам так называемых модулей 
+        арбитража шины, которые обеспечат совместное использование процессорами 
+        ресурсов, в том числе средств доступа к памяти или систем ввода-вывода. 
+        Ряд производителей уже устанавливает подобные модули в свои многопроцессорные 
+        серверы. Во многих серверах с восемью или более процессорами они фактически 
+        сгруппированы по четыре. Для Intel не составит большого труда организовать 
+        тот же тип архитектуры в процессоре с четырьмя и более ядрами. 
+    </td>
+  </tr>
+</table>
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8614.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Многоядерные процессоры
+</a><br><a href="detail.php@ID=8614.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Алексей Борзенко, 
+  к. т. н., доцент РРТА
+Как утверждают многие эксперты, в течение ближайших двух лет почти все микропроцессоры, устанавливаемые&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8614.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8614&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0be4297d98e4c83e9475e768b4bce456'><img src='../bitrix/tools/captcha.php@captcha_code=0be4297d98e4c83e9475e768b4bce456' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

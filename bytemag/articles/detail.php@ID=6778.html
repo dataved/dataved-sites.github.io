@@ -1,0 +1,711 @@
+<HTML>
+<HEAD>
+<title>Анализ основных угроз: вредоносное ПО
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Сегодня ИТ - это не просто одна из вспомогательных функций предприятия; все чаще компьютерные системы составляют саму основу всей деятельности компаний. Но одновременно растут и угрозы нормальной, бесперебойной работе информационных систем. Наиболее" />
+<meta name="description" content="Сегодня ИТ - это не просто одна из вспомогательных функций предприятия; все чаще компьютерные системы составляют саму основу всей деятельности компаний. Но одновременно растут и угрозы нормальной, бесперебойной работе информационных систем. Наиболее" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398078826','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6778' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6778&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6778"].SHOW_IMAGE.value="N"; document.forms["PrintForm6778"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6778"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6778"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6778);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6778.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6778.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6778);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6258.html'>Безопасность</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><br /></p><a href='../numbers/index.php@ID=11519.html'>№4 (92), апрель 2006</a><h1>Анализ основных угроз: вредоносное ПО
+</h1>17.04.2006<p></p><DIV class='article-text'><p>Сегодня ИТ - это не просто одна из вспомогательных функций предприятия; все чаще компьютерные системы составляют саму основу всей деятельности компаний. Но одновременно растут и угрозы нормальной, бесперебойной работе информационных систем. Наиболее яркий пример такой ситуации - Интернет, который позволил поднять на принципиально новый уровень эффективность применения ИТ для решения самых разнообразных бизнес-задач, но одновременно стал основным источником опасностей, грозящих нормальному функционированию предприятий.
+<p>В значимости проблемы ИТ-безопасности сегодня никого не надо убеждать, ее хорошо осознают не только ИТ-специалисты. К примеру, как показало одно из специальных исследований в Европе, более 80% руководителей считают, что ИТ-безопасность имеет важнейшее значение для успешной работы компаний, а более четверти из них отметили, что отдача на инвестиции в сферу безопасности оказалась более высокой, чем ожидалось.
+<p>Однако для построения эффективной системы защиты и оптимизации затрат необходимо 
+  хорошо ориентироваться в динамично меняющейся ситуации на фронте борьбы за ИТ-безопасность. 
+  Для этого полезно познакомиться с анализом основных угроз, который проводят 
+  как ведущие поставщики средств защиты, так и независимые эксперты. В данной 
+  статье мы познакомим читателей с результатами исследований, проведенных по итогам 
+  2005 г. компаниями Symantec (<a href="http://www.symantec.com">http://www.symantec.com</a>) 
+  и "Лаборатория Касперского" (<a href="http://www.kaspersky.ru">http://www.kaspersky.ru</a>). 
+<h3>Интернет-угрозы </h3>
+<p><i>По материалам отчета Symantec "Об угрозах Интернет-безопасности", опубликованного 
+  в сентябре 2005 г.</i> 
+<p>Корпорация Symantec установила несколько охватывающих весь мир сетей - источников данных об угрозах Интернет-безопасности. Система управления угрозами Symantec DeepSight Threat Management System и службы Symantec Managed Security Services состоят из более чем 24 тыс. сенсоров, отслеживающих сетевую активность в 180 странах мира. Помимо этого, Symantec собирает вредоносный код, а также отчеты о ПО spyware и adware более чем со 120 млн клиентских, серверных и шлюзовых систем, где установлены антивирусные системы корпорации. Symantec поддерживает одну из самых крупных в мире баз данных об уязвимостях, содержащую подробную информацию о более чем 13 тыс. уязвимостей, которые влияют на более чем 30 тыс. различных технологий от свыше 4000 производителей.
+<p>Помимо базы данных об уязвимостях, Symantec поддерживает работу BugTraq, одного из наиболее популярных Интернет-форумов, где публикуются сведения о новых уязвимостях и обсуждаются угрозы Интернет-безопасности. Наконец, сеть Symantec Probe Network, включающая более 2 млн учетных записей, получает почтовые сообщения из 20 различных стран мира, позволяя определить наиболее распространенный источник спама и фишинговой активности. Все это обеспечивает аналитикам корпорации достаточный набор непересекающихся данных, с помощью которых можно выявить и проанализировать тенденции в области Интернет-безопасности.
+<p>Результаты данного отчета базируются на сведениях, собранных с компьютерных систем стран Европы, Ближнего Востока и Африки (регион EMEA) за первую половину 2005 г. Согласно отчету Symantec, можно отметить следующие тенденции в развитии ситуации с Интернет-угрозами.
+<p><b>Увеличение числа обнаруживаемых уязвимостей.</b> Зарегистрированы 1862 новые 
+  уязвимости, из которых 49% присвоен класс высокоопасных. 59% были связаны с 
+  технологиями разработки Web-приложений. Эти уязвимости особенно опасны, так 
+  как обеспечивают организаторам атаки доступ к конфиденциальной информации баз 
+  данных без компрометации каких бы то ни было серверов. 
+<p><b>Увеличение активности бот-модулей.</b> Обнаруживалось в среднем 10 352 бот-модуля 
+  в день. Для сравнения: в декабре 2004 г. этот показатель составлял около 5000 
+  бот-модулей в день. 
+<p><b>Рост фишинговой активности и спама.</b> За отчетный период продолжался рост 
+  фишинговой активности. Symantec блокировала 1,04 млрд фишинговых атак, что составило 
+  90% по сравнению с последними шестью месяцами 2004 г. Одно из каждых 125 сообщений, 
+  просканированных системой Symantec Brightmail AntiSpam, было признано попыткой 
+  спама. 
+<p><b>Резкое увеличение числа модификаций вредоносного кода.</b> Зарегистрированы 
+  10 866 новых модификаций вирусов и червей Win32 - это почти на 48% выше числа 
+  вирусов, зарегистрированных во второй половине 2004 г. (тогда их было 7360). 
+  В свете этих показателей явно прослеживается тенденция ухода от масштабных, 
+  рассредоточенных угроз, таких, как рассылка в почтовых сообщениях червей, и 
+  переход к использованию настраиваемого вредоносного кода, имеющего модульную 
+  структуру. 
+<p><b>Компрометация конфиденциальной информации.</b> По данным отчета Symantec, 
+  за первое полугодие 2005 г. на долю вредоносного кода, компрометировавшего конфиденциальную 
+  информацию, приходилось 74% наиболее распространенных вредоносных программ. 
+  Угрозы, направленные на компрометацию конфиденциальной информации, могут привести 
+  к существенным финансовым потерям, особенно если речь идет о данных кредитных 
+  карт или банковских реквизитах. 
+<p><b>Вредоносный код для мобильных устройств.</b> Количество вредоносного кода 
+  для мобильных устройств продолжало увеличиваться. В новых угрозах уже реализованы 
+  мощные возможности вредоносного кода для мобильных устройств, несмотря на то 
+  что в целом количество таких угроз относительно невелико. Ожидается, что в ближайшем 
+  будущем ситуация изменится, поскольку мобильные платформы уже достигли определенной 
+  зрелости и в то же время бурное распространение получили средства связи, что 
+  обеспечило широкие возможности организации атак. 
+<p>Наибольшее число уязвимостей было обнаружено в браузере Mozilla. Это 25 уязвимостей, признанных авторами данного браузера; из них 18 имеют класс высокоопасных. За тот же период в браузере Microsoft Internet Explorer было обнаружено 13 признанных производителем уязвимостей, из которых восемь отнесены к классу высокоопасных.
+<h3>Вирусная активность </h3>
+<p><i>По материалам ежегодного обзора событий в области вредоносных программ "Лаборатории 
+  Касперского".</i> 
+<p>В 2005 г. было зафиксировано 14 крупных вирусных эпидемий, что втрое меньше показателя прошлого года (46 эпидемий). Основная причина этого - переход вирусописателей от глобальных эпидемий к гораздо менее заметным, локальным. В первую очередь это связано с тем, что в течение 2005 г. правоохранительные органы во всем мире заметно активизировались, много хакеров было арестовано, и компьютерный андеграунд начал избегать пристального внимания. Кроме того, антивирусные компании стали гораздо более оперативно реагировать на действия вирусописателей, и многие новые вредоносные программы не привели к крупным эпидемиям, так как антивирусные базы данных обновлялись в самом начале распространения этих программ.
+<p>Еще одна тенденция: 2005 г. однозначно прошел под знаком криминализации Интернета, и сейчас с уверенностью можно говорить, что подавляющее большинство вредоносных программ разрабатывается ради получения денег. Если говорить о краже финансовой информации (например, данных доступа к персональным банковским счетам), то для этих целей глобальные эпидемии не нужны: для обработки большого количества данных, полученных с массы зараженных компьютеров, требуется слишком много людей, что повышает опасность для преступников.
+<h4>Крупнейшие вирусные эпидемии </h4>
+<p>В 2005 г. можно выделить четыре крупные вирусные эпидемии. Причиной их стали модификации почтового червя Bagle с индексами .ах и .ау (январь), сетевой вирус-червь Mytob.c (март) и две модификации почтового червя Sober - Sober.p (май) и Sober.y (ноябрь).
+<p>Bagle.ax и Bagle.ay появились практически одновременно: "Лаборатория Касперского" зафиксировала в конце января массовые спам-рассылки этих вредоносных программ. Эпидемию не удалось своевременно остановить или замедлить, поскольку для размножения эти черви использовали процедуру, имеющую ряд особенностей по сравнению с другими почтовыми червями. Они сканировали файловую систему пораженного компьютера и рассылали себя по всем найденным адресам электронной почты, за исключением адресов, принадлежащих крупным разработчикам антивирусного и прочих видов ПО. Этим объяснялось малое количество образцов червей, полученное антивирусными компаниями. Кроме того, для увеличения интенсивности распространения Bagle.ay вел поиск каталогов, содержащих строку "shar". Если такие каталоги были найдены, то в них червь выкладывал свое тело в файлы с названиями, схожими с наименованиями популярных приложений и утилит. Таким образом, число каналов распространения вредоносного кода было существенно увеличено за счет использования разделяемых ресурсов и P2P-сетей.
+<p>В марте 2005 г. была зафиксирована эпидемия сетевого червя Mytob.c - самого опасного из всех обнаруженных вариантов данного семейства. Он распространялся через Интернет в виде вложений в зараженные электронные письма, рассылая себя по всем найденным на зараженном компьютере адресам электронной почты, а также использовал для распространения уязвимость в сервисе LSASS Microsoft Windows (MS04-011). Этот червь был основан на исходных кодах печально известного лидера 2004 г. - червя Mydoom. В течение трех недель Mytob.c лидировал по показателям активности, занимая около 30% всего вирусного трафика в электронной почте. Точно так же, как bagle.ax и bagle.ay, он исключал из рассылки своих копий адреса, принадлежащие крупным разработчикам антивирусного и прочих видов ПО. Помимо процедур самораспространения, значительную опасность представлял содержащийся в этой вредоносной программе bot-компонент, позволяющий злоумышленнику управлять зараженным компьютером через IRC-каналы и получать полный доступ к хранящейся в нем информации.
+<p>В целом семейство червей Mytob стало самым массовым и распространенным из всех появившихся в 2005 г. - их было обнаружено более 120 вариантов. Представители Mytob в течение всего года составляли более половины от общего числа вредоносных программ, обнаруженных в почтовом трафике.
+<p>Семейство Sober известно благодаря своим сложным алгоритмам размножения и совершения вредоносных действий. Эпидемия почтового червя Sober.p была зафиксирована в мае 2005 г. Он побил все возможные рекорды своих "предшественников" - других почтовых червей по количеству рассылаемых писем и скорости распространения в западноевропейском сегменте Интернета (Голландия, Германия, Венгрия и другие страны), тогда как от азиатских и российских пользователей поступало минимум жалоб на заражение данной версией червя Sober. За короткое время этот червь стал наиболее часто встречающейся вредоносной программой в почтовом трафике.
+<p>В ноябре был обнаружен другой его вариант - Sober.у. Активно размножаться он 
+  начал только через некоторое время после обнаружения. Причина кроется в очередном 
+  сложном алгоритме размножения, для работы которого требуется участие других 
+  вредоносных программ того же семейства. Интересной особенностью эпидемии Sober.y 
+  можно считать фактическое ее отсутствие на территории России. Подобное уже случалось 
+  ранее, когда большинство сообщений о заражениях представителями данного семейства 
+  почтовых червей приходило с территории Германии. Sober.y был запрограммирован 
+  на обновление в 0 часов по Гринвичу 6 января 2006 г., и вся антивирусная индустрия 
+  ожидала серьезной эпидемии. Однако этого так и не случилось. 
+<p>
+<table width="50%" border="0" cellpadding="1" bgcolor="#CCFFCC">
+  <tr>
+    <td> 
+      <h4>Двадцатка самых распространенных вредоносных программ в 2005 г. <br>
+        (по данным онлайн-сканера) </h4>
+      <table border="0">
+        <tr>
+          <td width="32">1</td>
+          <td width="326">Email-Worm.Win32.Sober.p</td>
+          <td width="45">7,56%</td>
+        </tr>
+        <tr>
+          <td width="32">2</td>
+          <td width="326">EICAR-Test-File.</td>
+          <td width="45">3,56%</td>
+        </tr>
+        <tr>
+          <td width="32">3</td>
+          <td width="326">Email-Worm.Win32.Mydoom.l</td>
+          <td width="45">2,37%</td>
+        </tr>
+        <tr>
+          <td width="32">4</td>
+          <td width="326">Net-Worm.Win32.Mytob.ck</td>
+          <td width="45">1,96%</td>
+        </tr>
+        <tr>
+          <td width="32">5</td>
+          <td width="326">Email-Worm.Win32.NetSky.q</td>
+          <td width="45">1,72%</td>
+        </tr>
+        <tr>
+          <td width="32">6</td>
+          <td width="326">Trojan-Downloader.Win32.Small.axy.</td>
+          <td width="45">1,61%</td>
+        </tr>
+        <tr>
+          <td width="32">7</td>
+          <td width="326">Net-Worm.Win32.Mytob.c</td>
+          <td width="45">1,21%</td>
+        </tr>
+        <tr>
+          <td width="32">8</td>
+          <td width="326">Backdoor.Win32.Rbot.gen</td>
+          <td width="45">1,21%</td>
+        </tr>
+        <tr>
+          <td width="32">9</td>
+          <td width="326">Trojan-Spy.Win32.Bancos.u</td>
+          <td width="45">0,96%</td>
+        </tr>
+        <tr>
+          <td width="32">10</td>
+          <td width="326">Email-Worm.Win32.Sober.y</td>
+          <td width="45">0,78%</td>
+        </tr>
+        <tr>
+          <td width="32">11</td>
+          <td width="326">Backdoor.Win32.SdBot.gen</td>
+          <td width="45">0,65%</td>
+        </tr>
+        <tr>
+          <td width="32">12</td>
+          <td width="326">Not-a-virus:Monitor.Win32.Perflogger.az</td>
+          <td width="45">0,52%</td>
+        </tr>
+        <tr>
+          <td width="32">13</td>
+          <td width="326">Trojan.Win32.Agent.bi</td>
+          <td width="45">0,51%</td>
+        </tr>
+        <tr>
+          <td width="32">14</td>
+          <td width="326">Email-Worm.Win32.NetSky.aa</td>
+          <td width="45">0,50%</td>
+        </tr>
+        <tr>
+          <td width="32">15</td>
+          <td width="326">Not-a-virus:Porn-Downloader.Win32.TibSystems.</td>
+          <td width="45">0,49%</td>
+        </tr>
+        <tr>
+          <td width="32">16</td>
+          <td width="326">Trojan-Spy.Win32.Bancos.ha</td>
+          <td width="45">0,48%</td>
+        </tr>
+        <tr>
+          <td width="32">17</td>
+          <td width="326">Not-a-virus:Monitor.Win32.Perflogger.ad</td>
+          <td width="45">0,47%</td>
+        </tr>
+        <tr>
+          <td width="32">18</td>
+          <td width="326">Email-Worm.Win32.Sobig.f</td>
+          <td width="45">0,46%</td>
+        </tr>
+        <tr>
+          <td width="32">19</td>
+          <td width="326">Trojan-Downloader.Win32.IstBar.is</td>
+          <td width="45">0,44%</td>
+        </tr>
+        <tr>
+          <td width="32">20</td>
+          <td width="326">Trojan.Win32.Dialer.q</td>
+          <td width="45">0,44%</td>
+        </tr>
+      </table>
+      <p> </p>
+    </td>
+  </tr>
+</table>
+<h4>Вредоносное ПО в почтовом трафике </h4>
+<p>В течение всего года в почтовом трафике превалировали исключительно черви (рис. 1) - как почтовые, так и сетевые. В основном это были представители "старых" вирусных семейств, такие, как Bagle, NetSky, Sober, Zafi, Mydoom. Однако несомненным лидером стали черви Mytob, появившиеся в 2005 г. (см. таблицу). Их показатели были достигнуты во многом за счет двойного способа размножения - через почту и непосредственно по сети, при помощи уязвимостей в ОС Windows.
+<p>Второе место по распространенности заняли различные троянские программы, в основном относящиеся к классам Trojan-Downloader, Trojan-Spy, а также многочисленные фишинговые атаки, которые в 2005 г. вышли на пик своей активности за все годы. Традиционные вирусы и макровирусы практически полностью исчезли из нашей статистики.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No4_2006/review/ris1.gif" alt=Fig.1></td>
+<td align="left" valign="bottom">Рис. 1. Распространенность вирусов по типам.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Двадцатка самых распространенных вредоносных программ в почтовом трафике в 
+  2005 г. </h4>
+<table border="1">
+  <tr>
+    <td width="28">1</td>
+    <td width="47">New *</td>
+    <td width="223">Net-Worm.Win32.Mytob.c</td>
+    <td width="54">14,92%</td>
+  </tr>
+  <tr>
+    <td width="28">2</td>
+    <td width="47">-</td>
+    <td width="223">Email-Worm.Win32.NetSky.q</td>
+    <td width="54">13,61%</td>
+  </tr>
+  <tr>
+    <td width="28">3</td>
+    <td width="47">New</td>
+    <td width="223">Email-Worm.Win32.Zafi.d</td>
+    <td width="54">9,89%</td>
+  </tr>
+  <tr>
+    <td width="28">4</td>
+    <td width="47">+1</td>
+    <td width="223">Email-Worm.Win32.Zafi.b</td>
+    <td width="54">7,77%</td>
+  </tr>
+  <tr>
+    <td width="28">5</td>
+    <td width="47">-4</td>
+    <td width="223">Email-Worm.Win32.NetSky.b</td>
+    <td width="54">4,78%</td>
+  </tr>
+  <tr>
+    <td width="28">6</td>
+    <td width="47">+2</td>
+    <td width="223">Email-Worm.Win32.LovGate.w</td>
+    <td width="54">4,04%</td>
+  </tr>
+  <tr>
+    <td width="28">7</td>
+    <td width="47">-4</td>
+    <td width="223">Email-Worm.Win32.NetSky.aa</td>
+    <td width="54">3,98%</td>
+  </tr>
+  <tr>
+    <td width="28">8</td>
+    <td width="47">New</td>
+    <td width="223">Net-Worm.Win32.Mytob.q</td>
+    <td width="54">1,84%</td>
+  </tr>
+  <tr>
+    <td width="28">9</td>
+    <td width="47">New</td>
+    <td width="223">Net-Worm.Win32.Mytob.u</td>
+    <td width="54">1,70%</td>
+  </tr>
+  <tr>
+    <td width="28">10</td>
+    <td width="47">New</td>
+    <td width="223">Email-Worm.Win32.Mydoom.m</td>
+    <td width="54">1,68%</td>
+  </tr>
+  <tr>
+    <td width="28">11</td>
+    <td width="47">New</td>
+    <td width="223">Net-Worm.Win32.Mytob.bk</td>
+    <td width="54">1,64%</td>
+  </tr>
+  <tr>
+    <td width="28">12</td>
+    <td width="47">New</td>
+    <td width="223">Email-Worm.Win32.Mydoom.l</td>
+    <td width="54">1,53%</td>
+  </tr>
+  <tr>
+    <td width="28">13</td>
+    <td width="47">-9</td>
+    <td width="223">Email-Worm.Win32.NetSky.d</td>
+    <td width="54">1,38%</td>
+  </tr>
+  <tr>
+    <td width="28">14</td>
+    <td width="47">New</td>
+    <td width="223">Net-Worm.Win32.Mytob.be</td>
+    <td width="54">1,36%</td>
+  </tr>
+  <tr>
+    <td width="28">15</td>
+    <td width="47">New</td>
+    <td width="223">Net-Worm.Win32.Mytob.t</td>
+    <td width="54">1,32%</td>
+  </tr>
+  <tr>
+    <td width="28">16</td>
+    <td width="47">-7</td>
+    <td width="223">Email-Worm.Win32.NetSky.y</td>
+    <td width="54">1,20%</td>
+  </tr>
+  <tr>
+    <td width="28">17</td>
+    <td width="47">New</td>
+    <td width="223">Net-Worm.Win32.Mytob.bi</td>
+    <td width="54">1,18%</td>
+  </tr>
+  <tr>
+    <td width="28">18</td>
+    <td width="47">New</td>
+    <td width="223">Email-Worm.Win32.NetSky.x</td>
+    <td width="54">1,04%</td>
+  </tr>
+  <tr>
+    <td width="28">19</td>
+    <td width="47">New</td>
+    <td width="223">Email-Worm.Win32.Bagle.ay</td>
+    <td width="54">1,03%</td>
+  </tr>
+  <tr>
+    <td width="28">20</td>
+    <td width="47">New</td>
+    <td width="223">Net-Worm.Win32.Mytob.h</td>
+    <td width="54">0,99%</td> </tr>
+ <tr>    <td colspan=4 >* Позиция в рейтинге по сравнению с 2004 г. 
+</td>
+</tr>
+</table>
+<h4>Тенденции </h4>
+<p>Наиболее важные изменения по сравнению с прошлыми годами можно сформулировать следующим образом. Окончательно сформировалась тенденция к более изощренным способам "зарабатывания" денег на пользователях. Вирусописатели активно включились в создание adware, используя для этого весь имеющийся опыт вирусной индустрии. Грубые методы воздействия на пользователей и организации (DoS-атаки, эпидемии червей) сменились точечными атаками на представляющие интерес организации и людей (targeting) и вымогательством путем шифрования файлов пользователя. Неприятной тенденцией стало повышенное внимание андеграунда к поиску и злонамеренному использованию уязвимостей в программных продуктах.
+<p>В целом основные тенденции прошедшего года выглядят таким образом:
+<ul><li>закат эпохи почтовых червей;
+<li>рост количества сетевых и почтовых червей с троянским функционалом;
+<li>появление большого количества червей для Интернет-пейджеров (MSN Messenger, AOL Messenger, ICQ);
+<li>стирание грани между рекламными программами (adware) и "традиционными" вредоносными программами (вирусами и троянцами);
+<li>увеличение количества вредоносных программ для мобильных устройств;
+<li>изменение вектора хакерских атак (от атак на отдельных пользователей до нападений на крупные компании и банки);
+<li>угрозы пользователям онлайн-игр;
+<li>серьезное усиление проблемы ботнетов;
+<li>развитие методов социальной инженерии;
+<li>использование rootkit-технологий;
+<li>появление политических мотивов в деятельности вирусописателей.</ul>
+<h4>Прогнозы на 2006 год </h4>
+<p>Скорее всего, описанные выше тенденции будут иметь место и в наступившем году, и "Лаборатория Касперского" прогнозирует их дальнейшее усиление. Если ранее только предполагалось, что целью вирусописателей в ближайшей перспективе вполне могут стать мобильные устройства, широко используемые ныне как корпорациями, так и отдельными пользователями, то события 2005 г. явно указывают на быстрое развитие сегмента вредоносных программ для мобильных устройств.
+<p>Риск глобальных эпидемий, способных на время вывести из строя целые сегменты Интернета и охватить миллионы пользователей, сохраняется. Несмотря на то что основная масса вредоносных программ создается сейчас с криминальными целями, остается еще большая прослойка тех, кто пишет вирусы исключительно из хулиганских побуждений. Именно они ответственны за крупнейшие вирусные эпидемии последних лет - Lovesan, Sasser, NetSky, Mydoom, Sober.
+<p>Основных сценариев серьезных вирусных эпидемий 2006 г. будет два. Первый - это появление сетевого червя, использующего очередную критическую уязвимость в Windows, которая позволяет атакующему выполнить произвольный код в уязвимой системе (аналогично уязвимостям RPC DCOM, LSASS, PnP, MSDTC). Второй сценарий - это появление почтового червя, использующего один из методов социальной инженерии. Скорее всего, это будет обычный трюк с текстом письма, составленным таким образом, чтобы убедить/заставить получателя добровольно открыть вложение. Риск подобной эпидемии возрастает при появлении какой-либо общемировой проблемы, как то: природная катастрофа, террористический акт в одной из стран Запада, техногенная катастрофа, военный конфликт. Скорее всего, будет эксплуатироваться и тема чемпионата мира по футболу.
+<p>Как и в 2005 г., наиболее массовым видом троянских программ останутся представители класса Trojan-Downloader. Это наиболее распространенный у вирусописателей способ доставки на компьютеры пользователей других вредоносных программ. Downloader имеют небольшой размер и способны долгое время функционировать в системе, не проявляя своего присутствия. Набор вредоносных программ, которые загружают эти троянцы, не изменится - по-прежнему это будут различные программы-шпионы, крадущие информацию пользователя (банковские счета, коды доступа к онлайн-играм), а также различные программы класса adware.
+<p>Все больше вредоносных программ будет использовать rootkit-технологии для скрытия своего присутствия в системе. Кроме этого, продолжится тенденция к заражению/изменению кода системных файлов Windows, чтобы максимально затруднить удаление вредоносных программ из системы.
+<p>Одной из главных проблем останутся уязвимости в популярных браузерах - Internet Explorer, Opera, Firefox. Это будет одним из ведущих способов проникновения вредоносного кода на пользовательские компьютеры, если не основным. Потенциально наиболее опасным остается Internet Explorer из-за своей распространенности, однако с ростом популярности альтернативных браузеров аналогичные проблемы возникнут и с ними.
+<p>Следует ожидать как минимум одной серьезной эпидемии червя, распространяющегося через какой-либо из популярных клиентов Instant Messaging. В 2005 г. мы видели несколько десятков червей для MSN и AOL, однако из-за примитивности своего кода и способа распространения они не создали серьезных проблем. В 2006 г. они несомненно вернутся и будут использовать гораздо более сложные и комплексные методы распространения, включая "общение" с пользователями в режиме "чат-бота".
+<p>За полтора года вредоносные программы для мобильных телефонов стали одной из самых актуальных проблем современной вирусологии. Из двух способов их распространения - Bluetooth и MMS - первый и в дальнейшем будет более популярным. MMS, однако, опаснее и способен вызвать гигантскую эпидемию за короткое время, хотя существует надежный способ борьбы с ним - проверка на сервере мобильного оператора всего MMS-трафика. В случае же Bluetooth такой возможности нет.
+<p>Троянских программ для ОС Symbian станет еще больше. Существенно расширится 
+  и спектр вредоносных программ - он, за редким исключением, практически полностью 
+  повторит существующие классы вирусов для ПК. Кроме того, внимание вирусописателей 
+  в 2006 г. привлечет растущая популярность платформы Windows Mobile и количество 
+  пользователей смартфонов на этой платформе. В целом вредоносные программы для 
+  Windows Mobile будут с технологической точки зрения гораздо сложнее, чем существующие 
+  сейчас для Symbian. 
+<p>
+<table width="100%" border="0" cellpadding="1" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h3>Спам-индустрия в 2005 году </h3>
+      <p><i>По материалам "Лаборатории Касперского"</i> 
+      <p>Основные итоги 2005 г. можно сформулировать следующим образом: 
+      <ul>
+        <li>прирост доли спама в почтовом трафике замедлился, в среднем на два-три 
+          обычных письма приходится семь-восемь единиц спама; 
+        <li>скорость отдельно взятой спам-рассылки возросла в 3-4 раза; 
+        <li>перераспределяются лидирующие тематики спама (рис. 2); 
+        <li>спам-индустрия смещается в зону криминального бизнеса; 
+        <li>не появилось никаких новых способов обхода спам-фильтров.
+      </ul>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No4_2006/review/ris2.gif" alt=Fig.2></td>
+<td align="left" valign="bottom">Рис. 2. Распределение спама по темам. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+      <p>
+      <p>Можно выделить определенные различия спама в Рунете и западном сегменте 
+        Интернета. В "их" спаме существенную долю занимает реклама контрафактных 
+        товаров и дешевых товаров по завышенным ценам, а "нашим" спамом активно 
+        пользуется малый бизнес. У иностранных спамеров достаточно скромное форматирование 
+        текста и почти никогда не используются присоединенные файлы, местные чаще 
+        применяют визуальное оформление и порой приложения. Новинкой прошедшего 
+        года стали письма с маскировкой под личное сообщение, присланное вам по 
+        ошибке (рис. 3). 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No4_2006/review/ris3.jpg" alt=Fig.3></td>
+<td align="left" valign="bottom">Рис. 3. Маскировка спама под личные сообщения. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+      <p>В 2005 г. доля криминализированного спама составила 6-12% от общего объема. 
+        При этом можно выделить следующие признаки криминализации: 
+      <ul>
+        <li>стабильно высокая суммарная доля криминализированных спам-атак; 
+        <li>появление в спаме криминализированных предложений, не связанных с 
+          компьютерными технологиями; 
+        <li>рост в спаме доли контрафактных и/или контрабандных товаров; 
+        <li>использование спам-рассылок для "черного PR"; 
+        <li>криминальные способы организации спам-атак (через зомби-сети).
+      </ul>
+      <p>По мнению аналитиков "Лаборатории Касперского", в 2006 г. нас ожидает 
+        вовлечение в спам-индустрию новых средств, что может вызвать новый скачок 
+        в развитии спамерского ПО и привести к очередному увеличению объемов спама. 
+        В то же время производители спам-фильтров вытесняют спамеров из электронной 
+        почты в ICQ и мобильную связь. При этом технологии рассылки спама и "типовая 
+        спам-машина" в 2006 г. вряд ли принципиально изменятся. 
+    </td>
+  </tr>
+</table>
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</A></b></li><li><b><A href='detail.php@ID=24095.html'>Сертифицированные системы обнаружения вторжений </A></b></li><li><b><A href='detail.php@ID=22469.html'>Новые технологии в Security operation center</A></b></li><li><b><A href='detail.php@ID=20887.html'>Агрессивность и мобильность: какие угрозы нас ждут в 2013-м</A></b></li><li><b><A href='detail.php@ID=20621.html'>Карты с дисплеем как новое средство защиты онлайн-банкинга</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</A></b></li><li><b><A href='detail.php@ID=25282.html'>Брандмауэр в Dr.Web для Android</A></b></li><li><b><A href='detail.php@ID=25260.html'>Новые угрозы атак на пользователей онлайн-банкинга </A></b></li><li><b><A href='detail.php@ID=25238.html'>Защита от DDoS-атак – комплексное решение «Билайн Бизнес» и Radware</A></b></li><li><b><A href='detail.php@ID=25227.html'>Сетевой червь в «Интернете вещей»</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6778.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Анализ основных угроз: вредоносное ПО
+</a><br><a href="detail.php@ID=6778.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Сегодня ИТ - это не просто одна из вспомогательных функций предприятия; все чаще компьютерные системы составляют саму основу всей деятельности&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6778.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6778&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0365779fe1fa67aafae28060fd787f34'><img src='../bitrix/tools/captcha.php@captcha_code=0365779fe1fa67aafae28060fd787f34' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

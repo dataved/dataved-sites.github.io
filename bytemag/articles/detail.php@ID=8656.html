@@ -1,0 +1,506 @@
+<HTML>
+<HEAD>
+<title>Технология виртуализации — подход IBM
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Виртуализацию платформ можно определить как создание логически разделенных вычислительных систем, которые работают на реальных платформах. По сравнению с виртуализацией в применении к дисковой памяти и серверам концепция виртуализации платформ идет" />
+<meta name="description" content="Виртуализацию платформ можно определить как создание логически разделенных вычислительных систем, которые работают на реальных платформах. По сравнению с виртуализацией в применении к дисковой памяти и серверам концепция виртуализации платформ идет" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082291','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8656' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8656&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8656"].SHOW_IMAGE.value="N"; document.forms["PrintForm8656"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8656"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8656"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8656);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8656.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8656.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8656);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a><br /></p><a href='../numbers/index.php@ID=11513.html'>№5 (93), май 2006</a><h1>Технология виртуализации — подход IBM
+</h1>Автор: Владислав Шаров<br />17.05.2006<p></p><DIV class='article-text'><p>Виртуализацию платформ можно определить как создание логически разделенных вычислительных систем, которые работают на реальных платформах. По сравнению с виртуализацией в применении к дисковой памяти и серверам концепция виртуализации платформ идет глубже и включает все уровни системы - от прикладных программ и ОС до компонентов платформы, процессоров и средств связи.
+<p>Сегодня коэффициент загруженности инфраструктуры многих предприятий составляет всего примерно 15%. Виртуализация помогает таким компаниям оптимизировать имеющиеся у них ресурсы и развернуть службы и приложения, способные динамически адаптироваться к потребностям бизнеса. Объединяя в единый пул серверы, системы хранения данных, сетевое оборудование и другие устройства, образующие инфраструктуру предприятия, и обеспечивая совместное использование этих ресурсов разными приложениями и бизнес-процессами, виртуализация дает компаниям возможность быстро реагировать на изменения внутрикорпоративной и экономической среды, начиная от колебаний рабочих нагрузок и до стратегических перемен в бизнесе, на рынке и в клиентской базе.
+<p>В виртуализованных инфраструктурах работа персонала, функциональных процессов и технологий концентрируется в первую очередь на уровне сервиса; вычислительные емкости выделяются динамически; вся инфраструктура становится более простой и гибкой. Виртуализация позволяет компаниям добиться баланса между такими, на первый взгляд, антагонистическими бизнес-реалиями, как затраты и динамичность. Если раньше предприятия периодически проводили консолидацию для сокращения расходов, а затем децентрализацию для того, чтобы быть ближе к заказчику и быстрее реагировать на его запросы, то сегодня виртуализация позволяет решить обе эти задачи одновременно.
+<p>Стоит особо отметить, что виртуальные платформы легко воспринимаются пользователями и работают, как настоящие компьютеры. Благодаря тому, что они абстрактны и отделены от физических платформ и друг от друга, виртуальные платформы предоставляют простую переносимость, в высшей степени интеллектуальное функционирование и способность скрыть от пользователя свою сложность, в то же время повышая надежность системы. Заметим, что виртуализация предоставляет способ создания менее сложных систем, которые превращают компьютеры в более управляемые объекты. Кроме того, такое разделение обеспечивает более высокий уровень безопасности систем, сетей и приложений благодаря изоляции потенциально опасных подсистем от системных ресурсов низкого уровня и от других виртуальных платформ.
+<p>Виртуализация серверов меняет способ, которым ведущие ИТ-организации предоставляют ресурсы и управляют своими системами и приложениями, помогает консолидировать инфраструктуру, оптимизировать ее использование, снизить общие расходы и повысить оперативность бизнеса. Благодаря современному серверному ПО для виртуализации можно добиться консолидации множества ОС и наборов ПО на одной платформе на базе процессоров Intel, при этом ресурсы платформы могут предоставляться динамически для удовлетворения конкретных требований бизнеса и приложений.
+<p>Среди важнейших преимуществ программных решений по виртуализации серверов можно отметить следующие.
+<p><b>Гибкая консолидация серверов.</b> С помощью виртуализации можно быстро провести 
+  консолидацию разнообразных ОС и приложений как на двухпроцессорных, так и на 
+  16-процессорных серверах и более крупных платформах. 
+<p><b>Улучшенная доступность и безопасность.</b> Отказы ПО и цифровые атаки хакеров 
+  локализуются внутри виртуальных разделов, а разделы с функцией восстановления 
+  после отказа предоставляют простой экономичный подход для улучшения доступности. 
+<p><b>Упрощенный переход на новую ОС и новое оборудование.</b> Виртуализация серверов 
+  позволяет переносить уже существующие приложения и ОС, в среде которых они работают, 
+  в новые виртуальные разделы без изменения. 
+<p><b>Хорошо налаженная система испытаний и разработки.</b> На одной платформе 
+  можно разместить множество испытательных сред и множество экземпляров каждого 
+  набора ПО. 
+<p><b>Возросшая оперативность бизнеса.</b> Для размещения новых приложений, увеличения 
+  рабочей нагрузки и управления системой можно за несколько минут создать виртуальные 
+  разделы или изменить их размеры. 
+<h3>Платформа Virtualization Engine </h3>
+<p>В июле 2005 г. в соответствии со своей новой стратегией в области компьютерных 
+  систем корпорация IBM (<a href="http://www.ibm.com">http://www.ibm.com</a>) 
+  представила основанную на стандартах платформу виртуализации, с помощью которой 
+  заказчики могут оптимизировать ИТ-ресурсы и повысить эффективность управления 
+  ими благодаря объединению в общие пулы серверов, сетей и систем хранения данных. 
+  Это помогает улучшить экономические показатели ИТ-инфраструктур и повысить коэффициент 
+  использования имеющихся у заказчика ИТ-активов. 
+<p>Для объединения серверов и систем хранения платформа IBM Virtualization Engine 2.0 использует открытые интерфейсы, модули виртуализации и Web-сервисы. Бизнес-партнеры IBM предоставляют дополнительные решения, играющие важную роль при объединении в пул всех ресурсов вычислительного центра. При этом, по мнению руководителей корпорации, в результате четырехлетней научно-исследовательской и опытно-конструкторской деятельности IBM и ее бизнес-партнеров технология Virtualization Engine превратилась в основанную на открытых стандартах платформу с высокой степенью интеграции. Кроме того, эта платформа позволяет заказчику в значительно большей степени, чем когда бы то ни было, повысить эффективность использования ИТ-ресурсов и упростить управление всей открытой ИТ-инфраструктурой.
+<p>Предлагаемые IBM технологии виртуализации призваны упростить администрирование ИТ-ресурсов и решить тем самым проблему лавинообразного роста расходов на системное управление. Консоль Virtualization Engine обеспечивает единую точку обзора для всей топологии виртуализованной системной инфраструктуры и позволяет централизованно оценивать состояние входящих в нее систем и платформ. Это минимизирует требования к знанию конкретных операционных систем для многих сотрудников ИТ-служб.
+<p>Ниже охарактеризованы некоторые из разработанных компонентов и функций, включенных в состав Virtualization Engine 2.0.
+<h4>Resource Dependency Services </h4>
+<p>Компонент Resource Dependency Services (RDS) повышает наглядность представления ИТ-ресурсов, позволяя сформировать новые или выявить существующие отношения между пользователями, ресурсами, приложениями и сетями, что является ключевым элементом при организации коллективной работы.
+<p>Возможности компонента RDS:
+<ul><li>автоматическое обнаружение ресурсов в IP-сети;
+<li>сопоставление бизнес-процессов с ИТ-ресурсами;
+<li>поддержка совместной работы с разработанным корпорацией продуктом - базой данных IBM Tivoli Change and Configuration Management;
+<li>визуальное отображение топологии на консоли Virtualization Engine.</ul>
+<h4>Integrated Virtual Management </h4>
+<p>Компонент Integrated Virtual Management (IVM) упрощает процесс создания и конфигурирования виртуальных систем. Простой в использовании Web-интерфейс сокращает процедуру виртуализации одного сервера до нескольких минут. Кроме того, IVM обеспечивает поддержку логических разделов LPAR и технологий виртуализации без использования аппаратной консоли управления.
+<h4>Enterprise Workload Manager </h4>
+<p>Компонент Enterprise Workload Manager (EWM) позволяет оптимизировать системные ресурсы с целью улучшения реакции на колебания рабочей нагрузки. Кроме того, в новой версии этого компонента улучшена поддержка гетерогенных инфраструктур.
+<p>Возможности компонента EWM:
+<ul><li>динамическое управление разделами в системах на базе процессоров POWER5;
+<li>более простые средства системного управления;
+<li>интеграция со средствами выравнивания сетевой нагрузки в системах zSeries.</ul>
+<h4>IBM Director 5.1 </h4>
+<p>IBM Director 5.1 - это новая версия комплексного набора программных инструментов для непрерывного централизованного управления и автоматизации, поддерживающая более широкий спектр серверов IBM eServer и других систем IBM. Отличительные особенности новой версии IBM Director - простота использования и более открытый и всеобъемлющий набор инструментов. В ней расширен состав поддерживаемых платформ: реализована поддержка ОС Linux на системах IBM eServer zSeries и pSeries, а также поддержка нового мэйнфрейма IBM System z9. Появился также новый рациональный интерфейс, повышающий продуктивность, и оптимизированные агенты для упрощения развертывания.
+<p>Версия Director 5.1 поддерживает компонент Virtual Machine Manager - дополнительный модуль IBM Director, обеспечивающий интеграцию с решением VMware VirtualCenter и централизованное управление виртуальными/физическими компьютерами. Добавлена возможность проверки состояния ПО, упрощающая управление обновлениями. Новые инструменты разработки - в сочетании с основанными на стандартах конструктивными принципами IBM Director - позволяют бизнес-партнерам по средствам управления расширять возможности этого продукта, предоставляя заказчикам еще более обширный и гибкий набор функций.
+<p>Новая версия платформы IBM Virtualization Engine 2.0 позволяет распространить виртуализацию ИТ-ресурсов на все предприятие и даже за его рамки.
+<h4>Виртуализация серверов </h4>
+<p>В состав семейства серверов IBM eServer (линеек pSeries, iSeries и zSeries, а также новых систем IBM System z9) входят различные компоненты технологии Virtualization Engine. Это средства динамического разбиения на разделы, управления рабочей нагрузкой, виртуализации сетевых ресурсов и ресурсов ввода-вывода - связывание которых между собой позволяет создать "матрицу виртуализации" в масштабе всего предприятия. Подобный модульный подход позволяет ускорить реализацию виртуализованной среды и обеспечить интеграцию ИТ-ресурсов в масштабе всего предприятия. Кроме того, с помощью программных средств виртуализации VMware к этой матрице виртуализации можно подключить системы IBM eServer xSeries и BladeCenter.
+<h4>Виртуализация ресурсов хранения </h4>
+<p>Очень часто корпоративные системы хранения данных представляют собой наборы изолированных подсистем, число которых постоянно увеличивается. Такие изолированные островки информации усложняют управление хранением, увеличивают нагрузку на администраторов и повышают уровень требований к квалификации персонала. Кроме того, при запланированных и незапланированных остановках работы таких систем простои оказываются достаточно долгими. В результате снижается эффективность работы персонала, которому приходится управлять большими объемами данных, разбираться с разнородными устройствами хранения, различными протоколами передачи данных. Вся система становится менее эффективной и более уязвимой, при том что стоимость владения ею растет. Объемы данных в типичных корпоративных системах за год примерно удваиваются, соответственно растет и число проблем у отделов ИТ.
+<p>Значительно снизить остроту перечисленных проблем способна виртуализация хранения. Данный метод предполагает объединение всех разрозненных дисковых массивов в одно дисковое пространство, при котором устраняются последние физические связи между сервером и дисковой подсистемой. Естественные следствия такого объединения - снижение затрат на управление и персонал, автоматизация хранилища и управление данными на основе единых правил. Удобство реконфигурирования системы, более полная загрузка имеющихся ресурсов за счет предоставления доступа к одному дисковому массиву разным серверам и динамическое перераспределение дисковой памяти увеличивают отдачу от системы хранения в целом.
+<p>Применительно к сетям хранения на базе жестких дисков виртуализация - это объединение всего доступного дискового пространства, предоставленного в сеть хранения данных всеми имеющимися дисковыми массивами, в общий пул и организация доступа к этому пулу для всех пользователей SAN. При этом обеспечивается прозрачное (для компьютера, с которого происходит доступ к данным) представление системы хранения на уровне блоков: логический адрес блока никак не привязан к его реальному, физическому адресу. По сути, виртуализация разделяет логический и физический уровни доступа к данным. Выглядит это так, как будто пользователи и приложения имеют дело не с физическими устройствами хранения, а с логическими.
+<p>IBM решила расширить функциональность своего основного решения для виртуализации средств хранения - IBM TotalStorage SAN Volume Controller (SVC), обеспечив возможность взаимодействия между SVC и системами IBM zSeries, работающими в Linux-среде. В результате владельцы систем zSeries (через конфигурации, управляемые решением SVC) смогут применять устройства хранения, традиционно подключаемые к открытым средам, в том числе поддерживаемые решением SVC многоуровневые среды хранения.
+<p>Напомним, что SVC представляет собой распределенный кластер, состоящий в минимальной конфигурации из двух узлов. Этот кластер подключается в сеть хранения данных, в которой аппаратными средствами выделяются две физически независимые зоны - зона хостов (серверы приложений и любые клиенты SAN) и зона хранения (к которой относятся все дисковые массивы, задействованные в SAN). Контроллер SVC, подключенный к обеим зонам, отвечает за их коммутацию. Таким образом, обеспечиваются связи между сервером и SVC, между дисковым массивом и SVC, а также между узлами контроллера (эта связь устанавливается по тем же каналам Fibre Channel). Такое подключение фактически предоставляет системе виртуализационный слой между дисковыми подсистемами и серверами приложений. В частности, узел кластера SAN Volume Controller представляет собой Intel-сервер на основе специальной версии ОС Linux и ПО, поддерживающего виртуализацию, кэширование и расширенные функции копирования. Узлы объединяются в кластер парами - в терминологии SVC группами ввода-вывода (I/O Group). В каждой группе кэш-память на обоих узлах зеркалируется для повышения отказоустойчивости системы. Здесь также балансируется нагрузка между всеми портами.
+<p>Говоря о виртуализации ресурсов хранения, стоит отметить, что IBM и Network Appliance заявили о продолжении совместной деятельности по развитию технологий виртуализации. Основное направление этой деятельности - объединение технологий виртуализации ресурсов хранения от IBM и всей линейки систем хранения NetApp V-Series и FAS в единые интегрированные решения.
+<h4>Виртуализация сетевых ресурсов </h4>
+<p>Применение решений партнеров IBM - таких, как технология InfiniBand и технология виртуализации средств ввода-вывода от Cisco - дополняет платформу Virtualization Engine средствами, которые более широко используют возможность управления динамическими разделами и улучшают интеграцию между механизмами виртуализации сетевых и серверных ресурсов в масштабе всего вычислительного центра.
+<h3>Новые предложения от IBM </h3>
+<p>Осенью прошлого года IBM представила новые предложения в области виртуализации и заявила о будущих технологиях, укрепляющих более чем 30-летнее лидерство корпорации на рынке виртуализации. Нововведения в Virtualization Engine, охватывающие диапазон от ленточных устройств хранения данных до программных мастеров, учитывают потребности клиентов в различных отраслях и позволяют им применять технологии виртуализации для снижения затрат на ИТ и упрощения работы бизнеса. IBM также представила программу в области виртуализации для своих партнеров, которая дает независимым поставщикам ПО возможность создавать решения на основе платформ виртуализации IBM, что ускоряет проектирование решений при наличии готовых проверенных конструктивных блоков.
+<p>По мнению специалистов корпорации, прочность позиций IBM на рынке виртуализации подтверждается широтой и глубиной возможностей ее средств, которые позволяют виртуализовать почти 80% технологической инфраструктуры клиента. При этом уменьшение сложности технологической инфраструктуры становится непрерывным процессом.
+<h4>Виртуализация ленточных систем хранения для открытых систем </h4>
+<p>IBM расширила свое присутствие в области виртуализации ленточных систем, представив новое предложение для подключения к Unix- и Intel-серверам. Это новое решение, получившее название IBM Virtualization Engine TS7510, представляет собой интегрированную дисковую и ленточную систему, которая позволяет клиентам сократить время резервного копирования и восстановления данных при одновременном улучшении использования ресурсов ленточных устройств.
+<h4>Виртуализация на основе мастеров для Unix-серверов </h4>
+<p>Встроенный менеджер виртуализации (IVM) значительно упрощает реализацию технологий виртуализации в системах eServer p5. При помощи нового управляемого программами-мастерами интерфейса на базе браузера пользователь всего тремя щелчками мыши может создать микрораздел, готовый к установке AIX 5L или Linux. IVM поставляется бесплатно при приобретении опции Advanced POWER Virtualization для серверов eServer p5. Встроенный менеджер виртуализации призван значительно упростить и ускорить создание и настройку сред с большим количеством разделов благодаря поддержке технологии микроразделов IBM.
+<h4>ПО системного управления </h4>
+<p>С октября прошлого года клиенты могут бесплатно загружать ПО системного управления IBM Director 5.10 для всех серверов IBM xSeries и BladeCenter, а с IV квартала - и для серверов iSeries, pSeries, System z9 и zSeries. Отметим, что IBM Director - это интегрированный пакет программных средств управления для централизованного систематизированного управления и автоматизации сложных ИТ-сред.
+<h4>ПО виртуализации ресурсов хранения </h4>
+<p>IBM также объявила о выпуске следующей версии TotalStorage SAN Volume Controller версии 3.1. Это ПО, в частности, поддерживает вчетверо больше серверов, чем предыдущая версия, позволяя клиентам обслуживать среды большего размера, и работает с рядом новых ОС и наименований кластерного ПО. Для еще большей гибкости и широты выбора SAN Volume Controller позволяет заказчикам применять как собственные функции копирования поддерживаемых дисковых массивов, так и функции копирования SAN Volume Controller.
+<h4>Виртуализация коммутации для xSeries </h4>
+<p>IBM объявила о расширении возможностей виртуализации своих серверов xSeries благодаря новым коммутаторам консоли (KVM) семейства Advanced Cabling Technology (ACT), обеспечивающим "виртуальное" управление серверами. Коммутаторы IBM ACT поддерживают технологию виртуальных носителей данных Virtual Media, что позволяет заказчику устанавливать, обновлять и загружать ПО в дистанционном режиме через Ethernet-подключение. Коммутаторы IBM ACT идеально подходят для централизованного управления сложными средами.
+<p>По мнению экспертов, представленные возможности виртуализации - это еще один шаг в реализации стратегии IBM, направленной на виртуализацию всех систем в своей линейке продукции.
+<h4>Программа Ready For Virtualization </h4>
+<p>Вновь подчеркивая свое внимание к стратегии взаимной совместимости в средах на базе продукции разных поставщиков, IBM представила новую программу готовности к виртуализации - Ready for Virtualization, которая позволяет независимым поставщикам ПО тестировать и аттестовать свои решения с поддержкой виртуализации на серверных платформах IBM. Программа Ready for Virtualization дополняет анонсированную ранее программу Ready for Grid. Задача обеих программ - тестирование совместимости приложений с технологиями виртуализации IBM в целях создания совместимых решений для заказчиков. Ряд независимых поставщиков ПО, включая компании eReplenishment, Pegasystems и StreamServe, уже проверили на совместимость свои решения.
+<h3>Технология Enterprise X-Architecture 3G </h3>
+<p>В начале прошлого года IBM впервые представила новую архитектуру Enterprise X-Architecture 3G (eServer X3), которая стала кульминацией трехлетних проектно-конструкторских работ стоимостью 100 млн долл. Проект был направлен на то, чтобы привнести возможности, унаследованные от мэйнфреймов, и усовершенствованные наукоемкие технологии в серверы IBM нового поколения, в частности, в 64-разрядный сервер IBM eServer xSeries на базе процессора Intel Xeon. По предварительным оценкам, архитектура X3 позволяла повысить производительность до 38% на четырех процессорах по сравнению с предыдущим поколением систем на базе процессоров Intel Xeon, а также давала возможность одновременно запускать 32- и 64-разрядные приложения и быстрее обрабатывать большие массивы информации. Тогда же корпорация представила новый сервер IBM eServer xSeries 366, который стал первым в запланированном семействе серверов IBM на базе Intel-архитектуры, способных поддерживать двухъядерные процессоры.
+<p>Напомним, что архитектура Х3, относящаяся к Enterprise X-Architecture третьего поколения, оптимизирована для консолидации серверов и программных приложений класса предприятий, а также для применения технологии виртуализации высшего уровня IBM Virtualization Engine. Необходимо отметить, что архитектура X3 также обеспечивает заказчикам IBM защиту инвестиций с помощью семейства серверов Intel-архитектуры, построенных в соответствии с концепцией "оплата по мере роста" и поддерживающих 32- и 64-разрядные приложения на одной и той же платформе, предоставляя возможность перехода на 64-разрядные приложения по мере необходимости.
+<p>Первое поколение архитектуры Enterprise X-Architecture (известное ранее как Summit), представленное в 2001 г., было хорошо принято заказчиками и помогло IBM занять ведущие позиции на рынке Intel-серверов с числом процессоров восемь и выше. И действительно, за истекший период рыночная доля IBM в секторе восьмипроцессорных серверов возросла с 18 до почти 60%. Кроме того, начиная с 2001 г., IBM неизменно остается самым быстроразвивающимся поставщиком серверов Intel-архитектуры в мире. Отметим, что серверы IBM на базе Enterprise X-Architecture 3G рассчитаны на поддержку нескольких поколений двухъядерных процессоров по таким параметрам, как мощность, тепловой режим и применяемый набор микросхем.
+<h4>Сервер IBM eServer xSeries 366 </h4>
+<p>Сервер IBM eServer xSeries 366 построен на базе 64-разрядного процессора Intel Xeon MP и платформы, поддерживающей память Active Memory на базе DDR2 и Active PCI-X 2.0, что соответствует новому стандарту для высокопроизводительных серверов I/O. Благодаря этой платформе, в сочетании с опытом IBM в разработке наборов микросхем, прирост общих показателей системы при 64 Гбайт используемой памяти может достигнуть 38% по сравнению с системами предыдущего поколения.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/vti1.jpg" alt=Fig.1></td>
+<td align="left" valign="bottom">Сервер IBM eServer xSeries 366.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В IBM eServer xSeries 366 значительно улучшено соотношение цена/производительность по сравнению с предшествующими поколениями, что устраняет разрыв в ценах между двухъядерными и четырехъядерными серийными платформами. IBM eServer xSeries 366 оптимизированы для консолидации серверов и приложений для предприятий, включая такое ПО, как IBM DB2 Universal Database, SAP, Microsoft SQL Server и Oracle.
+<p>На момент выпуска система x366 установила рекорд производительности для серверов 
+  с четырьмя процессорами Intel Xeon при обработке транзакций в реальном времени 
+  в тесте TPC-C. Сервер x366 продемонстрировал показатель 141504 tpmC (транзакций 
+  в минуту). Кроме того, он установил рекорд для четырехпроцессорных серверов 
+  в тесте 300GB TPC-H, оценивающем производительность бизнес-анализа. Сервер продемонстрировал 
+  показатель 7731,9 QphH@300GB (комбинированных запросов в час при обработке базы 
+  данных объемом 300 Гбайт), попав в десятку лучших по производительности в тесте 
+  TPC-H с использованием базы данных объемом 300 Гбайт. 
+<p>
+<table width="100%" border="0" cellpadding="1" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h4>Набор микросхем IBM Hurricane </h4>
+      <p>Центральный элемент архитектуры X3 - набор микросхем третьего поколения 
+        Enterprise X-Architecture под названием Hurricane. Этот НМС обеспечивает 
+        IBM eServer xSeries 366 интегрированным процессором и контроллером памяти, 
+        который значительно понижает латентность, что, в свою очередь, ускоряет 
+        реакцию сервера и общие показатели производительности. НМС Hurricane был 
+        создан специально для архитектуры X3 командой разработчиков кроссплатформенных 
+        архитектур, в свое время накопивших опыт разработки при создании мэйнфреймов 
+        IBM. 
+      <p>В НМС Hurricane значительно улучшено соотношение цена/производительность 
+        по сравнению с предыдущим поколением x365. Кроме того, есть ряд характерных 
+        только для него преимуществ. В частности, существенно улучшена ситуация 
+        с задержкой в цепи процессор-память, что критически важно в условиях рабочей 
+        нагрузки на коммерческих предприятиях. Виртуальная кэш-память XceL4v Dynamic 
+        Server Cache позволяет выборочно кэшировать с настолько низкой задержкой 
+        при обработке памяти, что физический кэш-чип L4 более не требуется. 
+      <p>Из других ключевых особенностей Hurricane отметим следующие: 
+      <ul>
+        <li>встроенная динамическая память DRAM c интегрированными snoop-фильтрами 
+          и удаленными директориями; 
+        <li>три масштабируемых порта, работающих на скорости 6,4 Гбайт/с; 
+        <li>активная PCI-X 2.0 (до 266 МГц) удваивает показатели предыдущего поколения 
+          с обратной совместимостью.
+      </ul>
+</td>
+  </tr>
+</table>
+<p>Четырехпроцессорный сервер IBM eServer xSeries 366 также поддерживает двухъядерные 
+  процессоры. Так, осенью прошлого года новый xSeries 366 с ПО DB2 UDB в тесте 
+  TPC-C, оценивающем скорость обработки транзакций в реальном времени, продемонстрировал 
+  результат 221017 tpmC, установив новый мировой рекорд производительности для 
+  четырехпроцессорных систем. Производительность сервера IBM xSeries 366 на базе 
+  двухъядерных процессоров существенно превысила производительность аналогичного 
+  сервера IBM eServer xSeries 366 на базе одноядерных процессоров. 
+<h4>Сервер IBM eServer xSeries 460 </h4>
+<p>Летом 2005 г. IBM расширила свое семейство серверов с архитектурой X3, представив новый сервер IBM eServer xSeries 460, разработанный для сред постоянной готовности с высокой масштабируемостью. В начальной конфигурации x460 представляет собой недорогой сервер с поддержкой максимум четырех процессоров, легко масштабируемый вплоть до 32 процессоров в конфигурации из восьми блоков. Поддерживающая двухъядерные процессоры модель IBM eServer xSeries 460 отличается увеличенной масштабируемостью, повышенной производительностью кэш-памяти процессоров, расширяемостью памяти и ресурсов ввода-вывода, управляемостью и одновременной поддержкой 32-разрядных и 64-разрядных приложений. Среди ее целевых применений - обслуживание баз данных, ERP- и CRM-систем, консолидация серверов, специализированные приложения для вертикальных рынков. Архитектура X3 позволяет повысить производительность восьмипроцессорной конфигурации на величину до 60% по сравнению с восьмипроцессорным сервером IBM предыдущего поколения на базе Intel Xeon MP. При этом системы могут одновременно исполнять 32-разрядные и 64-разрядные приложения в собственном и виртуализованном режиме, быстрее обрабатывая огромные массивы данных.
+<p>К моменту выпуска данного сервера корпорация лидировала в сегменте Intel-серверов с числом процессоров восемь и более, обладая рыночной долей 54,5%. Сервер IBM eServer xSeries 460 и СУБД IBM DB2 UDB продемонстрировали производительность 250975 tpmC - наивысший на тот момент показатель для восьмипроцессорного Intel-сервера в стандартном отраслевом тесте производительности онлайновой обработки транзакций TPC-C.
+<p>В ноябре 2005 г. IBM обновила свое семейство серверов на базе технологии Enterprise X-Architecture 3G, представив новые системы на базе двухъядерных процессоров Intel Xeon серии 7000 (ранее известных под кодовым названием Paxville MP). Новые серверы IBM eServer xSeries 460, благодаря двухъядерным процессорам Intel Xeon, обеспечивают запас производительности, необходимый для решения таких задач, как вертикальное масштабирование серверов баз данных или консолидация серверов с использованием ведущего в отрасли продукта VMware ESX Server. В конфигурации начального уровня сервер IBM eServer x460 представляет собой доступный по цене четырехпроцессорный сервер. В то же время в конфигурации с восемью шасси система IBM eServer xSeries 460 легко масштабируется до 32 процессоров, позволяя заказчикам гибко наращивать вычислительные ресурсы в соответствии с растущими потребностями бизнеса.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No5_2006/vti2.jpg" alt=Fig.2></td>
+<td align="left" valign="bottom">Сервер IBM eServer xSeries 460.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Сервер IBM eServer xSeries 260 </h4>
+<p>К семейству серверов на базе технологии X3 Architecture относится и высокопроизводительный четырехпроцессорный сервер IBM xSeries 260, предназначенный для применения в удаленных офисах или для выполнения приложений с большим числом обращений к системам хранения. При высоте 7U сервер x260 позволяет установить до 12 жестких дисков Serial Attached SCSI форм-фактора 3,5 дюйма с улучшенными показателями емкости и скорости вращения, благодаря чему он будет хорошим решением для приложений, интенсивно работающих со средствами хранения данных. Заказчик может установить жесткие диски с емкостью до 300 Гбайт каждый, доведя общую емкость подсистемы хранения до 3,6 Тбайт.
+<p>Сервер x260 отвечает потребностям удаленных подразделений и филиалов гостиниц, банков и магазинов в большой емкости внутреннего хранения данных и резервном копировании ответственной бизнес-информации. Например, с помощью сервера x260 гостиница сможет хранить резервные копии своей документации и сведений о бронировании, а филиал банка обеспечит соблюдение требований к длительному хранению данных и представлению информации для аудита. Кроме того, к целевым заказчикам этого сервера относят малые и средние компании, а также предприятия розничной торговли (магазины игрушек, электротоваров, универсальные магазины и т. д.), в которых серверы x260 могут служить для поддержки торгово-кассовых терминалов, в качестве централизованных хранилищ данных инвентарного учета и продаж, а также для представления информации в головные офисы.
+<p>В корпорации считают, что IBM x260 - просто уникальный сервер. Благодаря сочетанию высокой производительности, мощных внутренних ресурсов хранения на базе жестких дисков Serial Attached SCSI и полного резервирования системы питания от сети 220/110 В, он оказывается практически идеальным четырехпроцессорным сервером для вычислительных центров с ограничениями по мощности питания, для применения в офисной среде и для многих международных рынков.
+<p>На момент выпуска сервер x260, поддерживающий двухъядерные технологии, комплектовался 64-разрядными процессорами Intel Xeon MP (кодовое название Cranford), что обеспечивало достаточно высокую производительность при сравнительно низкой цене. Электронные компоненты данного сервера идентичны компонентам x366 - сервера высотой 3U для установки в стойку. Модель x260 выпускается также в корпусе "башня" (tower) с возможностью питания от нестандартной сети напряжением 110 В. Этот сервер обладает полным резервированием по питанию и хорошо подходит для офисного применения. В перспективе модель x260 обеспечит заказчикам надежную защиту инвестиций, поскольку позволяет наращивать вычислительную мощность, объем оперативной памяти и емкость подсистемы хранения, что часто требуется для почтовых серверов и серверов баз данных.
+<p>В качестве внутреннего ленточного хранилища можно установить накопитель LTO емкостью до 800 Гбайт (приобретается отдельно), обеспечивающий локальное резервное копирование и автономное хранение данных в распределенной среде.
+<p>IBM xSeries x260 - третий сервер IBM на базе технологии X3. В тестах SPECint 
+  и SPECfp сервер x260 показал лучшие результаты среди опубликованных для четырехпроцессорных 
+  серверов на базе процессоров Intel Xeon. В тестах SPECint_rate2000 и SPECfp_rate2000, 
+  оценивающих общую пропускную способность всей системы, сервер x260 также продемонстрировал 
+  максимальные показатели среди опубликованных для четырехпроцессорных серверов 
+  на базе процессоров Intel Xeon с частотой 3,66 ГГц. 
+<p>
+<table width="100%" border="0" cellpadding="1" bgcolor="#CCFFFF">
+  <tr>
+    <td>
+      <h4>Тестирование VeriTest </h4>
+      <p>Результаты тестирования, проведенного независимой испытательной фирмой 
+        VeriTest, подтвердили, что технология IBM X3 представляет собой идеальную 
+        платформу для виртуализации. Компания VeriTest оценивала производительность 
+        виртуализации сервера x366 при выполнении в виртуализованной среде под 
+        управлением ПО VMware ESX Server 2.5.1 смешанного набора приложений, отражающего 
+        реальные условия работы. Полученные компанией результаты свидетельствуют, 
+        что сервер IBM xSeries 366 на базе процессоров Intel Xeon превзошел по 
+        производительности виртуализации аналогичный по цене и конфигурации сервер 
+        конкурирующей компании на базе процессоров AMD Opteron при выполнении 
+        рабочих нагрузок Exchange и SQL, продемонстрировав преимущество по времени 
+        отклика до 41%. 
+      <p>Результаты тестирования VeriTest показали, в частности, что технология 
+        X3 улучшает показатели виртуализованной среды по времени отклика благодаря 
+        особой архитектуре памяти, производительность которой с ростом нагрузки 
+        снижается не так быстро, как у других серверов. В обеих участвовавших 
+        в тестировании четырехпроцессорных системах было установлено по 16 Гбайт 
+        памяти, а цены обоих серверов по Интернет-каталогам различались не более 
+        чем на 3%. 
+      <p>Благодаря огромному опыту IBM в создании наборов микросхем, нашедшему 
+        применение в сервере x366, преимущество последнего в производительности 
+        по сравнению с системами предыдущего поколения достигает 47% при 64 Гбайт 
+        установленной оперативной памяти. Корпорация IBM использует в своих Intel-серверах 
+        специализированные наборы микросхем собственной разработки, за счет чего 
+        модели семейства IBM xSeries способны существенно обгонять своих конкурентов. 
+        Сервер x366, заполняющий ценовую нишу между двухпроцессорными и четырехпроцессорными 
+        коммерческими платформами, - это оптимальное решение для виртуализации, 
+        консолидации серверов и выполнения корпоративных приложений. 
+      <p>
+    </td>
+  </tr>
+</table>
+<h3>Заключение </h3>
+<p>В исследованиях аналитических компаний отмечается постоянное стремление IBM к высокому качеству проектирования. В отличие от конкурентов, корпорация систематически реализует в линейке Intel-серверов возможности систем высокого уровня, что обеспечивает заказчикам дополнительное преимущество за счет непрерывного совершенствования вычислительных решений. Технология IBM Enterprise X-Architecture 3G позволяет воплотить заимствованные из мира мэйнфреймов возможности в новом поколении серверов IBM eServer xSeries на базе 64-разрядных процессоров Intel Xeon серии 7000. В сочетании с новыми процессорами Intel Xeon технология EXA 3G существенно повышает производительность по сравнению с предыдущим поколением систем на базе процессоров Intel Xeon, поддерживая одновременное исполнение 32-разрядных и 64-разрядных приложений и ускоряя обработку больших объемов данных.
+<p>Корпорация IBM давно заявила, что сектор x64 (системы на базе 64-разрядных процессоров с архитектурой x86) не относится к потребительским секторам рынка, и вложила значительные средства в соответствующую научно-исследовательскую деятельность, увенчавшуюся такими достижениями, как, в частности, технология IBM Enterprise X-Architecture 3G для традиционных x86-серверов.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24814.html'>Виртуализация для сервис-провайдеров – платформа Cisco ESP</A></b></li><li><b><A href='detail.php@ID=24808.html'>Горизонтально масштабируемые СХД NetApp и виртуализация для облачных инфраструктур</A></b></li><li><b><A href='detail.php@ID=24772.html'>Решение для виртуализации серверов HP Moonshot</A></b></li><li><b><A href='detail.php@ID=24427.html'>Новинки ViewSonic в области VDI и дисплейных технологий</A></b></li><li><b><A href='detail.php@ID=24343.html'>Cisco DaaS: виртуальные настольные системы как сервис</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8656.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Технология виртуализации — подход IBM
+</a><br><a href="detail.php@ID=8656.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Виртуализацию платформ можно определить как создание логически разделенных вычислительных систем, которые работают на реальных платформах. По&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8656.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8656&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='05727a6f6a2b9477609a84b67ffa7d29'><img src='../bitrix/tools/captcha.php@captcha_code=05727a6f6a2b9477609a84b67ffa7d29' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

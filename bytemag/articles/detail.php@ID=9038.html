@@ -1,0 +1,780 @@
+<HTML>
+<HEAD>
+<title>Корреляция на службе безопасности
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Алексей Лукацкий, руководитель отдела Internet-решений НИП &amp;quot;Информзащита&amp;quot; luka@infosec.ru Многие специалисты считают, что ложное обнаружение атак лучше, чем отсутствие сообщений о них. Однако это как раз тот самый случай, когда количество" />
+<meta name="description" content="Алексей Лукацкий, руководитель отдела Internet-решений НИП &amp;quot;Информзащита&amp;quot; luka@infosec.ru Многие специалисты считают, что ложное обнаружение атак лучше, чем отсутствие сообщений о них. Однако это как раз тот самый случай, когда количество" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082833','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm9038' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=9038&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm9038"].SHOW_IMAGE.value="N"; document.forms["PrintForm9038"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm9038"].SHOW_IMAGE.value="Y"; document.forms["PrintForm9038"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(9038);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=9038.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=9038.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(9038);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6258.html'>Безопасность</a><br /></p><a href='../numbers/index.php@ID=11551.html'>№10 (62), октябрь 2003</a><h1>Корреляция на службе безопасности
+</h1>10.10.2003<p></p><DIV class='article-text'><p><i>Алексей Лукацкий</i>,
+<br>руководитель отдела Internet-решений НИП &quot;Информзащита&quot;
+<br><a href="mailto:luka@infosec.ru">luka@infosec.ru</a>
+<p>Многие специалисты считают, что ложное обнаружение атак лучше, чем отсутствие сообщений о них. Однако это как раз тот самый случай, когда количество переходит в качество - в плохое качество работы. Ведь со временем вал таких сообщений становится &quot;головной болью&quot; любого администратора, которому приходится решать, реагировать ли на очередное появившееся на консоли предупреждение или игнорировать его. Чаще всего он просто перестает обращать внимание на все такие сообщения, независимо от содержания, что рано или поздно приводит к самым тяжелым последствиям.
+<h3>Системы обнаружения атак мертвы? </h3>
+<p>В потоке информации, постоянно поступающем на экран консоли администратора безопасности, есть множество предупреждений и сообщений от установленных в сети средств защиты. Это и диагностика от систем сканирования периметра сети, и обнаруженные попытки подбора пароля на узлах, видимых из Интернета, и выявленные атаки червей (Slammer и т. п.), и злонамеренное использование уязвимостей Web-сервера, и многое другое.
+<p>Подобные сообщения могут поступать от различных средств обеспечения безопасности, начиная от фильтрующего маршрутизатора и межсетевого экрана и заканчивая системами обнаружения атак и средствами контроля содержимого. Одна из первых задач администратора безопасности - отделить &quot;зерна от плевел&quot; и определить, какие атаки требуют немедленной реакции, какие подождут, а какие можно спокойно проигнорировать.
+<p>И эта задача не была бы столь сложна, если бы все сообщения, сгенерированные средствами защиты, соответствовали реальным атакам. Однако в действительности атак, которые могут нанести реальный ущерб ресурсам корпоративной сети, несоизмеримо меньше, чем событий, фиксируемых защитными механизмами.
+<p>Мнение о том, что ложное сообщение лучше, чем его отсутствие, далеко не всегда оправданно. Как тут не вспомнить сказку о пастушке, который так часто кричал: &quot;…волки, волки&quot;, что все перестали обращать внимание на эти крики. И когда в действительности напали волки, никто не пришел на его зов о помощи, и волки спокойно задрали стадо.
+<p>Но вернемся к системам обнаружения атак. В табл. 1 приведен фрагмент журнала регистрации широко известной в России системы обнаружения атак RealSecure Network 10/100, которая зафиксировала распространение червя Slammer, причинившего немало бед в начале этого года. Подобных записей в журнале только за один день может накопиться не менее нескольких десятков тысяч, ведь скорость распространения Slammer составляет несколько узлов (не морских, а сетевых) в секунду. Конечно, проанализировать такое количество информации непросто, и аналогичные проблемы, возникающие у администраторов безопасности, дали повод некоторым специалистам утверждать, что системы обнаружения атак уже не справляются со своими задачами, а многие журналисты даже стали использовать в своих статьях громкие заголовки типа &quot;системы обнаружения атак мертвы&quot;. Однако, как было справедливо замечено одним из экспертов в области выявления атак, &quot;…это проблема не систем обнаружения атак, а систем представления данных и управления ими&quot;.
+<h4>Таблица 1. Атака червя Slammer </h4>
+<table border="1">
+  <tr>
+    <td>Дата</td>
+    <td>Время</td>
+    <td>Событие</td>
+    <td>Нарушитель</td>
+    <td>Цель</td>
+    <td>Прото-кол</td>
+    <td>Порт источ-ника</td>
+    <td>Порт назна-чения</td>
+  </tr>
+  <tr>
+    <td>4/8/2003</td>
+    <td>23:14:53</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td>194.98.93.252</td>
+    <td bgcolor="#FF9900">139.92.229.160</td>
+    <td>UDP</td>
+    <td>1690</td>
+    <td>1434</td>
+  </tr>
+  <tr>
+    <td>4/8/2003</td>
+    <td>23:14:54</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td bgcolor="#FF9900">139.92.229.160</td>
+    <td>213.253.214.34</td>
+    <td>UDP</td>
+    <td>1080</td>
+    <td>1434</td>
+  </tr>
+  <tr>
+    <td>4/8/2003</td>
+    <td>23:14:54</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td>139.92.229.160</td>
+    <td>213.253.214.35</td>
+    <td>UDP</td>
+    <td>1081</td>
+    <td>1434</td>
+  </tr>
+  <tr>
+    <td>4/8/2003</td>
+    <td>23:14:54</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td>139.92.229.160</td>
+    <td>213.253.214.36</td>
+    <td>UDP</td>
+    <td>1082</td>
+    <td>1434</td>
+  </tr>
+  <tr>
+    <td>4/8/2003</td>
+    <td>23:14:55</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td>139.92.229.160</td>
+    <td>213.253.214.37</td>
+    <td>UDP</td>
+    <td>1083</td>
+    <td>1434</td>
+  </tr>
+  <tr>
+    <td>4/9/2003</td>
+    <td>23:14:55</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td>139.92.229.160</td>
+    <td>213.253.214.38</td>
+    <td>UDP</td>
+    <td>1084</td>
+    <td>1434</td>
+  </tr>
+  <tr>
+    <td>4/9/2003</td>
+    <td>23:14:55</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td>139.92.229.160</td>
+    <td>213.253.214.39</td>
+    <td>UDP</td>
+    <td>1085</td>
+    <td>1434</td>
+  </tr>
+  <tr>
+    <td>4/9/2003</td>
+    <td>23:14:56</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td>139.92.229.160</td>
+    <td>213.253.214.40</td>
+    <td>UDP</td>
+    <td>1086</td>
+    <td>1434</td>
+  </tr>
+  <tr>
+    <td>4/9/2003</td>
+    <td>23:14:56</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td>139.92.229.160</td>
+    <td>213.253.214.41</td>
+    <td>UDP</td>
+    <td>1087</td>
+    <td>1434</td>
+  </tr>
+  <tr>
+    <td>4/9/2003</td>
+    <td>23:14:56</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td>139.92.229.160</td>
+    <td>213.253.214.42</td>
+    <td>UDP</td>
+    <td>1088</td>
+    <td>1434</td>
+  </tr>
+  <tr>
+    <td>4/9/2003</td>
+    <td>23:14:56</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td>139.92.229.160</td>
+    <td>213.253.214.43</td>
+    <td>UDP</td>
+    <td>1089</td>
+    <td>1434</td>
+  </tr>
+  <tr>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+  </tr>
+</table>
+<h3>Управление информационной безопасностью </h3>
+<p>Чтобы избежать описанных неприятностей, необходима эффективная система управления информационной безопасностью (Security Information Management System, SIMS), которая позволяет связать все используемые в сети защитные средства в единый управляемый комплекс. Такая система выполняет немало полезных функций. Прежде всего она унифицирует управление разнородными средствами в единых терминах политики безопасности и позволяет эффективно обновлять все управляемые средства защиты. SIMS умеет группировать защищаемые ресурсы по различным признакам, с тем чтобы фокусировать внимание на необходимых в данный момент узлах, и фильтровать фиксируемые события, устраняя тем самым &quot;шумовые&quot; данные и снижая нагрузку на администратора безопасности. Кроме того, она позволяет сопоставить данные от разнородных средств защиты, чтобы уменьшить количество ложных срабатываний и выделить из потока событий оповещения о реальных нарушениях политики безопасности. И наконец, эта система позволяет снизить затраты времени и средств на изучение разных консолей управления. Применение SIMS дает администратору возможность оперативно получить ответы на множество вопросов, таких, как:
+<ul><li>уязвим ли атакуемый узел к зафиксированной атаке;
+<li>нанесла ли атака ущерб ресурсам сети;
+<li>заблокировал ли установленный на атакуемом узле агент системы защиты зафиксированную атаку;
+<li>какая система атакуется в данный момент;
+<li>какие узлы сети являются источниками атак.</ul>
+<p>Эффективная система управления информационной безопасностью должна, помимо прочего, поддерживать четыре основных механизма управления событиями: консолидацию (event consolidation), агрегирование (event aggregation), корреляцию (event correlation) и приоритизацию (event prioritization).
+<h4>Консолидация </h4>
+<p>Первый шаг в снижении нагрузки на администратора - объединение всех событий от разнородных средств защиты информации на одной консоли. Такая консолидация (несмотря на созвучие, последний термин не связан с консолью, а означает сбор информации) совершенно необходима в тех случаях, когда администратор просто &quot;шалеет&quot; от постоянно мелькающих на экране сообщений, которые невозможно не то что проанализировать, а даже успеть прочесть (см., например, табл. 2). Несколько сотен тысяч событий в день - это, увы, реальность наших дней. А в крупных сетях ежедневная порция информации, которая &quot;сваливается&quot; на администратора, может превысить миллион сообщений. Справиться с такими объемами информации не под силу ни одному человеку.
+<h4>Таблица 2. Пример работы механизма консолидации событий системы RealSecure 
+  SiteProtector с установленным модулем Third Party Module</h4>
+<table border="1">
+  <tr>
+    <td>Степень риска</td>
+    <td>Событие</td>
+    <td>Имя сенсора</td>
+    <td>Тип сенсора</td>
+  </tr>
+  <tr>
+    <td>Низкая</td>
+    <td>fw-cisco~ids-packet-not-IPSEC-packet</td>
+    <td>cisco_fw_ras</td>
+    <td>Cisco PIX FW</td>
+  </tr>
+  <tr>
+    <td>Высокая</td>
+    <td>fw-checkpoint~SYN Attack</td>
+    <td>cp_fw_dmz</td>
+    <td>Check Point FW</td>
+  </tr>
+  <tr>
+    <td>Высокая</td>
+    <td>Backdoor-BO2k</td>
+    <td>network_sensor_1</td>
+    <td>RealSecure Network</td>
+  </tr>
+  <tr>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+  </tr>
+</table>
+<p> Консолидация - не просто сбор и помещение данных в единое хранилище. Это и 
+  нормализация данных, т. е. устранение избыточной информации. Другими словами, 
+  в процессе нормализации SIMS удаляет повторяющиеся сообщения об атаках, полученные 
+  из нескольких источников, например, от системы обнаружения атак и межсетевого 
+  экрана, и исключает противоречивость при организации их хранения. В идеале одно 
+  сообщение об атаке должно храниться только в одном месте. 
+<p>На этом же этапе обработки информации обычно все данные приводятся к единому времени, что особенно важно, если управляемые средства защиты разбросаны по нескольким часовым поясам нашей необъятной страны.
+<p>Здесь следует заметить, что производители средств защиты до сих пор не пришли к унификации формата сообщений об атаках, поэтому каждый разработчик SIMS по-своему решает проблему приведения всех сообщений к единому виду. Надо сказать, что данная задача далеко не тривиальна, так как системы обнаружения атак, межсетевые экраны, средства VPN, антивирусное ПО и прочие элементы защиты фиксируют разные параметры, связанные с несанкционированными действиями.
+<p>Однако, собрав все данные в одном хранилище, мы не избавились от проблемы огромных объемов информации, отображаемых на консоли администратора безопасности. Ее призван устранить механизм агрегирования.
+<h4>Агрегирование </h4>
+<p>После процедуры консолидации событий начинается процесс их агрегирования, т. е. группировки по типам. Агрегирование дает возможность получить на экране вместо 10 тыс. повторяющихся строк &quot;UDP-Scan&quot; или &quot;SQL_SSRP_StackBo&quot; (краткое название атаки Slammer в системе RealSecure Network 10/100) всего лишь одну строчку, которая дополнена новым параметром &quot;число событий&quot; (табл. 3). Иными словами, агрегирование облегчает отображение данных и их анализ. Но и этого недостаточно для решения всей проблемы.
+<h4>Таблица 3. Снижение объема информации, отображаемой на консоли </h4>
+<table border="1">
+  <tr>
+    <td>Степень риска</td>
+    <td>Событие</td>
+    <td>Число событий</td>
+    <td>Источник</td>
+  </tr>
+  <tr>
+    <td>Низкая</td>
+    <td>UDP-Scan</td>
+    <td>11385</td>
+    <td>194.98.93.252</td>
+  </tr>
+  <tr>
+    <td>Высокая</td>
+    <td>Backdoor-BO2k</td>
+    <td>1</td>
+    <td>194.98.93.252</td>
+  </tr>
+  <tr>
+    <td>Высокая</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td>1567</td>
+    <td>139.92.229.160</td>
+  </tr>
+  <tr>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+  </tr>
+</table>
+<p>Агрегирование не спасает от появления сообщений о тех атаках, которые не несут 
+  с собой никакой угрозы. Нужна более интеллектуальная обработка событий, которую 
+  обеспечивает механизм корреляции. 
+<h4>Корреляция </h4>
+<p>Получив сообщение о том, что сеть атакована, например, червем Slammer, многие администраторы приходят в ужас и начинают лихорадочно вспоминать, а &quot;пропатчили&quot; ли они свои узлы. В пылу они часто способны забыть, что в сети, например, нет серверов на базе Microsoft SQL Server и потому даже самая серьезная атака (например, Slammer) не нанесет никакого вреда, либо, если такие серверы и имеются, то давно защищены. Похожие ситуации бывают и при других атаках.
+<p>А что, если на эти сообщения не надо реагировать вообще (как бы ни парадоксально это звучало)? Ведь не каждый хакер знает всю &quot;подноготную&quot; вашей сети. Зачастую он наугад пытается атаковать ресурсы, и его атака не только не нанесет сети никакого ущерба, но и в принципе неприменима к данной конфигурации. Например, появившийся относительно недавно червь SMBdie страшен только Windows-узлам, да и то только тем, на которых не установлен соответствующий Service Pack. Unix-машины для него неуязвимы. Так зачем же реагировать на появление сообщения об атаке SMBdie?
+<p>Однако такие успокаивающие рассуждения хороши, если ваша сеть небольшого размера и вы помните, что и где у вас установлено. А если нет? Куда лучше, если сообщения, не несущие никакой угрозы, вообще не появляются на консоли и не отвлекают администратора от более важных дел. Механизм корреляции, т. е. поиска взаимосвязей между разнородными данными, решает именно эту проблему, снимая с администраторских плеч нагрузку проведения анализа вручную и сопоставления разрозненных данных.
+<p>Модуль корреляции в SIMS автоматизирует не только процесс сопоставления разнородных данных, но и анализ воздействия атаки на данные сетевые ресурсы. Процедура корреляции для различных объектов и уровней защиты реализуется по-разному.
+<p><b>Локальная корреляция</b> осуществляется непосредственно на защищаемом узле, 
+  в ней задействована система обнаружения и предотвращения атак уровня узла (host-based 
+  ID&PS), которая всегда оповещает администратора безопасности о своих действиях 
+  и либо отражает атаку, либо нет. В последнем случае система должна не только 
+  зафиксировать атаку, но и оценить ее воздействие на атакуемый узел, хотя процесс 
+  расследования инцидентов по-прежнему инициируется человеком - специалистом по 
+  безопасности. 
+<p><b>Корреляция со сведениями об операционной системе.</b> Если Windows-атака 
+  направлена на Unix-узел, то ее можно игнорировать, и система сама принимает 
+  данное решение. Если же атака применима к данной ОС, то в действие вступает 
+  следующий вариант корреляции. 
+<p><b>Корреляция атак и уязвимостей.</b> Согласно определению атаки, она не может 
+  быть успешна, если атакуемый узел или сегмент сети не содержит уязвимости. Таким 
+  образом, сопоставляя данные об атаке и информацию об уязвимостях атакуемого 
+  узла или сегмента, можно с уверенностью сказать, применима ли зафиксированная 
+  атака к конкретной сети, и если да, то нанесет ли она какой-либо ущерб. 
+<p>Результат работы механизма корреляции - это обычно одно результирующее сообщение 
+  в строке статуса атаки с разъяснением причины такого вывода (см. врезку &quot;Статусные 
+  сообщения об атаке&quot;). 
+<p> 
+<table width="100%" border="0">
+  <tr>
+    <td bgcolor="#CCFFCC">
+      <h4>Статусные сообщения об атаке </h4>
+      <ul>
+        <li>Вероятно, удачная атака (узел уязвим) 
+        <li>Вероятно, неудачная атака (узел неуязвим) 
+        <li>Вероятно, неудачная атака (блокированы некоторые пакеты, составляющие 
+          атаку) 
+        <li>Вероятно, неудачная атака (атака не применима к данной операционной 
+          системе) 
+        <li>Неудачная атака (узел блокировал атаку) 
+        <li>Воздействие неизвестно (узел не сканировался) 
+        <li>Воздействие неизвестно (операционная система не определена) 
+        <li>Воздействие неизвестно (уязвимость не определена) 
+        <li>Воздействие неизвестно (корреляция не проводилась)
+      </ul>
+</td>
+  </tr>
+</table>
+<p>Существуют и другие механизмы корреляции, облегчающие работу администратора. 
+  Например, <b>анализ шаблона атаки</b> позволяет сделать вывод об использовании 
+  того или иного средства реализации атаки и оценить квалификацию хакера, чтобы 
+  в зависимости от этого предпринимать те или иные действия. Функция <b>сопоставления 
+  данных</b> за заданный интервал времени обеспечивает объединение в едином сообщении 
+  об атаке нескольких однотипных или разных событий: например, несколько неудачных 
+  попыток входа в систему с одного из узлов сети за короткий интервал времени 
+  могут указывать на попытку подбора пароля. 
+<p>Приведем распространенные примеры, иллюстрирующие необходимость применения механизма корреляции. Так, сразу после обнаружения факта сканирования Web-сервера (что само по себе событие нередкое) фиксируется попытка использования уязвимости Unicode в сервере Microsoft Internet Information Server. Рассматриваемые по отдельности, эти события могут говорить как о реальной атаке, так и о ложном срабатывании. Совокупность же таких фактов, разделенных очень коротким интервалом времени, с весьма высокой вероятностью указывает на то, что происходит атака, направленная на взлом сайта.
+<p>Возможна другая, более сложная ситуация, когда один из узлов сети был успешно атакован и после этого сам стал базой для дальнейшего распространения атаки. Система корреляции, сопоставив различные данные, может обнаружить и уведомить администратора о данном факте. Это событие в журнале регистрации системы обнаружения атак может выглядеть как, например, выделенные цветом строки в табл. 1, а система корреляции представляет его несколько иным образом (см. первую строчку табл. 4).
+<h4>Таблица 4. Пример работы механизма корреляции системы RealSecure SiteProtector 
+  с установленным модулем SecurityFusion Module </h4>
+<table border="1">
+  <tr>
+    <td>Степень риска</td>
+    <td>Событие</td>
+    <td>Число событий</td>
+    <td>Источник</td>
+  </tr>
+  <tr>
+    <td>Высокая</td>
+    <td>Attack_From__Compromised_Host</td>
+    <td>1567</td>
+    <td>139.92.229.160</td>
+  </tr>
+  <tr>
+    <td>Высокая</td>
+    <td>Targeted_Break_In_Attempt</td>
+    <td>1</td>
+    <td>194.98.93.252</td>
+  </tr>
+  <tr>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+  </tr>
+</table>
+<p>Кстати, следует обратить внимание на очень тонкий момент при выборе системы 
+  управления информационной безопасности. Многие из производителей в своих рекламных 
+  материалах упоминают о поддержке огромного количества разнородных средств защиты 
+  (до нескольких десятков), перечисляя известнейшие брэнды. Но на деле под поддержкой 
+  понимается только сбор данных от этих средств - и не более того. 
+<p>Разработчик SIMS должен обновлять свое ПО столь же оперативно, как появляются патчи или новые версии поддерживаемых данным продуктом систем. Кроме того, при выходе обновления системы обнаружения атак или сканера необходимо пополнить базу знаний системы корреляции, добавив в нее информацию о новых уязвимостях и атаках. В противном случае нельзя рассчитывать на качественный и полный анализ событий, ведь среди потока могут оказаться и неизвестные &quot;фигуранты&quot;. Об этом умалчивают многие производители средств выявления атак, считая достаточным указать в рекламных материалах лишь факт поддержки разнообразных средств анализа защищенности, межсетевых экранов, систем обнаружения атак, прокси-серверов и т. д. Поэтому максимум, на что можно надеяться, устанавливая подобный продукт, - это на сбор данных от разных источников, а о функциях агрегирования и корреляции событий следует забыть.
+<p>Однако есть и такие поставщики (к примеру, Internet Security Systems, Cisco и ряд других), которые не обещают &quot;золотых гор&quot;, но зато гарантируют полную поддержку всех своих решений и, возможно, нескольких решений иных производителей.
+<h4>Приоритизация </h4>
+<p>Одна и та же атака может иметь различные последствия для разных узлов корпоративной сети. Например, узел, работающий под управлением ОС Solaris 2.5.1, уязвим для атаки Ping of Death, а для узла с ОС Windows NT она не опасна. Другой пример - наличие модема в сети. Если он подключен к компьютеру с выполнением всех требований информационной безопасности, то такой ПК не требует пристального внимания администратора безопасности. Если же модем подключен в обход межсетевого экрана, то просто не имеет права на существование в сети и должен быть немедленно удален. Еще один пример - сервис Telnet необходим на маршрутизаторе, но не нужен на большинстве рабочих станций.
+<p>Система централизованного мониторинга атак должна предусматривать возможность задавать приоритеты для обнаруживаемых атак или уязвимостей, причем как статически (три приведенных выше примера), так и динамически.
+<p>Дело в том, что иногда для правильной интерпретации событий недостаточно статического метода задания приоритетов, нужно определить их динамическое изменение. Допустим, на компьютере существует учетная запись Guest, с помощью которой любой пользователь (в том числе и злоумышленник) сможет &quot;творить&quot; все, что ему заблагорассудится. В обычных условиях эта уязвимость имеет высокий приоритет. Однако на практике, в зависимости от того, разрешена (enable) ли эта учетная запись или запрещена (disable), данная уязвимость может иметь соответственно самый высокий или самый низкий приоритет. В такой ситуации приоритет может быть назначен только после корреляции событий, т. е. он должен задаваться динамически (ср. табл. 5 и 6).
+<h4>Таблица 5. Пример работы механизма корреляции системы RealSecure SiteProtector 
+  с установленным модулем SecurityFusion Module </h4>
+<table border="1">
+  <tr>
+    <td>Степень риска</td>
+    <td>Событие</td>
+    <td>Число событий</td>
+    <td>Статус</td>
+  </tr>
+  <tr>
+    <td>Низкая</td>
+    <td>NMap-Scan</td>
+    <td>139</td>
+    <td>Воздействие неизвестно (корреляция не проводилась)</td>
+  </tr>
+  <tr>
+    <td>Средняя</td>
+    <td>SMTP-Sendmail-Relay</td>
+    <td>1</td>
+    <td>Вероятно, неудачная атака (узел неуязвим)</td>
+  </tr>
+  <tr>
+    <td>Высокая</td>
+    <td>Backdoor-BO2k</td>
+    <td>1</td>
+    <td>Неудачная атака (узел блокировал атаку)</td>
+  </tr>
+</table>
+<h4>Таблица 6. Пример работы механизма динамической приоритизации системы RealSecure 
+  SiteProtector с установленным модулем SecurityFusion Module </h4>
+<table border="1">
+  <tr>
+    <td>Степень риска</td>
+    <td>Событие</td>
+    <td>Число событий</td>
+    <td>Источник</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF9900">Высокая</td>
+    <td>UDP-Scan</td>
+    <td>11385</td>
+    <td>194.98.93.252</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF9900">Низкая</td>
+    <td>Backdoor-BO2k</td>
+    <td>1</td>
+    <td>194.98.93.252</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FF9900">Низкая</td>
+    <td>SQL_SSRP_StackBo</td>
+    <td>1567</td>
+    <td>139.92.229.160</td>
+  </tr>
+  <tr>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+  </tr>
+</table>
+<h3>Огласите список, пожалуйста! </h3>
+<p>Количество систем корреляции на рынке средств защиты постоянно растет, расширяется и перечень их разработчиков (см. врезку &quot;Системы корреляции&quot;).
+<p>Однако, несмотря на рост интереса к таким продуктам на Западе, в России о них 
+  известно пока мало, и это закономерно. У нас далеко не во всех сетях установлены 
+  системы обнаружения атак и межсетевые экраны. Что уж говорить о средствах, расположенных 
+  существенно выше на эволюционной лестнице защитных механизмов. 
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td bgcolor="#CCFFCC">
+      <h4>Системы корреляции </h4>
+      <table border="1">
+        <tr>
+          <td>Продукт </td>
+          <td>Компания-разработчик</td>
+        </tr>
+        <tr>
+          <td>NetForensics </td>
+          <td>NetForensics (<a href="http://www.netforensics.com">http://www.netforensics.com</a>)</td>
+        </tr>
+        <tr>
+          <td>Private I</td>
+          <td>Open Systems (<a href="http://www.opensystems.com">http://www.opensystems.com</a>)</td>
+        </tr>
+        <tr>
+          <td>Security Manager</td>
+          <td>Intellitactics (<a href="http://www.itactics.com">http://www.itactics.com</a>)</td>
+        </tr>
+        <tr>
+          <td>SPECTRUM Security Manager </td>
+          <td>Aprisma Management Technologies (<a href="http://www.aprisma.com">http://www.aprisma.com</a>)</td>
+        </tr>
+        <tr>
+          <td>SystemWatch </td>
+          <td>OpenService (<a href="http://www.open.com">http://www.open.com</a>)</td>
+        </tr>
+        <tr>
+          <td>ArcSight </td>
+          <td>ArcSight (<a href="http://www.arcsight.com">http://www.arcsight.com</a>)</td>
+        </tr>
+        <tr>
+          <td>NeuSECURE</td>
+          <td>GuardedNet (<a href="http://www.guarded.net">http://www.guarded.net</a>)</td>
+        </tr>
+      </table>
+       </td>
+  </tr>
+</table>
+<p>Тем не менее в России уже можно приобрести некоторые системы управления информационной 
+  безопасностью, в частности, таких известных в мире защиты информации безопасности 
+  компаний, как Internet Security Systems (ISS), Cisco Systems и Symantec. 
+<p>Продукт ISS - бесплатный пакет ПО RealSecure SiteProtector (<a href="http://www.infosec.ru/produkt/adapt/siteprotector/sp.html">http://www.infosec.ru/-produkt/adapt/-siteprotector/sp.html</a>), 
+  система, в которой имеются описанные выше механизмы консолидации, агрегирования, 
+  корреляции и визуализации событий. Источниками событий для нее служат не только 
+  все решения ISS в области обнаружения атак и анализа защищенности (а их около 
+  десятка), но и межсетевые экраны Check Point Firewall-1, Cisco PIX Firewall 
+  и ряд других средств защиты. Из всех представленных на российском рынке это 
+  самая &quot;старая&quot; система - ей уже около двух лет. Поскольку спектр &quot;чужих&quot; решений, 
+  которые поддерживает эта система, не бесконечен, она не слишком требовательна 
+  к системным ресурсам. 
+<p>Выпущенная 30 июня 2003 г. система CiscoWorks Security Information Management 
+  Solution компании Cisco (<a href="http://www.cisco.com/en/US/products/sw/cscowork/ps5209/index.html">http://www.cisco.com/en/US/-products/sw/cscowork/-ps5209/index.html</a>) 
+  построена на базе широко известной на Западе системы управления информационной 
+  безопасностью netForensics одноименной компании (<a href="http://www.netforensics.com">http://www.netforensics.com</a>). 
+  Данная система весьма ресурсоемка (она требует наличия на сервере управления 
+  как минимум 4 Гбайт оперативной памяти). CiscoWorks SIMS ориентирована в первую 
+  очередь на собственную продукцию Cisco и &quot;понимает&quot; только сообщения, генерируемые 
+  межсетевыми экранами Cisco PIX Firewall, системами обнаружения атак Cisco IDS, 
+  VPN-концентраторами и маршрутизаторами, хотя в список поддерживаемых устройств 
+  входят сетевые средства защиты и других производителей - Check Point, Arbor, 
+  CyberGuard, Enterasys, NAI, ISS, NetScreen, NFR, Symantec и Tripwire. Стоимость 
+  продукта с поддержкой 30 устройств составляет 40 тыс. долл. Дополнительный контроль 
+  еще 20 средств защиты обойдется еще в 20 тыс. долл. 
+<p>И наконец, компания Symantec предлагает систему Symantec Incident Manager (<a href="http://enterprisesecurity.symantec.com/products/products.cfm?productid=166&EID=0">http://enterprisesecurity.-symantec.com/products/-products.cfm?productid=166&EID=0</a>), 
+  которая по своей идеологии и системным требованиям похожа на решения Cisco и 
+  ISS. Однако данная система еще очень молода, и автору не удалось найти на сайте 
+  Symantec ни списка поддерживаемых защитных устройств, ни цен на компоненты Incident 
+  Manager. Можно предположить, что данный продукт будет поддерживать как минимум 
+  большинство из собственных решений Symantec. 
+<p>Что же касается выбора системы корреляции, то очевидная рекомендация такова: если компания в качестве стандарта сетевой защиты выбрала один из названных выше продуктов фирм ISS, Cisco или Symantec, то и система корреляции должна быть от того же производителя.
+<h3>*** </h3>
+<p>С точки зрения информационной безопасности уровень зрелости компании определяется не количеством установленных в ее сети межсетевых экранов и систем обнаружения атак, а умением управлять ими. Одно из средств, позволяющих это сделать, - системы управления защитой, которые с каждым годом становятся все более востребованными. По оценкам компании IDC, в мире в 2002 г. было приобретено SIMS на сумму 665 млн долл., а систем корреляции - на 100 млн долл. К 2005 г. IDC прогнозирует рост объема рынка таких систем до 1759 млн долл. (в том числе рынка систем корреляции - до 405 млн долл.). Однако, несмотря на большое желание (89% респондентов) применять такие средства управления в своей повседневной деятельности, только 5% компаний задействуют всю мощь этих решений (в России число компаний, которые задействовали в своих сетях системы управления безопасностью, измеряется сотыми долями процента). Остается надеяться, что в условиях растущей угрозы кибертерроризма отношение к таким системам изменится.
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</A></b></li><li><b><A href='detail.php@ID=24095.html'>Сертифицированные системы обнаружения вторжений </A></b></li><li><b><A href='detail.php@ID=22469.html'>Новые технологии в Security operation center</A></b></li><li><b><A href='detail.php@ID=20887.html'>Агрессивность и мобильность: какие угрозы нас ждут в 2013-м</A></b></li><li><b><A href='detail.php@ID=20621.html'>Карты с дисплеем как новое средство защиты онлайн-банкинга</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=9038.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Корреляция на службе безопасности
+</a><br><a href="detail.php@ID=9038.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Алексей Лукацкий,
+руководитель отдела Internet-решений НИП &quot;Информзащита&quot;
+luka@infosec.ru
+Многие специалисты считают, что ложное&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=9038.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=9038&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0cfa705d4a788d85e82f4ca221d3b8c9'><img src='../bitrix/tools/captcha.php@captcha_code=0cfa705d4a788d85e82f4ca221d3b8c9' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

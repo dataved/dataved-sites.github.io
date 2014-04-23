@@ -1,0 +1,498 @@
+<HTML>
+<HEAD>
+<title>Технологии межсоединений
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Алексей Борзенко, доцент РГРТА, Alex@csk.ryazan.ru Некоторое время назад популярным способом увеличения полосы пропускания шины было расширение магистрали данных, однако, по-видимому, эта стратегия себя исчерпала: занимаемое место на" />
+<meta name="description" content="Алексей Борзенко, доцент РГРТА, Alex@csk.ryazan.ru Некоторое время назад популярным способом увеличения полосы пропускания шины было расширение магистрали данных, однако, по-видимому, эта стратегия себя исчерпала: занимаемое место на" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398083003','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8521' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8521&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8521"].SHOW_IMAGE.value="N"; document.forms["PrintForm8521"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8521"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8521"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8521);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8521.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8521.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8521);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11540.html'>№12-1 (53), декабрь 2002 - январь 2003</a><h1>Технологии межсоединений
+</h1>20.12.2002<p></p><DIV class='article-text'><p><i>Алексей Борзенко</i>, <br>
+  доцент РГРТА, <br>
+<a href="mailto:Alex@csk.ryazan.ru">Alex@csk.ryazan.ru</a> 
+<p>Некоторое время назад популярным способом увеличения полосы пропускания шины было расширение магистрали данных, однако, по-видимому, эта стратегия себя исчерпала: занимаемое место на соединительной плате, число контактов и потребляемая мощность выросли до уровня, при котором имеет смысл возвратиться от параллельной шины к последовательной, но более высокоскоростной.
+<p>По мнению экспертов, разработчики технологий RapidIO и HyperTransport с самого начала учитывали факт существования &quot;конкурента&quot;. Правда, первоначальные дискуссии между разработчиками спецификаций не привели к слиянию стандартов, поскольку обе группы фокусировались на различных приложениях. Однако, как это бывает с большинством стандартов, чем более определенными становились спецификации, тем четче очерчивалась сфера их применения. Вопрос поиска области наиболее адекватного использования обеих технологий быстро отошел на второй план, поскольку на горизонте замаячили доходы от потенциальных вторичных рынков.
+<p>Вообще говоря, такое &quot;вползание в рынок&quot; только добавляет неразберихи в вопросах 
+  уместности того или иного интерфейса и их взаимной конкуренции. Оба типа межсоединений 
+  имеют большое число приверженцев и поддерживаются большинством крупных производителей. 
+  Так, AMD (<a href="http://www.amd.com">http://www.amd.com</a>) отстаивает HyperTransport 
+  и располагает поддержкой таких гигантов, как Broadcom (<a href="http://www.broadcom.com">http://www.broadcom.com</a>) 
+  и Dell (<a href="http://www.dell.com">http://www.dell.com</a>). Стандарт RapidIO 
+  продвигает Motorola (<a href="http://www.motorola.com">http://www.motorola.com</a>), 
+  да и IBM (<a href="http://www.ibm.com">http://www.ibm.com</a>) предлагает его 
+  поддержку. Кроме того, есть Intel (<a href="http://www.intel.com">http://www.intel.com</a>) 
+  и PCI-SIG с PCI Express. Никто не знает, сколь далеко эти производители зайдут 
+  в поддержке упомянутых стандартов, какое давление они смогут оказать на своих 
+  партнеров или сколько денег готовы затратить на победу в битве. Однако нетрудно 
+  предсказать, что каждый из данных стандартов будет хорошо работать на рынках, 
+  где эти компании представлены более широко. 
+<p>HyperTransport подает себя как самое &quot;реальное&quot; межсоединение из трех: консорциум HyperTransport заявляет, что изготовители уже поставили клиентам несколько миллионов таких узлов. Сопоставьте теперь эту цифру с известной в отрасли информацией о том, что PCI Express не появится на рынке в ближайшее время.
+<p>Поддержка интерфейса с самых первых дней столь значима потому, что доступность совместимых устройств зависит от тенденций и специфики рынка. Например, сторонники HyperTransport утверждают, что рассчитывают на значительные доходы на рынке сетевой обработки, а приверженцы RapidIO заявляют о перспективах в сфере цифровой обработки сигналов DSP (Digital Signal Processing).
+<p>Однако, несмотря на многочисленные заявления производителей, реально на рынке не так уж много готовых изделий, в которых используются эти технологии. Имеются и другие проблемы, требующие внимания. У HyperTransport есть свои собственные особые проблемы: так, компания API Networks, владеющая многими патентами в этой сфере, прекратила существование, оставив вопросы лицензирования и поддержки нерешенными. Старт RapidIO был осложнен преодолением ошибочных концепций и конкурентной борьбой, прежде всего с InfiniBand, подлившей масла в огонь утверждением, что эта технология также может стать заменой PCI.
+<h3>Будет ли победитель </h3>
+<p>Принимая во внимание явно сходные элементы интерфейсов и преимущества проектирования оборудования для единого интерфейса, некоторые фирмы совершенно уверены, что победитель в этом соревновании будет один, а другие - AMD, Motorola и Intel - оценивая мощь противоборствующих сил, считают, что все они достаточно сильны, чтобы вывести друг друга из игры. На самом деле вовсе не должна победить какая-то одна технология или архитектура. Хотя есть много рынков, где можно использовать любой из этих интерфейсов с самыми разнообразными приложениями, все же у каждого из них имеется своя ниша, в которой он, вероятнее всего, будет доминировать.
+<p>Есть надежда на то, что такое разнообразие приведет к выработке единого гибридного стандарта, который вберет в себя все лучшее из каждого. Однако такой интерфейс именно в силу интегрированности непременно стал бы меньше отвечать требованиям тех рынков, на которые он изначально ориентировался. В любом случае, история показывает, что одного технологического превосходства редко бывает достаточно для выживаемости того или иного новшества. Более важные, определяющие судьбу стандарта факторы связаны с политикой, сопутствующей развитию этой технологии, тем, какие из компаний ее поддерживают и (о чем часто не говорят) насколько глубоки &quot;карманы&quot; поддерживающих.
+<p>Заметим: ничто не говорит о том, что интерфейс должен быть стандартизован. Есть информация, что некоторые компании на рынке сетевой обработки под видом своего &quot;фирменного&quot; решения используют интерфейс AGP из мира настольных ПК, правда, лишенный ряда функций. Однако похоже, что безопаснее использовать уже развернутые, прошедшие апробацию интерфейсы. При этом не придется повторно &quot;изобретать&quot; технологии, как это может произойти при разработке собственного интерфейса. Но некоторые рынки, такие, как высокопроизводительная сетевая обработка, - это передовой фронт технологий, и им не у кого заимствовать.
+<p>Однако патентованные интерфейсы, которые часто обеспечивают приложениям более эффективное использование полосы пропускания, сложнее поддерживать. Это особенно справедливо в сфере сетевой обработки, с присущим ей изобилием интерфейсов и нехваткой ресурсов для поддержки всего этого разнообразия. Применение стандартного интерфейса может значительно снизить издержки.
+<p>Число стандартов в сфере сетевой обработки продолжает расти; к ним относятся сегодня общий коммутирующий интерфейс CSIX (Common Switch Interface); интерфейсы форума Network Processor Forum, HyperTransport, RapidIO и &quot;молчаливый гигант&quot; - SPI-4. Системный интерфейс SPI-4 эффективен для передачи пакетов и прямого соединения (с формированием сигнала четности, алгоритмом обучения и коррекцией ошибок), но не в случае коммутаторов или подсистем.
+<p>В прессе не было бурных обсуждений SPI-4, но этот интерфейс спокойно, без лишнего шума придал огромный импульс развитию магистралей передачи данных, критичных ко времени латентности. Считается, что сила SPI-4 в потоковой передаче данных, а HyperTransport - в ориентированной на шину памяти, весьма подходящей для таких транзакций, как запись и чтение. SPI-4 неплохо продуман и получил широкое распространение.
+<p> 
+<table width="100%" border="0" bgcolor="#CCFFCC">
+  <tr> 
+    <td>
+      <h4>RapidIO: последовательно и параллельно </h4>
+      <p>Год назад ассоциация RapidIO Trade Association (<a href="http://www.rapidio.org">http://www.rapidio.org</a>) 
+        обнародовала спецификацию последовательных межсоединений уровня микросхем 
+        и плат. В комбинации с &quot;параллельной&quot; спецификацией RapidIO, выпущенной 
+        в 2001 г., она позволит разработчикам сконцентрировать свои усилия на 
+        одной стандартной технологии межсоединений, рассчитанной на сетевые, телекоммуникационные 
+        и другие встраиваемые приложения, где важнейшие параметры - это надежность 
+        и производительность. Стандарт Serial RapidIO описывает высокопроизводительную 
+        схему последовательных межсоединений с низким числом контактов, базирующуюся 
+        на коммутируемой связной структуре и ориентированную на такие области 
+        применения, как, например, DSP-системы и последовательные объединительные 
+        панели. Появление первых продуктов, опирающихся на спецификацию Serial 
+        RapidIO, ожидается в начале 2003 г. 
+      <p>
+<table width="100%" border="0">
+<tr><td><img src="http://www.bytemag.ru/articles/........" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Система с последовательным и параллельным RapidIO. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+    </td>
+  </tr>
+</table>
+<h3>Связующая логика </h3>
+<p>Как правило, на рынке ПК выбор процессора зачастую становится стартовой точкой проектирования. Исходя из принятого решения, выбираются совместимые устройства; системы, которые позволяют избежать применения мостов или шлюзов между интерфейсами, чтобы результат был менее сложным, менее дорогостоящим и более надежным. Таким образом, если выбран процессор, поддерживающий RapidIO, то и другие устройства будут обязаны поддерживать RapidIO.
+<p>Тем не менее процессор не есть универсальная основа для любого приложения. Так, в сетевой обработке зачастую сначала выбирают матричный коммутатор (&quot;фабрику&quot;), поскольку высокая пропускная способность и надежность в сети более важны, чем то, как именно конкретная сетевая карта обрабатывает пакеты данных. Следовательно, разработчикам по-прежнему требуется выбирать типы интерфейсов из таких стандартов, как RapidIO, HyperTransport и SPI-4 - как для данных, так и для управления. Учитывая ограничения на скорость распространения данных, вероятно, уровень данных может стать следующим приоритетом. Согласование интерфейсов, особенно если выбран специализированный, ограничивает возможности выбора процессоров и сетевых сопроцессоров.
+<p>До появления стандартных интерфейсов, с одной стороны, было больше возможностей выбора, с другой - скорее всего, пришлось бы использовать связующую логику для соединения устройств. Однако ситуация может сложиться и так, что лучшие в классе устройства, которые хотелось бы использовать, имеют разные интерфейсы, поэтому по-прежнему не обойтись без связующей логики. Заметим, что для этих целей обычно используют программируемые логические матрицы FPGA (Field-Programmable Gate Array).
+<p>По мнению экспертов, некая объединенная система должна иметь интерфейс HyperTransport на уровне данных, RapidIO - на уровне управления и PCI Express - на объединительной плате (backplane). Здесь возникает закономерный вопрос - не будет ли такая система слишком сложной? Впрочем, ответ на него зависит от типа приложения. Очень важно, насколько четко сегментирована вся система. Часто уровень данных - это просто шина, которая никогда не затрагивает объединительной панели и контактирует с уровнем управления через процессор, отфильтровывающий данные из протокола. Специализированная обработка данных может быть чистой (непосредственно в информационном канале) или смешанной, как в случае модуля шифрования, подключенного к объединительной плате. Устранение преобразований и мостов помогает избежать излишних затрат на микросхемы, занимаемую площадь, потребляемую мощность.
+<p>Возможно, потребуется и соединение с интерфейсом InfiniBand, который еще не настолько необходим для данного приложения, чтобы оправдать применение устройства, поддерживающего именно этот интерфейс. Если требуется разместить FPGA на плате по другим причинам (скажем, для предварительной или заключительной обработки), то увеличение размера FPGA для поддержки интерфейсного моста может привести к дополнительным издержкам.
+<p>Преимущество использования FPGA в том, что эта микросхема расширяет выбор, 
+  позволяя применять любой интерфейс, который можно встроить в данный компонент. 
+  Соответственно для поддержки конкретного интерфейса потребуется лишь достаточное 
+  количество вентилей, и не будет нужды в дополнительных расходах на поддержку 
+  каждого интерфейса в отдельности. 
+<p> 
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h4>&quot;Секреты&quot; HyperTransport </h4>
+      <p>Уже сегодня HyperTransport позволяет более чем на порядок повысить скорость 
+        выполнения транзакций по шине в сравнении с существующими технологиями 
+        ввода-вывода. Она допускает масштабирование от относительно низкоскоростных 
+        конфигураций с тактовой частотой 200 МГц до 32-разрядных высокопроизводительных 
+        систем (частота 800 МГц и больше). Ширина шины HyperTransport составляет 
+        2, 4, 8, 16 или 32 разряда и может использоваться для поддержки специализированных 
+        приложений. Унаследованная ею гибкость предусматривает асимметричную ширину 
+        шины, что позволяет варьировать скорость обработки исходящих и входящих 
+        потоков информации. Например, 16-разрядная шина HyperTransport способна 
+        обеспечить пропускную способность 25,6 Гбит/с. Этого достаточно для поддержки 
+        двух потоков OC-192 или двух 10-гигабитных соединений Ethernet. 
+      <p>Шина HyperTransport обладает обратной совместимостью с широко распространенным 
+        стандартом внешней шины PCI. Это означает, что код ПО для PCI не нужно 
+        будет переписывать. 
+      <p>HyperTransport способна поддерживать до 31 устройства. А при наличии 
+        коммутатора это число еще выше (соответствующие &quot;туннели&quot; играют роль 
+        строительных блоков ввода-вывода). 
+      <p>Технология HyperTransport может приобрести большую популярность еще и 
+        потому, что на ее основе планируется выпускать настольные ПК и серверные 
+        системы с процессорами AMD. 
+      <p>
+<table width="100%" border="0">
+<tr><td><img src="http://www.bytemag.ru/articles/........" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Архитектура системы на базе HyperTransport.  
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+      </td>
+  </tr>
+</table>
+<h3>Сходство и различие </h3>
+<p>Трудно обсуждать различия между HyperTransport и RapidIO потому, что каждый конкретный аспект важен и сложным образом зависит от среды или приложения. Некоторые эксперты, работающие с одним или обоими стандартами, видят самые разные преимущества и недостатки их спецификаций. В любом случае все согласны в том, что и RapidIO, и HyperTransport - продуманные, исчерпывающие и стабильные спецификации, готовые для разработки систем на их основе.
+<p>На физическом уровне (PHY) в интерфейсе RapidIO стандартизован дифференциальный способ передачи сигналов низкого уровня LVDS (Low Voltage Differential Signaling), а HyperTransport основан на LDT (Lightning Data Transfer). LVDS - более старая технология, что подразумевает надежность и распространенность на рынке, но &quot;возраст&quot; может означать, что предпосылки этой технологии уже устарели. Создатели LVDS разработали ее для биполярных транзисторов и только затем перевели на технологию КМОП.
+<p>LDT, с другой стороны, была разработана для КМОП-технологии, поэтому некоторые утверждают, что LDT лучше работает с КМОП, чем с LVDS. Другие считают, что обе технологии можно &quot;разогнать&quot; до 2 Гбайт/с. Это то значение, начиная с которого становятся необходимыми механизмы восстановления данных, что существенно повысит сложность обоих стандартов.
+<p>Поскольку RapidIO позволяет сдвигать по фазе отдельные каналы данных по отношению друг к другу, механизм обратного сдвига должен быть встроен на физическом уровне (PHY). Таким образом, RapidIO должен периодически вставлять обучающие пакеты в поток данных (издержки на использование служебных сигналов составляют менее 1%).
+<p>С другой стороны, в HyperTransport задана величина расфазировки между каналами. По мере роста частоты растет сложность конструирования платы, съемные платы делаются сложнее, что в какой-то момент приводит к ограничению полосы пропускания, достижимой без переопределения физического уровня (что затрудняет процесс миграции). С другой стороны, хотя жесткие спецификации HyperTransport могут быть достаточно проблематичными, использование синфазного тактирования в RapidIO может привести к снижению производительности, поскольку для шумовых событий характерно отсутствие когерентности между опорной частотой и данными.
+<h4>Напряжение </h4>
+<p>HyperTransport (LDT) использует более низкое напряжение и потребляет меньше, чем RapidIO (LVDS). Таким образом, в последнем случае может потребоваться дополнительное питание. Низкое напряжение может обеспечить запас прочности для перехода к более компактным технологиям, но ослабление, вносимое платой на больших расстояниях или высоких частотах, также становится более заметным. Впрочем, некоторые сторонники RapidIO утверждают, что эта технология минимизирует потери сигнала благодаря более низкому опорному напряжению. Они полагают, что в спецификации HyperTransport потери сигнала между его формирователем и приемником не превышают 25%, а в RapidIO они составляют более 50%, что позволяет в рамках этой спецификации достигать лучшего компромисса между классическим ослаблением на длинных расстояниях, потерях на разъемах или использованием менее дорогостоящих печатных плат. HyperTransport также характеризуется меньшим дрейфом нулевого потенциала (порядка 50 мВ) в сравнении с допуском в 1 В в спецификациях RapidIO.
+<h4>Топология </h4>
+<p>Технология RapidIO была задумана как открытый стандарт, ориентированный на сетевые, встраиваемые и коммуникационные приложения. Топология RapidIO основана на коммутаторах, что означает, что всегда есть еще одно устройство между узлами. Стоит заметить, что RapidIO поддерживает только отдельные архитектуры типа &quot;точка-точка&quot;, однако для интерпретации протокола транзакции с целью принятия решений о пересылке в RapidIO коммутаторы не требуются, а это означает, что коммутатору не требуется знать, входящее это сообщение или исходящее. В результате при добавлении транзакций не понадобится заменять существующие коммутаторы; иными словами, технология RapidIO совместима &quot;вперед&quot;. В спецификации также предусмотрена поддержка специфических, собственных типов транзакций.
+<p>HyperTransport, в свою очередь, имеет древовидную, или цепочную, топологию, в которой каждый узел передает и данные, предназначенные не для него, а для следующего узла. Для такого процесса характерно как ограничение полосы, так и задержка. Обе технологии предназначены для интерфейсов типа кристалл-кристалл (mezanine) и плата-плата (backplane).
+<h4>Когерентность </h4>
+<p>RapidIO предназначена также для приложений типа шасси-шасси (extended-backplane). По заявлению создателей HyperTransport, она дополняет собой технологии типа extended backplane, такие, как InfiniBand и 1/10 Gigabit Ethernet. В RapidIO определен протокол когерентности на базе каталогов для глобально разделяемой памяти. Когерентность играет роль в приложениях, в которых задания разделяются между несколькими процессорами, причем всем этим процессорам необходим доступ к одной и той же памяти. Для обеспечения когерентности требуется целостность памяти: процессор не сможет использовать данные, находящиеся в кэш-памяти, и те, которые модифицированы другим процессором, но еще не записаны обратно в память.
+<p>Основанный на каталогах механизм RapidIO отслеживает, на каком из устройств находится последняя копия кэш-памяти или основной памяти. Контроллер начинает поиск с каталога. Если какое-то устройство содержит данные, он дает команду другому устройству разблокировать их. Можно создать распределенный каталог - на каждом контроллере памяти, или централизованный.
+<p>Если необходимо обеспечить когерентность при работе с HyperTransport, рекомендуется использовать механизм так называемого шпионажа (snoop). В этом случае процессор рассылает запросы другим процессорам, чтобы выяснить, не содержат ли они определенных данных в кэш-памяти, причем большая часть запросов охватывает те процессоры, на которых нет требуемых данных, что, несомненно, замедляет работу. Кстати, разработчики HyperTransport уже объявили, что первые изменения будут касаться устранения недостатков по сравнению с RapidIO.
+<p>Конечно, наличие двух замечательных конкурирующих стандартов - вещь хорошая, поскольку каждый из них подстегивает развитие конкурента, однако при их сравнении возникают трудности. Например, исправление ошибок не рассматривается как необходимость в мире персональных компьютеров, но считается обязательным во многих приложениях, особенно в сфере телекоммуникаций и связи. Таким образом, встает вопрос: сравнивать RapidIO с тем, что технология HyperTransport представляет собой сегодня, или с тем, чем она вскоре станет? А как же тогда быть с грядущими улучшениями RapidIO?
+<h4>Определение и исправление ошибок </h4>
+<p>RapidIO предотвращает выпадение пакетов или транзакций и восстанавливает небольшие и средние пакеты с помощью механизма поканального определения ошибок и аппаратного восстановления. Считается, что система реального времени не может позволить себе роскошь ждать, пока программа исправит ошибки, и что невозможность определения ошибок для такой системы неприемлема.
+<p>RapidIO имеет несколько механизмов определения и устранения ошибок. LVDS, например, для предотвращения утери данных и тактовых сигналов использует кодировку 8b/10b, но при такой защите служебные сигналы составляют 25% (т. е. на данные приходится лишь 1,6 Гбайт/с из 2 Гбайт/с). RapidIO также выполняет проверку пакета и может запустить ее повторно в случае серьезной ошибки, поддерживая различные уровни устойчивости к сбоям и восстановления. Синхронизация между парами каналов осуществляется с помощью идентификатора циклов, который помогает определить утраченные пакеты (он передается в канале, и его можно вставить в любой другой пакет).
+<p>Таким образом, одно устройство может точно опознать каждый пакет, полученный непосредственно с посылающего устройства. Если два устройства рассинхронизировались, аппаратная часть пытается синхронизировать их вновь, восстанавливая утраченные пакеты.
+<p>HyperTransport может генерировать проверку с помощью циклического избыточного кода CRC (Cyclic Redundancy Check) для каждых 512 единиц данных. Этот механизм эффективен для определения ошибок, но он не обеспечивает достаточной глубины детализации, что не позволяет определить, какие именно данные вызвали ошибку. Если произошла ошибка, система должна отбросить все данные, связанные с данным CRC, - этот процесс усложняется по мере того, как данные распространяются по последовательной цепочке устройств HyperTransport.
+<p>Считается спорным утверждение, что HyperTransport сравнима по целостности канала с шиной SRAM DDR, у которой нет возможностей управления ошибками и их устранения (хотя она считается относительно надежной). Однако давление со стороны разработчиков приложений, которые хотят достичь высокого уровня отказоустойчивости, вынудило консорциум HyperTransport пересмотреть схему определения ошибок версии 1.0. Эти изменения включают возможность сужения CRC, чтобы применять его к меньшему числу пакетов, возможность отката системы к последней &quot;хорошей&quot; точке проверки. Кроме того, уже нет необходимости искать ошибки по всей цепи. На каждом этапе данные удерживаются до тех пор, пока не поступят все данные и CRC; иными словами, система не выполняет никаких действий над данными, пока не определит, что в них нет ошибок. Буферизация данных, таким образом, препятствует любым изменениям состояния до тех пор, пока данные не проверены, но вместе с тем повышает время задержки транзакций.
+<p>Чтобы уменьшить задержку, каналы могут посылать пакеты до того, как поступает контрольная сумма. Таким образом, время задержки будет ограничено временем буферизации в узле назначения. Управление ошибками накладывается сверху на пакет управления потоком, который управляет механизмом интерфейса.
+<h4>Передача данных </h4>
+<p>RapidIO - это переключаемая шина, предназначенная для приложений типа &quot;точка-точка&quot; (point-to-point) и одноранговых сетей (peer-to-peer). Изначально HyperTransport поддерживала только транзакции типа &quot;точка-точка&quot;, но после дополнения сетевыми возможностями она будет поддерживать транзакции типа peer-to-peer. Прямые пересылки типа peer-to-peer позволят узлам общаться непосредственно друг с другом, минуя хост.
+<p>Приложения, включая те, которые используют несколько процессоров, должны иметь возможность общаться друг с другом. Например, в сетевых приложениях одному механизму классификации может потребоваться передать частичные результаты другому. Таким образом, для каждого механизма классификации требуется только одна шина для связи с другими механизмами и сетевой процессор, а не две отдельных шины. Фирмы-производители памяти вряд ли захотят платить за лицензии на интеллектуальную собственность, чтобы поддерживать HyperTransport или RapidIO, поэтому маловероятно, что эти интерфейсы вскоре заменят существующие интерфейсы памяти.
+<p>RapidIO - это интерфейс, использующий исходный адрес; иными словами, инициатор сообщения включает в данные исходный идентификатор и идентификатор назначения. С помощью маршрутных таблиц коммутаторов транзакция находит путь к своему месту назначения, а также может использовать резервные пути или изменять маршрут в целях повышения отказоустойчивости. Кроме того, RapidIO может отслеживать ошибки не только по конкретным адресам. RapidIO также поддерживает класс сообщений для передачи транзитных данных, когда, например, процессор А обрабатывает большое количество данных, а затем передает их процессору В и никогда больше к ним не возвращается. Традиционные схемы прямого доступа к памяти DMA требуют, чтобы процессор А отслеживал пространство памяти процессора В. При пересылке сообщений с большими объемами данных (в которых служебная информация сообщения мала по сравнению с объемом самих данных) процессору А уже не нужно отслеживать объем памяти процессора В, что упрощает схему.
+<p>Усовершенствование механизма передачи сообщений позволит спецификации HyperTransport направлять пакеты по любому адресу, а не только осуществлять единичные транзакции чтения и записи по заданным адресам - по 16 каналам типа &quot;точка-точка&quot; на линию. Управление потоком может использовать эти каналы для создания сквозных каналов через узлы или поддержки качественного сервиса. Алгоритмы арбитража поддерживают взвешенный циклический режим, а также ограниченную полосу пропускания для данных с высоким приоритетом.
+<h3>Ставки сделаны </h3>
+<p>Немногие из крупных игроков на рынке остались приверженцами какого-либо одного интерфейса. Производители, разрабатывающие устройства, зависящие от других устройств (такие, как сопроцессоры), будут вынуждены поддерживать все основные интерфейсы; отказ от поддержки какого-либо интерфейса может стать причиной провала продукта. По мнению некоторых аналитиков, именно производители процессоров определят, какой интерфейс победит и на каком рынке. Причем они подчеркивают, что большинство производителей процессоров не хотят делать такой выбор. Некоторые отказываются объяснять, почему выбрали тот интерфейс, а не другой, ссылаясь на то, что &quot;об этом просили наши клиенты&quot; (конечно, добавляя при этом, что обеспечат поддержку других интерфейсов, если у клиента будет достаточно денег, чтобы попросить и об этом). Но по существу производителям удобнее поддерживать один интерфейс, а не несколько, и их выбор играет важную роль. Выбрав поддержку конкретного интерфейса, производитель, возможно, тем самым определяет, кого из игроков рынка он может выбрать в партнеры. Таким образом, можно сказать, что набор возможностей интерфейса ограничен выбором производителя процессора.
+<p>Следует, однако, помнить, что спецификации постоянно находятся в движении, поскольку вынуждены конкурировать друг с другом. Такая конкуренция побуждает к новациям, когда сильные стороны одного стандарта заставляют подтягиваться и другой. И, поскольку пока еще не многое реализовано в кристалле, есть возможность внесения изменений. Разработчики упоминаемых стандартов предвидели многие из них.
+<p>Однако, чтобы отвоевать и удерживать свою долю рынка, каждая группа разработчиков создала график усовершенствований. Конкуренция должна продолжать оказывать положительное воздействие, стимулируя более высокую степень отработки решений. Так будет ли один победитель? На это эксперты отвечают следующим образом. В определенных нишах - да, на рынке в целом - нет. Ведь не секрет, что, в конце концов, каждый стандарт будет лучше в присутствии другого.
+<h3>Под другим именем </h3>
+<p>Стандарт PCI Express, ранее известный как 3GIO, добавляет интересный штрих к противостоянию HyperTransport и RapidIO. О его спецификациях до недавнего времени было известно слишком мало, да и реализованы в полной мере они будут, по мнению специалистов отрасли, не так скоро, как хотелось бы. Тем не менее стандарт находится в списке конкурентов рядом с HyperTransport и RapidIO.
+<p>Сильной стороной стандарта PCI Express у разработчиков считается то, что он выступает прямым наследником интерфейсов на рынках массовых ПК и серверов. Определенно, PCI Express будет присутствовать далеко не в каждом ПК, поскольку PCI и PCI-X достаточны для всех случаев, в которых они не служат только мостом к PCI Express. Однако миграция от любого варианта PCI к PCI-Express достаточно проста - можно будет расширить полосу пропускания без изменения или настройки ПО, как это приходится делать в случае с RapidIO.
+<p>Этот фактор, по заявлениям сторонников PCI Express, даст преимущество перед RapidIO в борьбе за стандарт на объединительную плату. Впрочем, защитники RapidIO не согласны с этим аргументом. Они считают его неуместным, поскольку RapidIO не предназначается для рынка настольных ПК и его разработчики не намерены делать его совместимым с PCI. Сторонники RapidIO полагают, что перенос технологии из мира настольных ПК не относится к числу сильных сторон HyperTransport и PCI Express, как считают их приверженцы. Эта технология, говорят они, едва-едва начала проникать на рынок встроенных систем (embedded systems).
+<p>Таким образом, по их мнению, приход стратегии PCI Express на замену PCI не представляет собой реальной угрозы; многие разработчики встроенных систем просто игнорируют маркетинговую шумиху, заявляя, что &quot;не применяют PCI&quot;.
+<p>Сторонники HyperTransport расхваливают его как совместимую технологию, которая может быть достаточна для коммуникаций между микросхемами, между микросхемами и портами ввода-вывода или, возможно, узлами, которым не требуется дополнительных гнезд расширения.
+<p>Впрочем, PCI Express тоже попытается распространить свои притязания на эти интерфейсы. Стоит отметить, что данный стандарт обладает некоторыми преимуществами по сравнению с HyperTransport и RapidIO. Но как долго удастся их сохранить, когда HyperTransport и RapidIO полным ходом ужесточают свои спецификации? Возможно, что к моменту выхода PCI Express как HyperTransport, так и RapidIO будут иметь равные скорости. К тому же вполне вероятно, что они будут иметь и версии с низкой скоростью для тех приложений, которым потребуется эта дополнительная ширина полосы, затрудняя тем самым для PCI Express конкуренцию за эти слоты расширения.
+<p>Безусловно, PCI Express найдет применение в мире настольных ПК. Такие компании, как Dell, определенно заявляют, что, ожидая готовности PCI Express, они не станут &quot;адаптировать&quot; HyperTransport или RapidIO для своих систем. (Некоторые считают, что на некоторое время эту нишу займет PCI-X.) Кроме того, PCI Express воспринял многие спецификации низкого уровня стандарта InfiniBand, еще одного интерфейса, привлекательного для мира ПК. В результате разработчики смогут использовать сходные спецификации вместо сильно разнящихся.
+<p>Полагают, что до момента готовности 8х PCI Express PCI-X будет достаточно для 
+  4х InfiniBand. Первоначальные спецификации PCI Express во многом напоминают 
+  параметры PCI, за исключением того, что PCI Express быстрее. Будущие разработки 
+  будут фокусироваться на механических принципах, связанных с модульностью. Вместо 
+  того, чтобы заставлять пользователей открывать компьютер и вставлять платы расширения, 
+  группа PCI Special Interest Group, которая теперь отвечает за разработку спецификаций, 
+  надеется разработать картриджи, вставляемые в горячем режиме с передней панели. 
+  Эти новые конструктивные элементы вряд ли войдут в первоначальные спецификации. 
+  Исходя из этих соображений, в отрасли полагают, что от появления спецификаций 
+  до выхода реальных продуктов пройдет еще немало времени. Смогут ли PCI Express 
+  и Hyper-Transport переиграть RapidIO? Время покажет. 
+<p> 
+<table width="100%" border="0" bgcolor="#CCFFCC">
+  <tr>
+    <td>
+      <h4>Вместе от PCI к PCI Express </h4>
+      <p>Архитектура PCI Express определяет высокоскоростную последовательную 
+        шину ввода-вывода общего назначения. Она позволяет масштабировать пропускную 
+        способность от 2,5 Гбит/с и более и предусматривает поддержку различного 
+        количества сигнальных линий (1, 2, 4, 8, 16, 32). Эту технологию можно 
+        использовать в настольных ПК, мобильных компьютерах, серверах и коммуникационном 
+        оборудовании. На ее основе строят экономичные решения с малым количеством 
+        выводов в интерфейсе и максимальной пропускной способностью в расчете 
+        на один вывод, снижая стоимость систем и осваивая новые форм-факторы. 
+      <p>В июле 2002 г. члены группы PCI-SIG закончили работу над основными разделами 
+        спецификаций PCI Express 1.0 (<a href="http://www.pcisig.com/specifications/pci_express">http://www.pcisig.com/specifications/pci_express</a>). 
+        Предполагается, что полупроводниковые компоненты на ее основе появятся 
+        во втором полугодии 2003 г., а готовые системы - в 2004 г. 
+      <p>Осенью 2002 г. корпорация Intel объявила новую программу Intel Developer 
+        Network для технологии PCI Express. Ее поддержали несколько десятков компаний, 
+        которые намерены ускорить разработку продукции на основе PCI Express для 
+        вычислительных и коммуникационных платформ следующего поколения на базе 
+        архитектуры Intel. Программа формирует Web-сообщество и информационную 
+        среду, которые предоставляют разработчикам сведения, инструментарий и 
+        техническую поддержку, способствующие развитию технологии PCI Express. 
+        Участники программы первыми получают доступ к инструментальным средствам 
+        (например, функциональным моделям шины), вспомогательным проектным материалам 
+        (спецификациям физического интерфейса и т. д.) и другим важным элементам. 
+   <p>
+<table width="100%" border="0">
+<tr><td><img src="http://www.bytemag.ru/articles/........" alt=Fig.3></td></tr>
+<tr><td valign="bottom">Архитектура системы на базе PCI Express.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+      </td>
+  </tr>
+</table>
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8521.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Технологии межсоединений
+</a><br><a href="detail.php@ID=8521.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Алексей Борзенко, 
+  доцент РГРТА, 
+Alex@csk.ryazan.ru 
+Некоторое время назад популярным способом увеличения полосы пропускания шины было&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8521.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8521&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0b8e1caafc26be188c51adb9229cade2'><img src='../bitrix/tools/captcha.php@captcha_code=0b8e1caafc26be188c51adb9229cade2' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

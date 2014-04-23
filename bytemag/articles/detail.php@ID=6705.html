@@ -1,0 +1,452 @@
+<HTML>
+<HEAD>
+<title>Veritas: от управления данными к ресурсным вычислениям
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Андрей Колесов До недавнего времени компания Veritas Software (http://www.veritas.com) была известна на ИТ-рынке в основном как поставщик ПО для управления устройствами хранения информации, защиты и резервного копирования данных (рис. 1). По данным IDC" />
+<meta name="description" content="Андрей Колесов До недавнего времени компания Veritas Software (http://www.veritas.com) была известна на ИТ-рынке в основном как поставщик ПО для управления устройствами хранения информации, защиты и резервного копирования данных (рис. 1). По данным IDC" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082578','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6705' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6705&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6705"].SHOW_IMAGE.value="N"; document.forms["PrintForm6705"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6705"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6705"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6705);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6705.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6705.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6705);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11538.html'>№12 (76), декабрь 2004</a><h1>Veritas: от управления данными к ресурсным вычислениям
+</h1>15.12.2004<p></p><DIV class='article-text'><p><i>Андрей Колесов</i>
+<p>До недавнего времени компания Veritas Software (<a href="http://www.veritas.com">http://www.veritas.com</a>) была известна на ИТ-рынке в основном как поставщик ПО для управления устройствами хранения информации, защиты и резервного копирования данных (рис. 1). По данным IDC, ей принадлежит около 40% мирового рынка ПО резервного копирования и восстановления данных и 70% рынка средств виртуализации хранения. Сосредоточившись на подобных специализированных решениях, Veritas остается одним из крупнейших поставщиков ПО в мире по объемам продаж (более 1,75 млрд долл. в год).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/veritas/ris1.gif" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Рис. 1. Доля Veritas в различных сегментах рынка ПО. Источник: исследование Gartner Group, 2004 г.; внутренние финансовые отчеты Veritas.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Однако в последние годы компания активно расширяет спектр предлагаемых ею программных продуктов, формируя собственную комплексную платформу управления ИТ-ресурсами предприятия. Еще несколько лет назад популярными на рынке стали ее решение для кластеризации Veritas Cluster и продукты виртуализации хранения данных. В поле бизнеса компании попали также ПО для автоматизации ИТ-инфраструктуры (CommandCentral) и повышения производительности приложений (семейство Veritas i3).
+<p>По мнению Veritas, преимущество ее решений по сравнению с аналогичными продуктами ведущих поставщиков серверов и систем хранения связано с независимостью от аппаратной и программной платформы, что особенно важно для крупных заказчиков, у которых в информационной системе зачастую используется &quot;зоопарк&quot; из оборудования разных производителей. Именно поэтому особый акцент делается на технологии виртуализации применительно к аппаратному обеспечению, ОС и приложениям.
+<h3>На пути реализации Utility Computing</h3>
+<p>Расширение спектра продуктов Veritas (рис. 2) идет двумя способами: во-первых, за счет усовершенствования имеющихся продуктов и создания новых собственными силами, во-вторых, за счет приобретения поставщиков специализированных решений. Одним из последних шагов в этом направлении стало объявление в начале нынешней осени о намерении купить компанию KVS, одного из ведущих поставщиков средств архивирования электронной почты.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/veritas/ris2.gif" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Рис. 2. Предложения Veritas последнего года: программные продукты, образующие строительные блоки для поддержки ресурсных вычислений.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Формирование собственной комплексной платформы управления ИТ-инфраструктурой — вполне логичное следствие развития бизнеса крупной софтверной компании и соответствует общим тенденциям изменения потребностей заказчиков и самой ИТ-отрасли. Однако на пути создания такого ПО разработчику предстоит решить целый ряд серьезных задач, связанных, с одной стороны, с унификацией и интеграцией программных продуктов, а с другой — с четким позиционированием предлагаемых средств для своих заказчиков и партнеров.
+<p>В решении этих проблем Veritas сделала ставку на концепцию Utility Computing, для описания которой в русском переводе используются два термина — &quot;ресурсные вычисления&quot; или &quot;коммунальные вычисления&quot;. В последнее время данная методология достаточно широко обсуждается в зарубежной и отечественной литературе (см., например, статью &quot;Рынок, который объединяет&quot;, «BYTE/Россия» N 10’2004, c. 36). Поэтому здесь мы только подчеркнем, что Utility Computing — это следствие эволюционного развития информационных технологий, и перечислим основные ее положения, а именно:
+<ul><li>ориентация на применение распределенных неоднородных вычислительных систем с использованием Интернет-технологий;
+<li>широкое использование средств автоматического управления ИТ-инфраструктурой, в том числе для оптимизации вычислений, автономной работы и самовосстановления;
+<li>модель организации вычислений, которая представляет собой не «технологию ради технологии», но жестко ориентирована на решение ключевых бизнес-задач предприятий. Подход к организации ИТ-услуг как к самостоятельному бизнесу;
+<li>вся ИТ-инфраструктура (аппаратура, коммуникации, ПО) рассматривается как единый комплекс, но состоящий из компонентов. Заказчик имеет возможность гибкого выбора и адаптации необходимых средств под свои конкретные нужды, с учетом будущего коррекции и развития бизнеса.</ul>
+<p>С точки зрения заказчика, реализация концепции ресурсных вычислений должна включать пять основных шагов (рис. 3). Здесь идентификация предполагает учет и использование существующих ресурсов; консолидация — консолидацию не полностью задействованных ресурсов и приложений. Стандартизация проводится на основе лучших в своем классе решений и продуктов. Автоматизация подразумевает динамическое совместное использование и объединение в пулы на основе политик, а службы — замеры потребления для распределения расходов.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/veritas/ris3.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Пять шагов на пути реализации концепции ресурсных вычислений.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Компания Veritas Software — не единственная, кто реализует подход Utility Computing; собственные версии этой концепции есть у всех основных ИТ-поставщиков, каждый из которых расставляет свои акценты при ее реализации.
+<p>В силу исторических причин технологии Veritas проходят от автономного хранения данных через информационную инфраструктуру и оптимизацию оборудования к производительности жизненно важных приложений, предоставляя ИТ-подразделениям средства контроля над информацией, ликвидации узких мест и обеспечения высокой доступности ключевых систем и приложений.
+<p>При этом Veritas выделяет три основных аспекта управления ПО: доступность, производительность и автоматизацию. Продукты, связанные с доступностью, отвечают за хранение и получение данных, а также за доступность приложений и данных для бизнеса. Решения из сферы производительности позволяют организации обеспечить качество работы приложений, информационных систем и данных на уровне, предусмотренном соглашениями, повышая производительность серверов и устройств хранения, а также прогнозируя, идентифицируя и устраняя возникшие проблемы. Средства автоматизации сокращают вероятность возникновения операторских ошибок и предоставляют сотрудникам ИТ-подразделения инструменты, позволяющие сократить время, затрачиваемое на «ликвидацию пожаров», обеспечивая непрерывность работы важных для бизнеса приложений.
+<p>В настоящее время портфель продуктов Veritas предоставляет организациям исчерпывающий ряд инструментов для построения законченных решений в области доступности, производительности и автоматизации на всех уровнях — от рабочих станций до систем хранения и архивирования (см. таблицу). Кроме того, отдельную группу составляют традиционные для Veritas продукты для защиты и архивирования данных. Ниже мы коротко охарактеризуем эти продукты в разбиении по соответствующим группам.
+<h4>Портфель продуктов Veritas в области доступности, производительности и автоматизации </h4>
+<table border=1>
+<tr><td><b>Уровни ИТ-инфраструктуры</b></td>	<td><b>Доступность</b></td>	<td><b>Производительность</b></td>	<td><b>Автоматизация</b></td></tr>
+<tr><td>Приложения</td>	<td>Cluster Server<br>UpScale</td>	<td>i3</td>	<td>CommandCentral Service<br>MicroMeasure<br>Data Lifecycle Manager</td></tr>
+<tr><td>Серверы</td>	<td>Cluster Server<br>Bare Metal Restore</td>	<td>i3</td>	<td>OpForce<br>CommandCentral Availability</td></tr>
+<tr><td>Память и данные</td>	<td>Volume Replicator<br>Storage Foundation<br>NetBackup<br>Backup Exec</td>	<td>i3<br>Storage Foundation for Database</td>	<td>CommandCentral Storage<br>StorageCentral<br>Storage Foundation</td></tr>
+</table>
+<h3>Архивирование и защита данных</h3>
+<p>Данные — ценный актив любой компании, но сегодня информационные системы, где они циркулируют, подвержены множеству угроз, неподвластных компаниям. Неисправности противопожарного оборудования и пожары, засорение канализации, затопление, вызванное бурей или пожаром, кражи данных, вирусы — и это еще не все бедствия, угрожающие сохранности информации. К тому же законодательные нормы требуют хранения отдельных видов данных в течение определенного числа лет, а порой и десятилетий, — и здесь особое значение приобретают технологии архивации и поиска документов.
+<p>Что касается защиты данных, она имеет значение как в краткосрочной, так и в долгосрочной перспективе. Важная составляющая защиты ключевых данных и информации — резервное копирование файлов.
+<h4>Backup Exec</h4>
+<p>Veritas Backup Exec — это решение для резервного копирования и восстановления, обеспечивающее полную и экономически эффективную защиту серверных сред Windows и NetWare. Web-консоль администрирования и графический интерфейс пользователя с удобными мастерами упрощают установку пакета и управление им. Высокопроизводительные агенты и опции (Desktop and Laptop Option) обеспечивают быстрое развертывание защиты данных на настольных и переносных компьютерах и серверах. Чтобы упростить повседневное администрирование, имеются специализированные средства автоматической защиты приложений Microsoft Exchange Server, Microsoft SQL Server и Lotus Notes. Продукт реализован в трех вариантах — для Windows (BEWS), для NetWare и для Small Business Server.
+<h4>DirectAssist</h4>
+<p>Бесплатно распространяемое через Интернет приложение Veritas DirectAssist должно улучшить поддержку решений Backup Exec for Windows Servers, помогая локализовать и устранять возникающие неполадки. Программа диагностирует среду клиента, выполняя мгновенные копии текущих конфигураций; в случае неполадок она обнаруживает изменения в конфигурациях и проводит поиск возможных решений. Если необходимо подать запрос в службу технической поддержки, DirectAssist создаст электронную запись всей необходимой информации о происшествии, включая файлы журналов ошибок, относящиеся к проблеме.
+<h4>NetBackup</h4>
+<p>Продукт Veritas NetBackup (NBU, варианты Enterprise Server и Server) реализует защиту данных корпоративного уровня в средах Unix, Windows, Linux и NetWare. Интуитивно понятный графический интерфейс помогает управлять всеми аспектами резервного копирования и восстановления в организации, обеспечивая внедрение унифицированных политик резервного копирования. NetBackup предоставляет средства управления всеми современными носителями данных (ленточными, дисковыми и оптическими), включая возможность маркировки лент, создание пула ленточных носителей, совместный доступ к устройствам, создание отчетов о состоянии носителей и приводов, поддержку штрих-кодов. Кроме того, в решении предусмотрены специализированные опции резервного копирования и восстановления для Oracle, SAP R/3, Microsoft SQL Server, Microsoft Exchange, Microsoft SharePoint Portal Server, IBM DB2, Lotus Notes/Domino, Sybase и Informix. Для управления несколькими доменами NetBackup служит инструмент Global Data Manager.
+<h4>Bare Metal Restore</h4>
+<p>Приложение Veritas Bare Metal Restore (BMR) автоматизирует процесс восстановления сервера, исключая необходимость вручную переустанавливать ОС и настраивать оборудование. В сущности, оно просто делает копию целого сервера с ОС и всеми приложениями и хранит ее в образе, создаваемом NetBackup. Через простой Web-интерфейс с помощью программ-мастеров можно параллельно выполнять восстановление нескольких серверов. Единое решение для нескольких платформ позволяет обойтись без составления отдельных методик восстановления для каждой платформы.
+<h4>Data Lifecycle Manager</h4>
+<p>Veritas Data Lifecycle Manager (DLM) помогает компаниям выполнять требования законодательства, создавая для данных контрольный след с дополнительной информацией: кто создал данные, где создал, кто их читал, кто изменял, когда это происходило, где находятся данные сейчас, какие правила к ним применяются. DLM также снижает общую стоимость владения данными, автоматически реализуя политики управления ими в соответствии с требованиями к данным и атрибутами хранения. С помощью DLM данные по мере возможности автоматически переносятся с более дорогих носителей на более дешевые.
+<p>Работа DLM прозрачна для пользователей и приложений — по сути, эта программа контролирует все, что происходит с данными от их создания до удаления. Единая технология поиска и индексации контента (основанная не на ключевых словах, а на алгоритмических признаках) делает приложение более «интеллектуальным», чем большинство поисковых машин, и снижает затраты времени и средств на поиск файлов. DLM интегрируется с NetBackup и Backup Exec for Windows, обеспечивая перестройку индексов резервных копий. В нем предусмотрены агенты для Windows и Microsoft Exchange Server, а архитектура решения позволяет ему взаимодействовать с множеством приложений и утилит архивирования для работы с разнообразными типами данных.
+<h4>Desktop and Laptop Option</h4>
+<p>Опция Veritas NetBackup and Backup Exec Desktop and Laptop Option (DLO) обеспечивает защиту и синхронизацию данных, хранящихся на персональных и переносных компьютерах сотрудников, автоматически копируя информацию с ПК на сетевой сервер или устройство хранения. По оценке компании IDC, доля данных, хранящихся вне серверов, составляет до 60%, причем эти данные обычно находятся на ключевых этапах своего жизненного цикла.
+<h4>NetBackup Vault Option</h4>
+<p>Интегрированная с NetBackup опция Veritas NetBackup Vault автоматизирует ротацию ленточных носителей и автономное ведение архивов, организуя сложный и трудоемкий процесс дублирования и внешнего хранения резервных копий. Применявшиеся ранее ручные процессы были чреваты ошибками — ленты порой неверно маркировались, терялись или стирались. С помощью NetBackup Vault клиент может настроить профили, определяющие, какие копии, когда и как следует дублировать, а также когда ленты отправляются во внешнее хранилище для минимизации потерь в аварийных ситуациях. Как правило, в удаленных хранилищах размещаются полные копии, снимаемые с периодичностью около недели. Инкрементное копирование на диски снижает потери данных и ускоряет восстановление. При репликации данные копируются постоянно; тем самым потеря их в случае аварии сводится к минимуму. Еще один аспект необходимости резервного копирования и восстановления данных связан с тем, что при репликации копируются все данные, в том числе вирусы. Это означает, что для решения подобных вопросов требуются другие пути сохранения данных.
+<h3>Обеспечение высокой доступности</h3>
+<p>Если данные — один из наиболее ценных активов компании, то они должны быть доступны всегда, когда они нужны. В сегодняшних условиях это зачастую означает работу в круглосуточном режиме, без единого выходного. Как следствие, каждой компании требуется стратегия обеспечения доступности данных, которая образует одну из основных статей расходов на ИТ. Доступность — это возможность гарантировать бесперебойную работу информационной среды. Если, скажем, сервер компании остановится по какой-то причине, должен быть гарантированный механизм продолжения работы в обход этой неисправности. Если компания остановит на какое-то время обработку заказов, последствия могут быть очень серьезными.
+<p>Для предоставления ИТ как ресурсной услуги приложения, необходимые бизнесу, должны быть доступны по первому требованию. Как и решения предыдущей группы, продукты Veritas, обеспечивающие высокую готовность, могут служить строительными блоками для построения систем ресурсных ИТ-услуг.
+<h4>Cluster Server</h4>
+<p>Veritas Cluster Server (VCS) — это ведущее в отрасли решение для кластеризации открытых систем. Оно объединяет серверы в кластеры, повышая доступность приложений и баз данных (сервисов). При выходе из строя приложения, базы данных или сервера VCS обнаруживает ошибку и предпринимает действия, необходимые для восстановления или переноса служб на другой сервер, который лучше всего способен справиться с поддержкой данного приложения или базы данных. Это решение хорошо подходит и для сокращения запланированных и внеплановых простоев, консолидации серверов (снижает число серверов, необходимых для работы компании), а также эффективного управления приложениями в открытых системах. VCS защищает любые решения — от отдельно взятой важной базы данных до крупнейших кластеров, распределенных по всему миру и выполняющих множество приложений.
+<p>Помимо автоматизации процесса исправления сбоев, VCS позволяет проверять планы аварийного восстановления, не прерывая работу пользователей, а также предоставляет средства управления несколькими заданиями на кластере серверов (интеллектуальное управление нагрузкой), обеспечивая максимально эффективное использование ресурсов. Средства кластеризации объединяют серверы и выполняют аварийное переключение приложений в случае выхода сервера из строя.
+<h4>UpScale</h4>
+<p>ПО Veritas UpScale, недавно купленное у компании Ejasent, станет интегрированной опцией VCS. Данное решение дает возможность перемещать приложения с одного сервера на другой, не прекращая их работы. UpScale снимает копию приложения и его состояния, сохраняя все текущие установки и данные, и передает их на другой сервер практически в реальном времени таким образом, что пользователи не замечают изменений. Veritas UpScale значительно сокращает для менеджеров ИТ-подразделения время и ресурсы, затрачиваемые на плановые периодические обновления оборудования и обслуживание приложений, практически исключая для пользователей связанные с этим периоды простоя.
+<h4>CommandCentral Availability</h4>
+<p>Приложение Veritas CommandCentral Availability (CCA) предназначено для централизованного управления продуктами, обеспечивающими высокую доступность. Это инструмент управления на базе Web, который позволяет персоналу ИТ-отдела контролировать с единой консоли доступность приложений, работающих в географически удаленных информационных центрах, а также предоставляет дополнительные возможности аварийного переключения в пределах территории. Для получения информации о доступности приложений CCA пользуется данными VCS. С помощью этого ПО можно контролировать и администрировать распределенные кластеры VCS, работающие под управлением наиболее распространенных ОС.
+<p>Централизованное управление снижает административные расходы любой компании, где имеется более одного кластера. Veritas CommandCentral Availability увеличивает продуктивность труда ИТ-отдела, предоставляя централизованный контроль над кластерами в реальном времени. Администратор также может управлять конфигурацией и изменять ее сразу для нескольких кластеров. Кроме того, Veritas CCA позволяет администраторам быстрее обнаруживать, локализовать и устранять ошибки.
+<p>Ранее продукт CCA принадлежал к линейке Global Cluster Manager.
+<h4>Storage Replicator</h4>
+<p>Большинство организаций вкладывают средства в защиту данных центральных офисов, но защите для удаленных офисов часто не придают значения. Приложение Veritas Storage Replicator (VSR) разработано для относительно небольших Windows-сред. Оно устраняет ограничения на резервное копирование благодаря эффективной репликации (копированию) данных на центральный резервный сервер — непрерывно или по расписанию. Для поступивших на центральный сервер данных можно выполнить резервное копирование в нормальном режиме, как для данных самого информационного центра. Администратор может оперативно восстанавливать данные по сети, не обременяя администраторов удаленных офисов восстановлением данных с ленточных носителей. Отрицательные отзывы о VSR могут быть обусловлены тем, что компания «выросла» из этого продукта и ей следовало бы перейти на Volume Replicator.
+<h4>Volume Replicator</h4>
+<p>Veritas Volume Replicator (VVR) — это корпоративная версия продуктов репликации Veritas. Решение предоставляет основу для обеспечения прозрачной доступности приложений на нескольких территориях в случае стихийных бедствий, ошибок операторов, сбоев энергопитания, локальных аварий или плановых миграций. В основе VVR лежит технология Veritas Volume Manager. Это приложение надежно, эффективно и последовательно реплицирует данные на удаленный сервер по любой сети IP или SAN, как синхронно (в реальном времени), так и асинхронно (обычно по очереди), в средах, где потери данных или длительные простои недопустимы.
+<h3>Автоматизация систем хранения и серверов</h3>
+<p>Автоматизация любой операции или управления оборудованием, процессом либо системой дает ряд важных преимуществ. Она сокращает время, которое ИТ-профессионалы вынуждены тратить на рутинные задачи. Она означает, что сотрудник ИТ-отдела больше не обязан быть знатоком всех ОС и оборудования всех поставщиков. Теперь управление данными может стать для организации источником прибыли, ИТ-подразделение превращается из затратного в доходное, а вместо постоянного «тушения пожаров» можно уделять внимание стратегическому развитию. Кроме того, автоматизация уменьшает вероятность возникновения ошибок в результате действий оператора. Портфель Veritas объединяет продукты, нацеленные на минимизацию ошибок оператора и повышение производительности.
+<h4>CommandCentral Service</h4>
+<p>Veritas CommandCentral Service CCS призван помочь организации в переходе к ресурсной модели, когда ИТ-подразделение выступает как поставщик ресурсных услуг своим многочисленным клиентам. С помощью CCS можно находить и определять устройства хранения и управлять ими, формулировать и предоставлять ИТ-сервисы клиентам, вести учет и составлять отчетность об уровне обслуживания и использовании ресурсов, а также распределять затраты по сервисам. Таким образом, ПО CCS становится единым интерфейсом между ИТ-отделом и потребителями его услуг.
+<p>Уровни обслуживания, определяемые пользователями или клиентами, отображаются на реализации сервисов на основе имеющихся продуктов Veritas и других компаний. В результате деятельность ИТ-отдела становится более прозрачной, лучше поддается учету и в большей степени ориентирована на стратегические цели компании.
+<h4>MicroMeasure</h4>
+<p>Продукт Veritas MicroMeasure, купленный у компании Ejasent в начале 2004 г., будет интегрирован в CCS. Это позволит улучшить отчетность об уровнях сервиса на предприятии. MicroMeasure обеспечивает учет и выставление счетов за пользование активами информационного центра, включая серверы, устройства хранения и транзакции приложений, в разбивке по отдельным пользователям и подразделениям.
+<h4>StorageCentral</h4>
+<p>Veritas StorageCentral — это инструмент управления устройствами хранения в среде Windows, который автоматически распоряжается выделением и использованием устройств хранения, сокращая время резервного копирования и повышая уровень сервиса. В StorageCentral реализовано управление на основе политик для подключаемых напрямую дисковых систем (DAS), сетевых устройств хранения (NAS) и сетей хранения данных (SAN) на базе Windows.
+<p>Этот продукт способен распознавать типы файлов, даже если их пытаются скрыть. Идентифицируя ненужные или нелегальные файлы и удаляя их из системы, CCS может блокировать неразрешенные типы файлов (например, MP3, игры, сценарии и вирусы), выявляя и возвращая в дело потерянное дисковое пространство, снижая объемы данных, подлежащих резервному копированию, и продолжительность копирования. Он позволяет установить в реальном времени квоты на использование устройств хранения Windows общего пользования, а также составлять отчеты в формате HTML об использовании ресурсов и уведомления в реальном времени о превышении квот. Кроме того, он дает пользователям возможность самостоятельно управлять своими устройствами хранения. Veritas StorageCentral применяют более 5000 компаний. Microsoft использует эту технологию для управления квотами в Windows Storage Server 2003.
+<h4>Storage Foundation</h4>
+<p>Veritas Storage Foundation сочетает в себе две современные технологии — Veritas Volume Manager (VxVM) и Veritas File System (VxFS), образуя исчерпывающий набор инструментальных средств для управления устройствами хранения в реальном времени. Данное решение позволяет группировать дисковые накопители в логические тома, повышая тем самым коэффициент использования и производительность дисков. Оно помогает исключить простои, связанные с устройствами хранения, за счет совместного использования ресурсов (виртуализации). Например, если у компании есть три сервера, один из которых работает с максимальной загрузкой, то VxVM может с помощью виртуализации перераспределить нагрузку между всеми тремя серверами.
+<p>Кроме того, Storage Foundation позволяет администраторам переносить данные между различными ОС и дисковыми массивами, распределять операции ввода-вывода по нескольким каналам для повышения производительности, снижать задержки ввода-вывода (ускоряя работу приложений) и таким образом предотвращать задержки в сети, проводить репликацию (зеркальное копирование) данных на удаленные территории для повышения доступности, а также переносить несущественные или устаревшие данные на менее дорогие носители, не меняя при этом режима доступа к ним для пользователей и приложений.
+<h4>Storage Foundation for Databases</h4>
+<p>Veritas Storage Foundation for Databases (предыдущее название Database Editions, DBED) — это интегрированный комплекс современных технологий, как и Veritas Storage Foundation, построенный на базе VxVM и VxFS и содержащий ряд дополнений, облегчающих управление и подключение к базам данных Oracle, IBM DB2 и Sybase. В состав продукта входит средство VCS для автоматического восстановления приложений после сбоев и защиты приложений от плановых и внеплановых простоев.
+<p>Функция Quick I/O соединяет управляемость файловых систем с производительностью значительно менее сложных аппаратных устройств. Этот пакет построен на основе инфраструктуры хранения, позволяющей оптимизировать хранение баз данных с помощью виртуализации устройств оперативного хранения и технологии RAID, которая применяется для повышения доступности и скорости записи/чтения дисковых массивов.
+<h4>FlashSnap</h4>
+<p>Veritas FlashSnap расширяет возможности Storage Foundation и Storage Foundation for Database. Данное решение создает моментальные образы (копии в реальном времени) файловых систем и томов для удаленной (выполняемой не на исходном сервере или устройстве хранения) обработки и быстрого резервного копирования. Созданные копии томов впоследствии могут передаваться другим процедурам на этом же компьютере — для обработки, резервного копирования или тестирования. Когда том готов к обратному копированию и синхронизации, FlashSnap быстро синхронизирует только измененные блоки. Затем он синхронизирует второй том и готов к следующим операциям. Моментальные образы файловой системы, созданные с помощью FlashSnap, полностью интегрируются с NetBackup, и их можно использовать как мгновенно восстанавливаемые резервные копии, а также как источник для восстановления отдельных файлов пользователями.
+<h4>OpForce</h4>
+<p>Для оказания эффективных и экономичных информационных услуг ИТ-подразделению нужна гибкость ресурсов. Приложение Veritas OpForce, купленное у компании Jareva в январе 2003 г., копирует настройки существующего сервера и переносит их на новый, позволяя развертывать дополнительные серверы в считанные минуты вместо нескольких часов (при развертывании вручную). OpForce может добавлять новые серверы в существующую среду или переназначать их из недозагруженной среды туда, где они необходимы. OpForce также автоматизирует процесс настройки сервера, позволяя обойтись без ручной установки ОС и настройки оборудования. Это ПО помогает организовать совместное использование серверных ресурсов. Если приложению не хватает ресурсов для эффективной работы, OpForce может установить новые серверы для этого приложения.
+<p>OpForce также позволяет определить, какие серверные ресурсы имеются в организации, и выделить необходимый для запуска определенного приложения их объем из пула ресурсов совместного пользования. Копии, созданные с помощью OpForce, содержат всю программную среду существующего сервера, которая автоматически воспроизводится на новом сервере. Особенно важно, что OpForce может использовать для этого любые серверные аппаратные платформы.
+<h4>CommandCentral Storage</h4>
+<p>Пакет Veritas CommandCentral Storage обеспечивает централизованное управление устройствами хранения, позволяя ИТ-отделу выполнять те требования к устройствам хранения, которые предъявляют все более разнообразные и многочисленные приложения. CommandCentral Storage позволяет видеть все ресурсы хранения SAN, NAS и DAS и их производительность с единой консоли. Это означает, что администраторы получают всю нужную информацию, чтобы найти неиспользуемое выделенное место и вернуть неэффективно используемое пространство в систему, тем самым повысив общий уровень использования устройств хранения. Решение управляет устройствами хранения в упреждающем режиме в интересах приложений, позволяя отслеживать объемы и производительность ресурсов, определять и корректировать узкие места, прогнозировать требования к дисковому пространству на ближайшее будущее.
+<p>Кроме того, приложение исключает ряд ручных процессов, сводя к минимуму ошибки оператора. Это ПО способно автоматически находить аппаратные ресурсы и приложения, а также инфраструктурные решения, такие, как Veritas NetBackup, Cluster Server и Storage Foundation. Инструменты управления, основанные на политиках, гарантируют соблюдение уровней сервиса, отправляя ИТ-специалистам предупредительные сообщения о неполадках еще до того, как они станут критическими.
+<p>Ранее продукт назывался SANPoint Control; включает также продукт Storage Reporter.
+<h3>Управление производительностью приложений</h3>
+<p>Сегодня, кроме высокой доступности, организациям необходима круглосуточная работа наиболее важных приложений на оптимальном уровне производительности. Чтобы достичь этого в условиях, когда в данную категорию попадает все больше приложений, нужно каким-то образом контролировать их производительность, а не ждать неизбежных звонков с жалобами на плохую работу.
+<p>Пакет Veritas i3 — Inform, Insight и Indepth — позволяет гарантировать непрерывную работу информационных систем на максимуме возможностей (продукты i3 были куплены у компании Precise в июле 2003 г.). Приложения i3 не только выявляют проблемы с производительностью, но и способны провести диагностику и порекомендовать способ решения этих проблем с минимальным вмешательством специалистов ИТ-отдела.
+<p>Три этих модуля могут сосуществовать с APM-продуктами (Application Performance Management) других поставщиков, но главная причина разделения i3 на три части — это стремление сделать решение модульным и более удобным для продажи. Veritas i3 состоит из нескольких компонентов, в числе которых решения для ClarifyCRM, J2EE, Oracle, Oracle Applications, PeopleSoft, SAP, Siebel и SQL Server. Вся информация, собранная i3, размещается в едином хранилище Performance Warehouse или базе данных и доступна для составления текущих и исторических отчетов.
+<h4>Inform</h4>
+<p>Приложение Veritas Inform уведомляет персонал ИТ-службы о возникновении проблем с производительностью приложений и передает сообщения в реальном времени в графический интерфейс i3 StartPoint. Пакеты Insight и Indepth собирают эту информацию и помещают в единое хранилище. На основании таких данных можно строить исторические отчеты и уведомления о критических ошибках; рассчитывать ключевые показатели производительности, например, время отклика, а также отслеживать их постепенное снижение и выявлять момент, когда необходимо предпринять какие-либо действия.
+<h4>Insight</h4>
+<p>Veritas Insight следит за всеми составными частями инфраструктуры, от клиентского места до устройства хранения, и идентифицирует компоненты, вызывающие проблемы с производительностью. Зная распределение времени отклика по технологическим уровням (Web-серверы, серверы приложений, серверы баз данных и устройства хранения), ИТ-специалисты могут сразу определить, на чем следует сконцентрироваться для решения проблем с производительностью.
+<p>В состав Veritas Insight также входят инструменты построения отчетов для ряда приложений, в том числе SAP, Oracle, PeopleSoft, Siebel, BEA Tuxedo и J2EE. Эти измерения дают еще более полную и точную информацию, необходимую персоналу ИТ-отдела для решения наиболее сложных вопросов, связанных с производительностью.
+<h4>Indepth</h4>
+<p>Veritas Indepth собирает информацию приложений Veritas Inform и Insight, дополнительные подробные сведения технологического характера, а также все данные об инфраструктуре поддержки приложений, а затем с помощью SmarTune выявляет ряд возможных причин и дает рекомендации по их устранению. Поскольку информация собирается в едином хранилище, на ее основании также можно строить исторические тренды и вырабатывать предупреждения в реальном времени.
+<h3>Перспективы расширения концепции</h3>
+<p>Практическое воплощение концепции Utility Computing представляет собой долговременный процесс, требующий усилий со стороны как поставщиков ПО, так и заказчиков. По мнению экспертов, в достаточно полном объеме эти идеи будут реализованы в течение ближайших 5—10 лет. Основные задачи разработчиков будут связаны с расширением функциональных возможностей решений и их интеграцией между собой.
+<p>Одним из направлений развития портфеля продуктов Veritas будет повышение уровня непосредственного взаимодействия приложений друг с другом. Это может выглядеть примерно так (рис. 4):
+<ul><li>Volume Replicator расширяет тома Volume Manager на любые расстояния по любой сети;
+<li>Volume Manager и File System обеспечивают совместное использование данных и перемещение их между дисковыми системами разных типов;
+<li>NetBackup использует образы FlashSnap для быстрого резервного копирования и восстановления файлов;
+<li>KVS считывает и индексирует данные в архивах для выполнения требований законодательства;
+<li>NetBackup и DLO делают резервные копии данных;
+<li>CommandCentral создает отчеты о резервном копировании с помощью NetBackup;
+<li>CommandCentral создает отчеты о хранении и управляет хранением, использованием файлов и томов (Volume Manager);
+<li>CommandCentral создает отчеты о готовности и управляет готовностью серверов и приложений (Cluster Server);
+<li>OpForce развертывает образы серверов с неповрежденными томами и файлами (Volume Manager);
+<li>OpForce автоматически выделяет ресурсы серверов для кластеров Veritas Cluster;
+<li>i3 считывает данные о производительности из Volume Manager и File System. В следующей версии это ПО будет интегрировано с CommandCentral Service.</ul>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/veritas/ris4.gif" alt=Fig.4></td></tr>
+<tr><td valign="bottom">Рис. 4. Совместная работа приложений Veritas.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Кроме того, будет обеспечено максимальное использование общих функций и ресурсов: однократная идентификация, общие инсталляционная программа и менеджер лицензий, единые базы данных, журналы регистрации и пользовательские интерфейсы и т. д.
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6705.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Veritas: от управления данными к ресурсным вычислениям
+</a><br><a href="detail.php@ID=6705.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Андрей Колесов
+До недавнего времени компания Veritas Software (http://www.veritas.com) была известна на ИТ-рынке в основном как поставщик ПО для&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6705.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6705&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0a7cfc4cef8e9dff50ba6c5d82413114'><img src='../bitrix/tools/captcha.php@captcha_code=0a7cfc4cef8e9dff50ba6c5d82413114' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

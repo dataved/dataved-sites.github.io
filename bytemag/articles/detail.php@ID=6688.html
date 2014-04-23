@@ -1,0 +1,424 @@
+<HTML>
+<HEAD>
+<title>Разработка Java-приложений на Oracle JDeveloper 10g
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Олег Иванов oivanov@fors.com В конце апреля компания Oracle (http://www.oracle.com) выпустила новую версию средства разработки Java-приложений JDeveloper 10g, встроив в нее технологию Application Development Framework (ADF), позволяющую" />
+<meta name="description" content="Олег Иванов oivanov@fors.com В конце апреля компания Oracle (http://www.oracle.com) выпустила новую версию средства разработки Java-приложений JDeveloper 10g, встроив в нее технологию Application Development Framework (ADF), позволяющую" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082670','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6688' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6688&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6688"].SHOW_IMAGE.value="N"; document.forms["PrintForm6688"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6688"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6688"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6688);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6688.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6688.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6688);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11501.html'>№7 (71), июль 2004</a><h1>Разработка Java-приложений на Oracle JDeveloper 10g
+</h1>10.07.2004<p></p><DIV class='article-text'><p><i>Олег Иванов</i> <br>
+  <a href="mailto:oivanov@fors.com">oivanov@fors.com</a>
+<p>В конце апреля компания Oracle (<a href="http://www.oracle.com">http://www.oracle.com</a>) 
+  выпустила новую версию средства разработки Java-приложений JDeveloper 10g, встроив 
+  в нее технологию Application Development Framework (ADF), позволяющую полностью 
+  визуально разрабатывать любые программы, имеющие графический интерфейс. В предыдущих 
+  версиях JDeveloper часто приходилось либо писать код вручную, либо пользоваться 
+  нестандартными и медленно работающими библиотеками. В новой версии можно полностью 
+  визуально разрабатывать приложения для работы с базами данных, причем не только 
+  с сервером баз данных Oracle, но и с любыми реляционными базами. 
+<p>JDeveloper 10g полностью написан на Java и может работать на любой платформе, для которой существует виртуальная Java-машина (JVM). Пакет можно загрузить с сайта http://otn.oracle.com и использовать его по лицензии Oracle TechNet, например, в ознакомительных целях. Oracle не защищает свои продукты ключами или кодами активации и не ограничивает период ознакомления. Установка продукта сводится к разархивированию скачанного файла в любую директорию.
+<h3>История JDeveloper </h3>
+<p>Первая версия JDeveloper вышла в 1998 г. Она называлась AppBuilder 1.0 и, по традиции, как все первые версии ПО Oracle, считалась не релизом, а бета-версией. К выходу релиза, который получил номер версии 1.1, Oracle переименовала среду разработки в JDeveloper. Название оказалось настолько удачным, что не меняется уже шесть лет (для сравнения: вышедший примерно в то же время Oracle Application Server успел сменить название четыре раза).
+<p>Пакет JDeveloper 1.1 работал на последней в то время версии JDK 1.1 и занимал 
+  50 Мбайт на жестком диске. Прототип среды был лицензирован у Borland (<a href="http://www.borland.com">http://www.borland.com</a>). 
+  Позже Borland/Inprise стала дорабатывать свою ветку программного продукта, который 
+  сейчас выпускается под названием JBuilder; по функциональности он схож с JDeveloper. 
+<p>В процессе развития средств программирования интерфейс, набор возможностей и даже комбинации клавиш для быстрого вызова часто используемых функций стали унифицированными. Естественный отбор заставил разработчиков программных сред придавать своим продуктам стандартный набор возможностей. Благодаря этому программисты, имеющие опыт работы с одной оболочкой, могут быстро освоить другие. Помимо набора стандартных средств, среды разработки приложений включают библиотеки процедур, упрощающие программирование. Например, приложения, работающие с базами данных, в большинстве случаев состоят из стандартных форм, выдающих данные из строк таблицы. Для создания таких приложений на Java и предназначена среда разработки Oracle JDeveloper.
+<h3>Структура приложения для работы с базами данных </h3>
+<p>На рис. 1 показана предлагаемая Oracle структура приложений для работы с данными. Отметим, что объекты ADF Entity и ADF View присутствовали и в предыдущей версии и назывались тогда Business Components for Java (BC4J). Компоненты представляют собой отражения таблиц базы данных, расположенные на стороне приложения и доступные локально. Например, если нужно вставить строку в таблицу, то вызывается метод (функция) на объекте Entity, так что программисту не нужно кодировать доступ к базе по JDBC. В сущности, это аналог EJB, DOA и других подобных технологий. Однако в предыдущей версии отсутствовал слой ADF Data Controls, который и позволяет создавать приложение полностью в визуальном режиме.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2004/Jdev/ris1.gif" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Рис. 1. Структура ADF-приложений.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В версиях JDeveloper 1.1-3.2 аналогом Data Controls были компоненты InfoBus. Технология InfoBus была разработана компанией Sun, но не получила распространения. ADF отличается от нее тем, что в InfoBus использовались модифицированные swing-компоненты, а в ADF источники данных привязываются к стандартным swing-объектам. Различные по своей сути технологии бизнес-уровня и графики были четко разделены, что дало возможность избежать ошибок и проблем с производительностью. Разработчики Oracle пришли к технологии ADF методом проб и ошибок. Просчеты на самом первом этапе моделирования технологической схемы привели к переработке всех последующих этапов.
+<p>Теперь и оконные, и Web-приложения можно создавать в визуальном режиме с высокой степенью автоматизации. Для этого подходят библиотеки тегов, разработанные Oracle, Apache или любые другие. В технологии ADF программист сначала создает бизнес-логику приложения. Например, если приложение будет работать с таблицами базы данных, то, чтобы не писать код запросов SQL вручную, можно использовать библиотеки BC4J. Программисту не нужно знать, как этот объект будет обновлять данные в таблице, он работает с ним как со стандартным Java-объектом. Большую часть логики можно настроить визуально, не написав ни строчки кода.
+<h3>Процесс создания Web-приложения </h3>
+<h4>Application workspace </h4>
+<p>Первый шаг - создание приложения (Application workspace). После запуска JDeveloper появится рабочая область со списком приложений, редактором кода и окном сообщений. Список приложений выдается в виде дерева и называется навигатором.
+<p>Рабочая область - это промежуточный уровень. Она будет содержать проекты, которые относятся к одному приложению, являются его частями или независимыми модулями. Допустим, разрабатывается отдельное Web-приложение и в нем есть ссылки на странички из других приложений. Если другое приложение находится в той же рабочей области, то при тестировании оба приложения будут загружены во встроенный контейнер Oracle Containers for Java (OC4J), и можно будет протестировать связи между ними.
+<p>Но чаще встречается другая ситуация. Приложение имеет несколько уровней - бизнес-логику и презентационную часть. Бизнес-логика может быть создана другой группой программистов и использовать специфические технологии. Если включить ее в проект как часть его, может возникнуть путаница - многим известно, что получается, когда пытаешься интегрировать чужой код в свое приложение. Отдельные проекты помогают сосредоточиться только на текущем задании, не вникая в особенности других модулей. В технологиях J2EE четко указываются конфигурационные файлы, которые нужно менять, чтобы настроить и использовать приложения J2EE. Для использования чужих модулей достаточно знать их спецификацию. Файлы конфигурации имеют легко читаемый формат XML, поэтому многие параметры интуитивно понятны.
+<h4>Приложения и проекты </h4>
+<p>В Мастере Application workspace появилась возможность задать набор технологий, которые будут использованы в проектах приложения. Например, в workspace можно автоматически сгенерировать проекты с UML-моделью или конфигурацией Struts создаваемого приложения.
+<p>Второй шаг после создания Application workspace - добавление проекта в приложение. Проект - это набор исходных файлов и библиотек, которые должны совместно компилироваться и использоваться в работе приложения. Обычно проект содержит законченное приложение или модуль большого приложения, с которым можно работать независимо. Параметры проекта хранятся в одном XML-файле. Многие средства разработки имеют сходные конфигурационные файлы собственного формата. Эти файлы несовместимы друг с другом, так как возможности сред программирования различны и стандарта здесь не существует.
+<h4>Соединение с базой данных MySQL </h4>
+<p>Третий шаг - создание соединения с базой данных, для работы с которой разрабатывается приложение. JDeveloper поддерживает любые базы данных, для которых существуют драйверы JDBC. Достаточно просто загрузить библиотеку драйвера (она обычно занимает 2-5 Мбайт и предоставляется на сайте производителя базы). Драйвер для собственной базы данных Oracle, разумеется, включила в дистрибутив JDeveloper.
+<p>Соединение создается в разделе Connections. Из рис. 2 видно, какие параметры нужно указать для подключения к базе данных MySQL. После создания соединения можно просматривать таблицы и при желании редактировать схему базы данных.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2004/Jdev/ris2.jpg" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Параметры соединения с MySQL.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>JDeveloper может отображать схему любых реляционных баз данных в виде ER-диаграммы (рис. 3). Она по умолчанию не отображается при просмотре списка объектов. Нужно создать новую диаграмму объектов, перейти в раздел соединения, раскрыть дерево с таблицами схемы в любом из соединений, выделить все таблицы и перетащить в рабочую область диаграммы (на рис. 3 показан результат).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2004/Jdev/ris3.jpg" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. ER-диаграмма схемы базы данных.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Часто у создателей JDeveloper не хватает времени для создания хорошей документации. Проблема в том, что для эффективного изучения среды разработки нужно показать, как выполнять стандартные действия. Для этого больше подходят флэш-ролики, а не статические страницы документации. Разработчики представили на сайте Oracle TechNet десяток роликов, которые демонстрируют некоторые (но не все) возможности среды разработки. Выпущен также курс обучения Oracle JDeveloper 10g: Build Applications with ADF.
+<h4>Мастер логики приложения </h4>
+<p>После создания проекта можно вызвать Мастер конфигурации бизнес-компонентов (BC4J). Он подсоединится к базе данных и запросит список таблиц, с которыми будет работать приложение. JDeveloper хранит параметры соединения с базами данных. Их можно в дальнейшем использовать в процессе тестирования или для создания новых приложений. Помимо баз данных, можно хранить соединения с серверами приложений не только собственного производства, такими, как OC4J или iAS, но и Tomcat, JBoss, Orion. Соединение с серверами приложений позволяет легко установить в них Web-приложения прямо из JDeveloper.
+<p>Мастер BC4J отслеживает связи между таблицами базы данных и создает наборы объектов, которые точно отражают схему базы данных. На выходе Мастер создает конфигурационные файлы в формате XML и Java-классы. Наиболее часто встречающиеся параметры хранятся в XML-файлах. Их не нужно редактировать вручную, средствами JDeveloper это можно сделать визуально. Большая часть логики не требует написания кода, однако некоторые редко встречающиеся задачи обработки информации можно реализовать, добавив код в Java-файлы, которые создает Мастер BC4J.
+<p>Протестировать бизнес-логику компонентов BC4J можно с помощью простого swing-клиента, встроенного в JDeveloper. Он вызывается нажатием правой кнопки мыши через строчку &quot;Test…&quot; в выпадающем меню, если в навигаторе проектов выбрать модуль бизнес-компонентов. Отметим, что этот клиент не вынесен в меню и панель управления JDeveloper, и вероятность того, что его обнаружит программист, только начинающий работать с JDeveloper, весьма мала. Однако других недочетов такого типа в JDeveloper практически нет.
+<h3>Диаграммы в JDeveloper </h3>
+<p>В JDeveloper есть мощная подсистема создания модели будущего приложения. Известно, что просчеты на этапе моделирования приводят к потере времени на последующих этапах разработки. Поддержка моделирования состоит из UML-диаграмм, диаграммы BC4J-компонентов, диаграммы XML-схем и компонентов Struts.
+<p>UML-диаграмма используется для моделирования Java-классов будущего приложения. Классы отображаются в виде прямоугольников со свойствами классов и связями между ними. При большом наборе классов диаграмма предоставляет программисту возможность взглянуть на приложение в целом, что повышает производительность разработки. На основе диаграммы можно сгенерировать Java-классы, которые появятся в текущем проекте.
+<p>BC4J-диаграмма позволяет смоделировать схему будущего приложения. Если в базе данных нет таблиц, т. е. разработка выполняется &quot;с нуля&quot;, можно создать функциональную модель приложения. На основе BC4J-диаграммы можно создать объекты базы данных - таблицы, представления, ограничения целостности и сам набор BC4J-компонентов.
+<p>Одно из новшеств последней версии JDeveloper - визуальный редактор схем XML (рис. 4). Структура документов проста - это дерево, однако число ветвей в дереве большинства документов достаточно велико. Визуальный редактор делает создание схем комфортным. Формат XML известен уже несколько лет, но средств автоматизации создания документов до сих пор немного.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2004/Jdev/ris4.jpg" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Визуальный редактор XML-схем.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h3>Интерфейсы </h3>
+<p>После визуальной настройки компонентов BC4J программист выбирает тип графического интерфейса: оконный или Web, а также технологию, с помощью которой будет реализована эта часть программы. Для Web-приложений можно использовать библиотеки тегов Apache Struts или Oracle UIX, а для оконных интерфейсов - компоненты awt или swing. Компоненты awt созданы раньше swing, и возможности их ограниченны, поэтому сейчас редко они используются в приложениях. Их имеет смысл применять, если создается приложение для работы апплетов в старых версиях JVM 1.1, где еще не было swing-компонентов. Эти версии до сих пор встречаются в браузерах, так как последняя версия виртуальной машины, которую выпустила компания Microsoft для своего браузера, основана на JDK 1.1.
+<h4>Оконный интерфейс </h4>
+<p>Первый тип интерфейса - стандартное оконное приложение. В этом случае используют библиотеку графических компонентов, называющуюся swing. Библиотека содержит такие компоненты, как кнопки, текстовые поля, окна, панели. На рис. 5 (в правой части) в Data Control Palette видны отображения уровня модели ADF. При перемещении компонентов на поле графического редактора в центре рисунка JDeveloper автоматически добавит в программу код привязки.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2004/Jdev/ris5.jpg" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Визуальный редактор оконного приложения.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h4>Web-интерфейс </h4>
+<p>Второй тип графического интерфейса - стандартные HTML-страницы. Конечно, они динамические, т. е. генерируются &quot;на лету&quot; и каждый раз имеют разное содержание. Вспомним, что Java как язык программирования стал популярным именно благодаря Интернету. На нем писались первые программы, оживлявшие Web-страницы, - апплеты. Позже появились другие технологии, и нишу апплетов заняла технология Macromedia Flash.
+<p>Другая технология, поставившая Java вне конкуренции, тоже пришла из глобальной сети. Это технология сервлетов и Java Server Pages (JSP). Когда мигающие картинки перестали быть новинкой и стали даже раздражать пользователей сети, возникла потребность в быстрой и удобной разработке программ для Web. На эту роль претендуют Perl, PHP, ASP и сервлеты/JSP. Именно сервлеты, часть технологии J2EE, позволяют быстро создавать мощные Web-приложения. В отличие от скриптовых языков, таких, как PHP, Java-программы сохраняют в памяти сервера состояние сессии каждого пользователя - значения переменных и любые данные, с которыми работает пользователь. Еще одно отличие состоит в том, что все запросы пользователей обслуживают нити, а не отдельные процессы. Это делает работу Java-приложений чрезвычайно быстрой.
+<p>Диаграмма связей компонентов Apache Struts представляет собой визуальный редактор файла конфигурации struts-config.xml (рис. 6). Этот файл используется для указания последовательности прохождения запросов пользователя и передачи управления различным JSP. Редактор параметров позволяет увидеть приложение в виде потоков событий.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2004/Jdev/ris6.jpg" alt=Fig.6></td>
+<td valign="bottom">Рис. 6. Визуальное редактирование конфигурации Apache Struts.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Компоненты Struts часто используются при создании Web-приложений на Java. Логика работы Web-приложений значительно отличается от логики клиент-серверных приложений. Если в последних в качестве объекта выступает форма, в которой задаются реакции на события пользователя, то в Web-приложениях пользователь имеет дело со статичными страницами. Логика работы Web-приложений заключается в переходе между страницами в зависимости от выбора, сделанного пользователем. Диаграмма логики Web-приложения включает страницы и условные переходы между ними или поток действий пользователя - clickstream. Диаграмма представляет собой уровень абстракции над самим кодом приложения. Аналогией может служить ER-диаграмма для создателей приложений, работающих с базами данных.
+<p>Компания Sun при разработке Java не учла, что на практике, создавая даже не самые сложные проекты, программисты будут вынуждены рисовать такие диаграммы. Поэтому в наборе стандартов, составляющих J2EE, диаграммы потока действий отсутствуют. Консорциум Apache предложил технологию, позволяющую при правильном использовании упростить создание Web-приложений. Помимо диаграммера в нее включено много других средств. Эта технология получила название Struts, или &quot;подпорки&quot;. И они действительно &quot;подпирают&quot; технологию сервлетов/JSP.
+<h3>Компиляция и тестирование </h3>
+<p>Последний этап - компиляции и тестирования приложения - проблем не вызывает. Встроенный компилятор и отладчик работает без ошибок. Для сложных проектов и создания рабочего дистрибутива JDeveloper предлагает собственные Мастера, но поддерживает и Apache Ant. Ant написан на Java и управляется конфигурационным файлом формата XML. В этом файле могут быть указаны практически любые действия для создания приложения (для программ на языке C используется термин make), например, компиляция и копирование исходных файлов, создание архивов, запуск программ.
+<p>JDeveloper 10g автоматически генерирует конфигурационный файл Ant и может его использовать в процессе тестирования приложения. Таким образом, большая часть свойств проекта может мигрировать в файл стандартного формата. Миграции способствует тот факт, что JDeveloper 10g не поддерживает виртуальную машину версии 1.5, которая сейчас находится в стадии бета-тестирования. Вероятно, силы создателей JDeveloper были брошены на доработку ADF-компонентов, и встроенный компилятор JDeveloper остался без изменений.
+<p>Тестирование приложения во встроенном контейнере OC4J проблем не вызывает. Конфигурационные файлы контейнера обновляются автоматически. Если возникают проблемы с подсоединением к базе данных, то нужно проверить параметры соединения в файле data-sources.xml.
+<h3>Контейнеры для работы J2EE-приложений </h3>
+<p>При тестировании Web-приложений в JDeveloper автоматически запускается встроенный сервер приложений Oracle Containers for Java (OC4J). Нет необходимости устанавливать или конфигурировать дополнительное ПО, как иногда приходится делать с другими средствами разработки. OC4J не отличается от встроенного в Oracle Application Server 9iR2.
+<p>Java-программы не могут выполняться в операционной системе напрямую, для их выполнения требуется прослойка между приложением и ОС, называемая виртуальной машиной Java (JVM). Если в ОС установлена прослойка JVM, то в ней будут работать любые Java-программы.
+<p>Идея исполнения программ через дополнительную прослойку понравилась компании Sun; в итоге Web-приложения (например, сервлеты), не могут работать напрямую даже в виртуальной машине. Им требуются дополнительные функции, которые обеспечивают программы-&quot;контейнеры&quot;. Поскольку большинство функций, таких, как прослушивание порта по протоколу HTTP, выдача страниц, проверка прав доступа, подсоединение к базам данных, используются почти во всех Web-приложениях, от программиста не требуется их реализовывать. Они уже написаны разработчиками контейнеров, так что программисту остается сконцентрироваться на написании логики своего приложения.
+<p>Самые известные контейнеры - это Apache Tomcat, JBoss, Ironflare Orion, Mortbay Jetty и OC4J. OC4J лицензирован Oracle у Ironflare и не сильно отличается от последнего. Это удобно тем, что почти вся информация об особенностях Orion, накопленная в сообществе программистов, применима к OC4J. Использование контейнеров сторонних разработчиков популярно в Java-сообществе. Например, Sun выбрала Tomcat как базовую платформу для тестирования новшеств J2EE, а JBoss в качестве ядра использует Jetty и Tomcat.
+<p>Все известные контейнеры сами представляют собой Java-программы. Получается, что для запуска Web-приложений нужна JVM, в которой будет работать контейнер, а в нем, в свою очередь, будут работать сервлеты. Может показаться, что это уменьшает скорость выполнения сервлетов, но на деле это не так. В исполняемых программах, написанных на языке C, имеются те же самые прослойки в виде программных интерфейсов API, только они находятся внутри программы или привязаны к ней. Программисту при этом приходится работать с кодом большого объема, и вряд ли он более опытен, чем создатели контейнеров. Поэтому вероятность ошибок в сервлетах оказывается намного меньше. Кроме того, код получается компактным. Все это удобно и для программиста, и для заказчика программ.
+<p>В целом от работы с JDeveloper 10g остается приятное впечатление. Среда содержит много возможностей, не видимых поверхностному взгляду. Технология разработки приложений ADF позволяет быстро и в визуальном режиме создавать сложные приложения.
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6688.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Разработка Java-приложений на Oracle JDeveloper 10g
+</a><br><a href="detail.php@ID=6688.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Олег Иванов 
+  oivanov@fors.com
+В конце апреля компания Oracle (http://www.oracle.com) 
+  выпустила новую версию средства разработки&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6688.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6688&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0bc5ea66be831ab62ebeda35f473629f'><img src='../bitrix/tools/captcha.php@captcha_code=0bc5ea66be831ab62ebeda35f473629f' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

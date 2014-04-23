@@ -1,0 +1,416 @@
+<HTML>
+<HEAD>
+<title>Эволюция мобильных НМС Intel
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Евгений Рудометов rudometov@mail.ru В статье использованы открытые материалы корпорации Intel (http://www.intel.com). Центральные процессоры - это, разумеется, ключевые элементы компьютеров. Однако реализация их потенциальных возможностей зависит" />
+<meta name="description" content="Евгений Рудометов rudometov@mail.ru В статье использованы открытые материалы корпорации Intel (http://www.intel.com). Центральные процессоры - это, разумеется, ключевые элементы компьютеров. Однако реализация их потенциальных возможностей зависит" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082512','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8612' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8612&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8612"].SHOW_IMAGE.value="N"; document.forms["PrintForm8612"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8612"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8612"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8612);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8612.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8612.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8612);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11520.html'>№4 (80), апрель 2005</a><h1>Эволюция мобильных НМС Intel
+</h1>13.04.2005<p></p><DIV class='article-text'><p><i>Евгений Рудометов</i> 
+<br><a href="mailto:rudometov@mail.ru">rudometov@mail.ru</a>
+<p><hr width="40%" align="left" noshade>
+В статье использованы открытые материалы корпорации Intel (<a href="http://www.intel.com">http://www.intel.com</a>). 
+<p>Центральные процессоры - это, разумеется, ключевые элементы компьютеров. Однако реализация их потенциальных возможностей зависит от электронного окружения, представленного специализированными микросхемами и другими радиоэлементами. Эти компоненты задают необходимые рабочие режимы электропитания и передачи компьютерных данных, обеспечивают электрические и логические связи процессора с остальными частями системы, координируя их работу и стремясь обеспечить наибольшую эффективность всех компонентов. Именно поэтому такие микросхемы называют микросхемами системной логики.
+<h3>Особенности НМС </h3>
+<p>Специализированные наборы микросхем (НМС), их внутренняя структура и функциональные возможности должны быть тесно увязаны с особенностями архитектуры конкретных вариантов процессоров, на работу с которыми они ориентированы. Кроме того, такие наборы, составляющие основу системных плат, создаются с учетом различных конфигураций компьютеров и возможного разнообразия решаемых задач. Использование оптимально спроектированного НМС служит залогом высокой производительности компьютера; и наоборот, неоптимальный набор микросхем окружения процессора способен снизить общую производительность и ограничить функциональные возможности всей компьютерной системы.
+<p>Именно по этой причине выпуск новых процессоров обычно сопровождается проектированием специализированного НМС. Без такого набора процессор остается просто микросхемой, бесполезным - но достаточно дорогостоящим - кусочком кремния с чрезвычайно сложной внутренней электронной структурой.
+<p>Свои специализированные НМС разрабатываются для каждого поколения процессоров. Более того, для каждого из поколений процессоров может существовать несколько вариантов НМС, в том числе и от разных производителей, отличающихся внутренней архитектурой, составом и числом микросхем, функциональными возможностями и эффективностью работы. Именно поэтому так важен детальный анализ структуры, параметров и возможностей НМС.
+<p>Развитие архитектуры НМС позволило сократить число используемых в их составе микросхем. Основу современных НМС составляют, за редким исключением, всего два компонента.
+<p>Первый компонент - микросхема, называемая северным мостом (North Bridge). Посредством встроенных в него контроллеров северный мост определяет работу основных подсистем компьютера, обеспечивая связь между процессором, модулями оперативной памяти, а с некоторых пор и видеоадаптером. В дополнение к этому данная микросхема контролирует работу подключаемых к ней карт расширения (если, конечно, это предусмотрено архитектурой НМС). Еще одна ее функция - поддержка связи со вторым компонентом (или компонентами) НМС.
+<p>Второй компонент НМС называется южным мостом (South Bridge). Эта микросхема с помощью встроенных средств и внешних элементов обеспечивает контроль за работой большого числа сравнительно медленных периферийных устройств.
+<p>Необходимо отметить, что разделение НМС на компоненты позволяет разрабатывать специализированные микросхемы, что обеспечивает за счет комбинирования компонентов эффективное решение задач.
+<p>Остается добавить, что одна из основных функций микросхем системной логики - эффективное управление ресурсами компьютеров. К этим ресурсам относятся, кстати, многочисленные шины, входящие в состав архитектуры компьютерной системы, и потоки передаваемой с их помощью информации. В мобильных системах НМС играют также активную роль в управлении и экономии энергоресурсов, представленных автономными источниками питания.
+<h3>Первые мобильные ПК </h3>
+<p>В ходе своей эволюции персональные компьютеры до некоторого момента были представлены исключительно настольными вариантами с соответствующими системными платами. Но развитие полупроводниковых и компьютерных технологий позволило повысить степень интеграции комплектующих, и в результате удалось создать компактные системы, постепенно приобретающие черты мобильных устройств.
+<p>На начальном этапе относительно портативные компьютеры выполнялись в виде небольших чемоданчиков или портфелей. По мере совершенствования архитектур и технологий удалось довести габариты компьютеров, предназначенных для мобильного использования, до размеров книг и блокнотов (правда, пока довольно больших). В соответствии с размерами их называли лэптопами (laptop) либо ноутбуками (notebook). Эти мобильные компьютеры во многом унаследовали архитектуру своих настольных прототипов, включая микросхемы системной логики.
+<p>Говоря о развитии архитектуры компьютеров, необходимо отметить, что мобильные компьютеры появились еще до появления чипсетов в современном понимании, даже в многокомпонентном варианте с реализацией основных функций в виде отдельных микросхем. Вообще говоря, концепция мобильного компьютера была разработана Аланом Кеем в 1968 г. Некоторые ее положения были реализованы в компьютере для NASA массой 12 кг в 1979 г. Однако автономные модели были созданы существенно позже.
+<p>Одной из первых мобильных разработок стал компьютер Osborne 1 (рис. 1), созданный в 1981 г. на основе процессора Z80 без НМС в современном понимании. В архитектуре этого компьютера не было даже жестких дисков, но были накопители на гибких дисках формата 5,25 дюйма. Кроме того, в конструкции был представлен и миниатюрный дисплей на основе электронно-лучевой трубки.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4_2005/mobile_chip/ris1.jpg" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Компьютер <br>Osborne 1.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В дальнейшем свои мобильные решения предложили такие известные фирмы, как IBM, Toshiba, Compaq, Apple и другие. Некоторые ранние модели были основаны на процессорах архитектуры Intel с поддержкой их работы соответствующими микросхемами.
+<h3>Предыстория НМС </h3>
+<p>Рассматривая эволюцию НМС мобильных систем, необходимо отметить, что корпорация Intel выступает как основной производитель НМС не только для этого сегмента рынка, но и для сегмента настольных систем, с которых и началась эра специализированных микросхем. И лидерство Intel здесь бесспорно, хотя это дается ей нелегко.
+<p>Однако так было далеко не всегда. Более того, до некоторого момента Intel вообще не имела своих решений, и настольные компьютеры собирались на основе специализированных наборов от других фирм.
+<p>Считается, что первый НМС, названный 82С206, предложила фирма Chips and Technologies в 1986 г. Конечно, этот набор не был еще &quot;мобильным&quot;, более того, он совсем не походил на те комплекты микросхем, которые используются сегодня, однако простейшие функции координации компьютерных подсистем он выполнял.
+<p>НМС 82С206 состоял из пяти микросхем, одной основной и четырех вспомогательных. Он уже содержал контроллер шин, генератор тактовой частоты, системный таймер, контроллер прерываний и т. п. Как следует из названия, этот НМС был ориентирован на процессоры класса Intel 286 (i286). Вскоре этот набор был усовершенствован и получил наименование New Enhanced AT. А потом появились более совершенные наборы для Intel 386 (i386), Intel 486 (i486) и т. д., эволюция которых привела к современным мобильным устройствам.
+<p>В процессе совершенствования компьютерной архитектуры идея разработки и выпуска специализированных НМС вслед за пионером чипсетостроения - фирмой Chips and Technologies была подхвачена такими компаниями, как Suntac, Opti, VLSI, UMC и т. д. Некоторые изделия данных фирм стали основой первых моделей мобильных компьютеров, созданных на основе процессоров i286 и i386, с массой, нередко заметно превышавшей 5 кг.
+<p>В 1994 г. на рынке НМС активно заявила о себе компания Intel со своими изделиями, которые позволили ей уже через год стать доминирующим производителем НМС, правда, сначала для настольных систем. Однако, используя свой опыт, эта компания не упустила свой шанс и с мобильными компьютерами в период начала их массового выпуска, создав ряд удачных мобильных НМС. Дальнейшие разработки Intel позволили ей закрепить свой успех и практически вытеснить конкурентов из этого сегмента рынка, агрессивно захватив и удерживая в последующие годы более 80% объема продаж мобильных НМС.
+<h3>От настольных к мобильным </h3>
+<p>Первым специализированным НМС от Intel считается i82350, поддерживающий шину EISA и созданный для процессоров класса i386DX и i486. Однако он не имел особого успеха, поскольку данная шина не получила распространения. Тем не менее попытки выпуска настольных и переносных компьютеров, в архитектуре которых использовалась данная шина, все-таки были предприняты. Однако такие системы не стали массовыми даже на рынке настольных решений, что отразилось на судьбе и самого НМС 82350.
+<p>Следующими наборами микросхем системной логики, созданными под i486, стали НМС i420TX (1992 г.), i420EX и i420ZX (оба 1994 г.). Хотя они и были более удачными, но их трудно было назвать НМС для мобильных устройств из-за особенностей их архитектуры, функций и эксплуатации. Однако, строго говоря, мобильными в то время считались любые относительно компактные компьютеры с автономными источниками питания. Что же касается их архитектуры, то обычно за основу брали известные решения с комплектующими для настольных компьютеров. В результате так называемые мобильные устройства были довольно тяжелыми. Однако даже первые, сравнительно несовершенные и не очень мобильные изделия были достаточно популярны, поскольку масса 5-10 кг тогда не считалась чрезмерной и не слишком отпугивала пользователей.
+<p>По сути, прорыв произошел только после появления процессоров Intel Pentium. В ряде наборов, ориентированных на процессоры данного класса, появился наконец-то НМС, анонсированный как мобильный, - i430MX (1995 г.). Основой его послужил, как и следовало ожидать, настольный вариант i430FX: процессор P75+, оперативная память - модули FPM/EDO с максимальным объемом 128 Мбайт при кэшировании только 64 Мбайт. По сути, отличие мобильного варианта от настольного заключалось в южном мосте: в настольном варианте использовалась микросхема PIIX, а в мобильном - более совершенная и компактная MPIIX.
+<p>Но по-настоящему популярным стал только НМС i430TX (структура компьютера на его основе показана на рис. 2). Дело в том, что именно в этот набор его создатели даже в настольном варианте добавили поддержку ряда важных технологий. Среди них отметим технологию MMX, повышающую эффективность обработки потоковых данных (одна команда и много данных) и ориентированную на мультимедийные приложения. Кроме того, в i430TX был реализован один из первых стандартов энергосбережения, получивший наименование DPMA (Dynamic Power Management Architecture). Благодаря основанным на DPMA технологиям этот НМС можно было использовать как в настольных, так и в мобильных компьютерах. Результатом стало пониженное энергопотребление, а следовательно, и увеличение времени работы системы от автономного источника питания.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4_2005/mobile_chip/ris2.gif" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Рис. 2. Структура компьютера на базе НМС i430TX.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В дополнение к перечисленным достоинствам следует упомянуть возможность использования модулей оперативной памяти FPM/EDO/SDRAM, протокола Ultra DMA/33 для накопителей, параллельного интерфейса подключения карт расширения PCI 2.1 (параллельные операции PCI), последовательного интерфейса USB со скоростью передачи данных до 12 Мбит/с и другие функции. Остается добавить, что реализация технологии ACPI (Advanced Configuration and Power Interface) сделала возможным быстрое включение компьютера и переход системы в режим пониженного энергопотребления при отсутствии активности пользователя или модулей ПО. Все это способствовало популярности набора микросхем i430TX как в настольных, так и в мобильных решениях.
+<p>При всех достоинствах данного НМС компания Intel не ограничилась настольным решением и специально объявила и выпустила мобильный вариант, который, по сути, представлял собой тот же НМС i430TX. По замыслу разработчиков, этот шаг должен был стимулировать производство мобильных систем.
+<p>В дальнейшем производители мобильных решений не прекращали попытки использовать НМС, предназначавшиеся для настольных решений, тем более что этому способствовала и сама Intel, выпуская НМС, которые могли применяться как в настольных, так и в мобильных решениях.
+<p>Примером может послужить i440BX, созданный для процессоров Intel Pentium II (рис. 3). Этот НМС стал вторым после i440LX набором двойного применения, поддерживающим видеоподсистему AGP (до этого видеоподсистемы строились исключительно на основе шины PCI). Новый же стандарт не только освободил шину PCI от возросших потоков данных, но и обеспечил прирост производительности для графики. Кстати, это обстоятельство нашло отражение и в самом наименовании НМС - Intel 440BX AGPset.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4_2005/mobile_chip/ris3.gif" alt=Fig.3></td></tr>
+<tr><td valign="bottom">Рис. 3. Структура компьютера на базе НМС i440BX.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Что касается других существенных преимуществ, то i440BX стал первым НМС, где тактовая частота была поднята до 100 МГц. Это, конечно же, обеспечило адекватный рост производительности компьютерной системы. Остается добавить, что НМС i440BX поддерживал технологию QPA (Quard Port Acceleration), обеспечивающую параллельность внутренних операций работы за счет реализации четырехпортового арбитража шины процессора, графической шины AGP, шины PCI и шины памяти. Кроме того, данный НМС официально поддерживал память EDO/SDRAM объемом до 512 Мбайт (1 Гбайт в случае регистровой памяти), протокол Ultra DMA/66, интерфейс USB, а также ACPI как для настольных, так и для мобильных вариантов.
+<p>Вскоре был объявлен и мобильный вариант i440BX. Впрочем, это был исключительно маркетинговый ход, поскольку мобильный НМС фактически представлял собой клон настольного прототипа.
+<p>В дальнейшем были созданы упрощенные варианты, получившие наименование i440ZX, с поддержкой тактовой частоты 66 и 100 МГц, на базе которых создавались и настольные, и мобильные системы.
+<p>Рассматривая эволюцию НМС от Intel, следует обратить внимание, что при реализации мобильных решений нередко использовались настольные варианты, даже если анонсировались и мобильные. Как правило, это делалось по экономическим соображениям. Однако было бы ошибкой считать, что все мобильные НМС того времени были исключительно клонами настольных аналогов. В качестве примера отдельной разработки, не копирующей настольный прототип, можно привести НМС i440MX (рис. 4). Этот вариант, созданный на основе i440BX, представлял собой одночиповый НМС, ориентированный исключительно на мобильный рынок.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4_2005/mobile_chip/ris4.gif" alt=Fig.4></td></tr>
+<tr><td valign="bottom">Рис. 4. Структура компьютера на базе НМС i440MX.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>НМС i440MX был ориентирован на поддержку мобильных процессоров Intel Celeron с архитектурой ядра P6, как и у процессоров Intel Pentium II и Pentium III. Как было объявлено, основой внутренней структуры i440MX послужили микросхемы северного и южного моста НМС i440BX с сохранением в новой разработке всех функций его прототипа. Исключением послужила видеоподсистема, которая в новом наборе была представлена решениями на основе PCI (в прототипе основой видеоподсистемы служил порт AGP). Было создано два варианта: i440MX и i440MX-100, отличающихся тактовой частотой шины памяти.
+<p>Остается добавить, что у i440MX одночипового аналога среди настольных решений не было. Это выгодно отличало мобильный вариант от прототипа и позволяло существенно снизить общую цену системы.
+<p>Подчеркнем, что с момента появления i440MX линии НМС для настольных и мобильных систем стали расходиться все чаще и чаще - в соответствии с требованиями процессоров, ориентированных на разные сегменты рынка и проектируемых по-разному. Это было связано в первую очередь с тем, что цели, стоящие перед разработчиками настольных и мобильных систем, постепенно стали меняться. Если для настольных решений главным оставалась производительность, то для мобильных компьютеров на первое место стали выходить параметры, связанные с эксплуатацией, прежде всего масса и экономичность энергопитания. Действительно, именно масса в значительной степени определяет портативность, а энергоэкономичность системы наряду с емкостью аккумулятора - время автономной работы мобильного устройства. Именно поэтому мобильные процессоры стали проектировать с расчетом на пониженное электропитание, а функции поддержки ложились на соответствующие НМС.
+<p>Одним из таких НМС стал i815EM, поддерживающий тактовую частоту процессорной шины до 100 МГц и ориентированный на мобильные варианты процессоров - Intel Pentium III-M и мобильный Intel Celeron. НМС i815EM получил широкое распространение для систем на основе данных процессоров. Созданный на отлаженной базе технологий i440BX, он обладал и рядом характеристик нового поколения, прежде всего встроенными видеосредствами. Набор микросхем i815EM позволял установить дополнительно 4 Мбайт дисплейной кэш-памяти либо использовать внешний графический контроллер AGP 4x для повышения качества видеоизображений и ускорения вывода трехмерной графики.
+<p>НМС i815EM состоял из двух микросхем, названных разработчиками хабами (контроллерами-концентраторами). Первая из них - традиционная, типовая составляющая, которая реализует связь с процессором, подсистемой оперативной памяти, видеоподсистемой и вторым компонентом.
+<p>Второй компонент данного НМС отвечает за ввод-вывод. Она носит название ICH2-M, имеет встроенные функции LAN и четыре порта USB, контроллер AC&#39;97 (поддерживает полностью объемный шестиканальный звук и работу программ, реализующих функции модема) и т. д. Кроме того, микросхема ICH2-M, созданная для мобильных систем, поддерживает технологию Intel SpeedStep. Эта технология автоматически переключает процессор между двумя основными тактовыми частотами в зависимости от нагрузки на него, оптимизируя время работы от батарей и производительность приложений. Intel SpeedStep обеспечивает повышенное время работы в автономном режиме от внутреннего источника питания мобильного компьютера. Заметим, что в дальнейшем технология Intel SpeedStep неоднократно подвергалась усовершенствованию.
+<p>Следующим мобильным НМС стал i830. Созданный на основе своего предшественника - i815EM, он ориентирован на системы с мобильными Intel Pentium III-M и Intel Celeron. Этот НМС имеет тактовую частоту шины процессора до 133 МГц и поддерживает модули памяти PC133 SDRAM.
+<p>Здесь следует напомнить, что к тому времени мобильные процессоры успешно перешли от ножевого разъема (SECC) к стандартному, так называемому сокетному (Socket). Процессоры выпускались в корпусах двух типов - Micro FCPGA (Flip Chip Pin Grid Array) и Micro FCBGA (Flip Chip Ball Grid Array), подходящих даже для самых маленьких субноутбуков и планшетных ПК. Для этих устройств были выпущены модели с низким и сверхнизким энергопотреблением, достигнутым за счет пониженного напряжения питания (LV - Low Voltage и ULV - Ultra Low Voltage) и уменьшенной частоты работы ядра. В результате процессор Intel Pentium III-M (866 МГц/533 МГц) при работе от батарей потреблял менее 1 Вт, а модель процессора со сверхнизким напряжением питания (700 МГц/350 МГц) - 0,5 Вт. Такие уровни энергопотребления позволяют создавать мини- и субноутбуки с временем автономной работы более 7 ч. Однако широкие функциональные возможности и стандартных, и экономичных вариантов Intel Pentium III-M требуют соответствующего окружения. В качестве центрального элемента микросхемной поддержки процессора выступил именно НМС i830.
+<p>Для i830 существует три версии реализации контроллера памяти. Первая модификация - это набор микросхем i830MP, поддерживающий внешний графический адаптер AGP 2x/4x. Вторая - это НМС i830M со встроенным графическим контроллером; эта модификация позволяет применять и внешний графический адаптер. Наконец, третья модификация - это i830MG со встроенной недорогой графической подсистемой для сегмента бюджетных решений рынка мобильных компьютеров.
+<p>Из ключевых особенностей i830 следует отметить поддержку памяти до 1 Гбайт, шести портов USB и улучшенные по сравнению с предшественниками режимы энергосбережения, что позволяет еще больше увеличить время работы мобильных систем от встроенного источника питания.
+<p>Подводя итоги анализа возможностей мобильных НМС семейства i830, следует отметить, что развитие данной архитектуры получило свое логическое продолжение в семействе i845.
+<h3>НМС для процессоров Pentium 4 </h3>
+<p>В семейство мобильных наборов микросхем i845 входят два варианта: i845MP, созданный для высокопроизводительных систем, и i845MZ для систем начального уровня. Оба НМС разработаны, протестированы и оптимизированы для работы с мобильным процессором новой для мобильных систем архитектуры. Эта архитектура, известная из настольных решений как NetBurst, сменила предыдущее поколение P6, в мобильном секторе завершившее свое развитие в моделях Intel Pentium III-M и Intel Celeron. Следующие модели мобильных процессоров, по аналогии с настольными вариантами, получили наименование Intel Pentium 4-M.
+<p>Семейство НМС i845MP/i845MZ (контроллер-концентратор памяти 82845MP/82845MZ) поддерживает внешнее графическое решение AGP 4x и процессорную шину, унаследованную от настольного прототипа. Для мобильных решений, созданных на основе данных вариантов НМС, шина FSB типа QPB (Quad-Pumped Bus) работает на тактовой частоте 100 МГц. Как известно, такая шина при частоте 100 МГц передает данные с частотой 400 МГц (для адресной части - 200 МГц), что обеспечивает пиковую пропускную способность до 3,2 Гбайт/с.
+<p>Кроме того, НМС i845MP поддерживает модули оперативной памяти типа DDR200 и DDR266 SDRAM общим объемом до 1 Гбайт, а i845MZ - только DDR200 SDRAM общим объемом до 512 Гбайт.
+<p>Говоря о возможностях подсистемы памяти, следует напомнить, что память DDR SDRAM (Double Data Rate SDRAM) - это память SDRAM, обеспечивающая передачу данных по передним и задним фронтам тактовых импульсов шины памяти, т. е. она работает фактически на удвоенной тактовой частоте. Это означает, что память DDR200 и DDR266 обладает удвоенной полосой пропускания по сравнению с ранее используемым типом SDR SDRAM (Single Data Rate SDRAM, или просто SDRAM), представленным в мобильных системах предыдущего поколения модулями PC100 и PC133 SDRAM. Использование в мобильных системах нового типа памяти обеспечило существенный рост производительности.
+<p>Семейство НМС i845MP/i845MZ также поддерживает усовершенствованную технологию Intel SpeedStep, режимы пониженного энергопотребления Deep и Deeper Sleep, обеспечивающие надежный переход между различными состояниями энергопотребления.
+<p>Усовершенствованная технология Intel SpeedStep динамически изменяет тактовую частоту и напряжение питания процессора в зависимости от требуемой вычислительной мощности. Например, потребляемая мощность процессора Intel Pentium 4-M в среднем составляет 2 Вт благодаря тому, что напряжение питания процессора снижается до величины менее 1 В (например, в периоды между ударами по клавиатуре). Однако когда необходима максимальная производительность, напряжение питания ядра повышается до 1,3 В. Такое динамическое переключение делителя тактовых частот шин, напряжения питания ядра и тактовой частоты ядра значительно увеличивает время работы от батарей.
+<p>Еще один подход, применяемый в мобильных элементах и системах на основе соответствующих НМС, - это специальные средства управления энергопотреблением, например, технология Deeper Sleep. В состоянии Deeper Sleep напряжение питания процессора снижается до наименьшего возможного уровня, при котором не происходит потери данных. Очевидно, что в данном режиме расход энергии батарей существенно сокращается.
+<p>Все эти модификации режимов оптимального управления энергопотреблением позволяют сочетать высокую производительность со сравнительно длительным сроком автономной работы.
+<p>Что же касается возможностей управления устройствами ввода-вывода, то они определяются вторым компонентом НМС i845, в базовом комплекте которого используется ICH3-M, что обеспечивает совместимость с Ultra ATA/100, PCI, LAN, USB, AC&#39;97 2.2 и т. п.
+<p>Улучшенный вариант i845 - НМС семейства i852, оптимизированные для моделей мобильного процессора Intel Pentium 4-M. Это семейство представлено вариантами i852GME, i852GM, i852PM.
+<p>Первый, самый мощный вариант НМС имеет встроенные графические средства и работает с внешним видеоадаптером AGP 4x. Он также поддерживает процессорную шину с частотой передачи данных 533 и 400 МГц и модули оперативной памяти типа DDR333/266 объемом до 2 Гбайт. Структура компьютера на базе такого НМС приведена на рис. 5.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4_2005/mobile_chip/ris5.gif" alt=Fig.5></td></tr>
+<tr><td valign="bottom">Рис. 5. Структура компьютера на базе НМС i852GME.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Второй вариант, i852GM, имеет встроенные графические средства и не предусматривает внешнего видеоадаптера. Он поддерживает процессорную шину с частотой 400 МГц и память типа DDR200/266 объемом до 1 Гбайт.
+<p>Третий вариант, i852PM, не имеет встроенных графических средств, но совместим с внешним видеоадаптером AGP 4x. Он поддерживает процессорную шину с частотой 533 и 400 МГц и память типа DDR333/266 объемом до 2 Гбайт.
+<p>Все варианты НМС i852 поддерживают шесть портов USB, Ultra DMA/100 и т. п., а также технологии энергосбережения. Так, Enhanced Intel SpeedStep представляет собой технологию изменения напряжения питания и частоты процессора, охватывающую режимы от уровня максимальной производительности до режима экономии энергии для продления работы аккумуляторов. Кроме того, поддерживается состояние ожидания Deeper Sleep Alert - режим динамического управления электропитанием функционирует при меньшем напряжении питания, чем режим Deep Sleep. Все это увеличивает срок службы батарей и соответственно повышает уровень мобильности портативных систем.
+<h4>*** </h4>
+<p>Несмотря на всю эффективность решений, созданных на основе Intel Pentium 4-M и НМС семейства i852, специалисты Intel продолжили работу над совершенствованием архитектуры важнейших компьютерных компонентов. Эти усилия нашли воплощение в мобильных моделях процессоров новой архитектуры, а также в соответствующих мобильных НМС. Но об этом в следующей части статьи.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8612.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Эволюция мобильных НМС Intel
+</a><br><a href="detail.php@ID=8612.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Евгений Рудометов 
+rudometov@mail.ru
+
+В статье использованы открытые материалы корпорации Intel (http://www.intel.com). 
+Центральные процессоры -&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8612.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8612&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='06b28ea7cdc0ecf53b075caa569fc38a'><img src='../bitrix/tools/captcha.php@captcha_code=06b28ea7cdc0ecf53b075caa569fc38a' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

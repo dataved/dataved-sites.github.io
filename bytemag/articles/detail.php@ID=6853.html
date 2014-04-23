@@ -1,0 +1,426 @@
+<HTML>
+<HEAD>
+<title>Некоторые решения IBM для ИТ-безопасности
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Как отмечают аналитики, сегодня компании начинают подходить к вопросам безопасности со стратегической точки зрения. Больше стало тех, кто согласовывает задачи обеспечения безопасности с бизнес-целями организации (в 2006 г. доля таких компаний составила" />
+<meta name="description" content="Как отмечают аналитики, сегодня компании начинают подходить к вопросам безопасности со стратегической точки зрения. Больше стало тех, кто согласовывает задачи обеспечения безопасности с бизнес-целями организации (в 2006 г. доля таких компаний составила" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398078804','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6853' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6853&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6853"].SHOW_IMAGE.value="N"; document.forms["PrintForm6853"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6853"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6853"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6853);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6853.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6853.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6853);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6258.html'>Безопасность</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><br /></p><a href='../numbers/index.php@ID=11530.html'>№2 (101), февраль 2007</a><h1>Некоторые решения IBM для ИТ-безопасности
+</h1>Автор: Александр Трецин<br />15.02.2007<p></p><DIV class='article-text'><p>Как отмечают аналитики, сегодня компании начинают подходить к вопросам безопасности со стратегической точки зрения. Больше стало тех, кто согласовывает задачи обеспечения безопасности с бизнес-целями организации (в 2006 г. доля таких компаний составила 20%) и повышает приоритет защиты систем в зависимости от важности хранящихся в них данных. Одной из важнейших перемен в сфере безопасности можно считать слияние физической и информационной безопасности. Доля организаций, начавших проводить такие мероприятия, возросла с 23% в 2003 г. до 75% в 2006-м. Тем не менее в большинстве компаний (64%) руководители служб безопасности не относятся к высшему руководству.
+<p>Впрочем, ИТ-руководители никогда не выпустят из своего внимания область ИТ-безопасности. Тем не менее конкретные требования, влияющие на выбор того или иного решения для защиты, разнятся в зависимости от сферы работы компании. Согласно исследованию IDC, между отраслями существуют серьезные различия, касающиеся определения «болевых точек» бизнеса, а также причин внедрения специализированных решений. Наиболее привлекательные для вендоров рынки — это телекоммуникации, финансовый сектор и государственные учреждения, традиционно инвестирующие в безопасность значительные средства. В остальных случаях поставщикам приходится искать баланс между предлагаемой для различных вертикалей функциональностью и ценой решения. Наиболее актуальными признаны проблемы, связанные с угрозой изнутри организации: защита интеллектуальной собственности и предотвращение утечки конфиденциальной информации. По данным аналитиков, 80% утечек корпоративной интеллектуальной собственности происходит через электронную почту. С этим же средством общения связано 85% всех инициированных компаниями судебных процессов.
+<h3>Угрозы безопасности и тенденции их развития</h3>
+<p>В прошлом году корпорация IBM (<a href="http://www.ibm.com">http://www.ibm.com</a>) обнародовала содержание своего отчета Global Business Security Index Report, в котором выявляются, оцениваются и анализируются потенциальные угрозы сетевой безопасности. При подготовке отчета используются данные, предоставляемые 3 тыс. специалистов IBM по информационной безопасности по всему миру, а также информация, поступающая с тысяч контролируемых IBM устройств и от бизнес-партнеров корпорации по стратегической безопасности. Основываясь на предварительных показателях, эксперты предсказывают серьезные изменения характера киберпреступности и переход от глобальных эпидемий к меньшим по масштабам, но более скрытым атакам на конкретные организации с целью наживы.
+<p>По данным отчета, составленного сотрудниками службы IBM Global Security Intelligence, в течение большей части 2005 г. глобальные ИТ-угрозы находились на среднем уровне. И хотя червь Zotob привлек внимание всего мира, атаковав известные средства массовой информации, в сравнении с предшествующим годом число глобальных эпидемий вредоносного ПО заметно снизилось.
+<p>За последнее время было выявлено множество случаев распространения спама, вредоносного ПО и других видов ИТ-атак, имеющих криминальный характер. Получившие широкую огласку аресты киберпреступников в США и по всему миру выявили их связь с организованной преступностью и мотивацию их деятельности — получение денег. Учитывая постоянное улучшение уровня защиты ПО и сетей, многие из этих преступников при организации атак с высокой вероятностью будут использовать наиболее уязвимую точку доступа к компании — ее сотрудников.
+<p>По мнению специалистов IBM, ситуация изменилась — вместе с усилением защиты большинства систем и ужесточением наказаний началось проникновение в это пространство организованных, активных и настойчивых искателей наживы. Это означает, что атаки будут более целенаправленными и, вероятно, более опасными. Организации по всему миру, представляющие как государственный, так и частный сектор, должны быстро и сообща бороться с этой растущей проблемой.
+<p>В отчете IBM Global Business Security Index также представлен ряд других возможных тенденций, кратко охарактеризованных ниже.
+<h4>Внутренние атаки</h4>
+<p>В то время как ПО становится все лучше защищенным, пользователи компьютеров по-прежнему остаются слабым звеном в корпоративных системах защиты. Преступники не будут терять время на долгое изучение уязвимостей ПО, а направят свои усилия на то, чтобы убедить пользователя запустить вредоносную программу. Глобальные ресурсы, увольнения сотрудников, слияния и приобретения усложняют деятельность компаний и организаций, пытающихся предупредить пользователей о подобных угрозах.
+<h4>Развивающиеся рынки</h4>
+<p>Киберпреступники используют в своих интересах низкий уровень международного сотрудничества в борьбе с киберпреступностью и организуют трансграничные атаки с минимальным для себя риском. Таким образом, возрастают угрозы как со стороны развивающихся стран, так и для самих этих стран. В результате значительно усложняется задача отслеживания источников атак, в особенности если учесть тот факт, что все чаще атаки исходят из регионов Восточной Европы и Азии, где наказания менее суровы, а возможности органов правопорядка ограничены.
+<h4>Онлайновые дневники</h4>
+<p>Более широкое использование коллективных инструментов, например, онлайновых дневников (блогов), также повышает вероятность утечки конфиденциальных бизнес-данных.
+<h4>Мгновенный обмен сообщениями</h4>
+<p>Botnet-сети (системы программных роботов, позволяющих контролировать систему без ведома ее владельца) будут оставаться одной из самых серьезных угроз для Интернета. Новые botnet-сети, состоящие из меньших элементов, чтобы их было проще скрыть, возможно, будут перемещаться в системы мгновенного обмена сообщениями и другие одноранговые сети с целью получения контроля над инфицированными системами и управления ими.
+<h4>Мобильные устройства</h4>
+<p>За последнее время заметно выросло количество вредоносных программ для мобильных телефонов, КПК и других беспроводных устройств, однако глобальных эпидемий до сих пор не было, поскольку эти программы не могут распространяться самостоятельно — подчеркнем, пока не могут. Но эта тенденция может стать реальной угрозой в ближайшее время.
+<p>Целенаправленные атаки по электронной почте свидетельствуют об изменении характера и целей подобных действий. Такие атаки, за которыми обычно кроются финансовые, конкурентные, политические или социальные мотивы, чаще всего направлены на правительственные структуры, военные ведомства и другие крупные организации, в особенности в аэрокосмической и нефтяной отраслях, а также в сфере законодательства и правозащиты. Некоторые случаи атак получили широкую огласку и вышли на первые полосы газет, однако, по-видимому, значительно большее число атак не было обнаружено компаниями.
+<h4>Фишинг</h4>
+<p>Фишинг по-прежнему оставался серьезной угрозой. В среднем одно из 304 электронных писем представляло собой фишинговую атаку, при том что два года назад одна атака приходилась на 943 письма. По-видимому, рост числа фишинговых атак связан с увеличением количества botnet-сетей, которые используются для массовой рассылки мошеннических электронных сообщений в интересах преступников, стремящихся путем более агрессивных целевых атак повысить свои доходы.
+<h4>Целевой фишинг</h4>
+<p>В связи с ростом числа целевых атак более частыми стали и случаи целевого фишинга (spear phishing) — когда преступники бомбардируют компании узконаправленным спамом, выглядящим как электронные письма, отправленные сотрудниками организации, как правило, из ИТ-подразделения или отдела кадров. Зачастую злоумышленник предлагает небольшое вознаграждение в обмен на информацию, и люди, не понимая истинного характера этих электронных писем, нередко выполняют просьбу. Они непреднамеренно раскрывают информацию, которая позволяет преступнику получить доступ к защищенным областям корпоративной сети, что может привести к краже интеллектуальной собственности и других конфиденциальных корпоративных данных. Целевой фишинг, по сути реализующий методы социальной инженерии, использовался также для того, чтобы побудить людей запускать вредоносные программы.
+<h4>Вирусы</h4>
+<p>В целом отмечено незначительное сокращение объема электронных писем, содержащих вирусы.
+<h4>Большая изощренность вредоносного ПО</h4>
+<p>Наблюдается рост числа смешанных и более сложных угроз с включением bot-компонента в существующее вредоносное ПО. Примером могут служить модификации червя Mydoom, дополненные bot-компонентами и рядом других «усовершенствований» с целью создания значительно более опасной разновидности вредоносного ПО.
+<p>Как показали результаты нескольких исследований, совершеннолетние жители США считают, что они с большей вероятностью окажутся жертвой кибератаки, чем «традиционного» криминала. Поэтому, несмотря на удобство и гибкость онлайновых транзакций, 37% американцев не собирается предоставлять информацию о своих кредитных картах через онлайновые средства.
+<p>Опросив почти 700 респондентов, имеющих доступ в Интернет на работе или дома, эксперты выяснили, что число участников опроса, предполагающих, что в течение следующих 12 месяцев они с большей вероятностью станут жертвой киберпреступления (т. е. подвергнутся атаке через такие сетевые устройства, как настольные или мобильные компьютеры, банкоматы, сотовые телефоны, карманные компьютеры и т. д.), в три раза превышает число тех, кто опасается в первую очередь физических преступлений.
+<p>По данным опроса, за прошедший год количество киберпреступлений почти сравнялось с количеством физических преступлений. Так, 6% респондентов заявило, что за последние 12 месяцев они стали объектами киберпреступлений, в то время как доля респондентов, ставших жертвами физических преступлений, лишь немного больше (7%), а 1% респондентов не вполне уверен в том, что они стали жертвой киберпреступления.
+<p>Согласно результатам этого исследования, 70% онлайновых покупателей собирается совершать покупки только на проверенных Web-сайтах, а более половины американцев «сильно опасаются» или «опасаются» совершать онлайновые покупки у неизвестного им розничного продавца. Кроме того, каждый третий американец «сильно опасается» или «опасается» прибегать к услугам онлайновых банковских систем для совершения транзакций или оплаты счетов. Как следствие, 75% американцев уже принимает превентивные меры для собственной защиты, причем 43% респондентов сообщило, что главная причина принятия этих мер — угроза кражи идентификационной информации. Среди других причин подобных действий — возможная потеря денег (24%) и ущерб для оценки кредитоспособности гражданина (13%).
+<p>Как отмечают эксперты IBM, по мере того как потребители осваивают новые технологии, растут и опасения, что вместе с усовершенствованиями и инновациями возникают возможности для злоупотреблений в электронном мире. Кроме того, потребители хорошо понимают, что необходимо защищать себя от новых угроз — подобно тому, как они защищались бы от угрозы физического воздействия. В связи с увеличением масштаба этих опасностей потребители, частные компании и государственные организации должны действовать таким образом, чтобы максимально защитить любые объекты коллективного пользования — от образовательных учреждений до предприятий розничной торговли — и ослабить тем самым опасения общества относительно киберпреступлений.
+<p>Усилившееся беспокойство по поводу возможных кибератак привело к изменению поведения потребителей. Так, согласно результатам исследования, более 53% американцев считает, что основная ответственность за защиту от киберпреступления лежит на самом гражданине, и в меньшей степени доверяют компаниям, специализирующимся в области безопасности, правоохранительным органам и Web-сайтам. Большая часть приведенных ниже результатов подтверждает, что для защиты от кибератак американцы изменяют характер своего поведения, а именно:
+<ul><li>уничтожают все документы, содержащие персональную информацию, или стремятся надежно сохранять эту информацию;
+<li>обращаются только в Интернет-магазины, отмеченные эмблемой защиты конфиденциальной информации;
+<li>не осуществляют онлайновых транзакций с помощью совместно используемых компьютеров;
+<li>не используют беспроводных сетей коллективного пользования, например, в кафе или аэропортах;
+<li>не совершают онлайновых банковских операций;
+<li>не доверяют информацию о кредитной карте онлайновым системам.</ul>
+<h3>ПО для упрощения идентификации</h3>
+<p>Известно, что необходимость запоминания многочисленных имен пользователей и паролей утомляет сотрудников, в результате чего они нередко прибегают к легкомысленной тактике, например, записывают свои пароли на листочках, которые попросту наклеиваются на монитор. Благодаря сотрудничеству IBM с компанией Passlogix (см. врезку) расширяются возможности продуктов для идентификации личности, управления доступом и обеспечения соответствия нормативным требованиям. Это упрощает для пользователей применение паролей и обеспечивает соблюдение нормативных требований по защите информации.
+<p>Уже год назад у корпорации IBM появилось ПО, которое упрощает работу пользователей в корпоративных сетях за счет сокращения количества системных запросов на ввод или изменение идентификатора пользователя и пароля. Продукт IBM Tivoli Access Manager for Enterprise Single Sign-on расширяет возможности существующих средств идентификации и управления паролями. В этом продукте использованы технологии от Passlogix, которые реализуют в средствах аутентификации IBM возможность однократного ввода пароля пользователя при доступе к приложениям Lotus Notes и SAP, к приложениям для Microsoft Windows и к некоторым другим системам. Благодаря этим технологиям корпоративным пользователям достаточно однократного ввода пароля при доступе к широкому набору приложений — от электронной почты до экстрасети бизнес-партнера. Кроме того, расширяется спектр приложений с поддержкой «двухкомпонентной технологии аутентификации», при которой для входа в систему необходим второй тип верификации, например, на основе смарт-карт или биометрических датчиков.
+<p>Такое ПО обеспечивает безопасность при совместном использовании компьютерной системы несколькими сотрудниками — не требуя выключения системы для защиты конфиденциальной информации от несанкционированного доступа. Например, врач или медсестра сможет войти в информационную систему больницы для просмотра медицинской карты или для ввода новой информации о пациенте. В том случае, если такой пользователь забудет выйти из системы, программные средства непрерывного мониторинга защитят рабочую станцию, закрыв неактивную сессию и потребовав от очередного пользователя зарегистрироваться перед входом в систему. Эта технология не только экономит время медицинского персонала, но и помогает организациям здравоохранения выполнять законодательные требования по защите конфиденциальной информации о пациентах.
+<p>
+<table width="100%"  border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td><h4>Решения Passlogix
+</h4>
+    <p>Компания Passlogix (<a href="http://www.passlogix.com">http://www.passlogix.com</a>), основанная в 1996 г., относится к числу отраслевых лидеров в создании надежных и простых в развертывании решений для обеспечения защищенного входа в систему, соответствующих корпоративным требованиям к поддержке инфраструктуры и высокой окупаемости. Продукты Passlogix сочетают в себе патентованные интеллектуальные технологии и опыт развертывания решений для сотен компаний различного размера из самых разных отраслей. Passlogix предоставляет клиентам корпоративные решения для управления паролями, аутентификацией и идентификационной информацией.     
+    <p>Среди заказчиков компании — многие финансовые, телекоммуникационные и медицинские организации, в том числе, например, компания Prudential Financial и почтовая служба США. Штаб-квартира компании Passlogix находится в Нью-Йорке, а офисы по продажам — в США, Великобритании и Гонконге.</td>
+  </tr>
+</table>
+<p>Сочетание ПО Access Manager for Enterprise Single Sign-on с продуктами IBM Tivoli Access Manager for e-Business и IBM Tivoli Identity Manager формирует комплексное решение для управления идентификационной информацией. ПО для аутентификации от IBM избавляет сотрудников правительственных организаций, финансовых компаний и медицинских учреждений от необходимости запоминать десятки паролей и идентификаторов пользователя, на которые распространяются различные требования в части применяемых символов и сроков действия. Кроме того, за счет улучшения управления паролями снижается частота обращений в службу поддержки пользователей, забывших или потерявших свой пароль.
+<p>Этот продукт расширяет портфолио IBM для управления ИТ-сервисами, обеспечивая возможность однократного ввода пароля при доступе ко всему комплексу корпоративных приложений заказчика. Управление ИТ-сервисами позволяет компании снизить технологическую сложность за счет автоматизации и интеграции процессов, а также упрощает обеспечение соответствия бизнес-политикам и нормативным требованиям.
+<h3>Защита идентификационной информации</h3>
+<p>Сегодня никакая организация не может обойтись без системы управления идентификационными данными — они нужны как в повседневной работе, так и для создания новаторских продуктов и услуг, направленных на повышение конкурентоспособности бизнеса. Однако ситуация в этой области вызывает все большую тревогу. По данным Федеральной торговой комиссии США (FTC), от краж идентификационной информации — одного из самых быстрорастущих видов преступности в США — уже пострадал каждый двадцатый взрослый американец. В условиях, когда организации вынуждены решать проблемы аутентификации пользователей во все более разнородных ИТ-средах, усиливается потребность в таких решениях для управления идентификационной информацией, которые смогли бы упростить ИТ-инфраструктуру, уменьшить риски и поддержать бизнес-инициативы, направленные на рост доходов и повышение прибыли.
+<p>С этой целью IBM предлагает Identity Management Services (IDMS) — комплексный набор предложений по всем аспектам управления идентификационной информацией: от проверки идентичности до предоставления ресурсов пользователям и контроля доступа. Этот набор охватывает широкий спектр решений и может использоваться на любом этапе управления идентификационной информацией и на любом организационном уровне — бизнес-стратегии, приложений или на уровне всей ИТ-инфраструктуры. Общая идея услуг IDMS состоит в том, чтобы повысить устойчивость управления идентификационной информацией — при сокращении количества задействованных систем, расходов на автоматизацию и потребностей в технической поддержке — за счет повышения эффективности процессов контроля доступа, продуктивности и удобства работы для пользователей и администраторов, а также благодаря обеспечению соответствия нормативным требованиям.
+<p>Эксперты отмечают, что люди часто рассматривают управление идентификационной информацией как «оборонительную» меру, поэтому одно из важнейших преимуществ услуг IDMS для заказчика — возможность применения новых сервисов и бизнес-моделей, реализовать которые каким-либо иным способом было бы слишком рискованно. Например, современная экономическая обстановка все сильнее требует от финансовых организаций устранить изолированность отдельных бизнес-направлений и обеспечить единый охват клиентов в масштабе всей компании, что позволило бы улучшить предоставление продуктов и услуг, отвечающих индивидуальным потребностям каждого клиента. Однако этот императив ставит под угрозу традиционные процессы, механизмы и структуры управления идентификационной информацией. Благодаря услугам IDMS заказчики могут минимизировать риски и потери от мошенничества, а также создать новые процессы и механизмы управления, посредством которых они смогут предлагать надежные продукты и услуги, требующие идентификации клиента.
+<p>При разработке услуг IDMS принималось во внимание то обстоятельство, что кражи идентификационной информации и тому подобные виды преступлений — это весьма переменчивая угроза. С другой стороны, ужесточение законодательных требований и развитие отраслевых методик обуславливает переход к новым формам управления идентификацией — таким, как «сильная» аутентификация.
+<p>Для решения этих и подобных проблем, которые возникают уже сегодня или могут возникнуть завтра, пакет IDMS предлагает набор взаимодополняющих услуг, которые могут быть реализованы как в рамках интегрированного решения, так и в виде отдельных компонентов. Ключевые элементы пакета услуг IDMS — это проведение брифингов, оценок и семинаров по безопасности; специализированные отраслевые архитектуры для управления идентификационной информацией и специальные решения, а также услуги внедрения и хостинга. В рамках IDMS используются лучшие в данной категории продукты и технологии из состава семейства IBM Tivoli и от ключевых бизнес-партнеров IBM, среди которых компании ActivIdentity, ADT Security Services, Axalto, Cogent Systems, Encentuate, Exostar, GE Security, Lenovo, Passlogix, Verisign, Viisage и многие другие.
+<p>В рамках IDMS также используются возможности ресурса IBM Information Security Framework (ISF). ISF — это интеллектуальный актив IBM, призванный помочь заказчикам в понимании общей ситуации с безопасностью. Совместно ISF и IDMS образуют еще более мощный набор ресурсов и услуг для обеспечения максимальной безопасности.
+<p>Ресурс IBM ISF создан в ответ на пожелания заказчиков упростить и ускорить планирование и выполнение корпоративных программ обеспечения безопасности. Он охватывает восемь ключевых областей и предоставляет заказчикам типовые методики планирования и развертывания необходимых решений, разработанные специалистами IBM. Указанные средства решают следующие задачи обеспечения безопасности:
+<ul><li>общее руководство;
+<li>обеспечение конфиденциальности;
+<li>борьба с угрозами;
+<li>защита транзакций и данных;
+<li>управление идентификацией и доступом;
+<li>безопасность приложений;
+<li>физическая безопасность;
+<li>безопасность персонала.</ul>
+<p>С помощью ресурса ISF заказчик может глубоко проанализировать и оценить обстановку в компании с точки зрения безопасности, после чего выработать рациональный и выполнимый план реализации эффективной программы безопасности, соответствующий фактическим потребностям компании. Ресурс ISF опирается на результаты исследований IBM, обширный портфель продуктов безопасности и лидерство корпорации в такой сфере, как оценка ситуации, разработка, развертывания и управление решениями поддержания безопасности.
+<h3>Проект безопасной ЕАИС</h3>
+<p>Корпорация IBM в прошлом году стала в России лауреатом Национальной отраслевой премии по безопасности «ЗУБР» («За Укрепление Безопасности России») в категории «Информационная безопасность». Награды удостоен проект «Разработка концепции и архитектуры единой автоматизированной информационной системы таможенных органов», реализованный IBM Business Consulting Services для Федеральной таможенной службы России. Как известно, IBM — крупнейший в мире поставщик информационно-технологических и консультационных услуг. Около 190 тыс. специалистов в более чем 160 странах мира помогают клиентам корпорации соединять ИТ с реальными потребностями бизнеса в различных областях — от трансформации бизнеса и отраслевого опыта IBM Business Consulting Services до услуг хостинга, инфраструктуры, технологического проектирования и обучения.
+<p>В рамках проекта были разработаны общая концепция построения и развития информационных систем таможенных органов, концепция построения и развития системы управления рисками, информационно-технологические архитектуры ЕАИС. Одним из самых важных этапов проекта стала разработка архитектуры информационной безопасности ЕАИС таможенных органов. Для реализации данного этапа были привлечены российские и международные консультанты IBM Business Consulting Services. В ходе его была использована разработанная IBM методика создания архитектуры защищенных решений (IBM Method for Architecting Secure Solutions, MASS), основанная на положениях национального и международного стандарта, известного как «Общие критерии», ГОСТ Р ИСО/МЭК 15408-2002 (ISO/IEC 15408:1999) «Информационная технология. Методы и средства обеспечения безопасности. Критерии оценки безопасности информационных технологий».
+<p>Методика MASS успешно реализована во множестве крупных проектов во всем мире, в том числе и в проектах, выполненных в интересах таможенных органов ряда зарубежных стран. Использование методики гарантирует высокое качество решений по обеспечению информационной безопасности на всех стадиях проектных работ. Она позволяет определять основные угрозы и уязвимости на каждом организационном уровне проектируемой информационной системы, а также предлагать рациональные решения для их устранения и комплексного обеспечения информационной безопасности.
+<p>Архитектура информационной безопасности определяет практические пути реализации важнейших направлений и принципов обеспечения информационной безопасности в ЕАИС таможенных органов, а также структуру, основные системотехнические решения, методы, механизмы и средства построения системы обеспечения информационной безопасности в ней. Она разрабатывалась с учетом решений, принятых по другим архитектурам ЕАИС: функциональной, информационной, компонентной, технической, архитектуры пользователя и управления ИТ-инфраструктурой. Цель разработки архитектуры информационной безопасности ЕАИС таможенных органов состояла в том, чтобы организовать автоматически возобновляемый и развивающийся процесс управления информационной безопасностью, который будет служить методическим, организационным и технологическим базисом для непрерывного развития и совершенствования этой архитектуры.
+<p>Разработанная архитектура информационной безопасности позволяет устанавливать и поддерживать требуемые уровни защиты ЕАИС и критически важной для ФТС России информации.
+<p>
+<table width="100%"  border="0" bgcolor="#CCFFFF">
+  <tr>
+    <td><h4>Национальная отраслевая премия «ЗУБР»
+    </h4>
+    <p>Национальная отраслевая премия по безопасности «ЗУБР» учреждена в 2003 г. компанией «Гротек» по инициативе ведущих компаний и общественных объединений российского рынка безопасности, ветеранов спецслужб, действующих генералов и офицеров Совета Безопасности, ФСБ, Министерства обороны, МЧС, МВД, других силовых структур; руководителей и специалистов крупных российских организаций-потребителей; разработчиков и поставщиков передовых средств и систем безопасности; ведущих журналистов, специализирующихся на теме безопасности. Основные задачи премии — выявление передовых разработок и компаний, содействующих укреплению безопасности России, стимулирование разработки и внедрения эффективных технологий, решений и систем в области обеспечения безопасности государства, общества, личности.</td>
+  </tr>
+</table>
+<h3>Защита от инсайдеров</h3>
+<p>Сегодня большинство организаций защищает свои конфиденциальные данные с помощью программных средств безопасности, использующих идентификаторы или пароли пользователей, биометрические датчики или защищенные карты для подтверждения того, что человек, пытающийся получить доступ к приложению или информации, в действительности именно тот, кем представляется. Этот подход, подтверждая идентичность пользователя, не проверяет правомерность фактического использования данных или приложений, а такой режим делает организацию уязвимой для людей, мошенническим путем получивших идентификаторы или другие реквизиты доступа, равно как и для «легальных» пользователей, решивших украсть или исказить корпоративные данные. Как известно, атаки инсайдеров создают реальную угрозу для безопасности бизнеса. Обзор компьютерных преступлений CSI/FBI подтверждает эти результаты — 56% респондентов сообщили об имевших место нарушениях безопасности внутри самих организаций.
+<p>Решение IBM для защиты от мошенничества — Identity Risk and Identification Solution проводит непрерывный мониторинг онлайновых транзакций пользователей на предмет сомнительной деятельности. Это решение выходит за пределы возможностей традиционных средств подтверждения идентичности — оно анализирует онлайновое поведение пользователя и оценивает правомерность фактического использования данных, дополняя процедуры верификации. Благодаря мощному сочетанию усовершенствованных аналитических средств с технологиями визуального анализа данных (visual data mining) решение IBM выявляет аномалии в поведении пользователя на всем протяжении текущей сессии — путем сравнения с шаблонами доступа, характерными как для того же пользователя в предыдущих сессиях, так и для пользователей из однородных по составу групп.
+<p>Аналитики постоянно говорят о том, что компании отчаянно нуждаются в эффективном решении, которое могло бы эффективно адаптироваться к непрерывно меняющимся методам мошенничества и воровства. Ключевая особенность решения IBM — его способность непрерывно дополнять свою модель поведенческого анализа с помощью новой информации об изменениях в бизнес-ситуации. За счет этого механизма «адаптивного анализа идентичности» решение может автоматически настраивать свои параметры на подозрительное поведение.
+<p>Решение способно анализировать пользовательские сессии как в ретроспективном (сопоставление с предшествующими действиями пользователя), так и в упреждающем режиме (сравнение текущего поведения пользователя с шаблонами действий, которые определены как допустимые). Ретроспективный анализ помогает выявлять случаи потенциального злоупотребления со стороны «доверенных» лиц для последующего расследования и принятия соответствующих мер. Полученные результаты представляются с помощью механизмов интерактивной визуализации данных и ряда компактных отчетов, что упрощает выявление шаблонов деятельности, отношений и случаев подозрительного доступа. Кроме того, ретроспективный анализ позволяет создать профили, характеризующие нормальное или приемлемое поведение в течение сессии для однородных групп пользователей.
+<p>Средства упреждающего анализа на протяжении текущей сессии пользователя используют эти профили (вместе с шаблонами предшествующей деятельности того же пользователя) для выявления потенциального злоупотребления еще до того, как оно реально произойдет. После этого — в зависимости от установленных бизнес-правил — доступ к запрашиваемому приложению или информационному ресурсу может быть немедленно прекращен или приняты другие надлежащие меры.
+<p>Решение Identity Risk and Identification Solution (входящее в пакет услуг IBM Identity Management Services) заранее настроено на интеграцию с продуктами Tivoli Identity Manager и Tivoli Access Manager — компонентами портфеля программных средств IBM для управления и защиты ИТ-сервисов. Identity Manager и Access Manager управляют учетными записями пользователей, ведут персональный учет доступа к корпоративным приложениям и управляют параметрами конфиденциальности, а также собирают данные о доступе пользователей в соответствии с регулирующими нормами. Сочетание идентификации в реальном времени с контролем доступа обеспечивает надежную защиту ИТ-сервисов от инсайдерских атак благодаря мониторингу мошеннических действий и упреждающему поведенческому анализу.
+<p>Решение Identity Risk and Identification Solution было разработано подразделением IBM Center for Business Optimization, входящим в состав службы IBM Business Consulting Services. Это подразделение занимается применением аналитических средств для решения сложных практических задач, используя интеллектуальный капитал IBM в области компьютерных технологий и отраслевого консалтинга, а также средства математического моделирования подразделения IBM Research для создания решений, которые успешно борются с преступностью, нарушением правил и мошенничеством в различных областях. Помимо решений для оптимального управления рисками, Center for Business Optimization предлагает инструменты оптимизации сложных цепочек поставок, рыночных инвестиций и динамического ценообразования.
+<h3>Средства защиты бизнес-приложений</h3>
+<p>Как говорят эксперты, безопасность сегодня превратилась в главную заботу корпоративных разработчиков, независимых поставщиков и учебных заведений, создающих программные продукты, поскольку защите данных давно придается самое серьезное значение на уровне руководства любой организации. Один из наиболее опасных аспектов в этом случае состоит в том, что многие программные продукты имеют изъяны безопасности на уровне архитектуры, проектного решения или реализации, в результате чего организации вынуждены заниматься непрерывным «латанием дыр» вместо того, чтобы заблаговременно поставить заслон на пути потенциальных угроз. Созданные IBM программные инструменты позволяют заказчикам и разработчикам ПО встраивать средства защиты непосредственно в бизнес-приложения еще на этапе их создания. Это существенно расширяет возможности противодействия хакерам, похитителям информации и недобросовестным пользователям. Стоит отметить, что указанные инструменты безопасности предоставляются совершенно бесплатно — это новейшая акция IBM в борьбе с нарушениями ИТ-безопасности, затрагивающими как крупные организации, так и малый бизнес.
+<p>Проектирование, разработка и применение защищенных приложений и систем — актуальная задача для любой организации в любой стране. С помощью новых программных инструментов IBM разработчикам и поставщикам приложений становится проще еще на начальном этапе проектирования программного продукта встраивать механизмы защиты, действующие на протяжении всего его жизненного цикла. Это существенно снижает уязвимость компаний и потребителей к враждебным действиям по сравнению с ситуацией, когда бреши безопасности устраняются с помощью пакетов исправлений уже после того, как ущерб нанесен. Новые технологии позволят компаниям автоматически обеспечивать защиту разрабатываемых приложений, развертываемых в корпоративной ИТ-инфаструктуре, а также шифровать бизнес-информацию без участия пользователя, что в конечном счете сэкономит им время и деньги.
+<p>Разработки подразделения IBM Research дают возможность использовать упреждающий подход для гарантированной защиты приложений от нападений — и отказаться от трудоемких и дорогостоящих мер по защите приложений уже после выявления в них ошибок и уязвимостей. Эти технологии обеспечивают более высокий уровень защиты бизнес-приложений на самом раннем этапе — благодаря расширенным средствам безопасности Java-решений и автоматическому шифрованию информации в корпоративных сетях.
+<p>Новые технологии доступны на Web-портале alphaWorks — онлайновом ресурсе IBM для распространения перспективных инновационных технологий. На сегодняшний день более 90 компаний из списка Fortune 100 используют возможности технологий и ресурсов IBM. Предоставляя разработчикам доступ к перспективным технологиям через портал alphaWorks, корпорация рассчитывает на получение от них полезной информации о применении этих средств в реальных условиях. Это помогает IBM своевременно совершенствовать свои продукты и технологии. Так, в течение 2005 г. 32 технологии, размещенные ранее на портале alphaWorks, были включены в состав коммерческих продуктов IBM или безвозмездно переданы сообществу open source.
+<h4>Автоматическое шифрование данных</h4>
+<p>Библиотека IBM Secure Shell Library for Java обеспечивает автоматическое шифрование данных, передаваемых с одного компьютера на другой, включая пароли и содержимое файлов, в результате чего уменьшается опасность раскрытия этой информации хакерами и другими злоумышленниками. С помощью этого продукта организации могут перемещать между серверами большие объемы информации, защищенной в соответствии с SSH — отраслевым стандартом защиты передаваемых данных. Это непременное требование для организаций в таких сферах, как банковское дело, электронная коммерция и здравоохранение, где существуют жесткие требования к безопасности обмена конфиденциальными данными. Никто из других поставщиков не обеспечивает подобного уровня поддержки для Java-приложений.
+<h4>Защита Java-приложений</h4>
+<p>Среда Security Workbench Development Environment for Java (SWORD4J) позволяет разработчикам легко настраивать конфигурацию Java-приложений и проверять их на соответствие отраслевым стандартам безопасности Java и OSGi. Этот инструмент, предоставляемый в виде набора подключаемых модулей для среды разработки Eclipse, выявляет в Java-приложении несоответствия типовым методикам обеспечения безопасности, которые часто удается исправить буквально одним щелчком мыши. Кроме того, этот инструмент упрощает для разработчиков и поставщиков приложений решение таких задач, как формирование требований к авторизации и встраивание авторизационных привилегий в приложение на этапе его создания. Формирование требований к авторизации и задание политики авторизации всегда было трудной задачей. Как правило, для корректной настройки политики авторизации разработчикам приходилось пропускать новое приложение через множество тестовых сценариев. Новый инструмент определяет авторизационные требования приложения без исполнения его программного кода, что избавляет разработчиков от трудоемкого тестирования. В результате выверенная политика безопасности формируется при существенно меньших затратах труда. Этот инструмент поддерживает технологию подписывания кода и может работать вне рамок среды разработки — в качестве компонента процесса компоновки приложения.
+<h3>Безопасность компьютерных сетей</h3>
+<p>Сегодня поставщики услуг должны обеспечивать непрерывное функционирование своих глобальных сетей данных, которые доставляют клиентам различную информацию, данные о продажах, сведения о поставках и т. д. DoS-атака может существенно повлиять на процесс функционирования онлайновой торговой площадки, остановить клиентские сервисы Интернет-провайдера или заблокировать доступ сотрудников к медицинской информации в корпоративной интрасети.
+<p>IBM разработала новое программное средство обеспечения безопасности, которое позволит корпоративным ИТ-отделам, телекоммуникационным компаниям и поставщикам услуг ИТ-аутсорсинга гарантировать нормальное функционирование своих компьютерных сетей и систем, невзирая на атаки извне, а также на действия собственных недобросовестных сотрудников или бизнес-партнеров. Этот программный продукт обеспечивает защиту сети посредством автоматического выявления и нейтрализации угроз в момент их возникновения, а не после того, как они успели нанести реальный ущерб.
+<p>Используя работающий в реальном времени сетевой механизм защиты, разработанный IBM, организация сможет быстро отреагировать на атаку типа "отказ в обслуживании" (DoS) или на действия хакера. Обнаруживаются также инсайдерские атаки, например, попытки бывших сотрудников с деактивированными правами доступа получить конфиденциальную информацию, напрмиер, о финансовом положении компании или о ее клиентах, что нарушает требования законодательства по защите информации.
+<p>Новое ПО IBM Tivoli Security Operations Manager — первый продукт IBM, в котором используются технологии купленной ею компании Micromuse, причем это ПО появилось всего через пять месяцев после завершения процесса приобретения. Продукт расширяет возможности решения Neusecure, которое по итогам первого полугодия 2006 г. попало в сектор лидеров «магического квадранта» (Magic Quadrant) компании Gartner в категории «Управление событиями и информацией о безопасности» (Security Information and Event Management).
+<p>Благодаря интеграции функций управления сетью, безопасностью, идентификационной информацией и системами инструмент IBM Tivoli Security Operations Manager сводит к минимуму влияние компьютерных червей, ущерб от которых в последнее время непрерывно растет. По данным International Computer Science Institute, одна такая программа-червь способна причинить пользователям в разных частях света ущерб на сумму порядка 50 млрд долл.
+<p>Используя инструментальную панель реального времени, новое ПО IBM автоматически собирает и анализирует данные о безопасности в ИТ-инфраструктуре и принимает решения о приоритетности выявляемых инцидентов безопасности. В результате время отклика организации на угрозу уменьшается с нескольких минут до миллисекунд и сокращаются расходы на обеспечение безопасности и поддержание готовности сети.
+<p>Новое ПО поможет поставщикам услуг ИТ-аутсорсинга и телекоммуникационным компаниям повысить надежность предоставления сервисов. Оно способно не только контролировать влияние нарушений безопасности на состояние сети, но и оценивать текущие характеристики сети в соответствии с требованиями соглашений об уровне сервиса, заключенных с клиентами. Кроме того, заказчики могут использовать этот программный продукт для мониторинга своих средств обеспечения безопасности на соответствие нормативным требованиям. IBM Tivoli Security Operations Manager ведет автоматический мониторинг корпоративных средств обеспечения безопасности и демонстрирует их уровень эффективности, причем как в реальном времени, так и в ретроспективе. Автоматизация — весьма важное достоинство нового инструмента IBM для организаций, которые в соответствии с требованиями нормативных актов должны проводить ежегодный аудит, что стало серьезным источником расходов.
+<p>Новое ПО IBM комплектуется разнообразными шаблонами правил и отчетов, что существенно упрощает мониторинг средств безопасности и соответствующую отчетность. Интеграция с различными устройствами обеспечения безопасности системного и сетевого уровней, включая межсетевые экраны и серверные системы обнаружения несанкционированного доступа, позволяет этому ПО генерировать отчеты по подлежащим аудиту параметрам событий безопасности.
+<p>Продукт Tivoli Security Operations Manager хорошо интегрируется со средствами сетевого и системного управления Netcool Omnibus и Tivoli Enterprise Console, что существенно упрощает рабочие процессы и взаимодействие между средствами обеспечения безопасности и другими ИТ-ресурсами. Новое ПО способно извлекать информацию о безопасности из продукта Netcool Omnibus — это позволяет заказчикам реализовать мониторинг инцидентов безопасности, связанных с IP-сервисами передачи голоса, видео и данных, масштабы применения которых непрерывно растут.
+<p>ПО Tivoli Security Operations Manager использует и другие функции безопасности продуктов Tivoli Identity Manager и Access Manager, что позволяет заказчикам внедрить внутренние политики обеспечения безопасности и обнаруживать умышленное нарушение правил собственными сотрудниками и бизнес-партнерами. Обычно цель таких инсайдерских атак, как кража идентификационной информации собственными сотрудниками или партнерами по бизнесу, состоит в получении доступа к ответственным системам. Системы Tivoli Access Manager и Identity Manager как раз и отвечают за управление учетными записями и правами доступа пользователей, а Tivoli Security Operations Manager использует эту информацию для упреждающей оценки угроз безопасности.
+<p>
+<table width="100%"  border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td><h4>IBM приобретает ISS
+    </h4>  
+      <p>Летом прошлого года IBM приобрела за 1,3 млрд долл. компанию Internet Security Systems (ISS) — разработчика систем распознавания и предотвращения вторжений и поставщика управляемых услуг безопасности. Тем самым корпорация сделала важный шаг в нетрадиционную для себя область ИТ-рынка — ранее она не занималась сетевой безопасностью. Согласно последнему квартальному отчету ISS, 78% оборота ей принесли сетевые приставки для предотвращения и распознавания вторжений линейки Proventia. В IBM же, по заявлению топ-менеджеров корпорации, видят для себя большие возможности в сфере управляемых услуг безопасности.
+    <p>ISS войдет в качестве независимой организационной единицы в состав отделения инфраструктурных услуг подразделения IBM Global Services. В интеграции продуктов двух компаний примут участие специалисты подразделения разработки ПО управления системами IBM Tivoli.</td>
+  </tr>
+</table>
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</A></b></li><li><b><A href='detail.php@ID=24095.html'>Сертифицированные системы обнаружения вторжений </A></b></li><li><b><A href='detail.php@ID=22469.html'>Новые технологии в Security operation center</A></b></li><li><b><A href='detail.php@ID=20887.html'>Агрессивность и мобильность: какие угрозы нас ждут в 2013-м</A></b></li><li><b><A href='detail.php@ID=20621.html'>Карты с дисплеем как новое средство защиты онлайн-банкинга</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</A></b></li><li><b><A href='detail.php@ID=25282.html'>Брандмауэр в Dr.Web для Android</A></b></li><li><b><A href='detail.php@ID=25260.html'>Новые угрозы атак на пользователей онлайн-банкинга </A></b></li><li><b><A href='detail.php@ID=25238.html'>Защита от DDoS-атак – комплексное решение «Билайн Бизнес» и Radware</A></b></li><li><b><A href='detail.php@ID=25227.html'>Сетевой червь в «Интернете вещей»</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6853.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Некоторые решения IBM для ИТ-безопасности
+</a><br><a href="detail.php@ID=6853.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Как отмечают аналитики, сегодня компании начинают подходить к вопросам безопасности со стратегической точки зрения. Больше стало тех, кто&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6853.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6853&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='085e9178f2fcf58dce0b56248372d873'><img src='../bitrix/tools/captcha.php@captcha_code=085e9178f2fcf58dce0b56248372d873' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

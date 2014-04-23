@@ -1,0 +1,402 @@
+<HTML>
+<HEAD>
+<title>Кластерные системы высокой готовности
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Александр Николов anikolov@bytemag.ru Надежность корпоративных систем обработки данных, их способность ежесекундно обеспечивать пользователей оперативной и достоверной информацией - одно из важнейших условий эффективной работы и, в конечном счете" />
+<meta name="description" content="Александр Николов anikolov@bytemag.ru Надежность корпоративных систем обработки данных, их способность ежесекундно обеспечивать пользователей оперативной и достоверной информацией - одно из важнейших условий эффективной работы и, в конечном счете" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082431','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8625' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8625&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8625"].SHOW_IMAGE.value="N"; document.forms["PrintForm8625"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8625"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8625"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8625);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8625.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8625.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8625);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11496.html'>№8 (84), август 2005</a><h1>Кластерные системы высокой готовности
+</h1>10.08.2005<p></p><DIV class='article-text'><p><i>Александр Николов</i> <br>
+  <a href="mailto:anikolov@bytemag.ru">anikolov@bytemag.ru</a>
+<p>Надежность корпоративных систем обработки данных, их способность ежесекундно обеспечивать пользователей оперативной и достоверной информацией - одно из важнейших условий эффективной работы и, в конечном счете, конкурентоспособности современных компаний. Сегодня существует множество технических решений, обеспечивающих необходимый уровень надежности и отказоустойчивости информационных систем, и один из краеугольных камней таких решений - кластеризация серверных систем, за счет которой поддерживается высокий уровень готовности (high availability).
+<p>Говоря о кластерных системах высокой готовности, необходимо четко понимать, что основополагающим элементом стратегии развертывания подобных систем на предприятии выступает отнюдь не используемое в них аппаратное или программное обеспечение, а набор грамотных экспертно-аналитических и консультационных услуг, предоставляемых либо самим поставщиком кластеров, либо его партнером-интегратором, и нацеленных на адаптацию имеющихся типовых программно-аппаратных решений к реальным требованиям и условиям информационной системы заказчика. Построение эффективной и качественной кластерной системы высокой готовности представляет собой достаточно сложную задачу, решение которой требует от поставщика глубоких знаний и опыта, хотя сам процесс опирается на использование стандартизованных программных и аппаратных средств. В известной степени можно утверждать, что каждая новая реализация кластерной системы высокой готовности - это &quot;штучный товар&quot; и в определенном смысле уникальная задача, решение которой не терпит легкомысленного отношения ни со стороны поставщика, ни со стороны заказчика.
+<p>Еще один важный вопрос, часто возникающий при построении кластерных систем высокой готовности, - адекватность используемых аппаратных средств решаемым с их помощью задачам. Построение отказоустойчивых кластеров предполагает использование в качестве узловых машин высоконадежных серверов с двукратным, а иногда и многократным, дублированием всех основных блоков и компонентов. Противоположный подход, привнесенный из области вычислительных кластерных систем и проповедуемый некоторыми поставщиками, состоит в том, что сама кластерная архитектура признается единственным необходимым и достаточным условием для обеспечения высокой готовности систем обработки данных, а аппаратная база отдается на откуп дешевым, легко заменяемым и ненадежным компонентам. Этот подход не только ошибочен, но даже опасен, так как дает заказчикам лишь иллюзию высокой готовности и надежности их информационно-вычислительных систем.
+<p>И наконец, последнее отступление: перед тем как перейти к непосредственному рассмотрению типовых решений для построения кластерных систем высокой готовности от трех ведущих в этой области поставщиков - Sun, IBM и HP, полезно будет в общих чертах напомнить о теоретической и технологической сторонах кластеризации. Типовая схема кластерной системы высокой готовности, изображенная на рисунке, подразумевает объединение двух или более (в зависимости от конкретной решаемой задачи) серверов в целостную систему, снаружи видимую пользователями как единый сервер, исполняющий то или иное корпоративное приложение, например, СУБД или ERP-систему.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No8_2005/cluster.gif" alt=Fig.></td>
+<td valign="bottom">Типовая схема кластерной системы высокой готовности.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Для связи вовне и передачи данных от потребителей и к ним в большинстве случаев используется стандартное соединение Fast Ethernet или получающий все большее распространение стандарт Gigabit Ethernet, реже - ATM. Между собой серверы общаются посредством так называемого интерконнекта - специальной выделенной сети для синхронизации состояний и посылки команд перезапуска заданий на резервном узле в случае обнаружения сбоев или отказов на основном. Набор вариантов для организации интерконнекта достаточно широк - от хорошо известных и достаточно распространенных Myrinet, InfiniBand или Scalable Coherent Interface (SCI) до узкоспециализированных фирменных разработок, - и поставщики могут применять любой из них по собственному усмотрению, лишь бы он обладал достаточной скоростью. Тут важно отметить, что, в отличие от вычислительных кластеров, где между узлами передается значительный объем информации и соответственно возникает потребность в высокой пропускной способности, в кластерных системах высокой готовности, за исключением служебных команд, между узлами практически нет обмена трафиком, однако сами команды должны передаваться максимально быстро, и потому здесь используются стандарты с как можно меньшим временем задержки.
+<p>Взаимодействие с системами хранения, как и в случае с высокопроизводительными серверами, организовано максимально гибко: можно использовать любые схемы и протоколы - от прямого подключения до решений NAS и SAN, присоединяемых по оптоволокну. Здесь основную роль играют потребности заказчика и реальные условия его системы, исходя из которых и выбирается конкретное решение. Естественно, во все этих случаях сетевые интерфейсы для повышения надежности как минимум дублируются.
+<p>Наконец, еще один важный момент, на котором стоит остановиться чуть подробнее. Реальные кластерные системы высокой готовности строятся в одной из двух базовых архитектур - с разделением ресурсов (share something) или без разделения ресурсов (share nothing). В первом случае (яркий пример - Oracle Real Application Clusters) благодаря внутренней логике промежуточного ПО задача заказчика &quot;размазывается&quot; по серверам, входящим в кластер (вот где видна реальная польза от включения в кластерную систему нескольких серверов сразу), и на каждом сервере исполняется некоторая ее часть. Такой подход позволяет повысить эффективность вложения средств, удачно сочетая высокую отказоустойчивость и производительность на относительно недорогих аппаратных средствах. Во втором случае задача заказчика целиком и полностью решается на головном узле системы, а второй сервер фактически играет роль горячего резерва, способного в любой момент времени подхватить &quot;упавшее&quot; приложение. Какой вариант организации кластерной системы использовать, зависит от уже развернутой в компании ИТ-инфраструктуры и в каждом конкретном случае определяется исходя из задач заказчика и программных сред для их решения.
+<p>Вот, пожалуй, и все. А теперь перейдем к конкретике.
+<h3>Отказоустойчивые кластеры Sun </h3>
+<p>Стратегия компании Sun Microsystems (<a href="http://www.sun.ru">http://www.sun.ru</a>) 
+  в отношении кластерных систем высокой готовности строится на трех китах - собственные 
+  аппаратные средства, собственная ОС и сервисы кластеризации и, наконец, собственные 
+  консультационно-аналитические услуги по доводке типового решения с учетом нужд 
+  заказчика. Надо признать, в таком подходе много здравого смысла - взяв в свои 
+  руки все нити, ведущие к созданию законченной кластерной системы, компания гарантирует 
+  заказчику качество реализации, унификацию используемых решений и соответствующий 
+  уровень сервиса, что в конечном счете позволяет не только снизить расходы на 
+  внедрение, но и значительно ускорить его. 
+<p>В качестве рекомендованной аппаратной базы Sun предлагает заказчикам широкий спектр серверов на основе процессоров семейства UltraSPARC - младшие модели семейства Netra на базе UltraSPARC IIi и Sun Fire на базе UltraSPARC IIIi, старшие модели этих же семейств на базе UltraSPARC III, модели высшего уровня семейства Sun Fire на базе UltraSPARC IV, а также, что особенно важно, - модель Sun Fire V40z на базе процессора AMD Opteron. Кроме того, по мере выхода новых серверных систем Sun проводит диагностику на предмет их соответствия требованиям кластеризующего ПО, так что сам список постоянно обновляется, пополняясь новыми и теряя устаревшие модели. Подобный подход гарантирует заказчикам не только сохранность инвестиций в ИТ-инфраструктуру, но и наилучшую отдачу от них - на начальном этапе клиенты могут развернуть кластер на &quot;малых&quot;, но все же достаточно производительных серверах, избежав закупок избыточного оборудования, а с ростом нагрузки и расширением круга решаемых задач безболезненно перейти на &quot;тяжелое&quot;, но более производительное оборудование.
+<p>Предлагая заказчикам достаточно широкий набор узлов для построения отказоустойчивой системы, Sun все же рекомендует изначально закладывать в проект будущего кластера высокой готовности повышенные требования к надежности аппаратуры и применять везде, где это необходимо и возможно, дублирование критически важных компонентов. Собственно, по методологии Sun необходимым и достаточным условием использования того или иного сервера в качестве узла отказоустойчивого кластера, даже если он не включен в список сертифицированных для этих целей, служит возможность многократного аппаратного резервирования его элементов. Таким образом, даже если у заказчика имеется некоторое не самое современное, но подходящее по этому параметру серверное оборудование, он в принципе может организовать кластерную систему высокой готовности. В свою очередь, компания проектирует все свои новые серверы с таким расчетом, чтобы было легко заменить вышедший из строя компонент, не останавливая работы всей системы.
+<p>В качестве интерфейсов для организации интерконнекта между серверами Sun предлагает использовать встроенные в них 100-Мбит/с адаптеры, адаптеры Sun Quad FastEthernet, Sun FastEthernet или Sun SwifT. Можно также воспользоваться высокоскоростным соединением Gigabit Ethernet или (при помощи адаптера, устанавливаемого в PCI-гнездо) интерфейсом SCI. Если кластер организуется с использованием ПО Oracle Real Application Clusters, весьма чувствительного как к задержкам, так и к скорости передачи для интерконнекта, Sun предлагает использовать решения стандарта InfiniBand, в том числе и поставляемые сторонними компаниями (например, Topspin Communications и SilverStorm Technologies), но сертифицированные корпорацией на соответствие своим требованиям.
+<p>Для взаимодействия с дисковыми хранилищами данных предлагаются стандартные SAN-совместимые адаптеры и коммутаторы - в число рекомендованного оборудования входят модели Sun StorEdge Network 1 GB FC Switch-8 и Switch-16, Sun StorEdge Network 2 GB FC Switch-8, Switch-16 и Switch-64; продукция компании Brocade - модели Silkworm 2400, 2800, 3200, 3800, 3900 и 12000 и устройства McData 4300, 4500, 6064, 6140 одноименной компании.
+<p>Вряд ли кого-то удивит, что в качестве узловых ОС в решениях Sun используется ОС Solaris версий 9 и 10. В качестве промежуточного слоя, отвечающего за объединение серверов в кластер высокой готовности, выступает программный пакет Sun Cluster 3.1. В рамках одного кластера он позволяет объединять до 16 узлов и, что, вероятно, будет небезынтересно пользователям ПО Oracle, поддерживает в качестве базовых файловых систем Solaris UFS, Veritas File System (VxFS) и Sun StorEdge QFS с возможностью быстрого развертывания Oracle9i RAC. Кроме того, с его помощью можно территориально разносить узлы на расстояние до 200 км, обеспечивая одновременно катастрофоустойчивость кластера.
+<p>Конфигурирование и администрирование кластерной системы высокой готовности выполняется при помощи командной строки или графического интерфейса, предоставляемого входящей в комплект Sun Cluster 3.1 утилитой SunPlex Manager, либо с помощью центра управления Sun Management Center.
+<p>Реальная отказоустойчивость приложений заказчика в рамках Sun Cluster 3.1 обеспечивается так называемыми агентами Sun Cluster Agents - специальными расширениями, отвечающими за детали кластеризации, специфичные для каждой конкретной задачи. На сегодня существует порядка трех десятков агентов, созданных специалистами Sun самостоятельно и в сотрудничестве с компаниями-разработчиками приложений, среди которых можно выделить следующие классы:
+<ul><li>инфраструктурные сетевые решения - HA DNS, HA NFS, HA Samba, HA DHCP;
+<li>решения для поддержки систем бизнес-логики и хранилищ данных - HA Oracle8i, HA Oracle9i, HA Oracle Database 10g, Oracle Parallel Server (OPS), Oracle9i RAC, HA Oracle9i Application Server, HA Sybase, HA SAP database, HA MySQL, HA Sun StorEdge Availability Suite, HA Oracle E-Business Suite, Scalable SAP, HA SAP liveCache, HA SAP J2EE Application Engine, HA SAP Enqueue Server, HA Siebel, HA NetBackup;
+<li>решения для поддержки инфраструктуры Java EE - HA SAP J2EE Application Engine, HA Java System Web Server, HA Java System Application Server, HA Java System Message Queue, HA Java System Messaging Server, HA Java System Directory Server;
+<li>решения для поддержки портальных, Web-ориентированных систем - HA IBM WebSphere MQ, HA IBM WebSphere MQ Integrator, HA BEA WebLogic Server, HA Apache Tomcat, HA Apache Web/Proxy Server;
+<li>решения для поддержки распределенной обработки данных - HA N1 Grid Engine, HA N1 Grid Service Provisioning System.</ul>
+<p>Кроме того, существуют агенты, разработанные сторонними поставщиками самостоятельно, - на данный момент это, в частности, IBM DB2 (EE and EEE), HA Informix Dynamic Server и Sybase ASE. Очевидно, что в дальнейшем число агентов обоих типов будет только расти, покрывая все более специализированные потребности заказчиков.
+<p>Завершая краткий обзор решений Sun Microsystems для организации кластерных систем высокой готовности, добавим несколько слов об услугах, оказываемых компанией заказчикам при развертывании отказоустойчивых кластеров. С точки зрения характера и направленности они распадаются на две категории: услуги по установке и наладке аппаратного и программного обеспечения и консалтинговые услуги, связанные с доводкой типового решения до полного соответствия задачам заказчика, его специфическим нуждам.
+<p>В первом случае речь идет о достаточно тривиальных вещах (монтаж основных компонентов и плат расширения, подключение кабелей, установка ПО, его настройка и т. д., и т. п.), одинаково хорошо реализуемых как на площадке заказчика, так и на площадке поставщика. Фактически покупатели нового кластера могут передать Sun всю необходимую для настройки информацию и через определенное время получить абсолютно готовое к работе решение - &quot;кластер из коробки&quot;. Вполне очевидно, что это неплохо экономит и силы, и средства заказчика. Благодаря стандартизации типовых операций установки ПО и конфигурирования систем клиенты с частично развернутой инфраструктурой также могут рассчитывать на минимизацию издержек при построении кластерной системы.
+<p>Консалтинговые услуги в основной своей части предполагают всестороннюю помощь заказчику в адаптации ПО Sun Cluster 3 к условиям его задачи, что выражается в первоначальной установке и настройке одного или нескольких уже существующих агентов, а в случае нестандартных задач - персонифицированную помощь в разработке новых агентов с учетом особенностей предметной области заказчика и специфики его бизнес-процессов.
+<h3>Системы высокой готовности IBM </h3>
+<p>Стратегия корпорации IBM (<a href="http://www.ibm.com/rus">http://www.ibm.com/rus</a>) 
+  в области кластерных систем высокой готовности строится на достаточно простом, 
+  но вместе с тем бесспорном посыле: задача заказчика всегда первична, все остальное 
+  - вторично. Имея одну из самых мощных в отрасли исследовательских команд и хорошо 
+  развитое консалтинговое подразделение, способное решать многогранные внедренческие 
+  задачи практически любого уровня сложности, да к тому же занимаясь разработкой 
+  сложных информационно-вычислительных систем повышенной отказоустойчивости уже 
+  не одно десятилетие, IBM вполне может ставить во главу угла именно задачи, благо 
+  разнообразных технических средств для разрешения конкретных проблем заказчика 
+  у компании более чем достаточно, и окончательный их выбор осуществляется исходя 
+  из результатов предпроектного обследования информационной системы. 
+<p>Отсюда вполне очевидно, что реальной физической базой кластерных систем высокой готовности от IBM может выступать практически любой сервер корпорации - простые и недорогие стандартные машины из серии eServer xSeries на базе 32-разрядной архитектуры х86 (в том числе с использованием 64-разрядных расширений EM64T и AMD64) и 64-разрядной архитектуры Itanium, производительные серверы eServer iSeries и eServer pSeries на базе архитектуры POWER5 и мощные мэйнфреймы eServer zSeries. Никаких специально выделенных моделей не предусматривается, условие накладывается лишь одно - достаточность конкретной аппаратной реализации для решения задач обработки данных. Исходя из него, специалисты IBM и формируют перечень предпочтительных моделей для тех или иных ситуаций. Естественно, подобные типовые конфигурации со временем претерпевают определенные изменения - устаревшие и снятые с производства модели исключаются из перечня совместимости, на их место приходят новинки.
+<p>Стоит отметить, что, держа в своих руках все нити жизненного цикла аппаратных платформ, IBM неуклонно проводит политику переноса инновационных технических и технологических решений с систем высшего уровня zSeries (где они в первую очередь появляются) на системы среднего - iSeries и pSeries, а затем и низшего уровня - xSeries, обеспечивая заказчикам единую архитектуру законченных решений и вместе с тем избавляя их от избыточных вложений в поддержание и развитие ИТ-инфраструктуры.
+<p>В области межузловых взаимодействий корпорация предлагает индивидуальную технологию для каждой серверной линейки, в большинстве случаев неразрывным образом связанную с кластеризующим ПО промежуточного уровня, в результате чего образуется сквозное интегрированное решение. Так, в мэйнфреймах zSeries используется технология Parallel Sysplex, обеспечивающая организацию отказоустойчивых кластерных систем с возможностью непосредственного чтения и записи данных в память всех подключенных серверов. При этом пользовательские приложения могут исполняться параллельно. Для объединения серверов серии iSeries используется одна из трех технологий: замкнутого межузлового кольца - HSL OptiConnect, виртуального интерконнекта между разделами LPAR - Virtual OptiConnect и высокоскоростного оптического соединения по схеме точка-точка - SPD OptiConnect. В решениях на базе серверов pSeries применяется технология IBM High Availability Cluster Multi-Processing for AIX 5L (HACMP) или ее разновидность для катастрофоустойчивых кластеров - HACMP/XD (Extended Distance). И наконец, в в случае серверов xSeries интерконнект организуется с использованием стандарта InfiniBand.
+<p>Что касается взаимодействия с системами хранения данных, картина аналогична ситуации с выбором кластерных узлов. Использование того или иного оборудования определяется исходя из содержания пользовательской задачи и уровня ее масштабируемости. Возможен широкий спектр решений - от простейшего подключения напрямую до &quot;тяжелых&quot; SAN-систем.
+<p>Необходимо особо отметить, что IBM как многопрофильная технологическая компания, выпускающая все без исключения виды аппаратных ресурсов, применяемых для построения кластерных систем высокой готовности, ориентируется на собственные изделия, лишь изредка предлагая список совместимого оборудования от сторонних поставщиков.
+<p>В качестве базовых ОС в каждой серверной серии используются как свои системы, так и ОС сторонних производителей - z/OS и варианты Linux для zSeries; i5/OS, Linux и AIX 5L для iSeries; AIX 5L и Linux для pSeries; Microsoft Windows Server, Novell Netware и Linux для xSeries, - оптимизированные для построения кластеров высокой готовности.
+<p>Система кластеризации Parallel Sysplex для z/OS позволяет объединять в рамках одного решения до 32 узлов, обеспечивая при этом разделение ресурсов и параллельное исполнение задач. Используемые в ней технические решения гарантируют практически линейный рост производительности при добавлении в кластер новых серверов. Кроме того, ее расширение Geographically Dispersed Parallel Sysplex (GDPS) с помощью технологии HyperSwap позволяет строить территориально разнесенные, катастрофоустойчивые системы.
+<p>В качестве промежуточного кластеризующего ПО на системах iSeries предлагается использовать продукты, поставляемые технологическими партнерами IBM. Основное рекомендуемое решение - MIMIX High Availability Cluster от фирмы Lakeview Technology. Модульность и широкие возможности мониторинга и автоматизации процессов репликации данных и системных объектов, переключения нагрузки между производственной и резервными системами позволяют создавать решения, оптимальные с точки зрения требований бизнес-пользователей. В отдельных случаях применяются также программные решения других производителей - Data Mirror, Vision Solutions, iTera, Maximum Availability и т. д.
+<p>Система кластеризации High Availability Cluster Multi-Processing версии 5.2, используемая на серверах pSeries с установленной AIX 5L, позволяет организовать на базе ПО Oracle Application Server 10g как системы с разделением ресурсов (для чего используется технология Oracle Real Application Cluster), так и системы активного дублирования без разделения ресурсов - Cold Failover Cluster, использующие один из узлов в режиме горячего резерва на случай сбоя в основном узле.
+<p>В проектах создания кластерных систем высокой готовности на базе серверов стандартной архитектуры из семейства xSeries IBM полагается на бизнес-партнеров и их программные разработки - в системе Windows предлагается использовать сервисы Microsoft Cluster Services, для Netware применяются Novell Cluster Services, а для Linux используется пакет LifeKeeper компании SteelEye и собственный продукт IBM - Tivoli System Automation, работающий в среде разных версий Linux не только на xSeries, но и на всех аппаратных платформах IBM. Этот продукт позволяет объединять механизмы высокой доступности, уже имеющиеся в программных комплексах более высокого уровня, а также организовывать кластерные системы активного дублирования для тех продуктов, в которых такой поддержки нет.
+<p>За администрирование и конфигурирование кластеров высокой готовности в каждом отдельном случае отвечают специализированные компоненты кластеризующего ПО, работающие совместно с фирменными средствами менеджмента, поставляемыми IBM для каждой из серверных линеек.
+<p>Организация высокой готовности конкретных пользовательских приложений в рамках кластерных систем выполняется компанией-интегратором (в том числе и IBM Global Services) в ходе проекта внедрения, для чего может потребоваться доработка приложений или кластеризующего ПО, чтобы максимально полно учесть специфику решаемых задач. IBM, тесно сотрудничая со своими технологическими партнерами и поставщиками приложений в области разработки спецификаций кластерных решений, интерфейсов к механизмам операционной среды и прочих аспектов, активно участвует в процессе адаптации к реальным нуждам заказчика, используя весь свой опыт в области построения корпоративных систем обработки данных. Отражением этого процесса служат программы сертификации приложений, такие, как ClusterProven для iSeries, когда разработчик кластерного промежуточного ПО помогает производителю приложения доработать его и протестировать на соответствие кластерным спецификациям операционной среды.
+<p>Что же касается пусконаладочных и консалтинговых услуг, то тут все карты в руки подразделению IBM Global Services. Это один из ведущих мировых системных интеграторов с разнообразнейшим опытом внедрения решений высокой готовности любого масштаба и различной отраслевой специфики. Профессиональное управление проектом, привлечение опыта и зарекомендовавшей себя методологии внедрения гарантирует качество и соблюдение сроков выполнения проекта. Инженеры компании готовы на основании предоставленных заказчиком исходных данных выполнить наладку кластерной системы на площадке заказчика по завершении ее физической инсталляции. Специалисты подразделения помогут заказчикам грамотно спроектировать кластерную систему высокой готовности от первого до последнего шага, изучив особенности его предметной области, проблематику решаемых бизнес-задач, существующую ИТ-инфраструктуру и множество других первостепенных и менее масштабных, но столь же значимых аспектов, и подобрав на основе этих данных оптимальное решение.
+<h3>Кластерные решения HP </h3>
+<p>В силу ряда исторических особенностей, связанных с достаточно жестким разделением 
+  бизнеса по непересекающимся сегментам, политика компании Hewlett-Packard (<a href="http://www.hp.ru">http://www.hp.ru</a>) 
+  в области кластерных систем высокой готовности имеет два обособленных направления: 
+  первое связано с системами стандартной архитектуры, второе - с фирменными системами 
+  RISC/Unix-архитектур. Не считая технических и технологических аспектов, важнейшее 
+  различие между ними заключается в том, на каких пользователей ориентированы 
+  эти системы высокой готовности: кластеры на базе серверов стандартной архитектуры 
+  представляют собой коммерческие решения для массового рынка, а кластеры, построенные 
+  на базе RISC-серверов, - бизнес-критичные решения корпоративного уровня. Следуя 
+  этой дифференциации, различаются и подходы к построению конечных систем. В первом 
+  случае HP выступает в роли поставщика аппаратной части и эксперта по консолидации 
+  и адаптации результирующего кластерного решения к реальным задачам заказчика, 
+  делегируя программную реализацию и непосредственное внедрение на стороне заказчика 
+  своим партнерам, в том числе локальным интеграторам. Во втором случае, учитывая 
+  масштаб, сложность и уровень решаемых бизнес-задач, компания целиком и полностью 
+  полагается на собственные решения, иногда привлекая на этапе развертывания партнеров-интеграторов 
+  корпоративного уровня. 
+<p>В качестве узлов кластерной системы высокой готовности можно использовать практически весь спектр выпускаемых HP серверов, в том числе модели семейства HP AlphaServer на базе архитектуры Alpha, серверы линейки HP 9000, построенные с использованием процессоров PA-RISC, устройства из Itanium-серии HP Integrity и серверы HP ProLiant, построенные на базе процессоров Intel Xeon и AMD Opteron, в том числе последних версий с 64-разрядными расширениями архитектуры х86. Надо отметить, что несколько лет назад компания приняла стратегическое решение о переводе всех своих &quot;тяжелых&quot; серверных систем на архитектуру Itanium, так что сегодня семейства HP AlphaServer и HP 9000 постепенно сходят со сцены, уступая место HP Integrity. В перспективе все серверы HP будут строиться либо на платформе х86 в любых ее разновидностях, либо на платформе Itanium, причем в последнем случае большинство ключевых программных компонентов (ОС HP-UX и OpenVMS, средства администрирования и конфигурирования, прикладные пакеты) уже портировано на эту платформу.
+<p>Исходя из структурной организации кластера высокой готовности (с разделением ресурсов или без) и соответствующих требований к задержкам и скоростям передачи, межузловые соединения могут строиться с использованием одной из следующих технологий межсоединения: Hyperfabric, InfiniBand или Gigabit Ethernet. Аппаратное обеспечение для организации интерконнекта поставляется либо Hewlett-Packard, либо ее партнерами.
+<p>Для обмена информацией с системами хранения данных в кластерных решениях HP чаще всего применяются SAN-подключения, основанные на оптоволоконном соединении Fibre Channel или (в случае малых систем из сектора стандартных архитектур) на обычном SCSI-соединении. Здесь, как и в случае с узлами кластера, HP предпочитает использовать собственное оборудование. Стоит уточнить, что производимые компанией системы хранения среди множества интересных и полезных функций имеют одну весьма значимую для построения кластерных систем высокой готовности - в них на аппаратном уровне реализована возможность репликации данных из одного хранилища в другое почти без участия обслуживающего персонала.
+<p>В зависимости от серверных моделей, на базе которых построен кластер высокой готовности, в его узлах могут использоваться следующие ОС: Tru64 Unix, OpenVMS, HP-UX 11i, Linux или Windows Server. При этом системы на базе OpenVMS и HP-UX 11i дают возможность строить гетерогенные кластерные среды, используя узлы разной процессорной архитектуры, что гарантирует заказчикам эффективность и сохранность вложений.
+<p>Кластеризующее ПО в каждом конкретном случае зависит от используемой на узлах ОС и характера решаемых пользователем задач - в случае Windows рекомендуются сервисы Microsoft Cluster Services, для Netware подойдут Novell Cluster Services, для Linux на выбор предлагается пакет LifeKeeper компании SteelEye или собственная разработка HP Serviceguard, портированная к HP-UX. Кроме того, для организации кластера высокой готовности с разделением ресурсов на базе ПО Oracle Real Application версий 9i и 10g компания HP предлагает систему Parallel Database Clusters for Oracle RAC в вариантах для Linux и Windows.
+<p>Флагманская ОС HP-UX 11i предполагает использование специального средства кластеризации - ПО HP Serviceguard. В качестве средств обеспечения отказоустойчивости в реальных задачах предусмотрены так называемые расширения Serviceguard Extension. На сегодняшний день существуют расширения для Oracle Real Application Clusters и систем SAP. Существует также специальное ПО Serviceguard Extension for Faster Failover, позволяющее сократить время восстановления систем после сбоя и дополнительно повысить уровень готовности. В случае использования ОС Tru64 Unix нет альтернативы системе TruCluster Server. Текущая версия 5.1B-3 использует для кластеризации специальную файловую систему Cluster File System (CFS), работающую поверх файловой системы более низкого уровня - Advanced File System (AdvFS) - и обеспечивающую как чтение, так и запись. В ОС OpenVMS возможности кластеризации, все необходимые средства организации отказоустойчивости, а также средства администрирования и конфигурирования встроены изначально и позволяют объединять в кластер до 96 узлов на расстояниях до 500 км.
+<p>Выше уже отмечались два подхода HP к построению кластеров высокой готовности. Аналогичным образом обстоят дела с установкой и наладкой аппаратного и программного обеспечения при развертывании конечной системы, а также с консалтинговыми услугами, связанными с доводкой типового решения до полного соответствия задачам заказчика и его особым потребностям, - как правило, в случае бизнес-критичных систем компания берет весь объем услуг, от монтажа до экспертно-аналитических заключений, на себя, а в более простых случая выступает партнером локальных интеграторов, обеспечивая им всестороннюю поддержку.
+
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8625.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Кластерные системы высокой готовности
+</a><br><a href="detail.php@ID=8625.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Александр Николов 
+  anikolov@bytemag.ru
+Надежность корпоративных систем обработки данных, их способность ежесекундно обеспечивать пользователей&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8625.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8625&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='06cd057f3351711d02f86eef98ab612d'><img src='../bitrix/tools/captcha.php@captcha_code=06cd057f3351711d02f86eef98ab612d' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

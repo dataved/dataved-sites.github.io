@@ -1,0 +1,495 @@
+<HTML>
+<HEAD>
+<title>Технология виртуальных массивов HP VA
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Андрей Борзенко В условиях бурного развития Интернет-технологий информация становится основным стратегическим ресурсом. Способность информационной системы вносить стратегический вклад в бизнес компании во многом определяется надежностью хранения и" />
+<meta name="description" content="Андрей Борзенко В условиях бурного развития Интернет-технологий информация становится основным стратегическим ресурсом. Способность информационной системы вносить стратегический вклад в бизнес компании во многом определяется надежностью хранения и" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398083025','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6615' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6615&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6615"].SHOW_IMAGE.value="N"; document.forms["PrintForm6615"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6615"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6615"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6615);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6615.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6615.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6615);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11552.html'>№10 (51), октябрь 2002</a><h1>Технология виртуальных массивов HP VA
+</h1>11.11.2002<p></p><DIV class='article-text'><p><i>Андрей Борзенко</i> 
+<p>В условиях бурного развития Интернет-технологий информация становится основным стратегическим ресурсом. Способность информационной системы вносить стратегический вклад в бизнес компании во многом определяется надежностью хранения и скоростью доступа к данным. Сложность и емкость современных центров данных продолжают расти такими темпами, которые в прошлом невозможно было себе представить. Сегодняшние ИТ-администраторы порой бывают просто обескуражены растущей сложностью задач управления при сокращении трудовых ресурсов компаний.
+<p>Подсистемы хранения - один из основных факторов, вносящих вклад в расширение и усложнение информационных систем. Когда-то называвшиеся периферийными, системы хранения (и хранимые в них данные) теперь вышли на передний план и стали средоточием всей ИТ-инфраструктуры. Нередко в крупных и средних центрах данных системы хранения и управление ими образуют единую, довольно весомую позицию в бюджете. Современной сбалансированной вычислительной системе в качестве подсистемы хранения данных требуется надежное, масштабируемое и управляемое решение.
+<p>Обновленная компания Hewlett-Packard (<a href="http://www.hp.com">http://www.hp.com</a>) 
+  имеет весьма широкий портфель предложений в области систем хранения данных. 
+  Продукты HP способны обеспечить централизованное хранение и управление пользовательскими 
+  данными. Немаловажную роль играет и приверженность компании открытым технологиям 
+  и стандартам. Предлагаемые на базе продуктов HP решения способны работать в 
+  неоднородной среде с серверами и системами различных производителей, обеспечивая 
+  эффективное и надежное хранение данных в средах HP-UX, Sun Solaris, IBM AIX, 
+  Microsoft Windows NT/2000 и т. д. Компоненты систем обычно взаимозаменяемы, 
+  а линейка продуктов позволяет проводить модернизацию до более старших моделей 
+  с наследованием всех инвестиций. Не секрет, что построение корпоративной системы 
+  хранения данных на продуктах от одного производителя дает неоспоримые преимущества 
+  в простоте интегрирования и администрирования, в совместимости и возможности 
+  получить техническую поддержку в одном месте. 
+<p>В ближайшее время Hewlett-Packard намеревается объединить и упорядочить ассортимент 
+  дисковых массивов, а также сосредоточить усилия на сближении систем NAS/SAN. 
+  А пока в качестве решения начального и среднего класса компания намерена по-прежнему 
+  предлагать массивы HP VA (Virtual Array) 7000 для систем, основанных на HP-UX. 
+  Как известно, дисковые массивы данного класса масштабируются до нескольких терабайт, 
+  имеют встроенные средства обеспечения отказоустойчивости и виртуализации данных. 
+  Такие массивы применяются, как правило, для создания централизованных систем 
+  хранения данных уровня отделов и средних предприятий. Мы рассмотрим здесь технологию 
+  построения таких дисковых массивов среднего класса, как VA7100, VA7400 и VA7410, 
+  которые имеют не только встроенные средства обеспечения отказоустойчивости (дублированные 
+  блоки питания, зеркалированная кэш-память и автоматическое перераспределение 
+  данных по дискам для поддержания заданного уровня RAID), но и средства создания 
+  бизнес-копий данных по технологии &quot;моментальных снимков&quot;. Более подробно с техническими 
+  характеристиками данных устройств можно ознакомиться на сайте <a href="http://www.hp.ru">http://www.hp.ru</a>. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2002/HP_VA/pict1.jpg" alt=Photo></td>
+<td valign="bottom">Дисковые массивы HP VA.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h3>Основные требования к системе хранения </h3>
+<p>Основные требования к системе хранения мало меняются со временем - защита данных и их целостность всегда были важны для успешного ведения любого бизнеса. Однако, поскольку центры данных должны быть для бизнеса круглосуточно доступным ресурсом постоянной готовности, непрерывный доступ к данным и их защита превращаются в критичные факторы, становясь основным требованием.
+<p>Непрерывный доступ к данным имеет два важных аспекта: высокая готовность и производительность. С точки зрения готовности, если речь идет об устройствах хранения, возможны всего два состояния - устройство или функционирует нормально и обеспечивает доступ к данным, или оно неисправно. Гарантированный доступ к данным часто обеспечивается при помощи различных отказоустойчивых механизмов. Производительность также влияет на доступность данных, но она обычно не рассматривается как двоичное (да или нет) условие. Тем не менее недостаточная производительность может ограничивать доступ к данным. Неприемлемый уровень быстродействия системы хранения данных порой имеет для бизнеса такие же последствия, как и полный отказ оборудования. Следовательно, для обеспечения непрерывного доступа к данным в устройствах оперативного хранения равно важны как отказоустойчивость, так и высокопроизводительная архитектура.
+<p>При том, что защита данных и непрерывный доступ остаются первостепенными требованиями к системам хранения, появился и еще один критерий. Снижение стоимости базовых систем хранения и нужды повышения конкурентоспособности бизнеса привели к тому, что число всевозможных изменений в архитектуре центров данных начало экспоненциально расти. На администрирование этих изменений ИТ-менеджерам приходится резервировать в бюджете значительные суммы. Планирование и выполнение этих изменений осложняется нехваткой опытных администраторов систем хранения данных. Некоторые аналитики предсказывают, что если при текущем уровне роста систем не повысится существенно эффективность работы администраторов систем хранения, то к 2010 г. потребность в таких администраторах сравняется с численностью населения штата Калифорния.
+<p>Таким образом, современный ИТ-центр требует рентабельных устройств хранения, характеризующихся высокими готовностью, целостностью данных, производительностью и позволяющих снизить затраты на управление. Технологии, снижающие время внедрения новых приложений и текущие расходы на управление, могут стать ключом к поддержанию конкурентоспособности в современной деловой среде.
+<p>Компания Hewlett-Packard располагает сегодня линейкой систем хранения, отвечающей этим требованиям. Основанные на патентованной технологии третьего поколения, представители семейства HP VA расширяют возможности систем хранения данных среднего уровня. Решения на основе этих устройств обладают улучшенными средствами обеспечения целостности данных и высокой готовности, что создает более надежную защиту от потери данных и простоев. Модульная архитектура позволяет снизить затраты, оплачивая расширение системы по мере ее роста. HP VA обладают высокой производительностью и хорошим соотношением цена/качество среди систем высокой готовности. Мощные средства управления снижают как время внедрения, так и текущие расходы.
+<h3>Целостность данных и высокая готовность </h3>
+<p>Сердцевина массива HP VA - заказная специализированная микросхема (ASIC), разработанная 
+  компанией Hewlett-Packard. Этот чип играет ключевую роль в обеспечении высокого 
+  быстродействия, защите данных и снижении затрат в пределах единой архитектуры. 
+  Команда инженеров потратила три года на разработку этой ответственной микросхемы, 
+  получившей название Data Flow Processor (DFP). Аппаратная архитектура (рис. 
+  1) виртуального массива HP VA имеет следующие важнейшие характеристики:
+<ul>
+  <li>избыточность - сдвоенные контроллеры, блоки питания, вентиляторы и зеркалированный 
+    буфер записи со встроенной батареей;</li>
+  <li>защита данных - ECC и зеркальная кэш-память, сквозная защита данных и RAID 
+    5 DP (с двойным контролем по четности);</li>
+  <li>производительность - 800 Mбайт/с, архитектура массива с тесной взаимосвязью, 
+    несколькими независимыми путями данных и высокопроизводительным контроллером 
+    на основе PowerPC </li>
+</ul>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2002/HP_VA/pict2.gif" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Рис. 1. Блок-схема архитектуры HP VA.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h3>Сквозная защита данных </h3>
+<p>Сквозная защита данных - это аппаратно реализованный процесс, гарантирующий, что сервер прочитывает именно те данные, что были записаны. В массивах HP VA эта защита реализована непосредственно в специализированном процессоре DFP. По мере записи данных в массив микросхема немедленно инкапсулирует каждый сектор при помощи дополнительного проверочного слова, которое сопровождает данные по мере их перемещения через контроллер на жесткий диск и служит для обнаружения ошибок. В тот момент, когда сервер считывает данные, контроллер на финальной стадии должен сверить корректность этого слова. Если обнаружена ошибка, то контроллер не позволит серверу использовать ошибочные данные.
+<p>Проверочные слова формируются на основе не только данных, но и информации об адресе, защищая систему от ошибок, возникших как на диске, так и в контроллере массива. Диски проверяют, чтобы считанные биты не отличались от тех, что были записаны в сектор, однако имеется небольшая, но реальная вероятность, что вследствие непредвиденной комбинации обстоятельств диск выдаст информацию из неверного сектора.
+<p>В обычных компьютерах, как правило, на четность проверяется только память; в ПК-серверах уже имеются базовые средства коррекции ошибок, а ответственные серверы, на которых работают базы данных всей компании, используют несколько различных средств коррекции ошибок. Чем более ответственная роль возлагается на компьютерную систему, тем важнее использовать несколько схем проверки целостности. Все это относится и к дисковым массивам: диск в обычном ПК выполняет только самопроверку, а скромная дисковая подсистема для некритичных данных обеспечивает защиту от отказа дисков на основе RAID. Однако массивы для ответственных деловых приложений требуют нескольких схем защиты данных и поддержания их целостности.
+<p>Сквозная защита данных - ключ к обеспечению целостности данных для ответственных деловых приложений. Сходные возможности имеются в массивах верхнего ценового диапазона и лишь в некоторых массивах среднего уровня. Массивы без этих возможностей имеют низкий класс целостности данных - в этом случае контроллер массива может, например, вернуть ошибочные данные серверу без всякого уведомления, и ошибка не будет распознана приложением. Хотя вероятность такой ошибки достаточно мала, ее последствия могут быть весьма разрушительными - обычно это необъяснимый отказ системы или повреждение базы данных.
+<p>&nbsp;
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h4>Технология RAID 5DP </h4>
+      <p>RAID 5DP - это еще один механизм защиты, используемый в массивах HP VA. 
+        Он сходен со стандартным уровнем RAID 5, отличаясь от него добавлением 
+        схемы защиты на основе двойной проверки четности (dual parity protection 
+        scheme). Каждый блок данных в RAID 5DP имеет два блока связанной с ним 
+        избыточной информации, а не один. Из информации, опубликованной Hewlett-Packard, 
+        следуют два факта. Во-первых, новая схема обеспечивает более высокую защиту 
+        данных, чем в стандартных массивах RAID 5, плюс в равной конфигурации 
+        достигается на 10% большая эффективность. Во-вторых, RAID 5DP обеспечивает 
+        массиву HP VA устойчивость почти ко всем типам одновременного отказа двух 
+        дисков при любой конфигурации массива. Прокомментируем этот второй механизм 
+        более подробно. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2002/HP_VA/pict3.gif" alt=Fig.></td>
+<td valign="bottom">Среднее время до потери данных. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+      <p>Независимо от числа дисков или конфигурации массива, в момент отказа 
+        первого диска во всем массиве имеется только один или два других критичных 
+        диска. Иными словами, любой из других некритичных дисков может отказать 
+        одновременно с первым, но массив будет продолжать функционировать без 
+        потерь данных. Отказ критичного диска вызвал бы утрату данных. Рассмотрим 
+        пример с типичной конфигурацией из 45 дисков. После отказа первого диска 
+        среди остающихся 44 имеется один или два диска, отказ которых привел бы 
+        к потере данных. Отказ любого из прочих 42 дисков не скажется на готовности 
+        данных. Такой массив сравним с другими массивами, сконфигурированными 
+        в структуру RAID 1+0, но его возможности превышают возможности любой иной 
+        RAID-системы, сконфигурированной в традиционный RAID-массив уровня 5. 
+        Как известно, в последнем случае глубина чередования определяет оставшиеся 
+        критичные диски в системе после первоначального отказа диска. Например, 
+        в типичной конфигурации 5+1 диск (для RAID 5), в системе после первоначального 
+        отказа имеется пять критичных дисков. 
+      <p>Логика, реализованная в контроллере массива VA, расширяет эту способность. 
+        Каждый контроллер обладает информацией о том, какие данные подверглись 
+        воздействию при одновременном отказе второго диска, и он будет восстанавливать 
+        эти данные в первую очередь, прежде чем восстановит двойную избыточность 
+        в данных массива RAID 5DP. Инженеры компании HP считают, что если сквозная 
+        защита данных отвечает возможностям массивов высокого класса, то RAID 
+        5DP - это функциональность, превышающая возможности высококлассных массивов. 
+    </td>
+  </tr>
+</table>
+<h3>Модульный дизайн </h3>
+<p>Модульные массивы предоставляют администраторам больше гибкости при выборе 
+  начальной конфигурации и позволяют легко расширять систему после ее первоначальной 
+  установки. Модульные массивы - практичный компонент сетей хранения данных Storage 
+  Area Network (SAN), использующих Fibre Channel. Малый объем, занимаемый массивом 
+  этого типа, и соответствующая конструкция высокой плотности дают возможность, 
+  используя технологию SAN, обеспечить эффективное масштабирование. Такая архитектура 
+  снижает затраты и предоставляет возможность инвестировать в инфраструктуру по 
+  мере ее развития - выгодное отличие в сравнении с так называемыми монолитными 
+  архитектурами. Виртуальные технологии, использованные в массиве HP VA, придают 
+  дополнительную ценность и гибкость модульным решениям. Развитие виртуальных 
+  массивов обеспечивается следующими их свойствами:
+<ul>
+  <li>быстрое расширение доступной емкости - от минимальной поддерживаемой дисковой 
+    конфигурации до максимальной - без прерывания обслуживания;</li>
+  <li>использование любой конфигурации поддерживаемых дисков, а также любого их 
+    числа или емкости без усложнения процесса управления;</li>
+  <li>гибкость в размещении дополнительных устройств хранения - благодаря оптоволоконному 
+    интерфейсу их можно размещать в любом месте центра данных;</li>
+  <li>совместимость со всей линейкой устройств инфраструктуры на основе оптоволоконных 
+    соединений от компании HP - как для непосредственного подключения, так и для 
+    топологии SAN;</li>
+  <li>поддержка большого числа ОС, включая Solaris, AIX, Linux, Netware и т. д., 
+    обеспечивает как консолидацию систем хранения, так и защиту капиталовложений. 
+  </li>
+</ul>
+<p>Эти характеристики все вместе обеспечивают больший уровень гибкости и меньшие затраты на управление, чем иные дисковые массивы.
+<h3>Увеличение емкости </h3>
+<p>Одно из принципиальных различий между массивами серии HP VA и традиционными системами хранения - начальная емкость при покупке. В традиционной технологии построения дисковых массивов диски должны приобретаться группами в соответствии с требуемой конфигурацией RAID-массива. Первоначальная конфигурация традиционного массива обычно являет собой статический компромисс между производительностью, емкостью хранения и степенью готовности. Для массивов серии HP VA нет нужды приобретать диски группами для конфигураций RAID 1+0 или RAID 5DP. Виртуализация накопителей отменяет это требование; все имеющиеся диски рассматриваются как общий пул доступной емкости хранения. Добавление дисков просто увеличивает емкость этого пула. Кроме того, HP предлагает интуитивный инструмент планирования емкости системы хранения, который показывает, какое минимальное число дисков будет удовлетворять требованиям к емкости. Соединение виртуализации системы хранения с инструментом планирования ее емкости существенно помогает решать вопросы приобретения требуемого количества дисков.
+<p>Теперь сравним подходы в фазе роста системы хранения. Модульная система позволяет реализовать модель оплаты по мере роста, и в этом ее преимущество. Традиционные же массивы после расширения оказываются ограничены либо в гибкости конечной конфигурации, либо в ее производительности. Как и при начальном конфигурировании, диски для традиционных массивов должны приобретаться группами, отражая структуру уровня RAID и размер блока (stripe size). Практика модернизации традиционных массивов требует, чтобы эти диски устанавливались в виде островков, изолированных и независимых от других дисков массива. Эта изоляция приводит к низкой эффективности использования емкости, а также к недостаточно эффективному использованию быстродействия этих дополнительных дисков.
+<p>При использовании технологии HP VA рост емкости достигается при любой емкости и числе дисков, поэтому можно приобретать только то количество дисков, которое реально требуется. Новые диски можно установить и сконфигурировать всего за несколько минут, а не часов, как в случае с традиционными массивами. После установки дисков контроллер будет реорганизовывать данные в фоновом режиме для эффективного включения новых дисков в работу, с тем чтобы максимально задействовать доступную емкость и производительность накопителей.
+<p>Эти отличия минимизируют не только затраты на приобретение дискового массива, но и время, требуемое для внедрения решения и управления им.
+<h3>Характеристики производительности </h3>
+<p>Производительность дискового массива может быть таким же критичным фактором для бизнеса, использующего накопители для оперативного хранения данных, как и отказоустойчивость. Медлительная система хранения данных - потенциальный источник неудовлетворенности пользователей или упущенной выгоды.
+<p>Для успешного внедрения решения нужна корректная оптимизация систем хранения. К сожалению, отказоустойчивые дисковые массивы - весьма сложные устройства, и успешная настройка параметров быстродействия может оказаться непростой задачей. По мере изменения приложений или расширения емкости массива часто обходятся без перенастройки, поскольку время, отпущенное на управление, ограничено.
+<p>Ряд свойств массивов серии HP VA снижают сложность настройки системы на оптимальную производительность и повышают вероятность того, что она будет поддерживаться на высоком уровне. Эти характеристики следуют из принципов, заложенных в систему при ее разработке; базируются они на хорошо известных параметрах систем хранения, серверов и баз данных. Разработчики выделяют здесь три параметра: время отклика буфера записи, производительность дисков массива, большой размер блоков.
+<h4>Время отклика буфера записи </h4>
+<p>Массивы HP VA характеризуются довольно быстрым откликом. В общем случае малое время отклика буфера записи приводит к уменьшению времени ожидания для приложения. Благодаря этому приложение может использовать весь заложенный в нем потенциал производительности. В массивах HP VA заложены три особенности, позволяющие этого достичь: в них используются быстрые процессоры, оптимизированный по производительности микрокод (firmware) и специализированное высокопроизводительное аппаратное обеспечение зеркалирования записи. Многие иные массивы тоже используют быстрые процессоры и оптимизированный микрокод, но архитектура процессора DFP дает массивам серии VA преимущество в зеркалировании буфера записи. Дело в том, что процессор DFP работает с высокоскоростной сетью &quot;точка-точка&quot; (point-to-point network). Это снижает перегрузку контроллера и гарантирует целостность данных. При малом числе инструкций от внутреннего процессора каждая зеркалированная запись может быть выполнена очень быстро и с гарантией, что данные не будут повреждены ни по их содержанию, ни по логическому порядку.
+<p>На рис. 3 показано время отклика одного логического устройства (LUN) как функция запроса. При тестировании задействованы произвольные операции записи на диск, а не просто планируемые 100% нагрузки буфера записи. Результат измерений времени отклика при отсутствии очереди запросов находится в самой нижней точке кривой - на уровне примерно 700 мс. Это время, требуемое для записи в кэш-память, включающее время копирования данных в зеркальную кэш-память. Обычным дисковым массивам непросто достичь такого уровня быстродействия. В них запись или считывание по буферному каналу требует от контроллера намного большего запаса производительности для инициирования процесса, а скорость передачи данных намного меньше, чем в массивах серии HP VA.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No10_2002/HP_VA/pict4.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Производительность при произвольной записи.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Оптимизированное по производительности приложение намного сильнее зависит от времени отклика буфера в режиме записи, чем от количества операций в секунду при считывании из буфера. Оптимизированное приложение для кэширования чтения будет в первую очередь использовать системный буферный кэш, а не дисковую кэш-память. Чтение из буфера, построенного на основе системной памяти, идет намного быстрее - сотни тысяч операций против десятков тысяч для дисковых буферов. Время отклика массива при записи критично для таких операций, поскольку в типичном случае приложение, прежде чем продолжить выполнение задачи, ожидает завершения операции ввода-вывода. Более короткое время отклика кэш-памяти при записи (write cache response time) означает, что приложение меньше находится в режиме ожидания, и, следовательно, тесно взаимосвязанная архитектура контроллера обеспечивает наилучшие характеристики в режиме реальной работы.
+<h4>Производительность дисков </h4>
+<p>Производительность массива напрямую зависит как от быстродействия диска, так и от быстродействия буфера записи. Открытые системы (UNIX и Windows) весьма дружественны по отношению к буферу массива, поскольку эффективные механизмы буферизации дисков встроены в базы данных и расположены на пути передачи данных при операциях ввода-вывода. Разумный размер кэш-памяти может внести заметный вклад в повышение быстродействия всей системы. Однако, чтобы эффективно поддерживать работу кэш-памяти, массив должен использовать диски с хорошими характеристиками. Следовательно, при отборе дисковых массивов по производительности следует сравнивать время отклика кэш-памяти при записи и показатели быстродействия в расчете на один диск. Эти параметры служат хорошими индикаторами уровня производительности при оперативной обработке транзакций, производительности дисковой или сетевой файловой системы.
+<h4>Эффективный размер блоков </h4>
+<p>Эта особенность массивов серии HP VA одновременно и наиболее ценна для увеличения производительности реальных задач, и наиболее противоречива. Большие блоки эффективно распределяют нагрузку между всеми дисками массива, увеличивая тем самым общее быстродействие системы. Противоречивость, как полагают разработчики, проистекает из старых правил конфигурирования баз данных, когда администраторам БД рекомендовалось изолировать различные их компоненты, распределяя их по конкретным физическим дискам массива. Тем самым устранялись конфликты и снижались нагрузки на диски. Это правило более не имеет смысла по двум причинам. Во-первых, очень трудно достичь идеального баланса системы. Любое нарушение баланса в распределении рабочей нагрузки приведет к неполному использованию ресурсов производительности. Во-вторых, эффективное кэширование записи изменило поведение дисковых подсистем в смысле их производительности.
+<p>Для иллюстрации этого утверждения инженеры Hewlett-Packard предлагают рассмотреть аналогию с банковским клерком. Обслуживание в каком банке вы предпочтете - в том, где единая очередь ко всем клеркам, или в банке с раздельными очередями? Очевидно, что единая очередь по времени обслуживания наилучшим образом отвечает запросам тех, кому требуются банковские услуги. Однако старая школа мышления, оперирующая понятиями конфликта при одновременном обращении к одному физическому диску, строится на том, что некоторые клиенты более важны, чем другие, и для них должна быть выделена отдельная группа клерков, чтобы предоставить им приоритетное обслуживание.
+<p>Здесь все хорошо, за исключением двух проблем. Первая - если банк неверно определил требуемое число выделенных клерков, важные клиенты могут прождать обслуживания в выделенной очереди даже дольше, чем если бы они обратились к услугам рядовых сотрудников. Вторая - кэш записи ведет себя как уполномоченный представитель (прокси) для заказчиков и &quot;стоит в очереди&quot; вместо них. Представьте себе, что вы пришли в банк и поручили вашу транзакцию кому-то, кто будет стоять в очереди за вас и выполнит все требуемые операции, а вы при этом можете спокойно уйти. Единственное, что вас заботит в этой ситуации, - будет ли в банке свободный посредник на момент вашего прихода. После чего посредников нужно обслужить в наиболее эффективном порядке, формируя тем самым единую очередь для всего числа клерков.
+<p>Это упрощенное описание того, почему расщепление данных по большому числу дисков - наилучшая конфигурация для достижения высокой производительности в современных дисковых массивах. Но это не только красивая аналогия. В настоящее время Oracle рекомендует именно такой подход к конфигурированию базы данных. На упомянутом уже рисунке показана кривая насыщения по числу запросов в пределах одного номера логического устройства (LUN). Логическое устройство распределено на полосы между 20 дисками. Для этого одного LUN кривая производительности дает 2 тыс. операций в секунду при произвольной записи данных объемом 8 Kбайт и времени отклика дисков в 1 мс.
+<h3>Рентабельность </h3>
+<p>Решить, какая система хранения данных наилучшим образом удовлетворяет требованиям работы приложений, не так-то просто. Как правило, имеется множество альтернатив, каждая из которых характеризуется уникальной комбинацией возможностей. Для аналитика процесс выбора обычно сводится к сравнению спецификаций - больших таблиц со множеством рядов и колонок с параметрами продуктов. К сожалению, наиболее важные с точки зрения производительности критерии часто в них отсутствуют. Соотношение цена/качество должно рассматриваться наряду с базовыми характеристиками компонентов и &quot;чистой&quot; производительностью. В то время, как абсолютные значения производительности говорят о возможностях архитектуры массива, соотношение цена/качество (и удельная стоимость в долл./Mбайт) служит для бизнеса показателем быстродействия устройства хранения.
+<p>В сравнительный анализ обычно включаются такие параметры, как долл./Гбайт, долл./IOP и долл./Mбайт/с. Тем не менее использование этих критериев может привести к неочевидным выводам. Например, устройство начального уровня VA7100 имеет меньшее значение абсолютного быстродействия, чем система среднего уровня VA7400. Конечно, многие заказчики предпочли бы VA7400, поскольку этот массив обеспечивает наивысшую производительность. Однако если включить в анализ конкретные цены приложений, их требования к емкости хранения, то наилучшим выбором может оказаться как раз система VA7100. В частности, компании, ведущие торговлю через Интернет, выбирают VA7100 для организации информационных хранилищ. Для их бизнеса важнее соотношение цена/качество данного решения, а не абсолютное значение производительности для отдельного дискового массива.
+<h3>Управляющее ПО </h3>
+<p>Управление устройствами важно для получения долговременной отдачи от использования дискового массива, оно также позволяет решить проблемы постоянного расширения емкости хранения в центрах данных. Наряду с управлением отдельными устройствами массивы HP VA интегрируются с рядом программных продуктов семейства OpenView для формирования корпоративных систем управления.
+<p>ПО Command View SDM имеет набор различных интерфейсов и рабочих топологий, которые, будучи объединены, позволяют достичь гибкости и простоты использования. Можно выбирать из трех интерфейсов взаимодействия с массивом: это графический интерфейс, командная строка и командное меню. Реальная гибкость топологии проистекает из способности выполнять любые из перечисленных интерфейсов как на сервере, непосредственно подключенном к массиву, так и на выделенной рабочей станции или с любого компьютера сети. Работать с графическим интерфейсом можно непосредственно из любого браузера в сети, не устанавливая на компьютере никакого специального ПО.
+<p>Основную часть времени при настройке массива занимают его физическая установка и подключение кабелей. После подачи питания любую описанную в сценарии конфигурацию можно реализовать в течение пяти минут. Сюда входят установка ПО Command View SDM, конфигурирование номеров LUN, установка ПО Secure Manager VA и Business Copy VA. Экономия времени и средств достигается не только при начальной установке, но и при восстановлении системы после аварийного сбоя, когда простой может обойтись в десятки тысяч долларов в час. Это значительный шаг вперед в сравнении с традиционными дисковыми массивами.
+<p>Как известно, оптимизация работы системы, приложения и самого массива может быть весьма трудоемкой задачей. Массивы серии VA предлагают два практичных решения: одна конфигурация для группы, где все решает производительность, а вторая - для группы, где требуется максимально возможная производительность, но с учетом ограниченного бюджета. Имеются еще несколько дополнительных конфигураций, позволяющих администраторам массивов серии HP VA выработать решение относительно баланса производительности и целостности данных. Базовая конфигурация для группы, где все решает производительность, - уровень RAID 1+0. Он обеспечивает максимально возможную производительность почти для всех приложений, но отличается самой низкой эффективностью использования доступной емкости и представляет собой одно из самых дорогостоящих решений по критерию долл./Mбайт. Для второй группы массивы HP VA обеспечивают опцию самоуправления - AutoRAID.
+<p>Запрограммированный в соответствии с теми же правилами, которые опытные администраторы RAID-систем используют для оптимизации по критерию цена/производительность, компонент HP AutoRAID проводит мониторинг и настройку размещения данных для достижения оптимальных характеристик. Данная технология контролирует использование хранимых в массиве данных и определяет наилучший уровень RAID. Последовательно считываемые данные хранятся в массиве RAID 5DP, который обеспечивает наилучший баланс между производительностью и эффективностью использования емкости накопителей. Для произвольной записи данных используется RAID 1+0, который обеспечивает наилучшие характеристики для часто модифицируемых данных. Управление произвольно записываемыми данными аналогично управлению в иерархической системе хранения: активные данные содержатся в массиве уровня RAID 1+0; когда данные становятся пассивными, они автоматически мигрируют в массив уровня RAID 5DP, обеспечивая тем самым максимальную эффективность хранения.
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6615.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Технология виртуальных массивов HP VA
+</a><br><a href="detail.php@ID=6615.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Андрей Борзенко 
+В условиях бурного развития Интернет-технологий информация становится основным стратегическим ресурсом. Способность информационной&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6615.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6615&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0fc7deba9a1f14e63833b75d8778934b'><img src='../bitrix/tools/captcha.php@captcha_code=0fc7deba9a1f14e63833b75d8778934b' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

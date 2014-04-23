@@ -1,0 +1,453 @@
+<HTML>
+<HEAD>
+<title>Эволюция и применение архитектуры POWER</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="История развития архитектуры IBM POWER &mdash; от истоков до современных процессоров POWER6. Hа основе архитектуры POWER корпорация IBM (www.ibm.com) разработала ряд важных инновационных решений во многих областях. Это касается, в частности, создания" />
+<meta name="description" content="История развития архитектуры IBM POWER &mdash; от истоков до современных процессоров POWER6. Hа основе архитектуры POWER корпорация IBM (www.ibm.com) разработала ряд важных инновационных решений во многих областях. Это касается, в частности, создания" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398080369','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm11597' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=11597&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm11597"].SHOW_IMAGE.value="N"; document.forms["PrintForm11597"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm11597"].SHOW_IMAGE.value="Y"; document.forms["PrintForm11597"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(11597);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=11597.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=11597.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(11597);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6263.html'>Серверы</a>, <a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><br /></p><a href='../numbers/index.php@ID=11604.html'>№2 (112), февраль 2008</a><h1>Эволюция и применение архитектуры POWER</h1>Автор: Андрей Борзенко<br />03.03.2008<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=11597&amp;PICTURE_ID=11591.html'><IMG src='../upload/iblock/914/1-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Компьютер IBM RISC System/6000 на базе процессора с архитектурой POWER и частотой 450 МГц.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=11597&amp;PICTURE_ID=11592.html'><IMG src='../upload/iblock/7bf/2-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Многокристальный модуль MCM процессора POWER5</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=11597&amp;PICTURE_ID=11593.html'><IMG src='../upload/iblock/d56/3-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Тестирование процессоров POWER6.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=11597&amp;PICTURE_ID=11594.html'><IMG src='../upload/iblock/a90/4-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Кристалл POWER6</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=11597&amp;PICTURE_ID=11595.html'><IMG src='../upload/iblock/138/5-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Серверы IBM System p 570 на базе процессоров POWER6</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=11597&amp;PICTURE_ID=11596.html'><IMG src='../upload/iblock/03e/6-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Космический спускаемый аппарат Phoenix Mars Lander</b></TD></TR></TABLE><DIV class='article-text'><p><em>История развития архитектуры IBM POWER &mdash; от истоков до современных процессоров POWER6.</em> </p>
+
+<p>Hа основе архитектуры POWER корпорация IBM (<a href="http://www.ibm.com">www.ibm.com</a>) разработала ряд важных инновационных решений во многих областях. Это касается, в частности, создания многоядерных процессорных кристаллов, проектирования более быстрых систем с пониженным тепловыделением и уменьшенными размерами, технологии виртуализации, позволяющей исполнять несколько систем на одном процессорном кристалле. Кроме того, архитектура POWER стала ведущей платформой на рынке Unix-систем. Именно на ее базе корпорация реализовала суперкомпьютер-рекордсмен Blue Gene. Судя по опубликованным данным, в настоящее время IBM разрабатывает процессор POWER7, в кристалл которого будет включен контроллер памяти, а также интерфейс HyperTransport (в соответствии с поддержкой платформы Torrenza). Завершение работ над новым кристаллом намечено на 2010 г., когда предполагается выпустить суперкомпьютер серии Peta-Flop (производительностью свыше 1 PFLOPS) для военного исследовательского агентства DARPA в США. Проект был одобрен еще в начале 2000 г., и тогда IBM получила 53 млн долл. на его развитие, причем через шесть лет полученная сумма составляла уже 244 млн долл. </p>
+
+<p>У истоков архитектуры POWER </p>
+
+<p>Еще в 1961 г. в IBM независимо друг от друга стартовали два перспективных проекта. Один из них, названный Project X, был нацелен на создание высокопроизводительных компьютеров на базе уже существующих систем семейства IBM System/360. В задачу же разработчиков Project Y входило ускорение работы компьютеров не в десятки, а в сотни и даже тысячи раз. Проектируемые ими вычислительные системы должны были обеспечить максимально возможную производительность, для чего вещественные числа в них представлялись с двойной точностью. Это, в частности, позволило бы применять подобные системы для научных вычислений в национальных ядерных лабораториях. Специально созданную группу из пятидесяти инженеров назвали IBM Advanced Computing Systems (ACS). К сожалению, этот проект так и остался на бумаге, но в ходе его выполнения было сделано множество интересных изобретений и получено немало патентов. Добытые знания и опыт заметно опередили свое время. К счастью, они оказались востребованы уже в недалеком будущем. </p>
+
+<p>Архитектура, разработанная в ходе другого проекта, обозначаемого как &laquo;801&raquo;, в дальнейшем получила название RISC (Reduced Instruction Set Computing). В 1985 г. исследовательский центр IBM им. Томаса Уотсона начал разработку процессора RISC второго поколения. А еще через год отделение корпорации в Остине (шт. Техас) приступило к работе над серией компьютеров RS/6000, ставшей наследницей этого проекта. </p>
+
+<p>Первые компьютеры RISC System/6000 на базе процессоров с архитектурой POWER появились на рынке в 1990 г. В новую серию вошло два класса систем — рабочие станции и серверы, опирающиеся соответственно на архитектуры POWERstation и POWERserver. Центральный процессор, названный RIOS (позже RIOS I или POWER1), состоял из 11 отдельных микросхем: кэш-памяти инструкций, блока арифметико-логических операций, блока вычислений с плавающей точкой, четырех микросхем кэш-памяти данных, устройства управления памятью, двух блоков ввода-вывода и тактового генератора. Для маломощных станций RS/6000 был разработан однокорпусный вариант RIOS под названием RSC (RISC Single Chip — RISC на одной микросхеме), выпущенный в 1992 г. </p>
+
+<p>Микропроцессор POWER2, выпускавшийся с 1993 г., был прямым преемником POWER1. В него добавили второй блок арифметико-логических операций и второй блок вычислений с плавающей точкой. Кроме того, был расширен набор команд. Для реализации инструкций записи длиной в четыре машинных слова перемещали два соседних значения двойной точности в два смежных регистра вычислений с плавающей точкой. По-новому было реализовано вычисление квадратного корня на аппаратном уровне, а также преобразование числа с плавающей точкой в целочисленное значение. В течение первых нескольких лет процессор был многокристалльным, и только с 1996 г. POWER2 в версии P2SC (POWER2 Super Chip) был реализован на одном кристалле. </p>
+
+<p>В 1998 г. IBM выпустила процессор POWER3, имевший 64-разрядную систему команд и увеличенное число регистров для выполнения арифметических операций. Он поддерживал весь набор 64-разрядных инструкций POWER, включая все имевшиеся на тот момент расширенные команды, и содержал два блока вычислений с плавающей точкой, три блока вычислений с фиксированной точкой и два блока загрузки-выгрузки. Все последующие поколения процессоров POWER поддерживали полный набор инструкций. </p>
+<blockquote>
+  <p>Архитекрура POWER </p>
+
+  <p>Архитектура POWER (Performance Optimization With Enhanced RISC) во многих отношениях представляет собой традиционную RISC-архитектуру. В ней сохранены все наиболее важные особенности RISC: фиксированная длина команд, архитектура регистр-регистр, простые способы адресации и команды, большой регистровый файл и трехоперандный формат инструкций. Однако есть и некоторые дополнительные свойства, отличающих архитектуру POWER от других RISC-архитектур. Ее набор команд изначально был основан на идее суперскалярной обработки. В базовой архитектуре команды распределяются по трем независимым исполнительным устройствам: целочисленной и вещественной арифметики, а также переходов. Для сокращения времен выполнения архитектура POWER была расширена за счет нескольких специальных команд. Так, были введены команды групповой загрузки и записи, которые обеспечивали пересылку содержимого нескольких регистров в память (и обратно) с помощью единственной команды. Архитектура переходов POWER была выстроена с учетом их предварительного просмотра и методики свертывания. Кстати, реализация условных переходов, используемая в архитектуре POWER, уникальна и отличает ее от других RISC-процессоров. </p>
+</blockquote>
+<p>POWER4 </p>
+
+<p>Микропроцессор POWER4, в котором впервые была реализована архитектура «два процессорных ядра на одном кристалле», был анонсирован в конце 2001 г. На самом деле устройство POWER4 уникально уже тем, что в нем даже один кристалл представляет собой мультипроцессорную систему, поскольку в одном корпусе содержится два 64-разрядных микропроцессора. Собственно архитектуру кристалла POWER4 отличает несколько современных решений: суперскалярная структура, внеочередное исполнение команд, большая кэш-память на кристалле, специализированный порт для основной памяти, высокоскоростные интерфейсы («линки») для объединения микропроцессоров в системы с архитектурой распределенной разделяемой памяти. </p>
+
+<p>Каждый процессор POWER4 имел два конвейерных блока для работы с 64-разрядными операндами с плавающей точкой, выбирающих на исполнение по пять команд каждый, и два блока для работы с памятью. Процессоры содержали раздельные кэш-памяти команд и данных первого уровня емкостью по 64 Кбайт каждая. Кроме того, имелась разделяемая (общая) кэш-память второго уровня на кристалле (емкостью 1,4 Мбайт) и внешняя кэш-память третьего уровня (емкостью 32 Мбайт). Совместный доступ к внешней кэш-памяти выполнялся по технологии DSI (Distributed Switch Interconnect). Для создания мультипроцессорных конфигураций имелись специальные интерфейсы с высокой пропускной способностью. </p>
+
+<p>Наряду с параллелизмом на уровне команд процессор использовал параллелизм на уровне потоков (тредов). Динамическое выявление параллелизма предотвращало простои процессора при трудно выявляемых статически исключительных ситуациях, например, промахе в кэш-памяти. POWER4 изготавливался с учетом проектных норм 0,18 мкм по технологии «кремний на изоляторе» (Silicon On Insulator, SOI) с несколькими слоями медной металлизации на кристалле площадью около 400 кв. мм. Базовое напряжение питания POWER4 составляло 1,5 В. Тактовая частота кристалла, содержащего 174 млн транзисторов, достигала 1,1 или 1,3 ГГц. Такие параметры обеспечивал технологический процесс CMOS-8S2, представлявший собой дальнейшее развитие известного процесса CMOS-8. </p>
+
+<p>Одной из отличительных особенностей POWER4 стало наличие кэш-памяти второго уровня, разделяемой двумя процессорами кристалла, а также внешними процессорами других кристаллов через интерфейсы шириной 128 разрядов, работающие на тактовой частоте более 500 МГц, что обеспечивало пропускную способность свыше 10 Гбайт/с. При объединении четырех кристаллов и их специальном размещении проводники «линков» могли быть достаточно короткими и прямыми, что важно при работе на высоких тактовых частотах. Физически кэш-память второго уровня емкостью около 1,4 Мбайт состояла из нескольких одинаковых блоков с доступом к ним через коммутатор с пропускной способностью на уровне 100 Гбайт/с. Протокол когерентности обеспечивал размещение данных, поступивших по «линкам», в том блоке кэш-памяти, который последним использовался для размещения данных. Порт кристалла POWER4, предназначенный для подключения кэш-памяти третьего уровня емкостью до 32 Мбайт, имел ширину 128 разрядов для каждого из двух направлений пересылки данных. Порт функционировал не на полной тактовой частоте процессоров кристалла, но тем не менее при передаче обеспечивал пропускную способность на уровне 13&ndash;14 Гбайт/с. Теги кэш-памяти третьего уровня были расположены внутри кристалла, что ускоряло работу протокола когерентности; скорость передачи данных между кэш-памятью третьего уровня и основной памятью достигала 12,8 Гбайт/с. </p>
+
+<p>Каждый из двух процессоров POWER4 имел систему команд, реализованную в компьютерах RS/6000 и AS/400 и полностью совместимую с системой команд PowerPC. Сохранение системы команд, связанное с поддержкой двоичного кода пользователей, потребовало применения не только однотактных команд, но и микропрограмм и даже прерываний для программной реализации наиболее сложных инструкций. </p>
+
+<p>Каждый сдвоенный процессор POWER4 был упакован в керамический мультипроцессорный модуль (размером 4,5Ч4,5 дюйма) с еще тремя аналогичными устройствами. Эта базовая строительная единица называлась MCM (MultiChip Module). Такой модуль, содержащий четыре микросхемы POWER4, в итоге объединял восемь процессоров. В названии МСМ просматриваются аналогии с TCM (Thermal Conduction Module) — знаменитым процессорным модулем, обеспечивающим эффективное охлаждение расположенных в нем процессоров мэйнфреймов. Технологические достижения, которые привели к появлению многокристальных модулей IBM, впервые были реализованы в компьютере eServer z900. </p>
+
+<p>Модуль MCM был выполнен в многослойном керамическом корпусе, содержавшем магистрали, которые соединяли кристаллы между собой, а также с модулями кэш-памяти и высокоскоростным коммутатором для связи с удаленными процессорами. Четыре микросхемы POWER4 образовывали восьмипроцессорную конфигурацию и располагались в МСМ под углом 90&deg;, что позволяло минимизировать длину шин расширения, соединяющих микросхемы. Шины расширения связывали между собой и модули МСМ. В этих шинах использовалась уникальная технология волновой конвейеризации (wave pipelining), обеспечивающая очень низкие задержки. Пропускная способность каждой шины превосходила 8 Гбайт/с; соответственно МСМ с четырьмя шинами расширения, ведущими к другим МСМ, могла иметь суммарную пропускную способность свыше 32 Гбайт/с. Такая пропускная способность обменов между МСМ предназначалась для 32-процессорной SMP-конфигурации, состоящей из четырех модулей МСМ. На самом деле шины расширения, кроме собственно межмодульных шин, включали выделенные шины для организации ввода-вывода и создания NUMA-конфигураций. </p>
+
+<p>При разработке POWER4 был использован целый ряд специальных решений, направленных на повышение надежности работы этих микросхем и компьютеров на их основе. В частности, предусмотрен был механизм обнаружения и коррекции ошибок для кэш-памяти второго и третьего уровней. </p>
+
+<p>POWER5 </p>
+
+<p>Микропроцессор POWER5 стал первой реализацией девятого поколения 64-разрядной RISC-архитектуры IBM. И хотя в ней использовались многие решения, появившиеся еще в POWER4, разработчики нового процессора подчеркивали, что его нельзя рассматривать как всего лишь модификацию предшественника. Дело в том, что существенно изменилась конструкция самого кристалла, что позволило создавать более эффективные суперскалярные комплексы. В частности, на кристалле POWER5 размещено 276 млн транзисторов, занимающих площадь 389 кв. мм. В технологическом процессе соблюдались проектные нормы 0,13 мкм с применением технологий медных проводников и «кремний на изоляторе», что позволило достичь большей производительности и снизить энергопотребление. Напомним, что площадь кристалла POWER4, изготовлявшегося по технологии 0,18 мкм, была равна 414 кв. мм. У его модификации POWER4+, выпущенной в конце 2002 г., она уменьшилась до 267 кв. мм только благодаря переходу на более жесткие проектные нормы 0,13 мкм. </p>
+
+<p>На кристалле POWER5 размещались два одинаковых процессорных ядра и общая кэш-память второго уровня (L2) объемом 1,875 Мбайт, выполненная в виде трех отдельных блоков, у каждого из которых имелся свой отдельный контроллер (у POWER4 объем кэш-памяти второго уровня составлял 1,5 Мбайт). Физический адрес данных определял, в каком блоке кэш-памяти второго уровня находятся данные. Каждое из процессорных ядер могло независимо обращаться к любому из трех контроллеров кэш-памяти второго уровня. Тактовая частота POWER5 составляла от 1,5 до 1,9 ГГц. </p>
+
+<p>Одним из главных новшеств в конструкции кристалла по сравнению с POWER4 стала интегрированная кэш-память третьего уровня объемом 36 Мбайт. Стоит отметить, что в предыдущем поколении процессора 32-Мбайт кэш-память располагалась вне кристалла. Благодаря ее переносу ближе к процессорному ядру при отсутствии нужных данных в кэш-памяти второго уровня ядру намного реже приходилось обращаться за пределы кристалла, за счет чего в SMP-системе уменьшался обмен данными между кристаллами. В результате, если системы на базе POWER4 нельзя было масштабировать до числа процессоров свыше 32, поскольку это привело бы к резкому увеличению задержек из-за роста межпроцессорного трафика, то POWER5 позволял строить 64-процессорные конфигурации. Кроме того, переход на более жесткие проектные нормы 0,13 мкм позволил конструкторам POWER5 интегрировать в него и контроллер памяти, избавившись от микросхемы, которая в POWER4 отвечала за управление памятью, что дополнительно сократило латентность считывания данных из памяти. </p>
+
+<p>Структура конвейера команд POWER5 полностью идентична той, что применялась в POWER4, не изменились и величины задержек. Такая преемственность должна была обеспечить полную совместимость нового процессора с приложениями, разработанными для его предшественника. Четыре кристалла POWER5 (восемь процессорных ядер) вместе с четырьмя кристаллами кэш-памяти третьего уровня упаковывались в многокристальный модуль Multichip Module (MCM) размером 95Ч95 мм. Часто использовался также двухкристальный модуль Double chip Module (DCM). Для объединения MCM применялась смешанная инфраструктура из шин и распределенного коммутатора — каждый модуль имел четыре логические шины, позволяющие построить кольцо из четырех MCM. Соединяющая MCM восьмибайтная шина работала на половине тактовой частоты процессора и обеспечивала пропускную способность 4 Гбайт/с. Для соединения шин применялась усовершенствованная версия распределенного коммутатора, разработанного для POWER4. Число шин увеличилось, что повысило суммарную пропускную способность по сравнению с POWER4. </p>
+
+<p>В POWER5 применялась одновременная многопоточность, при которой процессорное ядро может запрограммировать порядок параллельного выполнения команд из нескольких потоков. Напомним, что в POWER4 многопоточность была реализована на аппаратном уровне — каждое из двух процессорных ядер выполняло свой поток команд, но при задержке выполнения одного потока ресурсы обслуживающего его ядра нельзя было передать другому потоку. Одновременная многопоточность SMT (Simultaneous MultiThreading) в POWER5 позволяет системе динамически подстраиваться. Например, если возникает длительная задержка при выполнении команды одного потока, то все ее исполнительные блоки временно передаются другому потоку. Теоретически SMT можно реализовать не только для двух, но и для большего числа потоков, однако разработчики POWER5 считали, что это значительно усложнит механизм многопоточности, но не даст серьезного выигрыша в производительности. По мнению экспертов, реализация SMT в POWER5 была совершеннее, но в то же время сложнее, чем используемая в процессорах Intel Xeon технология Hyper-Threading. Стоит отметить, что логика SMT и необходимое для ее работы дублирование ресурсов занимают 24% площади процессорного ядра, в то время как у Xeon только 5% кристалла используется для многопоточности. </p>
+
+<p>Как и предшественник, POWER5 содержит два блока загрузки-выгрузки, два блока арифметических операций, блок ветвлений и два блока вычислений с плавающей точкой. Команда последовательно проходит через эти блоки за несколько тактов процессора. Для получения максимума производительности требуется, чтобы в течение каждого такта каждый блок выполнял разные команды, однако на практике редко удается добиться загрузки всех блоков, часть их работает вхолостую. SMT позволяет загрузить неиспользуемые в течение такта блоки командами из второго потока — иными словами, вместо последовательного выполнения команд из двух потоков эта технология реализует их параллельную обработку. </p>
+
+<p>В POWER5 каждое процессорное ядро может одновременно обрабатывать два потока команд, т. е. работает как два логических процессора, а сам кристалл — как четыре. Команды обоих потоков извлекаются из одной и той же кэш-памяти команд первого уровня и вместе загружаются в исполнительные блоки (конвейер процессора). В идеальном случае оба потока команд после считывания из кэш-памяти команд должны проходить через конвейер и использовать ресурсы физического процессора без конфликтов между потоками. В этом случае применение SMT удваивает производительность процессора. Однако если между потоками возникнет конфликт из-за ресурсов процессора, то одному из них придется ждать, и прирост производительности оказывается меньше 100%. SMT организует выполнение команд из потоков следующим образом: несколько команд из каждого потока можно загрузить в набор конвейеров в течение каждого такта. Любые пять команд из обоих потоков, представляющие до двух операций загрузки-выгрузки, двух операций двоичной арифметики, двух операций с плавающей точкой и ветвление, можно загрузить в один конвейер в течение одного такта. За один такт по стадиям конвейера проходит только одна команда из одного из потоков. Физический процессор определяет порядок выполнения команд на основе набора правил с учетом зависимости операндов, времени ожидания обработки команд и необходимости внеочередного выполнения некоторых команд. </p>
+
+<p>Каждый физический процессор содержит кэш-память данных и кэш-память команд первого уровня, которые совместно используются обоими логическими процессорами. Как говорилось выше, кэш-память второго уровня у физических процессоров POWER5 общая, поэтому ее совместно используют четыре потока команд. Для улучшения производительности SMT при выполнении различных приложений в POWER5 реализованы динамическая балансировка ресурсов и подстраиваемый приоритет потоков. Первая из этих функций следит за тем, чтобы общие для обоих потоков ресурсы не оказались заняты одним из них. Например, если у одного потока несколько раз подряд возникают «промахи» для кэш-памяти второго уровня, то его команды остаются в очереди, и потому замедляется выполнение команд второго потока. Для предотвращения подобных ситуаций логика балансировки нагрузки определяет, что первый поток превысил пороговое значение непопаданий, после чего в зависимости от конкретной ситуации она может уменьшить его приоритет либо временно запретить декодирование его команд. </p>
+
+<p>Подстраиваемый приоритет потоков позволяет программно указать, что одному из потоков должна предоставляться большая часть ресурсов выполнения. Микропроцессор POWER5 поддерживает восемь уровней приоритета: уровень 0 означает, что поток не выполняется, а уровень 7 соответствует наивысшему приоритету потока. Потоку с более высоким приоритетом предоставляются дополнительные такты декодирования команд. Если у обоих потоков уровень приоритета 1 или 0, это означает, что процессор может перейти в энергосберегающий режим. </p>
+
+<p>POWER6 </p>
+
+<p>В мае 2007 г. IBM одновременно представила самый быстрый процессор и новый сверхмощный сервер, в котором реализованы различные инновационные технологии энергосбережения и виртуализации. Новый сервер стал первой системой в мире, достигшей рекордных показателей во всех четырех важнейших тестах, оценивающих производительность при решении деловых и технических задач. Работающий на тактовой частоте 4,7 ГГц двухъядерный процессор POWER6 в два раза превзошел по скорости процессор предшествующего поколения POWER5, потребляя почти столько же электроэнергии на питание и охлаждение. Это означает, что за счет новых процессоров можно либо вдвое повысить производительность, либо снизить энергопотребление почти наполовину. На момент выхода, согласно результатам в ключевых тестах TPC-C, новые серверы IBM с числом ядер от двух до 16 по производительности в пересчете на ядро опережали системы HP Superdome в три раза. По скорости работы процессор POWER6 почти в три раза опережал Itanium. Еще более глубокое впечатление произвела пропускная способность процессора POWER6 — 300 Гбайт/с, что в 30 раз превышает показатели процессора Itanium (и позволяет, к примеру, загрузить весь каталог iTunes всего за 60 с). </p>
+
+<p>Однако возможности нового сервера не ограничивались высокой «голой» производительностью (raw performance) — он стал самым мощным решением для консолидации вычислительных ресурсов среднего класса, которое с помощью специальных аппаратных и программных средств позволяет создавать в одной системе множество виртуальных серверов. Согласно собственным оценкам корпорации, в одной стойке нового компьютера IBM можно консолидировать 30 серверов SunFire v890, что позволяет сэкономить в год более 100 тыс. долл. только за счет снижения энергопотребления. Демонстрируя редкую пока универсальность, новый сервер IBM System p 570 на базе процессоров POWER6 занял первые места в четырех наиболее популярных тестах для Unix-серверов — SPECint2006 (производительность целочисленных операций, типичных для деловых приложений), SPECfp2006 (производительность операций с плавающей точкой, типичных для научно-технических приложений), SPECjbb2005 (производительность приложений Java по показателю «количество бизнес-операций в секунду») и TPC-C (возможности обработки транзакций). Это был первый случай в истории, когда одна система завоевала первые места во всех четырех категориях. На сегодняшний день System p 570 принадлежит более двух десятков рекордов в различных тестах для широкого спектра технических и бизнес-приложений. </p>
+
+<p>Высокая производительность новой системы в значительной степени обусловлена ее общей сбалансированностью. По мнению разработчиков, им удалось в новом сервере соблюсти необходимый баланс при масштабировании производительности процессоров и других характеристик системы — размеров кэш-памяти и величины пропускной способности. Общий объем кэш-памяти одного процессора POWER6 составляет 8 Мбайт, в четыре раза больше, чем у процессора POWER5, что вполне соответствует его колоссальной пропускной способности. Во многих же серверах других поставщиков имеет место обратная ситуация — основное внимание уделяется процессорной производительности, однако остальные компоненты системы зачастую не способны предоставлять процессорам исходные данные с необходимой скоростью. </p>
+
+<p>POWER6 стал первым процессором для платформы Unix, способным аппаратно выполнять десятичные арифметические операции с плавающей точкой (до того времени они реализовывались программно). Встроенная аппаратная поддержка десятичной арифметики с плавающей точкой обеспечивает огромный выигрыш заказчикам, применяющим сложные приложения для расчета налогов, финансовых показателей и планирования ресурсов предприятия. </p>
+
+<p>Процессор POWER6 изготавливается по производственной технологии IBM с использованием жестких проектных норм 65 нм. Новый процессор появился в тот момент, когда некоторые эксперты уже предсказывали прекращение действия закона Мура, согласно которому скорость процессоров удваивается каждые 18 месяцев. Высокие показатели процессора POWER6 обусловлены рядом технических новшеств, ставших результатом масштабных пятилетних научно-исследовательских и опытно-конструкторских работ. Эти новшества кратко охарактеризованы ниже. </p>
+
+<p>Усовершенствованы механизмы выполнения машинных команд внутри процессорного кристалла. Разработчики из IBM повысили производительность процессора не путем увеличения числа стадий конвейера (стадия конвейера определяет микрооперации, выполняемые за один такт), а сократив время выполнения каждой стадии за счет исключения ненужных операций и выполнения большего объема работы в параллельном режиме. Как результат, время выполнения сокращается вдвое, или уменьшается энергопотребление. </p>
+
+<p>Подключение схемных элементов, не способных работать при низком напряжении, к отдельным шинам электропитания существенно сократило энергопотребление остальных элементов процессорного кристалла. Кроме того, варьирование соотношения напряжение/частота позволяет понижать энергопотребление кристалла почти вдвое при минимальном снижении общей производительности. </p>
+
+<p>Новая конструкция кристалла обеспечивает функционирование процессора POWER6 при пониженном напряжении. Это позволяет применять один и тот же процессор как в модульных серверах с низким энергопотреблением, так и в больших высокопроизводительных SMP-системах. Процессор поддерживает настройку полосы пропускания, что позволяет заказчикам получить или максимальную производительность, или минимальные затраты. </p>
+
+<p>В кристалле POWER6 реализовано также несколько дополнительных технологий для сокращения энергопотребления и уменьшения тепловыделения серверов. В отсутствие полезной нагрузки тактовая частота процессора может радикально снижаться, снова повышаясь при появлении каких-то задач. Кроме того, энергия дополнительно экономится за счет динамического отключения питания неиспользуемых фрагментов памяти (с повторным их включением по мере необходимости). При превышении температурного порога процессор POWER6 способен снижать скорость выполнения команд, чтобы остаться в пределах заданного пользователем допустимого температурного коридора. </p>
+
+<p>Кроме того, IBM представила мощную функцию под названием POWER6 Live Partition Mobility, позволяющую заказчикам перемещать работающие виртуальные машины с одного Unix-сервера на другой без временной приостановки их функционирования, т. е. без ущерба для постоянной готовности этих виртуальных машин. Конкурирующие решения требуют перезагрузки Unix-системы и всех приложений, что прерывает нормальное функционирование сервера. IBM стала первым поставщиком, который помог своим заказчикам оптимизировать использование ресурсов в более широком масштабе — теперь администраторы могут работать с большими группами серверов как с пулом гибко конфигурируемых ресурсов, а не рассматривать каждый сервер в качестве отдельного объекта, выделенного для решения некоторых задач. </p>
+
+<p>Серверы IBM System p на базе POWER6 </p>
+
+<p>Известные своей вычислительной мощью серверы и рабочие станции IBM System p отвечают потребностям пользователей в выполнении обширного спектра приложений, включая обработку транзакций, публикации в Web, анализ данных и управление системами. Это семейство систем на базе процессоров IBM POWER (от одного до 64 ядер) обеспечивает высокий уровень производительности, готовности и масштабируемости, а также динамическое распределение ресурсов. Разработанные IBM технологии виртуализации позволяют обрабатывать больше информации на одном сервере, тем самым уменьшая совокупную стоимость владения, необходимое физическое пространство и расходы на электроэнергию. Решения System p предназначены как для компаний малого и среднего бизнеса, так и для крупных предприятий, использующих Unix-платформы. Эти серверы работают под управлением ОС AIX, разработанной IBM открытой ОС семейства Unix, и поддерживают тысячи Linux-приложений. Предлагаемые корпорацией услуги миграции позволяют клиентам быстро и просто перейти с конкурирующих платформ на системы IBM. </p>
+
+<p>В октябре прошлого года IBM сообщила о поставке тысячного сервера System p 570 на базе процессорной технологии POWER6 (напомним, что компания анонсировала выпуск этого сервера средней ценовой категории в мае 2007 г., а поставки его начались в июне). Пользователем юбилейной системы стала компания Arrow Electronics, чье подразделение Enterprise Computing Solutions (ECS) — крупнейший в мире дистрибьютор серверов серии IBM System p. Всего эта компания уже приобрела для собственных нужд восемь систем System p 570. Новые серверы будут использоваться для автоматизации и интеграции операций Arrow по управлению заказами, поставками, финансами и планированием. Компания в настоящее время ведет глобальное расширение своей корпоративной ERP-системы в масштабах предприятия, включая многочисленные представительства и дистрибьюторские центры по всему миру. Аппаратно-программная конфигурация на базе серверов System p 570 с технологией виртуализации Advanced POWER Virtualization будет обеспечивать постоянный круглосуточный доступ к бизнес-приложениям и сервисам более чем 3 тыс. корпоративных пользователей, партнеров и клиентов компании. В технологии POWER6 ИТ-службу Arrow Electronics привлекли богатые возможности в плане производительности, способности к масштабированию и обеспечения постоянной высокой готовности приложений и сервисов. Arrow связывают с IBM прочные и долговременные деловые связи как с ведущим поставщиком ИТ-решений и бизнес-партнером. Серверы System p под управлением ОС AIX вот уже многие годы составляют основу информационно-технологической среды компании, и выбор процессорной платформы POWER6 стал для Arrow вполне логичным. </p>
+
+<p>Технологии POWER в стратегии SOA </p>
+
+<p>IBM дополнила свои решения для сервис-ориентированных архитектур (SOA) технологиями виртуализации, первоначально созданными для перераспределения вычислительных мощностей в периоды пиковой нагрузки, например, при внезапных всплесках Интернет-трафика или увеличении количества биржевых транзакций. Как известно, с помощью стратегии SOA удается организовать более рациональный режим использования информации в рамках корпоративных инфраструктур, учитывая бизнес-цели компании. </p>
+
+<p>Новые предложения IBM серии System p Configurations for SOA Entry Point позволяют применить технологии виртуализации в SOA-среде, что обеспечивает более сбалансированное и гибкое использование ресурсов в масштабе всей компании. Обобщив свой успешный опыт достижения бизнес-результатов за счет SOA-технологий, корпорация IBM определила пять так называемых точек входа в сервис-ориентированные архитектуры — people (люди), processes (процессы), information (информация), connectivity (способность к взаимодействию) и reuse (многократное использование). Для этих точек входа IBM создала пять соответствующих конфигураций, каждая из которых объединяет аппаратные средства, технологии виртуализации и ПО. Такие конфигурации упростят и ускорят создание SOA-среды. </p>
+
+<p>Технология IBM Advanced POWER Virtualization расширяет возможности SOA-решений, позволяя создавать на сервере несколько разделов, в каждом из которых исполняется отдельный образ ОС (например, Unix или Linux) и несколько приложений. Кроме того, для повышения гибкости бизнеса эта технология позволяет — при возникновении соответствующих потребностей, например, пиковых нагрузок, — мгновенно перераспределить процессорные ресурсы между разделами. И наконец, программная технология HACMP (High-Availability Cluster Multiprocessing), предлагаемая в качестве опции, обеспечивает бесперебойное функционирование SOA-среды благодаря механизму аварийного переключения. </p>
+
+<p>Эксперты подчеркивают, что новые конфигурации серии System p Configurations for SOA Entry Point сочетают лучшие серверные и виртуализационные технологии со связующим ПО IBM, что упрощает развертывание новых систем в среде SOA. Эти мощные комплексные решения помогут заказчикам адаптироваться к изменениям бизнеса с помощью гибкой инфраструктуры, сократить ИТ-расходы, повысить качество услуг и упростить использование системных ресурсов. Напомним, что в состав этих конфигураций включены некоторые серверы IBM System p и программные продукты IBM семейств WebSphere, Tivoli и Information Management. В комплект поставки каждой заранее протестированной конфигурации входят: </p>
+
+<ul>
+  <li>эталонные архитектуры; </li>
+
+  <li>руководства по установке, настройке и конфигурированию системы; </li>
+
+  <li>сертификация всего комплекта ПО для работы на серверах System p; </li>
+
+  <li>различные шаблоны интеграции на уровне ПО; </li>
+
+  <li>стандартные методики предотвращения проблем на уровне ПО; </li>
+
+  <li>документация по программным продуктам, ориентированная на различные категории ИТ-персонала; </li>
+
+  <li>ответы на часто задаваемые вопросы по эксплуатации; </li>
+
+  <li>соответствующие примеры применения. </li>
+</ul>
+
+<p>Входящие в комплект поставки детальные руководства по построению архитектуры рассчитаны на ИТ-архитекторов заказчиков или бизнес-партнеров. Основываясь на глубоких знаниях в области SOA и проверенных методиках, служба IBM Global Services (или компетентный бизнес-партнер IBM) поможет заказчику в освоении новых конфигураций, сократив его расходы и ускорив развертывание SOA-архитектур. Специалисты IBM говорят, что предлагаемые ими точки входа в SOA-архитектуры основаны на результатах колоссальной работы, проведенной с тысячами заказчиков, применяющих сервис-ориентированный подход для решения бизнес-проблем. </p>
+
+<p>Демонстрация новых решений </p>
+
+<p>Среди всех микропроцессорных технологий, присутствующих на сегодняшнем рынке, технология POWER отличается максимальной широтой охвата и разнообразием применения. Напомним, что на базе этой технологии построены все три игровые консоли нового поколения и самые мощные суперкомпьютеры мира. Кроме того, POWER Architecture — это ведущая платформа для построения серверов уровня предприятия, бортовых автомобильных систем (управление двигателем и трансмиссией, усовершенствованные системы безопасности, телематические решения), проводных и беспроводных сетевых инфраструктур, маршрутизаторов и коммутаторов корпоративного уровня. </p>
+
+<p>В сентябре прошлого года состоялась конференция POWER Architecture Developer Conference — первое в отрасли независимое от поставщиков мероприятие, ориентированное на техническое обучение и обмен информацией между разработчиками по широкому спектру решений на базе технологии POWER Architecture. Конференция проводилась сообществом POWER.org (<a href="http://www.power.org">www.power.org</a>) — открытой организацией, которая занимается поддержанием, совершенствованием и продвижением процессорной технологии POWER в качестве предпочтительной отраслевой аппаратной платформы. Это сообщество, образованное в 2005 г., призвано оптимизировать взаимодействие между участниками, ускорить инновационные процессы и способствовать широкому принятию технологии POWER Architecture во всем мире. Отметим, что POWER.org относится к числу самых квалифицированных среди международных сообществ системных проектировщиков. </p>
+
+<p>В рамках конференции POWER Architecture Developer были представлены технологические инновации и практическая информация по проектированию, а также прошли впечатляющие демонстрации готовых решений. Мероприятие, демонстрирующее всю глубину и широту проникновения технологии POWER Architecture в различные сегменты рынка, стало эффективным форумом для сбалансированного и независимого обсуждения технологии и вариантов ее применения, стимулировав появление свежих идей и очередных инноваций. На протяжении двух дней проводились технические семинары, лабораторные секции, обсуждения ключевых докладов и демонстрации решений поставщиков. В конференции приняли участие более 500 проектировщиков электронных компонентов, разработчиков, ученых и инвесторов, а также десятки поставщиков решений. Одной из основных задач конференции было стимулирование обмена техническими знаниями и отраслевого взаимодействия по широкому кругу теоретических проблем и вопросов практического применения — от «систем на кристалле» до суперкомпьютеров. Техническая программа конференции предусматривала свыше 40 ч информационных выступлений по следующим темам: </p>
+
+<ul>
+  <li>аппаратные и программные средства виртуализации; </li>
+
+  <li>применение технологии POWER Architecture в высокопроизводительных вычислительных системах, решениях для работы с цифровым контентом и многоядерных системах; </li>
+
+  <li>перспективы встраиваемых систем; </li>
+
+  <li>разработка ПО для платформы POWER Architecture; </li>
+
+  <li>экологическая безопасность технологии. </li>
+</ul>
+
+<p>В рамках секции Technology Panels отраслевые эксперты и участники конференции смогли принять участие в обсуждении актуальных тенденций и стандартов, а также перспектив развития POWER Architecture и потенциальных областей ее применения. В свою очередь на секции POWER Architecture Lab обсуждалась реально действующая инфраструктура для изучения готовых к практическому применению платформ POWER. Инструкторы провели пошаговые демонстрации достижений, полученных в ходе реальных опытно-конструкторских проектов. Открытую среду для интерактивного взаимодействия с демонстрационными продуктами и технологиями от более чем 20 поставщиков предоставила секция POWER Architecture Landscape. Участники конференции могли обсудить проблемы разработки с отраслевыми экспертами и ознакомиться с потенциальными областями применения POWER Architecture. </p>
+
+<p>Технологии POWER на Марсе </p>
+
+<p>В прошлом году процессоры POWER вышли в открытый космос в проекте космического агентства NASA. Phoenix Mars Lander — автоматический спускаемый аппарат, предназначенный для изучения Марса, — совершит посадку в северной полярной области «красной планеты», где проведет бурение грунта на поверхности с целью поиска подземного водяного льда и той или иной формы органической жизни. Космический аппарат оснащен радиационно стойким компьютером RAD6000, созданным компанией BAE Systems на базе процессорной архитектуры IBM POWER. Этот «мозговой центр» Phoenix Mars Lander будет обрабатывать навигационные данные и управлять ключевыми исполнительными системами как в космосе, так и на поверхности планеты. Суммарные затраты на проект Phoenix составляют 420 млн долл. </p>
+
+<p>На месте посадки аппарат Phoenix будет подвергаться воздействию низких температур вплоть до -100°F (около -70°С) при скорости ветра до 40 м/c. Безотказная работа всех систем аппарата в течение всей его миссии — важнейшее требование проекта. Доказанная способность RAD6000 сохранять работоспособность в суровых условиях космоса, а также его открытая архитектура, поддерживающая программное управление с удаленных рабочих станций и суперкомпьютеров, делает эту систему подходящей платформой для межпланетного путешествия на расстояние в 423 млн миль. </p>
+
+<p>В IBM чрезвычайно горды тем, что Лаборатория реактивного движения NASA (Jet Propulsion Laboratory) выбрала процессорную технологию POWER Architecture и систему RAD6000 от BAE Systems для компьютерного обеспечения миссии, которая может дать ответ на извечный вопрос о том, есть ли жизнь на другой планете. Теперь процессорная архитектура POWER, которая используется в 60% самых быстродействующих компьютеров в мире , в трех самых популярных игровых приставках и в половине всех бортовых автомобильных компьютеров, по праву может считаться самой многоцелевой вычислительной платформой в Солнечной системе. </p>
+
+<p>Напомним, что в 2003 г. NASA запустила космические аппараты с «марсоходами» (Mars Exploration Rover) серий Spirit и Opportunity с целью выяснить, присутствовала ли когда-либо на этой планете вода — основной в нашем понимании «строительный блок» жизни. Эти миссии, первоначально рассчитанные на три месяца, тем не менее продолжаются по сей день. На Землю и сейчас передается большой объем ценной научной информации и интереснейшие фотографии. Главный бортовой компьютер марсоходов Spirit и Opportunity, управляющий их движением и выполняющий первичную обработку полученных данных, — одноплатный RAD6000 той же компании BAE Systems. В нем используется 32-разрядный RISC-процессор на базе POWER Architecture, также с названием RAD6000, который фактически представляет собой радиационно защищенный аналог коммерческого процессора IBM, созданного BAE Systems по лицензии корпорации. Менеджеры BAE Systems по продукции для специальных программ говорят, что выбрали архитектуру POWER как процессорную платформу, наиболее подходящую для космических миссий, и опыт подтверждает правильность этого выбора — космическое сообщество признало RAD6000 надежной «рабочей лошадкой» для компьютерного управления прикладными задачами в космических миссиях. Сохраняя работоспособность в условиях снежных бурь при скорости ветра до 80 миль/ч и температуре до –199°F (около –130°С), процессоры POWER в радиационно стойком исполнении стали стандартом де-факто для работы в условиях космоса. </p>
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25175.html'>Серверы ETegro Hyperion для высоких нагрузок</A></b></li><li><b><A href='detail.php@ID=24850.html'>Сервер Dell PowerEdge для крупных предприятий</A></b></li><li><b><A href='detail.php@ID=24844.html'>Масштабируемые серверы Cisco UCS </A></b></li><li><b><A href='detail.php@ID=24684.html'>Lenovo ThinkServer – новые решения для бизнеса</A></b></li><li><b><A href='detail.php@ID=24539.html'>Первый серверный процессор с архитектурой ARM</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=11597.html" target="_blank"><img src="../upload/iblock/40c/1-1-1.jpg" alt="Открыть материал" style="width:50px; height:50px; border:1px solid #000; float:left; margin:0 5px 5px 0;"></a><a href="detail.php@ID=11597.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Эволюция и применение архитектуры POWER</a><br><a href="detail.php@ID=11597.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">История развития архитектуры IBM POWER &mdash; от истоков до современных процессоров POWER6. Hа основе архитектуры POWER корпорация IBM &hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=11597.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=11597&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0b1c4f5f537e6d9b2dc7ffcc648fe302'><img src='../bitrix/tools/captcha.php@captcha_code=0b1c4f5f537e6d9b2dc7ffcc648fe302' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

@@ -1,0 +1,744 @@
+<HTML>
+<HEAD>
+<title>XML-схемы на службе электронной коммерции
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Андрей Колесов Для практической реализации идей электронного бизнеса необходимо решить целый ряд чисто технологических вопросов. Среди них особо выделяется проблема интеграции разнородных информационных ресурсов, решение которой требует создания" />
+<meta name="description" content="Андрей Колесов Для практической реализации идей электронного бизнеса необходимо решить целый ряд чисто технологических вопросов. Среди них особо выделяется проблема интеграции разнородных информационных ресурсов, решение которой требует создания" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398083204','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm9124' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=9124&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm9124"].SHOW_IMAGE.value="N"; document.forms["PrintForm9124"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm9124"].SHOW_IMAGE.value="Y"; document.forms["PrintForm9124"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(9124);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=9124.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=9124.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(9124);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=9202.html'>Инструменты</a><br /></p><a href='../numbers/index.php@ID=11503.html'>№7 (36), июль 2001</a><h1>XML-схемы на службе электронной коммерции
+</h1>12.07.2001<p></p><DIV class='article-text'><i>Андрей Колесов</i>
+<p>Для практической реализации идей электронного бизнеса необходимо решить целый ряд чисто технологических вопросов. Среди них особо выделяется проблема интеграции разнородных информационных ресурсов, решение которой требует создания простого и надежного механизма обмена данными между различными приложениями, причем как внутри корпоративных систем, так и при взаимодействии различных организаций.</p>
+<h3>Технология XML требует организационной поддержки</h3>
+<p>Сегодня, кажется, уже все знают: XML - вот золотой ключик, который должен навести порядок в хаосе великого множества форматов данных. Однако при ближайшем рассмотрении легко увидеть, что эта технология может действительно эффективно использоваться только в сочетании с решением целого ряда организационных вопросов. Конкретно: требуется механизм разработки и поддержки стандартов различного уровня - от масштаба предприятий до международных.</p>
+<p>Напомним, что в основе XML и HTML лежит один и тот же принцип: информация записывается в виде простого текста, в котором имеются управляющие команды (теги) и собственно данные. XML отличается от HTML тем, что позволяет передавать не только данные, но и информацию об их структуре. Отметим, что оба этих языка представляют собой упрощенный вариант давно известного языка SGML (Standard Generation Markup Language).</p>
+<p>Сама по себе идея языка XML - текстового описания структуры и содержания некоторых данных совсем не нова. Главное здесь то, что лидеры компьютерной индустрии вроде бы осознали необходимость перехода от внутренних, закрытых форматов к общим, открытым. Но, честно говоря, судить о том, серьезное ли это намерение (а не маркетинговые акции, чтобы показать свою готовность к открытости), можно будет лишь спустя некоторое время. Тем не менее сегодня XML - это мировой отраслевой стандарт, создание и развитие которого идет под эгидой World Wide Web Consortium (W3C), общественной организации, представляющей интересы входящих в нее участников рынка.</p>
+<p>Появление общего стандарта описания данных избавляет разработчиков ПО от необходимости придумывать собственные форматы, причем речь идет даже о решении сугубо внутренних задач. Разумеется, за любую универсальность приходится расплачиваться определенной избыточностью, но в данном случае она не столь велика и не будет сколько-нибудь заметна на современных компьютерах.</p>
+<p>Вместе с тем нужно отметить, что текстовое представление данных имеет свои недостатки. Один из них - проблемы с использованием символов, задействованных в качестве специальных (например, "<" и ">"). Вторая проблема - неоднозначность преобразования данных из внутреннего двоичного формата в текст и наоборот. В последнем случае особое внимание нужно уделять специфике национальных форматов, особенно при работе с разными региональными установками и кодовыми таблицами. Проблемы эти решаемы, но о них нужно помнить.</p>
+<h3>Объектная модель документов, XML-анализаторы и XML-схемы</h3>
+<p>Одна из основных составляющих технологии платформно-независимого информационного взаимодействия различных приложений - это использование объектной модели документов XML (Document Object Model, XML DOM), стандарт которой принят комитетом W3C. Интерфейс XML DOM обеспечивает доступ к иерархической структуре, содержимому и стилям документа независимо от платформы и языка программирования.</p>
+<p>Тут нужно отметить, что DOM - это общее понятие для некоторой совокупности моделей представления документа в виде "дерева" подчиненных фрагментов. Иными словами можно, например, говорить о DOM для Word-документов, DOM для HTML и т.п. В данном случае мы ведем разговор об XML DOM.</p>
+<p>Следует также разобраться в соотношении понятий "DOM-документ" и "XML-документ", которые, с одной стороны, почти тождественны, с другой - качественно отличны. DOM-документ, создаваемый приложением, - это внутренний объект последнего, и в общем случае о его физической реализации ничего не известно (так же, как мы работаем с документами Word, ничего не зная о формате его хранения). Содержимое DOM-документа становится доступным для всех остальных приложений в результате его сохранения в формате XML-файла. Таким образом, XML-документ - это представление DOM-документа на языке XML.</p>
+<p>На примере Visual Basic логика работы с этими документами выглядит следующим образом:</p>
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td> <PRE>Set xmlDoc = New DOMDocument ' Создание нового объекта
+' Далее - работа по формированию документа
+...
+xmlDoc.Save "File.xml" ' Сохранение в виде XML-файла
+...
+xmlDoc.Load "NewFile.xml" ' Чтение XML-файла '
+' Далее выполняется работа с DOM-объектом</PRE></td></tr>
+</table>
+<p></p>
+<p>Для работы с XML-документами применяется специальное ПО под общим собирательным названием XML-анализаторы (XML parsers), которые предоставляют разработчикам приложений механизм создания DOM-документа в виде программного интерфейса взаимодействия с этим документом, а также преобразования его в XML-формат и обратно. При этом функции анализаторов выходят далеко за рамки синтаксического разбора документа (parse - выполнять синтаксический разбор), обеспечивая широкий спектр операций со структурой и содержимым DOM-документов.</p>
+<p>При создании приложений в среде Windows разработчики вполне естественно ориентируются на средства Microsoft, в данном случае на использование объектной библиотеки XML Parser (MSXML), третья (последняя на сегодня) версия которой была выпущена в ноябре 2000 г. Она заменила версии MSXML 2.0 и 2.5, поставлявшиеся соответственно в составе Internet Explorer 5.0 и Windows 2000. MSXML 3.0 можно свободно загрузить по адресу http://msdn.microsoft.com/xml.</p>
+<p>Сам по себе язык XML не решает проблемы обработки XML-документов, что необходимо при обмене данными между приложениями. Упрощенно говоря, XML лишь связывает, например, некоторый набор чисел с понятием "цена", но что означает данный термин, язык уже не может расшифровать. Таким образом, для правильной интерпретации содержимого XML-документов необходимо описание его структуры.</p>
+<p>Принципиально здесь то, что использование структурного языка позволяет задавать формальные правила, определяющие возможный структурный состав документа и типы данных. С их помощью формируется фактически новый язык на базе XML. Совокупность таких правил образует XML-схему. Более того, для разных фрагментов XML-документа можно применять различные схемы, используя механизм пространства имен; иначе говоря, один документ может использовать коллекцию схем.</p>
+<p>Существует несколько способов описания таких правил. Самым перспективным на данный момент считается XML Schema, вытесняющий более традиционный DTD (Document Type Definition), возможности которого гораздо скромнее. Одно из преимуществ XML Schema в том, что само описание схемы представляет собой XML-документ, сформированный по определенным правилам. Однако следует иметь в виду, что стандарт XML Schema официально пока не принят.</p>
+<p>Ниже мы подробнее рассмотрим некоторые принципы формирования XML-схем на примере CommerceML.ru, а пока отметим некоторые общие моменты.</p>
+<h3>XML-схемы - стандарты на компьютерном языке</h3>
+<p>Фактически XML-схемы - это некая форма описания стандартов документов на компьютерном языке. При этом, в отличие от знакомых многим брошюр с ГОСТами и ОСТами, схема не только декларирует набор постулатов, но также в непосредственном виде используется для контроля за структурой и синтаксисом документа. Такую операцию часто называют проверкой состоятельности (validation). Эти операции выполняют программы-анализаторы, либо автоматически в процессе загрузки и коррекции документа, либо по запросу из приложения.</p>
+<p>Однако следует подчеркнуть, что такая автоматическая проверка чаще всего не обеспечивает 100%-ной гарантии правильности документа. В любом случае нужно учитывать разъяснения по применению компонентов схемы.</p>
+<p>Говоря о XML-схеме как о некотором стандарте специфического вида, полезно вспомнить, что российский "Закон о стандартизации" выделяет четыре уровня стандартов: стандарты предприятий, научно-технических сообществ, отраслевые и государственные. Подчеркнем сразу, что даже многие ГОСТы носят не обязательный, а рекомендательный характер.</p>
+<p>Любой стандарт - это результат компромисса внутри некоторого сообщества заинтересованных сторон. Это, в частности, означает, что должен существовать механизм поддержки цикла жизнедеятельности стандарта (принятие изменений, их внесение и пр.). На уровне предприятия или государства это регулируется соответственно директором или Президентом. А как быть с отдельными (порой относительно небольшими) сегментами экономики?</p>
+<p>Обратим внимание и на специфику разработки стандартов. С одной стороны, они должны соответствовать требованиям времени и даже немного опережать их (чтобы предотвратить хаотичное развитие ситуации). С другой стороны, они должны быть весьма консервативны - какой от них толк, если они будут постоянно меняться? Понятно также, что по мере расширения сферы действия стандартов либо увеличивается сложность их разработки, либо снижается конкретика и детальность описаний.</p>
+<p>Тут можно с сожалением отметить, что отечественные субъекты рыночной экономики, освободившись от всеобъемлющей опеки государства, только начинают осваивать методы совместного решения общих проблем, в том числе и в области стандартизации. И в этой связи, конечно же, очень интересен зарубежный опыт, где можно постоянно видеть примеры взаимодействия, казалось бы, заклятых конкурентов ради достижения компромиссов.</p>
+<p>Этот вопрос можно обсуждать отдельно, а пока отметим, что подавляющее число промышленных стандартов (в том числе в ИТ-индустрии) создаются по инициативе самих предприятий, разумеется, при самом активном участии лидеров. Довольно часто в этой работе уже на начальном уровне участвуют представители государства (как правило, в качестве экспертов), однако далеко не все договоренности доходят до уровня регистрации официальными органами (хотя разработчики, естественно, всячески стараются повысить статус своего труда).</p>
+<h3>Инициатива BizTalk</h3>
+<p>Необходимость стандартизации XML-обмена на уровне некоторых общих отраслевых задач и была одной из причин появления инициативы BizTalk (авторство ее принадлежит Microsoft, http://www.microsoft.com), которая была поддержана лидерами многих отраслей и поэтому сразу превратилась в межиндустриальную. В марте 1999 г. был создан руководящий комитет BizTalk Steering Committee (http://www.biztalk.org), в который входят ведущие в своих отраслях поставщики, органы стандартизации и корпоративные заказчики. Первая версия спецификаций Framework Document Specification 1.0, разработанных Microsoft, была утверждена и опубликована в конце 1999 г.</p>
+<p>Инициатива BizTalk нацелена на решение следующих задач:</p>
+<ul>
+  <li>создание единой реферативной модели;</li>
+  <li>подготовка набора описаний спецификаций разнообразных служб;</li>
+  <li>разработка бизнес-документов;</li>
+  <li>формирование глоссария элементов данных для схем на основе XML.</li>
+</ul>
+<p>Практическая работа комитета BizTalk заключается также в подготовке стандартов документов для различных прикладных областей (медицины, электротехники, энергетики и пр.). Именно поэтому данная инициатива считается межиндустриальной. Эта задача решается путем формирования единой базы данных о разнообразных XML-схемах, которые позволяют правильно интерпретировать и обрабатывать содержимое XML-документов.</p>
+<p>На первом этапе применения XML подразумевалось, что собственно создание XML-схем 
+  документов должно выполняться разработчиком оригинальных документов. Например, 
+  XML-схемы для документов системы R3 разрабатываются компанией SAP (<a href="http://www.sap.com">http://www.sap.com</a>), 
+  т.е. в этом случае речь идет о своего рода стандарте предприятия. Но в этом 
+  случае очевидно, что обмен данными между разными приложениями требует механизма 
+  преобразования - желательно автоматического - данных, представленных разными 
+  схемами. Именно в этом и состоит одна из функций таких средств, как Microsoft 
+  BizTalk Server 2000 (см. "BYTE/Россия" №2'2001, с. 36).</p>
+<p>Однако есть и другой путь: создание XML-схем, соответствующих более высокому уровню общности задач, - например, на уровне обмена коммерческой информацией между торговыми организациями. Понятно, что работать с одной схемой гораздо удобнее, чем с набором разных; но столь же очевидно, что разработка таких универсальных решений сложнее, в том числе и с организационной точки зрения.</p>
+<p>Всем известна обратная сторона универсальности - сложность разработки, неэффективность использования ресурсов, трудность оперативной модернизации и т. п. Поэтому, скорее всего, следует ожидать, что большинство XML-схем будет относиться к уровню предприятий и достаточно узкоспециализированных предметных областей. А на более высоком уровне обмен информацией будет происходить с помощью конвертеров между разными схемами.</p>
+<h3>Первая российская XML-схема</h3>
+<p>Тут, конечно, нужно сделать уточнение: речь идет о первом отечественном проекте (получившем определенную известность) создания XML-схемы отраслевого уровня - CommerceML. Соответственно интерес к нему определяется не только возможностью показать практическое применение подобных стандартов, но и тем, что тут можно обсудить вопросы взаимодействия разных компьютерных компаний с целью выработки совместных решений.</p>
+<p>Для начала полезно вспомнить историю развития проекта.</p>
+<p><b>Июль 2000 г. </b>Фирма "1С" (<a href="http://www.1c.ru">http://www.1c.ru</a>) 
+  и российское представительство Microsoft (<a href="http://www.microsoft.com/rus">http://www.microsoft.com/rus</a>) 
+  объявили о начале работ по созданию стандартов электронного обмена в формате 
+  XML для торговых организаций. Это сообщение никак нельзя было назвать неожиданным 
+  - за несколько месяцев до того Microsoft заметно активизировала пропаганду XML-технологий 
+  (разумеется, на базе своих продуктов), которая должна была быть подкреплена 
+  практическими национальными примерами.</p>
+<p>Обмен информацией между различными учетными системами - одна из наиболее актуальных задач, и лучшего партнера, чем "1С," тут трудно назвать. Обе компании имеют значительный опыт именно технологического сотрудничества, и вполне логично, что от создания совместных продуктов они перешли к разработке отраслевых стандартов. Надо отметить, что такая постановка задачи была очень своевременной: ведь потенциал XML-технологий очень сложно реализовать, если вместо отраслевых стандартов появляется огромное множество внутрикорпоративных.</p>
+<p><b>12 октября 2000 г. </b>Представлен стандарт обмена коммерческой информацией 
+  в формате XML. Разработка выполнялась специалистами фирм "1С" и Extra.ru при 
+  технической поддержке инженеров Microsoft. На завершающем этапе к этим организациям 
+  присоединились Интернет-компании Port.ru и Price.ru, а также московское представительство 
+  Intel, и все они подписали соглашение о поддержке представленного стандарта.</p>
+<p>Особо отмечалось, что данный договор имеет некоммерческий характер и открыт для всех заинтересованных организаций, готовых к конструктивному сотрудничеству. Надо сказать, что в этих документах действительно четко прописаны вопросы взаимодействия участников проекта, порядок дальнейшей работы, а также механизм присоединения к соглашению других лиц.</p>
+<p>Журналистов в том момент в основном интересовали не технические, а организационные вопросы (сами докладчики не использовали термин "XML-схема", хотя речь шла именно о ней): в какой степени эти стандарты годятся для других разработчиков экономических программ, не является ли все это навязыванием своих решений рынку и т.д. В свою очередь, участники проекта подчеркивали, что они исходили из принципа открытости и универсальности: стандарт изначально независим от особенностей ПО и структур баз данных кого-то из участников проекта. В его основе лежат общие принципы торговой деятельности. При разработке стандарта использовались западные аналоги, но отечественный вариант существенно отличается от них, так как учитывает российскую специфику учета и торговли.</p>
+<p>Технический руководитель проекта, начальник отдела разработки программ автоматизации торговли фирмы "1С" Алексей Краюшкин особо отметил, что схема разрабатывалась без привязки к структуре данных "1С". Например, в "1С:Торговле" есть данные, которые напрямую не поддерживаются схемой, и в то же время в схеме есть элементы, которые не очень просто загрузить в "1С:Торговлю". Одной из основных задач при разработке схемы было вычленить минимально необходимый набор реквизитов, достаточный для однозначного описания (идентификации) хозяйственных операций. В итоге схема представляет собой минимальный, но полный набор реквизитов.</p>
+<p><b>6 декабря 2001 г. </b>Разработанная XML-схема получила имя собственное - 
+  CommerceInfo. Создан специальный Web-сервер (<a href="http://www.Commerce.ru">http://www.Commerce.ru</a>), 
+  на котором размещена полная техническая и организационная информация о проекте. 
+  Отметим, что Web-ресурс предоставлен и поддерживается самым "независимым" участником 
+  проекта - представительством Intel. Некоторое время спустя в первоначальный 
+  вариант схемы были внесены некоторые изменения, и она получила иное официальное 
+  имя - CommerceML.</p>
+<p><b>3 марта 2001 г.</b> На партнерском семинаре фирма "1С" представила новую 
+  редакцию 8.7 типовой конфигурации "1С:Торговля и Склад" - первое тиражное решение, 
+  в котором реализована возможность обмена коммерческой информацией в формате 
+  XML в соответствии со стандартом CommerceML. В этой программе используются два 
+  вида XML-обмена: "Продавец - Web-витрина" и "Покупатель - Продавец". Первый 
+  предназначен для оперативной публикации коммерческих предложений в Web-каталогах. 
+  Второй - для обмена данными (например, накладными) между различными учетными 
+  системами.</p>
+<p>Рассказывая о нововведениях, руководитель "1С" Борис Нуралиев еще раз подчеркнул, что стандартизация обмена информацией нужна сегодня не столько для Интернет-торговли (доля которой в России весьма незначительна), сколько для взаимодействия обычных, оффлайновых предприятий. Даже если мы сегодня научимся передавать копии электронных документов на дискете, то это сильно упростит работу торговых организаций.</p>
+<h3>CommerceML вблизи</h3>
+<p>Как уже отмечалось, XML-схема - это XML-документ, сформированный по определенным правилам. Ее можно редактировать "руками" в любом текстовом редакторе, но лучше для этого использовать специальные XML-редакторы и редакторы схем (например, XML-Spy, http://www.xmlspy.com). Схему, прочитанную с сервера Commerce.ru, можно также просматривать в Interner Explorer 5.5 (рис. 1).</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7/CommerML/PICT1.gif" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Рис. 1. Просмотр XML-схемы CommerceML в среде Internet Explorer 5.5. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Мы не будем здесь подробно говорить о принципах организации XML-схем, отметим лишь основные моменты:</p>
+<p>1. В документе используется специальный тег <description>, в котором записывается произвольный текст комментария к схеме с использованием разметки HTML. Для экономии места на рис. 1 узлы с большими фрагментами таких комментариев закрыты.</p>
+<p>2. Как видно из рис. 1, все описание схемы состоит из последовательности базовых тегов <Element Type>, описывающих элементы XML-документа. Нужно обратить внимание, что мы не видим иерархию взаимосвязей элементов между собой - они представлены лишь в виде списка. Но иерархия элементов тут все же определяется, так как каждый элемент содержит список подчиненных ему элементов.</p>
+<p>Схему можно представить и в виде дерева элементов (рис. 2). Тут стоит заметить, что одинаковые элементы могут находиться в разных ветвях, причем на различных уровнях (см., например, ДополнительныйРеквизит).</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7/CommerML/PICT2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Иерархия элементов схемы.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>3. Каждый элемент включает описание допустимых подчиненных элементов и атрибутов. Заметим сразу, что данные в этой схеме записываются в основном в виде атрибутов элементов, а не значений подчиненных элементов.</p>
+<p>На примере главного элемента "КоммерческаяИнформация" видно, что он может включать шесть подчиненных элементов ("Контрагент", "Склад", "Банк", "Каталог", "ПакетПредложений", "Документ). Эти элементы не являются обязательными, но с другой стороны, при необходимости каждый их них можно использовать несколько раз (minOccus="0", maxOccurs="*). Причем в XML-документе эти элементы должны располагаться именно в такой очередности (order="seq"). Сам элемент "КоммерческаяИнформация" не может содержать текстовой информации (content="eltOnly"), но может включать необязательный (required="no") атрибут "Комментарий" текстового вида (dt:type="string").</p>
+<p>4. В схеме широко используются уникальные идентификаторы, которые применяются для связи как информации XML-документа с базой данных конкретной учетной системы (например, с каталогами), так и внутренних элементов документа между собой. Для формирования таких идентификаторов предлагается использовать технологию GUID (Global Unique ID).</p>
+<p>Из приведенного здесь фрагмента текста схемы видно, что формальное описание в общем случае не является достаточным для создания реального XML-документа. Действительно, в данном случае получается, что главный собирательный элемент "Коммерческая информация" с точки зрения грамматики может вообще не содержать никакой полезной информации.</p>
+<p>Разработанный вариант схемы CommerceML предполагает обмен информацией трех видов:</p>
+<ul>
+  <li>каталогами товаров;</li>
+  <li>коммерческими предложениями;</li>
+  <li>документами, соответствующими наиболее распространенным торговым операциям.</li>
+</ul>
+<p>Каждому из них соответствует свой элемент XML-схемы - "Каталог", "ПакетПредложений" и "Документ". Понятно, что в одном документе в принципе может быть несколько таких элементов в произвольном сочетании. Три других элемента первого уровня ("Контрагент", "Склад" и "Банк") содержат справочную информацию, которая используется в "функциональных" элементах. Ниже мы покажем логику обработки XML-документов на конкретном примере.</p>
+<h3>Как это работает в "1С:Торговле"</h3>
+<p>Для формирования XML-документов в среде "1C:Предприятие" используется специальный программный компонент V7Plus, который обеспечивает обращение к MSXML из языка V7. Вот как выглядит фрагмент кода, выполняемого при открытии нового документа:</p>
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><PRE> Если ЗагрузитьВнешнююКомпоненту("v7plus.dll") &lt;&gt; 1 Тогда
+   Предупреждение("Компонента v7plus.dll не найдена!");
+ КонецЕсли;
+
+ гАнализатор = СоздатьОбъект("AddIn.XMLParser");
+ гДокДанных  = гАнализатор.СоздатьДокумент();
+ гДокДанных.ЗагрузитьИзСтроки("&lt;?xml version =""1.0""?&gt;
+  &lt;BizTalk xmlns = ""urn:schemas-biztalk-org:biztalk/
+biztalk-0.81.xml""&gt;
+  &lt;Route&gt;
+  &lt;From locationID = """" locationType = """"
+     process = """" path = """" handle = """"/&gt;
+  &lt;To locationID = """" locationType = """"
+     process = """" path = """" handle = """"/&gt;
+  &lt;/Route&gt;&lt;Body/&gt;&lt;/BizTalk&gt;");
+
+ КоллекцияСхем   = гАнализатор.СоздатьКоллекциюСхем();
+ КоллекцияСхем.ДобавитьСхему("urn:CommerceML", 
+"CommerML.biz");
+ гДокДанных.Схемы = КоллекцияСхем;
+
+ // Создаем корневой элемент
+  ЭлКоммИнфо = СоздатьПодчиненныйЭлемент(гДокДанных.ЭлементДокумента.
+ВыбратьУзел("Body"),
+               "КоммерческаяИнформация");
+ // Далее выполняется ввод или формирование документа
+
+ гДокДанных.Проверить(); // проверка полученного документа
+                        // на соответствие схеме CommerML.biz
+
+ гДокДанных.Записать(гИмяФайла); // запись XML-файла</PRE></td></tr>
+</table>
+<p>
+<p>Как отмечалось выше, в новой версии конфигурации "1С:Торговля" реализованы два варианта обмена XML-информацией: "Продавец - Web-витрина" и "Покупатель - Продавец". На рис. 3 показана экранная форма вывода пакета предложений (первый вариант), а на рис. 4 - полученный XML-файл. Как видно, результирующий документ включает один каталог и три пакета предложений. В данном случае есть описание только одного контрагента (организации, которая рассылает предложения).</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7/CommerML/PICT3.gif" alt=Fig.3></td></tr>
+<tr><td valign="bottom">Рис. 3. Диалоговое окно "Выгрузка пакета предложений".
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7/CommerML/PICT4.gif" alt=Fig.4></td></tr>
+<tr><td valign="bottom">Рис. 4. XML-документ с пакетом коммерческих предложений. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>На рис. 5 и 6 приведены экранные формы выгрузки и загрузки расходной накладной. </p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7/CommerML/PICT5.gif" alt=Fig.5></td></tr>
+<tr><td valign="bottom">Рис. 5. Диалоговое окно "Выгрузка расходной накладной".
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7/CommerML/PICT6.gif" alt=Fig.6></td></tr>
+<tr><td valign="bottom">Рис. 6. Диалоговое окно "Загрузка приходной накладной".
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Содержимое основных узлов соответствующего XML-файла описывает рис. 7, а элемента "Документ" - рис. 8. В этом варианте нужно обратить внимание на следующие моменты.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7/CommerML/PICT7.gif" alt=Fig.7></td></tr>
+<tr><td valign="bottom">Рис. 7. XML-документ с основными элементами документа "Накладная".
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7/CommerML/PICT8.gif" alt=Fig.8></td></tr>
+<tr><td valign="bottom">Рис. 8. Содержимое элемента "Документ" в накладной.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В документе варианта "1С" в качестве корневого элемента выступает тег BizTalk, который включает два подэлемента Route и Body, а уже последний содержит собирательный элемент "КоммерческаяИнформация". Эта конструкция в данном случае носит необязательный характер и нужна для будущего применения XML-документа при его обработке с помощью Microsoft BizTalk Server 2000.</p>
+<p>Основная информация об отпущенных товарах хранится именно в элементе "Документ". Но в нем же используются данные о поставщике и получателе, которые записаны в элементах "Контрагент" и "Банк". Сведения о товарах используют ссылки на соответствующие каталоги. Если фирмы ранее уже обменялись каталогами, то включать элемент "Каталог" в документ не обязательно. В данном случае такой элемент имеется, и это означает, что либо приведенные в нем данные были обновлены, либо этот каталог вообще ранее не отправлялся получателю.</p>
+<p>Отметим еще интересную возможность создания XML-схемы на основе конкретного документа. Например, с помощью соответствующих средств BizTalk Server можно получить схему, которая представляет собой фактически частный случай некоторого общего варианта (рис. 9).</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7/CommerML/PICT9.gif" alt=Fig.9></td></tr>
+<tr><td valign="bottom">Рис. 9. Частный вариант схемы, полученной на основе XML-документа.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h3>Пример создания и проверки простейшего XML-документа</h3>
+<p>Для этого воспользуемся таким кодом, написанным на Visual Basic:</p>
+<p></p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><PRE>Dim xmlDoc As DOMDocument
+Dim myPath$
+myPath$ = App.Path + "\"
+
+Public Sub CreateNewXML()
+  '
+  ' Создание нового документа
+  Dim MainNode As IXMLDOMElement
+  Dim NewNode As IXMLDOMElement
+  Dim newNewNode As IXMLDOMElement
+
+  ' Имя адресного простанства схемы:
+  Const NameSchema = "urn:CommerceML"  
+  
+
+  Set xmlDoc = New DOMDocument
+  ' Записываем XML-константу объекта
+  xmlDoc.loadXML "&lt;?xml version='1.0' encoding='Windows-1251'?&gt;&lt;Body/&gt;"
+    
+  ' Создание узла "КоммерческаяИнформация"
+  Set MainNode = xmlDoc.selectSingleNode("//Body").
+appendChild _
+        (xmlDoc.createNode(1, "КоммерческаяИнформация", 
+NameSchema))
+  ' Создаем элемент с "Документ"
+  Set NewNode = MainNode.appendChild _
+            (xmlDoc.createNode(1, "Документ", NameSchema))
+  ' Все необходимые атрибуты:
+  Call NewAttributeAdd(NewNode, "ХозОперация", "Order")
+  Call NewAttributeAdd(NewNode, "Номер", "1234")
+  Call NewAttributeAdd(NewNode, "Дата", "2001-05-28")
+  ' Далее нужно заполнить обязательный элемент 
+  ' "ПредприятиеВДокументе"
+  Set newNewNode = NewNode.appendChild _
+            (xmlDoc.createNode(1, "ПредприятиеВДокументе",
+NameSchema))
+  ' И т.д. - продолжение формирования документа
+  
+  ' ...
+
+  ' Запись созданного документа
+  xmlDoc.save myPath + "MyDoc.xml"
+End Sub  
+
+Public Sub NewAttributeAdd(NewNode As IXMLDOMElement, _
+     attName As String, attValue As Variant)
+  Dim attr As IXMLDOMAttribute
+  ' Создание атрибута
+  Set attr = xmlDoc.createAttribute(attName)
+  attr.Value = attValue
+  NewNode.Attributes.setNamedItem attr
+End Sub</PRE></td></tr>
+</table>
+<p>
+<p>В результате выполнения данного кода получается файл MyDoc.xml, содержание которого приведено на рис. 10. Понятно, что здесь описаны только начальные действия по формированию документа, но хотелось бы обратить внимание на некоторые нюансы.</p>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7/CommerML/PICT10.gif" alt=Fig.10></td></tr>
+<tr><td valign="bottom">Рис. 10. Простейший XML-документ формата CommerceML.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>1. Наш собирательный элемент "КоммерческаяИнформация" помещен внутрь главного элемента Body. Казалось бы, Body вообще не нужен, но без него (точнее, дополнительного) не будет работать механизм проверки соответствия схеме.</p>
+<p>2. Создание всех элементов документа выполняется с помощью метода формирования узла:</p>
+<p>
+<PRE>createNode(1, NameElement, NameSchema)</PRE>
+<p></p>
+<p>Тут нужно подчеркнуть, что везде используется одна константа NameSchema. Причем в этом случае параметр xmlns физически записывается только в корневой элемент.</p>
+<p>3. Атрибут типа "дата" записывается в международном формате.</p>
+<p>Теперь попробуем выполнить автоматическую проверку сформированного XML-документа. Для этого перед записью файла нужно добавить такой код:</p>
+<p></p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><PRE>' Перед проверкой нужно обязательно выполнить перезагрузку!!
+  '-  namespaces будет содержать правильную коллекцию
+  xmlDoc.loadXML xmlDoc.xml
+
+' Формируем коллекцию схем
+Set xmlSchema = New XMLSchemaCache
+xmlSchema.Add NameSchema, myPath + "commerml.xml"
+
+' Подключаем коллекцию описаний схемы к документу
+Set xmlDoc.schemas = xmlSchema
+
+' Выполняем проверку
+Set parseError = xmlDoc.Validate
+If parseError.errorCode = 0 Then
+  MsgBox "Проверка прошла успешно!" & vbCrLf & _
+    "посмотрите, что получилось в файле MyDoc.XML"
+Else
+  MsgBox "Несоответствие схемы!" + vbCrLf + parseError.reason
+End If</PRE></td></tr>
+</table>
+
+<p>Проверка созданного ранее файла, конечно же, покажет ошибку, так как для элемента "ПредприятиеВДокументе" не заданы обязательные атрибуты.</p>
+<p>В этом небольшом коде нужно обратить внимание на два важных момента:</p>
+<p>1. Перед подключением схемы следует обязательно выполнить перезагрузку документа с помощью метода XML.</p>
+<p>2. При загрузке схемы мы обязаны использовать то же самое имя адресного пространства NameSchema, которое применяется в самом документе.</p>
+<h3>Пример ввода XML-документа</h3>
+<p>В качестве иллюстрации обработки полученного документа рассмотрим еще один пример с вводом полученной ранее накладной в системе "1С:Предприятие". Очевидно, что для начала следует проверить его на соответствие заданной XML-схеме:</p>
+<p></p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><PRE> Dim xmldoc  As DOMDocument
+ Dim xmlSchema As XMLSchemaCache
+ Dim parseError As IXMLDOMParseError
+
+ ' Загрузка документа
+ Set xmldoc = New DOMDocument
+ xmldoc.Load myPath + "Document.xml"
+
+  ' Подключаем описание схемы
+  Dim NameSchema$
+  NameSchema = "urn:CommerceML"
+  Set xmlSchema = New XMLSchemaCache
+  xmlSchema.Add "urn:schemas-biztalk-org:biztalk/biztalk
+-0.81.xml", _
+      myPath + "EmptyBizTalkSchema.xdr"
+  xmlSchema.Add NameSchema, myPath + "commerml.biz"
+  Set xmldoc.schemas = xmlSchema
+  ' Проверка соответствия:
+  Set parseError = xmldoc.Validate
+  If parseError.errorCode &lt;&gt; 0 Then
+      MsgBox "Несоответствие схемы!" + vbCrLf + 
+parseError.reason
+  End If</PRE></td></tr>
+</table>
+<p>
+<p>Сначала мне хотелось написать программный код, исходя из предположения, что мы получили некий неизвестный XML-файл и его нужно обработать по правилам, приведенным в опубликованном описании схемы. Однако из приведенного здесь примера видно, что реализовать задумку не удалось из-за некоторых принципиальных проблем. Во-первых, для выполнения проверки документа "1С" нужно подключать описание еще одной схемы для анализа дополнительного тега BizTalk. Однако, к сожалению, в стандарте ничего об этом не говорится, а нужный файл EmptyBizTalkSchema.xdr на сервере отсутствует (впрочем, фирма "1С" любезно предоставила его). Во-вторых, для проверки нужно знать, какое имя адресного пространства используется в полученном файле. К сожалению, это имя в стандарте не зафиксировано, так что какой идентификатор применял отправитель XML-файла - в общем случае неизвестно. Поэтому нужно подправить приведенный выше код, чтобы сначала узнать это имя: сразу после загрузки файла следует найти наш собирательный документ и узнать, какой идентификатор в нем используется:</p>
+<p></p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><PRE> Dim commInfo As IXMLDOMElement
+ ' Поиск собирательного элемента
+ Set commInfo = doc.documentElement.selectSingleNode _
+     ("Body/КоммерческаяИнформация")
+ If TypeName(commInfo) = "Nothing" Then
+    MsgBox = "Нет элемента КоммерческаяИнформация!!!" : End
+ End If
+ NameSchema$ = commInfo.namespaceURI  ' вот нужно имя
+ ' Далее выполняется подключение схемы и проверка файла</PRE></td></tr>
+</table>
+<p>
+<p>Затем можно приступать к анализу содержимого документа:</p>
+<p></p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><PRE> Dim elDoc As IXMLDOMElement
+ ' Ищем функциональные элементы (в данном случае "Документ")
+ Set elDoc = commInfo.selectSingleNode("Документ")
+ If Not TypeName(elDoc) = "Nothing" Then
+  ' Найден, определяем тип документа
+  Select Case elDoc.getAttribute("ХозОперация")
+    Case "Order"    ' Заказ товара
+    Case "Sale"     ' Накладная на отпуск товара
+    Case "Invoice"  ' Счет-фактура
+    ' ... Всего имеется 12 типов документов
+  End Select</PRE></td></tr>
+</table>
+<p>
+<p>В любой хозяйственной операции участвуют две организации, поэтому далее нужно получить информацию о них:</p>
+<p></p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><PRE> Dim CurNode As IXMLDOMElement
+ Dim IdNode As IXMLDOMElement
+
+ ' Определяем, кто является продавцом
+ ' Поиск в элементе "Документ"
+ Set curNode = elDoc.selectSingleNode _
+  ("ПредприятиеВДокументе[@Роль = 'Saler']")
+
+ ' Далее по уникальному ID ищем соответствующий 
+ ' элемент "Контрагент"
+ IdSaler$ = curNode.getAttribute("Контрагент"))
+ strSearch$ = "Контрагент[@Идентификатор='" + IdSaler$ + "']"
+ ' Поиск по всему XML-документу
+ Set IdNode = commInfo.selectSingleNode(searchStr)
+ If TypeName(IdNode) = "Nothing" Then
+   Msgbox IdNode.getAttribute("ОтображаемоеНаименование")
+ Else
+   ' Элемент с контрагентом не найден. Можно посмотреть 
+   ' в своей базе -- нет ли уже такого партнера
+ End If</PRE></td></tr>
+</table>
+<p>
+<p>Далее можно выполнить выборку всех полученных товаров:</p>
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><PRE> For Each curNode In elDoc.selectNodes("//ТоварнаяПозиция")
+   MsgBox curNode.getAttribute("Товар")
+ Next</PRE></td></tr>
+</table>
+<p>
+<p>Для каждой товарной позиции ищется каталог (в самом документе или в собственной базе данных) и т.д. Вот, собственно, и все.</p>
+<h3>Нужны ли XML-схемы для электронной коммерции?</h3>
+<p>Мы вернулись к исходному вопросу - действительно ли проблема обмена информацией в неоднородных системах актуальна? Может быть, все эти разговоры об XML - лишь маркетинговые ходы для обоснования продажи новых версий программ? (Вспомним о проблеме Y2K!) Действительно, проект CommerceML официально опубликован полгода назад, но почему же в нем не принимают участия другие известные разработчики экономического ПО?</p>
+<p>Вряд ли на этот вопрос можно дать однозначный ответ. Вполне вероятно, что реальные потребности в интеграции приложений и передачи данных пока не столь велики. Возможно, российские разработчики бизнес-программ не очень готовы к конструктивному сотрудничеству. Наверное, и сама схема CommerceML не лишена недостатков.</p>
+<p>Но как бы то ни было, очевидно, что простой публикации XML-схем в настоящий момент явно недостаточно для продвижения этих технологий в широкие программистские массы. Нужны хорошие методические материалы, демонстрирующие возможности их применения, пока их явно не хватает. Какие-то нужные для работы нюансы вообще не зафиксированы в опубликованном стандарте.</p>
+<p>Тем не менее, очевидно, что проделана очень серьезная работа по созданию XML-схемы, ее существующий вариант и сам опыт разработки может послужить хорошей основой для продолжения формирования подобных XML-стандартов.</p>
+<p><i>Автор хотел бы поблагодарить Алексея Краюшкина, сотрудника 
+  фирмы "1С", и Дмитрия Старостина из московского представительства Microsoft 
+  за помощь в подготовке статьи и изучении темы.</i></p>
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=9123.html'>А ты готов к Visual Basic.NET? - II
+</A></b></li><li><b><A href='detail.php@ID=9122.html'>Первые плоды открытости
+</A></b></li><li><b><A href='detail.php@ID=9121.html'>Microsoft Visio 2000 - деловая графика для профессионалов
+</A></b></li><li><b><A href='detail.php@ID=9120.html'>Электронные книги от Adobe
+</A></b></li><li><b><A href='detail.php@ID=9119.html'>Технологии Macromedia в Web-разработке
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=9124.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">XML-схемы на службе электронной коммерции
+</a><br><a href="detail.php@ID=9124.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Андрей Колесов
+Для практической реализации идей электронного бизнеса необходимо решить целый ряд чисто технологических вопросов. Среди них особо&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=9124.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=9124&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='01781190d658f2d1e1a23cfd5b173877'><img src='../bitrix/tools/captcha.php@captcha_code=01781190d658f2d1e1a23cfd5b173877' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

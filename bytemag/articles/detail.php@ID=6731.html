@@ -1,0 +1,521 @@
+<HTML>
+<HEAD>
+<title>Средства разработки Java-приложений от Sun
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Андрей Колесов Сразу после анонсирования технологии Java - а это произошло ровно 10 лет назад, 23 мая 1995 г., - корпорация Sun Microsystems (http://www.sun.com) приступила и к формированию комплекса средств разработки Java-приложений. При" />
+<meta name="description" content="Андрей Колесов Сразу после анонсирования технологии Java - а это произошло ровно 10 лет назад, 23 мая 1995 г., - корпорация Sun Microsystems (http://www.sun.com) приступила и к формированию комплекса средств разработки Java-приложений. При" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082438','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6731' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6731&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6731"].SHOW_IMAGE.value="N"; document.forms["PrintForm6731"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6731"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6731"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6731);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6731.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6731.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6731);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11500.html'>№7 (83), июль 2005</a><h1>Средства разработки Java-приложений от Sun
+</h1>11.07.2005<p></p><DIV class='article-text'><p><i>Андрей Колесов</i>
+<p>Сразу после анонсирования технологии Java - а это произошло ровно 10 лет назад, 
+  23 мая 1995 г., - корпорация Sun Microsystems (<a href="http://www.sun.com">http://www.sun.com</a>) 
+  приступила и к формированию комплекса средств разработки Java-приложений. При 
+  этом в силу рыночного позиционирования компании первоочередное внимание уделялось 
+  инструментарию для создания сложных корпоративных решений, тем более что Sun 
+  уже имела солидный опыт в этой области, поддерживая такие языки, как C/C++, 
+  Fortran и COBOL. 
+<p>На сегодняшний день арсенал Sun включает весьма представительный набор средств разработки (см. таблицу), в котором роль лидера отводится мощному комплексу Java Studio Enterprise, предназначенному для профессионалов, создающих сложные решения корпоративного уровня. Однако успешное внедрение ИТ требует сегодня повышенного внимания к массовому рынку, что, в частности, подразумевает наличие простых, но эффективных инструментов для разработки реальных деловых приложений не слишком искушенными программистами. По-видимому, именно этими соображениями руководствовалась Sun, выпустив в середине 2004 г. новый продукт под названием Java Studio Creator, продвижению которого корпорация придает сейчас особое значение.
+<p>По мнению Sun, Java Studio Creator (ранее носивший кодовое название Project Rave) - это средство Java-разработки нового поколения, сочетающее в себе полное соответствие стандартам Java с простой технологией визуального программирования. Оно предназначено в первую очередь разработчикам, перед которыми стоит задача быстро создавать критически важные для бизнеса приложения, но которым при этом не хотелось бы глубоко погружаться в детали собственно Java-программирования. Отметим, что и цена на продукт весьма умеренная - годовая подписка стоит 99 долл.
+<h4>Средства разработки Sun Microsystems </h4>
+<table border="1">
+  <tr>
+    <td>Инструмент</td>
+    <td>Назначение</td>
+  </tr>
+  <tr>
+    <td>Java Studio Creator</td>
+    <td>Визуальный инструмент разработки бизнес-приложений с использованием ключевых 
+      возможностей платформы Java</td>
+  </tr>
+  <tr>
+    <td>Java Studio Enterprise</td>
+    <td>Унифицированная инструментальная платформа для разработки приложений масштаба 
+      предприятия, интегрированная с серверами Sun Java Enterprise System</td>
+  </tr>
+  <tr>
+    <td>Java Studio Mobility</td>
+    <td>Средство разработки приложений, предназначенных для развертывания на мобильных 
+      устройствах, использующих технологию Java</td>
+  </tr>
+  <tr>
+    <td>Java Studio Standard</td>
+    <td>Интегрированная среда разработки для Java (ранее назывался Sun One Studio, 
+      Standard Edition) </td>
+  </tr>
+  <tr>
+    <td>Sun Studio</td>
+    <td>Интегрированный набор инструментов для корпоративных и независимых разработчиков, 
+      позволяющий создавать и развертывать приложения на языках C, C++ или Fortran 
+      для платформы Sun</td>
+  </tr>
+  <tr>
+    <td>COBOL</td>
+    <td>Среда разработки для создания новых или поддержки существующих приложений 
+      на языках COBOL и Object COBOL, а также для их развертывания на различных 
+      аппаратных платформах и ОС</td>
+  </tr>
+  <tr>
+    <td>Connector Builder</td>
+    <td>Средство разработки коннекторов для Web-сервисов при решении задач интеграции 
+      J2EE и Web-приложений с различными корпоративными системами и унаследованными 
+      приложениями</td>
+  </tr>
+  <tr>
+    <td>Unified Development Server</td>
+    <td>Интегрированное решение для быстрого создания и развертывания сетевых 
+      приложений, а также управления ими в процессе эксплуатации</td>
+  </tr>
+</table>
+<h3>Возможности Java Studio Creator </h3>
+<p>Java Studio Creator - инструментальное средство для создания распределенных многоуровневых Web-приложений, полностью построенных на стандартах технологии Java (рис. 1). Интегрированная среда разработки (Integrated Development Environment, IDE) базируется на визуальной модели работы с компонентами, которая в последние годы применяется и во многих других аналогичных средствах - Delphi, JBuilder, PowerBuilder, Visual Cafe, Visual Studio и т. д. Тем, кто знаком с такими продуктами (например, Visual Basic), не составит большого труда освоиться с Java Studio Creator (JSC).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2005/Sun_Creat/ris1.jpg" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Рис. 1. Интегрированная среда разработки Java Studio Creator.
+
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p><p>Разработка приложений с помощью JSC определяется следующими его возможностями: 
+<ul><li>мощный набор компонентов, реализованных по стандартам технологии JavaServer Faces (JSF), которыми можно визуально манипулировать прямо в среде разработки;
+<li>поддержка в IDE технологии drag-and-drop с использованием редакторов свойств и событий;
+<li>шаблоны для создания стандартных архитектурных решений;
+<li>поддержка полного цикла разработки в IDE, включая проектирование, кодирование, сборку, запуск и отладку;
+<li>автоматизированное конфигурирование и развертывание на сервере приложений;
+<li>управление всеми ресурсами приложения, включая серверы приложений, соединения с базами данных и Web-сервисы.</ul>
+<p>Приложения в JSC создаются в виде проектов. По умолчанию каждый проект содержит программный код для работы с JSF-компонентами. Программист может визуально добавлять нужные компоненты и писать необходимый код для настройки приложения. Весь цикл разработки программы выполняется в среде JSC. Поддержка и обновление библиотеки JSF обеспечивается с помощью подключения J2EE 1.4 SDK.
+<p>Основу модели разработки в среде JSC составляет архитектура повторно используемых многофункциональных компонентов. Непосредственно в состав продукта входит стандартный набор компонентов для создания пользовательского интерфейса - кнопки, текстовые поля, меню, гиперссылки и т. п. С их помощью выполняется ввод данных, навигация по страницам, управление состояниями и событиями на стороне клиента и сервера. IDE включает специальный редактор для задания свойств компонентов и настройки методов, соответствующих происходящим событиям. Кроме того, с его помощью можно добавлять код в файлы классов JavaServer Pages или JavaBeans. Можно расширить возможности IDE, добавив в нее внешние JSF-компоненты, в том числе созданные независимыми поставщиками.
+<p>Каждая Web-форма в JSC связана с классом JavaBeans, называемым Page Bean и содержащим код для создания компонентов на Web-странице. В нем также хранится стандартный набор свойств для этих компонентов. Общая логика работы выглядит примерно следующим образом: Page Bean инициализирует свойства компонентов и поддерживаемых JSF классов; IDE создает событийно-управляемые методы для компонентов, задействованных на Web-форме; программист настраивает обработчики событий, написав собственный код или используя стандартные заготовки (code clips).
+<p>С помощью инструмента JSC Early Access экземпляр Page Bean подключается к Web-форме в рамках контекста сессии. Для каждой такой сессии среда исполнения JSF создает новый рабочий экземпляр. Сама сессия продолжается в течение всего времени перемещения пользователя по различным страницам, при этом можно работать с данными, сохраненными на различных страницах. При работе нескольких пользователей одновременно запускается соответствующее число сессий, при этом модуль исполнения автоматически отслеживает связь конкретных пользователей со своими экземплярами страниц и задействованных на них компонентов. На завершающем этапе Java Studio Creator может выполнить настройку сессий таким образом, что определенные наборы данных будут предназначены только для конкретных пользователей.
+<p>Жизненный цикл процесса исполнения приложения в JSC определяется алгоритмом обработки запросов Web-страницами. Он включает стандартный цикл &quot;запрос-ответ&quot; в рамках технологии JSF.
+<p>Навигация в приложениях, создаваемых в JSC, организована с помощью ссылок между страницами и компонентами. Эти ссылки формируются в виде строковых свойств в специальном навигационном XML-файле данного проекта или с помощью средства Navigation Editor. Чтобы определить ссылку в Navigation Editor, нужно щелкнуть соответствующую страницу или элемент управления и затем соединить его мышью с нужной страницей. С программной точки зрения ссылка представляет собой значение, получаемое с помощью метода Action для данного компонента (кнопка, гиперссылки и т. п.). Получив такой строковый параметр, JSC передает его в экземпляр NavigationHandler, который, в свою очередь, передает его в на соответствующую страницу приложения. Таким образом можно реализовать как статический, так и динамический режим навигации между страницами. Можно также использовать другие схемы навигации, например, стандартные Java Event Listeners.
+<p>Основываясь на событийной модели JavaBeans, JSC управляет событиями с помощью интерфейсов Listener и классов Event. Действия событий, которые представляют собой результат щелчков мышью по кнопкам и гиперссылкам, выполняются с помощью методов Action. События, связанные с изменением величин, обрабатываются соответствующими компонентами JSP. Чтобы добавить код, который будет отслеживать изменение параметров, нужно просто дважды щелкнуть нужный компонент и открыть управляющий метод в Page Bean.
+<p>Обработка событий связывается с нужными JSF-компонентами через параметр Action или атрибут valueChangeListener. Среда исполнения JSF обрабатывает все события на сервере, а не в клиентском Web-браузере. Однако на клиентской стороне можно подключить код JavaScript для обработки событий. Это делается с помощью Property Editor или Code Editor в среде разработки JSC.
+<p>Значительная часть разработки приложений связана с необходимостью обработки исключений. В большинстве случаев ошибки в JSC-приложениях сопровождаются генерацией сообщений RunTimeException. Такие ситуации JSC обрабатывает примерно теми же методами, что и другие события, происходящие на Web-страницах.
+<p>Подводя итог краткому описанию Java Studio Creator, можно сказать, что данный инструмент поддерживает полный цикл разработки приложений, включая управление источниками данных, серверами и Web-сервисами. Работать с ним просто и достаточно эффективно.
+<h3>Проект NetBeans как технологическая основа инструментов Sun </h3>
+<p>Приведенный выше список инструментальных средств Sun не отражает весь спектр технологий разработки корпорации. Ведь у нее есть еще проект создания интегрированной платформы NetBeans, которая играет особую роль в реализации стратегии Sun в области средств разработки и сегодня фактически выступает главным конкурентом Eclipse среди Java-инструментов.
+<p>История NetBeans началась в 1996 г. в Чехии со студенческого проекта под названием Xelfi, ключевая идея которого заключалась в создании Delphi-подобной среды Java-разработки, написанной, в свою очередь, на Java. Немного позже команда разработчиков организовала компанию под названием NetBeans (&quot;Сетевые бобы&quot;; под beans, судя по всему, имеются в виду кофейные бобы), которая выпустила две коммерческие версии инструмента NetBeans Developers 2.0 и 2.1, а в мае 1999 г. представила бета-версию 3.0.
+<p>Однако как раз в это время Sun Microsystems решила провести серьезную реорганизацию своего инструментального направления. С этой целью в августе 1999 г. она приобрела компанию Forte Software, одного из ведущих поставщиков средств разработки приложений для электронного бизнеса, а еще спустя два месяца - чешскую NetBeans, в штат которой в тот момент входило 40 инженеров (условия последней сделки не оглашались). После этого Sun объявила о прекращении развития своего продукта Java Workshop и вскоре представила новое семейство средств под названием Forte. В результате бывшая бета-версия NetBeans Developer 3.0 появилась на рынке под именем Forte for Java Community Edition в качестве бесплатного инструмента для разработки настольных приложений и простых Web-решений. А средства самой Forte были ориентированы на создание сложных настольных и серверных систем и легли в основу будущей линейки Sun Studio (C, C++, Fortran) и Sun Java Studio. Однако сразу отметим, что среда разработки сегодняшних версий Sun Java Studio (в том числе и Creator) построена на базе NetBeans.
+<p>В июне 2000 г. Forte for Java Community Edition вернул себе историческое название 
+  NetBeans и был преобразован в проект, реализуемый на базе концепции open source. 
+  Более того, он был в некотором роде выведен за рамки бизнеса Sun Microsystems 
+  и представлен организационно как независимый некоммерческий проект (<a href="http://www.netbeans.org">http://www.netbeans.org</a>). 
+  Компания Sun при этом именует себя просто спонсором, хотя на самом деле остается 
+  его единоличным руководителем. Хотя сайт проекта реализован от имени NetBeans-сообщества, 
+  но на самом деле это сообщество там же называется &quot;вибрирующим&quot; (vibrant) - 
+  под ним понимается возможность для всех желающих задавать вопросы, советовать, 
+  делиться опытом, т. е. быть участником проекта с совещательным голосом. В настоящее 
+  время около 100 тыс. разработчиков из более чем 130 стран зарегистрированы на 
+  сайте в качестве участников проекта, использующих средства NetBeans. В понятие 
+  &quot;сообщество&quot; входят также фирмы, создающие программные решения, совместимые 
+  с NetBeans. 
+<p>Первоначальной целью проекта NetBeans было создание конкретного Java-инструмента. Однако после его покупки компанией Sun круг задач существенно расширился. Если сначала это средство было ориентировано на индивидуальных программистов, то потом оно стало развиваться в направлении групповой разработки с поддержкой всего жизненного цикла создания и внедрения приложения. Далее, одной из ключевых начальных идей NetBeans было формирование модульной, расширяемой, гибко настраиваемой интегрированной среды разработки (IDE), в том числе с помощью открытого набора API. Поэтому следующим логичным шагом стало разделение проекта на две части - базовую платформу NetBeans Platform и собственно инструмент разработки NetBeans IDE, которые теперь представлены в виде отдельных бесплатных продуктов, предназначенных как для коммерческого, так и для некоммерческого применения*.
+<p><hr width="40%" align="left" noshade>* По данным, приведенным на netbeans.org, в 2003 г. (более поздних сведений нет) зафиксировано более 2 млн загрузок NetBeans IDE и 35 тыс. загрузок NetBeans Platform.
+<p>Более того, сейчас продукт NetBeans IDE уже вышел за рамки среды для разработки приложений и рассматривается также в качестве универсальной специализированной среды для реализации функционально насыщенных клиентских интерфейсов (тут можно провести аналогию с проектом Eclipse, круг задач которого расширялся по такой же точно схеме).
+<p>NetBeans Platform - это универсальная среда поддержки (core runtime) для создания настольных приложений (рис. 2 и 3). Она реализована на Java и соответственно может работать с любой ОС (в частности, Solaris, Windows, Linux, Macintosh), в которой имеется Java 2 Virtual Machine (версия 1.3 и выше). С точки зрения разработчика она представляет собой открытый набор API, реализующий верхний уровень общих сервисов (поверх Java-машины) - управление визуальным интерфейсом, работа с памятью, доступ к файловой системе и т. д.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2005/Sun_Creat/ris2.jpg" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Project Navigator обеспечивает простой доступ ко всем компонентам проекта.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2005/Sun_Creat/ris3.jpg" alt=Fig.3></td></tr>
+<tr><td valign="bottom">Рис. 3. Окно Runtime позволяет видеть текущее состояние процесса выполнения, использование внешних сервисов, параметры отладки и т. д.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>NetBeans IDE - это собственно среда разработки, построенная по модульному принципу на базе NetBeans Platform и расширяемая, в том числе за счет подключения внешних модулей (plug-ins). В своем стандартном варианте она может применяться для создания кросс-платформных настольных, Web- и мобильных приложений. На ее базе можно построить полномасштабную систему разработки решений любого уровня сложности для всего жизненного цикла ПО.
+<p>После приобретения в 1999 г. чешского инструментария Sun выпустила несколько его модификаций с номерами версий 3.5 и 3.6, а в конце 2004 г. представила новый вариант платформы и IDE - 4.0. Но уже в феврале нынешнего года была выпущена бета-версия NetBeans IDE 4.1, а в мае состоялось ее официальное представление.
+<p>NetBeans IDE 4.0, полностью оправдывая смену номера версии, стал наиболее значительным обновлением этого продукта за последние пять лет - в нем существенно улучшена поддержка J2EE, средства интеграции и настройки инструмента, а также скорость работы на всех платформах, включая Linux. Ниже коротко описаны основные новшества этого решения.
+<p><b>Поддержка J2SE 5.0.</b> NetBeans 4.0 стал первым Java-инструментом, реализованным 
+  на базе новой версии спецификаций Java 2 Standard Edition, известной ранее под 
+  кодовым названием Tiger. Она, в частности, предусматривает управление программой 
+  с помощью метаданных, что позволяет модифицировать приложения без их переустановки. 
+<p><b>Система проектирования на базе Apache Ant.</b> Этот инструментарий позволяет 
+  автоматизировать и упростить создание и развертывание исполняемых модулей программ 
+  за счет широкого применения скриптов, в том числе в условиях командной разработки. 
+  Для управления этими процессами используются файлы открытых форматов. Ожидается, 
+  что в версии 4.1 появится возможность реализации сценариев на языках Groovy 
+  и Jython, более простых и удобных, чем Java. 
+<p><b>Рефакторинг.</b> Эти возможности управления программным кодом основаны на 
+  собственной технологии исследовательского подразделения Sun, отработанной в 
+  рамках проекта. 
+<p><b>Профилирование производительности.</b> Новый инструмент Performance Profiler 
+  отслеживает использование памяти (в том числе ее утечки), загрузку центрального 
+  процессора, выполнение заданий и т. п. Все это интегрировано в основной процесс 
+  разработки ПО. 
+<p><b>Web-разработка.</b> Расширенная поддержка стандартов J2EE (версии как 1.3, 
+  так и 1.4) дает разработчикам возможность использовать готовые ресурсы и структуры 
+  для создания Web-приложений различного уровня сложности. 
+<p><b>Создание мобильных приложений.</b> Возможности разработки существенно расширены 
+  за счет поддержки технологий Mobile Information Device Profile (MIDP) 2.0 и 
+  Connected Limited Device Configuration (CLDC) 1.1, а также J2ME Wireless Toolkit 
+  (WTK) 2.2. Это позволяет писать и отлаживать программы для различных мобильных 
+  устройств, не используя аппаратно-зависимого кода. 
+<p><b>Эффективная оконная система.</b> Поддержка различных редакторов для работы 
+  с документами, гибкое управление окнами делают более удобной работу в интегрированной 
+  среде разработки. Улучшены возможности навигации по компонентам проекта, а также 
+  управления конфигурациями проектов и классов. 
+<p>В состав NetBeans IDE 4.х входят также расширенные инструменты поддержки Enhanced Enterprise JavaBeans (EJB). Кроме того, продукт включает средства поддержки миграции Java-проектов, реализованных с помощью других инструментов; особый акцент делается на импорт из среды Eclipse. Однако нужно сказать, что процесс такого преобразования кода не получается &quot;бесшовным&quot;, так как NetBeans и Eclipse используют разные наборы функций для программирования пользовательского интерфейса. Тем не менее Import Eclipse Module позволяет автоматизировать преобразование кода, четко выделяя места, которые нужно дополнительно доработать &quot;руками&quot;.
+<p>Завершая это краткое описание, отметим, что NetBeans 4.х может работать с широким 
+  кругом ОС - Windows 2000/XP, Solaris версий 8, 9 и 10 (платформы SPARC и x86), 
+  различные дистрибутивы Linux, Java Desktop System 2, Mac OS X 10, а также клоны 
+  Unix. Для работы нужно установить также JDK версии 1.4.2 или выше. 
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td bgcolor="#CCFFFF">
+      <h3>Дни Java-разработчиков в Москве и Петербурге </h3>
+      <p>В конце мая российское представительство Sun Microsystems (<a href="http://www.sun.ru">http://www.sun.ru</a>) 
+        провело конференцию Java Developer Day. Это мероприятие проходит в нашей 
+        стране ежегодно с 1998 г., но на сей раз оно существенно отличалось от 
+        предыдущих своим масштабом: как раз в эти дни корпорация отмечала знаменательный 
+        юбилей - 10 лет с момента официального представления на рынке технологии 
+        Java. 
+      <p>Но юбилей - это все же формальный повод, а главная причина размаха более 
+        прагматична. Дело в том, что заметно повысился интерес Sun к России как 
+        к партнеру в области развития ее программных технологий. Год назад корпорация 
+        создала в Санкт-Петербурге свой Центр высоких технологий, в котором сегодня 
+        насчитывается около двухсот специалистов, занимающихся разработкой прикладного 
+        и базового ПО. На популяризацию Java (в том числе в студенческой и академической 
+        среде) нацелен также проводимый с начала 2005 г. при поддержке Министерства 
+        информационных технологий и связи РФ конкурс проектов для разработчиков 
+        на языке Java (<a href="http://www.javakonkurs.ru">http://www.javakonkurs.ru</a>). 
+        В планах Sun - расширение сотрудничества с российскими вузами в области 
+        образовательных программ. 
+      <p>Учитывая все это, неудивительно, что конференция в нынешнем году проходила 
+        в течение двух дней - сначала в Москве, потом в Санкт-Петербурге. А для 
+        участия в ней в Россию приехала представительная команда технологических 
+        &quot;проповедников&quot; (непосредственно участвующих в создании Java) во главе 
+        со старшим евангелистом Реджинальдом Хатчерсоном (Reginald Hutcherson). 
+        Их доклады носили сугубо профессиональный характер и были посвящены представлению 
+        новейших продуктов и технологий и перспективам их развития. В частности, 
+        слушатели узнали, что появление новой версии Java 6.0 ожидается уже в 
+        2006 г., причем, кроме функционального расширения, она должна стать более 
+        открытой для сообщества Java-разработчиков. В ней также должна быть существенно 
+        улучшена интероперабельность с другими программными платформами, в том 
+        числе с Microsoft .NET. Заметный интерес собравшихся вызвало и сообщение 
+        представителя петербургского центра разработки о направлениях развития 
+        мобильной Java. 
+      <p>В рамках московской конференции был проведен круглый стол, посвященный 
+        перспективам развития и распространения Java. В его работе приняли участие 
+        Жан-Поль Бергманс, глава представительства Sun Microsystems в регионе 
+        СНГ, Реджинальд Хатчерсон, Java Technology Evangelist Sun Microsystems, 
+        российские эксперты в области Java-разработки, представители академической 
+        общественности и журналисты. 
+      <p>А что касается интереса отечественных разработчиков к тематике конференции, 
+        можно отметить, что, несмотря на энергетические катаклизмы в Москве 25 
+        мая, мероприятие посетило почти 500 человек. 
+    </td>
+  </tr>
+</table>
+
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6731.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Средства разработки Java-приложений от Sun
+</a><br><a href="detail.php@ID=6731.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Андрей Колесов
+Сразу после анонсирования технологии Java - а это произошло ровно 10 лет назад, 
+  23 мая 1995 г., - корпорация Sun Microsystems&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6731.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6731&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0f98a8261859cc517f6385b044907947'><img src='../bitrix/tools/captcha.php@captcha_code=0f98a8261859cc517f6385b044907947' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

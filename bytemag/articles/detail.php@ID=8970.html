@@ -1,0 +1,598 @@
+<HTML>
+<HEAD>
+<title>Автоматизация бизнес-процессов в &amp;quot;1С:Предприятие 8.0&amp;quot;
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Андрей Колесов Обсуждая возможности технологической платформы &amp;quot;1С:Предприятие 8.0&amp;quot; (см. например, &amp;quot;1С:Предприятие 8.0&amp;quot; расширяет свои возможности&amp;quot;, &amp;quot;BYTE/Россия&amp;quot; № 10&amp;#39;2004), нам уже приходилось подчеркивать, что" />
+<meta name="description" content="Андрей Колесов Обсуждая возможности технологической платформы &amp;quot;1С:Предприятие 8.0&amp;quot; (см. например, &amp;quot;1С:Предприятие 8.0&amp;quot; расширяет свои возможности&amp;quot;, &amp;quot;BYTE/Россия&amp;quot; № 10&amp;#39;2004), нам уже приходилось подчеркивать, что" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082535','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8970' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8970&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8970"].SHOW_IMAGE.value="N"; document.forms["PrintForm8970"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8970"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8970"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8970);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8970.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8970.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8970);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a><br /></p><a href='../numbers/index.php@ID=11526.html'>№3 (79), март 2005</a><h1>Автоматизация бизнес-процессов в &amp;quot;1С:Предприятие 8.0&amp;quot;
+</h1>11.03.2005<p></p><DIV class='article-text'><p><i>Андрей Колесов</i> 
+<p>Обсуждая возможности технологической платформы &quot;1С:Предприятие 8.0&quot; (см. например, <a href="http://www.bytemag.ru/Article.asp?id=3193">&quot;1С:Предприятие 8.0&quot; расширяет свои возможности&quot;</a>, &quot;BYTE/Россия&quot; № 10&#39;2004), нам уже приходилось подчеркивать, что ее многочисленные новшества связаны с решением трех основных взаимосвязанных задач развития системы:
+<ul><li>повышение производительности и масштабируемости решений;
+<li>расширение функциональности и круга решаемых прикладных задач;
+<li>повышение эффективности разработки, настройки и сопровождения.</ul>
+<p>Одно из важных новшеств в &quot;1С:Предприятие 8.0&quot; - создание механизма бизнес-процессов (МБП), который был реализован на уровне бета-версии в начале лета прошлого года и должен появиться в рабочем варианте в релизе 8.0.10 до конца I квартала 2005 г. Подчеркнем, что МБП - составная часть технологической платформы, а это означает, что связанные с ним возможности могут стать доступны всем прикладным решениям, созданным на основе &quot;1С:Предприятие 8.0&quot;.
+<p>В целом можно сказать, что МБП нацелен на повышение эффективности разработки и сопровождения прикладных решений. Однако тут нужно отметить важные качественные отличия от других новшеств этого направления. Дело в том, что если модернизация языка программирования или поддержка групповой разработки рассчитаны на традиционных ИТ-специалистов (программисты, внедренцы), то МБП нацелен на более глубокое вовлечение в процесс проектирования и настройки конкретных прикладных систем специалистов качественно иного уровня - бизнес-аналитиков, консультантов, а также менеджеров заказчика. Более того, эффект МБП с точки зрения клиента проявляется даже в том случае, если пользователь не участвует непосредственно в проектировании бизнес-процессов, а только применяет разработанные кем-то схемы. Возможность формального описания действий системы и визуальное их представление позволяют заказчику лучше понять логику работы решения, в том числе проконтролировать, насколько правильно разработчик выполнил поставленное перед ним задание.
+<p>На самом деле, по мнению начальника отдела разработки программ документооборота фирмы &quot;1С&quot; Александра Безбородова, руководившего созданием МБП, новый механизм может даже усложнять разработку решений, так как требует создания и поддержки новых прикладных объектов - бизнес-процессов, их интеграции в готовое решение и связывания с другими объектами - документами, справочниками. Как показывает опыт, при разработке бизнес-процессов поверх готовых конфигураций приходится по-новому смотреть на проектные решения и кое-что переделывать. Сама задача создания бизнес-процесса требует понимания не только основ конфигурирования &quot;1С:Предприятие 8.0&quot;, но и предметной области и конкретных потребностей конкретного заказчика. Взамен этот механизм позволяет перенести акцент с управления учетом на управление процессами, автоматизировать потоки работ и соблюдение регламентов.
+<p>Таким образом, речь идет еще об одном ключевом направлении развития прикладных решений - повышении уровня их управляемости. Другая важнейшая задача - перейти от схемы, при которой пользователи управляют логикой работы программы, к тому, чтобы программа управляла действиями пользователей. Если раньше сотрудники должны были самостоятельно определять порядок своей работы, то теперь, после описания типичных задач предприятия в виде бизнес-процессов, система сама может формировать для каждого пользователя список задач, которые он должен выполнить.
+<p>Появление МБП в прикладных решениях позволяет предприятиям, в том числе и малым, перейти от традиционной функциональной модели управления к современной процессно-ориентированной схеме, качественно улучшить деятельность предприятия за счет реинжиниринга и автоматизации бизнес-процессов. Наиболее эффективной оказывается автоматизация ключевых бизнес-процессов - которые начинаются и заканчиваются во внешней по отношению к предприятию среде.
+<p>В информационных материалах &quot;1С:Предприятие 8.0&quot; говорится, что цель механизма управления бизнес-процессами - автоматизация цепочек связанных операций, направленных на достижение общей цели, обычно в контексте организационной структуры, определяющей функциональные роли и связи. Автоматизация бизнес-процессов позволяет повысить качество организации работы и эффективность управления.
+<p><b>Повышение качества.</b> Бизнес-процессы формулируют и реализуют правила 
+  выполнения отдельных операций и их взаимосвязь, что позволяет значительно сократить 
+  или даже полностью исключить ошибки в ходе выполнения бизнес-процесса, связанные 
+  с человеческим фактором. Работа с простым списком заданий позволяет сотрудникам 
+  сконцентрироваться на выполнении своих непосредственных обязанностей. 
+<p><b>Повышение эффективности.</b> Использование МБП позволяет формализовать организационную 
+  деятельность и возложить обязанности по управлению совместной работой сотрудников 
+  на прикладное решение, что ведет к более эффективному использованию рабочего 
+  времени. 
+<p><b>Новые возможности.</b> Данные о выполнении задач и ходе бизнес-процессов 
+  могут служить источником информации для оптимизации деятельности и организационной 
+  структуры предприятия, выявления узких мест и скрытых ресурсов, и стать средством 
+  поддержки процессного управления. 
+<h3>Основные сведения о механизме бизнес-процессов </h3>
+<p>Бизнес-процессы в &quot;1С:Предприятие 8.0&quot; нужны для того, чтобы объединять отдельные операции (выписка счета, прием наличной оплаты, отпуск товара со склада и т. д.) в цепочки взаимосвязанных действий, приводящих к достижению конкретной цели (например, продажа товара за наличный расчет). Участие сотрудников в жизненном цикле бизнес-процесса организовано при помощи ролевой маршрутизации.
+<p>МБП обеспечивается сразу несколькими объектами конфигурирования: бизнес-процессы, задачи, регистр сведений и параметр сеанса. Как правило, типы реквизитов адресации задачи и измерений регистра сведений назначаются в виде ссылок на соответствующие справочники, поэтому к четырем перечисленным видам добавляются еще справочники.
+<p>Два основных объекта МБП - бизнес-процессы и задачи. Они используют друг друга, а также три вспомогательных объекта (параметр сеанса, регистр сведений и справочники). Вспомогательные объекты не используют ни друг друга, ни основные объекты (рис. 1).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2005/MBP/ris1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Схема взаимодействия объектов механизма управления бизнес-процессами.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Объект &quot;Задача&quot; предназначен для учета заданий и описывает способ их распределения по исполнителям с учетом организационной структуры предприятия. Адресация заданий сотрудникам определяется реквизитами, в которых можно предусмотреть многомерную ролевую маршрутизацию, например, по ролям, рабочим группам, подразделениям, помещениям, филиалам и т. д. Задачи могут создаваться не только бизнес-процессами, но и другими объектами информационной базы или непосредственно пользователями. Более того, в общем случае исполнителем задания может быть не только сотрудник, но и любая внешняя система, например, другая учетная система.
+<p>Понятие задачи фактически определяет лишь интерфейс взаимодействия бизнес-процесса с заданием, выполнение которого в общем случае не связано с выполнением операций в самой системе. Например, бизнес-процесс по ходу своего выполнения может потребовать согласования какого-то вопроса с руководителем фирмы. Сформулированная таким образом задача будет, к примеру, адресована секретарю, который станет решать ее любыми доступными ему способами: по телефону, электронной почте и т. д. Задача будет считаться выполненной, когда в систему поступят сведения о получении нужного согласования.
+<p>Задачи имеют самостоятельную прикладную ценность как список заданий, назначенных конкретным исполнителям напрямую или посредством ролевой маршрутизации, и могут использоваться отдельно от бизнес-процессов. При формировании списка задач для конкретного сотрудника используется регистр сведений, который обеспечивает нахождение соответствий роль - сотрудник согласно системе адресации, настроенной в задаче. Как правило, для всех бизнес-процессов реализуется единый список задач.
+<p>Объект &quot;Бизнес-процесс&quot; описывает логику выполнения операции для достижения той или иной цели и управляет жизненным циклом созданных бизнес-процессов (экземпляров) - от момента старта до момента завершения. Логика бизнес-процесса (взаимосвязь и последовательность обхода точек маршрута, условные переходы и т. п.) представляется в виде карты маршрута, которая позволяет изобразить маршрут бизнес-процесса в виде связного графа и легко описывать алгоритмы условных переходов и реакцию бизнес-процесса на различные события (рис. 2). При работе пользователя с прикладным решением предусмотрена возможность отображать актуальную карту маршрута для конкретных экземпляров бизнес-процессов с учетом пройденных и активных точек маршрута.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2005/MBP/ris2.jpg" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Рис. 2. Карта маршрута наглядно описывает логику бизнес-процесса.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>При создании карты маршрута бизнес-процесса используются справочники с предопределенными данными (ролями, подразделениями и т. п.) для установки их значений в атрибуты адресации точек маршрута. Бизнес-процессы создают задачи при переходе на точки маршрута и используют регистр адресации для обработки групповых точек. Параметр сеанса используется бизнес-процессами для интерактивной активации невыполненных задач для текущего исполнителя.
+<p>Задачи сообщают бизнес-процессам о своем выполнении, вызывая тем самым их продвижение дальше по маршруту. Регистр сведений используется для отбора задач для текущего исполнителя в соответствии с установленным параметром сеанса. Справочники используются при формировании задач вне бизнес-процессов (например, вручную) или при отборе задач.
+<p>Операции, выполняемые в ходе бизнес-процесса, представлены на карте маршрута точками действий (рис. 3, а), которые содержат информацию о том, кто и что должен сделать на данном этапе. Например, для бухгалтера это может быть принять оплату наличными, для кладовщика - выдать товар со склада по накладной, для системного администратора - зарегистрировать нового сотрудника в сети и электронной почте.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2005/MBP/ris3.gif" alt=Fig.3></td></tr>
+<tr><td valign="bottom">Рис. 3. Графическое представление основных элементов карты маршрута: а - точка действия; б, в - условная маршрутизация (бинарные и множественные переходы).
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Исполнитель может определяться персонально (Иванов) или с учетом ролевой маршрутизации 
+  (&quot;Кладовщик&quot;, &quot;Руководитель отдела продаж&quot;). При переходе бизнес-процесса на 
+  точку действия он автоматически формирует задачи, устанавливая в них предусмотренные 
+  реквизиты адресации. Когда исполнитель пометит задачу как выполненную, бизнес-процесс 
+  автоматически переходит к следующей точке маршрута в соответствии с картой. 
+<p>В точке действия возможно также назначение групповых и коллективных задач. В первом случае некое действие должны выполнить все члены группы (например, всем менеджерам нужно предоставить ежемесячный отчет). Во втором - действие должен выполнить только один из членов группы (например, завизировать документ у одного из старших менеджеров). В точке действия можно описать проверку необходимых условий выполнения задачи, интерактивный диалог с пользователем при переходе далее по маршруту и указать, например, какие документы следует открывать при активации задач, связанных с данной точкой маршрута бизнес-процесса.
+<p>Бизнес-процессы в &quot;1С:Предприятие 8.0&quot; допускают несколько типов маршрутизации. Заметим, что в реальных картах бизнес-процессов, как правило, встречаются все эти типы.
+<p><b>Жесткая.</b> Карта бизнес-процесса не включает условных и параллельных переходов 
+  с жестко определенными адресатами для каждой точки маршрута. Отклонение таких 
+  бизнес-процессов не допускается. 
+<p><b>Свободная.</b> Адресаты точки карты маршрута бизнес-процесса не установлены 
+  и определяются программно или интерактивно в течение жизненного цикла бизнес-процесса. 
+<p><b>Условная.</b> Карта маршрута предусматривает проверку условий и переход 
+  по соответствующим ветвям (рис. 3, б и в). Переходы могут быть как бинарными 
+  (условие), так и множественными (выбор варианта). 
+<p><b>Параллельная.</b> Карта маршрута предусматривает разделение бизнес-процесса 
+  на параллельные ветви с возможностью последующего слияния (ожидания). Продвижение 
+  бизнес-процесса по каждой из параллельных ветвей происходит независимо, по мере 
+  выполнения соответствующих задач. 
+<p>Ключевым понятием в механизме бизнес-процессов и задач в &quot;1С:Предприятии&quot; выступает система адресации, которая обеспечивает возможность не только персональной, но и ролевой адресации задач участникам бизнес-процессов.
+<p>Ролевая маршрутизация позволяет назначать задания не только конкретным исполнителям, но и ролям, группам, подразделениям и т. д., как это определено в прикладном решении. Она построена на взаимодействии объектов &quot;Задача&quot; и &quot;Регистр сведений&quot;: первый определяет состав реквизитов адресации (роли, подразделения и т. д.), а второй отражает актуальную (соответствующую текущему моменту) информацию о принадлежности сотрудников ролям, подразделениям, рабочим группам и т. д.
+<p>С помощью регистра сведений можно реализовать механизм замещения или учета отсутствия сотрудников. Например, если в нем указано, что роль главного бухгалтера исполняет Иванов, а Иванов уходит в отпуск и его обязанности передаются Петрову, то запись в регистре сведений меняется так, чтобы роль главного бухгалтера исполнял Петров. По возвращении Иванова из отпуска соответствующая информация восстанавливается.
+<p>Подводя итог, можно констатировать, что механизм бизнес-процессов складывается из следующих основных компонентов:
+<ul><li>многомерной системы адресации задач исполнителям (роли, отделы, организации, группы и т. д.);
+<li>визуального проектирования карты бизнес-процесса;
+<li>генерации задач по исполнителям;
+<li>ролевой маршрутизации;
+<li>перехода по точкам маршрута в соответствии с картой бизнес-процесса.</ul>
+<p>А общая логика выполнения бизнес-процессов выглядит примерно так (рис. 4): бизнес-процессы формируют задачи, устанавливая нужные значения в их реквизитах адресации (роли, группы, отделы). Конечные исполнители определяются с помощью &quot;матрицы разыменования&quot;, которая, например, устанавливает соответствие пользователей ролям.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2005/MBP/ris4.gif" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Организация бизнес-процессов в системе &quot;1С:Предприятие&quot;.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+
+<h3>Практическая реализация </h3>
+<p>По ходу статьи мы часто использовали термин &quot;бизнес-процесс&quot;, хотя порой под ним понимают разные вещи. С одной стороны, бизнес-процесс - это обобщенное описание последовательности действий при выполнении каких-то деловых задач (например, продажа товара). В данном случае такое описание реализуется в виде программы (только представленной не в кодах, а в виде карты маршрута), которую можно условно назвать частным бизнес-решением. С другой стороны, бизнес-процесс - это выполнение конкретных действий в соответствии с этим описанием (при обслуживании конкретного покупателя), т. е. выполнение написанной ранее программы. В соответствии с терминологией &quot;1С&quot; в первом случае мы будем использовать термин &quot;бизнес-процесс&quot; (БП), во втором - &quot;экземпляр бизнес-процесса&quot; (ЭБП).
+<p>БП создают разработчики, а пользователи выполняют свои действия с помощью ЭБП. 
+  Разработка БП ведется в приложении &quot;Конфигуратор&quot; (инструмент разработки &quot;1С:Предприятие&quot;)*, 
+  исполнение ЭБП - в среде прикладных решений (среда исполнения &quot;1С:Предприятие&quot;). 
+<p><hr width="40%" align="left" noshade>
+* Когда речь идет о БП в &quot;1С:Предприятие 8.0&quot;, напрашивается параллель с механизмом 
+  макрокоманд в Microsoft Office, который также нацелен на автоматизированное 
+  выполнение последовательности отдельных функций офисных приложений. Но все же 
+  аналогом макрокоманд скорее следует считать давно имеющийся в &quot;1С:Предприятии&quot; 
+  механизм &quot;обработок&quot;. МБП реализует, с одной стороны, более сложную логику выполнения 
+  операций, а с другой - совершенно иной подход к разработке БП. 
+<p>Конфигуратор системы &quot;1С:Предприятие&quot; (рис. 5) предоставляет широкие возможности для создания бизнес-процессов, логика которых задается с помощью маршрутных карт. И здесь нужно сделать еще одно важное замечание. Вообще говоря, программирование бизнес-процессов было возможно в &quot;1С:Предприятии&quot; и ранее, но только на уровне языка программирования. Новый механизм автоматизирует эту процедуру, предлагая визуальные средства проектирования и настройку программы с помощью методов параметризации и сводя к минимуму объем кодирования (или вовсе исключая написание кода). Все это теперь реализовано на уровне платформы, которая содержит объекты метаданных и механизмы, обеспечивающие единообразную реализацию бизнес-процессов в прикладных решениях.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2005/MBP/ris5.jpg" alt=Fig.5></td></tr>
+<tr><td valign="bottom">Рис. 5. Разработка бизнес-процесса в среде &quot;Конфигуратора&quot;.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Подавляющее большинство известных визуальных средств программирования - это по сути лишь надстройка над традиционными редакторами написания кода, автоматизирующая создание этого кода (в качестве примера можно привести и Visual Studio, и Delphi, и различные системы моделирования ПО на базе UML). Результат их работы - программы, реализованные на исходном коде того или иного языка (правда, некоторые поставщики инструментария прячут отдельные модули в двоичном формате, но это скорее исключение). Соответственно разработчик при желании всегда может перейти от визуального проектирования к традиционному программированию &quot;руками&quot;.
+<p>В этой связи хотелось бы обратить внимание читателя на то, что индустриальный подход к автоматизации бизнес-процессов подразумевает разработку специализированных языков описания БП. Соответственно программы, написанные на таких языках, могут исполняться в любой системе, поддерживающей необходимые стандарты. Пример - язык Business Process Executive Language (см. статью <a href="http://www.bytemag.ru/Article.asp?id=3574">&quot;Автоматизация бизнес-процессов с помощью BPEL&quot;</a>, &quot;BYTE/Россия&quot; No 2&#39;2005).
+<p>Механизм бизнес-процессов, реализованный в &quot;1С:Предприятие 8.0&quot;, не претендует на подобную универсальность, ориентирован на реализации только в данной среде и оптимизирован для этих целей. Это выражается и в том, что в результате визуального проектирования БП разработчик не получает некоторую программу на исходном коде внутреннего языка &quot;1С:Предприятие 8.0&quot;. С некоторой долей упрощения можно говорить, что исходный код создаваемой программы состоит как раз из визуального представления ее логики (карта маршрута), дополненного отдельными фрагментами на языке программирования.
+<p>Таким образом, карта маршрута служит одновременно и инструкцией по выполнению последовательности действий бизнес-процесса для системы, и иллюстрацией структуры этих действий для пользователя, и средством отображения текущего состояния бизнес-процесса.
+<h4>Пример проектирования бизнес-процесса </h4>
+<p>В качестве иллюстрации рассмотрим пример создания бизнес-процесса &quot;Планирование отпусков&quot;. Для этого нужно выполнить следующие основные шаги.
+<p><b>Шаг 1.</b> Словесное описание бизнес-процесса: 
+<ul><li>всем линейным руководителям - написать предложения;
+<li>линейный руководитель заполняет документ &quot;предложение по графику отпусков&quot;;
+<li>менеджер по персоналу рассматривает его - отклоняет, просит уточнить или пересмотреть, принимает;
+<li>в какой-то момент (например, когда большинство сотрудников попали в график) менеджер направляет его руководителю;
+<li>если принимается, то бизнес-процесс завершен.</ul>
+<p><b>Шаг 2.</b> Определение адресации. 
+<p>Сделанное описание позволяет выделить бизнес-роли - линейный руководитель, менеджер по персоналу, руководитель, - которые нужно завести в справочнике &quot;Роли Пользователей&quot; для того, чтобы использовать их для адресации точек маршрута будущего бизнес-процесса. Роли записываются в справочник в виде предопределенных данных.
+<p>Чтобы задания доставлялись не ролям, а пользователям, необходимо указать соответствие пользователей данным ролям. Это делается с помощью специального регистра сведений, назначенного как регистр адресации для задач конкретного бизнес-процесса. В регистр нужно занести информацию о том, что, например, Иванов выполняет роль менеджера по кадрам, Петров - это руководитель организации, а Федоров и Сидоров - линейные руководители. Отметим, что соответствие пользователей ролям может меняться с течением времени - скажем, из-за отпусков или кадровых изменений. При этом механизм бизнес-процессов будет обеспечивать доставку заданий соответствующим пользователям с учетом изменений ролей.
+<p><b>Шаг 3.</b> Формирование задачи. 
+<p>Для работы механизма бизнес-процессов необходим объект &quot;Задачи&quot;, с помощью которого будут формироваться задачи для конкретных пользователей. Конфигурирование этого объекта заключается в выборе размерности системы адресации и связывании задач с регистром сведений, в котором прописано соответствие ролей пользователям.
+<p><b>Шаг 4.</b> Проектируем бизнес-процесс. 
+<p>Создаем первый бизнес-процесс и соединяем его с только что созданной задачей. Затем приступаем к рисованию карты маршрута (рис. 6):
+<ul><li>точка &quot;Старт&quot;;
+<li>точки действия в порядке следования;
+<li>добавляем условные переходы;
+<li>точка &quot;Завершение&quot;;
+<li>оформляем карту.</ul>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2005/MBP/ris6.jpg" alt=Fig.6></td>
+<td valign="bottom">Рис. 6. Карта маршрута бизнес-процесса &quot;Планирование отпусков&quot;.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><b>Шаг 5.</b> Добавляем формы. 
+<p>Чтобы пользователи могли выполнять свои действия в рамках данного бизнес-процесса, им нужны экранные формы, в которые они будут вводить соответствующие данные:
+<ul><li>форма предложения по графику отпусков (использует документ &quot;ПланированиеОтпуска&quot;;
+<li>форма для рассмотрения всех графиков;
+<li>форма для согласования с руководством.</ul>
+<p><b>Шаг 6.</b> Программируем. 
+<p>Для настройки условных переходов (рис. 7) необходимо написать обработчик проверки условия на встроенном языке. Обработчик возвращает результат, который влияет на направление дальнейшего пути бизнес-процесса - направо или налево. Чтобы в процессе выполнения задач у пользователей открывались нужные им формы, нужно написать обработчики &quot;ПриИнтерактивнойАктивации&quot; у соответствующих точек маршрута. Эти обработчики могут открывать формы, документы, выполнять предварительную обработку и т. д.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2005/MBP/ris7.jpg" alt=Fig.7></td></tr>
+<tr><td valign="bottom">Рис. 7. Программная реализация отдельных блоков бизнес-процесса.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><b>Шаг 7.</b> Посмотрим, как это все работает: 
+<ul><li>создаем новый экземпляр бизнес-процесса;
+<li>все руководители получают задачу &quot;Подготовить график отпусков&quot;;
+<li>после составления всех планов они все вместе поступают на рассмотрение кадровику в виде задачи &quot;Рассмотреть графики&quot;;
+<li>по результатам рассмотрения часть из них отправляется на доработку;
+<li>после доработки и успешного повторного рассмотрения перед менеджером по персоналу ставится задача согласовать их с директором;
+<li>после успешного согласования бизнес-процесс завершается.</ul>
+<p>Для дальнейшего улучшения этого бизнес-процесса и более тесной его интеграции с прикладным решением можно добавить к нему дополнительные возможности (уже после разработки, т. е. в ходе эксплуатации).
+<h4>Дальнейшие шаги </h4>
+<p>Мы закончили создание простейшего бизнес-процесса. При последующей автоматизации операций можно добавить несколько расширенных возможностей.
+<p><b>Обратная связь с документами.</b> Например, чтобы при заполнении документа 
+  &quot;График отпусков&quot; автоматически инициировался бизнес-процесс согласования графика, 
+  и соответствующая задача появлялась у менеджера по кадрам. 
+<p><b>Проверка выполнения.</b> Проверка актуальности и правильности составления 
+  графика линейными руководителями до передачи на согласование менеджеру по кадрам 
+  (например, не разрешать выполнение других задач при незаполненном графике). 
+<p><b>Автоматическая сборка отдельных графиков в обобщенный.</b> Можно предусмотреть 
+  в карте маршрута точку автоматической обработки, на которой система сама соберет 
+  все графики в общий и отправит его на согласование менеджеру по кадрам. 
+<p><b>Согласование как вложенный бизнес-процесс.</b> Сам процесс согласования 
+  можно выделить во вложенный бизнес-процесс и использовать его в дальнейшем не 
+  только в БП &quot;Согласование отпусков&quot;, но и в других БП - например, при заключении 
+  договоров, выписке счетов и т. д. 
+<h3>Исполнение бизнес-процессов </h3>
+<p>Как говорилось выше, исполнение бизнес-процессов выполняется в среде прикладных решений (рис. 8). При этом БП можно рассматривать как объект информационной базы, такой же, как документ или элемент справочника. Его жизненный цикл начинается со старта (вызов метода &quot;Старт&quot; или нажатие соответствующей кнопки в форме объекта бизнес-процесса) и заканчивается при достижении точки завершения при условии выполнения всех задач.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2005/MBP/ris8.jpg" alt=Fig.8></td></tr>
+<tr><td valign="bottom">Рис. 8. Исполнение бизнес-процесса в прикладном решении.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В свою очередь, задачи - это тоже обычные объекты информационной базы, которые формируются как механизмом бизнес-процессов, так и другими прикладными объектами, и даже вручную. Задача имеет два состояния - выполнена либо не выполнена. Если задача сформирована в рамках бизнес-процесса, то по выполнении она сообщает ему об этом, что приводит к продвижению бизнес-процесса дальше по маршруту (при условии, что соблюдены все необходимые для этого условия). Таким образом, задачи выступают как движущая сила бизнес-процессов.
+<p>Для конкретного пользователя работа бизнес-процессов проявляется только в том, что он имеет дело со списком задач, которые должен выполнить. Кладовщик, например, совершенно не должен задумываться о своем участии в каких-то процессах, его дело - при получении задания отпустить товар и зафиксировать эту операцию в системе.
+<p>В то же время очевидно, что использование механизма бизнес-процессов дает возможность собирать качественно иную информацию о работе системы управления предприятием, что позволяет руководителям проводить объективный анализ эффективности работы как организации в целом, так и отдельных сотрудников.
+<p>Подробнее ознакомиться с механизмом бизнес-процессов, реализованным в &quot;1С:Предприятие 
+  8.0&quot;, разработчики и пользователи могут с помощью демонстрационной конфигурации, 
+  распространяемой на диске &quot;Информационно-технологическое сопровождение&quot; (ИТС). 
+  Там представлены три простых бизнес-процесса (&quot;Продажа товара&quot;, &quot;Поручение&quot; 
+  и &quot;Согласование&quot;), показывающие различные варианты практического применения 
+  нового механизма. 
+<p>
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h3>От управления вообще к управлению бизнес-процессами </h3>
+      <p>Прошедший год был отмечен началом широкого применения нового термина 
+        - Business Process Management (BPM, управление бизнес-процессами). Поначалу 
+        его появление вызвало настороженность заказчиков. Действительно, корпоративное 
+        ПО изначально было нацелено на решение тех или иных задач управления предприятием, 
+        или бизнесом (в широком понимании этого слова - как деятельности организации), 
+        и потому было непонятно, что же революционного заключается в BPM. Не есть 
+        ли это традиционный ход ИТ-поставщиков, регулярно обновляющих названия, 
+        в общем-то, достаточно хорошо известных методов и технологий? Определенную 
+        путаницу в умы ИТ-специалистов вносило и то, что аббревиатуру BPM стали 
+        использовать разработчики различных категорий программных продуктов: систем 
+        управления документами, ERP-решений и инфраструктурного ПО. (Полезный 
+        обзор и анализ концепции BPM сделан в статье <a href="http://www.bytemag.ru/Article.asp?id=3572">&quot;Технология 
+        BPM в информационной инфраструктуре организации&quot;</a>, &quot;BYTE/Россия&quot; No 
+        2&#39;2005.) 
+      <p>Однако если рассмотреть концепцию BPM более детально, становится ясно, 
+        что ее появление действительно связано с некоторыми качественными изменениями 
+        в требованиях заказчиков к ИТ, с одной стороны, и предлагаемых вендорами 
+        решений - с другой. Хотя ни о какой революции, конечно, не может быть 
+        и речи: идет обычный эволюционный процесс развития ИТ, в ходе которого 
+        накопление количественных и локальных качественных изменений в какой-то 
+        момент времени позволяет говорить о переходе в новое глобальное качественное 
+        состояние. В этой связи мы выделим несколько аспектов. 
+      <ul>
+        <li>Решение задачи повышения эффективности ведения бизнеса заставляет 
+          организации переходить от традиционной функциональной модели деятельности 
+          к современной процессной схеме. 
+        <li>Более высокий уровень применения ИТ требует объединить в общую систему 
+          управления предприятием такие компоненты, которые ранее рассматривались 
+          как самодостаточные. В первую очередь речь идет о ERP-решениях и системах 
+          управления документами. 
+        <li>Создание комплексных систем управления предприятием требует объединения 
+          разнородных решений (в том числе унаследованных). Наиболее эффективное 
+          решение задач интеграции данных и приложений в системах масштаба предприятий 
+          возможно на уровне платформенного ПО. В настоящее время одно из наиболее 
+          перспективных направлений создания разнородных распределенных систем 
+          связано с использованием технологии Web Services (см. также статью <a href="http://www.bytemag.ruArticle.asp?id=3574">&quot;Автоматизация 
+          бизнес-процессов с помощью BPEL&quot;</a>, &quot;BYTE/Россия&quot; No 2&#39;2005). 
+        <li>Переход на процессно-ориентированную модель управления непосредственно 
+          связан и с проблемой эффективности работы самих информационных систем. 
+          Нацеленность на конечный результат позволяет реализовать подход к управлению 
+          ИТ-ресурсами с точки зрения бизнеса. 
+        <li>Важно также повысить уровень управляемости бизнес-процессами. Это, 
+          в частности, означает, что бизнес-аналитики и руководители должны заниматься 
+          не только проектированием подобных систем, но и их оперативным управлением 
+          и настройкой, т. е. уметь выполнять операции, которые до настоящего 
+          времени требовали обязательного участия программистов.
+      </ul>
+      <p>Говоря о концепции BPM, необходимо упомянуть и о ее связи с технологиями 
+        workflow (управление потоками работ). Их родство вполне очевидно, однако 
+        между ними ни в коем случае нельзя ставить знак равенства (к сожалению, 
+        это встречается даже в профессиональных ИТ-изданиях). Методы workflow, 
+        пик популярности которых в мире пришелся на последние годы прошлого столетия, 
+        накладывают на процессы автоматизации модель, ориентированную в первую 
+        очередь на документы и задания. Данный подход ограничивает применение 
+        технологий workflow в основном автоматизацией ручных процессов обработки 
+        документов. У BPM таких ограничений нет: участниками процессов могут в 
+        равной мере выступать и пользователи, и информационные системы, и другие 
+        процессы, а документы и задания рассматриваются лишь как частности, влияющие 
+        на реализацию бизнес-процессов, но не носящие основополагающего характера. 
+        Все это позволяет применять BPM в связи с более широким кругом вопросов, 
+        нежели тот, для которого изначально разрабатывались системы workflow. 
+      <p>Наверное, правильнее было бы связать реализацию концепции BPM с совместным 
+        использованием технологий workflow и EAI (Enterprise Application Integration, 
+        интеграция приложений масштаба предприятия). А учитывая необходимость 
+        использования собственно прикладных программ, условную формулу BPM можно 
+        записать следующим образом: 
+      <p><b>BPM = workflow + EAI + ERP (Enterprise Resource Planning) + ECM (Enterprise 
+        Content Management)</b> 
+      <p>И еще один важный момент. Реализация концепции workflow устойчиво ассоциируется 
+        с проведением радикального реинжиниринга бизнес-процессов организации. 
+        Разумеется, преобразования схемы деятельности предприятия порой просто 
+        необходимы, но все же нужно помнить, что внедрение новых автоматизированных 
+        систем управления - не самоцель, а лишь средство повышения эффективности 
+        работы. BPM отличается более мягким подходом к использованию существующих 
+        моделей управления и программных средств их поддержки, минимизируя затраты 
+        на реализацию проектов, сохраняя сделанные инвестиции и лучше учитывая 
+        специфику конкретного заказчика. 
+    </td>
+  </tr>
+</table>
+
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=21113.html'>Программные инструменты криминалистов: можно ли нарушить закон в онлайне и остаться непойманным?</A></b></li><li><b><A href='detail.php@ID=20694.html'>Национальные особенности рынка ECM/СЭД в России</A></b></li><li><b><A href='detail.php@ID=20562.html'>Корпоративная мультиплатформенность бизнес-приложений</A></b></li><li><b><A href='detail.php@ID=19146.html'>Что нового в новой версии виртуальной машины Oracle?</A></b></li><li><b><A href='detail.php@ID=17871.html'>Облачная стратегия Microsoft 2011</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8970.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Автоматизация бизнес-процессов в &amp;quot;1С:Предприятие 8.0&amp;quot;
+</a><br><a href="detail.php@ID=8970.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Андрей Колесов 
+Обсуждая возможности технологической платформы &quot;1С:Предприятие 8.0&quot; (см. например, &quot;1С:Предприятие 8.0&quot;&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8970.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8970&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0c52e09b80ddbfff40501d6c3ca33162'><img src='../bitrix/tools/captcha.php@captcha_code=0c52e09b80ddbfff40501d6c3ca33162' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

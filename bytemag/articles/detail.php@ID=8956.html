@@ -1,0 +1,661 @@
+<HTML>
+<HEAD>
+<title>Мировой рынок ПО для систем хранения: средства управления данными
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Александр Глинских, к.т.н. Первые статьи цикла см. &amp;quot;BYTE/Россия&amp;quot; № 1&amp;#39;2004 и № 2&amp;#39;2004. Программные средства управления данными - это крупнейший сегодня сегмент на мировом рынке ПО для систем хранения. В этот сегмент входят ПО" />
+<meta name="description" content="Александр Глинских, к.т.н. Первые статьи цикла см. &amp;quot;BYTE/Россия&amp;quot; № 1&amp;#39;2004 и № 2&amp;#39;2004. Программные средства управления данными - это крупнейший сегодня сегмент на мировом рынке ПО для систем хранения. В этот сегмент входят ПО" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082757','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8956' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8956&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8956"].SHOW_IMAGE.value="N"; document.forms["PrintForm8956"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8956"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8956"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8956);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8956.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8956.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8956);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a><br /></p><a href='../numbers/index.php@ID=11527.html'>№3 (67), март 2004</a><h1>Мировой рынок ПО для систем хранения: средства управления данными
+</h1>10.03.2004<p></p><DIV class='article-text'><p><i>Александр Глинских</i>, <br>
+  к.т.н. 
+<p><hr width="40%" align="left" noshade>
+Первые статьи цикла см. &quot;BYTE/Россия&quot; <a href="http://www.bytemag.ru/Article.asp?id=2396">№ 1&#39;2004</a> и <a href="http://www.bytemag.ru/Article.asp?id=2451">№ 2&#39;2004</a>.
+<p>
+<p>Программные средства управления данными - это крупнейший сегодня сегмент на мировом рынке ПО для систем хранения. В этот сегмент входят ПО резервного копирования и восстановления, ПО архивирования, ПО систем иерархического хранения данных (HSM), комплексные пакеты.
+<p>Программные средства резервного копирования и восстановления условно делят на следующие основные группы:
+<ul><li>системы начального уровня, часто входящие в состав ОС и обладающие простейшей функциональностью (в основном это бесплатные и условно-бесплатные программы);
+<li>системы среднего уровня, при приемлемой цене обладающие достаточной функциональностью (они наиболее распространены в настоящее время);
+<li>комплексные системы верхнего уровня, предназначенные для работы в сложных гетерогенных средах.</ul>
+<p>Кроме того, существуют также средства резервного копирования и восстановления, встраиваемые в различные приложения (например, в базы данных).
+<p>Ведущие производители ПО резервного копирования и восстановления - компании Veritas Software, IBM/Tivoli, HP, Computer Associates, EMC (особенно после поглощения Legato Systems), BakBone Software, Dantz Development и т. д. Бесспорные лидеры здесь - компании Veritas Software и IBM/Tivoli, совместно занимающие сейчас более половины данного рынка.
+<p>Архивирование данных, в отличие от резервного копирования, осуществляется по инициативе самих пользователей, а не системного администратора, поэтому жестких регламентов проведения архивирования для всей корпоративной сети обычно не предусматривается. Основные производители специализированного ПО архивирования - компании ADIC, Microtest, Astarte, Tracer Technology и т. д.
+<p>ПО систем иерархического хранения данных (HSM) предназначено для увеличения доступной дисковой емкости. Поэтому оно обеспечивает физическую миграцию (перемещение) данных на другие уровни хранения (например, на носители на магнитных лентах) с сохранением возможности обращения к ним (c помощью специальных указателей). Ведущие производители ПО HSM - компании IBM/Tivoli, HP, CA, Veritas Software, Legato Systems и т. д.
+<p>Комплексные пакеты ПО управления данными позволяют решать большинство вышеперечисленных 
+  задач. Основные конкуренты в данной области - компании Legato Systems (теперь 
+  дивизион корпорации EMC) с ПО Networker, Veritas Software с продуктом NetBackup 
+  и IBM/Tivoli с ПО Storage Manager. 
+<p> 
+<table width="100%" border="0">
+  <tr>
+    <td bgcolor="#CCFFFF"> 
+      <h4>Основные производители ПО управления данными </h4>
+      <p>Разработкой ПО управления данными занимаются сотни компаний в мире. Вот 
+        лишь некоторые из этих компаний (перечислены в алфавитном порядке, в скобках 
+        указаны их продукты): 
+   <ol><li>Active Data Recovery Software (Active Disk Image)
+<li>Advanced Software Concepts (Net Archive)
+<li>Alphatronix (Inspire Backup, Inspire Migrator, Inspire Storage Fault Tolerance)
+<li>Arcada Software (Backup Exec)
+<li>Arkeia (Arkeia Server Backup)
+<li>aTempo (Time Navigator)
+<li>Avail Solutions (Integrity)
+<li>BakBone Software (NetVault)
+<li>Barratt Edwards International (UltraBac)
+<li>BMC Software (SQL-BackTrack)
+<li>Boole&Babbage (Ensign Central Manager, Stages3)
+<li>BridgeHead Software (HYPERtape)
+<li>CDS (Back Again)
+<li>Centered Systems (Second Copy)
+<li>Chevry (ПО Interbackup)
+<li>CMS Products (BounceBack Professional)
+<li>Columbia Data Products (SnapBack Live)
+<li>CommVault (QiNetix: Galaxy, DataMigrator, Quick Recovery и Qstar HSM)
+<li>Computer Associates (ARCserveIT)
+<li>EMC (SnapView, SAN Copy и др.)
+<li>Dantz Development (DiskFit Pro, DiskFit Direct, Retrospect, Retrospect Network Backup и Retrospect Express)
+<li>Hi-Par Systems (DallasTools)
+<li>Horizons Technology (Lanshadow)
+<li>HP (OpenView OmniBack)
+<li>Idas (Highway Server)
+<li>IBM/Tivoli (Storage Manager)
+<li>Interlink Computer Sciences (TCPAccess-Backup, Archival, Recovery Software)
+<li>ITS Systems (EZ-Imager)
+<li>Legato Systems (NetWorker)
+<li>LSI Logic Storage Systems (LogicStor Backup and Recovery Solution)
+<li>Micro Design International (LAN Librarian)
+<li>Microlite (BackupEDGE)
+<li>Mountain Network Solutions (File Safe)
+<li>Network Appliance (SnapVault и SnapRestore), Nonstop Networks (No Stop Network)
+<li>Ontrack Data Recovery (NetUtils, Ontrack Data Recovery for NetWare, Ontracks Volume Repair Detector)
+<li>OrionSoftLab (Active Backup)
+<li>Palindrome (Backup Director, Storage Manager, Palindrome Prepare!, Vista-Visual Storage Administrator)
+<li>PDC (BudTool, BudTool Live и BudTurbo)
+<li>Peer Software (PeerSync)
+<li>Performance Technology (PowerSave)
+<li>Plasmon Data (Manager)
+<li>Qstar Technologies (Backup и Restore)
+<li>Reliaty (Reliaty Backup)
+<li>Remote Backup Systems (RBackup)
+<li>Rimage Televaulting (Rimage Televaulting)
+<li>Seagate Software (Backup Exec)
+<li>Sencor (Sencor Backup & Restore)
+<li>Software Moguls (SM-arch)
+<li>Software Pursuits (BootBack)
+<li>Spectra Logic (Alexandria Backup Libririan Software)
+<li>St. Bernard Software (Open File Manager)
+<li>Storactive (LiveBackup)
+<li>StoreAge (MultiView, Volume Snapshot)
+<li>Sun Microsystems (Soltice Backup)
+<li>Systemix Software (Nextstep и SafetyNet)
+<li>Sytron (ProServe, Sytos Plus и Backup)
+<li>Tantia Technologies (Harbor Backup)
+<li>Tolis (BRU)
+<li>UltraBac Software (UltraBac)
+<li>Unisolutions Associates (Unisol Bart)
+<li>UniTrends Software (Solar Shield)
+<li>Unitrol Data Protection Systems (Immunity Disk Mirroring)
+<li>Veritas Software (NetBackup)
+<li>Vinca (StandbyServer 32)
+<li>Workstation Solutions (Quick Restore)
+<li>Yosemite Technologies (TapeWare)</ol>
+    </td>
+  </tr>
+</table>
+<h3>Ведущие производители и их продукты </h3>
+<p>Мы кратко рассмотрим некоторые из программных средств управления данными, получившие определенную известность и на российском рынке.
+<h4>Veritas Software </h4>
+<p>Бесспорный лидер рассматриваемого сегмента, корпорация Veritas Software (<a href="http://www.veritas.com">http://www.veritas.com</a>), 
+  предлагает обширный набор решений для управления данными. 
+<p>В состав семейства программ <b>NetBackup</b> входят не только известные всем 
+  системным администраторам программные средства резервного копирования и восстановления 
+  NetBackup, но и различные полезные опции: 
+<ul><li>NetBackup Vault обеспечивает автоматизированную ротацию магнитных лент с архивами на удаленные площадки (для восстановления данных после катастроф);
+<li>NetBackup Storage Migrator - пример программы управления иерархическим хранением данных;
+<li>NetBackup Bare Metal Restore обеспечивает автоматическую переустановку ОС на сервере (в том числе Microsoft Windows на сервер с измененной конфигурацией) в случае катастрофы и восстановление данных пользователей в корпоративной сети. Эта кросс-платформная технология была разработана компанией The Kernel Group, которую Veritas Software поглотила в феврале 2002 г.</ul>
+<p><b>Veritas Backup Exec</b> - семейство популярных программ для резервного копирования 
+  в среде Microsoft Windows, предназначенных для малых и средних предприятий. 
+  Следует отметить, что Veritas Software лидирует на мировом рынке в сегменте 
+  ПО обеспечения сохранности данных в Microsoft Windows (более 50% этого сегмента). 
+<p>Специальный программный менеджер <b>Veritas Global Data Manager</b> предназначен 
+  для централизованного управления большим количеством удаленных серверов резервного 
+  копирования NetBackup и Backup Ехес. 
+<p>Рассмотрим более подробно ПО Veritas NetBackup, представляющее собой комплексный пакет программных продуктов резервного копирования, архивирования и HSM для гетерогенных сред. Изначально ПО NetBackup предназначалось для центров обработки данных крупных предприятий с удаленными филиалами (с большим числом клиентов, серверов резервного копирования и централизованным управлением резервным копированием). Позднее были выпущены версии Veritas NetBackup для средних и малых предприятий, а также для мобильных пользователей и пользователей настольных ПК. Последняя актуальная версия Veritas NetBackup - 5.0 (выпущена в ноябре 2003 г.).
+<p>Veritas NetBackup обладает всеми основными возможностями, присущими и прочим комплексным пакетам программ управления данными от других производителей (следует заметить, что за считанные годы они ушли по своей функциональности невообразимо далеко от первых программ резервного копирования). Это:
+<ul><li>централизованное (в том числе удаленное) администрирование на базе политик (набора критериев, позволяющих выполнять резервное копирование не всей системы, а определенной ее части, определять стратегию хранения данных и т. д.);
+<li>удаленное копирование данных;
+<li>управление выполнением резервного копирования (полного, дифференциального, инкрементального) по расписанию для каждого клиента (возможно, нескольких клиентов одновременно);
+<li>модульная наращиваемая архитектура;
+<li>чтение и запись нескольких потоков данных (до 32) на одном стримере;
+<li>поддержка большинства распространенных ОС (Windows NT/2000, основных клонов Unix, NetWare и т. д.), основных СУБД и корпоративных приложений;
+<li>управление доступом к резервным копиям для различных групп пользователей (авторизация доступа);
+<li>внесетевое (через SAN) и внесерверное резервное копирование;
+<li>наличие графического интерфейса и интерфейса командной строки;
+<li>встроенное журналирование с уведомлением о возникающих проблемах;
+<li>уведомление клиентов о выполнении резервного копирования;
+<li>поддержка различных устройств хранения (ленточных, магнитооптических и дисковых) от разных производителей.</ul>
+<p>Особенность NetBackup - его четырехуровневая архитектура. Программный менеджер Global Data Manager обеспечивает централизованное управление несколькими доменами памяти (в том числе удаленными), в состав которых входят мастер-сервер и до нескольких медиа-серверов. Мастер-сервер отвечает за резервное копирование клиентских данных и централизованно управляет медиа-серверами и программными агентами. Медиа-серверы осуществляют локальное резервное копирование. И, наконец, программные агенты на клиентских компьютерах выполняют резервное копирование данных с серверов и рабочих станций.
+<p>Дополнительно ПО NetBackup (например, версии DataCenter) имеет такие полезные возможности, как создание виртуальных копий данных (snapshots) с помощью опции FlashBackup и дисковое резервное копирование.
+<h4>IBM/Tivoli </h4>
+<p>Второе место на рынке комплексных программных пакетов управления данными прочно 
+  удерживает компания IBM/Tivoli (<a href="http://www.tivoli.com">http://www.tivoli.com</a>). 
+  Для управления данными IBM/Tivoli предлагает также многофункциональную клиент-серверную 
+  программу <b>Tivoli Storage Manager</b> (TSM) - она широко известна, поэтому 
+  мы рассмотрим ее очень кратко, - и несколько дополнительных программных модулей. 
+<p>Основные функции TSM таковы:
+<ul><li>управление (в том числе на базе политик) данными, устройствами хранения и носителями;
+<li>генерация отчетов и мониторинг системы;
+<li>обеспечение сохранности данных.</ul>
+<p>Главное назначение TSM - централизованное управление резервным копированием и восстановлением данных в гетерогенных средах и в сетях хранения SAN. Следует отметить, что в TSM можно проводить резервное копирование только новых и измененных файлов, благодаря чему сокращается продолжительность этой процедуры и экономятся дисковые емкости. Кроме того, возможность совместной работы с ресурсами хранения (одной или несколькими ленточными библиотеками) сразу для нескольких серверов TSM повышает эффективность их использования. Данные для резервного копирования, архивирования и восстановления передаются прямо через SAN Fibre Channel (в обход локальной сети), что также повышает производительность системы.
+<p>Возможности ПО TSM значительно расширяются при совместном использовании с интегрированными с ним модулями Disaster Recovery Manager, Space Manager и Data Protection.
+<p>Модуль <b>Disaster Recovery Manager</b> работает под управлением сервера TSM 
+  и предназначен для автоматизированного контроля за всеми перемещениями магнитных 
+  носителей, на которых хранятся резервные копии, чтобы в случае необходимости 
+  легко было определить их местонахождение. Он также обеспечивает выполнение всех 
+  необходимых действий по восстановлению отказавшей системы после катастрофы. 
+<p>Модуль <b>Tivoli Space Manager</b> - еще один пример программы управления иерархическим 
+  хранением данных, суть которого, как мы помним, состоит в автоматическом перемещении 
+  (в соответствии с заданными критериями) редко используемых файлов на уровни 
+  хранения с меньшей стоимостью носителей, что помогает освободить дисковое пространство 
+  на сервере. 
+<p>Семейство модулей <b>Data Protection</b> позволяет быстро выполнять резервное 
+  копирование и восстановление различных приложений и баз данных (не останавливая 
+  их работы). 
+<h4>Legato Systems </h4>
+<p>Хотя компания Legato Systems (<a href="http://www.legato.com">http://www.legato.com</a>) 
+  входит сейчас в состав корпорации EMC, мы все же рассмотрим ее программные продукты 
+  управления данными отдельно от линейки решений EMC, поскольку они сохранили 
+  свое название и были внедрены более чем на 29 тыс. предприятий по всему миру 
+  еще до поглощения компании Legato. 
+<p>Флагманский программный продукт Legato Systems для управления данными - <b>Legato 
+  Networker</b>, прямой конкурент в первую очередь Veritas NetBackup. Но, в отличие 
+  от NetBackup, ПО Legato Networker изначально создавалось для рабочих групп и 
+  средних предприятий (без возможности работы с распределенными филиалами крупных 
+  организаций), и лишь затем в нем была реализована функциональность и для крупных 
+  предприятий. 
+<p>Таким образом, Legato Networker - это еще один распространенный комплекс клиент-серверных программ управления данными (выпускаемый в версиях Workgroup Edition, Network Edition и Power Edition), обладающий широким диапазоном применения (от настольных ПК до гетерогенных сред распространенных ОС). В нем реализованы функции резервного копирования, архивирования и HSM, а также вся функциональность, присущая комплексным пакетам ПО управления данными.
+<p>Как и в TSM, в Legato Networker есть возможность выполнения резервного копирования баз данных, приложений и файлов в так называемом горячем режиме (без прерывания их работы) - с помощью опции BusinesSuite Module, а также приложений и файлов на серверах Windows NT и NetWare - с помощью опции Open File Manager. Следует также отметить, что ПО Legato Networker оптимизировано для быстрой модификации индексных файлов каждого клиента, что позволяет заметно сократить продолжительность резервного копирования. Важное свойство Legato NetWorker - поддержка технологии NDMP, разработанной Legato совместно с компанией Network Appliance и предназначенной для резервного копирования данных с NAS-серверов ведущих производителей на ленточные библиотеки (через SAN). Отметим, что Legato Systems уделяет серьезное внимание ПО резервного копирования для NAS-серверов. Свидетельством этому служит, в частности, поглощение ею в феврале 2002 г. компании OTG Software, известной своими программными решениями в данной области.
+<p>Примером HSM-решения от Legato Systems может служить программа <b>Legato Disk 
+  Xtender</b>. 
+<h4>Сomputer Аssociates </h4>
+<p>Не меньшей известностью в мире, чем рассмотренные выше комплексные программы 
+  управления данными, пользуется и пакет ПО резервного копирования и восстановления 
+  <b>BrightStor ARCserve Backup</b> (ARCserveIT). Эта технология была разработана 
+  компанией Cheyenne (основатели которой несколько лет назад учредили фирму FalconStor), 
+  а затем приобретена корпорацией Computer Associates (CA, <a href="http://www.ca.com">http://www.ca.com</a>) 
+  и стала распространяться под торговой маркой BrightStor. Последний выпущенный 
+  релиз - BrightStor ARCserve Backup r11. 
+<p>В сферу применения ПО BrightStor ARCserve Backup входят как рабочие группы и отделы крупных предприятий, так и большие центры обработки данных. Оно может устанавливаться и на портативных либо настольных ПК, и на гетерогенных серверах. В основном функциональность этого пакета программ соответствует возможностям рассмотренных выше программных средств: централизованное управление резервным копированием и восстановлением одновременно на нескольких серверах ARCserve в гетерогенной среде (ОС Microsoft Windows, NetWare, Unix, Linux и MAC OS X), работа на базе политик, многопотоковое резервное копирование, дисковое резервное копирование, создание виртуальных &quot;мгновенных снимков&quot;, копирование баз данных и корпоративных приложений на лету (в том числе открытых файлов), работа с системами хранения DAS, SAN, NAS, опция восстановления после катастроф, поддержка технологии HSM и многое другое.
+<p>Семейство программ резервного копирования и восстановления BrightStor имеет и такие полезные свойства, как наличие ПО виртуализации хранения на магнитных лентах Vtape, позволяющего оптимизировать работу с ленточными библиотеками; &quot;интеллектуальная&quot; система генерации тревожных сообщений и уведомлений с автоматической доставкой их по электронной почте, факсу и на пейджер; использование технологии push-агентов - специальных программ, устанавливаемых на удаленных серверах и сокращающих время ожидания центрального сервера за счет нахождения на удаленных серверах файлов, подлежащих резервному копированию, и их преобразования в формат, готовый к записи на магнитную ленту, и т. д.
+<p>Ряд отраслевых аналитиков считают ПО BrightStor ARCserve Backup лучшим решением резервного копирования в среде Microsoft Windows.
+<h4>Hewlett-Packard </h4>
+<p>Решение для управления резервным копированием <b>HP Omniback</b> от корпорации 
+  Hewlett-Packard (<a href="http://www.hp.com">http://www.hp.com</a>) входит в 
+  семейство программ HP OpenView. Оно применяется в вычислительных средах разного 
+  масштаба и степени сложности - от одного сервера рабочей группы с подключенным 
+  к нему стримером до больших гетерогенных центров обработки данных (Windows NT, 
+  NetWare, Unix и Linux) с территориально распределенными филиалами, поддерживающих 
+  разные сетевые архитектуры хранения. HP Omniback присущи все обычные для современных 
+  программных средств резервного копирования и восстановления возможности: онлайновое 
+  резервное копирование баз данных и приложений, резервное копирование открытых 
+  файлов, работа в кластерных конфигурациях, внесерверное и внесетевое резервное 
+  копирование и т. д. 
+<p>Одна из дополнительных возможностей ПО HP Omniback - поддержка устройств хранения от HP, обладающих функциональностью OBDR (one button disaster recovery), ускоряющей восстановление системы после катастроф. Кроме того, при использовании HP Omniback можно выполнять резервное копирование даже в среде, не поддерживающей ОС Windows NT, NetWare, Unix и Linux (при помощи монтирования томов и NFS).
+<h4>BakBone Software </h4>
+<p>Нельзя не сказать несколько слов и о ПО резервного копирования и восстановления 
+  <b>BakBone NetVault</b> от компании Bakbone Software (<a href="http://www.bakbone.com">http://www.bakbone.com</a>). 
+  Оно достаточно широко распространено на мировом рынке и обладает практически 
+  той же функциональностью, что и рассмотренные программные решения управления 
+  данными верхнего уровня. Недавно выпущена уже седьмая версия программы. 
+<p>Существуют выпуски NetVault для рабочих групп и малых предприятий, а также для средних и крупных предприятий. Поддержка работы в гетерогенных средах - обязательное условие успешности программных средств на мировом рынке, и NetVault не является исключением. Unix, Windows NT/2000, Windows Server 2003, Linux и NetWare - это стандартный набор операционных систем, с которыми совместимо большинство современных программных средств резервного копирования и восстановления, к числу которых относится и BakBone NetVault.
+<p>Отметим также, что в BakBone NetVault 7.0 реализован еще ряд возможностей. Это, например, средства управления политиками (Policy Management), применяемыми как к одному клиенту, так и ко всем сразу; управление доступом пользователей к данным (User Level Access); поддержка SAN/NAS (DirecSAN). Можно использовать виртуальные дисковые библиотеки (VDL), при помощи которых резервные копии передаются прямо на локальный жесткий диск или дисковый массив, подключенный к SAN (это значительно ускоряет операции резервного копирования).
+<p>BakBone NetVault допускает внесетевое резервное копирование для вычислительных сред как с SAN, так и без SAN: с помощью опции NetVault Library Sharing серверы и клиенты подключаются к ленточной библиотеке напрямую, в обход локальной сети. Функция TurboVault позволяет повысить производительность резервного копирования за счет оптимального распределения ресурсов памяти между центральным процессором и NetVault (в зависимости от производительности стримера).
+<h4>Yosemite Technologies </h4>
+<p>Yosemite Technologies (<a href="http://www.tapeware.com">http://www.tapeware.com</a>), 
+  основанная в 1996 г., - пример компании, старающейся &quot;застолбить&quot; себе место 
+  на рынке (не говоря уже о том, чтобы догнать лидеров рынка ПО управления данными) 
+  за счет высокой технологичности и инновационности решений, а также их более 
+  низкой стоимости. Yosemite Technologies продвигает ПО резервного копирования 
+  и восстановления <b>TapeWare</b>. 
+<p>Компания позиционирует свой программный продукт как подходящий для широкого диапазона приложений - от настольных ПК (для домашних пользователей и малых предприятий) до крупных предприятий и центров обработки данных. В апреле 2003 г. была выпущена 7-я версия TapeWare с поддержкой ОС Sun Solaris и FreeBSD Unix (помимо Windows, Linux и NetWare), благодаря чему ПО TapeWare получило выход и на рынок Unix-систем.
+<p>Одна из главных особенностей ПО TapeWare - оригинальная технология зонирования, обеспечивающая простоту управления резервным копированием/восстановлением и надежную защиту данных. Суть этой технологии в том, что во время установки TapeWare рабочие станции, серверы корпоративной сети и другие устройства группируются в зоны. В каждой зоне создается своя база данных, в которой сохраняется вся информация о действиях по резервному копированию и восстановлению в данной зоне, а также информация о каждом пользователе и его правах доступа к информации. Для различных областей корпоративной сети можно создавать множество таких зон, однако каждая система резервного копирования должна принадлежать только одной зоне. При этом в TapeWare невозможно передать данные резервного копирования, созданные в одной зоне, в другую (т. е. носители с данными резервного копирования, созданные в одной зоне, нельзя использовать в другой зоне). Зоной TapeWare могут быть объявлены даже стримеры и носители данных, и к ним также будет оформляться допуск пользователей.
+<p>Еще одна заслуживающая внимания особенность TapeWare - при работе с ним не требуется подключать стримеры к серверам, так как можно использовать любой стример или ленточный автозагрузчик в корпоративной сети. Все подробные сведения об используемых магнитных носителях и их содержимом хранятся в базе данных TapeWare. При необходимости можно восстанавливать файлы Windows NT в среде NetWare и наоборот.
+<p>Важная возможность TapeWare - автоматическая маршрутизация данных. Хотя и допускается назначать конкретное устройство хранения для выполнения задания резервного копирования, в TapeWare встроены протоколы, с помощью которых файлы маршрутизируются оптимальным образом. При первой попытке резервного копирования система будет обращаться к устройству хранения, подключенному к тому компьютеру, с тома которого считываются данные. Если это устройство хранения недоступно, то TapeWare просканирует сеть в поисках доступных устройств и выберет подходящее.
+<p>Следует отметить, что даже гранды отрасли хранения данных (например, HP и Seagate) включают ПО TapeWare в комплект поставки своих решений. По мнению отраслевых аналитиков, ПО TapeWare хорошо подходит для гетерогенных корпоративных сетей, в которых необходимо решать задачи распределенного резервного копирования в разных отделах (с высокой степенью контроля доступа к информации).
+<h4>Dantz Development </h4>
+<p><b>Retrospect</b>, разработка компании Dantz Development (<a href="http://www.dantz.com">http://www.dantz.com</a>), 
+  - характерный пример программ резервного копирования и восстановления для домашних 
+  пользователей, рабочих групп, малых и средних предприятий (работающих в средах 
+  Windows, Macintosh и Red Hat Linux). ПО Retrospect широко распространено в мире: 
+  например, оно используется в таких компаниях, как British Telecom, DaimlerChrysler, 
+  Motorola, Nortel, Pixar, Walt Disney и т. д. 
+<h3>Совместная работа ПО управления с другими программами </h3>
+<p>Резервное копирование и восстановление можно выполнять и с помощью программных 
+  средств, специально не предназначенных для этих целей. Рассмотрим этот вариант 
+  на примере ПО IPStor от компании FalconStor (<a href="http://www.falconstor.com">http://www.falconstor.com</a>), 
+  основные возможности которого рассматривались в предыдущей статье. 
+<p>ПО IPStor не способно самостоятельно выполнять резервное копирование и восстановление данных (т. е. оно не запускает процедуры резервного копирования на магнитную ленту и не управляет ленточными устройствами хранения), однако оно обеспечивает резервное копирование блочного уровня на жесткие диски и предоставляет ряд дополнительных возможностей при совместном использовании с ПО резервного копирования и восстановления третьих фирм.
+<p>Например, опция <b>TimeMark/TimeView</b> позволяет создавать по расписанию 
+  &quot;мгновенные снимки&quot; (образы) дисковых систем хранения и журналировать их версии, 
+  практически не задействуя ресурсы серверов, к которым подключены данные дисковые 
+  массивы. Эти &quot;мгновенные снимки&quot; могут храниться как на том же дисковом массиве, 
+  так и на удаленной системе хранения. При этом &quot;полная&quot; резервная копия создается 
+  всего один раз, далее сохраняются лишь изменения. Можно также восстановить &quot;мгновенный 
+  снимок&quot; TimeView дисковой системы хранения, не задействуя дополнительного дискового 
+  пространства. 
+<p>Следует отметить, что в ПО IPStor предусмотрены варианты совместного использования его cпециальных опций ZeroImpact Backup и HyperTrac Backup с распространенным на рынке ПО резервного копирования от третьих фирм. Эти опции позволяют значительно ускорить выполнение полного, инкрементального и дифференциального ленточного резервного копирования файлов активных данных и полных образов дисковой системы хранения, причем не оказывая влияния на работу всей системы.
+<p>Опция <b>ZeroImpact Backup</b> предусматривает исполнение ПО резервного копирования 
+  и восстановления (BakBone NetVault, Syncsort Backup Express и Veritas NetBackup 
+  - для ОС Linux, BakBone NetVault и Veritas NetBackup - для ОС Solaris) на сервере 
+  IPStor и полностью снимает нагрузку, связанную с обработкой процессов резервного 
+  копирования, с серверов приложений (рис. 1). ПО резервного копирования от третьих 
+  фирм &quot;видит&quot; виртуальные диски IPStor, как raw-диски. Сеанс резервного копирования 
+  диска начинается при разрешении использования виртуального диска IPStor (на 
+  рис. 1 этот шаг обозначен цифрой 1). Шаг 2 - ПО IPStor создает &quot;мгновенный снимок&quot; 
+  виртуального диска. Шаг 3 - с помощью IPStor (опции ZeroImpact Backup) ПО резервного 
+  копирования копирует содержимое виртуального диска на ленточные устройства хранения. 
+<p>Отметим, что при использовании ZeroImpact Backup на магнитную ленту можно копировать только образы дисков, но не файлы.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2004/po-shd1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Схема совместной работы ПО IPStor (с опцией ZeroImpact Backup) и ПО резервного копирования от третьих фирм.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В свою очередь, опция <b>HyperTrac Backup</b> позволяет ускорить резервное 
+  копирование файлов или полных образов дисковой системы хранения, выполняемое 
+  с помощью практически любого из известных программных средств резервного копирования 
+  и восстановления от третьих фирм, работающего на выделенном сервере резервного 
+  копирования (рис. 2). Никакого влияния на работу системы при этом также не оказывается. 
+<p>На шаге 1 (см. рис. 2) ПО IPStor создает &quot;мгновенные снимки&quot; TimeView для дисковых ресурсов хранения. Шаг 2 - &quot;мгновенный снимок&quot; TimeView отображается для сервера резервного копирования в качестве дискового ресурса хранения. На шаге 3 сервер резервного копирования выполняет процедуру резервного копирования на ленточные устройства хранения.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No3_2004/po-shd2.gif" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Рис. 2. Схема совместной работы ПО IPStor (с опцией HyperTrac Backup) и ПО резервного копирования от третьих фирм.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Кроме того, в IPStor доступны агенты резервного копирования для баз данных и систем корпоративной электронной почты (например, Microsoft Exchange, Oracle, Lotus Notes, Sybase, IBM DB2 UDB и Microsoft SQL Server), что обеспечивает целостность транзакций и согласованность &quot;мгновенных снимков&quot;.
+<p>Использование программных средств, подобных IPStor, совместно с ПО управления данными не только повышает производительность работы и делает ее удобнее, но и позволяет сократить расходы, связанные с приобретением для каждого сервера push-агентов, агентов открытых файлов, опций SAN, опций совместного использования стримеров/ленточных библиотек, программных агентов резервного копирования и т. д.
+<h3>Перспективы рынка </h3>
+<p>Ожидается, что производители ПО управления данными будут обращать все большее внимание на рынок малых и средних предприятий, объем которого, по прогнозу отраслевых аналитиков, в течение ближайших четырех лет должен увеличиться до 18,5 млрд долл.
+<p>Продолжится расширение функциональности ПО управления данными. В то же время наращивание функциональности ведет к значительному увеличению объемов пакетов ПО, сложности управления ими и стоимости, из-за чего ряд пользователей могут отказаться от приобретения таких комплексных программных продуктов (и здесь не поможет даже удобный пользовательский интерфейс).
+<p>Не прекратится передел рынка ПО управления данными. Первую скрипку здесь будет играть корпорация EMC, которая, лидируя сейчас на всем рынке ПО для систем хранения (см. таблицу), собирается стать лидером и в сегменте ПО управления данными. Еще одно свидетельство намерений EMC - недавнее поглощение ею компании Legato Systems (кто следующий?).
+<p>Отраслевые производители продолжат создание интегрированных программно-аппаратных решений для управления данными. Здесь отметим, например, планы компаний Veritas Software и Network Appliance по интеграции ПО Veritas NetBackup с системами хранения NetApp NearStore ATA.
+<h4>Лидеры мирового рынка ПО для систем хранения (III квартал 2003 г.) </h4>
+<table border="1">
+  <tr> 
+    <td rowspan="2">Производитель</td>
+    <td colspan="2">III квартал 2003 г.</td>
+    <td colspan="2">II квартал 2003 г.</td>
+    <td rowspan="2">Прирост (III кв. по отношению ко II кв.), % </td>
+  </tr>
+  <tr> 
+    <td>доходы, млн долл.</td>
+    <td>доля рынка, %</td>
+    <td>доходы, млн долл.</td>
+    <td>доля рынка, %</td>
+  </tr>
+  <tr> 
+    <td>EMC</td>
+    <td>431</td>
+    <td>26,1</td>
+    <td>399</td>
+    <td>25,2</td>
+    <td>7,9</td>
+  </tr>
+  <tr> 
+    <td>Veritas</td>
+    <td>343</td>
+    <td>20,7</td>
+    <td>325</td>
+    <td>20,5</td>
+    <td>5,4</td>
+  </tr>
+  <tr> 
+    <td>Computer Associates</td>
+    <td>145</td>
+    <td>8,8</td>
+    <td>142</td>
+    <td>8,9</td>
+    <td>2,5</td>
+  </tr>
+  <tr> 
+    <td>IBM</td>
+    <td>134</td>
+    <td>8,1</td>
+    <td>134</td>
+    <td>8,5</td>
+    <td>-0,5</td>
+  </tr>
+  <tr> 
+    <td>Hewlett-Packard</td>
+    <td>116</td>
+    <td>7,0</td>
+    <td>107</td>
+    <td>6,8</td>
+    <td>8,3</td>
+  </tr>
+  <tr> 
+    <td>Прочие </td>
+    <td>485</td>
+    <td>29,3</td>
+    <td>479</td>
+    <td>30,2</td>
+    <td>1,2</td>
+  </tr>
+  <tr> 
+    <td>Все производители</td>
+    <td>1653</td>
+    <td>100,0</td>
+    <td>1587</td>
+    <td>100,0</td>
+    <td>4,2</td>
+  </tr>
+  <tr> 
+    <td colspan="6">Источник: IDC, декабрь 2003 г.</td>
+  </tr>
+</table>
+<p><i>Окончание следует</i> 
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=21113.html'>Программные инструменты криминалистов: можно ли нарушить закон в онлайне и остаться непойманным?</A></b></li><li><b><A href='detail.php@ID=20694.html'>Национальные особенности рынка ECM/СЭД в России</A></b></li><li><b><A href='detail.php@ID=20562.html'>Корпоративная мультиплатформенность бизнес-приложений</A></b></li><li><b><A href='detail.php@ID=19146.html'>Что нового в новой версии виртуальной машины Oracle?</A></b></li><li><b><A href='detail.php@ID=17871.html'>Облачная стратегия Microsoft 2011</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8956.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Мировой рынок ПО для систем хранения: средства управления данными
+</a><br><a href="detail.php@ID=8956.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Александр Глинских, 
+  к.т.н. 
+
+Первые статьи цикла см. &quot;BYTE/Россия&quot; № 1&#39;2004 и № 2&#39;2004.
+
+Программные средства управления&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8956.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8956&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='05b80b9080c6f36f0f5d8ef0c058b58c'><img src='../bitrix/tools/captcha.php@captcha_code=05b80b9080c6f36f0f5d8ef0c058b58c' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

@@ -1,0 +1,817 @@
+<HTML>
+<HEAD>
+<title>Новые возможности DHTML
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Виталий Сизов sva@hot.ee Программируемые стили Важнейшие новшества, которые появляются в последнее время в Web-браузерах, касаются прежде всего стилей. Стандарт CSS, описывающий своего рода язык программирования, подвергается значительным" />
+<meta name="description" content="Виталий Сизов sva@hot.ee Программируемые стили Важнейшие новшества, которые появляются в последнее время в Web-браузерах, касаются прежде всего стилей. Стандарт CSS, описывающий своего рода язык программирования, подвергается значительным" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398083053','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6604' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6604&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6604"].SHOW_IMAGE.value="N"; document.forms["PrintForm6604"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6604"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6604"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6604);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6604.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6604.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6604);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11561.html'>№7 (48), июль 2002</a><h1>Новые возможности DHTML
+</h1>20.07.2002<p></p><DIV class='article-text'><p><i>Виталий Сизов </i><br>
+<a href="mailto:sva@hot.ee ">sva@hot.ee </a>
+<h3>Программируемые стили</h3>
+<p>Важнейшие новшества, которые появляются в последнее время в Web-браузерах, касаются прежде всего стилей. Стандарт CSS, описывающий своего рода язык программирования, подвергается значительным изменениям, и это вполне закономерно, ведь программный доступ к стилям открывает для дизайнера очень привлекательные возможности.
+<p>Эксперименты со стилями начала компания Netscape - уже с версии 4 браузер Netscape Navigator позволяет создавать таблицы стилей на языке JavaScript. Эта возможность получила название JavaScript Style Sheets (JSSS). Для примера рассмотрим следующий код.
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;STYLE TYPE=&quot;text/JavaScript&quot;&gt;
+ tags.P.borderWidth = 100;
+ tags.P.borderStyle = &#39;none&#39;;
+ tags.B.color = &quot;red&quot;;
+&lt;/STYLE&gt;
+&lt;LINK REL=&quot;stylesheet&quot; TYPE=&quot;text/JavaScript&quot; HREF=&quot;fancystyle&quot; 
+	TITLE=&quot;Fancy&quot;&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;P&gt;Spacious paragraph !&lt;/P&gt;
+&lt;P&gt;&lt;B&gt;Angry spacious paragraph!&lt;/B&gt;&lt;/P&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</pre>
+</td></tr></table>
+<p>
+<p>Здесь в элементе 
+<pre>&lt;STYLE&gt;</pre>
+ использованы конструкции JavaScript, с помощью которых изменяются атрибуты оформления обычных тегов 
+<pre>&lt;P&gt; и &lt;B&gt;</pre> 
+Элемент 
+<pre>&lt;LINK&gt;</pre> 
+показывает, что переопределение отдельных стилей касается только данного документа, тогда как во всем остальном оформление страницы должно базироваться на внедренной таблице стилей.
+<p>В JSSS имеются специальные функции, делающие механизм работы со стилями очень гибким. Рассмотрим некоторые из них.
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;STYLE TYPE=&quot;text/JavaScript&quot;&gt;
+ tags.H1.color = &#39;pink&#39;;
+ tags.H1.margins(1,2,3,4);
+ tags.H1.rgb(50,50,50);
+ contextual(tags.H1, tags.B).fontStyle = &quot;italic&quot;;
+ function change_it()
+ {
+   if (color == &#39;pink&#39;) fontStyle = &quot;medium&quot;;
+ }
+ tags.I.apply = change_it();
+&lt;/STYLE&gt;</pre>
+</td></tr></table>
+<p>
+<p>Так, с помощью свойства apply можно запрограммировать весьма тонкую настройку зависимости стилей. В приведенном примере элемент <pre>&lt;B&gt;,</pre> расположенный внутри элемента <pre>&lt;H1&gt;,</pre> отображается курсивом, но при этом конфликта с элементами <pre>&lt;I&gt;,</pre> также оказавшимися внутри <pre>&lt;H1&gt;,</pre> не происходит.
+<p>Механизм JSSS, предложенный Netscape, достаточно мощен и изощрен, но при работе со стилями обычно приходится не только создавать таблицы стилей, с чем JSSS справляется прекрасно, но и изменять стили в процессе отображения страницы. А здесь решение Netscape далеко не столь элегантно.
+<p>Изменение стилей в DHTML предполагает возможность записи их значений с помощью JavaScript. Чтобы это стало возможным в Netscape Navigator, необходимо создавать объекты Layer. Но изменение стиля с помощью JavaScript вовсе не означает, что элемент автоматически изменит свое изображение. Как документ в целом, так и его слои (layers), уже появившиеся на экране, сформированы в соответствии со значениями стилей, заданными на момент отображения. Новые значения, установленные JavaScript, обычно могут вступить в силу лишь после перегрузки (reload) документа или его части. Исключение из этого правила составляют только цвет фона (background color) и графический элемент (image) - их можно менять в любое время.
+<p>Совсем по-другому обстоит дело с управлением стилями в браузерах Microsoft. Начиная с версии 4.0, Internet Explorer предоставляет пользователю так называемые динамические стили, доступные для чтения и записи из любого языка программирования, прежде всего JScript и VBScript.
+<p>Другими словами, с управляемыми стилями в Internet Explorer все было хорошо с самого начала. Посмотрим, что же предлагает Microsoft в ответ на инновации со стилями, введенные Netscape.
+<h3>Механизм behaviors и файлы HTC</h3>
+<p>В то время как Netscape развивала механизм стилей на базе JSSS, Microsoft создала концепцию behaviors - мощный и эффективный инструмент управления динамическими стилями. DHTML Behaviors - компонент объектной модели, отвечающий за поведение (изменение) стилей в зависимости от событий, которые происходят при отображении Web-страницы в Internet Explorer.
+<p>Появление подобного решения было весьма логично. Поскольку программы на JScript чаще всего манипулируют стилями, то разумно и сами эти программы присоединить непосредственно к тем стилям, которые подвергаются изменениям. Объединение стилей и взаимодействующих с ними элементов JScript в единой конструкции позволяет полностью отделить функциональность от контента - информационного наполнения страниц. Таким образом, появляется реальная возможность создавать совокупности динамических Web-страниц на основе единого стиля оформления, снабженного интеллектом, единообразно реагирующим на внешние события. При этом сами страницы, оставаясь динамическими, могут вообще не содержать никаких программных кодов.
+<p>Механизм behaviors поддерживается в Internet Explorer начиная с версии 5.0, но считается, что только в версии 5.5 он стал функционировать в полном объеме.
+<p>Рассмотрим, как выглядит Web-страница с behaviors на примере кода, &quot;подсвечивающего&quot; строки при наведении на них курсора мыши (mouseover highlights). Без использования behaviors желаемый эффект достигается с помощью следующего кода.
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;HEAD&gt;
+&lt;STYLE&gt;
+  .HILITE { color:red; letter-spacing:2; }
+&lt;/STYLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;UL&gt;
+&lt;LI onmouseover=&quot;this.className=&#39;HILITE&#39;&quot;
+  onmouseout =&quot;this.className=&#39;&#39;&quot;&gt;Example&lt;/LI&gt;
+&lt;/UL&gt;
+&lt;/BODY&gt;</pre>
+</td></tr></table>
+<p>
+<p>Здесь для подсвечивания элемента списка <pre>&lt;LI&gt; </pre>использован трюк с переопределением имени класса стиля CSS при возникновении событий onmouseover и onmouseout. Очевидно, что вся работа в приведенном примере сосредоточена вокруг таблицы стилей и событий, т. е. именно тех компонентов, ради управления которыми и был задуман механизм behaviors.
+<p>Для браузера Internet Explorer 5.0 этот фрагмент можно переписать уже по-другому.
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;HEAD&gt;
+&lt;STYLE&gt;
+  LI {behavior:url(hilite.htc)}
+&lt;/STYLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;UL&gt;
+  &lt;LI&gt;Example&lt;/LI&gt;
+&lt;/UL&gt;
+&lt;/BODY&gt;</pre>
+</td></tr></table>
+<p>
+<p>Или даже совсем кратко, поместив элемент behavior внутри атрибута style:
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;BODY&gt;
+&lt;UL&gt;
+  &lt;LI STYLE=&quot;behavior:url(hilite.htc)&quot;&gt;Example&lt;/LI&gt;
+&lt;/UL&gt;
+&lt;/BODY&gt;</pre>
+</td></tr></table>
+<p>
+<p>Если попытаться перевести приведенные коды на обычный язык, то получится следующее. Элементу <pre>&lt;LI&gt; </pre>ставится в соответствие динамический стиль, поведение которого описано в файле hilite.htc. Таким образом, само по себе ключевое слово behavior никакой особой нагрузки не несет. Это просто атрибут-указатель, один из многих, допустимых в определении стилей CSS. Настоящий же программный компонент behavior скрыт от наблюдателя. Просматривая код страницы в браузере, мы не сможем понять, почему строки, заключенные в тегах <pre>&lt;LI&gt;, </pre>изменяют свое представление при наведении на них курсора мыши.
+<p>Секрет behaviors заключается в том, что поведение стиля описано на языке программирования, не являющегося принадлежностью CSS. Существует несколько способов программирования behaviors. В случае применения JScript для хранения программы используются файлы специального формата с расширением .HTC (HTML Component).
+<p>Рассмотрим пример.
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;HTML&gt;
+&lt;HEAD&gt;
+  &lt;STYLE&gt;
+    .help { behavior:url(help.htc); }
+  &lt;/STYLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+  Обычный текст
+  &lt;DIV CLASS=help DELAY=2000&gt;Щелкни мышью для помощи&lt;/DIV&gt;
+  Обычный текст
+&lt;/BODY&gt;
+&lt;/HTML&gt;</pre>
+</td></tr></table>
+<p>
+<p>Здесь в заголовке страницы определена таблица стилей с единственным классом (help), имеющим собственную &quot;программу поведения&quot;, которая описана в файле help.htc. Этот файл может выглядеть следующим образом:
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;script language=&quot;JScript&quot;&gt;
+attachEvent(&quot;onclick&quot;, event_onclick);
+
+function event_onclick()
+{
+  alert(&quot;Извините, ничем помочь не могу&quot;);
+}
+&lt;/script&gt;</pre>
+</td></tr></table>
+<p>
+<p>В приведенном примере щелчок мышью по любому элементу со стилем класса help вызовет появление окна стандартного диалога.
+<p>Для примера с подсвечиванием строк HTC-файл может выглядеть следующим образом (hilite.htc):
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;PUBLIC:ATTACH EVENT=&quot;onmouseover&quot; ONEVENT=&quot;Hilite()&quot; /&gt;
+&lt;PUBLIC:ATTACH EVENT=&quot;onmouseout&quot;  ONEVENT=&quot;Restore()&quot; /&gt;
+&lt;SCRIPT LANGUAGE=&quot;JScript&quot;&gt;
+var normalColor;
+
+function Hilite()
+{
+  if (event.srcElement == element)
+  {
+    normalColor = style.color;
+    runtimeStyle.color  = &quot;red&quot;;
+    runtimeStyle.cursor = &quot;hand&quot;;
+  }
+}
+
+function Restore()
+{
+  if (event.srcElement == element)
+  {
+     runtimeStyle.color  = normalColor;
+     runtimeStyle.cursor = &quot;&quot;;
+  }
+}
+&lt;/SCRIPT&gt;</pre>
+</td></tr></table>
+<p>
+<p>Behaviors можно применять не только в случаях интерактивного воздействия пользователя на элементы страницы. В объектной модели документа предусмотрено достаточно событий, способных инициировать функции behavior. Например, для реализации постоянных визуальных эффектов целесообразно использовать событие OnContentReady. В этом случае XML-заголовок в HTC файле будет выглядеть следующим образом.
+<p>
+<pre>&lt;PUBLIC:ATTACH EVENT = &quot;oncontentready&quot; ONEVENT =&quot;DoIt()&quot;/&gt;</pre>
+<p>
+<p>Примечательно, что событие OnContentReady для отдельного элемента возникает раньше, чем событие OnLoad, следовательно, визуальные эффекты, заданные с помощью behaviors, начнут работать, не дожидаясь полной загрузки страницы.
+<p>Строго говоря, HTC представляет собой XML-документ, включающий две структуры - блок script и окружающий блок component:
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;PUBLIC:COMPONENT&gt;
+  &lt;SCRIPT&gt;
+  &lt;/SCRIPT&gt;
+&lt;/PUBLIC:COMPONENT&gt;</pre>
+</td></tr></table>
+<p>
+<p>Наличие блока component позволяет описывать компонент как классический объект, имеющий свойства и методы, к которому можно обратиться из любого места DHTML с помощью программного кода. Свойства и методы HTC задаются соответствующими XML-элементами, например:
+<p>
+<pre>&lt;PUBLIC:PROPERTY NAME=&quot;hiliteColor&quot; /&gt;
+&lt;PUBLIC:METHOD NAME=&quot;startFlying&quot; /&gt;</pre>
+<p>
+<p>После того, как свойства и методы объявлены, к ним можно обращаться везде, где это потребуется.
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;PUBLIC:METHOD NAME=&quot;tick&quot; /&gt;
+&lt;PUBLIC:METHOD NAME=&quot;startFlying&quot; /&gt;
+:
+&lt;SCRIPT LANGUAGE=&quot;JScript&quot;&gt;
+var currCount;
+var flyCount;
+var flying;
+var msecs;
+var oTop, oLeft;
+msecs = 50;
+flyCount = 20;
+flying = false;
+runtimeStyle.position = &quot;relative&quot;;
+runtimeStyle.visibility = &quot;hidden&quot;;
+window.attachEvent(&quot;onload&quot;, onload);
+
+function onload()
+{
+  if (delay != &quot;none&quot;) {
+    window.setTimeout(uniqueID+&quot;.tick()&quot;, delay);
+  }
+}
+
+function tick()
+{
+  if (flying == false) {
+    startFlying();
+  } else {
+    doFly();
+  }
+}
+
+function startFlying()
+{
+  if (from==&quot;top&quot;) {
+    runtimeStyle.posTop = -offsetTop-offsetHeight;
+  } else if (from==&quot;bottom&quot;) {
+    runtimeStyle.posTop = 
+      element.document.body.clientHeight;
+  } else if (from==&quot;right&quot; ) {
+    runtimeStyle.posLeft = 
+      element.document.body.clientWidth;
+  } else {
+    runtimeStyle.posLeft = -offsetLeft-offsetWidth;
+  }
+  runtimeStyle.visibility = &quot;visible&quot;;
+  flying = true;
+  oTop = runtimeStyle.posTop;
+  oLeft = runtimeStyle.posLeft;
+  currCount = 0;
+  doFly();
+}
+
+function doFly()
+{
+  var dt, dl;
+  currCount++;
+  dt = oTop / flyCount;
+  dl = oLeft / flyCount;
+  runtimeStyle.posTop -= dt;
+  runtimeStyle.posLeft -= dl;
+  if (currCount &lt; flyCount) {
+    window.setTimeout(uniqueID+&quot;.tick();&quot;, msecs);
+  } else {
+    runtimeStyle.posTop = 0;
+    runtimeStyle.posLeft = 0;
+    flying = false;
+    evObj = createEventObject();
+    evObj.setAttribute(&quot;resulty&quot;, uniqueID);
+    finished.fire(evObj);
+  }
+}
+&lt;/SCRIPT&gt;</pre>
+</td></tr></table>
+<p>
+<p>Приведенный код, заимствованный из документации Microsoft SDK, обеспечивает эффект &quot;летающих блоков&quot; текста, например, на страницах презентаций. Примером вызова этого компонента может служить следующая DHTML-страница, содержащая помимо behavior еще и теги, определенные пользователем:
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;HTML XMLNS:InetSDK&gt;
+&lt;HEAD&gt;
+&lt;TITLE&gt;Flying Text Using Custom Tags&lt;/TITLE&gt;
+&lt;STYLE&gt;
+&lt;!--
+  P   { font-size: 16pt;
+        font-weight:600;
+        font-family: Arial,Helvetica;
+        color: gold;
+        margin-top:.2in; margin-bottom: 0.2in;
+        margin-left:0.5in; margin-right:0.5in;
+      }
+
+  DIV { font-size: 14pt;
+        font-weight:600;
+        font-family: Arial,Helvetica;
+        color: &quot;white&quot;;
+        margin-top: 0.1in;
+        margin-left: 1.0in; margin-right: 0.5in;
+      }
+
+  @media all {
+    InetSDK\:FLY { behavior: url(fly.htc); }
+  }
+--&gt;
+&lt;/STYLE&gt;
+&lt;/HEAD&gt;
+
+&lt;BODY BGPROPERTIES=&quot;FIXED&quot; BGCOLOR=&quot;#000000&quot;&gt;
+&lt;P&gt;
+  &lt;InetSDK:FLY delay=&quot;1000&quot; from=&quot;top&quot;&gt;
+    Use Dynamic HTML to differentiate your content
+    and create compelling Web sites
+  &lt;/InetSDK:FLY&gt;
+&lt;/P&gt;
+&lt;P&gt;
+  &lt;InetSDK:FLY delay=&quot;2000&quot; from=&quot;right&quot;&gt;
+    Use the Document Object Model (DOM)
+    to create interactive documents
+  &lt;/InetSDK:FLY&gt;
+&lt;/P&gt;
+&lt;InetSDK:FLY delay=&quot;3000&quot; from=&quot;bottom&quot;&gt;
+  &lt;DIV&gt;Interact with the user through
+    the event model&lt;/DIV&gt;
+  &lt;DIV&gt;Interactively change the appearance of 
+    the document with Dynamic Styles 
+    and Dynamic Content&lt;/DIV&gt;
+  &lt;DIV&gt;Take precise control over your layout 
+    with CSS-positioning&lt;/DIV&gt;
+&lt;/InetSDK:FLY&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</pre>
+</td></tr></table>
+<p>
+<p>HTC-файлы с JScript - это не единственное средство для реализации behaviors. Создавать Web-компоненты можно и с помощью языков программирования Visual C++, Visual Basic и Java. Для Internet Explorer 5+ разработчики наряду с технологией HTC могут использовать технологию Microsoft Windows Script Component (WSC). Кроме того, Microsoft предлагает целый ряд встроенных компонентов. Это так называемые default behaviors - компоненты, реализованные в самом обозревателе Internet Explorer:
+<p>
+<pre>&lt;STYLE&gt;
+  .saveFavorite { behavior:url(#default#savefavorite) }
+&lt;/STYLE&gt; </pre>
+<p>
+<p>Здесь для класса saveFavorite задается использование встроенного behavior с именем savefavorite. Принадлежность этого компонента к категории встроенных возможностей видна по специальному префиксу #default#. Приведенный фрагмент можно использовать для добавления ссылки в меню &quot;Избранное&quot;.
+<h3>Несовместимость браузеров</h3>
+<p>Как правило, Web-программист начинает работу над новым проектом JavaScript с операторов, распознающих тип браузера. Затем практически в каждой функции он вынужден предусматривать альтернативные ветви, реализующие необходимые операции в рамках объектных моделей конкурирующих браузеров.
+<p>На первый взгляд, инновации в направлении CSS способны только усложнить положение вещей, тем более что некоторые из них даже вызывают аварийное завершение работы браузеров - &quot;чужаков&quot;. С другой стороны, разработчики в качестве одного из самых важных результатов нововведений указывают на возможность полностью отделить представление Web-страниц от контента. Действительно, поскольку программы теперь связаны со стилями, а сами таблицы стилей могут загружаться (внедряться) из внешних файлов, то динамические возможности целого сайта теперь так же легко изменить, как цвет или шрифт, - для этого достаточно просто модифицировать внешнюю таблицу CSS или связанные с ней HTC-файлы.
+<p>Воспользуемся этим обстоятельством для решения проблемы совместимости. Если вся работа с объектной моделью локализована в CSS, то достаточно иметь несколько вариантов таблицы стилей и уметь загружать нужный экземпляр в зависимости от обнаруженного на клиентской стороне типа обозревателя. Таким образом, вместо того чтобы предусматривать в каждой функции JavaScript несколько альтернатив исполнения, можно ограничиться единственной функцией, загружающей нужные стили CSS. Пример такой функции приведен ниже.
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;script language=&quot;JavaScript1.2&quot; type=&quot;text/javascript&quot;&gt;
+&lt;!--
+var bV = parseInt(navigator.appVersion);
+NS4 = (document.layers) ? true : false;
+IE4 = ((document.all)&&(bV &gt;= 4)) ? true : false;
+DOM = (!document.layers && !document.all && bV &gt;= 4)
+       ? true : false;
+capable = (NS4 || IE4 || DOM) ? true : false;
+with (document) {
+  if (DOM) {
+    var lstyle = &quot;&lt;style type=&#39;text/css&#39;&gt;&quot;;
+    lstyle += . . .; // стили для других обозревателей DOM
+    lstyle += &quot;&lt;/style&gt;&quot;;
+    write(lstyle);
+  } else {
+    write(&quot;&lt;style type=&#39;text/css&#39;&gt;&quot;);
+    if (NS4) {
+      write(&quot;. . .&quot;); // стили для Netscape Navigator
+    } else if(IE4) {
+      write(&quot;. . .&quot;); // стили для Internet Explorer
+  }
+    write(&quot;&lt;/style&gt;&quot;);
+  }
+}
+//--&gt;
+&lt;/script&gt;</pre>
+</td></tr></table>
+<p>
+<p>Разместив подобные строки JavaScript в разделе <pre>&lt;HEAD&gt; </pre>Web-страницы, можно без ограничений использовать как JSSS компании Netscape, так и Web-компоненты Microsoft.
+<h3>Web-компоненты - профессиональный пример</h3>
+<p>В качестве заключительного примера рассмотрим, как с помощью технологии Web-компонентов создать весьма эффектную Web-страницу типа Digital Dashboard (DDB).
+<p>DDB представляет собой рабочее место руководителя и проектируется таким образом, чтобы обеспечить представление на одной странице разнородной информации из различных источников. Но чем больше источников, тем сложнее обеспечить их одновременный обзор, а листание страниц и даже их прокрутка в данном случае нежелательны, поскольку такие операции рассеивают внимание пользователя.
+<p>Для решения проблемы можно использовать Web Parts - Web-компоненты, отображаемые в отдельных окнах на странице DDB. Окна для Web Parts - это не то же самое, что привычные окна Windows, и не порождают новых экземпляров приложения. Эти окна можно свертывать, раскрывать и перемещать в пределах страницы, но нельзя накладывать друг на друга. Последнее обстоятельство исключает вероятность случайного перекрытия важной информации элементами переднего плана.
+<p>Управление Web Parts на странице DDB напоминает верстку журнальной или газетной страницы, где прямоугольные заметки размещаются в одной плоскости, чтобы эффективно занять всю площадь. Пользователь, работающий с DDB, собирает в своем поле зрения все компоненты, которые в текущий момент наиболее значимы для принятия решения. Другие компоненты, менее актуальные или второстепенные, временно закрываются или перемещаются в дальнюю часть страницы.
+<p>Еще одно важное требование, предъявляемое к DDB, - запоминание и восстановление текущего расположения Web Parts.
+<p>Из приведенного описания следует, что уже сама по себе DDB - это достаточно сложная DHTML-структура, не говоря уже о формировании или извлечении содержимого для ее компонентов. Рассмотрим код Web Part.
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;!--BEGIN WEB PART ITEM--&gt;
+&lt;table border=&quot;0&quot; class=&quot;clsPart&quot; id=&quot;{ID}&quot;&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;clsPartHead&quot;&gt;
+      &lt;img class=&quot;clsPartHead&quot; src=&quot;gripBlue.gif&quot;&gt;
+    &lt;/td&gt;
+    &lt;td class=&quot;clsPartHead&quot;&gt;
+      &lt;b class=&quot;clsPartHead&quot;&gt;{CAPTION}&lt;/b&gt;
+    &lt;/td&gt;
+    &lt;td class=&quot;clsPartRight&quot;&gt;
+      &lt;img class=&quot;clsMinimize&quot; src=&quot;downlevel.gif&quot;&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colSpan=&quot;3&quot;&gt;
+      &lt;table border=&quot;0&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+&lt;!-- WEB PART BODY HERE --&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+&lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!--END WEB PART ITEM--&gt;</pre>
+</td></tr></table>
+<p>
+<p>Как видно из приведенного фрагмента, контейнер для Web Part состоит из двух частей - заголовка и тела. В теле Web Part может размещаться произвольная информация: скажем, текст, таблицы, графические изображения, inline-фреймы или программные объекты. Но для решения нашей задачи это роли не играет. А вот вторая часть Web Part, заголовок, напротив, очень важен.
+<p>Заголовок представляет собой таблицу, состоящую из одной строки и трех ячеек. В средней ячейке располагается название компонента - {CAPTION}. Справа и слева от названия помещаются два графических элемента, показывающих, какие операции с компонентом предусмотрены. Элемент справа - кнопка &quot;minimize / maximize&quot;, позволяющая свертывать и раскрывать окно. Элемент слева - ручка (grip), показывающая возможность перетаскивания компонента.
+<p>Обе части Web Part находятся внутри таблицы, выполняющей функцию контейнера. Каждый такой контейнер должен иметь уникальный идентификатор {ID}, чтобы обеспечить возможность запоминания и восстановления местоположения компонентов.
+<p>Чтобы оптимально использовать всю площадь страницы, Web Parts делают одинаковой ширины в пределах своей колонки или &quot;полосы&quot;. Количество полос на странице произвольное (обычно две или три). Каждая полоса может иметь свою ширину и отличный от других полос стиль оформления (цветовое решение). При таком подходе страница DDB в исходном состоянии напоминает журнальную.
+<p>Совокупность Web Parts, отнесенных к одной полосе, заключается в контейнер, в пределах которого компоненты могут перемещаться с помощью мыши. Такой контейнер описывается следующим образом.
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;table&gt;
+  &lt;tr&gt;
+&lt;!--BEGIN CONTAINER--&gt;
+    &lt;td vAlign=&quot;top&quot;&gt;
+      &lt;table border=&quot;0&quot; class=&quot;clsPartContainer&quot;&gt;
+&lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td vAlign=&quot;top&quot;&gt;
+&lt;!--WEB PART ITEM 1--&gt;
+&lt;!--WEB PART ITEM 2--&gt;
+. . .
+&lt;!--WEB PART ITEM N--&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+&lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/td&gt;
+&lt;!--END CONTAINER--&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+</td></tr></table>
+<p>
+<p>Если на странице DDB предусматривается несколько полос-контейнеров, то приведенная конструкция повторяется в части между комментариями <pre>&lt;!-BEGIN CONTAINER-&gt; и &lt;!-END CONTAINER-&gt;.</pre>
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;table&gt;
+  &lt;tr&gt;
+&lt;!--CONTAINER 1--&gt;
+&lt;!--CONTAINER 2--&gt;
+&lt;!--CONTAINER 3--&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+</td></tr></table>
+<p>
+<p>Поскольку современные технологии не предусматривают на Web-странице никаких кодов JavaScript, то единственное, что осталось сделать для завершения DDB, - это внедрить таблицу стилей CSS, включающую все классы, упомянутые в приведенных выше фрагментах.
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;DDB Page&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;ddb.css&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+&lt;!--CONTAINER 1--&gt;
+&lt;!--CONTAINER 2--&gt;
+&lt;!--CONTAINER 3--&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</pre>
+</td></tr></table>
+<p>
+<p>Вот как может выглядеть подобная таблица.
+<p>
+<table border="0" bgcolor="#CCCCCC"><tr><td> 
+<pre>.clsPartContainer {
+  BEHAVIOR: url(webparts.htc);
+  POSITION: relative;
+}
+.clsPart { }
+.clsPartConent { }
+.clsPartBottom { }
+.clsPartHead { CURSOR: move; }
+.clsDragWindow {
+  BACKGROUND-COLOR: #666666;
+  BORDER-BOTTOM: #000000 2px solid;
+  BORDER-LEFT: #000000 2px solid;
+  BORDER-RIGHT: #000000 2px solid;
+  BORDER-TOP: #000000 2px solid;
+  DISPLAY: none; 
+  FILTER: alpha( opacity=20 );
+  POSITION: absolute;
+}
+.clsPartRight {
+  BACKGROUND-IMAGE: url(chevronUp.gif);
+  CURSOR: hand;
+}
+.clsPartRightHidden {
+  BACKGROUND-COLOR: #cccccc;
+  BACKGROUND-IMAGE: url(chevronDown.gif);
+  CURSOR: hand;
+}
+.clsPartLeft { }
+IMG.clsMinimize { VISIBILITY: hidden; }</pre>
+</td></tr></table>
+<p>
+<p>Именно здесь, в таблице стилей, появляется ссылка на программный код, с помощью которого будет происходить очень непростая работа по управлению динамическими компонентами. Как и следовало ожидать, она выполняется с помощью компонента behavior - он расположен в файле webparts.htc.
+<p>Можно заметить также, что в таблице стилей появились новые классы, на которые не было ссылок в основном коде страницы DDB. Это прежде всего класс clsDragWindow, описывающий прямоугольник с полупрозрачным фоном. Такой элемент будет использоваться для имитации перемещения Wеb Parts, пока пользователь сохраняет в нажатом состоянии левую клавишу мыши. Второй класс, clsPartRightHidden, описывает кнопку maximize для ситуации, при которой тело Web Part скрыто.
+<p>Наиболее тонкий момент - запоминание информации о взаимном расположении компонентов. Здесь используется встроенный компонент behavior #default#userData. В тело контейнера для Web Parts следует поместить именованный пустой элемент <DIV> с атрибутом стиля BEHAVIOR: url(#default#userData):
+<p>
+<pre>&lt;DIV class=storeUserData id=oLayout&gt;&lt;/DIV&gt;</pre>
+<p>
+<p>А приведенная таблица стилей CSS пополнится еще одним классом:
+<p>
+<pre>.storeUserData { behavior: url(#default#userData); }</pre>
+<p>
+<p>Важно отметить, что userData behavior для запоминания данных между сеансами использует накопитель UserData store, память которому выделяется в рабочем пространстве Internet Explorer. Это обычный XML-файл, записываемый в каталог /Application Data/Microsoft/Internet Explorer/UserData/… У этого компонента куда больше возможностей и выше быстродействие, чем у традиционных cookies. Компонент UserData behavior доступен в Internet Explorer начиная с версии 5.0 - на платформе как Microsoft Win32, так и UNIX. Формат XML позволяет запоминать данные в структурированном виде, т. е. сохранять и восстанавливать настоящие программные объекты. Это новшество быстро оценили разработчики. Так, например, крупнейшая поисковая система Google использует userData behavior для хранения всех пользовательских настроек.
+<p>Рамки статьи не позволяют привести программный код компонента Webparts.htc, да в этом и нет необходимости. На то он и Web-компонент, чтобы существовать автономно и использоваться там, где в этом появится потребность.
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6604.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Новые возможности DHTML
+</a><br><a href="detail.php@ID=6604.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Виталий Сизов 
+sva@hot.ee 
+Программируемые стили
+Важнейшие новшества, которые появляются в последнее время в Web-браузерах, касаются прежде всего&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6604.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6604&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='029674d43ab14ac8723a26ba46b55de8'><img src='../bitrix/tools/captcha.php@captcha_code=029674d43ab14ac8723a26ba46b55de8' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

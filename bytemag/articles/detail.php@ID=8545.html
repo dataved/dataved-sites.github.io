@@ -1,0 +1,524 @@
+<HTML>
+<HEAD>
+<title>Дисковые массивы EMC Symmetrix DMX
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Анатолий Журкин Многие руководители предприятий до сих пор недооценивают сложность эффективной консолидации. Ресурсы, необходимые серверам с учетом появления новых приложений и роста числа пользователей, постоянно увеличиваются, а физические размеры" />
+<meta name="description" content="Анатолий Журкин Многие руководители предприятий до сих пор недооценивают сложность эффективной консолидации. Ресурсы, необходимые серверам с учетом появления новых приложений и роста числа пользователей, постоянно увеличиваются, а физические размеры" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082897','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8545' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8545&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8545"].SHOW_IMAGE.value="N"; document.forms["PrintForm8545"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8545"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8545"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8545);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8545.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8545.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8545);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11502.html'>№7 (59), июль 2003</a><h1>Дисковые массивы EMC Symmetrix DMX
+</h1>10.07.2003<p></p><DIV class='article-text'><p><i>Анатолий Журкин</i> 
+<p>Многие руководители предприятий до сих пор недооценивают сложность эффективной консолидации. Ресурсы, необходимые серверам с учетом появления новых приложений и роста числа пользователей, постоянно увеличиваются, а физические размеры самих серверов продолжают уменьшаться. Подсистемы хранения, которые подключаются напрямую либо используются в сетевой конфигурации, в том числе и сети хранения данных SAN, и подключаемые системы хранения NAS, теперь обслуживают десятки и даже сотни серверов одновременно. Стабильное и эффективное реагирование на всевозможные потребности систем превращается в крайне сложную задачу. Разработка решения, обеспечивающего консолидацию хранения, для информационной системы конкретного предприятия требует высокой гибкости и мощной операционной среды.
+<p>Хотя управление хранением как централизованным сервисом дает много плюсов, консолидирование многих приложений и их нагрузок может привести к непредсказуемым требованиям к производительности. Например, неожиданный всплеск активности одного приложения может негативно повлиять на многие другие операции.
+<p>В начале года корпорация ЕМС (<a href="http://www.emc.com">http://www.emc.com</a>) 
+  представила принципиально новую архитектуру построения своих дисковых массивов. 
+  На смену шинной архитектуре семейства Symmetrix 8000 пришла так называемая матрица 
+  прямых соединений между всеми компонентами системы (Direct Matrix Architecture, 
+  DMX). Новые дисковые массивы построены в архитектуре межсоединений, которая 
+  использует до 128 соединений точка-точка между кэш-памятью и фронтальными и 
+  тыловыми контроллерами. Анонсируя технологию Symmetrix DMX, корпорация не только 
+  представила новую системную архитектуру дисковых массивов старшего класса, но 
+  и охарактеризовала их положение в общей структуре предложений EMC. Теперь Symmetrix 
+  рассматривается не как изолированное семейство, а как часть общего продуктового 
+  ряда с массивами СLARiiON. Для моделей обеих семейств стандартизованы операционная 
+  система, управляющее ПО, диски (теперь их только три варианта) и ряд других 
+  подсистем. Более того, в семействе Symmetrix впервые появилась модульная система 
+  - DMX800, построенная на тех же элементах, что и массивы семейства СLARiiON. 
+  Тем самым обеспечивается полная преемственность двух основных продуктовых линеек 
+  ЕМС и возможность постепенного наращивания мощностей систем хранения для заказчиков 
+  компании. 
+<p>Эксперты полагают, что руководители ИТ-служб должны рассматривать новую систему 
+  хранения корпорации EMC не просто как очередную версию линейки дисковых массивов 
+  с многолетней историей. Дело не только в том, что это современная технология, 
+  обеспечивающая повышение плотности размещения и производительности, универсальность 
+  и дополнительные возможности сокращения расходов; главное - серия Symmetrix 
+  DMX с архитектурой Direct Matrix дает возможность руководителям ИТ-служб пересмотреть 
+  общую стратегию хранения данных. DMX реализует новые функции консолидации хранения 
+  данных, обеспечения непрерывности бизнеса и гибкого управления системами хранения, 
+  а ее компоновка позволяет получить масштабирование по доступной цене. 
+<p>
+<table width="100%" border="0" bgcolor="#CCFFFF">
+  <tr>
+    <td>
+      <h4>EMC Symmetrix DMX: основные преимущества для бизнеса </h4>
+      <p>Пропускная способность, плотность размещения портов, масштабируемость 
+        по производительности и емкости открывают новые возможности для развертывания 
+        технологии в масштабах всего предприятия. Эта новая архитектура систем 
+        хранения позволяет реально поддерживать в консолидированной среде значительно 
+        более широкий диапазон и масштаб предприятий, что особенно важно для заказчиков, 
+        которым нужно быстро перейти на сетевое хранение данных. Руководителям 
+        ИТ-служб следует пересмотреть свою стратегию консолидации хранения с учетом 
+        новых возможностей, реализованных в Symmetrix DMX. 
+      <p>Во всей серии Symmetrix DMX, начиная от полностью модульной модели DMX800 
+        и заканчивая системой DMX2000 класса high­end, используется один и тот 
+        же набор ПО с мощными функциональными возможностями и опции масштабирования. 
+        В ряде случаев можно пересмотреть элементы инфраструктуры хранения данных 
+        для обеспечения непрерывности бизнеса и восстановления после аварий. В 
+        частности, есть возможность увеличить число приложений, защищенных от 
+        аварий, и поддерживаемых онлайновых копий, а также географически распределить 
+        удаленные резервные копии. 
+      <p>Появление Symmetrix DMX позволит руководителям ИТ-служб в дополнение 
+        к администрированию гетерогенных систем хранения, уже давно реализованному 
+        EMC, контролировать и затраты на хранение. Новые конфигурации и схемы 
+        ценообразования для дисковых приводов, техническая возможность наращивать 
+        емкость систем открывают дополнительные возможности сокращения расходов 
+        на приобретение и развертывание.
+    </td>
+  </tr>
+</table>
+<p>Объявленная серия систем хранения Symmetrix DMX отличается высокой емкостью 
+  и производительностью. Модели серии масштабируются от 1,2 Тбайт до 42 Тбайт 
+  по физической емкости. Максимальная пропускная способность кэш-памяти может 
+  достигать 16 Гбайт/с. По оценкам специалистов EMC, номинальная пиковая внутренняя 
+  полоса пропускания систем Symmetrix DMX составляет 64 Гбайт/с, что намного выше, 
+  чем у систем Symmetrix 8000 (1,6 Гбайт/с). Существенно возросла пропускная способность 
+  кэш-памяти - от 6,4 до 16 Гбайт/с, а пропускная способность для операций ввода-вывода 
+  внутри системы увеличилась с 5,1 до 12,8 Гбайт/с. Использование до 64 петель 
+  подключения дисков по интерфейсу Fibre Channel (2 Гбит/с) обеспечивает более 
+  высокий параллелизм дисковых операций. Благодаря этому в системах Symmetrix 
+  DMX скорость передачи данных в 5-6 раз выше, чем в системах семейства Symmetrix 
+  8000. 
+<p>Согласно опубликованным результатам эталонных испытаний дисковых массивов Symmetrix DMX, имитирующих рабочую нагрузку хранилища данных, модель Symmetrix DMX2000 выполняет 20 тыс. операций ввода-вывода в секунду (IOPS) при среднем времени отклика немногим более 3,5 мс. Конкурирующие системы такого же класса в тестах показывают результат около 6 тыс. IOPS.
+<p>EMC позиционирует Symmetrix DMX как систему, которая:
+<ul>
+  <li>основана на современной технологии хранения и в то же время сохраняет базовые 
+    черты Symmetrix;</li>
+  <li>обеспечивает весьма высокую плотность размещения портов доступа и имеет 
+    рекордную производительность;</li>
+  <li>реализует многомерную масштабируемость (с масштабированием вверх, вниз и 
+    в будущее) пропускной способности, емкости, интерфейсов подключения и производительности;</li>
+  <li>построена по модульному принципу, что обеспечивает не только масштабируемость, 
+    но и усовершенствование и расширение в будущем. </li>
+</ul>
+<p>Посмотрим, что нового появилось в архитектуре Direct Matrix, если сравнивать ее с традиционными решениями на базе общей шины и коммутатора (рис. 1). Применение обычной архитектуры общей шины в определенный момент неизбежно приводит к конфликтам из-за захвата линии и физически ограничивает возможности масштабирования. Коммутируемая архитектура имеет те же недостатки - конфликты из-за захвата линии и ограничения по масштабируемости и, кроме того, задержки при передаче данных. Отказ коммутатора приводит к заметному падению производительности системы. Архитектура же Direct Matrix обеспечивает резервированные соединения типа &quot;точка-точка&quot; напрямую, что устраняет причины конфликтов, реализует масштабируемость и поддержку будущих технологий. Стоит отметить, что архитектурно системы DMX полностью готовы к использованию четырех- и даже десятигигабитного соединения Fibre Channel, а также сводят к минимуму задержки.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2003/EMC/ris1.gif" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Рис. 1. Варианты архитектуры дисковых массивов.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h3>Концепция новой архитектуры </h3>
+<p>Хотя концепция архитектуры Direct Matrix не содержит ничего принципиально нового, она позволяет одновременно увеличить пропускную способность системы и производительность и использовать выделенные подключения. Поэтому при росте или нестабильности активности у &quot;тяжелых&quot; приложений не возникает проблем с доступностью системных ресурсов EMC Symmetrix и не требуется специальный арбитраж распределения ресурсов. Обеспечивается предсказуемая и стабильная производительность при различных нагрузках, что является фундаментальным требованием для сред с высокой степенью консолидации.
+<p>До сих пор у руководителей ИТ-служб не было свободы выбора при построении инфраструктур, обеспечивающих непрерывность бизнеса и восстановление после аварий: имелись высоконадежные решения для центров обработки данных, с одной стороны, и все остальные варианты - с другой. Например, тяжелые решения, гарантирующие доступность в режиме 7x24x365 с удаленным синхронным зеркалированием, требуют самого совершенного оборудования и ПО из имеющегося на рынке и значительных инвестиций в подготовку площадок, приобретение продуктов и обучение персонала.
+<p>Появление систем модульной конструкции (Symmetrix DMX800) позволяет руководителям ИТ-служб обеспечить тот же уровень удаленной защиты данных на площадках, где нет таких критически важных для бизнеса данных, которые оправдали бы, например, инвестиции в устройство фальшпола и другие меры подготовки инфраструктуры, включая обучение персонала. Все новые модели Symmetrix DMX работают под управлением того же набора ПО, который применялся в предыдущем поколении дисковых массивов EMC, включая утилиты SRDF и TimeFinder, поэтому они совместимы не только между собой, но и со старыми моделями Symmetrix.
+<p>В новых решениях EMC можно использовать для репликации один и тот же набор утилит и методик и с централизованной консоли контролировать локальную и удаленную среду, управлять ею и автоматизировать. Они помогают реализовать уже накопленный опыт централизованного управления.
+<p>Устранение физических ограничений на размещение также позволяет внедрить новые методы управления информацией. Для эффективной работы компании требуется все больше информации, и данные, доступность которых раньше была ограничена из-за локального резервного копирования, теперь можно автоматически реплицировать на альтернативную и лучше защищенную площадку. Такое резервное копирование можно выполнять в определенное время суток или непрерывно. Оно позволяет не только реализовать более привлекательный уровень сервиса, но и удовлетворить жесткие требования законодательства.
+<p>Вообще говоря, слово &quot;управление&quot; имеет много значений. С течением времени сформировались правила конфигурирования и приобретения систем хранения данных. Сегодняшние экономические условия заставляют руководителей ИТ-служб и компаний пересматривать приоритеты операций, и зачастую они вынуждены снижать уровень обслуживания, чтобы сделать больше с меньшими затратами либо из-за невозможности удовлетворить ожидания. Эксперты полагают, что Symmetrix DMX воплощают именно ту технологию и реализуют именно те опции обеспечения уровня обслуживания, которые раньше были недоступны.
+<p>Многомерное масштабирование архитектуры Symmetrix Direct Matrix позволяет более гибко масштабировать системы хранения корпоративного класса. Предприятия сегодня стараются покупать только то, что им нужно в данный момент. Теперь ИТ-менеджеры и администраторы систем хранения могут точно определить требования к пропускной способности, емкости, возможностям подключения и/или производительности и купить именно те компоненты, которые им нужны. Возможно, впервые в истории систем хранения класса high-end ИТ-отделы смогут привести свои расходы в соответствие с потребностями, потому что будут в состоянии сразу же использовать приобретенное оборудование.
+<p>Кроме того, в Symmetrix DMX используются те же жесткие диски, что и в линейке дисковых массивов EMC CLARiiON, благодаря чему предприятия смогут увеличить эффективность затрат и сократить стоимость приобретения. По мере роста требований к хранению они будут приобретать дополнительные диски, цена на которые, скорее всего, будет ниже текущего уровня (сейчас стоимость хранения 1 Гбайт за год уменьшается в среднем на 30%).
+<p>Новые продукты EMC в зависимости от требований покупателя можно приобрести и всего с 16 дисками, и с несколькими сотнями накопителей. Еще более важно то, что единая архитектура всей серии Symmetrix Direct Matrix позволяет получить адаптируемую, предсказуемую и устойчивую производительность при любом уровне емкости. Технология Symmetrix DMX реализует линейно масштабируемые системы, обеспечивающие прежде недоступный уровень предсказуемости.
+<p>Если необходимо увеличить пропускную способность, в Symmetrix DMX добавляются дополнительные устройства-контроллеры (Channel Director, Disk Director и Global Cache Director). Это выгодно отличает новые дисковые массивы от предыдущих поколений систем корпоративного класса, в которых имелись жесткие ограничения на расширение.
+<p>Перечисленные возможности помогают руководителям ИТ-служб лучше планировать приобретения, выполнять их постепенно, оптимизируя использование дорогих ресурсов и не вкладывая деньги в оборудование, которое сначала нельзя будет загрузить на полную мощность, и разрабатывать решения для бизнеса с очень высокой точностью.
+<p>Как полагают эксперты, EMC взяла на вооружение следующую стратегию: реализовать первую версию новой технологии и затем постепенно перевести на нее весь спектр своей продукции, обеспечив совместимость сверху вниз и снизу вверх с предыдущим поколением. Именно так EMC успешно вывела на рынок линейку CLARiiON и свое открытое ПО.
+<h3>Некоторые подробности архитектуры </h3>
+<p>Технология неблокирующих взаимосоединений в системе Symmetrix DMX полностью исключает конфликты с шиной или коммутатором. По оценке специалистов EMC, Symmetrix DMX обеспечивает вчетверо более широкую полосу пропускания, имеет в пять раз большую вычислительную мощность и в десять раз большую пропускную способность обмена данными с кэш-памятью, чем у ближайших конкурентов.
+<p>Архитектура матрицы прямых соединений системы Symmetrix DMX устраняет необходимость в промежуточных контроллерах: объединительная плата обеспечивает совокупность прямых соединений (выделенных физических каналов) типа &quot;точка-точка&quot; между кэш-памятью, внешними (фронтальными) и внутренними (тыловыми) контроллерами и каждым из дисков. В результате ширина совокупной внутренней полосы пропускания возрастает до 64 Гбайт/с. Отказ платы памяти приведет к выходу из строя 16 из 128 каналов, т. е. к уменьшению совокупной полосы пропускания на 12%, тогда как в коммутируемой архитектуре отказавший координатный коммутатор заблокирует 32 канала, снизив ширину совокупной полосы пропускания на 25%.
+<p>За счет 128 прямых выделенных трактов передачи данных между контроллерами каналов (Channel Directors) и кэш-памятью удается не снижать производительность работы шин или коммутаторов. Каждый из таких выделенных трактов передачи имеет полосу пропускания 500 Мбайт/с, что в совокупности обеспечивает полосу пропускания всей системы 64 Гбайт/с. Усовершенствованная технология контроллера кэш-памяти, емкость которой достигает 128 Гбайт (в ней можно сконфигурировать до 32 независимых областей), позволяет задействовать до 32 одновременных трактов обмена с кэш-памятью, каждый с пропускной способностью 500 Мбайт/с. При этом совокупная пропускная способность кэш-памяти может дойти до 16 Гбайт/с, что обеспечивает скорость выполнения транзакций, недостижимую ни в одной другой системе хранения информации.
+<p>Системы Symmetrix DMX оснащаются процессорами PowerPC 500 МГц, число которых варьируется от 16 до 68. Соединения осуществляются по интерфейсу Fibre Channel с использованием контроллеров ESCON. Программное управление осуществляет операционная система EMC Enginuity, которая отличается мощным арсеналом функциональных средств для управления системами хранения информации, непрерывно тестирующимся и совершенствующимся. На сегодня данная ОС установлена и успешно эксплуатируется более чем у 60 тыс. заказчиков. Она позволяет подключать системы хранения Symmetrix к сотням типов серверов, десяткам версий ОС и программных пакетов управления системами хранения и предоставляет заказчику широкий выбор популярных вариантов сетевых соединений и устройств (от адаптеров главной шины и жестких дисков до коммутаторов и ленточных подсистем). ОС Enginuity также обеспечивает взаимодействие между системами Symmetrix серии DMX и предыдущих поколений.
+<p>В архитектуру DMX входит подсистема дисков с интерфейсами Fibre Channel (2 Гбит/с), в которой можно организовать от 16 до 64 дисковых петель (максимум 18 дисков в каждой). Для подключения серверов (их число может превышать 8 тыс.) используются новые 8-портовые контроллеры Fibre Channel 2 Гбит/с и ESCON, которые позволяют установить до 96 канальных соединений с хост-системами.
+<p>В одной системе можно комбинировать диски емкостью 73 Гбайт со скоростью вращения 10 тыс. и/или 15 тыс. об./мин, а также диски емкостью 146 Гбайт со скоростью 10 тыс. об./мин. Поддерживаются уровни RAID 0, 1, 10 и Parity Raid (3+1 или 7+1).
+<p>Symmetrix DMX может масштабироваться по нескольким измерениям. Применение более быстрых интерфейсов и процессоров, более быстрой кэш-памяти увеличенного объема, большего числа дисков на канал открывает очевидные возможности для разработки в будущем новых продуктов на основе этой архитектуры. Кроме того, можно увеличить число интерфейсов, директоров кэша, установить жесткие диски с большей скоростью или емкостью. Архитектура Direct Matrix позволяет EMC достаточно просто реализовать такие усовершенствования в будущем, причем их внедрение окажет минимальное влияние на работу информационных систем предприятий, где уже используются системы Symmetrix DMX.
+<h4>Symmetrix DMX800 </h4>
+<p>В современном модельном ряде EMC система DMX800 (рис. 2) занимает место сразу над системами семейства CLARiiON. Это первая модульная, монтируемая в стойку высокопроизводительная и экономичная модель дисковой системы хранения, обладающая функциональными возможностями и преимуществами монолитных систем высшего класса. Она устанавливается в стандартный 19-дюймовый корпус, отвечающий требованиям профессиональной ассоциации NEMA (National Emergency Management Association), благодаря чему заказчик может по мере необходимости гибко изменять конфигурацию системы, наращивать ее емкость и создавать новые соединения.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2003/EMC/ris2.jpg" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. EMC Symmetrix DMX800.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В конфигурацию системы DMX800 можно включить от 16 до 120 жестких дисков, в последнем случае совокупная емкость (до разбиения на разделы) достигает 17,5 Тбайт. Система оборудована 16 портами Fibre Channel (2 Гбит/с) для подключения дисков, 16 портами Fibre Channel (2 Гбит/с) для ввода-вывода и кэш-памятью емкостью от 4 до 32 Гбайт. Наращивать систему можно или в пределах имеющегося корпуса, или с использованием дополнительного шасси, в который устанавливается нужное число дисков.
+<p>Функциональные возможности Symmetrix DMX800, связанные с обеспечением непрерывности ведения бизнеса, были присущи ранее только системам уровня предприятия, устанавливаемым в крупных центрах обработки данных. Теперь такие системы можно экономически эффективно внедрять, например, в региональных офисах компании с распределенной структурой.
+<h4>Symmetrix DMX1000 и DMX2000 </h4>
+<p>Системы Symmetrix DMX1000 и DMX2000 - это высокопроизводительные, полностью интегрированные конфигурации Symmetrix DMX с одним и двумя отсеками соответственно (рис. 3, 4).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2003/EMC/ris3.jpg" alt=Fig.3></td><td><img src="../images/byte_archive/images/No7_2003/EMC/ris4.jpg" alt=Fig.4></td></tr>
+<tr><td valign="bottom">Рис. 3. EMC Symmetrix DMX1000.
+<hr noshade align="left" size="0"></td>
+<td valign="bottom">Рис. 4. EMC Symmetrix DMX2000.
+<hr noshade align="left" size="0"></td>
+</tr>
+</table>
+<p>
+<p>Система DMX1000 вмещает от 48 до 144 дисков (максимальная емкость - 21 Тбайт) и оборудована кэш-памятью емкостью от 4 до 64 Гбайт. В ее конфигурацию может входить от 16 до 48 портов Fibre Channel (2 Гбит/с) для подключения дисков и до 48 каналов ESCON.
+<p>Symmetrix DMX2000 имеет увеличенную емкость кэш-памяти и вдвое большую дисковую емкость, обеспечивает большее число соединений. Она вмещает от 96 до 288 дисков (максимальная емкость - 42 Тбайт) и оборудована кэш-памятью емкостью от 8 до 128 Гбайт. В ее конфигурацию может входить от 16 до 96 портов Fibre Channel (2 Гбит/с) для подключения дисков и до 96 каналов ESCON.
+<p>Среди всех моделей Symmetrix системы DMX1000 и DMX2000 имеют самую высокую плотность монтажа. Так, на площади одной половой плитки размещаются до 144 жестких дисков. Конфигурации этих сетевых систем оптимизированы для консолидации хранимой информации, доступной большому числу серверов, и способны выдерживать огромную нагрузку, связанную с обработкой транзакций.
+<h4>Symmetrix DMX1000-P и DMX2000-P </h4>
+<p>Самым требовательным заказчикам предлагаются системы DMX1000-P и DMX2000-P (как объясняют в компании EMC, индекс &quot;P&quot; означает Performance - производительность). В шкафах эти модели устанавливаются в тех же конфигурациях, что и модели без индекса P, но они обеспечивают более широкую внутреннюю полосу пропускания за счет вдвое большего числа каналов связи с дисками. Если в системах DMX1000 и DMX2000 используются соответственно 16 и 32 канала связи с дисками по интерфейсу Fibre Channel (2 Гбит/с), то в системах DMX1000-P и DMX2000-P таких дисковых каналов соответственно 32 и 64.
+<p>Ради надежности работы новых систем компания EMC применила, в частности, тройное резервирование модулей по принципу голосования простым большинством (Triple Module Redundancy with Majority Voting, TMR-MV), обеспечивающее надлежащую работу ключевых компонентов инфраструктуры. Резервирование TMR-MV устраняет возможность образования &quot;единой точки отказа&quot;, так как в этом случае нужно, чтобы совпадали сигналы на выходе по меньшей мере двух из трех модулей. Если один из модулей выдает выходной сигнал, не совпадающий с сигналами на выходе двух других модулей тройки, то его выход блокируется, а сам этот модуль маркируется как неисправный. Эти три модуля соединяются с дублированными схемами голосования, которые направляют данные в кэш-память. При выходе из строя одной из схем голосования вторая продолжит направлять выходные сигналы.
+<p>Системы хранения Symmetrix DMX1000-P и DMX2000-P обеспечивают очень высокую производительность, необходимую для компьютерных аналитических центров, хранилищ данных и других систем, где происходит интенсивная обработка больших объемов данных на дисках. Обе эти модели оборудованы оптимальным числом контроллеров, каналов и дисков, подключаемых по этим каналам.
+<p>В таблице приведены характеристики разных моделей Symmetrix DMX на момент анонса новой серии.
+<h4>Характеристики систем Symmetrix DMX </h4>
+<table border="1" bordercolor="#000099">
+  <tr> 
+    <td width="201"> </td>
+    <td width="177"><b>Symmetrix DMX800</b></td>
+    <td width="177"><b>Symmetrix DMX1000</b></td>
+    <td width="181"><b>Symmetrix DMX2000</b></td>
+  </tr>
+  <tr> 
+    <td width="201">Компоновка</td>
+    <td width="177">Модульная</td>
+    <td width="177">Интегрированная</td>
+    <td width="181">Интегрированная</td>
+  </tr>
+  <tr> 
+    <td width="201">Максимальная емкость, Тбайт</td>
+    <td width="177">8,76 (диски по 73 Гбайт)<br>
+      17,5 (диски по 146 Гбайт)</td>
+    <td width="177">10,5 (диски по 73 Гбайт)<br>
+      21,0 (диски по 146 Гбайт)</td>
+    <td width="181">21,0 (диски по 73 Гбайт)<br>
+      42,0 (диски по 146 Гбайт)</td>
+  </tr>
+  <tr> 
+    <td width="201">Интерфейсы (на момент начала поставок):</td>
+    <td width="177"> </td>
+    <td width="177"> </td>
+    <td width="181"> </td>
+  </tr>
+  <tr> 
+    <td width="201">Контроллеры Fibre Channel</td>
+    <td width="177">16 портов 2 Гбит/с (фиксированная конфигурация)</td>
+    <td width="177">16-48 портов 2 Гбит/с</td>
+    <td width="181">16-96 портов 2 Гбит/с</td>
+  </tr>
+  <tr> 
+    <td width="201">ESCON</td>
+    <td width="177">-</td>
+    <td width="177">16-48 портов </td>
+    <td width="181">16-96 портов </td>
+  </tr>
+  <tr> 
+    <td width="201">Максимальное число дисков</td>
+    <td width="177">120</td>
+    <td width="177">144</td>
+    <td width="181">288</td>
+  </tr>
+  <tr> 
+    <td width="201">Число контроллеров кэш-памяти</td>
+    <td width="177">2 (фиксированная конфигурация)</td>
+    <td width="177">2-4</td>
+    <td width="181">4-8</td>
+  </tr>
+  <tr> 
+    <td width="201">Число дисковых резервированных каналов (петли Fibre Channel)</td>
+    <td width="177">8 </td>
+    <td width="177">8-16</td>
+    <td width="181">16-32</td>
+  </tr>
+  <tr> 
+    <td width="201">Объем кэш-памяти, Гбайт</td>
+    <td width="177">4-32 </td>
+    <td width="177">4-64</td>
+    <td width="181">4-128</td>
+  </tr>
+</table>
+<p>В настоящее время в системе Symmetrix DMX каждый контроллер ввода-вывода использует 
+  восемь выделенных каналов матрицы, и это число можно удвоить, не меняя окружающую 
+  архитектуру. Емкость кэш-памяти также можно увеличить в четыре раза, доведя 
+  до 512 Гбайт (это вчетверо превышает нынешнюю максимальную емкость кэш-памяти 
+  модели DMX2000). Наконец, в архитектуре заложена возможность увеличения числа 
+  дисков, предел для которого пока установлен в 288 штук. 
+<p>Специалисты EMC утверждают, что технология Symmetrix DMX - это новый шаг в развитии хранения данных, а не просто очередная версия Symmetrix. В таком случае руководителям ИТ-служб, внедряющим консолидацию систем хранения и более надежный план восстановления после аварий и непрерывности бизнеса, реализующим управление с учетом роста в краткосрочной и долговременной перспективе, следует обратить внимание на эту технологию, как на ее текущую реализацию, так и на развитие в будущем.
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8545.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Дисковые массивы EMC Symmetrix DMX
+</a><br><a href="detail.php@ID=8545.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Анатолий Журкин 
+Многие руководители предприятий до сих пор недооценивают сложность эффективной консолидации. Ресурсы, необходимые серверам с учетом&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8545.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8545&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='05b996efcd8d10c665f5dfcb83c5f50a'><img src='../bitrix/tools/captcha.php@captcha_code=05b996efcd8d10c665f5dfcb83c5f50a' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

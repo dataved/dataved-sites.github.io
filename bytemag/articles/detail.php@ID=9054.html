@@ -1,0 +1,460 @@
+<HTML>
+<HEAD>
+<title>Microsoft ISA Server 2004 — новое средство защиты
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Андрей Колесов * Статья подготовлена по материалам корпорации Microsoft. В конце прошедшего лета корпорация Microsoft (http://www.microsoft.com) выпустила ISA (Internet Security and Acceleration) Server 2004 — серверное решение, объединяющее" />
+<meta name="description" content="Андрей Колесов * Статья подготовлена по материалам корпорации Microsoft. В конце прошедшего лета корпорация Microsoft (http://www.microsoft.com) выпустила ISA (Internet Security and Acceleration) Server 2004 — серверное решение, объединяющее" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398078859','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm9054' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=9054&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm9054"].SHOW_IMAGE.value="N"; document.forms["PrintForm9054"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm9054"].SHOW_IMAGE.value="Y"; document.forms["PrintForm9054"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(9054);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=9054.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=9054.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(9054);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6258.html'>Безопасность</a><br /></p><a href='../numbers/index.php@ID=11538.html'>№12 (76), декабрь 2004</a><h1>Microsoft ISA Server 2004 — новое средство защиты
+</h1>15.12.2004<p></p><DIV class='article-text'><p><i>Андрей Колесов</i>
+<p><hr width="40%" align="left" noshade>* Статья подготовлена по материалам корпорации Microsoft.
+<p>В конце прошедшего лета корпорация Microsoft (<a href="http://www.microsoft.com">http://www.microsoft.com</a>) выпустила ISA (Internet Security and Acceleration) Server 2004 — серверное решение, объединяющее усовершенствованный трехуровневый межсетевой экран уровня приложений, средства организации и управления виртуальными частными сетями и службу кэширования Web-данных. Продукт предназначен для защиты информационных систем организаций любого размера — от малых предприятий до крупных корпораций — от внутренних и внешних атак и для оптимизации информационного трафика при работе с данными.
+<p>Первый продукт Microsoft, обеспечивающий безопасность корпоративных систем при взаимодействии с внешним миром, — Proxy Server (кодовое название Catapult) — появился в середине 1996 г. Спустя полтора года вышла его вторая версия, в которой была существенно повышена производительность межсетевого экрана, а также заметно расширены возможности кэширования. Следующий вариант системы разрабатывался более трех лет и был представлен на рынке в начале 2001 г. под новым названием Internet Security and Acceleration Server 2000, что должно было отразить качественные изменения в продукте (как по функционалу, так и по масштабируемости решения).
+<p>Именно с появлением ISA 2000 аналитики стали регулярно включать продукт Microsoft в свои обзоры корпоративных брандмауэров, хотя в число лидеров он чаще всего не входил. Судя по всему, выпуск ISA 2004 означает для Microsoft новый этап развития средств обеспечения информационной безопасности, и с его помощью корпорация намерена улучшить свои позиции в данном сегменте рынка.
+<p>В Microsoft ISA 2004 появилось много новшеств, которые мы рассмотрим ниже. А сейчас отметим лишь два наиболее существенных момента. Во-первых, в ISA 2004 полностью переработана внутренняя архитектура, что позволило не просто повысить производительность, но и обеспечить поддержку нескольких сетей одновременно и виртуальных частных сетей (Virtual Private Network, VPN), что позволяет применять сервер в качестве межсетевого экрана на периметре корпоративной сети или межсетевого экрана подразделения без изменения архитектуры сети. Во-вторых, реализован новый интерфейс пользователя, который за счет расширенных средств администрирования обеспечивает единое управление сетью VPN и межсетевым экраном с помощью удобного средства редактирования политик.
+<p>Ниже мы рассмотрим основные функции ISA 2004 с точки зрения его применения: межсетевой экран, Web-кэширование, инструменты управления и средства расширения. Кроме того, в таблице приведен краткий перечень технологических функций сервера с указанием степени их новизны.
+<p>
+<h4>Основные функции Microsoft ISA Server 2004 (выпуск Standard Edition)</h4>
+<table border="1">
+<tr><td colspan=2><b>Возможности</b></td>	<td><b>Описание</b></td></tr>
+<tr><td colspan=3><b>Поддержка нескольких сетей</b></td></tr>
+<tr><td>Н</td>	<td>Конфигурация с поддержкой нескольких сетей</td>	<td>Проверка потока данных между определенными сетями. Можно настроить одну или несколько сетей, определить взаимоотношения между ними и политики доступа для каждой сети </td></tr>
+<tr><td>Н</td>	<td>Особые политики для каждой из сетей</td>	<td>Помогает защитить сеть от внутренних и внешних угроз, ограничивая обмен данными между клиентами — даже в пределах одной организации</td></tr>
+<tr><td>Н</td>	<td>Динамическая проверка всего потока данных</td>	<td>Проверка всех данных, проходящих через межсетевой экран, независимо от их источника и получателя, в контексте их протокола и состояния подключения</td></tr>
+<tr><td>Н</td>	<td>Маршрутизация и преобразование сетевых адресов (NAT)</td>	<td>Определяет отношения между сетями в зависимости от разрешенного типа доступа и обмена данными между ними</td></tr>
+<tr><td>Н</td>	<td>Сетевые шаблоны</td>	<td>Включает пять сетевых шаблонов, соответствующих общим сетевым топологиям. В случае использования одного из шаблонов для настройки политики межсетевого экрана ISA Server автоматически создаст необходимые правила и сетевые отношения</td></tr>
+<tr><td colspan=3><b>Виртуальные частные сети</b></td></tr>
+<tr><td>У</td>	<td>Управление VPN</td>	<td>Встроенная поддержка возможностей VPN на основе службы маршрутизации и удаленного доступа Windows Server 2003. ISA Server 2004 может назначать IP-адреса подключающимся к сети клиентам VPN и применять политику ко всему удаленному потоку данных</td></tr>
+<tr><td>Н</td>	<td>Политики безопасности и динамическая проверка для VPN</td>	<td>Позволяет настраивать клиенты VPN в качестве отдельной сети и создавать особые политики доступа для каждого клиента VPN. Механизм обработки правил использует политику доступа для проверки запросов от клиентов VPN, динамической проверки этих запросов и динамического создания и разрыва соединений между клиентами VPN и сети</td></tr>
+<tr><td>Н</td>	<td>Интеграция с решениями VPN сторонних производителей</td>	<td>Поддержка протокола IPSec означает, что ISA Server 2004 может быть встроен в среды с инфраструктурами VPN от других производителей, включая те, где используются конфигурации с туннельным режимом IPSec для подключений типа «узел—узел»</td></tr>
+<tr><td colspan=3><b>Инфраструктура безопасности</b></td></tr>
+<tr><td>У</td>	<td>Фильтрация приложений</td>	<td>Разнообразные новые возможности фильтрации приложений и сценариев публикации для серверов. Одна из новых возможностей, усовершенствованная фильтрация HTTP, специально предназначена для сервера Exchange Server, служб Outlook Web Access и Internet Information Services</td></tr>
+<tr><td>Н</td>	<td>Расширенная поддержка протоколов</td>	<td>Можно использовать десятки стандартных протоколов для интеграции ISA Server 2004 с основными Интернет-приложениями. ISA Server 2004 позволяет управлять доступом к любому протоколу, включая протоколы IP-уровня и поток данных IPSec</td></tr>
+<tr><td>У</td>	<td>Механизмы проверки подлинности</td>	<td>С помощью стандартных типов проверки подлинности или пространств имен Windows, RADIUS или RSA SecurID можно устанавливать подлинность пользователей, применяя правила к пользователям или группам пользователей в любом пространстве имен</td></tr>
+<tr><td>У</td>	<td>Упрощенная модель политик</td>	<td>ISA Server 2004 теперь использует единый механизм обработки упорядоченных правил, обеспечивающий подробные механизмы для управления потоком данных и применения политик. С помощью механизма обработки правил администраторы могут управлять доступом к сетям и Интернету на основе имен пользователей, групп, приложений, адресов, расписания и типа передаваемых данных</td></tr>
+<tr><td> </td>	<td>Динамическая фильтрация пакетов</td>	<td>ISA Server 2004 сокращает риск внешних атак, открывая порты только в тех случаях, когда это необходимо</td></tr>
+<tr><td>У</td>	<td>Интеллектуальные фильтры приложений</td>	<td>Информационные фильтры, блокирующие только определенные типы данных, позволяют контролировать поток данных отдельных приложений, например, мультимедиа-потоки и электронную почту</td></tr>
+<tr><td>У</td>	<td>Усовершенствованный клиентский межсетевой экран</td>	<td>Клиентская программа межсетевого экрана позволяет интегрировать проверку подлинности, автоматическую настройку Web-прокси и безопасность на основе ролей с помощью групповых политик. К ключевым усовершенствованиям относятся улучшенное взаимодействие сложных протоколов, поддержка многопользовательских учетных записей и обмен информацией с применением шифрования</td></tr>
+<tr><td> </td>	<td>Прозрачность для всех клиентов</td>	<td>ISA Server совместим с клиентами и серверами приложений на всех платформах, включая клиентов NAT и SecureNAT, причем не требуется никакого специального клиентского ПО</td></tr>
+<tr><td>У</td>	<td>Публикация</td>	<td>ISA Server 2004 позволяет размещать серверы за межсетевым экраном как в корпоративной, так и во внешней сети, и безопасно публиковать службы в Интернете</td></tr>
+<tr><td> </td>	<td>Преобразование ссылок</td>	<td>Функция преобразования служит для преобразования внутренних ссылок в ссылки, доступные извне</td></tr>
+<tr><td colspan=3><b>Кэш</b></td></tr>
+<tr><td>У</td>	<td>Правила кэширования</td>	<td>Централизованный механизм для установления правил кэширования позволяет настраивать правила извлечения и подачи объектов, сохраняемых в кэше</td></tr>
+<tr><td> </td>	<td>Эффективное распределение содержимого</td>	<td>Можно сократить время отклика и затраты на обеспечение пропускной способности, распределяя данные Web-сайтов и бизнес-приложений между серверами и располагая кэш с Web-контентом ближе к пользователям</td></tr>
+<tr><td> </td>	<td>Высокопроизводительный Web-кэш</td>	<td>Web-кэширование обеспечивает более высокую скорость доступа пользователей к контенту и снижает нагрузку на сеть</td></tr>
+<tr><td>  </td>	<td>Интеллектуальное кэширование</td>	<td>Активное кэширование постоянно используемых объектов гарантирует их регулярное обновление для каждого пользователя. Существует возможность предварительной загрузки в кэш целых Web-сайтов по определенному расписанию</td></tr>
+<tr><td colspan=3><b>Управление</b></td></tr>
+<tr><td>У</td>	<td>Управление</td>	<td>Новые функции управления упрощают организацию безопасности сетей. Появились также новые элементы интерфейса пользователя, например, панели задач, панели справочной информации и новый вариант редактора политик межсетевого экрана с возможностью перетаскивания объектов</td></tr>
+<tr><td>Н</td>	<td>Экспорт и импорт</td>	<td>Возможность экспорта и импорта данных конфигурации между компьютерами с ISA Server в формате XML позволяет легко выполнить репликацию конфигурации межсетевого экрана в случае развертывания нескольких узлов</td></tr>
+<tr><td>Н</td>	<td>Инструментальная панель</td>	<td>Единое место для представления всей сводной ключевой информации результатов наблюдения. При наличии проблем легко перейти к средствам просмотра более подробной информации результатов наблюдения</td></tr>
+<tr><td>Н</td>	<td>Средство просмотра журнала</td>	<td>Средство просмотра журнала позволяет отображать журналы межсетевого экрана в реальном времени — в оперативном режиме поступления информации или в режиме просмотра истории. С помощью фильтров можно найти определенные записи в полях журнала</td></tr>
+<tr><td>У</td>	<td>Встроенные отчеты</td>	<td>Возможность создания по расписанию стандартных отчетов об использовании сети и приложений, моделях передачи данных в сети и безопасности</td></tr>
+<tr><td colspan=3>Примечание: Н — новинка; У — улучшено</td></tr>
+</table>
+<h3>Межсетевой экран предприятия</h3>
+<p><b>Многоуровневый межсетевой экран.</b> Для достижения максимального уровня безопасности сетей предприятий используется фильтрация пакетов, фильтрация каналов и фильтрация потока данных приложений.
+<p>Динамическая фильтрация пакетов выявляет пакеты, которые будут пропущены в защищенные области сети, а также к прокси-службам прикладного уровня. При этом по мере необходимости автоматически выполняется открытие (а по завершении сеанса связи — закрытие) соответствующих портов.
+<p>Фильтрация каналов обеспечивает прозрачный для приложений шлюз для межплатформенного доступа к telnet, RealAudio, Windows Media, IRC (Internet Relay Chat), а также ко  многим другим протоколам и службам Интернета. В отличие от других межсетевых экранов, фильтрация каналов в ISA Server 2004 работает совместно с динамической фильтрацией пакетов, что упрощает ее использование и повышает общую безопасность работы сети.
+<p>Фильтрация и динамическая проверка данных приложений способна распознавать команды протоколов (например, НТТР, FTP и Gopher), поступающие от клиентских компьютеров. Сервер ISA Server имперсонирует во внутренней сети клиентские компьютеры, скрывая от внешней среды внутреннюю топологию сети и IP-адреса предприятия.
+<p><b>Динамическая проверка данных приложений.</b> ISA Server 2004 динамически проводит интеллектуальную проверку на уровне приложений потока данных, проходящего через межсетевой экран. Во избежание возможных разрывов подключения или нарушения системы безопасности это делается с учетом контекста данных приложения и состояния подключения.
+<p><b>Интеллектуальная фильтрация данных приложений.</b> Помимо базовой фильтрации данных, сервер ISA Server 2004 контролирует поток данных приложений, распознавая в нем данные и команды при помощи специальных фильтров. Средства интеллектуальной фильтрации позволяют на основе анализа содержания потока данных пропускать, блокировать, перенаправлять или изменять данные протоколов HTTP, FTP, SMTP, POP3, DNS, данных конференций по протоколу H.323, потокового мультимедиа, удаленного вызова процедур и VPN.
+<p><b>Безопасная публикация.</b> Механизм безопасной публикации серверов позволяет защитить от внешних атак в Интернете Web-серверы, почтовые серверы и приложения электронной торговли. ISA Server способен выдавать себя за опубликованный сервер, реализуя дополнительный уровень защиты. Для защиты внутренних серверов в правилах Web-публикации можно определить доступные компьютеры, а правила публикации средств управления сервером защищают внутренние серверы от незаконного доступа со стороны внешних пользователей. Кроме того, опубликованные серверы защищены от атак извне с помощью интеллектуальной фильтрации данных приложений.
+<p><b>Обнаружение вторжений.</b> Интегрированный компонент обнаружения вторжений (разработанный на основе технологии компании Internet Security Systems) уведомляет пользователя и предпринимает необходимые действия в случае обнаружения попытки незаконного проникновения в сеть (например, сканирования портов, использования средств WinNuke или Ping of Death).
+<p><b>Встроенная поддержка VPN.</b> Для предоставления стандартного безопасного удаленного доступа используются встроенные службы виртуальных частных сетей Windows 2000 и Windows Server 2003. ISA Server 2004 поддерживает безопасные VPN-подключения филиалов или удаленных пользователей к основному офису. Политика межсетевого экрана применяется к VPN-подключениям и позволяет точно контролировать те протоколы и ресурсы, к которым получают доступ пользователи таких подключений.
+<p><b>Прозрачность межсетевого экрана.</b> Механизм SecureNAT путем замены внутреннего IP-адреса на внешний предоставляет прозрачный доступ к межсетевому экрану и защиту для всех IP-клиентов (независимо от конфигурации клиента и не требуя специального ПО). Сложные фильтры прикладного уровня, которые служат для управления подключением, предоставляют комплексную поддержку клиентам SecureNAT.
+<p><b>Проверка подлинности пользователей.</b> Для клиентов Web-прокси и межсетевого экрана ISA Server 2004 поддерживает аутентификацию Windows (NTLM и Kerberos). Для клиентов Web-прокси поддерживаются клиентские сертификаты, выборочная, базовая, анонимная проверка подлинности, а также проверка подлинности на основе форм. Проверка подлинности пользователей может проводиться по данным локальной базы данных на межсетевом экране, Active Directory или с помощью службы RADIUS.
+<p><b>Мост SSL-SSL.</b> Для серверов, использующих доступ только по зашифрованным и проверенным каналам, ISA Server 2004 поддерживает механизм фильтрации моста SSL-SSL. В отличие от большинства межсетевых экранов, в ISA Server 2004 зашифрованные данные могут быть проверены до попадания на сервер. Межсетевой экран расшифровывает поток SSL, проводит динамическую проверку, а затем повторно шифрует и пересылает данные опубликованному Web-серверу.
+<h3>Сервер Web-кэширования</h3>
+<p><b>Высокопроизводительное Web-кэширование.</b> Повышена производительность Web-кэширования для внутренних клиентов, получающих доступ к серверам Интернета, а также внешних пользователей Интернета, которые подключаются к Web-серверу предприятия. Для достижения максимальной производительности ISA Server 2004 использует быстрое кэширование в оперативной памяти и оптимизированный дисковый кэш.
+<p><b>Интеллектуальное кэширование.</b> Благодаря активному кэшированию часто используемых объектов пользователь получает Web-контент последней версии. ISA Server 2004 автоматически определяет часто используемые Web-сайты, а также необходимую частоту обновления их содержания (на основании продолжительности пребывания объекта в кэше или времени последнего извлечения объекта). В периоды низкого потребления сетевых ресурсов ISA Server 2004 без вмешательства диспетчера сети предварительно загружает Web-контент в кэш. Кроме того, Web-кэш ISA Server 2004 можно использовать для предварительной загрузки автономного контента, которое хранится на компакт- или DVD-дисках.
+<p><b>Кэширование по графику.</b> Существует возможность предварительной загрузки в кэш целых Web-сайтов по определенному графику. За счет этого можно предоставить пользователям на предприятии доступ к контенту на автономных Web-серверах.
+<h3>Управление межсетевым экраном</h3>
+<p><b>Управление доступом с помощью политик.</b> Организация может контролировать входящий и исходящий доступ по пользователям, группам, приложениям, источникам и местам назначения, по изменению контента, а также по расписанию. С помощью мастеров политик межсетевого экрана задаются доступные Web-сайты и контент, доступность определенного протокола для установки входящих и исходящих подключений, а также разрешения на установку подключений между определенными IP-адресами с помощью заданных протоколов и портов.
+<p><b>Упрощенное управление.</b> В ISA Server 2004 конфигурацию межсетевого экрана можно целиком скопировать в файл XML. Затем такой файл переносится на сменный носитель или отправляется в составе безопасного почтового сообщения администратору другого межсетевого экрана, чтобы обеспечить стандартную конфигурацию в рамках всей организации. Кроме того, можно скопировать в файл XML, а затем импортировать и отдельные элементы конфигурации.
+<p><b>Интеграция с Active Directory.</b> Межсетевой экран ISA Server 2004 для проверки подлинности входящих и исходящих подключений использует базу данных пользователей Active Directory.
+<p><b>Графические панели задач и мастера конфигурации.</b> Эти средства упрощают навигацию и настройку стандартных задач. Так, с помощью мастера можно опубликовать сервер Exchange в сети под защитой компьютера ISA Server 2004, настроить межсетевой экран на выполнение функций сервера или шлюза VPN или создать новое правило межсетевого экрана (рис. 1).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/ms_isa/ris1.jpg" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Рис. 1. Управление конфигурацией сервера.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><b>Удаленное управление.</b> Управлять работой ISA Server 2004 можно в удаленном режиме с помощью оснастки MMC, служб терминалов Windows 2000 и удаленного рабочего стола Windows Server 2003. Для удаленного управления межсетевым экраном на компьютере Windows Server 2003 может использоваться безопасное туннелирование SSL/RDP. Кроме того, удаленное управление службами ISA Server 2004 возможно с помощью сценариев, запускаемых из командной строки.
+<p><b>Журналы, отчеты и оповещения.</b> В стандартных форматах (текстовые файлы с символами-разделителями, базы данных SQL и MSDE) создаются подробные журналы безопасности и доступа. Кроме того, есть возможность создавать по определенному графику стандартные отчеты об использовании сети и приложений, моделях потока сетевых данных и безопасности с автоматической публикацией в локальной папке или на удаленном общем ресурсе. Оповещения на основе событий служат для отправки сообщений администратору, запуска и остановки служб межсетевого экрана, а также автоматического выполнения действий на основании заданных критериев.
+<p><b>Управление на уровне пользователя.</b> Существует возможность ограничить доступ клиентов межсетевого экрана и Web-прокси ISA Server 2004 для каждого отдельного пользователя (а не просто по IP-адресам), что позволяет более точно контролировать входящий и исходящий доступ по всем протоколам.
+<h3>Расширяемая платформа</h3>
+<p>ISA Server 2004 поддерживает многие протоколы Интернета, в том числе HTTP/SSL, FTP, RDP, telnet, RealAudio и RealVideo, IRC, H.323, потоковое мультимедиа Windows, почтовые и новостные протоколы.
+<p>Независимые разработчики предлагают программы (например, антивирусное ПО, средства управления, фильтрации содержания и составления отчетов), предназначенные для использования с ISA Server, с учетом особенностей продукта. Так, существуют фильтры сторонних разработчиков, с помощью которых можно предотвратить загрузку в защищенную сеть предприятия последних версий вирусов, сценариев Java и элементов управления ActiveX.
+<p>В состав ISA Server 2004 включены подробные файлы справки Software Development Kit по разработке средств на основе функций межсетевого экрана, кэширования и управления продуктом, а также полная документация API и примеры создания дополнительных Web-фильтров и фильтров приложений, оснасток ММС, средств составления отчетов, сценариев, оповещений и т. д.
+<h3>Сценарии применения Microsoft ISA Server 2004</h3>
+<p>В ISA Server 2004 реализована функциональность, способная обеспечить безопасность, производительность, управляемость и экономическую эффективность работы сетей в организациях любого размера. Ниже мы рассмотрим несколько основных сценариев развертывания сервера.
+<p><b>Предоставление доступа к электронной почте сотрудникам за пределами сети.</b> Интерфейс ISA Server 2004 позволяет быстро установить защиту сервера Exchange в Интернете (рис. 2). Чтобы ускорить развертывание и снизить риск создания ошибочной конфигурации, выполнение стандартных задач автоматизируется с помощью мастера Web-публикации почтового сервера.
+<p>Кроме того, ISA Server 2004 предотвращает возможные атаки на почтовые серверы. Команды, которые направлены на использование возможных уязвимостей или раскрытие избыточной информации, блокируются. В системе предусмотрена возможность предварительной проверки подлинности пользователей, что позволяет блокировать потенциально опасные анонимные запросы до их попадания на сервер Exchange.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/ms_isa/ris2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Предоставление доступа к электронной почте сотрудникам за пределами сети.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><b>Предоставление данных корпоративной интрасети через Интернет.</b> В ISA Server 2004 реализован безопасный метод доступа к приложениям внутренней корпоративной сети из Интернета (рис. 3) путем Web-публикации и публикации сервера. Интегрированные мастера автоматизируют выполнение стандартных задач и снижают риск создания ошибочной конфигурации.
+<p>Средства преобразования ссылок осуществляют интеллектуальное преобразование внутренних ссылок в адреса внешних Web-сайтов. Благодаря усовершенствованным защитным функциям ISA Server 2004 может контролировать допустимость содержания потока данных и принудительно подставлять разрешенные URL-адреса.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/ms_isa/ris3.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Предоставление данных корпоративной интрасети через Интернет.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><b>Предоставление партнерам доступа к данным внутри корпоративной сети.</b> С помощью интегрированного компонента VPN пользователи сервера ISA Server 2004 могут подключать партнеров к своей сети (рис. 4), одновременно ограничивая доступ к определенным серверам и приложениям. Для обеспечения конфиденциальности и целостности данных ISA Server 2004 шифрует весь поток данных между внутренними сетями внешних организаций и корпоративной сетью предприятия. Серверы конечных точек VPN-подключения проверяют подлинность друг друга, после чего ISA Server 2004 применяет политики доступа и маршрутизации, ограничивающие доступ партнера к корпоративной сети. Кроме того, пользователи ISA Server 2004 для защиты корпоративной сети от возможных атак на прикладном уровне могут назначать строгие правила фильтрации данных приложений.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/ms_isa/ris4.gif" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Предоставление партнерам доступа к данным внутри корпоративной сети.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><b>Предоставление удаленного доступа сотрудникам с одновременной защитой корпоративной сети от возможных атак.</b> С помощью усовершенствованной фильтрации на уровне приложений ISA Server 2004 защищает сеть от неконтролируемых удаленных компьютеров, устанавливающих VPN-подключение к корпоративной сети (рис. 5). Кроме того, в процессе проверки и анализа потока данных блокируются вирусы и &quot;черви&quot;. Пользователям и группам VPN могут быть назначены гибкие сетевые политики, предоставляющие доступ только к определенным серверам и приложениям. Наконец, ISA Server 2004 может автоматически блокировать доступ к сети с клиентских компьютеров, не соответствующих принятым на предприятии политикам в отношении установленных пакетов обновления, средств антивирусной защиты и других критериев.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/ms_isa/ris5.gif" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Предоставление удаленного доступа для сотрудников с одновременной защитой корпоративной сети от возможных атак.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><b>Взаимодействие филиалов с основным офисом через Интернет.</b> Входящий в состав сервера ISA Server 2004 VPN-шлюз позволяет администратору объединять различные сети, например, основного офиса и филиалов (рис. 6) с помощью VPN-подключения «узел в узел». Функция маршрутизатора VPN туннельного режима IPSec используется для управления доступом пользователей, групп, узлов, компьютеров, протоколов и данных уровня приложений при подключениях «узел в узел». Пользователи имеют доступ только к разрешенному содержанию удаленной сети, а пользователи удаленной сети имеют доступ только к явно предоставленным ресурсам локальной сети.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/ms_isa/ris6.gif" alt=Fig.6></td>
+<td valign="bottom">Рис. 6. Взаимодействие филиалов с основным офисом через Интернет.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><b>Управление доступом к Интернету и защита клиентов от возможных атак из Интернета.</b> Для управления доступом к Интернету (рис. 7) служат гибкие политики межсетевого экрана, которые позволяют блокировать Web-сайты и фильтровать контент в целях повышения производительности труда пользователей и отсечения нежелательного содержания. За счет интеграции с Active Directory можно создавать элементы управления доступом для разных организационных ролей и должностных уровней.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/ms_isa/ris7.gif" alt=Fig.7></td>
+<td valign="bottom">Рис. 7. Управление доступом к Интернету и защита клиентов от возможных атак.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>С помощью усовершенствованной фильтрации данных протокола HTTP можно блокировать использование встроенных приложений, например, голосовых, видео и других одноранговых служб или средств обмена мгновенными сообщениями. Реализованные в сервере ISA Server 2004 средства фильтрации данных приложений позволяют защитить рабочие компьютеры и серверы от возможных атак, повышая надежность сетевой среды предприятия.
+<p>Кроме того, предотвращению возможных атак способствует фильтрация потока данных: внутренние клиенты недоступны за пределами сети, ответный входящий поток данных подвергается проверке, и допускается подключение надстроек сторонних производителей, обеспечивающих защиту от вирусов.
+<p><b>Быстрый доступ к часто используемому Web-контенту.</b> Средства предварительной загрузки позволяют администратору вручную указать те Web-сайты, к которым обращаются наиболее часто, с тем чтобы предварительно загрузить их контент, а с помощью активного кэширования сервер ISA Server 2004 распознает закономерности в Web-потоке данных и автоматически загружает контент часто запрашиваемых Web-сайтов (рис. 8). В случае необходимости ISA Server 2004 направляет специальные запросы внешним серверам кэширования. Кроме того, встроенная проверка подлинности позволяет проверять исходящие запросы на соответствие заданным условиям.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12_2004/ms_isa/ris8.gif" alt=Fig.8></td>
+<td valign="bottom">Рис. 8. Быстрый доступ к часто используемому Web-контенту.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>***</h4>
+<p>Сервер ISA Server 2004, компонент системы Microsoft Windows Server System — надежное, простое и экономически выгодное решение, помогающее ИТ-специалистам бороться с возникающими угрозами безопасности. В настоящее время ISA 2004 представлен выпуском Standard Edition. В конце текущего года ожидается выход варианта Enterprise Edition, в котором будут расширены возможности управления распределенным комплексом серверов для создания маштабируемых решений корпоративного уровня.
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</A></b></li><li><b><A href='detail.php@ID=24095.html'>Сертифицированные системы обнаружения вторжений </A></b></li><li><b><A href='detail.php@ID=22469.html'>Новые технологии в Security operation center</A></b></li><li><b><A href='detail.php@ID=20887.html'>Агрессивность и мобильность: какие угрозы нас ждут в 2013-м</A></b></li><li><b><A href='detail.php@ID=20621.html'>Карты с дисплеем как новое средство защиты онлайн-банкинга</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=9054.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Microsoft ISA Server 2004 — новое средство защиты
+</a><br><a href="detail.php@ID=9054.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Андрей Колесов
+* Статья подготовлена по материалам корпорации Microsoft.
+В конце прошедшего лета корпорация Microsoft (http://www.microsoft.com&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=9054.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=9054&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='06aa8bb83ed1d08d497bad78884ca3e3'><img src='../bitrix/tools/captcha.php@captcha_code=06aa8bb83ed1d08d497bad78884ca3e3' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

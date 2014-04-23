@@ -1,0 +1,481 @@
+<HTML>
+<HEAD>
+<title>Развитие платформы Itanium</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Развитие семейства процессоров Intel Itanium 2 и преимущества систем на этой платформе. В конце 1990-х гг. на рынке корпоративных серверов повсеместно доминировали специализированные фирменные архитектуры. У каждого производителя была своя" />
+<meta name="description" content="Развитие семейства процессоров Intel Itanium 2 и преимущества систем на этой платформе. В конце 1990-х гг. на рынке корпоративных серверов повсеместно доминировали специализированные фирменные архитектуры. У каждого производителя была своя" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082154','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm11702' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=11702&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm11702"].SHOW_IMAGE.value="N"; document.forms["PrintForm11702"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm11702"].SHOW_IMAGE.value="Y"; document.forms["PrintForm11702"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(11702);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=11702.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=11702.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(11702);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6263.html'>Серверы</a>, <a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a><br /></p><a href='../numbers/index.php@ID=11623.html'>№10 (108), октябрь 2007</a><h1>Развитие платформы Itanium</h1>Автор: Дмитрий Рожков<br />17.10.2007<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=11702&amp;PICTURE_ID=11701.html'><IMG src='../upload/iblock/049/HP_int-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Семейство серверов HP Integrity</b></TD></TR></TABLE><DIV class='article-text'>
+<p><em>Развитие семейства процессоров Intel Itanium 2 и преимущества систем на этой платформе.</em> </p>
+ 
+<p>В конце 1990-х гг. на рынке корпоративных серверов повсеместно доминировали специализированные фирменные архитектуры. У каждого производителя была своя предпочтительная RISC- или мэйнфрейм-архитектура с уникальной ОС, которая зачастую требовала тонкой настройки приложений. В результате заказчики оказывались привязаны к дорогостоящим фирменным решениям. В 2001 г. корпорация Intel (<a href="http://www.intel.com">www.intel.com</a>) представила свой процессор Intel Itanium и архитектуру EPIC (Explicitly Parallel Instruction Code, код с явным параллелизмом инструкций). Эта архитектура, в основе которой лежит модель открытых вычислений на базе стандартов, привнесла в сегмент вычислений для критически важных задач новый уровень гибкости и свободы выбора платформы. </p>
+ 
+<p>За прошедшее с тех пор время было представлено уже четыре поколения процессоров семейства Intel Itanium. В корпорации полагают, что процессоры данного семейства обеспечивают наилучшие возможности при выполнении критически важных рабочих нагрузок с интенсивным обменом данными. Так, современный двухъядерный процессор Intel Itanium 2 (Montecito), выпущенный в июле 2006 г., превосходит предыдущее поколение процессоров Itanium вдвое по производительности и до 2,5 раз по эффективности энергопотребления, а также продолжает существенно опережать конкурентов по темпам роста доли в рыночном сегменте RISC-процессоров. </p>
+ <blockquote> 
+  <h3>Новости экосистемы Itanium </h3>
+ 
+  <p>Совокупный доход производителей от продаж систем на базе процессоров семейства Intel Itanium к настоящему времени составил 8,7 млрд долл. </p>
+ 
+  <p>В прошлом году доход от продаж систем на платформе Intel Itanium достиг 3,4 млрд долл., что на 40% больше, чем за предыдущий год. </p>
+ 
+  <p>Основные недавние достижения в области ПО: поддержка Sun Java, Oracle Database 10g, IBM WebSphere и BEA JRocket 6. </p>
+ </blockquote> 
+<p>Экосистема активно портирует многие приложения для разнообразных ОС на платформу Intel Itanium. По данным организации Itanium Solutions Alliance, в настоящее время на нее перенесено более 12 тыс. приложений (на сентябрь 2006 г. &mdash; 10 тыс.). Платформа Intel Itanium сегодня поддерживает все ОС, используемые сообществом: системы для мэйнфреймов, Unix, Solaris, Windows и Linux. Согласно ежеквартальному отчету IDC Worldwide Quarterly Server Tracker, основные мировые OEM-производители, в том числе некоторые ведущие производители мэйнфреймов, предлагают десятки моделей систем в различных форм-факторах на базе процессоров Intel Itanium, поэтому семейство этих серверов, предназначенных для выполнения критически важных задач, растет на рынке наиболее быстрыми темпами. Системам на базе процессоров Itanium принадлежит несколько мировых рекордов производительности, включая наилучший результат в тесте TPC-C. Так, сервер HP Integrity Superdome на базе двухъядерных процессоров Intel Itanium 2 недавно установил новый мировой рекорд в этом тесте, показав результат 4092799 транзакций в минуту (tpmC) при уровне затрат 2,93 долл./tpmC. </p>
+ 
+<h2>Производительность, масштабируемость и готовность </h2>
+ 
+<p>Сегодняшние условия ведения бизнеса требуют надежной вычислительной инфраструктуры с возможностью быстрого масштабирования для внедрения новых технологий и соответствия растущим потребностям компаний. Системы на базе двухъядерных процессоров Intel Itanium 2 предназначены для удовлетворения этих запросов. Они обладают такими уровнями надежности, производительности и масштабируемости, которые требуются как для работы бизнес-приложений, так и для технических вычислительных задач. Эксперты говорят о том, что новые двухъядерные процессоры Intel Itanium 2 существенно улучшают соотношение цена/производительность по сравнению с традиционными RISC-системами и мэйнфреймами. </p>
+ 
+<p>Двухъядерные процессоры Intel Itanium 2 &mdash; это важный этап в эволюции семейства высокопроизводительных серверных процессоров Intel. Напомним, что Intel Itanium 2 содержит более 1,7 млрд транзисторов; благодаря наличию двух вычислительных ядер эти процессоры обеспечивают двукратную производительность по сравнению с процессорами Itanium предыдущего поколения, и при этом их среднее энергопотребление снизилось со 130 до 100 Вт. В результате производительность в расчете на ватт мощности выросла в 2,5 раза, что сокращает расходы на электроэнергию и охлаждение. Кроме того, в системах на базе двухъядерных процессоров Intel Itanium 2 реализована аппаратная поддержка виртуализации и новые функции обеспечения надежности, готовности и удобства обслуживания, которые повышают степень управляемости систем и увеличивают время их безотказной работы. </p>
+ 
+<p>Если ИТ-подразделения озабочены высокой стоимостью и ограничениями RISC-архитектур, системы на основе двухъядерных процессоров Intel Itanium 2 не только обеспечат выполнение жизненно важных корпоративных приложений на базе отраслевых стандартов, но и предоставят широкую свободу выбора, а перспективный план выпуска новых моделей процессоров гарантирует долгосрочную поддержку. </p>
+ <blockquote> 
+  <h3>Некоторые практические результаты </h3>
+ 
+  <p>Двухъядерные процессоры Intel Itanium 2, увеличивая скорость работы, приносят реальные практические результаты. Так, в октябре прошлого года подразделение Worldwide Licensing and Pricing корпорации Microsoft перевело свое хранилище данных о ценообразовании и продажах массовых лицензий, организованное в виде 11-мерного куба данных, на предварительную версию двухъядерного процессора Intel Itanium 2. В результате удалось ускорить выполнение важнейших запросов на 800%. Руководство подразделения заявило, что такое увеличение производительности позволило им лучше представлять себе типы конкуренции, добиться максимальной прибыли, а также обеспечить высокое качество обслуживания клиентов и дистрибьюторов. </p>
+ 
+  <p>При проектировании гоночных автомобилей в компании Toyota Motorsport тестирование и доработка моделей выполняются виртуально с использованием ПО для моделирования ресурсоемких задач вычислительной гидродинамики (Computational Fluid Dynamics, CFD). Это позволяет предсказать поведение гоночных автомобилей в реальных условиях и усовершенствовать их конструкцию. Сотрудники компании были поражены результатами, которые продемонстрировал двухъядерный процессор с архитектурой Intel Itanium 2 по сравнению с одноядерным процессором того же семейства. В условиях, когда весь стек ПО не был оптимизирован, эталонный тест производительности показал, что скорость расчета CFD увеличилась на 20%. Это дает огромное преимущество во время гоночного сезона, когда у конструкторов есть всего две недели между гонками, чтобы успеть внести в конструкцию болида &laquo;Формулы 1&raquo; команды Toyota необходимые изменения. </p>
+ </blockquote> 
+<h3>Преимущества двухъядерной архитектуры </h3>
+ 
+<p>В двухъядерном процессоре Intel Itanium 2 реализован новый подход к выполнению жизненно важных вычислительных задач уровня предприятия, которые традиционно решались на дорогостоящих мэйнфреймах и RISC-серверах. Высокая производительность этого процессора обеспечивается двумя полноценными вычислительными ядрами, каждое из которых имеет независимый интерфейс с системной шиной и собственную кэш-память. Таким образом, ОС получает больше ресурсов для обслуживания нескольких задач с высокой интенсивностью вычислений. Двухъядерные процессоры Intel Itanium 2 также имеют встроенную кэш-память с низкой задержкой объемом до 24 Мбайт, что увеличивает пропускную способность практически в три раза по сравнению с моделями Itanium 2 предыдущего поколения. Более того, потребляемая мощность двухъядерных процессоров Intel Itanium 2 на 20% ниже, чем у предыдущих моделей семейства. Иначе говоря, двухъядерные процессоры Intel Itanium 2 имеют одно из самых привлекательных в отрасли соотношений тактовой частоты и тепловыделения, что делает их оптимальным выбором для преодоления ограничений по производительности и снижения эксплуатационных расходов в центрах обработки данных. </p>
+ 
+<p>Двухъядерные процессоры Intel Itanium 2 также значительно превосходят по производительности своих одноядерных предшественников, особенно при выполнении важных бизнес- и аналитических приложений. Например, по результатам эталонного теста производительности, моделирующего оперативную обработку транзакций (online transaction processing, OLTP), при одинаковом количестве вычислительных ядер производительность двухъядерного процессора Intel Itanium 2 9050 оказалась на 136% выше, чем у более ранней, одноядерной версии процессора Intel Itanium 2. Это означает, что ПО, ориентированное на обработку транзакций, &mdash; его используют банки, авиакомпании, супермаркеты и производственные предприятия, &mdash; будет работать быстрее и сможет одновременно обслуживать больше пользователей и обрабатывать больше транзакций, обеспечивая существенное конкурентное преимущество. </p>
+ 
+<h3>Встроенная поддержка виртуализации </h3>
+ 
+<p>Благодаря технологии Intel Virtualization новые двухъядерные процессоры Intel Itanium 2 в полной мере поддерживают вычислительные среды на базе виртуализованных серверов. Это позволяет ИТ-подразделениям консолидировать больше приложений на меньшем количестве серверов, повысить степень использования ресурсов, а также ускорить окупаемость инвестиций в ИТ. Встроенная аппаратная поддержка в сочетании с современным ПО для виртуализации улучшает надежность, совместимость и облегчает сопровождение. </p>
+ 
+<h3>Встроенные функции обеспечения надежности </h3>
+ 
+<p>В двухъядерные процессоры Intel Itanium 2 интегрирован ряд специальных функций, создающих лучший в своем классе уровень надежности центров обработки данных. Так, технология Intel Cache Safe обеспечивает работоспособность высокопроизводительных систем даже в случае возникновения ошибок в кэш-памяти третьего уровня. Технология Enhanced Machine Check Architecture предоставляет разнообразные возможности обнаружения и коррекции ошибок, позволяя находить ошибки на уровне битов, ликвидировать нарушение целостности данных. Все это помогает достичь максимального времени безотказной работы в масштабах предприятия. Такие функции, как ускоренное шифрование данных, надежная изоляция памяти с помощью расширенной архитектуры разбиения на страницы и аппаратная аутентификация встроенного ПО также способствуют достижению надежности класса мэйнфрейма по цене серийной продукции. </p>
+ 
+<h3>Всесторонняя техническая поддержка </h3>
+ 
+<p>Проприетарные мэйнфреймы и RISC-серверы стоят дорого и обычно поддерживаются единственным поставщиком, поэтому ИТ-подразделения практически не имеют возможности выбора поставщиков дополнительного аппаратного обеспечения, прикладных программ и ОС. По этой причине не только растут затраты, но и ограничивается возможность управлять рисками и пользоваться выгодными предложениями широкой отраслевой экосистемы. В противоположность этому для серверов на базе двухъядерных процессоров Intel Itanium 2 доступно множество гибких и недорогих услуг и ПО, в том числе специфические продукты для конкретного вертикального рынка. Например, серверы на базе двухъядерных процессоров Intel Itanium 2 предлагают многие компании и ведущие OEM-поставщики, такие, как Bull, HP, Hitachi, Fujitsu, Fujitsu Siemens Computers, NEC, SGI и Unisys. Эти серверы совместимы с широким диапазоном ОС и ПО, включая системы управления ресурсами предприятия, системы управления взаимоотношениями с клиентами, а также высокопроизводительные вычислительные приложения. Фактически количество приложений, оптимизированных для процессоров Intel Itanium 2, за последние 12 месяцев увеличилось более чем вдвое и уже превышает 8000. Возможность выбора из широчайшего списка ПО, оптимизированного для процессоров Itanium и поддерживаемого множеством глобальных поставщиков, позволяет ИТ-подразделениям быстрее и эффективнее внедрять экономически выгодные решения для удовлетворения потребностей бизнеса. </p>
+ 
+<h3>Упрощение миграции </h3>
+ 
+<p>По результатам проведенного IDC опроса, переход компаний на серверы на базе процессоров Itanium происходит достаточно просто, при этом их функционирование прерывается на очень непродолжительное время. Поддержка множества ОС означает, что ИТ-подразделения могут использовать весь накопленный в организациях опыт и тратить минимум времени на обучение. Поставщики ПО, которые поддерживают системы на базе процессоров Itanium 2, также могут помочь в упрощении миграции и сокращении рисков. </p>
+ 
+<p>Всесторонняя поддержка процессоров Intel Itanium 2 &mdash; еще один мощный стимул к миграции для предприятий, которые используют проприетарные системы на базе мэйнфреймов и RISC-серверов. За счет переноса приложений на серверы на базе двухъядерных процессоров Intel Itanium 2 они могут повысить производительность, сократить расходы и организовать стандартизованную вычислительную среду как для жизненно важных приложений уровня предприятия, так и для массовых приложений. Не менее существенно и то, что инженеров и специалистов по системам на базе технологий Intel достаточно много; таким образом, компаниям не приходится их специально готовить или искать сотрудников с редкой квалификацией. </p>
+ 
+<p>В заключение следует особо отметить, что знания и опыт работы с основанными на стандартах системами общего назначения на базе процессоров Intel Xeon упрощают переход на вычислительные среды на базе двухъядерных Intel Itanium 2 несмотря даже на то, что процессоры Itanium 2 имеют другую архитектуру. Системы на базе этих двух архитектур успешно работают совместно. Многие организации выбирают системы на базе процессоров Intel Xeon для таких видов приложений, которые можно разделить на небольшие компоненты и снова собрать, например, систем для обработки Web-транзакций. Те же самые организации используют серверы на базе двухъядерных процессоров Intel Itanium 2 для выполнения жизненно важных деловых приложений с высокой интенсивностью обработки данных, чтобы полностью реализовать преимущества большого объема памяти и расширенных возможностей параллельной обработки. Некоторые организации выбирают серверы на базе двухъядерных Intel Itanium 2 в качестве серверов баз данных и машины на базе процессоров Intel Xeon &mdash; в качестве серверов приложений. </p>
+ 
+<h2>Планы выпуска процессоров Intel Itanium </h2>
+ 
+<h3>Montvale </h3>
+ 
+<p>Montvale &mdash; следующая после двухъядерного процессора Intel Itanium 2 модель, которая выйдет в IV квартале 2007 г. </p>
+ 
+<h3>Tukwila </h3>
+ 
+<p>Выпуск процессора Tukwila планируется на конец 2008 г. Он будет содержать четыре ядра, поддерживать технологию Hyper-Threading, иметь большой объем интегрированной кэш-памяти, интегрированные контроллеры памяти и новое высокоскоростное межкомпонентное соединение &mdash; все это позволит удвоить производительность. Мощные функции RAS (надежность, готовность, удобство обслуживания), свойственные современным процессорам, в Tukwila будут дополнены несколькими новыми функциями. Одна из них, DDDC (Double Device Data Correction, коррекция данных на двух устройствах), позволит модулям памяти DIMM продолжать работу даже в случае серьезных аппаратных ошибок на двух последовательных модулях DIMM в динамическом ОЗУ. Сегодня некоторые системы могут исправлять ошибки памяти, связанные с отказом одной микросхемы динамического ОЗУ на модуле DIMM. Однако отказ двух последовательных устройств динамического ОЗУ часто приводит к потере данных системной памяти и серьезным системным сбоям. Функция DDDC процессора Tukwila способна исправлять серьезные сбои как на одном, так и на двух модулях памяти сразу. Это продлевает время работоспособности системы и позволяет реже заменять модули DIMM, тем самым снижая общий уровень затрат на обслуживание. В процессоре Tukwila появятся и другие функции RAS класса мэйнфреймов и будет расширена поддержка технологии виртуализации. </p>
+ 
+<p>Кроме того, выйдет общий набор микросхем для этого процессора и будущих платформ на базе процессора Intel Xeon. Стандартизация набора микросхем повысит эффективность усилий OEM-партнеров Intel в проектировании систем и в конечном счете снизит расходы на разработку. </p>
+ 
+<h3>Poulson </h3>
+ 
+<p>Поколение процессоров семейства Intel Itanium, которое будет выпущено вслед за Tukwila, получило название Poulson. Процессоры Poulson будут построены на базе новой ультрапараллельной микроархитектуры, призванной обеспечить максимальную масштабируемость, производительность, надежность и гибкость. Эта микроархитектура поднимет параллельные вычисления на новый уровень за счет существенного увеличения числа ядер, потоков и инструкций, выполняемых за один такт процессора. Poulson в соответствии с традициями процессоров семейства Intel Itanium оснащен большим объемом интегрированной кэш-памяти и поддерживает функции RAS класса мэйнфреймов. Процессор будет выпускаться по новой 32-нм производственной технологии Intel. </p>
+ 
+<h3>Kittson </h3>
+ 
+<p>Kittson &mdash; это кодовое наименование процессора семейства Intel Itanium следующего поколения, которое будет выпущено после Poulson. </p>
+ 
+<h2>Проблемы критически важных бизнес-вычислений </h2>
+ 
+<p>Практически во всех отраслях и областях исследований организации испытывают постоянно растущие потребности в вычислениях. Можно привести такие примеры, как ликвидация последствий стихийных бедствий и поиск источников энергии, исследования в области медицины и проектирование автомобилей, финансовые рынки и розничная торговля. Объемы данных и количество транзакций растут, приложения становятся все более сложными, требования к интеграции повышаются. Эксперты полагают, что эта проблема в ближайшее время не будет решена. </p>
+ <blockquote> 
+  <h3>Высокая готовность для крупнейших компаний мира </h3>
+ 
+  <p>Двухъядерные процессоры Intel Itanium 2 обеспечивают надежность класса мэйнфреймов: для определенных конфигураций и операционных сред готовность составляет 99,99999%. Поскольку компании во всем мире переходят к вычислительным системам реального времени для выполнения ключевых бизнес-приложений, решения на базе процессоров Itanium обеспечивают экономически эффективный способ удовлетворения их растущих потребностей. Эти решения уровня предприятия более гибки, приемлемы экономически и имеют более широкую поддержку, чем проприетарные архитектуры на базе RISC-серверов и мэйнфреймов. Кроме того, они соответствуют отраслевому стандарту надежности, поэтому 70 из 100 крупнейших компаний мира сделали свой выбор в пользу процессора Intel Itanium 2. Среди них девять из 10 крупнейших автомобильных компаний, восемь из 10 крупнейших банков, 14 из 15 крупнейших энергетических компаний и четыре из пяти крупнейших медицинских компаний. </p>
+ </blockquote> 
+<p>Появляются и новые требования к системам для жизненно важных бизнес-вычислений. Возникают такие задачи, как обеспечение подключения в любом месте, поддержка новых источников данных (радиочастотных идентификационных меток, сенсорных сетей и т. п.), соответствие нормативным актам, обработка транзакций в реальном времени и борьба с угрозами безопасности. Профессиональные вычислительные возможности теперь нужны не только крупнейшим организациям. Новые средства для поддержки бизнес-аналитики, моделирования, визуализации данных и оптимизации производственных процессов становятся жизненно необходимыми для самых разных организаций. Для работы этих приложений обычно требуются системы с высокой готовностью, способные эффективно обрабатывать большие объемы данных. </p>
+ 
+<p>Но с ростом вычислительных потребностей экономические ограничения также становятся все более жесткими. Руководство компаний требует от инвестиций в ИТ-сферу такого же уровня прибылей и таких же гарантий, как и от других бизнес-инвестиций. Высокий уровень технических решений сам по себе уже не имеет такого значения. Совокупная стоимость владения должна быть низкой, а используемые решения обязаны быть простыми во внедрении, масштабируемыми и адаптируемыми, чтобы обеспечить быструю окупаемость и принести большую прибыль в долгосрочной перспективе. </p>
+ 
+<p>Многие появляющиеся на рынке технологии, такие, как Web-сервисы и сервис-ориентированные архитектуры (SOA), виртуализация, блейд-серверы и средства автоматизации управления, помогают организациям в решении этих проблем. Решения на базе процессоров Intel Itanium играют в этом развитии ведущую роль. Они делают доступным высокий уровень гибкости: с ними совместимы десять ОС и тысячи приложений, их поддерживает множество поставщиков аппаратного обеспечения, а также обширное сообщество независимых поставщиков ПО. Эти системы предоставляют профессиональные вычислительные возможности на базе архитектуры, основанной на отраслевых стандартах. Они обеспечивают возможность выбора, гибкость и доступность для жизненно важных бизнес-вычислений &mdash; той области, для которой долгое время были характерны высокие затраты и отсутствие гибкости. </p>
+ 
+<h2>Виртуализация и мэйнфреймы </h2>
+ 
+<p>Архитектура Itanium поддерживает множество ОС, что обеспечивает широкий выбор и гибкость для консолидации и переноса имеющихся приложений. Ряд поставщиков предоставляет надежные средства виртуализации и создания разделов для своих вычислительных сред. В частности, ПО для виртуализации Xen, разработанное сообществом opensource и сторонников ОС Linux, совместимо с решениями на базе процессоров Intel Itanium, как и система Virtuozzo компании SWsoft (<a href="http://www.swsoft.com">www.swsoft.com</a>). Организации могут использовать эти решения для того, чтобы превратить сервер на базе процессоров Intel Itanium во множество виртуальных серверов и выполнять ряд консолидированных приложений в защищенных разделах. Архитектура Itanium также поддерживает действительные реализации класса мэйнфреймов. Например, компания Platform Solutions (<a href="http://www.platformsolutions.com">www.platformsolutions.com</a>) предлагает IBM-совместимые мэйнфреймы на базе архитектуры Itanium. Это позволяет организациям и дальше использовать имеющиеся у них приложения для мэйнфреймов, но на более доступной по цене и гибкой системе, которая обеспечивает сравнимую производительность. При таком подходе мэйнфрейм не будет больше самодостаточной автономной системой, а сможет легко интегрироваться с другими системами и приложениями. </p>
+ 
+<p>Решения на базе процессоров Intel Itanium предоставляют аналогичные преимущества и для имеющихся RISC-приложений. За счет переноса этих приложений на серверы на базе процессоров Intel Itanium организации могут повысить производительность, сократить эксплуатационные расходы и организовать более универсальную операционную среду для работы своих жизненно важных бизнес-приложений, а также массовых приложений. </p>
+ 
+<h2>Оптимизированная безопасность корпоративных сетей </h2>
+ 
+<p>Некоторые эксперты полагают, что архитектура Intel Itanium может стать оптимальной платформой для решения проблем безопасности, связанных с передачей жизненно важной информации через Интернет. Базовая архитектура безопасности, поддерживаемая основными современными ОС и архитектурами аппаратного обеспечения, существует уже десятки лет. Архитектура разрабатывалась без учета принципов открытости Интернета, и компании во всем мире вынуждены расплачиваться за эти недостатки. Микроархитектура Intel Itanium 2 была разработана с учетом этих слабых мест. Компания Secure64 (<a href="http://www.secure64.com">www.secure64.com</a>) предлагает ПО, использующее возможности микроархитектуры в целях обеспечения информационной безопасности уровня мэйнфреймов для серверов на базе процессоров Intel Itanium. </p>
+ 
+<p>Разработанное Secure64 управляющее ПО для платформы SourceT (SourceT Platform Control Software) поддерживает гостевые ОС, обеспечивая существенно более высокий уровень безопасности и лучшую производительность для корпоративных приложений (можно также разрабатывать приложения специально для ядра ОС Secure64). Благодаря постепенной миграции на новую архитектуру компании смогут радикально улучшить безопасность, масштабируемость и производительность жизненно важных систем, подключенных к Интернету, и избавиться от пакетов исправлений для решений безопасности. </p>
+ 
+<h2>Рост числа решений для бизнеса </h2>
+ 
+<p>Множество крупных и преуспевающих мировых организаций внедрили у себя решения на базе процессоров Intel Itanium 2, чтобы сократить расходы и повысить оперативность работы некоторых наиболее требовательных, жизненно важных бизнес-приложений. Конечно, для того чтобы степень поддержки приложений для решений на базе процессоров Intel Itanium достигла необходимого уровня, потребовалось время, но растущие темпы внедрения этой архитектуры свидетельствуют о том, что данный рубеж уже взят. Кроме того, новые технологии двоичной трансляции скоро позволят выполнять многие тысячи имеющихся RISC-приложений (включающих как стандартный, так и специальный код) на системах на базе Intel Itanium. При этом их производительность будет сопоставима с производительностью приложений, присущих данной системе, и не потребуется вносить изменения в существующее ПО. Это откроет принципиально новые возможности и позволит многим компаниям наилучшим образом воспользоваться преимуществами гибкости и выгодности решений на базе процессоров Itanium без затрат и рисков, связанных с миграцией. </p>
+ 
+<p>Сегодня системы на базе процессоров Intel Itanium предлагают многие поставщики серверов, включая восемь из 10 крупнейших в мире разработчиков платформ. Для широкого и постоянно растущего списка жизненно важных бизнес-приложений доступно множество комплексных решений. В частности, обеспечивается чрезвычайно мощная поддержка баз данных, хранилищ данных и решений для бизнес-аналитики, крупных ERP- и CRM-систем, а также для высокопроизводительных вычислений и технических расчетов. </p>
+ 
+<p>Один из ключевых примеров &mdash; комплекс бизнес-приложений Oracle E-Business Suite, который корпорация Oracle (<a href="http://www.oracle.com">www.oracle.com</a>) в настоящее время адаптирует для систем на базе процессоров Intel Itanium, работающих под управлением ОС HP-UX 11i. Oracle E-Business Suite обеспечивает полный набор функциональных возможностей, позволяя запускать основные приложения Oracle на системах на базе процессоров Intel Itanium. Кроме того, приложения Oracle Application Server и Oracle Database уже несколько лет совместимы с системами на базе этих процессоров. </p>
+ 
+<p>Серверы на базе процессоров Intel Itanium также поддерживают множество приложений, разработанных для серверов с 32-разрядной архитектурой Intel (IA-32). Производительность работы этих приложений на серверах на базе двухъядерных процессоров Intel Itanium 2 будет существенно выше. </p>
+ 
+<p>Мощность и производительность систем на базе Intel Itanium иллюстрирует такой пример. Когда Индонезия подверглась катастрофическому цунами, системы на базе процессоров Intel Itanium помогли ученым обработать в реальном времени сотни гигабайт данных, поступивших со спутников, и построить трехмерные карты, которые использовались для координации спасательных работ и оценки ущерба. Как считает руководство центра визуализации Университета Сан-Диего, интеграция ПО Linux и высокопроизводительных систем на базе процессоров Intel Itanium оказала огромное влияние на методы проведения дистанционного зондирования и работы геоинформационной системы, открыв совершенно новые возможности. Кроме того, доступные цены способствовали внедрению систем, а присущая им масштабируемость позволяет исследовательским группам повышать экономическую эффективность решения по мере роста потребностей. </p>
+ 
+<p>Но это лишь один из примеров, а всего за три года в мире было развернуто около 90 тыс. систем на базе процессоров Intel Itanium 2. Одни организации используют их, чтобы сократить расходы на внедрение новых систем, другие &mdash; для масштабирования и консолидации имеющихся приложений для Windows и Linux, а третьи &mdash; для миграции с дорогостоящих проприетарных RISC-архитектур. </p>
+ 
+<h2>Поддержка отрасли </h2>
+ 
+<p>В сентябре 2005 г. несколько наиболее известных компаний в области профессиональных вычислений объединились в альянс, получивший название Itanium Solutions Alliance (Альянс разработчиков решений на базе архитектуры Intel Itanium, <a href="https://www.itaniumsolutionsalliance.org">https://www.itaniumsolutionsalliance.org</a>), чтобы проводить согласованную разработку и поддержку решений на базе процессоров Intel Itanium. Среди участников Альянса такие компании, как Bull, Fujitsu, Fujitsu Siemens Computers, Hitachi, HP, Intel, NEC, SGI, Unisys, BEA, Microsoft, Novell, Oracle, Red Hat, SAP, SAS и Sybase. Альянс предлагает обширные ресурсы для поставщиков ПО и корпоративных ИТ-организаций, заинтересованных в разработке и внедрении решений на базе процессоров Intel Itanium, в числе которых: </p>
+ 
+<ul> 
+  <li>каталог решений с архитектурой Intel Itanium (The Itanium Solutions Catalog) &mdash; полный перечень приложений, оптимизированных для серверов на базе процессоров Intel Itanium; </li>
+ 
+  <li>сеть решений на базе архитектуры Intel Itanium (The Itanium Solutions Network) &mdash; глобальная сеть центров содействия дистанционному переносу и тестированию приложений; </li>
+ 
+  <li>дни разработчиков решений (Developers Days) &mdash; мероприятия, проводимые с целью предоставить разработчикам инструменты и техническую поддержку для переноса и оптимизации приложений. </li>
+ </ul>
+ 
+<p>В начале 2006 г. спонсоры-основатели Itanium Solutions Alliance публично объявили о своем решении до конца 2010 г. инвестировать 10 млрд долл. в решения на базе процессоров Intel Itanium. Эти инвестиции будут способствовать продвижению инноваций на всех уровнях &mdash; от разработки процессоров и систем до переноса приложений. В эту сумму не входят параллельные инвестиции множества небольших поставщиков платформ, а также ведущих поставщиков ПО для поддержки решений на базе процессоров Intel Itanium. </p>
+ 
+<p>Микроархитектура Intel Itanium 2 была разработана позже, чем конкурирующие платформы, и ожидается, что она сможет более успешно масштабироваться под будущие условия ИТ-индустрии. Она поддерживает очень большой объем прямо адресуемой памяти (до 1 Пбайт, или 1000 Тбайт), высокий уровень параллелизма, большое количество регистров. Все эти преимущества создают потенциал для дальнейшего масштабирования. При разработке данной микроархитектуры особое внимание уделялось ее способности поддерживать четкую оптимизацию ПО на уровне компилятора. Такое решение обеспечит постоянное масштабирование производительности за счет расширения функциональных возможностей ПО без существенной его оптимизации. </p>
+ 
+<p>Немаловажно и то, что микроархитектура Intel Itanium 2 включает в себя усовершенствованные средства безопасности, которые создают ключевые преимущества для защиты корпоративных систем, приложений, данных и транзакций. Среди этих средств &mdash; четыре уровня привилегий (по сравнению с двумя в RISC-архитектурах), поддержка более 16 млн ключей защиты памяти, а также сверхбыстрая параллельная пропускная способность для реализации алгоритмов шифрования. Кроме того, уже на подходе программные решения, что позволит компаниям воспользоваться преимуществами этих функций и повысить защищенность приложений и сетей. </p>
+ 
+<h2>Серверы на базе Itanium </h2>
+ 
+<p>Как известно, процессоры семейства Itanium &mdash; результат совместных работ корпораций Intel и HP (<a href="http://www.hp.com">www.hp.com</a>), проводимых с 1994 г. Они представляют собой коммерческую реализацию нового типа процессорной архитектуры, обеспечивающей явный параллелизм на уровне команд (EPIC). Напомним, что предшествующие архитектуры включали только формат команд и метод их интерпретации, а EPIC объединяет вычислительные ресурсы с работой компиляторов, используя информацию о возможном параллелизме команд, что значительно увеличивает загрузку внутренних ресурсов процессора и оптимизирует производительность приложений. Аналитики рынка ИТ считают, что продукты, реализующие концепцию EPIC, открывают новую главу в истории компьютерной техники корпоративного уровня и будут в течение последующих лет служить основной платформой для достижения нового уровня производительности, построения мультиоперационных платформ и эффективности управления вычислительными ресурсами. </p>
+ 
+<p>Для обеспечения надежной защиты инвестиций, гибкости, масштабируемости и долгого времени жизни высокопроизводительных серверных платформ специалисты HP разработали универсальную архитектуру для серверов среднего класса и high-end, предусматривающую использование как процессоров PA-RISC (семейство серверов HP 9000), так и Intel Itanium 2 (семейство серверов HP Integrity). В основе этой архитектуры лежит модульная организация серверных систем и универсальный набор микросхем, объединяющих процессоры, память и подсистему ввода-вывода. Каждое семейство имеет свои преимущества и свое позиционирование на рынке серверных платформ. Серверы HP Integrity на базе процессоров Itanium 2 представляют собой реализацию лучших технологических и архитектурных решений, разработанных для RISC-систем на процессорах нового поколения. </p>
+ 
+<p>Сегодня в конфигурацию серверов HP Integrity наряду с одноядерными процессорами Itanium 2 входят последние модели двухъядерных процессоров Dual Core Intel Itanium 2 с различными тактовой частотой и объемом кэш-памяти (1,6 ГГц/24 Mбайт, 1,6 ГГц/18 Mбайт и 1,4 ГГц/12 Мбайт). Помимо этого для одноядерного процессора Itanium 2 существует модификация с пониженным энергопотреблением, используемая в системе начального уровня rx1620. Семейство серверов HP Integrity включает полный ряд моделей, начиная с двухпроцессорных систем начального уровня и завершая флагманом семейства, 128-процессорным сервером HP Superdome. Это позволяет создавать законченные архитектурные решения для корпоративных центров обработки данных. Кроме одиночных процессоров Intel Itanium 2 в моделях серверов rx4640, rx7620, rx8620 и Superdome можно использовать модули HP mx2, объединяющие два процессора Intel Itanium 2 (с тактовой частотой 1,1 ГГц) и 32 Мбайт кэш-памяти L4. Модуль mx2 совместим по разъему с одиночным процессором Intel Itanium 2, что позволяет заказчикам выбирать конфигурацию сервера либо с высокопроизводительными одиночными процессорами Intel Itanium 2, либо с вдвое большим числом менее производительных процессоров. </p>
+ 
+<p>Серверы семейства НР Integrity имеют ряд встроенных средств высокой доступности, таких, как резервные вентиляторы и блоки питания с горячей заменой; диски и адаптеры ввода-вывода горячего подключения; динамическая очистка и перераспределение страниц памяти; динамическое перераспределение процессоров и способность к восстановлению; независимые PCI-X слоты; интегрированная служба оповещения о событиях Event Monitoring System (EMS), работающая в режиме реального времени; встроенная расширенная система обнаружения неисправностей с выделенным сервисным процессором и шиной. Принципиальная особенность этого семейства серверов &mdash; особое внимание к предотвращению сбоев. Это реализуется за счет непрерывного контроля состояния всех компонентов сервера и анализа тенденций изменения контролируемых показателей. При обнаружении потенциальной проблемы, например, возможного перегрева процессора, специальные функции динамического перераспределения ресурсов (в данном случае функция DPR &mdash; Dynamic Processor Resilience) обеспечат перенос процессов с потенциально сбойного компонента на исправный, не прерывая выполнение приложений. При этом администратор системы и/или служба технической поддержки получат уведомление и подробный отчет о событии. </p>
+ 
+<p>В конфигурацию серверов среднего и старшего уровня семейств НР 9000 и HP Integrity могут входить резервные процессоры, платы ячеек и память, поддерживающие технологию iCAP (Instant Capacity), известную также как модель оплаты только в случае использования. Применение компонентов с технологией iCAP в составе серверов НР дает возможность резервировать вычислительные ресурсы на случай непредвиденного роста бизнеса и резкого увеличения нагрузки на серверы или активировать и деактивировать процессоры на определенный промежуток времени в соответствии с потребностями бизнеса (технология TiCAP &mdash; Temporary Instant Capacity). Активация дополнительных ресурсов iCAP происходит в режиме online, что позволяет избежать остановки приложения при модернизации сервера. </p>
+ 
+<p>На серверных платформах с процессорами Itanium 2 поддерживается выполнение приложений, разработанных для предшествующих версий Windows и HP-UX. Эта особенность обеспечивает защиту инвестиций в систему, позволяя сразу начать работать с платформой с имеющимися версиями приложений и постепенно наращивать их производительность, переходя к версиям, оптимизированным под Itanium 2. </p>
+ 
+<p>Большинство серверов семейства HP Integrity конфигурируются либо в виде единой мультипроцессорной системы, либо как несколько аппаратно и/или программно независимых виртуальных разделов (партиций) со своими ресурсами и ОС. </p>
+ 
+<p>Отдельное преимущество платформ на базе процессоров семейства Itanium &mdash; возможность работы под управлением любой из четырех ОС: HP-UX 11i, Microsoft Windows Server 2003, Linux или OpenVMS. Эта особенность позволяет избежать ограничений установленной ОС и предоставляет возможность выбора приложений на основе их функциональности и соответствия требованиям бизнеса. Мультиоперационность в сочетании с технологией разделов создает основу для построения консолидированных центров обработки информации с перераспределением ИТ-ресурсов между различными операционными средами. </p>
+ 
+<p>Серверы HP Integrity полностью сертифицированы по стандартам ISO 9000, что подтверждает соответствие предлагаемых решений высшим стандартам надежности. Кроме того, в зависимости от требуемого уровня отказоустойчивости HP предлагает несколько типов кластерных решений, в которых серверные узлы кластера размещены централизованно (локальный кластер), распределены по соседним зданиям (кампусный кластер), по нескольким территориям в пределах одного города (метрокластер) или представляют собой два связанных кластера, размещенных в различных городах, странах или на различных континентах (континентальный кластер). </p>
+ <blockquote> 
+  <h3>Интернет-банк на платформе HP Integrity </h3>
+ 
+  <p>Компании ЦФТ, НР, Intel и &laquo;Ай-Теко&raquo; успешно завершили проект портирования системы &laquo;ЦФТ-Интернет банк&raquo; на платформу HP Integrity с процессорами Intel Itanium 2 под управлением ОС HP-UX. Одновременно было проведено нагрузочное тестирование программно-аппаратного комплекса в центре компетенции ЦФТ, с тем чтобы оценить производительность подсистемы &laquo;ЦФТ-Интернет банк&raquo; на новой аппаратной платформе в различных режимах работы. Тестирование продемонстрировало высокую надежность, производительность и масштабируемость серверов HP Integrity с процессорами Itanium 2. По результатам тестирования программно-аппаратная платформа НР Integrity на базе процессоров Intel Itanium 2, ОС HP-UX 11i и СУБД Oracle 9i сертифицирована и рекомендуется для промышленного использования системы &laquo;ЦФТ-Интернет банк&raquo;. </p>
+ </blockquote> 
+<p>В 2006 г. HP представила набор микросхем HP sx2000, соединяющих процессоры, память и устройства ввода-вывода в системах HP Integrity и HP 9000. НМС sx2000 обеспечивает принципиально новый уровень производительности, масштабируемости и доступности систем, в частности, благодаря следующим особенностям: </p>
+ 
+<ul> 
+  <li>поддержка резервирования и горячей замены таких компонентов, как системные часы, внутренний матричный коммутатор, процессор управления; </li>
+ 
+  <li>реализация механизма распознавания и коррекции однобитовых ошибок на аппаратном уровне (Error Correction Code, ECC) не только в модулях оперативной памяти и на системных шинах, но и в кэше процессора, на шинах внутреннего коммутатора и ввода-вывода; </li>
+ 
+  <li>максимальный уровень отказоустойчивости оперативной памяти за счет технологии Double chip-spare, обеспечивающей работоспособность сервера при выходе из строя двух микросхем памяти DRAM; </li>
+ 
+  <li>поддержка стандарта PCI-X 2.0 266 МГц для подсистемы ввода-вывода, что обеспечивает пропускную способность слота PCI-X до 2 Гбайт/с. </li>
+ </ul>
+ 
+<h3>Расширение возможностей виртуализации </h3>
+ 
+<p>Виртуализация &mdash; возможность объединять и совместно использовать вычислительные ресурсы для обеспечения информационных потребностей предприятия &mdash; преобразует работу ИТ и центров обработки данных по всему миру. Виртуальная серверная среда HP Virtual Server Environment (HP VSE), часть которой составляет ОС HP-UX 11i v3, позволяет пойти еще дальше, расширяя возможности виртуализации и доступности приложений уровня мэйнфреймов и обеспечивая виртуализацию самых требовательных приложений. </p>
+ 
+<p>Компания HP расширила функциональность и упростила развертывание и виртуализацию критичных бизнес-задач в окружении HP-UX 11i v3. Развертывание виртуализованных сред стало еще проще за счет выхода четырех новых типовых конфигураций внедрения HP VSE. Новые конфигурации включают описание типовых архитектур для работы приложений Oracle, ПО SAP, а также создания пула совместно используемых серверов баз данных и приложений. Эти типовые конфигурации вдвое сокращают время развертывания системы у заказчика. Доступность уровня мэйнфреймов улучшена за счет расширения возможностей кластерного ПО HP Serviceguard, в том числе реализовано более быстрое и прозрачное для пользователей переключение при сбоях SAP, а также новый уровень обеспечения отказоустойчивости &mdash; возможность каскадного переключения между тремя независимыми центрами обработки данных в случае сбоя. </p>
+ 
+<p>Новая версия ОС HP-UX 11i v3 разработана с учетом текущих и прогнозируемых в будущем требований самых ресурсоемких вычислительных нагрузок. В частности, ОС обеспечивает адресацию до 100 млн секстибайт данных в системе хранения (1 секстибайт = 1 млрд терабайт). Кроме того, в нее внедрены новые возможности установки обновлений и интерактивного исправления ошибок, что сокращает запланированное и незапланированное время простоя, а функции автоматизации позволяют минимизировать эксплуатационные расходы. </p>
+ 
+<p>Как и при каждом выпуске новой версии HP-UX, инвестиции существующих заказчиков в ОС HP-UX 11i защищены благодаря совместимости на уровне двоичного кода. Это означает, что запускаемые на предыдущей версии приложения будут работать на HP-UX 11i v3, и при этом производительность их вырастет до 30%.</p>
+ </DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25175.html'>Серверы ETegro Hyperion для высоких нагрузок</A></b></li><li><b><A href='detail.php@ID=24850.html'>Сервер Dell PowerEdge для крупных предприятий</A></b></li><li><b><A href='detail.php@ID=24844.html'>Масштабируемые серверы Cisco UCS </A></b></li><li><b><A href='detail.php@ID=24814.html'>Виртуализация для сервис-провайдеров – платформа Cisco ESP</A></b></li><li><b><A href='detail.php@ID=24808.html'>Горизонтально масштабируемые СХД NetApp и виртуализация для облачных инфраструктур</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=11702.html" target="_blank"><img src="../upload/iblock/fee/HP_int-1-1.jpg" alt="Открыть материал" style="width:50px; height:50px; border:1px solid #000; float:left; margin:0 5px 5px 0;"></a><a href="detail.php@ID=11702.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Развитие платформы Itanium</a><br><a href="detail.php@ID=11702.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Развитие семейства процессоров Intel Itanium 2 и преимущества систем на этой платформе. В конце 1990-х гг. на рынке корпоративных серверов &hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=11702.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=11702&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0e319a6f16f4814851409175cadfd966'><img src='../bitrix/tools/captcha.php@captcha_code=0e319a6f16f4814851409175cadfd966' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

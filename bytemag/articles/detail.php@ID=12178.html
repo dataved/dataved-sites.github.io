@@ -1,0 +1,491 @@
+<HTML>
+<HEAD>
+<title>Решения Cisco для центров обработки данных</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Для решения проблем загрузки оборудования в ЦОД и роста энергопотребления компания Cisco предлагает новую коммутационную платформу, а также другое сетевое оборудование и средства поддержки высокопроизводительных вычислений. Сегодня перед" />
+<meta name="description" content="Для решения проблем загрузки оборудования в ЦОД и роста энергопотребления компания Cisco предлагает новую коммутационную платформу, а также другое сетевое оборудование и средства поддержки высокопроизводительных вычислений. Сегодня перед" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082106','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm12178' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=12178&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm12178"].SHOW_IMAGE.value="N"; document.forms["PrintForm12178"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm12178"].SHOW_IMAGE.value="Y"; document.forms["PrintForm12178"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(12178);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=12178.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=12178.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(12178);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a>, <a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><br /></p><a href='../numbers/index.php@ID=12148.html'>№6 (116), июнь 2008</a><h1>Решения Cisco для центров обработки данных</h1>18.06.2008<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=12178&amp;PICTURE_ID=12179.html'><IMG src='../upload/iblock/dea/6500-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Семейство коммутаторов Cisco Catalyst 6500.</b></TD></TR></TABLE><DIV class='article-text'> 
+<p><em>Для решения проблем загрузки оборудования в ЦОД и роста энергопотребления компания Cisco предлагает новую коммутационную платформу, а также другое сетевое оборудование и средства поддержки высокопроизводительных вычислений.</em> </p>
+ 
+<p>Сегодня перед руководителями центров обработки данных (ЦОД) стоит несколько сложнейших проблем. Одна из них заключается в том, что ресурсы ЦОД используются крайне неэффективно: по данным Yankee Group (<a target="_blank" href="http://www.yankeegroup.com">www.yankeegroup.com</a>), системы хранения данных загружены в среднем на 25%, а серверные и сетевые ресурсы &mdash; на 30%. Корпоративные приложения изолированы друг от друга, и если какое-то из них испытывает недостаток в ресурсах, для него приходится покупать новые аппаратные средства, хотя у других приложений имеются избыточные мощности. Другая проблема связана с энергопотреблением и охлаждением: в 2000 г. средний уровень энергопотребления на стойку составлял 2,5 кВт, в 2006 г. &mdash; 10 кВт, а в 2010 г., если сохранятся нынешние темпы роста, он превысит 30 кВт. В результате расходы на электропитание и охлаждение резко растут. В 2000 г. они составляли около 20% стоимости новых серверов, сегодня превысили 50% и к 2010 г., если ничего не изменится, достигнут уровня в 80%. Эта ситуация никого не устраивает &mdash; чтобы успешно решать будущие задачи, ее нужно в корне менять. </p>
+ 
+<p>Эксперты ожидают новаторских решений в нескольких областях. Уже сегодня ощущается влияние технологий виртуализации на эффективность использования серверов: в хорошо управляемой виртуализованной серверной среде уровень загрузки ресурсов повышается с 30 до 90% с лишним. Кроме того, виртуализация начинает положительно влиять на системы хранения и вскоре должна распространиться на уровень сетей. Сегодня эта технология позволяет представить один физический сервер как несколько логических машин. Со временем можно будет полностью разделить серверы на элементарные составляющие и вместо корпуса с памятью, процессором, дисковым пространством и т. д. иметь дело с набором виртуальных компонентов. </p>
+ 
+<p>Еще один источник энергетической эффективности &mdash; виртуализация услуг ЦОД, которые будут доставляться по сети. Вместо того чтобы включать новую аппаратную систему каждый раз, когда заказчику понадобится новый ресурс, оператор ЦОД будет просто включать услугу. </p>
+ 
+<p>Кроме того, ожидается появление новых методов охлаждения, например, жидкостных теплоотводов для охлаждения стоек с блейд-серверами. </p>
+ 
+<p>Массовое распространение услуг передачи данных заставило предприятия по-новому посмотреть на управление вычислительными центрами. Как уже говорилось, КПД центров обработки данных находится на крайне низком уровне, и пользователям нет смысла приобретать все новые аппаратные системы в условиях, когда огромные ресурсы ЦОД простаивают. Эта ситуация стимулирует развитие технологий виртуализации, систем хранения и блейд-серверов. Разумеется, их эффективность во многом определяется системами управления. Поэтому по мере развития технологий для ЦОД ожидаются новые разработки и в области управляющих систем. </p>
+ <blockquote> 
+  <p>По данным исследовательской компании Gartner, из-за устаревших сетей в ЦОД к 2010 г. расходы на ИТ увеличатся на 30%. </p>
+ 
+  <p>Согласно опубликованному в октябре 2007 г. докладу US Goldman Sachs IT Spending Survey, главной причиной виртуализации серверов в 44% компаний становится желание повысить загруженность аппаратных систем и сократить их стоимость. Годом раньше такую взаимосвязь усматривали лишь 34% компаний. </p>
+ </blockquote> 
+<p>Развиваются не только центры обработки данных, но и сети. Будущие виртуализованные ЦОД будут состоять из ресурсных пулов, соединенных между собою с помощью сетей. Таким образом, сеть станет фундаментальной основой ЦОД и будет выполнять в нем множество важных функций. Из-за этого требования к сетям будут существенно возрастать: в частности, сроки регламентных работ будут сокращаться или вовсе сходить на нет, поскольку сеть должна быть постоянно доступной, предоставляя необходимые ресурсы в динамическом режиме в любом месте и в любое время. Сеть будет работать с разными приложениями и приобретет функцию &laquo;оркестровки услуг&raquo; (service orchestration), т. е. сможет решать, какие именно ресурсы выделить тому или иному приложению, и автоматически выделять их туда, где они нужны в данный момент. Именно на уровне сети будут реализованы многие функции сервисно-ориентированной архитектуры (SOA). И наконец, сеть станет инструментом поддержки правил высокого уровня (политик), обеспечивающих максимальную эффективность использования ресурсов ЦОД. </p>
+ 
+<p>Аналитики утверждают, что через 5&ndash; 10 лет дата-центры очень сильно изменятся. Если сегодня они состоят из нескольких изолированных сегментов, в которых вычислительные ресурсы жестко привязаны к определенным приложениям, то в будущем все ресурсы ЦОД перейдут из физической в виртуальную инфраструктуру. Память, средства хранения, процессоры, базы данных и другие ресурсы станут виртуальными и будут предоставляться по требованию любому приложению, которое в них нуждается. Виртуальные ресурсы будут сгруппированы в пулы, причем пул, вполне возможно, будет состоять из физических ресурсов, распределенных на уровне ЦОД, города, страны или всей планеты. В любом случае для приложения пул будет выглядеть как единый ресурс. В результате уровень загруженности ресурсов ЦОД поднимется с нынешних 20 до более чем 90%. Через 5&ndash;10 лет резко повысится энергетическая эффективность ЦОД и эффективность систем охлаждения, а высокая экологичность ИТ-инфраструктуры станет непременным условием функционирования всех организаций. </p>
+ 
+<h2>Коммутационная платформа Cisco Nexus </h2>
+ 
+<p>Компания Cisco Systems (<a target="_blank" href="http://www.cisco.com">www.cisco.com</a>) вывела на рынок семейство Cisco Nexus &mdash; новое поколение коммутационных платформ класса ЦОД. По мере перехода ЦОД к поставке услуг сеть начинает играть центральную роль в управлении виртуальными ИТ-ресурсами и масштабировании рабочей нагрузки. Именно для этого предназначена платформа Cisco Nexus 7000, открывшая очередную главу в развитии инфраструктуры Cisco Data Center 3.0. </p>
+ <blockquote> 
+  <h3>Архитектура ЦОД от Cisco </h3>
+ 
+  <p>Первая версия разработанной Cisco архитектуры ЦОД, Data Center 1.0, представляла собой закрытую вычислительную среду. Вторая версия, Data Center 2.0, открыла приложения для более широкой аудитории, но работала недостаточно эффективно. </p>
+ 
+  <p>Архитектура нового поколения Data Center 3.0 знаменует собой переход от централизованной физической инфраструктуры (аппаратные устройства, блоки питания, системы охлаждения и т. д.) к тесно интегрированной виртуализованной среде. </p>
+ </blockquote> 
+<p>Новая платформа коммутации для ЦОД обладает целым рядом современных аппаратных и программных функций. Она имеет архитектуру Cisco TrustSec (Trusted Security) и работает под управлением ОС Cisco NX-OS (Nexus Operating System) вместе с системой сетевого управления Cisco Data Center Network Manager. Cisco Nexus 7000, флагманская модель семейства, поддерживает технологии Ethernet, IP и технологии хранения на единой унифицированной матрице. </p>
+ 
+<p>Cisco Nexus 7000 &mdash; флагманская и пока единственная модель из семейства коммутаторов Cisco Nexus, предназначенных для ЦОД. Это хорошо масштабируемая модульная платформа с емкостью коммутации до 15 Тбит/с на одном шасси, 512 портами 10 Gigabit Ethernet и поддержкой будущих технологий 40 и 100 Гбит/с Ethernet. Унифицированная архитектура коммутационной матрицы поддерживает технологию Ethernet и технологию хранения на единой платформе, предоставляя всем серверам доступ ко всем сетевым ресурсам и хранимым данным. Это создает широкие возможности для консолидации и виртуализации ЦОД. Основные компоненты унифицированной архитектуры включают унифицированные интерфейсы ввода-вывода и поддержку (в будущем) технологии Fibre Channel поверх Ethernet. Cisco Nexus 7000 отличается эффективной кабельной разводкой, оптимизированным потоком охлаждающего воздуха и надежной архитектурой. Полностью распределенный уровень данных при работе с ОС Cisco NX-OS позволяет обновлять версии производственных программных систем без остановки услуг. Незаметное обновление ПО в фоновом режиме сокращает объем административных задач и упрощает эксплуатацию комплексных систем. </p>
+ 
+<h3>Унифицированная коммутационная архитектура </h3>
+ 
+<p>Унифицированная коммутационная архитектура в ЦОД позволяет обойтись без строительства двух параллельных сетей: одной для хранения, другой &mdash; для вычислений и коммуникаций. В результате сокращается количество серверных интерфейсов и кабелей, упрощается инфраструктура коммутации. Кроме того, унифицированная архитектура позволяет заказчикам устанавливать более плотные и компактные серверы и повышать рабочую нагрузку ЦОД. В сочетании с функциями виртуализации эта технология помогает строить более эффективные дата-центры, увеличивать их жизненный цикл, максимально загружать установленные ресурсы и экономить энергию. Архитектура Cisco Nexus 7000 с унифицированной матрицей коммутации исключает потери и позволяет одновременно коммутировать трафик хранения, трафик Ethernet и IP. Производительность системы растет линейно с добавлением каждого нового модуля. Ее можно делить на логические разделы (партиции) для эффективной обработки одноадресного (unicast) и многоадресного (multicast) трафика, что позволяет с максимальной эффективностью поддерживать передачу данных, видеоуслуги и приложения для групповой работы. </p>
+ <blockquote> 
+  <p>Одна система Cisco Nexus 7000 способна поддерживать 5 млн одновременных сеансов видеосвязи между Лос-Анджелесом и Нью-Йорком с использованием технологии Cisco TelePresence. Это сокращает выброс углекислоты в атмосферу на 6,75 млн т за счет уменьшения числа служебных поездок пользователей систем Nexus и TelePresence. </p>
+ </blockquote> 
+<p>В настоящее время компания Microsoft проводит интенсивные испытания платформы Nexus 7000 на предмет безопасности, управляемости и производительности в лабораторной среде. </p>
+ 
+<h3>Новая ОС NX-OS </h3>
+ 
+<p>Ключевой компонент платформы Cisco Nexus 7000 &mdash; ОС NX-OS, предназначенная для повышения надежности ЦОД и консолидации разнородных сетей. NX-OS сочетает лучшие характеристики ОС Cisco SAN-OS, функции коммутации L2 и маршрутизации L3, а также современные функции виртуализации в единой операционной системе со знакомым интерфейсом Cisco IOS. Вот лишь некоторые из новых функций NX-OS: </p>
+ 
+<ul> 
+  <li>обновление версий без остановки услуг; </li>
+ 
+  <li>контексты виртуальных устройств; </li>
+ 
+  <li>эффективная работа систем; </li>
+ 
+  <li>интерфейсы XML для доступа к данным о коммутации и к любой команде. </li>
+ </ul>
+ 
+<p>NX-OS позволяет обновлять версии ПО, не прерывая доставки услуг, что значительно сокращает время простоев. Функции автоматической диагностики постоянно отслеживают работу всех программных компонентов ОС. При обнаружении сбоя NX-OS перезапускается с учетом текущего состояния без прекращения доставки услуг. Модульный дизайн ОС дает возможность изолировать сбои и выполнять процедуры автоматического восстановления в удаленном режиме без вмешательства человека. Новые функции виртуализации (например, контексты виртуальных устройств) позволяют делить систему на множество логических устройств, каждое из которых управляет собственными процессами и имеет собственный, независимый от других устройств интерфейс командной строки. Эта система подходит для хостинга операторских и сложных корпоративных административных моделей. Ее может одновременно использовать множество предприятий, каждое из которых будет работать в своей коммутационной среде. </p>
+ 
+<h3>Технология Cisco Trusted Security </h3>
+ 
+<p>Nexus 7000 стала первой платформой, поддерживающей объявленную в декабре 2007 г. архитектуру Cisco Trusted Security, которая интегрирует функции идентификации и учета роли пользователя в интересах безопасности ЦОД. Cisco TrustSec обеспечивает доверенную сегментацию трафика без сложных моделей адресации и неуправляемых списков контроля доступа (ACL). В результате появляется возможность переноса виртуальной машины в рамках ЦОД без ущерба для целостности данных и с использованием технологии шифрования AES-128 на каждом порту Nexus 7000. </p>
+ <blockquote> 
+  <h3>Новые возможности для ЦОД </h3>
+ 
+  <p>Новые решения Cisco для ЦОД способны полностью передать содержание академических научных библиотек США &mdash; около 2000 Тбайт &mdash; за 1,07 с. </p>
+ 
+  <p>Объем хранения, необходимый, чтобы запечатлеть каждого жителя нашей планеты на фотоснимке с высоким разрешением, равен 26 Пбайт (объем хранения в ЦОД Cisco уже достиг 7,4 Пбайт). Чтобы с помощью Nexus 7000 переслать каждому жителю нашей планеты его фотографию объемом 2 Мбайт, потребуется 28 мин. </p>
+ 
+  <p>Общий объем всех слов, произнесенных людьми за всю историю человечества, составляет 5 Экзабайт. Новая система Cisco для ЦОД передаст такой объем информации за 44 мин. </p>
+ </blockquote> 
+<p>Специалисты по ядерной безопасности из Ливерморской лаборатории (США) проверили новые коммутаторы Cisco для ЦОД в высокопроизводительной вычислительной среде, которой обычно пользуются ученые-ядерщики, применяющие приложения для расчета энергии ядерного синтеза, атмосферного моделирования и анализа других физических явлений. Оказалось, что новая платформа Cisco способна предоставить ученым солидные преимущества, в том числе более широкую полосу пропускания для передачи данных между параллельными файловыми системами и информационными архивами. </p>
+ 
+<h3>Cisco Data Center Network Manager </h3>
+ 
+<p>Платформа Cisco Nexus 7000 поддерживает средство сетевого управления Cisco Data Center Network Manager (DCNM), дающее представление обо всей сети ЦОД. Средство Cisco DCNM, созданное на основе системы Cisco Fabric Manager для сетей хранения, распознает сетевую топологию и использует функции визуализации для повышения эффективности эксплуатации сети и слежения за состоянием сетевых систем. Интерфейсы управления Nexus 7000 полностью совместимы с Cisco VFrame Data Center &mdash; платформой оркестровки, которая использует интеллектуальные сетевые функции для предоставления сетевых ресурсов в виде виртуализованных услуг. VFrame DC станет основным средством оркестровки услуг на платформе Nexus. </p>
+ 
+<p>Эксперты отмечают, что новая платформа Nexus 7000 стала для Cisco еще одним шагом к реализации своей стратегии для ЦОД нового поколения. Эта платформа упрощает работу ЦОД и поддерживает переход на унифицированную архитектуру коммутации. Платформа Cisco Nexus разработана на долгосрочную перспективу и обеспечивает простоту миграции, защиту инвестиций и четкий план будущих модернизаций, позволяющих виртуализовать сетевые ИТ-услуги. </p>
+ 
+<h3>Data Center Assurance Program </h3>
+ 
+<p>Cisco Data Center Assurance Program (DCAP) представляет собой программу тестирования на уровне решений, которая распространяется на все элементы инфраструктуры центра обработки. DCAP обеспечивает заказчику целый ряд преимуществ, в том числе сокращение сроков внедрения, уменьшение рисков, повышение стабильности, сокращение простоев, а также ускорение и повышение надежности процессов обновления технологий. Cisco объявила о включении в программу DCAP систем Cisco ACE (Application Control Engine), серверов VMware ESX, систем VMware VMotion и некоторых других решений. </p>
+ 
+<h2>Коммутаторы Cisco Catalyst </h2>
+ 
+<h3>Catalyst 6500 </h3>
+ 
+<p>Чтобы перевести доступ к ЦОД с технологии Gigabit Ethernet на 10 Gigabit Ethernet, Cisco предлагает оптимизированный для этой среды 16-портовый модуль, поддерживающий до 130 портов 10 Gigabit Ethernet на один коммутатор Cisco Catalyst 6500 и 260 портов на одну виртуальную коммутационную систему Catalyst 6500 Virtual Switching System. Этот модуль повышает архитектурную масштабируемость коммутаторов Catalyst 6500 и вдвое сокращает энергопотребление на каждый порт. При этом новый модуль удваивает плотность портов 10 Gigabit Ethernet на коммутаторах Catalyst 6500 и обеспечивает высокопроизводительную агрегацию кампусных локальных сетей (LAN), масштабируя полосу пропускания для поддержки видео, мобильности и групповой работы. </p>
+ 
+<p>Чтобы упростить эксплуатацию ЦОД и максимально защитить инвестиции заказчиков, Cisco вывела на рынок новый коммутатор Cisco Catalyst 6509 Enhanced Vertical Chassis (V-E), входящий в семейство продуктов Cisco Catalyst 6500-E. Новый коммутатор имеет пять вертикальных слотов. Поток охлаждающего воздуха проходит от передней к задней панели, соответствуя современной концепции &laquo;горячих&raquo; и &laquo;холодных&raquo; рядов в вычислительных центрах и операторских центрах колокации. Модель Cisco Catalyst 6509 Enhanced V-E будет поддерживать полосу пропускания до 80 Гбит/с на слот для подключения будущих модулей и систем Supervisor Engine, что на многие годы защитит архитектурные инвестиции и удовлетворит спрос на полосу пропускания. Сегодня Catalyst 6509 V-E поддерживает системы Catalyst 6500 Supervisor Engine 720 и 32, а также связанные с ними сервисные модули для локальных и глобальных сетей. </p>
+ 
+<h3>Catalyst 4900M </h3>
+ 
+<p>Коммутатор Cisco Catalyst 4900M разработан и оптимизирован для агрегации серверов ЦОД, установленных в монтажные стойки. Он отлично подходит для ЦОД, где требуется максимальная гибкость. Это устройство поддерживает высокую гибкость транспорта с оптимизированной буферизацией, коммутацией и смешиванием портов 10/100/1000 и 10 Gigabit Ethernet (до 40 портов 10/100/1000 или 24 портов 10 Gigabit Ethernet). Коммутатор Catalyst 4900M высотой 2RU имеет фиксированную конфигурацию с емкостью коммутации 320 Гбит/с (250 млн пакетов в секунду) и обеспечивает непрерывность работы за счет избыточных блоков питания и охлаждения. Этот коммутатор защищает инвестиции заказчиков и облегчает переход на технологию 10 Gigabit Ethernet. </p>
+ 
+<h3>Виртуализация блейд-коммутаторов </h3>
+ 
+<p>Пытаясь повысить масштабируемость и консолидировать ресурсы в центрах обработки, многие корпоративные заказчики обращаются к блейд-серверам. Напомним, что блейд-архитектура позволяет устанавливать множество серверов-лезвий на одном шасси. В январе Cisco объявила о доступности новых блейд-коммутаторов Cisco Catalyst для монтажных стоек Dell PowerEdge M1000e. Заказчики теперь получат единую систему сетевой безопасности, высокую доступность и качество систем с гигабитной производительностью от граничной серверной до граничной клиентской зоны. </p>
+ 
+<p>Новые блейд-коммутаторы Cisco Catalyst поддерживают технологию виртуализации VBS (Virtual Blade Switch), позволяющую управлять восемью физическими коммутаторами как одним логическим. Эта функция делает сетевую инфраструктуру значительно менее сложной; именно благодаря ей блейд-коммутаторы повышают производительность и надежность сети при одновременном упрощении дизайна, эксплуатации и управления ЦОД. Технология VBS поддерживает небывало высокую (160 Гбит/с) пропускную способность в восходящем канале и одновременно удваивает полосу пропускания для сервера. Это особенно важно для новых приложений Web 2.0, увеличивающих объем межсерверных коммуникаций. </p>
+ 
+<h3>Коммутаторы с расширенной функцией Power-over-Ethernet </h3>
+ 
+<p>На проходившей в начале года в Барселоне конференции Cisco Networkers 2008 компания Cisco представила новые модели коммутаторов Catalyst и функции Campus Communication Fabric для сетевых услуг, которые повысят гибкость работы заказчиков и помогут им использовать сеть как платформу для ускорения доставки приложений и поддержки развития инфраструктуры. Cisco впервые в отрасли внедрила функции enhanced Power-over-Ethernet (ePoE, расширенные функции передачи электропитания по каналам Ethernet) во всех моделях коммутаторов Catalyst, начиная с Catalyst 3750-E и 3560-E и заканчивая моделями Catalyst 6500 и Catalyst 4500-E. Функция ePoE подает электропитание на точки беспроводного доступа Cisco 802.11n через единый порт коммутатора, заметно упрощая эксплуатацию сети и повышая гибкость безопасных интегрированных проводных/ беспроводных сетей. Cisco также объявила о доступности новых фиксированных агрегационных решений для коммутации 10 Gigabit Ethernet, которые реализованы в коммутаторах Catalyst 3560-E, и о поддержке функции Power-over-Ethernet (PoE) в коммутаторах Catalyst 2960, что повышает гибкость развертывания этих систем на крупных, средних и малых предприятиях. </p>
+ 
+<p>Cisco Catalyst 3750-E и 3560-E представляют собой устройства корпоративного класса, устанавливаемые в распределительных шкафах. Это агрегационные коммутаторы, повышающие производительность за счет поддержки приложений, работающих в режиме реального времени (IP-телефония, беспроводная связь, видео и т. д.). Модели Catalyst 3750-E и 3560-E привлекательны для заказчиков из разных отраслей такими характеристиками, как большое время наработки на отказ, высокое быстродействие и возможность строительства инфраструктур, готовых к будущим технологиям. Появившаяся у коммутаторов Cisco Catalyst 3750-E и 3560-E функция ePoE предоставила заказчикам все преимущества высокой производительности и мультимедийных приложений в беспроводных сетях 802.11n. Благодаря расширенным возможностям энергопитания по каналам Ethernet электричество можно подавать через единый порт на точки доступа 802.11n Cisco Aironet 1250, и при этом не требуется отдельный блок питания, Ethernet- и силовой кабели. Функция ePoE обеспечивает подачу питания мощностью до 18,5 Вт на порт во всех коммутаторах семейства Catalyst 3750-E и 3560-E. Со II квартала 2008 г. она реализуется и в коммутаторах Catalyst 6500 и 4500-E. </p>
+ 
+<p>Чтобы повысить производительность малых офисов и предприятий, Cisco установила функцию PoE на коммутаторах семейства Catalyst 2960, обеспечив тем самым поддержку приложений и услуг с широкой функциональностью, включая функции мобильности и конвергентные приложения для голоса, данных и видео. Кроме того, Cisco вывела на рынок новое устройство Catalyst 2960 Compact Powered Device (PD), получающее электропитание по каналам PoE и не имеющее собственного блока питания. В результате сетевая функциональность начинает распространяться за пределы распределительного шкафа, удовлетворяя растущие требования пользователей к системам групповой работы. </p>
+ 
+<p>В семействе продуктов Cisco Catalyst 3560-E появилось два 12-портовых коммутатора &mdash; 10 Gigabit Ethernet и Gigabit Ethernet с двумя портами 10 Gigabit Ethernet, который позволяет постепенно переходить от технологии Gigabit Ethernet к 10 Gigabit Ethernet по мере роста требований бизнеса. Новые компактные модели высотой 1RU подходят для среды с ограниченной рабочей площадью и мощностью питания. Они повышают производительность и отличаются высокой доступностью благодаря таким функциям, как быстрая конвергенция коммутаторов, двойные источники питания и избыточные вентиляторы охлаждения. Благодаря этому новые коммутаторы надежно поддерживают критически важные для бизнеса приложения. Коммутаторы Catalyst 3560E-12D и 3560E-12SD готовы к поддержке конвергентных приложений, работающих в режиме реального времени (Cisco TelePresence, унифицированные коммуникации Cisco и ресурсоемкие приложения клиент-сервер). Этому способствуют защищенные услуги унифицированной сети на уровнях 3 и 2, а также поддержка протоколов IPv4 и IPv6. </p>
+ 
+<h2>Сетевая безопасность и производительность: Cisco ASA 5580 </h2>
+ 
+<p>Развитие Интернета и разработка приложений Web 2.0 привели к появлению на рынке множества устройств новых типов и к широкому распространению сложного мультимедийного контента. Все это создало большие трудности для существующих систем безопасности, которые зачастую не обеспечивают высокой скорости обработки транзакций и не поддерживают правила защиты информации, необходимые в современной сетевой среде. В результате ИТ-специалистам приходится тратить время и силы на поддержку самых элементарных услуг безопасности, не уделяя достаточно внимания более сложным угрозам и задачам мониторинга, аудита и удовлетворения нормативных и законодательных требований. Чтобы соответствовать растущим требованиям предприятий к системам сетевой безопасности, Cisco вывела на рынок новое адаптивное устройство Cisco ASA 5580 (Adaptive Security Appliance) &mdash; самое высокопроизводительное устройство компании в области сетевой безопасности. Платформа безопасности Cisco ASA 5580 одинаково хорошо подходит для работы в качестве масштабируемого межсетевого экрана с пропускной способностью до 20 Гбит/с и в качестве концентратора удаленного доступа в сетях SSL/IPSec VPN на 10 тыс. пользователей. </p>
+ 
+<p>Решение Cisco ASA 5580 предназначено для защиты мультимедийных транзакционных приложений, которые чувствительны к задержкам и работают в корпоративных ЦОД и в Интернет-шлюзах. Это решение обладает лучшей пропускной способностью, самой высокой в отрасли скоростью соединений и очень низкой латентностью и поддерживает самые разнообразные конфигурации. В результате Cisco ASA 5580 отлично подходит для защиты организаций, использующих ресурсоемкие приложения для передачи голоса, видео и данных, резервирования информации, научных и grid-вычислений и финансовых операций. </p>
+ 
+<p>На рынке доступны три модели устройства Cisco ASA 5580: устройства безопасности Cisco ASA 5580-40 и 5580-20 и концентратор удаленного доступа к виртуальным частным сетям (VPN) Cisco ASA 5580-20 Remote Access VPN Concentrator. Старшая модель Cisco ASA 5580-40 поддерживает до 2 млн одновременных соединений и 750 тыс. правил безопасности и имеет пропускную способность межсетевого экранирования до 10 Гбит/с с возможностью расширения до 20 Гбит/с, что крайне необходимо для ресурсоемких приложений, связанных с обменом видеоконтентом и хранением данных в сетях SAN. Обе модели Cisco ASA 5580-20 поддерживают до 1 млн одновременных соединений и имеют пропускную способность до 5 Гбит/с. Все модели обеспечивают лучшую в отрасли скорость обработки соединений (150 тыс. соединений в секунду), имеют очень низкий уровень задержки (30 мс) и хорошо работают даже в сложной сетевой среде со смешанным трафиком. Таким образом, ИТ-отделы получают высокую производительность без ущерба для эффективности и надежности. </p>
+ 
+<p>Устройства Cisco ASA 5580 быстро справляются с самыми сложными проблемами безопасности с помощью новой технологии Cisco NetFlow v9, которая опирается на многолетний опыт Cisco в области сетевой телеметрии и включает новые средства борьбы с угрозами. Эта технология резко сокращает количество и объем сообщений о событиях в сфере безопасности и упрощает агрегацию событий. Сообщения о событиях могут передаваться из системы NetFlow v9 в коллектор Cisco NetFlow, в системы агрегации других компаний, поддерживающих технологию NetFlow v9, или (в недалеком будущем) в систему мониторинга, анализа и реагирования Cisco, которая реализует современные функции корреляции событий и отчетности. С помощью технологии NetFlow v9 устройства Cisco ASA 5580 управляют событиями безопасности и обеспечивают всеобъемлющий мониторинг этих событий в полном соответствии с самыми строгими законодательными и нормативными требованиями в самой сложной высокоскоростной среде. </p>
+ 
+<p>Cisco ASA 5500 &mdash; единственное в отрасли семейство продуктов с полной поддержкой протокола IPsec, а также клиентского, бесклиентского и портального удаленного доступа SSL VPN. В сочетании с высокопроизводительным межсетевым экранированием такая функциональность делает платформу Cisco ASA 5580 единым устройством, способным надежно защитить распределенные корпоративные ЦОД, удаленные офисы и мобильных пользователей. Заказчик имеет право добавить функции удаленного доступа по технологии VPN к любой модели Cisco ASA 5500, однако помимо самого устройства в комплект поставки концентратора Cisco ASA 5580-20 Remote Access VPN Concentrator изначально входит лицензия SSL на одновременную поддержку 10 тыс. пользователей на единой платформе. Кластеры Cisco ASA 5580 поддерживают до 100 тыс. удаленных пользователей. Высокая гибкость и масштабируемость Cisco ASA 5580 дают возможность использовать любые оконечные клиентские устройства (в том числе работающие под управлением ОС Microsoft Windows Vista, Windows Mobile и т. д.), а также клиентские и бесклиентские сети SSL VPN, обеспечивающие удаленным сотрудникам и партнерам доступ к критически важным корпоративным данным в любом месте в любое время. Платформы Cisco ASA 5580 поддерживают самые разные методы удаленного доступа, включая TLS (Transport Layer Security), Datagram TLS, IPsec и бесклиентские коммуникации, что значительно расширяет возможности заказчика. Унифицированный графический интерфейс управления облегчает управление и контроль, а также предоставляет ИТ-специалистам удобное устройство для обработки больших потоков трафика. </p>
+ 
+<h2>Предотвращение сетевых вторжений </h2>
+ 
+<p>Чтобы обрабатывать трафик разных видов и соответствовать постоянно ужесточающимся требованиям к безопасности корпоративных сетей, компания Cisco расширила свой портфель решений для предотвращения сетевых вторжений, который считается одним из лучших на рынке. В нем появился самый высокопроизводительный на сегодняшний день IPS-сенсор &mdash; Cisco IPS 4270. Он разработан для сетевой среды, где передаются большие объемы медийного и транзакционного трафика, и удовлетворяет требованиям безопасности, предъявляемым к современным корпоративным сетям, в которых используются приложения групповой работы, системы голосовой и видеосвязи, а также социальные сетевые средства. </p>
+ 
+<p>Рост сложности и разнообразия трафика требует все более мощных средств борьбы с сетевыми вторжениями. Устройство Cisco IPS 4270 решает эти проблемы, предоставляя системам безопасности широкую полосу пропускания без ущерба для текущей инспекции трафика. Сенсор работает со скоростью до 4 Гбит/с в среде с интенсивными потоками медиатрафика, включая мультимедийный Web-контент и видео. В сетях с большими объемами транзакционного трафика (сети электронной коммерции, решения для торговых точек, средства мгновенных сообщений и услуги &laquo;голос поверх IP&raquo;) новое устройство обеспечивает скорость до 2 Гбит/с, поддерживая обработку до 20 тыс. транзакций в секунду. Все устройства Cisco IPS помогают ИТ-специалистам распознавать уязвимые места в сетевых системах и эффективно ликвидировать их с помощью правил (политик), не допуская прорыва хакеров в корпоративную сеть. Высокая производительность устройств Cisco IPS 4270 позволяет компаниям надежно защищать свои опорные сети, работающие с большими объемами трафика. </p>
+ 
+<p>Помимо высокой производительности, Cisco IPS 4270 отличается еще рядом характеристик, оптимальных для среды ЦОД. Поскольку для дата-центров характерна высокая сложность (каждое предприятие создает для ЦОД уникальную архитектуру для поддержки своих особых требований), устройство Cisco IPS 4270 должно иметь высокую гибкость и поддерживать функции виртуализации. Это устройство позволяет ИТ-отделам &laquo;виртуализовать&raquo; процессы инспекции и внедрения правил, привязывая услуги предотвращения вторжений к конкретной архитектуре конкретного ЦОД. </p>
+ 
+<p>Cisco IPS 4270 имеет избыточный блок питания, допускающий горячую замену, и масштабируемый интерфейс с высокой плотностью медных портов и волоконно-оптических портов Gigabit Ethernet. Это устройство поддерживает тысячи интерфейсов виртуальных локальных сетей (VLAN). Оно хорошо интегрируется с системами Cisco IPS Device Manager и работает вместе с ними в автономном режиме. В более широкой среде сенсор Cisco IPS 4270 интегрируется с системами Cisco Security Manager и Cisco Security MARS (система мониторинга и реагирования), обеспечивая централизованное управление всей инфраструктурой сетевой безопасности. </p>
+ 
+<h2>Интеграция Cisco VFrame с инфраструктурой VMware </h2>
+ 
+<p>Решение Cisco VFrame Data Center теперь интегрировано с виртуальной инфраструктурой VMware. Этот шаг имеет большое значение для стратегии Cisco для ЦОД нового поколения &mdash; Data Center 3.0. Решения и услуги, поддерживающие стратегию Cisco Data Center 3.0, помогают заказчикам более эффективно использовать ресурсы ЦОД, обеспечивают непрерывность бизнеса и улучшают безопасность данных. Напомним, что Cisco VFrame DC объединяет вычислительные, сетевые ресурсы и ресурсы хранения заказчика в единый пакет виртуализованных услуг. Такой подход позволяет быстро просматривать все услуги, работающие на прикладном уровне, диагностировать их и менять средства управления. Решение состоит из четырех модульных компонентов: design (проектирование), discovery (распознавание), deploy (установка) и operations (эксплуатация), которые связаны воедино с помощью хорошо защищенного интерфейса, предоставляющего управляемый доступ к услугам множеству организаций. Cisco VFrame DC сокращает сроки внедрения приложений, повышает общую загруженность сетевых ресурсов и увеличивает гибкость системы. Интеграция этого решения с инфраструктурой VMware расширит для заказчиков возможности автоматизации, включая предоставление ресурсов сервера VMware ESX по требованию и гибкую настройку конфигурации сетевых услуг. Кроме того, заказчики смогут быстрее координировать процессы предоставления ресурсов хранения и сетевых ресурсов. </p>
+ 
+<p>Техническое сотрудничество между Cisco и VMware началось с тесной интеграции технологий Cisco Catalyst и MDS для поддержки масштабирования инфраструктур VMware. Добавление к этому решению широкой функциональности, связанной с оркестровкой услуг, позволило системе Cisco VFrame DC оказывать все необходимые сетевые услуги Интернет-приложениям, работающим в среде VMware, в том числе межсетевым экранам, системам балансировки нагрузки, серверным и коммутационным каналам и спискам контроля доступа ACL через единый графический интерфейс пользователя. Благодаря интеграции сетевые специалисты и специалисты в области хранения и безопасности данных могут работать друг с другом, используя единый интерфейс, что в свою очередь резко повышает производительность и помогает выделять необходимые ресурсы в режиме реального времени. Интеграция позволяет центрам VFrame в динамическом режиме загружать сервер VMware ESX на физические машины, настраивать системы ввода-вывода физического сервера на взаимодействие с коммутаторами ЦОД Cisco и поддерживать двустороннюю связь с VMware VirtualCenter через интерфейсы API для координации конфигурационных настроек. VFrame DC загружает сервер VMware ESX Server на физическую машину из сети хранения (SAN) менее чем за 10 мин. VFrame DC автоматически настраивает конфигурацию внутренних систем сети хранения, включая матрицу коммутации и совместно используемые разделы LUNS, по шаблонам, заранее определенным сетевыми специалистами и специалистами по хранению данных. Автоматическое добавление новых экземпляров сервера VMware ESX по требованию и с учетом наличия свободных ресурсов, а также внедрение правил (политик) обеспечения высокой доступности систем &mdash; все это повышает гибкость ИТ-инфраструктуры, позволяя создавать новый сервер с готовыми настройками в считанные минуты. </p>
+ 
+<p>Результаты сотрудничества Cisco с VMware впервые были продемонстрированы на конференции VMworld 2007, которая прошла в Сан-Франциско в сентябре 2007 г. </p>
+ 
+<p><b>Автоматическое выделение ресурсов виртуальной инфраструктуры. </b>Специалисты Cisco продемонстрировали выделение ресурсов доступа для сетей хранения SAN и локальных сетей LAN в среде VMware ESX Server, а также автоматический аварийный подхват физических серверов, на которых установлен программный сервер VMware ESX. Двусторонний интерфейс Cisco VFrame DC API обеспечивает связь с интерфейсом VMware VirtualCenter VI API, что позволяет управлять выделением ресурсов для сетей SAN и LAN в соответствии с заранее определенными сервисными шаблонами. </p>
+ 
+<p><b>Виртуализация N Port ID (NPIV) и Cisco SAN Device (SDV).</b> NPIV позволяет единому F-порту связываться с множеством виртуальных адаптеров хост-шины (HBA, Host Bus Adapter), присваивать номера логическим разделам (LUN) и поддерживать зонирование и управление качеством услуг (QoS) так, как это обычно происходит на отдельных физических серверах, без потери преимуществ виртуальной серверной технологии. Cisco SDV создает виртуальные устройства SAN для ускоренного переключения дисков, аварийного подхвата и замены сбойных систем хранения и для минимизации простоя при замене адаптеров хост-шины и в случае переноса приложения на другой сервер. </p>
+ 
+<p><b>Виртуальные сетевые услуги в среде VMware. </b>Сервисно-ориентированное выделение сетевых ресурсов (межсетевых экранов и систем балансировки нагрузки) обеспечивает консолидацию и централизацию сетевых ресурсов и значительно сокращает эксплуатационные расходы в ЦОД. </p>
+ 
+<h2>Поддержка высокопроизводительных вычислений </h2>
+ 
+<p>На выставке SuperComputing 2007 Cisco продемонстрировала продукты и инструментальные средства для поддержки высокопроизводительных вычислений &mdash; новый коммутатор Cisco SFS 3504 Multifabric Switch (шлюз для ускорения взаимодействия между серверами и средствами хранения данных с помощью выделенных централизованных высокоскоростных каналов) и устройство Cisco SFS 3504, работающее как шлюз агрегации (предоставляет заказчикам, активно использующим средства хранения, широкую полосу пропускания для доступа к общим централизованным ресурсам). Кроме того, Cisco представила набор инструментальных средств FACT (Fabric Analysis and Correlation Toolkit), предназначенных для анализа и корреляции коммутационных систем, которые могут использоваться для управления всей коммутационной матрицей InfiniBand. FACT ускоряет установку и запуск в эксплуатацию вычислительных кластеров и распознает ошибки, замедляющие работу. Новые продукты Cisco должны ускорить доступ к хранимым данным, упростить управление коммутацией, усовершенствовать диагностику и облегчить устранение неисправностей. </p>
+ 
+<p>Семейство продуктов Cisco для высокопроизводительных вычислений (HPC) включает полный набор коммутаторов Ethernet, InfiniBand и Fibre Channel с лучшей в своем классе масштабируемостью, надежностью и безопасностью, с общими средствами управления, интерфейсами для настройки конфигурации и общей платформой виртуализации, которая поддерживает единый подход к управлению, независимо от используемого протокола. Все эти решения разработаны в рамках стратегии Cisco Data Center 3.0. </p>
+ 
+<h3>Шлюзовая платформа Cisco SFS 3504 </h3>
+ 
+<p>Cisco SFS 3504 &mdash; это шлюз InfiniBand нового поколения с удвоенной скоростью передачи данных, предназначенный для подключения широко распределенных серверных ресурсов к централизованным средствам хранения (сетям SAN и системам NAS). Cisco SFS 3504 имеет модульную архитектуру, поддерживает до четырех слотов расширения, обладает лучшей в своем классе мультитерабитной соединительной панелью (backplane), способной поддерживать сотни серверов на едином шасси. Совместимость шлюзовых модулей с технологиями коммутации Fibre Channel и Ethernet позволяет обойтись без изменений в существующих сетях хранения. Компания NetApp (<a target="_blank" href="http://www.netapp.com">www.netapp.com</a>) вместе с Cisco протестировала, испытала и оценила совместимость шлюза Cisco SFS 3504 с системами NetApp Data Ontap GX и Data Ontap 7G в среде высокопроизводительных вычислений. </p>
+ 
+<p>Шлюзы SFS 3504 состоят из модулей расширения, допускающих горячую замену. Это позволяет буквально на лету расширять емкость хранения систем Fibre Channel и Ethernet. Совместно используемые агрегированные шлюзовые порты и соединения InfiniBand, работающие на скорости 20 Гбит/с, предоставят серверным кластерам более широкую полосу пропускания, чем была доступна индивидуальным серверам. Шлюзовый коммутатор SFS 3504 &mdash; это 12 портов InfiniBand DDR (20 Гбит/с), шестипортовый шлюз 1GE InfiniBand-to-Ethernet, двухпортовый 10GE InfiniBand-to-Ethernet и четырехпортовый шлюз 4Gbps InfiniBand-to-Fibre Channel. </p>
+ 
+<h3>Набор FACT </h3>
+ 
+<p>FACT (Fabric Analysis and Correlation Toolkit) представляет собой набор инструментальных средств для быстрого анализа всей коммутационной матрицы InfiniBand и поиска ошибок. FACT создает централизованную платформу для мониторинга и управления вычислительными сетями и отдельными сетевыми компонентами (кабелями, адаптерами и т. д.), требующими особого внимания. FACT упрощает установку и управление системами коммутации InfiniBand, предоставляет функции системного журналирования (syslog) для упреждающего мониторинга и поддерживает функции высокой доступности. Кроме того, FACT надежно аутентифицирует все устройства (SSH/SSL) и проверяет прошивку ОС на всех подключенных серверах и коммутаторах. </p>
+ 
+<h3>Сотрудничество с HP </h3>
+ 
+<p>Cisco и HP (<a target="_blank" href="http://www.hp.com">www.hp.com</a>) сотрудничают в области поставки интегрированных конфигураций на рынок высокопроизводительных вычислений. Они тестируют разнообразные конфигурации подключенных блейд-систем, добиваясь минимальной задержки и максимальной пропускной способности систем InfiniBand. В частности, Cisco и НР протестировали новую кластерную платформу HP для рабочих групп, основанную на блейд-серверах HP BladeSystem c3000. Доступ к проверенным и сертифицированным конфигурациям упрощает и ускоряет внедрение высокопроизводительных вычислений у заказчиков. </p>
+ 
+<h3>Использование коммутаторов Cisco Infiniband </h3>
+ 
+<p>Коммутаторы серии Cisco SFS InfiniBand поддерживают высокоскоростную обработку онлайновых транзакций в крупной розничной торговой компании Cabelas, обеспечивают разработку космических технологий в компании Andrews Space и проведение химических исследований в Гарвардском университете. Семейство высокопроизводительных коммутационных серверов Cisco отличается лучшей в своем классе масштабируемостью, доступностью и безопасностью. Кроме того, оно использует единый набор средств управления, конфигурационных интерфейсов и функций виртуализации. Продукты серии Cisco SFS InfiniBand поддерживают крупнейшие в мире вычислительные кластеры и без особых затрат снижают до минимума задержку при работе ресурсоемких приложений, где важна каждая микросекунда. </p>
+ <blockquote> 
+  <h3>Применение инфраструктуры Cisco для ЦОД </h3>
+ 
+  <p>Компания Cedacri (<a target="_blank" href="http://www.cedacri.it">www.cedacri.it</a>), ведущий поставщик ИТ-услуг предприятиям банковского и финансового сектора на итальянском рынке, приобрела инфраструктуру Cisco для ЦОД. Услугами Cedacri ежедневно пользуются 22 млн клиентов ста с лишним банков и различных финансовых организаций, в том числе 70 кредитных учреждений, насчитывающих около 2,5 тыс. отделений. Технология Cisco поможет компании Cedacri доставлять услуги финансовым организациям, не расходуя немалых сумм на строительство локальных ЦОД. При этом предприятия, обслуживаемые компанией Cedacri, получат более дешевую междугородную и международную связь. Сетевая технология Cisco ЦОД поможет Cedacri создать в Милане (один из главных финансовых центров Италии) точку присутствия и соединить ее с двумя существующими ЦОД, отстоящими друг от друга более чем на 150 км. Миланские банки и финансовые учреждения будут платить только за связь между своими офисами и точкой присутствия Cedacri в Милане. Кроме того, они получат доступ к специализированным услугам Cedacri для банковского сектора (ИТ-аутсорсинг, аварийное восстановление, поддержка непрерывности бизнеса, хранение данных и т. д.) через высокоскоростной 10-Гбит канал с низким уровнем задержки. </p>
+ 
+  <p>Технология Cisco для ЦОД основана на сервисно-ориентированной архитектуре Cisco SONA, которая дает возможность разрабатывать интегрированные сетевые решения для оптимизации приложений, бизнес-процессов и сетевых ресурсов. К тому же Cisco SONA создает масштабируемую инфраструктуру для внедрения будущих приложений и услуг. Cedacri использует коммутаторы Cisco Catalyst 6500 для передачи данных по 10-Гбит каналу FCoIP (оптоволоконный канал Fibre Channel поверх IP) между существующими ЦОД и Миланом. Помимо прочего, эти коммутаторы поддерживают множество полезных функций безопасности, в том числе распознавание атак и межсетевое экранирование. В ЦОД Cedacri будут также установлены многоуровневые коммутаторы Cisco MDS 9000, поддерживающие сегментацию вычислительных и сетевых ресурсов на логическом, а не на физическом уровне. Эти коммутаторы помогут компании Cedacri быстрее и эффективнее внедрять новые услуги и доставлять их заказчикам. </p>
+ </blockquote> 
+<p>Компания Cabelas (<a target="_blank" href="http://www.cabelas.com">www.cabelas.com</a>) со штаб-квартирой в городе Сидней (шт. Небраска, США) считается ведущим мировым поставщиком продуктов для отдыха на природе. Чтобы справиться с пиками спроса в сезон массовых отпусков, ИТ-специалисты Cabelas решили заменить гигабитную корпоративную сеть более производительным решением и поменять устаревшую сетевую инфраструктуру. Новое решение должно было проработать как минимум три года, учитывая все новые тенденции развития технологий и увеличения объема сетевого трафика. В итоге специалисты компании остановили свой выбор на решении Cisco SFS 7000 Series InfiniBand, которое предоставляет недорогую конкурентоспособную полосу пропускания при низкой задержке и высокой производительности. Коммутаторы Cisco InfiniBand установлены в трех центрах обработки данных Cabelas, распределенных по территории США. Решение Cisco зеркалирует данные в разных центрах и восстанавливает их в считаные минуты в случае отказа или сбоя в основном центре. Еще одно преимущество этого решения &mdash; низкий уровень задержки в системе коммутации, позволяющий легко управлять большими объемами и пиками данных. </p>
+ 
+<p>Компания Andrews Space (<a href="http://www.andrews-space.com" target="_blank">www.andrews-space.com</a>) из Сиэтла занимается интеграцией аэрокосмических систем и разработкой космических технологий (она была создана в 1999 г. для коммерциализации и развития космических исследований). Сравнив возможности различных процессоров и коммуникационных технологий для обслуживания клиентских контрактов, специалисты Andrews Space решили построить новый кластер с параллельными вычислениями, в котором серверы Dell будут подключены друг к другу с помощью решения Cisco SFS 7000P InfiniBand. Каждая система Dell состоит из четырех процессоров Intel Xeon 5080 с частотой 3,73 ГГц, что образует эквивалент 40-компьютерного кластера. Устройства Cisco SFS 7000P InfiniBand соединяют отдельные серверы в единую систему с высокой производительностью и низкой латентностью. В состав коммутатора входят десять 10-Гбит адаптеров InfiniBand HCA. По наблюдениям специалистов Andrews Space, задержка при передаче сигнала от процессора к процессору составляет около 4 мс, а общая латентность коммутатора &mdash; всего 200 нс. Решение, состоящее из новых серверов Dell и коммутаторов Cisco SFS 7000P InfiniBand, повысило загруженность вычислительных систем с 20 до более чем 90%. </p>
+ 
+<p>Факультет химии и химической биологии считается ведущим центром химических исследований в Гарвардском университете (<a href="http://www.harvard.edu" target="_blank">www.harvard.edu</a>). На факультете создана мощная инфраструктура высокопроизводительных вычислений для поддержки учебного процесса и научных исследований. Приложения для химических расчетов поддерживает унифицированная система, состоящая из серверного кластера, Ethernet-коммутаторов Cisco Catalyst, коммутаторов Cisco SFS 3012 InfiniBand и многоуровневых систем сетевого хранения Cisco MDS 9000. Эта система обеспечивает кластерные вычисления, общий доступ к данным и их высокую доступность, что жизненно важно для современных химических исследований. По мнению ИТ-специалистов университета, новая инфраструктура полностью отвечает вычислительным требованиям. С момента ее создания факультет практически не испытывает прежних проблем с полосой пропускания и емкостью. Вместе с инженерами из Cisco и IBM специалисты проанализировали и испытали высокопроизводительные функции файловых систем и общих дисков, которыми отличается технология InfiniBand, и убедились, что эта технология работает наполовину быстрее, чем архитектура Fibre Channel. </p>
+ 
+<h2>Промышленные коммутаторы Cisco </h2>
+ 
+<p>Cisco вывела на рынок семейство коммутаторов Cisco Industrial Ethernet 3000, предназначенных для работы на производстве, в интеллектуальных транспортных системах, на энергетических и коммунальных подстанциях и в других агрессивных средах. Коммутаторы Cisco Industrial Ethernet 3000, основанные на открытых сетевых стандартах и протоколах, а также на опыте Cisco в области Ethernet-коммутации и промышленных Ethernet-приложений, отличаются высокой надежностью, производительностью и современными функциями, адаптированными для агрессивной среды. Промышленные сети, предназначенные для автоматизации и управления трафиком в реальном времени, требуют оптимизированных решений для фильтрации многоадресного трафика, профилирования параметров QoS, поддержки правил безопасности и высокопроизводительных приложений. Сети, используемые в сборочных цехах, обычно отделены от офисных сетей, что приводит к формированию изолированных зон, где решения принимаются независимо от общей ситуации. Это составляет большую проблему для глобальных компаний, стремящихся максимально увеличить прибыль, сократить издержки в цепочке поставок и минимизировать риски. </p>
+ 
+<p>Коммутаторы Cisco Industrial Ethernet (IE) 3000 были разработаны специально для того, чтобы предоставить заказчикам хорошо защищенную от физических воздействий, простую в использовании и безопасную коммутационную инфраструктуру, способную работать в самой жесткой и агрессивной среде. Устройства Cisco IE 3000 поддерживают до 150 конфигураций портов, медные и волоконно-оптические Ethernet-соединения и разные варианты электропитания. Эти коммутаторы, сертифицированные для работы в жестких условиях повышенной температуры, вибрации, ударов и пиков напряжения, представляют собой идеальное решение для промышленной автоматизации. Они быстро настраиваются с помощью шаблонов, оптимизированных для промышленных приложений. Функции безопасности в коммутаторах Cisco IE 3000, такие, как списки ACL для сетевых уровней 1&ndash;4, поддержка протоколов аутентификации (в том числе IEEE 802.1x), средства контроля сетевого доступа (NAC) и многоуровневая парольная защита, позволяют предоставлять доступ к сети и информации только авторизованным пользователям. Замена коммутаторов не требует смены программной конфигурации; для этого служит функция SwapDrive, позволяющая сотрудникам, даже не имеющим знаний и навыков в области ИТ, быстро и легко менять аппаратные средства. Совместимость Cisco IE 3000 с протоколом синхронизации IEEE 1588 дает возможность поддерживать высокопроизводительные приложения с точностью до наносекунды и проводить анализ причин отказов и сбоев с помощью высокоскоростного сбора данных с метками времени. </p>
+ 
+<p><em>По материалам корпорации Cisco Systems.</em></p>
+ </DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25261.html'>Сетевые новинки Dell для дата-центров </A></b></li><li><b><A href='detail.php@ID=25257.html'>Недорогая беспроводная точка доступа Cisco </A></b></li><li><b><A href='detail.php@ID=25222.html'>Новые коммутаторы Cisco для ЦОД и облачных сервисов </A></b></li><li><b><A href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </A></b></li><li><b><A href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=12178.html" target="_blank"><img src="../upload/iblock/735/6500-1-1.jpg" alt="Открыть материал" style="width:50px; height:50px; border:1px solid #000; float:left; margin:0 5px 5px 0;"></a><a href="detail.php@ID=12178.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Решения Cisco для центров обработки данных</a><br><a href="detail.php@ID=12178.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Для решения проблем загрузки оборудования в ЦОД и роста энергопотребления компания Cisco предлагает новую коммутационную платформу, а также другое …</a></td></tr><tr><td align="right"><a href="detail.php@ID=12178.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=12178&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='09501beacd9709149c9d1c56cc49e4cd'><img src='../bitrix/tools/captcha.php@captcha_code=09501beacd9709149c9d1c56cc49e4cd' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

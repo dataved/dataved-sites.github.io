@@ -1,0 +1,437 @@
+<HTML>
+<HEAD>
+<title>Эволюция средств удаленного администрирования
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Андрей Борзенко Современные тенденции развития вычислительной техники предполагают минимизацию общей стоимости владения оборудованием. В частности, исследования Gartner Group свидетельствуют: стоимость приобретения вычислительной техники составляет" />
+<meta name="description" content="Андрей Борзенко Современные тенденции развития вычислительной техники предполагают минимизацию общей стоимости владения оборудованием. В частности, исследования Gartner Group свидетельствуют: стоимость приобретения вычислительной техники составляет" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082958','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8534' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8534&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8534"].SHOW_IMAGE.value="N"; document.forms["PrintForm8534"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8534"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8534"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8534);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8534.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8534.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8534);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11522.html'>№4 (56), апрель 2003</a><h1>Эволюция средств удаленного администрирования
+</h1>10.04.2003<p></p><DIV class='article-text'><p><i>Андрей Борзенко</i> 
+<p>Современные тенденции развития вычислительной техники предполагают минимизацию общей стоимости владения оборудованием. В частности, исследования Gartner Group свидетельствуют: стоимость приобретения вычислительной техники составляет менее 20% от общих расходов на ее эксплуатацию. Основные расходы в течение всего срока службы приходятся на дальнейшее сопровождение. Для уменьшения таких расходов применяется ряд программных и аппаратных решений - в частности, удаленное администрирование систем.
+<p>Так, быстрый рост числа серверов в расширяющихся корпоративных сетях требует экономичных решений, которые позволят вовсе исключить возможность простоя сети или сократить до минимума его время. Один из способов достижения этой цели - применение эффективных средств управления сервером. Правильный выбор инструмента управления зависит от ответа на следующие вопросы: как будет осуществляться доступ к серверу, какие функции управления должны при этом выполняться и насколько важно управление данным сервером.
+<p>Вообще говоря, в зависимости от метода подключения и состояния сервера доступ к нему может осуществляться различными способами. В разработках различных компаний активно использовались как стандартные отраслевые решения для удаленного администрирования, так и собственные фирменные. Подключаться к серверу с других компьютеров можно по основному или по служебному каналу, в последнем случае - по телефонной линии или путем прямого последовательного подключения. После такого подключения к серверу сетевой администратор должен будет выбрать соответствующий инструмент управления в зависимости от того, в каком состоянии находится сервер - рабочем или нерабочем.
+<p>Корпорация Compaq Computers (ныне объединившаяся с Hewlett-Packard) еще в 1990 г. выпустила на рынок серверную плату удаленного управления, которая позволяла осуществлять коммутируемый доступ к удаленному компьютеру, защищенный паролем, и перехватывать управление им в режиме командной строки. В 1992 г. впервые было объявлено о создании другого продукта - Insight Manager, первого пакета программ управления серверами. В дальнейшем инженеры и программисты корпорации значительно расширили его возможности. Insight Manager был интегрирован с продуктами Microsoft SMS, Novell ManageWise и рядом других, дополнен программами асинхронного управления и управления источниками бесперебойного питания. Помимо серверов, появилась возможность удаленного администрирования настольных систем и портативных компьютеров.
+<p>Таким образом, начал формироваться промышленный подход к управлению удаленными устройствами в территориально разнесенной сети на базе программно-аппаратных агентов, функционирующих на базе удаленного оборудования. Стандартом де-факто для описания среды обмена управляющей информацией стал протокол SNMP.
+<h3>Integrated Remote Console </h3>
+<p>Надежность современных операционных систем для серверов позволяет последним функционировать в течение длительного времени без участия администратора. Но, как и любые системы высокой сложности, они не могут гарантировать 100%-ной устойчивости в работе. При зависании ОС в результате сбоя или аппаратной ошибки помимо всего прочего перестают функционировать и программные агенты Insight Manager. В результате администратор может потерять связь с сервером, что крайне нежелательно при удаленной работе с оборудованием.
+<p>С октября 1996 г. все серверы производства Compaq оснащались специальным средством для решения этой проблемы - встроенной консолью удаленного управления Integrated Remote Console (IRC). Аппаратные и микропрограммные средства консоли были встроены в системную плату сервера и не зависели от работоспособности ОС. Микрокод IRC выполнялся специальным микроконтроллером (заказной микросхемой) IRC ASIC, разработанным Compaq, и это позволяло минимизировать нагрузку на центральный процессор.
+<p>Основная задача IRC состояла в том, чтобы дистанционно предоставить администратору доступ к клавиатуре сервера и его видеоданным в текстовом режиме. Для связи с администратором использовался стандартный модем, подключенный к серверу. На рабочем месте администратора, кроме консоли Insight Manager, мог быть установлен любой эмулятор терминала, соответствующий стандарту ANSI.
+<p>В режиме удаленной консоли IRC передавала видеоданные в полнотекстовом режиме с сервера на терминал администратора. Команды с клавиатуры администратора возвращались на сервер. Таким образом, можно было дистанционно контролировать работу сервера, загружать или выгружать программы, проводить мягкую перезагрузку средствами ОС, наблюдая за ее ходом.
+<p>При невозможности перезапуска сервера средствами ОС администратор мог сделать это принудительно средствами IRC. Консоль поддерживала два таких метода - перезапуск сервера (Server Reset) и выключение/включение питания (Power Cycle). В последнем случае питание сервера выключалось примерно на 15 с. Поскольку работа IRC не зависела от функционирования ОС, администратор мог наблюдать весь процесс загрузки и при необходимости вмешиваться в него.
+<p>Иногда случалось, что сервер проводил перезагрузку встроенными средствами восстановления работоспособности, но администратор не мог наблюдать за этим процессом (например, ночью). С учетом этого IRC в процессе перезагрузки вела запись сообщений, выводимых на экран. Впоследствии администратор, подключившись к серверу, мог просмотреть все эти сообщения.
+<p>Надо отметить, что для своего времени интегрированная консоль обладала большими возможностями удаленного администрирования. Например, не секрет, что для безопасной работы системы необходима тщательная защита ее от несанкционированного доступа. В рассматриваемом случае системный администратор мог надлежащим образом сконфигурировать встроенные в IRC средства защиты - пароли, профили пользователей и обратный вызов. В частности, поддерживалась работа до восьми пользователей с уникальными паролями и правами.
+<p>Для доступа к работоспособному серверу по служебному каналу при помощи стандартного протокола Point-to-Point Protocol (PPP) можно было применять ПО Insight Asynchronous Management, которое позволяло администратору дистанционно выполнять все функции ПО Insight Manager по выдаче предупреждающих сообщений и сбору данных. IRC, дополняя возможности Insight Asynchronous Management, взаимодействовала с этим ПО таким образом, что администратор, подключившись по служебному каналу к нормально работающему серверу, мог использовать оба этих средства управления.
+<p>Слаженно работающие аппаратные компоненты встроенной консоли удаленного управления, аппаратные средства удаленного перезапуска сервера и возможность воспроизведения последовательностей сообщений, отображаемых на мониторе сервера при его перезапуске, позволяли администратору контролировать работу серверов независимо от состояния их ОС и от того, находились ли они на разных удаленных пунктах или были размещены на центральном пункте, но вдали от администратора.
+<h3>Remote Insight Board/PCI </h3>
+<p>Администраторам, которым требовались еще более широкие возможности управления, постоянный доступ к серверу и возможность получать предупреждающие сигналы независимо от состояния аппаратных средств сервера или его ОС, предлагалась факультативная плата Remote Insight Board. На практике случается, что у сервера, работающего с критически важными приложениями, по каким-либо причинам пропадает питание или происходит аппаратный отказ. При этом связь с сервером может прерваться. Администратор, даже не имея физического доступа к серверу, должен знать причину этой неисправности и иметь возможность предпринять какие-либо действия. Для решения подобных проблем был разработан специальный контроллер Remote Insight Board (его модификация - Remote Insight Board/PCI).
+<p>Конструктивно контроллер был выполнен в виде платы, устанавливаемой в слот PCI (первый вариант устанавливался в слот EISA). Он был полностью независим от работоспособности сервера, включая независимость от питающего напряжения, для чего контроллер оснащался собственной резервной батареей. На плате были установлены микропроцессор Intel 960, оперативная и флэш-память с программным обеспечением. При помощи прилагаемых интерфейсных кабелей контроллер подключался к видеопорту и порту клавиатуры сервера.
+<p>В процессе работы администратор мог установить связь с Remote Insight Board в трех возможных вариантах. На плате имелся интегрированный сетевой адаптер Ethernet 10/100Base-T. Связь с компьютером администратора в этом случае происходила по локальной сети по протоколу SNMP. Для управления по асинхронным линиям связи использовалась модемная связь по протоколу PPP. Для этого на плате было также предусмотрено гнездо формата PC Card, в которое при необходимости можно было установить модем соответствующего формата. Максимальная скорость работы с линией в этом случае составляла 33,6 Кбит/с. Другой способ работы по асинхронным линиям связи - использование внешнего модема. Для этого на плате был предусмотрен порт RS-232 и имелась соответствующая программная поддержка.
+<p>На контроллере в резидентном режиме исполнялась специальная программа Remote Insight Console. Используя на своем компьютере эмулятор стандартного текстового ANSI-терминала, администратор мог работать с этой программой в режиме командной строки. С ее помощью он мог выполнять различные действия с контроллером, например, изменять параметры системы безопасности (поддерживались до 12 пользователей с уникальными правами), просматривать журналы событий и многое другое. Кроме того, используя Remote Insight Console, администратор мог полностью контролировать работу сервера.
+<p>В процессе своей работы Remote Insight Board/PCI дублировала все функции Integrated Remote Console и добавляла новые возможности (например, выдачу предупреждений с использованием пейджера). На своем мониторе администратор видел все текстовые сообщения с видеоадаптера сервера, включая сообщения при холодном старте и загрузке операционной системы.
+<p>При работе установленной на сервере ОС Windows NT видеоадаптер сервера переходил в графический режим. Для этого случая контроллер Remote Insight Board/PCI был оснащен консолью Remote Graphical Console, эмулирующей стандартный графический терминал. А на компьютере системного администратора должен был быть установлен один из программных пакетов - Compaq Carbon Copy 32 или Symantec pcAnywhere 32.
+<p>Контроллер Remote Insight Board/PCI был полностью интегрирован с приложением Insight Manager. Используя это приложение и подключившись к контроллеру, можно было получить те же возможности, что и при работе с программным агентом Insight Manager. Контроллер поддерживал работу с ОС Microsoft Windows NT 3.51/4.0; Novell Netware версий 3.12, 3.2, 4.0 и 4.10, включая SMP 4.10; Novell intraNetWare 4.11 и 4.12, включая SMP intraNetWare; SCO OpenServer 5; SCO UnixWare версий 2.1.x и 7; IBM OS/2 Warp Server Advanced 4.0, включая версию с SMP 4.0; IBM OS/2 Warp Server 4.0; IBM OS/2 Warp и Warp Connect 3.0; IBM OS/2 SMP версии 2.11; IBM OS/2 2.x.
+<p>Использование дополнительного контроллера Remote Insight Board/PCI для удаленного администрирования было очень желательно в критически важных системах, особенно если администратор не имел физического доступа к серверам.
+<h3>Remote Insight Lights-Out </h3>
+<p>Дальнейшая работа над совершенствованием технологии удаленного доступа привела к появлению в 2000 г. продукта Remote Insight Lights-Out Edition (RILOE). Это была новая, предназначенная для работы только через локальную сеть версия платы Remote Insight Board/PCI, обладающая рядом усовершенствованных возможностей. Она упрощала и удешевляла решение задач дистанционного доступа и администрирования серверов стандартной архитектуры. Плата имела собственные интегрированные аппаратные компоненты (процессор, ОЗУ, сетевой интерфейс, виртуальный выключатель питания), обеспечивающие доступ к серверу и управление им в полном объеме, независимо от текущего состояния операционной системы и аппаратной части самого сервера. Благодаря встроенной в ПЗУ платы RILOE поддержке удаленной графической консоли администрирования обеспечивался беспрепятственный доступ к серверу в полностью графическом режиме, без установки дополнительного ПО на администрируемом сервере либо на используемом для администрирования клиентском компьютере. Применение этой платы позволило уменьшить время реакции на события, ведущие к простоям и, таким образом, дополнительно сократить простои и потерянные доходы.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4_2003/riloe1.jpg" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Плата RILOE.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Благодаря применению этой платы для шины PCI администратор мог пользоваться полным доступом к серверу и проводить его администрирование с подключенного к сети клиентского компьютера, даже когда в месте его установки (в центре обработки данных или на удаленном объекте) никто не работал, например, была отключена подача электроэнергии (Lights-Out - выключен свет). С выпуском этого продукта была продолжена линия на внедрение нововведений, разработанных в соответствии с пожеланиями пользователей. В числе таких нововведений можно назвать встроенную графическую консоль дистанционного администрирования, поддержку протокола DNS/DHCP и функцию дистанционного включения/выключения.
+<p>Плата RILOE обладала рядом привлекательных возможностей, обеспечивающих доступ к серверам, расположенным в центрах обработки данных или на удаленных объектах, и управление ими в полном объеме. В числе новых возможностей продукта - подключаемая по локальной сети графическая консоль администрирования с автоматическим определением режима и уровня графического разрешения экрана администрируемого сервера; виртуальный выключатель питания (для дистанционного включения и выключения питания сервера); виртуальный привод гибких дисков (позволяет, например, выполнить загрузку сервера с удаленного дисковода) и автоматическое конфигурирование IP-параметров платы с использованием протоколов DNS/DHCP. Впрочем, данная плата поддерживала и многочисленные возможности своей предшественницы, Remote Insight Board/PCI. В их число входят: доступ к встроенному журналу событий администрирования и системных событий, запись и воспроизведение текстового вывода на экран администрируемого сервера в процессе перезагрузки и при возникновении сбоев, администрирование пользователей общим числом до 12, передача исключительных ситуаций протокола SNMP для обработки в ПО Insight Manager, а также полная интеграция с ПО Insight Manager Console и Survey. Доступ к этим функциям платы мог осуществляться из любого стандартного Web-браузера, а для настройки ее конфигурации можно было использовать утилиту Smart Start, встроенную в ПЗУ утилиту конфигурирования или специальную программу Remote Insight Board NT Configuration Utility.
+<p>Собственно, основные различия заключались в следующем. RILOE представляла собой версию Remote Insight Board/PCI, предназначенную для работы только через локальную сеть. Она не поддерживала работу через внутренний или внешний модем. RILOE не имела встроенного аккумулятора резервного питания, при выключении администрируемого сервера она получала питание от внешнего сетевого адаптера, входящего в комплект поставки.
+<p>RILOE имела встроенную в ПЗУ поддержку графической консоли дистанционного администрирования. В отличие от Remote Insight Board/PCI, для использования графической консоли с данной платой не требуется дополнительного ПО, такого, как Carbon Copy или PCAnyWhere. Кроме того, RILOE имела виртуальный выключатель питания, позволяющий полностью контролировать питание определенных моделей серверов ProLiant. Плата Remote Insight Board/PCI такими средствами не оснащалась. Кстати, плата RILOE была значительно дешевле, чем Remote Insight Board/PCI.
+<p>Одна из функций платы RILOE, отличающих ее от Remote Insight Board/PCI, - возможность осуществления дистанционного доступа к серверу в графическом режиме без установки дополнительного ПО на администрируемом сервере или используемом для администрирования клиентском компьютере. Эта функция реализована во встроенном ПО, записанном в ПЗУ платы. Она работает полностью независимо от ОС администрируемого сервера (даже от того, находится ли эта ОС вообще в работоспособном состоянии). Программа в ПЗУ определяет текущий режим работы видеоподсистемы сервера и передает графическую информацию на клиентский компьютер администратора. Для работы с графической консолью на этом компьютере необходимо иметь только Web-браузер, который должен обеспечить загрузку с платы по сети и исполнение Java-апплета, поддерживающего как текстовый, так и графический режимы работы и легко переходящего от одного к другому по мере надобности. Плата поддерживает 64 цвета и автоматически определяет графическое разрешение видеоподсистемы сервера (для настройки браузера на работу с этим разрешением).
+<p>Как уже отмечалось, в процессе нормальной работы плата RILOE получает питание стандартным образом - через разъем шины PCI. Для сокращения перечня ситуаций, в которых дистанционный доступ к плате оказывается невозможен, и повышения уровня готовности в комплект поставки включается внешний источник питания с кабелем. На внешней планке PCI-платы имеется гнездо ввода питания постоянного тока, в которое вставляется соответствующий штекер сетевого адаптера. Если подключен внешний источник питания, плата может работать и при выключенном администрируемом сервере. В комплект платы RILOE входит кабель для соединения ее с электроникой управления питанием серверов. Пользователь, наделенный соответствующими полномочиями, может дистанционно включать и выключать питание администрируемого сервера через интерфейс на базе браузера.
+<p>Стоит отметить, что виртуальный выключатель питания не обеспечивал завершения работы системы. Эта функция предназначалась для выключения сервера в случае зависания операционной системы. В тех же случаях, когда ОС сохраняет работоспособность, сервер можно корректно остановить средствами ПО администрирования Insight Manager либо путем запуска обычной процедуры завершения работы с графической консоли дистанционного администрирования.
+<p>Виртуальный привод гибких дисков (Virtual Floppy Drive) - новая функция платы RILOE. Виртуальный привод позволяет загрузить сервер с дискеты, вставленной в дисковод любого из подключенных к сети компьютеров. Тем самым администратор избавлен от необходимости подходить к серверу, чтобы вставить дискету в его физический дисковод, что повышает эффективность его работы.
+<p>Схема работы виртуального привода гибких дисков предусматривает создание образа дискеты и передачу его по сети в память платы RILOE, установленной на администрируемом сервере. Затем плата перенаправляет операции ввода-вывода с физическим дисководом на образ дискеты в своей памяти. Поскольку память платы RILOE не зависит от сервера, загруженный в нее образ дискеты доступен для использования и после перезагрузки или выключения питания сервера.
+<p>Использование виртуального привода дискет открывает массу возможностей дистанционного администрирования: обновление ПО во флэш-память, дистанционная диагностика, дистанционная установка ОС по сети, дистанционная загрузка образа инсталлированного ПО и лечение вирусной инфекции и т. п.
+<p>Плату RILOE можно также использовать для дистанционного администрирования сервера, с которым нет связи по сети, с помощью находящегося в одной с ним сети Ethernet-шлюза модемной связи или сервера удаленного доступа, сконфигурировав соответствующее удаленное соединение. Альтернативно можно было воспользоваться платой Remote Insight Board/PCI, рассчитанной на работу через модем или через последовательный порт.
+<p>В модернизированном варианте платы RILOE начали поставляться с более быстродействующим процессором Intel i960 RD, работающим на тактовой частоте 66 МГц (вместо Intel i960 RP 33-МГц). Новая 66-МГц версия процессора обеспечивала более высокую производительность при работе с графической консолью дистанционного администрирования.
+<p>Таким образом, к основным отличительным особенностям RILOE стоит отнести ведение журнала регистрации событий, ошибок и неисправностей серверной аппаратуры и ПО; удаленное управление электропитанием сервера; управление удаленным компьютером в графическом режиме; наличие виртуального гибкого диска; интерфейс на базе стандартного Web-браузера; обеспечение безопасности соединения с удаленным компьютером на базе SSL-метода; независимость от типа конкретной ОС, установленной на сервере; а также уменьшение количества кабелей, необходимых для работы сервера.
+<h3>Remote Insight Lights-Out Edition II </h3>
+<p>В 2002 г. торговая марка RILOE объединила уже целое семейство модификаций продуктов: Remote Insight Lights-Out Standard (стандартный функциональный набор); Remote Insight Lights-Out Advanced (расширенная функциональность); Remote Insight Lights-Out Blades (расширенная функциональность, дополненная учетом особенностей тонких и сверхтонких серверов, устанавливаемых в стойку в тесном пространстве коммуникационных центров). Целевым сегментом применения средств RILOE нынешнего поколения стали практически все корпоративные серверы стандартной архитектуры, поддерживающие информационную систему предприятия. При разработке данного поколения продукта был сделан акцент на учет самой главной особенности современных информационных систем - их функционировании в непрерывно меняющейся информационной среде.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No4_2003/riloe2.jpg" alt=Fig.2></td>
+<td valign="bottom">Стойка с серверами, оснащенными платами RILOE.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Плата RILOE II, выпущенная на рынок в прошлом году, позволяет администраторам ИТ-служб существенно более экономно осуществлять контроль и управление как одним, так и тысячами серверов стандартной архитектуры HP ProLiant в рамках центра обработки данных или в удаленных подразделениях по всему миру. Новые технологии (включая усовершенствованные возможности в области графики и обеспечения безопасности) позволяют быстрее и эффективнее выполнять такие критические операции, как развертывание серверов, обслуживание и установка приложений, не требуя, чтобы администратор физически находился в месте расположения сервера. За счет использования более мощного процессора PowerPC 405GP 200 МГц плата RILOE II обеспечивает почти пятикратное повышение графической производительности для стандартного соединения Ethernet, а также предлагает более развитые по сравнению с предыдущей версией средства управления удаленной графической консолью и 128-разрядное шифрование данных для улучшения безопасности. Новые возможности платы RILOE II в области использования виртуальных носителей информации позволяют администратору виртуально удаленно использовать CD- или флоппи-диски.
+<p>Сегодня плата RILOE II полностью интегрирована с комплектом HP Insight Management Suite, включая доступ к RILOE II из Insight Manager 7 с помощью одного щелчка мыши и возможность развертывания и настройки конфигурации ПО сервера с помощью ProLiant Essentials Rapid Deployment Pack. Кроме того, эта плата тесно интегрирована с комплектом HP OpenView - ПО для управления инфраструктурой. Оно позволяет компаниям осуществлять управление и оптимизировать бизнес-процессы посредством инфраструктуры информационных технологий, передачи голоса и данных.
+<p>С точки зрения аппаратной реализации продукт RILOE сегодня выпускается в двух модификациях: в виде PCI-платы Remote Insight Lights-Out Edition и продукта Integrated Lights-Out (iLO), встроенного в системную плату сервера. Разница в функциональности между ними не очень велика. Важно, пожалуй, лишь то, что вариант в виде отдельной платы способен работать, даже если сервер выключен из электрической розетки. Вариант в виде своеобразной платы расширения, встроенной в системную плату, требует, чтобы сервер был включен в электрическую розетку.
+<p>Гораздо более важны различия между этими двумя продуктами, лежащие в области схемотехнических решений. С этой точки зрения Integrated Lights-Out - представитель следующего поколения систем управления. Это дополнительный элемент на системной плате. Его можно рассматривать либо как очень специфический вариант платы расширения, либо как уникальную микросборку, в которой скомбинированы возможности Remote Insight Lights-Out и дополнительные расширенные функции мониторинга, предоставляемые серверным оборудованием, точнее, заказной микросхемой ASM ASIC (Advanced System Management). В частности, в число функций ASM входит наблюдение за состоянием температуры и скоростью вращения вентиляторов, а также участие в выполнении процедуры восстановления сервера после перезагрузки. Кроме того, архитектура Integrated Lights-Out допускает перезагрузку как встроенной процессорной подсистемы, так и самой серверной системы независимо друг от друга. Иными словами, процессорный блок iLO обеспечивает широкие возможности управления. В частности, даже при перезагрузке сервера поддерживается уже установленный доступ администратора к удаленному серверу. То же свойство Integrated Lights-Out используется при модернизации промежуточного ПО сервера, что позволяет избежать перезагрузки или иных манипуляций с сервером. Возможности платы удаленного управления iLO настолько неординарны, что позволяют применять в качестве удаленного сервера не только устройство без дисковода гибких дисков и привода CD-ROM, но и без монитора, клавиатуры и манипулятора.
+<h3>Резюме </h3>
+<p>По мере роста плотности размещения серверов в центрах обработки данных на их администрирование начинает уходить все больше времени и средств, а используемые процедуры становятся все менее гибкими. Недорогая плата Remote Insight Lights-Out Edition, простая в использовании, с широким спектром функциональных возможностей (особо важное значение имеют подключение по локальной сети и встроенная поддержка графической консоли дистанционного администрирования) позволяет администраторам не оснащать серверы мониторами, клавиатурами и мышами, соответственно сократив и число кабелей. Для доступа к серверу, находящемуся где-то глубоко в недрах центра обработки данных, с полным набором возможностей управления администратору достаточно подключенного с сети компьютера с Web-браузером и совершенно необязательно находиться в помещении центра.
+<p>Как известно, расширение бизнеса требует размещения множества серверов на различных 
+  объектах, разбросанных по всему миру. Но служба ИТ остается централизованной 
+  и не может безгранично наращивать штат. Обслуживание серверов в таких распределенных 
+  вычислительных средах с выездом специалистов на место превращается в весьма 
+  дорогостоящее дело, отнимающее много времени и требующее применения весьма негибких 
+  процедур. Ключ к продолжительной работе без простоев дает удобный дистанционный 
+  доступ к этим серверам. Необходимо быстрое и эффективное реагирование на события, 
+  способные приводить к простоям, и проведение диагностики еще до выезда специалиста 
+  по ремонту на место. Продукт Remote Insight Lights-Out Edition обеспечивает 
+  ИТ-администратору гибкие средства дистанционного администрирования, снижающие 
+  риск простоев. Кроме того, применение Remote Insight Lights-Out Edition позволяет 
+  упростить задачу администрирования вычислительных сред центров обработки данных 
+  с большой плотностью размещения оборудования, что дает дополнительное снижение 
+  затрат на ИТ. 
+<p>&nbsp;
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h3>Краткий словарь терминов </h3>
+      <p><b>Защита на базе SSL.</b> Протокол Secure Sockets Layer фирмы RSA используется 
+        в системе Remote Insight Lights-Out Edition для шифрования трафика протокола 
+        HTTP, по которому передаются данные в ходе сеанса работы пользователя. 
+      <p><b>Интеграция агентских компонентов администрирования с поддержкой Web.</b> 
+        Имеется в виду интеграция агентских компонентов администрирования Insight 
+        Web Agent с системой Remote Insight Lights-Out Edition. Интерфейс просмотра 
+        данных администрирования системы RILOE позволяет, в дополнение к основному 
+        набору функций, сформировать непосредственную ссылку на агентский компонент 
+        (или компоненты) Insight Web Agent, исполняющийся на администрируемом 
+        сервере. 
+      <p><b>Утилита конфигурирования в ПЗУ.</b> Утилита конфигурирования системы 
+        RILOE, записанная в ПЗУ платы и позволяющая быстро сконфигурировать ее 
+        локально либо дистанционно, используя графическую виртуальную консоль 
+        управления на базе браузера. 
+      <p><b>&quot;Безголовый сервер&quot;.</b> Сервер, установленный в аппаратурную стойку 
+        в центре обработки данных, не имеющий монитора, клавиатуры и мыши и не 
+        подключенный к комплекту этих устройств через переключатель вместе с другими 
+        серверами. RILOE позволяет развертывать серверы &quot;безголовыми&quot;. 
+      <p><b>Виртуальный привод гибких дисков.</b> Поддерживается в системе RILOE, 
+        позволяет дистанционно загрузить администрируемый сервер, в который установлена 
+        плата Remote Insight Board, с системной дискеты с использованием дисковода 
+        одной из клиентских машин в сети. 
+      <p><b>Утилита работы с образами гибких дисков.</b> Программа, с помощью 
+        которой можно создавать образы гибких дисков в виде файлов для использования 
+        с виртуальным приводом гибких дисков RILOE. 
+      <p><b>Виртуальная графическая консоль дистанционного управления.</b> Использующая 
+        аппаратную часть системы RILOE функция дистанционного управления с графическим 
+        интерфейсом. Позволяет просматривать всю информацию об администрируемом 
+        сервере и осуществлять все операции по управлению им из браузера, в том 
+        числе на этапах нормальной работы, завершения работы, включения/выключения, 
+        загрузки операционной системы. Поддерживаются Windows-режим и текстовый 
+        режим. Виртуальная графическая консоль не зависит от применения той или 
+        иной операционной системы и не требует установки дополнительного ПО. Ее 
+        называют также собственной или встроенной графической консолью дистанционного 
+        управления. 
+      <p><b>Поддержка DNS/DHCP.</b> Способность динамически назначать IP-адреса 
+        платам Remote Insight Board системы RILOE с использованием служб DNS/DHCP. 
+      <p><b>Lights-Out</b> (&quot;не включая света, при выключенном свете&quot;). Обозначает 
+        режим администрирования центра обработки данных, не требующий присутствия 
+        людей на месте установки сервера для его ежедневного обслуживания. 
+      <p><b>Внешний резервный источник питания.</b> Внешний адаптер сети переменного 
+        тока (выдающий постоянный ток 1 А при напряжении 9 В), обеспечивающий 
+        питание RILOE для круглосуточного непрерывного доступа к серверу, независимо 
+        от состояния его собственного выключателя питания. 
+      <p><b>Виртуальный выключатель питания.</b> Функция дистанционного управления 
+        питанием администрируемого сервера с помощью RILOE.
+    </td>
+  </tr>
+</table>
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8534.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Эволюция средств удаленного администрирования
+</a><br><a href="detail.php@ID=8534.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Андрей Борзенко 
+Современные тенденции развития вычислительной техники предполагают минимизацию общей стоимости владения оборудованием. В частности&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8534.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8534&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='00c498a30b70464ce578385f3bff86d5'><img src='../bitrix/tools/captcha.php@captcha_code=00c498a30b70464ce578385f3bff86d5' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

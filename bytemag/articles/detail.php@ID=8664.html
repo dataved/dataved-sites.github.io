@@ -1,0 +1,505 @@
+<HTML>
+<HEAD>
+<title>Технологии передачи информации в SAN
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Практически у любой современной компании существует потребность в улучшении эффективности сетей и технологий компьютерных систем. Одно из необходимых условий для этого - беспрепятственная передача информации между серверами, хранилищами данных" />
+<meta name="description" content="Практически у любой современной компании существует потребность в улучшении эффективности сетей и технологий компьютерных систем. Одно из необходимых условий для этого - беспрепятственная передача информации между серверами, хранилищами данных" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082273','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8664' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8664&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8664"].SHOW_IMAGE.value="N"; document.forms["PrintForm8664"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8664"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8664"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8664);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8664.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8664.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8664);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a>, <a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><br /></p><a href='../numbers/index.php@ID=11505.html'>№7-8 (95), июль-август2006</a><h1>Технологии передачи информации в SAN
+</h1>Автор: Олег Спиряев<br />16.08.2006<p></p><DIV class='article-text'><p>Практически у любой современной компании существует потребность в улучшении эффективности сетей и технологий компьютерных систем. Одно из необходимых условий для этого - беспрепятственная передача информации между серверами, хранилищами данных, приложениями и пользователями. Именно способ передачи данных в информационных системах часто становится "бутылочным горлышком" по производительности, сводя на нет все преимущества современных серверов и систем хранения. Разработчики и системные администраторы пытаются устранить наиболее очевидные узкие места, хотя и знают, что после устранения узкого места в одной части системы оно возникает в другой.
+<p>На протяжении многих лет узкие места возникали преимущественно на серверах, но по мере функционального и технологического развития серверов они стали перемещаться в сети и системы сетевого хранения данных. В последнее время созданы очень крупные массивы хранения, что переносит узкие места обратно в сеть. Рост объемов данных и их централизация, а также требования приложений нового поколения к пропускной способности часто поглощают всю имеющуюся полосу пропускания.
+<p>Когда перед менеджером информационной службы встает задача создания новой или расширения имеющейся системы обработки информации, одним из важнейших вопросов для него будет выбор технологии передачи данных. Эта проблема включает в себя выбор не только сетевой технологии, но и протокола соединения различных периферийных устройств. Наиболее популярные решения, широко применяемые для построения сетей хранения SAN (Storage Area Network), - это Fibre Channel, Ethernet и InfiniBand.
+<h3>Технология Ethernet </h3>
+<p>Сегодня технология Ethernet занимает лидирующее положение в секторе высокопроизводительных локальных сетей. Во всем мире предприятия вкладывают средства в кабельные системы и оборудование для Ethernet, в обучение персонала. Широкое распространение этой технологии позволяет удерживать низкие цены на рынке, а стоимость внедрения каждого нового поколения сетей имеет тенденцию к снижению. Постоянный рост объема трафика в современных сетях заставляет операторов, администраторов и архитекторов корпоративных сетей присматриваться к более быстрым сетевым технологиям, чтобы решить проблему дефицита пропускной способности. Добавление в семейство Ethernet стандарта 10-Gigabit Ethernet позволяет поддерживать в локальных сетях новые ресурсоемкие приложения.
+<p>Появившись более четверти века назад, технология Ethernet вскоре стала доминирующей в построении локальных сетей. Благодаря простоте инсталляции и сопровождения, надежности и низкой стоимости реализации ее популярность выросла настолько, что сегодня можно смело утверждать - почти весь трафик в Интернете начинается и заканчивается в Ethernet-сетях. Стандарт IEEE 802.3ae 10-Gigabit Ethernet, одобренный в июне 2002 г., стал поворотным пунктом в развитии этой технологии. С его появлением область использования Ethernet расширяется до масштабов городских (MAN) и глобальных (WAN) сетей.
+<p>Существует целый ряд рыночных факторов, которые, по утверждению отраслевых аналитиков, способствуют выходу технологии 10-Gigabit Ethernet на первый план. В развитии сетевых технологий уже стало традиционным появление альянса компаний-разработчиков, основная задача которого состоит в продвижении новых сетей. Не стала исключением и 10-Gigabit Ethernet. У истоков этой технологии стояла организация 10-Gigabit Ethernet Alliance (10 GEA), в которую входили такие гиганты индустрии, как 3Com, Cisco, Nortel, Intel, Sun и множество других (всего более ста) компаний. Если в предшествующих версиях Fast Ethernet или Gigabit Ethernet разработчики позаимствовали отдельные элементы других технологий, то спецификации нового стандарта создавались практически с нуля. Кроме того, проект 10-Gigabit Ethernet был ориентирован на крупные транспортные и магистральные сети, например, масштаба города, в то время как даже Gigabit Ethernet разрабатывался исключительно для применения в локальных сетях.
+<p>Стандарт 10-Gigabit Ethernet предусматривает передачу информационного потока на скорости до 10 Гбит/с по одно- и многомодовому оптическому кабелю. В зависимости от среды передачи расстояние может составлять от 65 м до 40 км. Новый стандарт должен был обеспечить выполнение следующих основных технических требований:
+<ul><li>двунаправленный обмен данными в дуплексном режиме в сетях топологии точка-точка;
+<li>поддержка скорости передачи данных 10 Гбит/с на МАС-уровне;
+<li>спецификация физического уровня LAN PHY для соединения с локальными сетями, оперирующего на МАС-уровне со скоростью передачи данных 10 Гбит/с;
+<li>спецификация физического уровня WAN PHY для соединения с сетями SONET/SDH, оперирующего на МАС-уровне со скоростью передачи данных, совместимой со стандартом OC-192;
+<li>определение механизма приспособления скорости передачи данных уровня МАС к скорости передачи данных WAN PHY;
+<li>поддержка двух типов оптоволоконного кабеля - одномодового (SMF) и многомодового (MMF);
+<li>спецификация независимого от среды передачи интерфейса XGMII*;
+<li>обратная совместимость с предыдущими версиями Ethernet (сохранение формата пакета, размера и т. п.).</ul>
+<p><hr width="40%" align="left" noshade>
+* XG здесь означает 10 Gigabit, а MII - Media Independent Interface.<p>Напомним, что стандарт 10/100 Ethernet определяет два режима: полудуплексный и дуплексный. Полудуплексный в классической версии предусматривает использование разделяемой среды передачи и протокола CSMA/CD (Carrier-Sense Multiple Access/Collision Detection). Основные недостатки этого режима - потеря эффективности при возрастании числа одновременно работающих станций и дистанционные ограничения, связанные с минимальной длиной пакета (составляющей 64 байта). В технологии Gigabit Ethernet для сохранения минимальной длины пакета применяется техника расширения несущей, которая дополняет его до 512 байт. Поскольку стандарт 10-Gigabit Ethernet ориентирован на магистральные соединения типа точка-точка, полудуплексный режим не входит в его спецификацию. Следовательно, в данном случае длина канала ограничивается только характеристиками физической среды, используемыми устройствами приема/передачи, мощностью сигнала и методами модуляции. Необходимую же топологию можно обеспечить, например, с помощью коммутаторов. Дуплексный режим передачи дает также возможность сохранить минимальный размер пакета 64 байта без применения техники расширения несущей.
+<p>В соответствии с эталонной моделью взаимодействия открытых систем (OSI) сетевая технология определяется двумя нижними уровнями: физическим (Layer 1, Physical ) и канальным (Layer 2, Data Link). В этой схеме уровень физических устройств Ethernet (PHY) соответствует Layer 1, а уровень управления доступом к среде (МАС) - Layer 2. В свою очередь, каждый из этих уровней в зависимости от реализуемой технологии может содержать несколько подуровней.
+<p>Уровень МАС (Media Access Control - уровень управления доступом к среде) обеспечивает логическое соединение между МАС-клиентами одноранговых (равноправных) рабочих станций. Его основные функции -инициализация, управление и поддержание соединения с одноранговым узлом сети. Очевидно, что нормальная скорость передачи данных от МАС-уровня к физическому уровню PHY для стандарта 10 Gigabit Ethernet составляет 10 Гбит/с. Однако уровень WAN PHY для согласования с сетями SONET OC-192 должен передавать данные с несколько меньшей скоростью. Это достигается с помощью механизма динамической адаптации межкадрового интервала, предусматривающего его увеличение на предопределенный отрезок времени.
+<p>Подуровень согласования Reconciliation Sublayer (рис. 1) представляет собой интерфейс между последовательным потоком данных МАС-уровня и параллельным потоком подуровня XGMII. Он отображает октеты данных МАС-уровня на параллельные тракты XGMII. XGMII - это независимый от среды интерфейс 10 Gigabit. Основная его функция заключается в том, чтобы обеспечить простой и легко реализуемый интерфейс между канальным и физическим уровнями. Он изолирует канальный уровень от специфики физического и тем самым позволяет первому работать на едином логическом уровне с различными реализациями второго. XGMII состоит из двух независимых каналов приема и передачи, по каждому из которых передаются 32 бита данных по четырем 8-разрядным трактам.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No7-8_2006/comm/ris1.jpg" alt=Fig.1></td>
+<td align="left" valign="bottom">Рис. 1. Уровни 10-Gigabit Ethernet.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Следующая часть стека протоколов относится к физическому уровню 10 Gigabit Ethernet. Архитектура Ethernet разбивает физический уровень на три подуровня. Подуровень физического кодирования PCS (Physical Coding Sublayer) выполняет кодирование/декодирование потока данных, поступающих от канального уровня и к нему. Подуровень подключения к физической среде PMA (Physical Media Attachment) - это параллельно-последовательный (прямой и обратный) преобразователь. Он выполняет преобразование группы кодов в поток битов для последовательной бит-ориентированной передачи и обратное преобразование. Этот же подуровень обеспечивает синхронизацию приема/передачи. Зависимый от среды передачи данных подуровень PMD (Physical Media Dependent) отвечает за передачу сигналов в данной физической среде. Типичные функции этого подуровня - формирование и усиление сигнала, модуляция. Разные PMD-устройства поддерживают различные физические среды передачи. В свою очередь, зависимый от среды интерфейс MDI (Media Dependent Interface) задает типы коннекторов для разных физических сред и PMD-устройств.
+<p>Технология 10-Gigabit Ethernet обеспечивает низкую по сравнению с альтернативными стоимость владения, включая как стоимость приобретения, так и поддержки, поскольку имеющаяся у заказчиков инфраструктура сетей Ethernet легко взаимодействует с ней. Кроме того, 10 Gigabit Ethernet привлекает администраторов уже знакомой организацией управления и возможностью применить накопленный опыт, так как она использует процессы, протоколы и средства управления, уже развернутые в существующей инфраструктуре. Стоит напомнить, что этот стандарт предоставляет гибкость при проектировании соединений между серверами, коммутаторами и маршрутизаторами. Таким образом, технология Ethernet предлагает три основных преимущества:
+<ul><li>простоту эксплуатации,
+<li>высокую пропускную способность,
+<li>низкую стоимость.</ul>
+<p>Кроме того, она проще некоторых других технологий, потому что позволяет связывать сети, расположенные в разных местах, как части единой сети. Пропускная способность Ethernet наращивается шагами от 1 до 10 Гбит/с, что позволяет эффективнее использовать емкость сети. Наконец, оборудование Ethernet, как правило, более экономически эффективно по сравнению с традиционным телекоммуникационным оборудованием.
+<p>Для иллюстрации возможностей технологии приведем один пример. С помощью сети 
+  10-Gigabit Ethernet группа ученых, работающих над проектом Japanese Data Reservoir 
+  (<a href="http://data-reservoir.adm.s.u-tokyo.ac.jp">http://data-reservoir.adm.s.u-tokyo.ac.jp</a>), 
+  передавала данные из Токио в расположенный в Женеве научно-исследовательский 
+  центр физики элементарных частиц CERN. Линия передачи данных пересекла 17 часовых 
+  поясов, а ее протяженность составила 11 495 миль (18 495 км). Линия 10-Gigabit 
+  Ethernet соединила компьютеры в Токио и Женеве как часть одной и той же локальной 
+  сети. В сети применялось оптическое оборудование и коммутаторы Ethernet от Cisco 
+  Systems, Foundry Networks и Nortel Networks. 
+<p>В последние годы Ethernet стали широко применять и операторы связи - для соединения объектов в пределах города. Но сеть Ethernet может протянуться еще дальше, охватив целые континенты.
+<h3>Fibre Channel </h3>
+<p>Технология Fibre Channel дает возможность принципиально изменить архитектуру компьютерной сети любой крупной организации. Дело в том, что она хорошо подходит для реализации централизованной системы хранения данных SAN, где дисковые и ленточные накопители находятся в своей отдельной сети, в том числе территориально довольно сильно удаленной от основных корпоративных серверов. Fibre Channel - это стандарт последовательных соединений, предназначенных для высокоскоростных коммуникаций между серверами, накопителями, рабочими станциями и концентраторами и коммутаторами. Отметим, что этот интерфейс практически универсален, он используется не только для подключения отдельных накопителей и хранилищ данных.
+<p>Когда появились первые сети, призванные объединить компьютеры для совместной работы, удобным и эффективным оказалось приблизить ресурсы к рабочим группам. Таким образом, в попытке минимизировать сетевую нагрузку накопители информации были равномерно разделены между множеством серверов и настольных компьютеров. В сети одновременно существуют два канала передачи данных: собственно сеть, по которой идет обмен между клиентами и серверами, и канал, по которому происходит обмен данными между системной шиной компьютера и устройством хранения. Это может быть канал между контроллером и жестким диском или между RAID-контроллером и внешним дисковым массивом.
+<p>Такое разделение каналов во многом объясняется различными требованиями к пересылке данных. В сети на первом месте стоит доставка нужной информации одному клиенту из множества возможных, для чего необходимо создать определенные и весьма сложные механизмы адресации. Кроме того, сетевой канал предполагает значительные расстояния, поэтому здесь для передачи данных предпочтительно последовательное соединение. А вот канал хранения выполняет крайне простую задачу, предоставляя возможность обмена с заранее известным накопителем данных. Единственное, что от него требуется, - делать это максимально быстро. Расстояния здесь, как правило, небольшие.
+<p>Однако современные сети сталкиваются с задачами обработки все больших и больших объемов данных. Высокоскоростные мультимедиа-приложения, обработка изображений требуют гораздо большей скорости ввода-вывода, чем когда-либо ранее. Организации вынуждены хранить все большие объемы данных в режиме online, что требует увеличения емкости внешней памяти. Необходимость страхового копирования огромных объемов данных требует разнесения устройств вторичной памяти на все большие расстояния от серверов обработки. В ряде случаев оказывается, что объединить ресурсы серверов и накопителей в единый пул для центра обработки информации с помощью Fibre Channel гораздо эффективнее, чем при использовании стандартного набора сеть Ethernet плюс интерфейс SCSI.
+<p>Институт ANSI зарегистрировал рабочую группу по разработке метода для высокоскоростного 
+  обмена данными между суперкомпьютерами, рабочими станциями, ПК, накопителями 
+  и устройствами отображения еще в 1988 г. А в 1992 г. три крупнейших компьютерных 
+  компании - IBM (<a href="http://www.ibm.com">http://www.ibm.com</a>), Sun Microsystems 
+  (<a href="http://www.sun.com">http://www.sun.com</a>) и HP (<a href="http://www.hp.com">http://www.hp.com</a>) 
+  создали инициативную группу FSCI (Fiber Channel Systems Initiative), перед которой 
+  была поставлена задача разработать метод быстрой передачи цифровых данных. Группа 
+  выработала ряд предварительных спецификаций - профилей. Поскольку физической 
+  средой для обмена информацией должны были стать волоконно-оптические кабели, 
+  то и в названии технологии фигурировало слово fiber. Однако несколько лет спустя 
+  в соответствующие рекомендации была добавлена возможность использовать и медные 
+  провода. Тогда комитет ISO (International Standard Organization) предложил заменить 
+  английское написание fiber французским fibre, чтобы как-то уменьшить ассоциации 
+  с волоконно-оптической средой, сохранив при этом практически первоначальное 
+  написание. Когда предварительная работа по профилям была завершена, дальнейшую 
+  работу по поддержке и развитию новой технологии взяла на себя Ассоциация разработчиков 
+  волоконно-оптического канала FCA (Fibre Channel Association), которая организационно 
+  вошла в комитет ANSI. Помимо FCA была также создана независимая рабочая группа 
+  FCLC (Fibre Channel Loop Community), которая начала заниматься продвижением 
+  одного из вариантов технологии Fibre Channel - FC-AL (Fibre Channel Arbitrated 
+  Loop). В настоящее время всю координационную работу по продвижению технологии 
+  Fibre Channel взяла на себя ассоциация FCIA (Fibre Channel Industry Association, 
+  <a href="http://www.fibrechannel.org">http://www.fibrechannel.org</a>). В 1994 
+  г. стандарт FC-PH (физическое соединение и протокол передачи данных) был одобрен 
+  комитетом Т11 ANSI и получил обозначение X3.203-1994. 
+<p>Технология Fibre Channel обладает рядом преимуществ, которые делают этот стандарт удобным при организации обмена данными в группах компьютеров, а также при использовании в качестве интерфейса устройств массовой памяти, в локальных сетях и при выборе средств доступа к глобальным сетям. Одно из основных достоинств этой технологии - высокая скорость передачи данных.
+<p>FC-AL - лишь одна из трех возможных топологий Fibre Channel, которая, в частности, используется для систем хранения данных. Кроме нее, возможны топология точка-точка и звездообразная топология, построенная на основе коммутаторов и концентраторов. Сеть, которая построена на основе коммутаторов, соединяющих множество узлов (рис. 2), в терминологии Fibre Channel называется фабрикой (fabric).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No7-8_2006/comm/ris2.jpg" alt=Fig.2></td>
+<td align="left" valign="bottom">Рис. 2. Фабрика на базе Fibre Channel.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В "петлю" FC-AL можно включить до 126 устройств с возможностью горячей замены. При использовании коаксиального кабеля расстояние между ними может достигать 30 м, в случае же волоконно-оптического кабеля оно увеличивается до 10 км. В основу технологии положена методика простого перемещения данных из буфера передатчика в буфер приемника с полным контролем этой и только этой операции. Для FC-AL совершенно неважно, как обрабатываются данные индивидуальными протоколами до и после помещения в буфер, вследствие чего тип передаваемых данных (команды, пакеты или кадры) не играет никакой роли.
+<p>Архитектурная модель Fibre Channel в деталях описывает параметры соединений и протоколы обмена между отдельными узлами. Эта модель может быть представлена в виде пяти функциональных уровней, которые определяют физический интерфейс, протокол передачи, сигнальный протокол, общие процедуры и протокол отображения. Нумерация идет от самого низкого аппаратного уровня FC-0, отвечающего за параметры физического соединения, до верхнего программного FC-4, взаимодействующего с приложениями более высокого уровня. Протокол отображения обеспечивает связь с интерфейсами ввода-вывода (SCSI, IPI, HIPPI, ESCON) и сетевыми протоколами (802.2, IP). В данном случае все поддерживаемые протоколы могут использоваться одновременно. Например, интерфейс FC-AL, работающий с IP- и SCSI-протоколами, пригоден как для обмена система-система, так и система-периферия. Это исключает потребность в дополнительных контроллерах ввода-вывода, существенно уменьшает сложность кабельной системы и, разумеется, общую стоимость.
+<p>Поскольку Fibre Channel - это низкоуровневый протокол, не содержащий команд ввода-вывода, то связь с внешними устройствами и компьютерами обеспечивается протоколами более высокого уровня, такими, как SCSI и IP, для которых FC-PH служит транспортом. Сетевые протоколы и протоколы ввода-вывода (например, команды SCSI) преобразуются в кадры протокола FC-PH и доставляются до адресата. Любое устройство (компьютер, сервер, принтер, накопитель), имеющее возможность обмениваться данными с использованием технологии Fibre Channel, называется N_порт (Node port), или просто узел. Таким образом, основное назначение Fibre Channel - возможность манипулировать протоколами высокого уровня, используя различную среду передачи и уже существующие кабельные системы.
+<p>Высокая надежность обмена при использовании Fibre Channel обусловлена двухпортовой архитектурой дисковых устройств, циклическим контролем передаваемой информации и заменой устройств в горячем режиме. Протокол поддерживает практически любые применяемые сегодня кабельные системы. Однако наибольшее распространение получили два носителя - оптика и витая пара. Оптические каналы используются для соединения между устройствами сети Fibre Channel, а витая пара - для соединения отдельных компонентов в устройстве (например, дисков в дисковой подсистеме).
+<p>Стандарт предусматривает несколько полос пропускания и обеспечивает скорость обмена 1, 2 или 4 Гбит/с. C учетом того, что для соединения устройств применяются два оптических кабеля, каждый из которых работает в одном направлении, при сбалансированном наборе операций "запись-чтение" скорость обмена данными удваивается. Иными словами, Fibre Channel работает в полнодуплексном режиме. В пересчете на мегабайты паспортная скорость Fibre Channel составляет соответственно 100, 200 и 400 Мбайт/с. Реально при 50%-ном соотношении операций "запись-чтение" скорость интерфейса достигает 200, 400 и 800 Мбайт/с. В настоящее время наиболее популярны решения Fibre Channel 2 Гбит/с, поскольку они имеют лучшее соотношение цена/качество.
+<p>Отметим, что оборудование для Fibre Channel можно условно разбить на четыре основные категории: адаптеры, концентраторы, коммутаторы и маршрутизаторы, причем последние широкого распространения пока не получили.
+<p>Решения на базе Fibre Channel обычно предназначены для организаций, которым необходимо поддерживать большие объемы информации в режиме online, ускорить операции обмена с первичной и вторичной внешней памятью для сетей с интенсивным обменом данных, а также при удалении внешней памяти от серверов на большие расстояния, чем это допускается в стандарте SCSI. Типичные области применения решений Fibre Channel - базы и банки данных, системы анализа и поддержки принятия решений, основанные на больших объемах данных, системы хранения и обработки мультимедийной информации для телевидения, киностудий, а также системы, где диски должны быть удалены на значительные расстояния от серверов из соображений безопасности.
+<p>Fibre Channel дает возможность отделить все потоки данных между серверами предприятия, архивирование данных и т. п. от локальной сети пользователей. В этом варианте возможности конфигурирования огромны - любой сервер может обращаться к любому разрешенному администратором системы дисковому ресурсу, возможен доступ к одному и тому же диску нескольких устройств одновременно, причем с очень высокой скоростью. В этом варианте архивирование данных тоже становится легкой и прозрачной задачей. В любой момент можно создать кластер, высвободив под него ресурсы на любой из систем хранения Fibre Channel. Масштабирование также довольно наглядно и понятно - в зависимости от того, каких возможностей не хватает, можно добавить либо сервер (который будет куплен исходя исключительно из его вычислительных возможностей), либо новую систему хранения.
+<p>Одна из весьма важных и нужных особенностей Fibre Channel - возможность сегментирования 
+  или, как еще говорят, зонирования системы. Разделение на зоны подобно разделению 
+  на виртуальные сети (Virtual LAN) в локальной сети - устройства, находящиеся 
+  в разных зонах, не могут "видеть" друг друга. Разделение на зоны возможно либо 
+  с помощью коммутируемой матрицы (Switched Fabric) или на основе указания адреса 
+  WWN (World Wide Name). Адрес WWN подобен MAC-адресу в сетях Ethernet, каждый 
+  FC-контроллер имеет свой уникальный WWN-адрес, который присваивает ему производитель, 
+  а любая правильная система хранения данных позволяет ввести адреса тех контроллеров 
+  или портов матриц, с которыми этому устройству разрешено работать. Разделение 
+  на зоны предназначено в первую очередь для повышения безопасности и производительности 
+  сетей хранения данных. В отличие от обычной сети, из внешнего мира нельзя получить 
+  доступ к закрытому для данной зоны устройству. 
+<p>
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h4>Технология FICON </h4>
+      <p>Технология FICON (FIber CONnection) обеспечивает повышенную производительность, 
+        расширенные функциональные возможности и связь на больших расстояниях. 
+        Как протокол передачи данных она базируется на стандарте ANSI для систем 
+        Fibre Channel (FC-SB-2). Первый разработанный IBM стандарт общего назначения 
+        для связи между мэйнфреймами и внешними устройствами (такими, как диски, 
+        принтеры и ленточные накопители) основывался на параллельных подключениях, 
+        не слишком отличаясь от многожильных кабелей и многоштырьковых разъемов, 
+        которые применялись в те годы для подключения настольных принтеров к ПК. 
+        Множество параллельных проводов служило для переноса большего объема данных 
+        "за раз" (параллельно); в мэйнфреймах это называлось bus and tag. 
+      <p>Огромные по физическим размерам соединители и кабельная разводка были 
+        единственным способом связи до появления на рынке в 1990-х гг. технологии 
+        ESCON. Это была принципиально иная технология: в ней впервые вместо меди 
+        использовалось оптоволокно и данные передавались не параллельно, а последовательно. 
+        Все прекрасно понимали, что ESCON намного лучше и значительно быстрее, 
+        по крайней мере, на бумаге, но до всеобщего принятия технологии потребовалось 
+        множество испытаний и усилий по убеждению покупателей. Считается, что 
+        технология ESCON появилась во время застоя на рынке; к тому же поддерживающие 
+        этот стандарт устройства были представлены с заметным запозданием, поэтому 
+        технология и встретила прохладный прием, а для широкого ее распространения 
+        понадобилось почти четыре года. 
+      <p>С FICON история во многом повторилась. Впервые эту технологию IBM представила 
+        на серверах S/390 еще в 1997 г. Многим аналитикам было сразу понятно, 
+        что это во многом технически более продвинутое решение. Однако на протяжении 
+        нескольких лет FICON применяли практически исключительно для подсоединения 
+        ленточных накопителей (существенно улучшенное решение для целей создания 
+        резервных копий и восстановления) и принтеров. И лишь в 2001 г. IBM наконец 
+        оборудовала FICON свою систему хранения Enterprise Storage Server под 
+        кодовым названием Shark ("акула"). Это событие снова совпало с серьезным 
+        экономическим спадом, когда внедрение новых технологий на предприятиях 
+        замедлилось. Буквально через год возник ряд обстоятельств, которые способствовали 
+        ускоренному принятию FICON. На сей раз концепция оптоволокна была уже 
+        не нова, а технологии сетей хранения данных (SAN) получили широкое распространение 
+        как в мире мэйнфреймов, так и за его пределами. 
+      <p>Сейчас продолжается устойчивый рост рынка устройств хранения данных. 
+        Сегодняшние устройства, называемые директорами (director), с самого начала 
+        разработанные для поддержки ESCON, теперь поддерживают стандарт Fibre 
+        Channel, на основе этих же устройств развертывают FICON-решения. Как считают 
+        разработчики, FICON обеспечивает существенно большую функциональность 
+        по сравнению с Fibre Channel. 
+      <p>
+    </td>
+  </tr>
+</table>
+<h3>InfiniBand </h3>
+<p>Архитектура InfiniBand определяет общий стандарт для обработки операций ввода-вывода 
+  коммуникационных, сетевых подсистем и систем хранения данных. Этот новый стандарт 
+  привел к формированию торговой ассоциации InfiniBand Trade Association (IBTA, 
+  <a href="http://www.infinibandta.org">http://www.infinibandta.org</a>). Проще 
+  говоря, InfiniBand - это стандарт архитектуры ввода-вывода нового поколения, 
+  который использует сетевой подход к соединению серверов, систем хранения и сетевых 
+  устройств информационного центра. 
+<p>Технология InfiniBand разрабатывалась как открытое решение, которое могло бы заменить все остальные сетевые технологии в самых разных областях. Это касалось и общеупотребительных технологий локальных сетей (все виды Ethernet и сетей хранения, в частности, Fibre Channel), и специализированных кластерных сетей (Myrinet, SCI и т. д.), и даже подсоединения устройств ввода-вывода в ПК в качестве возможной замены шин PCI и каналов ввода-вывода, таких, как SCSI. Кроме того, инфраструктура InfiniBand могла бы служить для объединения в единую систему фрагментов, использующих разные технологии. Преимущество InfiniBand перед специализированными, ориентированными на высокопроизводительные кластеры сетевыми технологиями состоит в ее универсальности. Корпорация Oracle, например, поддерживает InfiniBand в своих кластерных решениях. Год назад HP и Oracle установили рекорд производительности в тестах TPC-H (для баз данных емкостью 1 Тбайт) в InfiniBand-кластере на базе ProLiant DL585 с использованием СУБД Oracle 10g в среде Linux. Летом 2005 г. IBM достигла рекордных показателей для TPC-H (для баз данных емкостью 3 Тбайт) в среде DB2 и SuSE Linux Enterprise Server 9 в InfiniBand-кластере на базе xSeries 346. При этом достигнутая стоимость одной транзакции оказалась почти вдвое ниже, чем у ближайших конкурентов.
+<p>Используя технику, называемую коммутируемой сетевой структурой, или коммутирующей решеткой, InfiniBand переносит трафик операций ввода-вывода с процессоров сервера на периферийные устройства и иные процессоры или серверы по всему предприятию. В качестве физического канала используется специальный кабель (линк), обеспечивающий скорость передачи данных 2,5 Гбит/с в обоих направлениях (InfiniBand 1х). Архитектура организована как многоуровневая, она включает четыре аппаратных уровня и верхние уровни, реализуемые программно. В каждом физическом канале можно организовать множество виртуальных каналов, присвоив им разные приоритеты. Для повышения скорости существуют 4-кратные и 12-кратные версии InfiniBand, в которых используется соответственно 16 и 48 проводов, а скорости передачи данных по ним равны 10 Гбит/с (InfiniBand 4х) и 30 Гбит/с (InfiniBand 12х).
+<p>Решения на основе архитектуры InfiniBand востребованы на четырех основных рынках: корпоративные центры данных (включая хранилища данных), высокопроизводительные компьютерные кластеры, встроенные приложения и коммуникации. Технология InfiniBand позволяет объединять стандартные серверы в кластерные системы, чтобы обеспечить центрам данных производительность, масштабируемость и устойчивость к сбоям - возможности, обычно предоставляемые только платформами высшего класса стоимостью в миллионы долларов. Кроме того, хранилища InfiniBand можно подключать к кластерам серверов, что позволяет связать все ресурсы хранения данных напрямую с вычислительными ресурсами. Рынок высокопроизводительных кластеров все время агрессивно ищет новые пути расширения вычислительных возможностей и потому может извлечь огромную выгоду из высокой пропускной способности, низкой латентности и прекрасной масштабируемости, предлагаемой недорогими продуктами InfiniBand. Встроенные приложения, такие, как военные системы, системы, работающие в реальном времени, обработка видеопотоков и т. д., получат огромные преимущества от надежности и гибкости соединений InfiniBand. Кроме того, рынок коммуникаций постоянно требует увеличения пропускной способности соединений, чего удается достичь благодаря 10- и 30-Гбит/с соединениям InfiniBand.
+<p>На физическом уровне протокола InfiniBand определены электрические и механические характеристики, в том числе оптоволоконные и медные кабели, разъемы, параметры, задающие свойства горячей замены. На уровне связей определены параметры передаваемых пакетов, операции, связывающие точку с точкой, особенности коммутации в локальной подсети. На сетевом уровне определяются правила маршрутизации пакетов между подсетями, внутри подсети этот уровень не требуется. Транспортный уровень обеспечивает сборку пакетов в сообщение, мультиплексирование каналов и транспортные службы.
+<p>Отметим некоторые ключевые особенности архитектуры InfiniBand. Для ввода-вывода и кластеризации используется единственная плата InfiniBand в сервере, что устраняет потребность в отдельных платах для коммуникаций и систем хранения данных (однако в случае типичного сервера рекомендуется установить две такие карты, сконфигурированные для обеспечения избыточности). Достаточно всего одного соединения с коммутатором InfiniBand на каждый сервер, IP-сеть или систему SAN (избыточность сводится к простому дублированию соединения с другим коммутатором). Наконец, архитектура InfiniBand разрешает проблемы соединений и ограничения полосы внутри сервера и при этом обеспечивает требуемую полосу и возможность коммуникаций для внешних систем хранения.
+<p>Архитектура InfiniBand состоит из следующих трех основных компонентов (рис. 3). HCA (Host Channel Adapter) устанавливается внутри сервера или рабочей станции, выполняющей функции главной (хоста). Он выступает как интерфейс между контроллером памяти и внешним миром и служит для подключения хост-машин к сетевой инфраструктуре на основе технологии InfiniBand. Адаптер HCA реализует протокол обмена сообщениями и основной механизм прямого доступа к памяти. Он подключается к одному или более коммутаторам InfiniBand и может обмениваться сообщениями с одним или несколькими TCA. Адаптер TCA (Target Channel Adapter) предназначен для подключения к сети InfiniBand таких устройств, как накопители, дисковые массивы или сетевые контроллеры. Он, в свою очередь, служит интерфейсом между коммутатором InfiniBand и контроллерами ввода-вывода периферийных устройств. Эти контроллеры не обязательно должны быть одного типа или принадлежать к одному классу, что позволяет объединять в одну систему разные устройства. Таким образом, TCA действует в качестве промежуточного физического слоя между трафиком данных структуры InfiniBand и более традиционными контроллерами ввода-вывода для иных подсистем, таких, как Ethernet, SCSI и Fibre Channel. Следует отметить, что TCA может взаимодействовать с HCA и напрямую. Коммутаторы и маршрутизаторы InfiniBand обеспечивают центральные точки стыковки, при этом к управляющему HCA может быть подключено несколько адаптеров TCA. Коммутаторы InfiniBand образуют ядро сетевой инфраструктуры. С помощью множества каналов они соединяются между собой и с TCA; при этом могут быть реализованы такие механизмы, как группировка каналов и балансировка нагрузки. Если коммутаторы функционируют в пределах одной подсети, образованной непосредственно подсоединенными устройствами, то маршрутизаторы InfiniBand объединяют эти подсети, устанавливая связь между несколькими коммутаторами.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No7-8_2006/comm/ris3.jpg" alt=Fig.3></td>
+<td align="left" valign="bottom">Рис. 3. Основные компоненты SAN-сети на основе InfiniBand.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Большая часть развитых логических возможностей системы InfiniBand встроена в адаптеры, которые подключают узлы к системе ввода-вывода. Каждый тип адаптера разгружает хост от выполнения задач транспортировки, используя канальный адаптер InfiniBand, отвечающий за организацию сообщений ввода-вывода в пакеты для доставки данных по сети. В результате ОС на хосте и процессор сервера освобождаются от этой задачи. Стоит обратить внимание, что такая организация в корне отличается от того, что происходит при коммуникациях на основе протокола TCP/IP.
+<p>В InfiniBand определен весьма гибкий набор линий связи и механизмов транспортного уровня, обеспечивающий точную настройку характеристик сети SAN на базе InfiniBand в зависимости от прикладных требований, в число которых входят:
+<ul><li>пакеты переменного размера;
+<li>максимальный размер единицы передачи: 256, 512 байт, 1, 2, 4 Кбайт;
+<li>заголовки локальной трассы уровня 2 (LRH, Local Route Header) для направления пакетов в нужный порт канального адаптера;
+<li>дополнительный заголовок уровня 3 для глобальной маршрутизации (GRH, Global Route Header);
+<li>поддержка групповой передачи;
+<li>вариантные и инвариантные контрольные суммы (VCRC и ICRC) для обеспечения целостности данных.</ul>
+<p>Максимальный размер единицы передачи определяет такие характеристики системы, как неустойчивость синхронизации пакетов, величина накладных расходов на инкапсуляцию и длительность задержки, используемые при разработке систем с несколькими протоколами. Возможность опускать сведения о глобальном маршруте при пересылке в пункт назначения локальной подсети снижает издержки локального обмена данными. Код VCRC рассчитывается заново каждый раз при прохождении очередного звена канала связи, а код ICRC - при получении пакета пунктом назначения, что гарантирует целостность передачи по звену и по всему каналу связи.
+<p>В InfiniBand определено управление потоком на основе разрешений - для предотвращения блокировок головного пакета (head of line blocking) и потерь пакетов, - а также управление потоком на канальном уровне и сквозное управление потоком. По своим возможностям управление на канальном уровне на основе разрешений превосходит широко распространенный протокол XON/XOFF, устраняя ограничения на максимальную дальность связи и обеспечивая лучшее использование линии связи. Приемный конец линии связи посылает передающему устройству разрешения с указанием объема данных, который можно получать надежно. Данные не передаются до тех пор, пока приемник не пошлет разрешение, свидетельствующее о наличии свободного пространства в приемном буфере. Механизм передачи разрешений между устройствами встроен в протоколы соединений и линий связи для гарантии надежности управления потоком. Управление потоком на канальном уровне организовано для каждого виртуального канала отдельно, что предотвращает распространение конфликтов передачи, свойственное другим технологиям.
+<p>С помощью InfiniBand связь с удаленными модулями хранения, сетевые функции и соединения между серверами будут осуществляться за счет подключения всех устройств через центральную, унифицированную структуру коммутаторов и каналов. Архитектура InfiniBand позволяет размещать устройства ввода-вывода на расстоянии до 17 м от сервера с помощью медного провода, а также до 300 м с помощью многомодового волоконно-оптического кабеля и до 10 км - с помощью одномодового волокна.
+<p>Сегодня InfiniBand постепенно снова набирает популярность в качестве технологии 
+  магистрали для кластеров серверов и систем хранения, а в центрах обработки данных 
+  - в качестве основы для соединений между серверами и системами хранения. Большую 
+  работу проводит в этом направлении организация, именуемая альянсом OpenIB (Open 
+  InfiniBand Alliance, <a href="http://www.openib.org">http://www.openib.org</a>). 
+  В частности, этот альянс ставит своей целью разработку стандартного программного 
+  стека поддержки InfiniBand с открытым кодом для Linux и Windows. Год назад поддержка 
+  технологии InfiniBand была официально включена в состав ядра Linux. Кроме того, 
+  в конце 2005 г. представители OpenIB продемонстрировали возможность использования 
+  технологии InfiniBand на больших дистанциях. Лучшим достижением в ходе демонстрации 
+  стала передача данных на скорости 10 Гбит/c на расстояние в 80,5 км. В эксперименте 
+  участвовали центры обработки данных ряда компаний и научных организаций. На 
+  каждом из конечных пунктов протокол InfiniBand инкапсулировался в интерфейсы 
+  SONET OC-192c, ATM или 10 Gigabit Ethernet без снижения пропускной способности. 
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25195.html'>СХД HP для малого и среднего бизнеса</A></b></li><li><b><A href='detail.php@ID=24808.html'>Горизонтально масштабируемые СХД NetApp и виртуализация для облачных инфраструктур</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24655.html'>SSD-хранилище «Облакотеки» </A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8664.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Технологии передачи информации в SAN
+</a><br><a href="detail.php@ID=8664.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Практически у любой современной компании существует потребность в улучшении эффективности сетей и технологий компьютерных систем. Одно из необходимых&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8664.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8664&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0b34e6fb8fc6e06507914e0443eea5eb'><img src='../bitrix/tools/captcha.php@captcha_code=0b34e6fb8fc6e06507914e0443eea5eb' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

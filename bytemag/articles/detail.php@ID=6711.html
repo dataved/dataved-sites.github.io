@@ -1,0 +1,578 @@
+<HTML>
+<HEAD>
+<title>Технология BPM в информационной инфраструктуре
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Антон Шматалюк, директор по развитию, Олег Бейлезон, старший ИТ-консультант, компания &amp;quot;Логика бизнеса&amp;quot; Технология BPM (Business Process Management - управление бизнес-процессами) в нашей стране начала завоевывать популярность" />
+<meta name="description" content="Антон Шматалюк, директор по развитию, Олег Бейлезон, старший ИТ-консультант, компания &amp;quot;Логика бизнеса&amp;quot; Технология BPM (Business Process Management - управление бизнес-процессами) в нашей стране начала завоевывать популярность" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082536','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6711' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6711&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6711"].SHOW_IMAGE.value="N"; document.forms["PrintForm6711"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6711"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6711"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6711);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6711.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6711.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6711);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11531.html'>№2 (78), февраль 2005</a><h1>Технология BPM в информационной инфраструктуре
+</h1>10.02.2005<p></p><DIV class='article-text'><p><i>Антон Шматалюк</i>, директор по развитию, <br>
+  <i>Олег Бейлезон</i>, старший ИТ-консультант, <br>
+  компания &quot;Логика бизнеса&quot;
+<p>Технология BPM (Business Process Management - управление бизнес-процессами) в нашей стране начала завоевывать популярность сравнительно недавно. По наблюдениям авторов, эта популярность во многом обусловлена тем, что внутри бизнес-подразделений, у их руководителей, сформировалась потребность в таком технологическом решении, которое обеспечило бы жесткий контроль за выполняемыми процедурами, позволило бы повысить их скорость и управляемость. ИТ-специалисты, со своей стороны, конечно же, были знакомы с традиционными технологиями workflow, из которых выросли решения класса BPM, но основной упор ранее все же делался на внедрение базовых технологий - финансово-учетных систем, систем класса ERP, CRM и т. п.
+<p>Однако времена меняются, и современный бизнес начинает выдвигать новые требования прикладного характера. Все чаще ИТ-подразделения компаний сталкиваются с задачами, формулируемыми в таких терминах, как &quot;процесс&quot;, &quot;маршрутизация заданий&quot;, &quot;мониторинг загрузки сотрудников&quot;, &quot;автоматизация сквозных процедур&quot;. Эти термины, в принципе отнюдь не новые, все же не слишком типичны для &quot;традиционных&quot; информационных систем, выполняющих в основном учетную и аналитическую функцию. Начиная же искать на рынке решения, ставящие такого рода понятия во главу угла, прикладные специалисты неизбежно наталкиваются на аббревиатуру BPM и с удивлением обнаруживают, что под ней подразумеваются системы, на первый взгляд совершенно не схожие друг с другом по функциональному назначению. Возникающая при этом путаница отнюдь не способствует популяризации информационных систем класса BPM в России, несмотря на то, что необходимость таких систем в любой современной организации очевидна.
+<p>В этой статье мы попытаемся &quot;пролить свет&quot; на технологию BPM и, дав обзор рынка, ответить на вопрос, какие информационные системы и почему причисляют к классу BPM.
+<h3>Определение BPM - управленческий и технологический аспекты </h3>
+<p>В самом общем виде цель управления бизнес-процессами можно определить как создание таких механизмов, которые обеспечили бы повышение эффективности деятельности компании через непрерывное совершенствование идущих в ней процессов. Для достижения этой цели необходимо объединение средств и методов, поддерживающих в рамках единого цикла управления решение следующих задач: проектирование процессов, их внедрение (автоматизация), оперативное управление выполнением процессов, мониторинг показателей эффективности процессов, анализ статистики и выявление причин низкой эффективности процессов, постановка задачи, нацеленной на совершенствование процессов.
+<p>Сделав акцент на ИТ-составляющей этого явления, можно сформулировать следующее 
+  определение BPM: это <i>совокупность приложений и систем класса middleware, 
+  поддерживающих специализированные задачи управления &quot;сквозными&quot; процессами (моделирование, 
+  внедрение, оперативное управление и администрирование, мониторинг и анализ показателей 
+  эффективности), обеспечивая слаженное взаимодействие людей и информационных 
+  систем</i>. 
+<p>Многие специалисты, увидев это определение, наверняка вспомнят о технологии 
+  workflow и связанных с ней программных решениях. Провести четкую границу между 
+  этими двумя технологиями не так просто, тем более что многие workflow-решения 
+  со временем превратились в системы класса BPM. Если обратиться к определению, 
+  данному Workflow Management Coalition, то решение workflow - это <i>&quot;система, 
+  которая описывает, создает и управляет выполнением потока работ при помощи ПО, 
+  которое способно интерпретировать описание процесса, взаимодействовать с участниками 
+  потока работ и, при необходимости, вызывать соответствующие приложения и ИТ-инструменты&quot;</i>. 
+  Очень похоже на то, что мы сформулировали для систем класса BPM. Существенная 
+  разница заключается в том, что система workflow позволяет &quot;при необходимости 
+  вызывать соответствующие приложения и ИТ-инструменты&quot;, в то время как BPM обеспечивает 
+  &quot;слаженное взаимодействие людей и информационных систем&quot; за счет современных 
+  технологий интеграции. Упомянем и еще одно важное отличие - в BPM-системах имеются 
+  более развитые средства мониторинга и анализа показателей эффективности процессов. 
+<p>Все эти факторы определяют важное с точки зрения бизнес-результата различие двух технологий, которое сформулировано, к примеру, американской аналитической компанией Delphi Group следующим образом: &quot;В отличие от workflow, BPM фокусируется на том, чтобы помочь организации увеличить ее продуктивность и способность к быстрому реагированию на изменения внешней среды&quot;.
+<p>Таким образом, можно смело говорить о том, что технологии автоматизации и управления 
+  бизнес-процессами перешли от &quot;детской&quot; фазы workflow, когда основное внимание 
+  уделялось тому, <b>как</b> организовать взаимодействие людей в рамках процесса, 
+  к более зрелой фазе BPM, когда особый акцент делается на том, <b>какие цели</b> 
+  ставятся и как обеспечить их достижение при помощи данных технологий. 
+<h3>Требования к решениям класса BPM </h3>
+<p>Определив, что представляет собой технология BPM и какие задачи она призвана решать, следует уточнить, какие требования предъявляет рынок к этим продуктам. Достаточно показателен в этом отношении отчет Delphi Group, где приведена статистика, касающаяся планирования инвестиций в решения класса BPM. Согласно этому отчету, большинство опрошенных организаций - почти 80% - осознали необходимость внедрения BPM-систем. При этом почти треть опрошенных либо уже используют такие системы, либо заканчивают проект их внедрения, а половина респондентов находится на ранней стадии, т. е. выбирает систему или приступает к ее внедрению. Конечно, в России и странах СНГ ситуация выглядит иначе, но это только нагляднее демонстрирует перспективы рынка BPM-систем в нашем регионе.
+<p>В период становления понятия BPM менялись требования, предъявляемые к этой технологии, менялось и само понимание данного термина. Рис. 1 демонстрирует не только эволюцию понятия BPM, но и, как следствие, смену ожиданий от этой новой технологии. Можно видеть, что со временем все большая часть опрошенных начинает воспринимать BPM именно как технологию создания процессно-ориентированных приложений (чем, по сути, и является автоматизация бизнес-процессов), и все меньшая часть их считает, что это подмена понятий или ловкий маркетинговый ход гигантов ИТ-индустрии. Таким образом, роль приложений класса BPM в информационной инфраструктуре предприятия практически определена.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2005/BPM/ris1.gif" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Рис. 1. Как менялось представление о BPM со временем. Источник: Delphi Group, 2003.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Что же, по мнению опрошенных аналитиками специалистов, наиболее важно в любой системе класса BPM? Ответ на этот вопрос может дать еще одно исследование Delphi Group, определяющее самые необходимые, по мнению респондентов, элементы любой системы класса BPM. Как показало это исследование, требования к BPM-системам не ограничиваются только моделированием и автоматизацией бизнес-процессов, но и включают в себя полный спектр отчетности (как оперативной, так и аналитической), управление вовлеченными в процессы пользователями и, конечно же, широкие возможности интеграции с другими приложениями, вплоть до того, чтобы рассматривать BPM-систему как единую процессно-ориентированную интеграционную платформу для всех приложений на предприятии.
+<p>Приведенные результаты опросов наглядно демонстрируют, что современный потребитель вполне представляет себе, что такое BPM-системы и какие задачи они должны решать в его организации. Посмотрим теперь, какие предложения присутствуют на рынке.
+<h3>Структура рынка BPM </h3>
+<p>Изучение рынка BPM-систем без предварительной подготовки скорее все запутает, нежели прояснит. Лучше всего эту ситуацию иллюстрирует рис. 2, где представлены наиболее часто упоминаемые решения, ассоциирующиеся с технологией BPM. Но даже у сведущего в ИТ-тематике человека эта диаграмма может вызвать легкое недоумение: ведь продукты ARIS традиционно считаются средством описания и анализа бизнес-процессов, SAP относится к системам управления ресурсами предприятия, а Oracle ассоциируется в первую очередь с базами данных, аналитическими средствами, средствами интеграции и лишь немного - с workflow-технологиями. Что же у этих систем общего?
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2005/BPM/ris2.gif" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Рис. 2. Структура рынка решений, ассоциирующихся с BPM.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Корни путаницы кроются не в чем ином, как в многогранности самого понятия BPM (об этом мы говорили в начале статьи). Ведь технология BPM охватывает все стадии управления бизнес-процессами - от построения стратегии к моделированию бизнес-процессов, их анализу и оптимизации, далее - к внедрению, контроллингу, анализу результатов и снова к моделированию с целью совершенствования, замыкая, таким образом, цикл управления.
+<p>В такой ситуации совершенно естественно, что есть множество продуктов, которые, охватывая функциональностью часть вышеперечисленных стадий, причисляют себя к BPM-системам. Поэтому рынок BPM-систем в целом тоже можно сегментировать. Наше видение такого сегментирования приведено на рис. 3. Из него видно, что большинство современных средств, предоставляющих специфичный функционал (ERP, EAI, ECM и т. д.), обладают и отдельными возможностями поддержки бизнес-процессов.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2005/BPM/ris3.jpg" alt=Fig.3></td></tr>
+<tr><td valign="bottom">Рис. 3. Сегментирование рынка BPM.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Но при этом на рынке существует класс так называемых чистых BPM-систем, т. е. систем, изначально проектировавшихся и разрабатывавшихся для того, чтобы обеспечить ИТ-поддержку всех этапов управления процессами - от моделирования и анализа до мониторинга и контроля версий. Данные системы делают особый упор именно на автоматизацию &quot;сквозных&quot; бизнес-процессов, вне зависимости от того, какими средствами ИТ они поддержаны. Именно о таких системах пойдет речь ниже в данной статье.
+<h3>&quot;Чистые&quot; BPM-системы </h3>
+<p>Даже сузив и без того специализированный рынок систем класса BPM до подмножества &quot;чистых&quot; BPM-продуктов, потребитель все равно остается перед ситуацией множественного выбора. Так, &quot;магический квадрат&quot; Gartner для рынка &quot;чистых&quot; BPM (ежегодный отчет компании Gartner Group, ранжирующий всех игроков данного сегмента рынка по двум параметрам: перспективность и зрелость идей, с одной стороны, и способность реализовать эти идеи - с другой) за 2004 г. включает более 40 фирм-поставщиков BPM-решений. Отечественного пользователя, правда, &quot;выручает&quot; то обстоятельство, что лишь немногие из этих фирм вышли со своими решениями на рынок стран СНГ - одни еще не осознали его перспектив, другие испытывают затруднения с поддержкой русского и других национальных языков, третьи опасаются рисков, неизбежно возникающих при работе в нашем экономическом пространстве, и т. д.
+<p>Таким образом, речь пока идет лишь о небольшом количестве &quot;смельчаков&quot;, продуктами 
+  которых на территории стран СНГ можно воспользоваться на законных основаниях, 
+  получая необходимые консультации и техническую поддержку при внедрении и эксплуатации. 
+  Одна из таких систем - Ultimus BPM Suite, разработанная американской компанией 
+  Ultimus и распространяемая на территории России и стран СНГ консалтинговой компанией 
+  &quot;Логика бизнеса&quot; (<a href="http://www.blogic.ru">http://www.blogic.ru</a>). 
+  Ultimus BPM Suite принадлежит к группе лидеров в &quot;магическом квадрате&quot; Gartner 
+  Group и занимает первое место в опубликованном в феврале 2004 г. отчете компании 
+  Forrester, содержащем оценку BPM-систем по десяти различным показателям (качество 
+  архитектуры, уровень реализации возможностей, положение на рынке, стоимость 
+  владения и т. д.). 
+<h3>Система Ultimus BPM Suite </h3>
+<p>Компания Ultimus (<a href="http://www.ultimus.com">http://www.ultimus.com</a>), 
+  основанная в 1994 г., изначально была ориентирована на создание решений, поддерживающих 
+  быструю и эффективную автоматизацию бизнес-процессов. Сегодня ее продукты применяют 
+  более 1200 компаний по всему миру. В списке клиентов Ultimus - организации из 
+  самых различных отраслей - производственные, финансовые, консалтинговые, ИТ-компании, 
+  государственные учреждения и многие другие, в деятельности которых качество 
+  управления бизнес-процессами играет серьезную роль. В настоящий момент предлагается 
+  уже 6-я версия системы и готовится к выпуску 7-я. 
+<p>Разрабатывая Ultimus BPM Suite, компания Ultimus стремилась, чтобы продукт обладал следующими характеристиками:
+<ul><li>непрерывность цикла управления бизнес-процессами;
+<li>описание бизнес-процессов в графическом виде, в рамках методологии, понятной как бизнес-аналитикам, так и ИТ-специалистам;
+<li>гибкость механизма описания, позволяющая не изменять бизнес-процессы под нужды системы, а внедрять их именно в том виде, в каком они требуются бизнесу;
+<li>легкость внедрения описанных процессов;
+<li>легкость разработки пользовательских форм;
+<li>возможности интеграции с различными приложениями на любом уровне - от ядра системы до пользовательских форм;
+<li>широкие возможности мониторинга и администрирования как процессов, так и вовлеченных в них пользователей;
+<li>открытость внутренних структур данных для внешних средств мониторинга и анализа;
+<li>легкость доступа клиентов к серверу системы;
+<li>легкость развертывания системы.</ul>
+<p>Ниже мы поговорим о том, насколько хорошо компания справилась с поставленными целями, какие архитектурные решения и механизмы были для этого применены.
+<h4>Функциональность </h4>
+<p>На рис. 4 приведена структурная схема системы Ultimus BPM Suite, демонстрирующая взаимодействие между модулями и механизмы, реализующие это взаимодействие. Здесь стоит сказать, что Ultimus BPM Suite в подавляющем большинстве использует технологии Microsoft (а компания Ultimus имеет у Microsoft статус Gold Certified Partner), так что &quot;изобретать велосипед&quot;, адаптируясь к капризам новой платформы, не придется.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2005/BPM/ris4.jpg" alt=Fig.4></td></tr>
+<tr><td valign="bottom">Рис. 4. Структурная схема Ultimus BPM Suite.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Ядро системы - <b>Ultimus BPM Server</b>. Реализован этот модуль в виде Windows-сервиса 
+  и набора компонентов для подключения. BPM Server поддерживает технологии масштабирования 
+  и балансировки загрузки и может размещаться на нескольких серверах. В качестве 
+  хранилища данных используется как Microsoft SQL Server, так и база данных Oracle. 
+  Именно на этом сервере работают все запущенные в системе экземпляры процессов. 
+  Стоит отметить, что сервер поддерживает одновременно несколько версий запущенного 
+  процесса - если процесс был изменен, то можно разрешить тем экземплярам, которые 
+  были запущены ранее, продолжить выполнение в первоначальном варианте описания. 
+  Интерфейсы сервера, реализованные в виде .NET- и Web-сервисов, позволяют применять 
+  его workflow-функционал любой внешней системе. 
+<p>Как отдельный механизм (в виде компонента COM+) реализован <b>BPM Studio Server</b> 
+  - сервис для разработчиков, позволяющий вести коллективную работу над процессами, 
+  контролировать версии, разделять права доступа разработчиков к различным процессам 
+  и т. п. Рабочее место разработчика - Ultimus <b>BPM Studio Client</b>. Это программа, 
+  подключающаяся к Studio Server и предназначенная непосредственно для разработки. 
+  Studio Server состоит из двух подмодулей - Process Designer и Builder. 
+<p><b>Process Designer</b> - это средство предварительного моделирования бизнес-процессов, 
+  позволяющее построить процесс, не вдаваясь в тонкости проектирования форм и 
+  механизмов интеграции, и провести имитационное моделирование. Для этого Process 
+  Designer предоставляет в распоряжение аналитика механизмы сценариев поведения 
+  процесса и средства отчетности, позволяющие исследовать затратные и временные 
+  характеристики процесса. 
+<p>Более интересен с точки зрения разработчика инструмент <b>Ultimus Builder</b> 
+  (рис. 5). Этот модуль позволяет решать следующие задачи. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2005/BPM/ris5.jpg" alt=Fig.5></td></tr>
+<tr><td valign="bottom">Рис. 5. Модуль Ultimus Builder.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p><b>Разработка карты процесса</b> (структуры и предварительной логики бизнес-процесса). 
+  Для этого используется графический редактор, позволяющий &quot;расставить&quot; на карте 
+  шаги различного типа - пользовательские, автоматические, шаги подпроцессов и 
+  т. д., и прочертить связи между этими шагами, задать время выполнения каждого 
+  шага и реакцию на задержку выполнения. 
+<p><b>Определение процессных переменных.</b> Все переменные процесса хранятся 
+  в единой таблице (подобной листу Excel), и механизм работы с ними не сложнее 
+  работы с Excel. 
+<p><b>Разработка пользовательских форм.</b> Каждому пользовательскому шагу процесса 
+  (т. е. шагу, выполняемому человеком) должна соответствовать форма отображения 
+  и редактирования данных. Для решения этой задачи Ultimus Builder предоставляет 
+  графический редактор форм, подобный редактору любой визуальной среды программирования. 
+  Помимо стандартных элементов управления, предоставляемых редактором, Ultimus 
+  Builder позволяет поместить в форму любой визуальный компонент ActiveX; таким 
+  образом, при автоматизации процесса можно использовать уже имеющиеся в организации 
+  разработки. 
+<p><b>Определение логики следования шагов.</b> Табличный механизм задания логики 
+  следования шагов процесса позволяет создать процесс со сколь угодно сложными 
+  зависимостями между отдельными шагами и ветками: с ветвлениями, условными и 
+  безусловными циклами, возвратом на любое число шагов назад, распараллеливанием 
+  и т. п. 
+<p><b>Определение точек и механизмов интеграции с инфраструктурой предприятия.</b> 
+  Для этих целей Ultimus предлагает механизм FloBots (от workFLOw roBOTS). FloBots 
+  - это специальные автоматические агенты, предназначенные для настройки и реализации 
+  различных механизмов интеграции. В распоряжении разработчика - агенты для связи 
+  с базами данных, выгрузки процессной информации в Microsoft Word, Microsoft 
+  Excel, Adobe Acrobat, для вызова .NET и Web Services, для рассылки электронной 
+  почты, обмена XML-информацией и т. д. (на рис. 4 в правом нижнем углу отображен 
+  практически полный список FloBots, предоставляемых Ultimus). Настроить большинство 
+  FloBots может даже человек, не имеющий никакого опыта в программировании. Кроме 
+  того, доступен механизм, позволяющий разработчикам создать собственные FloBots 
+  и присоединить их к уже имеющемуся набору. 
+<p><b>Определение реакции на процессные события.</b> Очень полезная функция в 
+  Ultimus BPM Suite - поддержка событийного механизма и предоставление разработчику 
+  возможности самостоятельно задавать реакцию системы на эти события. Событийный 
+  механизм поддерживается на всех уровнях детализации - от процесса (начало шага, 
+  окончание шага, задержка шага) до событий элементов управления на форме. Каждому 
+  из этих событий можно назначить реакцию самых разных типов - запись/чтение из 
+  базы данных, выполнение клиентского или серверного .NET-кода, а также множество 
+  других реакций. 
+<p><b>Эмуляция реального выполнения процесса.</b> Проверить, как функционирует 
+  разрабатываемый процесс, можно прямо в ходе его создания, не размещая и не запуская 
+  его на сервере. В процессе моделирования можно проверить как логику поведения 
+  процесса, так и работу пользовательских форм, агентов интеграции и т. д. При 
+  этом основной (продуктивный) сервер никак не задействован в моделировании. 
+<p><b>Установка разработанного процесса на сервер.</b> Процесс можно установить 
+  на продуктивный сервер сразу после разработки, без промежуточных этапов. Установленный 
+  процесс готов к эксплуатации, экземпляр этого процесса может запустить любой 
+  сотрудник, имеющий соответствующие права. 
+<p>Следующий компонент системы, имеющий отношение к разработке, - <b>Ultimus OrgChart</b> 
+  (рис. 6). OrgChart реализован в виде клиента ActiveX и предназначен для графического 
+  построения организационной структуры предприятия. Созданная организационная 
+  структура используется в ходе разработки процесса и при его выполнении и предназначена 
+  для распределения сотрудников по должностям, задания отношений подчиненности 
+  и членства в различных рабочих группах. Информацию о сотрудниках OrgChart может 
+  черпать из использующихся в организации структур Active Directory и LDAP. 
+<p>В целом механизм привязки исполнителей на шагах не только к физическим сотрудникам организации, а к различным элементам в оргструктуре дает дополнительную гибкость при использовании Ultimus BPM Suite - например, если исполнитель на какой-либо должности меняется, то достаточно сделать простое изменение в оргструктуре для того, чтобы эти изменения распространились на все процессы, в которых задействована данная должность. Кроме того, отношения подчиненности и присутствия в различных группах могут определять принципы назначения исполнителей, рассылки уведомлений, обработки критических ситуаций. Например, если превышен срок выполнения задания, информация об этом может быть направлена непосредственному руководителю, а само задание - передано другому исполнителю.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2005/BPM/ris6.jpg" alt=Fig.6></td></tr>
+<tr><td valign="bottom">Рис. 6. Модуль Ultimus OrgChart.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Для мониторинга процессов, инцидентов, шагов, пользователей и для общего управления 
+  системой предназначен модуль <b>Ultimus Administrator</b>. С его помощью можно 
+  управлять: 
+<ul><li>сервером (техническими настройками, параметрами аутентификации и т. д.);
+<li>процессами (установка, обновление, контроль версий, удаление);
+<li>экземплярами процесса (мониторинг, остановка, переназначение исполнителей на шагах);
+<li>шагами процесса (мониторинг, административное редактирование и т. д.);
+<li>пользователями (загрузка, права доступа).</ul>
+<p>Взаимодействие с пользователями осуществляется через модуль <b>Ultimus Client</b> 
+  (рис. 7). Этот модуль организован в виде клиента ActiveX, загружаемого через 
+  Web-браузер, поэтому никакого специального ПО на компьютеры клиентов устанавливать 
+  не требуется - достаточно передать им адрес сервера в интрасети. Через Ultimus 
+  Client пользователи могут получать задания, обрабатывать их и отправлять обратно 
+  на сервер, переназначать задания другим исполнителям, получать помощь по процессам 
+  и шагам. В Ultimus Client есть развитые возможности настройки под конкретного 
+  пользователя или группу пользователей, что позволяет отображать процессные данные 
+  именно в том виде, в котором они этим пользователям нужны. Важно также, что 
+  Ultimus не навязывает собственное клиентское место в качестве единственной возможности 
+  взаимодействия пользователя с системой - в распоряжении разработчиков имеется 
+  программный механизм, позволяющий реализовать клиентский функционал на базе 
+  уже существующих в организации портальных решений. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2005/BPM/ris7.jpg" alt=Fig.7></td></tr>
+<tr><td valign="bottom">Рис. 7. Модуль Ultimus Client.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Модуль <b>Ultimus FloStation</b>, реализованный в виде Windows-сервиса, предназначен 
+  для обслуживания автоматических агентов FloBots. В конфигурации Ultimus BPM 
+  Suite может быть несколько модулей FloStation, что позволяет распределять нагрузку, 
+  возникающую при интеграции Ultimus с другими приложениями. 
+<p>Замыкает список модулей компонент <b>Ultimus Reports</b>, предназначенный для 
+  построения оперативных и аналитических отчетов по процессам, шагам и вовлеченным 
+  в них исполнителям. Этот модуль содержит более десяти предопределенных типов 
+  отчетов, которые можно настраивать под конкретные требования бизнеса. Важно 
+  при этом осознавать, что в силу открытости внутренней структуры базы данных 
+  Ultimus возможности мониторинга и анализа не исчерпываются функционалом Reports 
+  и ограничены только бизнес-требованиями организации и мастерством разработчиков. 
+<h4>Перспективы развития </h4>
+<p>В заключение хотелось бы обсудить одну из основных сложностей автоматизации 
+  процессов, которую в самое ближайшее время предполагается устранить за счет 
+  новой патентованной технологии от компании Ultimus. Приведем выдержку из документа 
+  <i>Microsoft&#39;s Next Frontier</i>: 
+<p>&quot;Жан-Жак Дюбре, архитектор: &quot;Совсем недавно я разговаривал с главным системным архитектором одной крупной компании, и он поразил меня следующей информацией: его компания только что завершила описание всех своих бизнес-процессов. Я сказал: &quot;Замечательно, теперь вы готовы к использованию технологии BPM&quot;. &quot;Ну, не совсем так, - возразил он. - Результаты показали, что большая часть наших процессов настолько сложна по своей структуре, что даже полученное описание слегка пугает, не говоря уже о том, что автоматизация и управление изменениями подобных процедур представляется практически невыполнимой задачей&quot;.
+<p>Но ведь даже в таких ситуациях нельзя отказываться от автоматизации и нельзя становиться заложником информационных систем, препятствующих изменениям. Именно для разрешения таких непростых ситуаций компания Ultimus разработала и запатентовала технологию Ultimus Adaptive Discovery.
+<p>Эта технология, во-первых, позволяет внедрять и использовать процесс, даже если карта процесса не проработана, за счет определения правил (логики) процесса уже по ходу его выполнения, изучения этих правил и адаптации процесса для дальнейшего его использования. Во-вторых, технология отделяет логику процесса от остальных его компонентов (данных, электронных форм, элементов интеграции, участников). Таким образом, мы получаем возможность управлять следующими тремя видами процессов (рис. 8): строго формализованными, частично формализованными и абсолютно гибкими.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No2_2005/BPM/ris8.jpg" alt=Fig.8></td></tr>
+<tr><td valign="bottom">Рис. 8. Ultimus Adaptive Discovery позволяет управлять тремя видами процессов.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В результате ИТ-специалисты владеют информационной инфраструктурой, в то время как бизнес-подразделения могут самостоятельно управлять действиями и логикой процессов в рамках своей ежедневной работы.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6711.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Технология BPM в информационной инфраструктуре
+</a><br><a href="detail.php@ID=6711.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Антон Шматалюк, директор по развитию, 
+  Олег Бейлезон, старший ИТ-консультант, 
+  компания &quot;Логика бизнеса&quot;
+Технология BPM (Business&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6711.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6711&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='08daffa1de151eb9dd4aa2914a166bbf'><img src='../bitrix/tools/captcha.php@captcha_code=08daffa1de151eb9dd4aa2914a166bbf' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

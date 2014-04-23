@@ -1,0 +1,435 @@
+<HTML>
+<HEAD>
+<title>Устройства защиты Cisco ASA 5500 Series
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Семейство многофункциональных устройств Cisco Adaptive Security Appliance 5500 Series для защиты сетевой инфраструктуры малых и средних компаний - механизмы работы и преимущества. Год назад, в мае 2005 г., корпорация Cisco Systems (http://www.cisco.com" />
+<meta name="description" content="Семейство многофункциональных устройств Cisco Adaptive Security Appliance 5500 Series для защиты сетевой инфраструктуры малых и средних компаний - механизмы работы и преимущества. Год назад, в мае 2005 г., корпорация Cisco Systems (http://www.cisco.com" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398077519','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13246.html'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13654.html'>Технологии ABBYY обеспечивают оперативный доступ к архивным документам</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8789' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8789&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8789"].SHOW_IMAGE.value="N"; document.forms["PrintForm8789"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8789"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8789"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8789);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8789.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8789.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8789);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a>, <a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><br /></p><a href='../numbers/index.php@ID=11507.html'>№6 (94), июнь 2006</a><h1>Устройства защиты Cisco ASA 5500 Series
+</h1>Автор: Александр Николов<br />16.06.2006<p></p><DIV class='article-text'><p>Семейство многофункциональных устройств Cisco Adaptive Security Appliance 5500 Series для защиты сетевой инфраструктуры малых и средних компаний - механизмы работы и преимущества.
+<p>Год назад, в мае 2005 г., корпорация Cisco Systems (<a href="http://www.cisco.com">http://www.cisco.com</a>) 
+  объявила о выпуске на рынок семейства многофункциональных устройств Cisco Adaptive 
+  Security Appliance (ASA) 5500 Series, предназначенных для защиты сетевой инфраструктуры 
+  малых и средних компаний от широкого спектра угроз, включая атаки злоумышленников, 
+  несанкционированный доступ, деструктивные действия вирусов и прочего вредоносного 
+  ПО. В этой статье мы подробнее рассмотрим как общие принципы работы ASA 5500 
+  Series, так и конкретную их техническую реализацию. 
+<p>Прежде всего стоит отметить, что семейство ASA 5500 Series призвано обеспечить масштабируемость интегрированных сервисов и унифицированное управление ими, гарантируя заказчику одновременную работу многих механизмов безопасности и их высокую производительность и эффективность, причем без усложнения процесса эксплуатации сетевой инфраструктуры.
+<p>Согласно определению менеджера по развитию бизнеса Cisco System в России Алексея Лукацкого, появление системы ASA 5500 Series было обусловлено вполне конкретными задачами. "Основная идея заключается в том, - говорит г-н Лукацкий, - чтобы дать предприятиям малого и среднего бизнеса решение, которое устранит почти все их проблемы с безопасностью и при этом приобретение такого решения будет финансово целесообразным. Ведь угрозы и для крупных корпораций, и для малых предприятий, и даже для домашних пользователей одинаковы, а вот финансовые их возможности различаются на порядки. Поэтому и появилась ASA 5500, которая включает в себя механизмы защиты периметра с помощью межсетевого экрана, отражения атак с помощью системы предотвращения вторжений, построения VPN для защиты удаленного доступа и межофисного взаимодействия, а также борьбы с вредоносными программами с помощью антивируса, антиспама, antispyware, антифишинга и контроля доступа к Интернет-сайтам".
+<h3>Основные характеристики </h3>
+<p>Семейство Cisco ASA 5500 Series, ключевой компонент стратегии безопасности Cisco Self-Defending Network (SDN), состоит из трех моделей: ASA 5510, 5520 и 5540 (их характеристики приведены в таблице) и с одинаковым успехом может использоваться заказчиками самого широкого круга - от предприятий малого и среднего бизнеса до крупных корпораций. Однако благодаря невысокой цене и интеграции нескольких ключевых сервисов в одном устройстве оно будет особенно интересно компаниям из сектора SMB.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/_Illustrations/No6_2006/CiscoASA.jpg" alt=Fig.></td>
+<td align="left" valign="bottom">Устройство защиты Cisco ASA 5520. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h4>Технические характеристики устройств семейства Cisco ASA 5500 Series </h4>
+<table border="1">
+  <tr>
+    <td> </td>
+    <td>ASA 5510</td>
+    <td>ASA 5520</td>
+    <td>ASA 5540</td>
+  </tr>
+  <tr>
+    <td>Производительность МСЭ, Мбит/с</td>
+    <td>До 300</td>
+    <td>До 450</td>
+    <td>До 650</td>
+  </tr>
+  <tr>
+    <td>Производительность МСЭ и отражения атак, Мбит/с</td>
+    <td>До 150</td>
+    <td>До 225 с AIP-SSM-10; до 375 с AIP-SSM-20</td>
+    <td>До 450 с AIP-SSM-20</td>
+  </tr>
+  <tr>
+    <td>Производительность VPN, Мбит/с</td>
+    <td>До 170</td>
+    <td>До 225</td>
+    <td>До 325</td>
+  </tr>
+  <tr>
+    <td>Число одновременно поддерживаемых сессий</td>
+    <td>32 000/64 000*</td>
+    <td>130 000</td>
+    <td>280 000</td>
+  </tr>
+  <tr>
+    <td>Число туннелей IPSec VPN </td>
+    <td>50/150*</td>
+    <td>300/750*</td>
+    <td>500/2000*/5000***</td>
+  </tr>
+  <tr>
+    <td>Число туннелей SSL VPN </td>
+    <td>50/150*</td>
+    <td>300/750*</td>
+    <td>500/1250*/2500***</td>
+  </tr>
+  <tr>
+    <td>Виртуальные МСЭ</td>
+    <td>0</td>
+    <td>2/10**</td>
+    <td>2/50***</td>
+  </tr>
+  <tr>
+    <td>Кластеризация и балансировка VPN</td>
+    <td>Нет</td>
+    <td>Да</td>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <td>Поддерживаемые физические интерфейсы</td>
+    <td>3 Fast Ethernet + 1 порт управления/5 Fast Ethernet*</td>
+    <td>4 Gigabit Ethernet + 1 Fast Ethernet</td>
+    <td>4 Gigabit Ethernet + 1 Fast Ethernet</td>
+  </tr>
+  <tr>
+    <td>Поддерживаемые логические интерфейсы VLAN 802.1q</td>
+    <td>0/10*</td>
+    <td>25</td>
+    <td>100</td>
+  </tr>
+    <tr><td colspan=4>* С лицензиями 5510 Security Plus, 5520 VPN Plus и 5540 VPN Plus соответственно; 
+  ** с дополнительной лицензией (в базовой комплектации - 2); *** с лицензией 
+  5540 VPN Premium. </td></tr>
+</table>
+<p>В техническом плане система ASA 5500 Series опирается на мощные средства безопасности, присутствующие в таких семействах продуктов Cisco, как PIX Security Appliance, IPS 4200 Series и VPN 3000 Concentrator. Благодаря этим средствам заказчикам предлагается широкий спектр сервисов VPN, которые обеспечивают защищенный дистанционный доступ с применением технологий IPSec и SSL VPN, а также сервисов передачи данных на большие расстояния с гарантированным качеством обслуживания (QoS). Особо стоит отметить, что за счет поддержки важнейших телекоммуникационных технологий (в частности, соглашения QoS, инструментов маршрутизации, протокола IPv6 и средств широковещательной рассылки) продукты серии ASA 5500 Series обладают широкими возможностями интеграции и встраиваются в существующую сетевую инфраструктуру без ущерба для обычного трафика и бизнес-приложений.
+<p>"Как правило, это решение ставится между маршрутизатором, смотрящим в Интернет, и защищаемой сетью, - поясняет Алексей Лукацкий. - Наличие нескольких интерфейсов позволяет сегментировать сеть на внутреннюю и демилитаризованную сеть, при этом механизм "прозрачного" межсетевого экрана (transparent firewall) позволяет даже не менять топологию сети. ASA в этом случае будет невидима для злоумышленников, но доступ через нее при обеспечении высокого уровня защиты будет прозрачным для пользователей".
+<p>По оценке г-на Лукацкого, основные технические преимущества Cisco ASA 5500 Series, выделяющие ее в глазах потенциальных заказчиков, заключаются в повышении уровня защищенности от самых разнообразных угроз, а также в возможности организации защищенного взаимодействия офисов по открытым каналам связи (таким, как Интернет) посредством одного-единственного устройства. Расширяемая архитектура Cisco AIM и гибкая мультипроцессорная архитектура устройств семейства Cisco ASA 5500 Series обеспечивают высокую производительность нескольких одновременно работающих механизмов защиты. Каждая платформа Cisco ASA 5500 Series сочетает в себе несколько совместно функционирующих производительных процессоров, предоставляя защиту приложений, защиту от неизвестных атак, масштабируемые службы IPSec/SSL VPN и т. д. Предусмотрена возможность добавления других служб защиты, таких, как службы предотвращения вторжений и расширенные службы защиты от неизвестных атак - для этого в устройство Cisco ASA 5500 Series устанавливаются модули адаптивной проверки и предотвращения атак (AIP-SSM). За счет такой гибкой архитектуры устройства семейства Cisco ASA 5500 Series способны легко адаптироваться к новым вторжениям, предоставляя защиту в среде быстро развивающихся угроз.
+<p>Эффективное управление, позволяющее увеличить срок эксплуатации устройств, обеспечивает тем самым высокий уровень защиты инвестиций. "Благодаря объединению эффективных, проверенных рынком механизмов защиты и построения VPN, а также встроенной поддержке соединений Gigabit Ethernet и бездисковой (а значит, более надежной) структуре с флэш-памятью устройства семейства Cisco ASA 5500 Series идеально подходят компаниям, которым необходимы лучшие среди аналогов решения, обеспечивающие высокую производительность, гибкость, надежность и защиту капиталовложений", - утверждает Алексей Лукацкий.
+<h3>Механизмы защиты </h3>
+<p>Система Cisco ASA 5500 Series предоставляет развитые механизмы адаптивной защиты от угроз, известные под общим названием Adaptive Threat Defense. Сюда входят средства защиты от неизвестных угроз (Anti-X), методы защиты бизнес-приложений (Application security) и технологии контроля и защиты сети (Network containment and control), которые гарантируют унифицированную и полную защиту всех важных ресурсов предприятия от широкого спектра несанкционированных действий. В одном устройстве, которое включает в себя встроенную подсистему корреляции событий безопасности, заказчики получают средства защиты сети от многих неизвестных угроз (для борьбы с компьютерными червями и вирусами) и от шпионского и рекламного ПО, инструменты анализа трафика, выявления активности хакеров и предотвращения вторжений, а также средства предупреждения атак типа "отказ в обслуживании" (DoS).
+<p>Механизмы защиты бизнес-приложений, встроенные в ASA 5500 Series, обеспечивают усиленный контроль и управление деятельностью интенсивно поглощающих трафик пиринговых программ (P2P) и Интернет-пейджеров. Они также управляют доступом к Web-страницам, проверяют защищенность и целостность основных бизнес-приложений, таких, как системы управления базами данных, решают многочисленные специфические задачи защиты соединений VoIP и мультимедиа-служб.
+<p>Помимо этого, в системе ASA 5500 Series существуют службы контроля и защиты сети, обеспечивающие доскональный контроль за действиями пользователей и сегментацию корпоративной сети, а также контроль доступа к бизнес-приложениям и потоков сетевого трафика. К этим службам относится межсетевой экран (МСЭ) с технологией инспекции пакетов с учетом состояния протокола на уровнях 2-7, который позволяет следить за состоянием всех сетевых коммуникаций и предотвращать несанкционированный доступ к сети. Cisco ASA 5500 Series также поддерживает механизм виртуальных МСЭ, обеспечивающий сегментацию сети и масштабируемость сетевых служб при снижении стоимости развертывания решения.
+<p>Система ASA 5500 Series предлагает набор механизмов, обеспечивающих конфиденциальность трафика. Они основаны на использовании как протокола IPSec, так и SSL, и интегрированы с адаптивными технологиями защиты от угроз. Объединение IPSec и SSL VPN в устройствах Cisco ASA 5500 Series позволяет им легко приспособиться к любому сценарию применения VPN, включая конфигурации "точка-точка", удаленный доступ к корпоративной сети и доступ к сети партнера или сети экстранет. Посредством единственного устройства и управляемой инфраструктуры можно обеспечить высокозащищенный дистанционный доступ к сети для любого пользователя, где бы тот ни находился. Устройства Cisco ASA 5500 Series могут интегрироваться и с существующими кластерами Cisco VPN3000 Concentrator, что позволяет заказчикам использовать имеющиеся у них структуры VPN, внедряя самые современные службы VPN и безопасности.
+<p>Cisco ASA 5500 Series включает также богатый набор функций безопасности, которые получили название Threat-protected VPN (виртуальные частные сети с защитой от угроз). Сюда входит защита оконечных сетевых устройств, средства борьбы с угрозами, МСЭ для приложений и услуги управления доступом, которые защищают соединения VPN и пользовательские данные от сетевых червей, вирусов, шпионских программ и хакерских атак. Новые функции аварийного подхвата SSL VPN с учетом состояний поддерживают непрерывность бизнеса и повышают общую производительность труда.
+<p>С помощью ПО Cisco ASA 5500 Series версии 7.1 каждое устройство ASA 5500 Series поддерживает до 5000 одновременных сессий SSL VPN. Таким образом, организации любого размера могут предоставлять своим мобильным и удаленным сотрудникам простой и безопасный доступ к приложениям и сетевым ресурсам практически из любой точки земного шара. Встроенные функции балансировки нагрузки VPN и полномасштабная функциональность IPSec VPN позволяют сократить количество аппаратных устройств, необходимых для защиты виртуальных частных сетей и поддержки десятков тысяч пользователей одновременно. Кроме того, сокращается количество платформ VPN, которые требуются для поддержки функций VPN разных типов, включая IPSec, клиентские и неклиентские режимы SSL, удаленный доступ, связь между сайтами и экстранет.
+<p>В ПО ASA 5500 Series 7.1 усовершенствован механизм доставки контента в сетях SSL VPN. Появились мощные функции трансформации Web-контента для Web-страниц, включающих компоненты Java, ActiveX и сложные конструкты HTML и JavaScript. Оптимизация производительности приложений, поддержка разнообразных браузеров и настраиваемый пользовательский портал дополнительно расширяют для организаций возможности предоставления удаленным и мобильным сотрудникам удобного доступа к корпоративным ресурсам.
+<p>Немаловажно, что маршрутизаторы Cisco для интегрированных услуг (серии 800, 1800, 2800 и 3800) и маршрутизаторы Cisco 7200 и Cisco 7301 также поддерживают SSL VPN, что позволяет заказчикам на базе этой платформы строить безопасную систему маршрутизации. Услуги SSL VPN, реализованные в маршрутизаторах Cisco, поддерживают до 150 одновременных неклиентских и клиентских сессий SSL VPN, что отвечает потребностям малых и средних предприятий. Неклиентский доступ представляет собой надежно защищенный способ доступа к часто используемым сетевым приложениям, таким, как Citrix и Outlook, а также к внутрикорпоративным Web-страницам в сетях интранет. Клиентские же услуги SSL VPN предоставляют защищенные каналы доступа практически для любого бизнес-приложения. Они дополняют технологию IPSec VPN и современные услуги безопасности Cisco IOS (МСЭ, IPS и т. д.), отличаясь простотой внедрения и доступностью. Появление новых услуг SSL VPN в интегрированных сервисных маршрутизаторах Cisco значительно сокращает сроки окупаемости сетевой инфраструктуры и эксплуатационные расходы заказчика.
+<p>Во всех платформах Cisco SSL VPN реализована функция Cisco Secure Desktop, которая автоматически проверяет состояние системы безопасности каждого устройства, пытающегося подключиться к сети, и защищает данные в ходе сессии. Для этого создается "безопасная виртуальная машина", защищающая конфиденциальные данные и "чистящая" компьютер по завершении сеанса связи (в процессе "очистки" стираются все следы сессии, в ходе которой использовались данные конфиденциального характера).
+<p>В начале 2006 г., в рамках активизации продвижения ASA 5500 Series на рынок, 
+  Cisco Systems представила новый, разработанный в сотрудничестве с компанией 
+  Trend Micro (<a href="http://www.trendmicro.com">http://www.trendmicro.com</a>), 
+  модуль обеспечения безопасности контента и управления услугами безопасности 
+  - CSC-SSM (Content Security and Control Security Services Module). Он поддерживает 
+  полный набор услуг Anti-X, включая борьбу с вирусами и шпионскими программами, 
+  блокировку файлов, борьбу со спамом и фишинг-атаками, блокировку и фильтрацию 
+  адресов URL, а также фильтрацию контента, предотвращая доступ к потенциально 
+  опасным или не имеющим отношения к работе материалам. Модуль работает как Интернет-шлюз 
+  и защищает внутренние сетевые ресурсы от вредоносных программ и хакерских атак, 
+  распространяющихся через Интернет, что помогает поддерживать непрерывность бизнес-процессов 
+  и освобождает заказчиков от необходимости периодически отвлекаться на сложные, 
+  ресурсоемкие процедуры проверки компьютерных систем на наличие вирусов. 
+<h3>Эксплуатация и управление </h3>
+<p>Помимо функциональных, система Cisco ASA 5500 Series имеет ряд экономических и эксплуатационных преимуществ. В их числе возможность наращивания сервисов посредством ПО и аппаратных модулей, стандартизация платформы на разных объектах, упрощенный процесс эксплуатации с использованием общей службы управления и мониторинга для множества сервисов безопасности, а также упрощенный процесс поиска и устранения неисправностей. Профиль сервисов устройства позволяет оптимизировать их под определенную инфраструктуру и определенные функции, так что заказчики могут стандартизовать устройство защиты ASA 5500 Series для многих сфер применения в сети. Иначе для решения тех же самых задач потребовалось бы множество разнообразных платформ и систем управления. Такой адаптивный подход - "одно устройство, много назначений" - сокращает число платформ, которые приходится устанавливать и администрировать, и в то же время создает общую среду эксплуатации и управления для всех этих устройств. Это упрощает конфигурирование, мониторинг, техническое обслуживание и обучение персонала службы безопасности.
+<p>Многие из унифицированных служб управления, доступных на Cisco ASA 5500, реализуются через Adaptive Security Device Manager, предназначенный для управления одним устройством, и через Cisco Security Management Suite - для управления несколькими устройствами. Adaptive Security Device Manager, интегрированный менеджер устройства на базе Web, обеспечивает конфигурирование всех защитных механизмов и VPN-сервисов. Он может применяться для небольших внедрений, содержащих до десяти устройств, и обеспечивает общий контроль за состоянием устройства и служб, а также составление отчетов.
+<p>Инструментарий Cisco Management Security Suite предназначен для более крупных сетей и предлагает мощные средства управления на базе правил многосервисными, многофункциональными и территориально распределенными конфигурациями. Эта система поддерживает гибридные платформы, в которых могут использоваться разные приложения, маршрутизаторы и коммутаторы, а также предлагает средства отслеживания обновлений и управления ими в многопользовательской среде или в подразделении. Вместе все эти средства предоставляют заказчикам полный набор инструментов для управления объединенными службами защиты на одном или нескольких устройствах.
+<p>Компания Cisco и ее партнеры предлагают полный спектр "пожизненных" услуг безопасности (Comprehensive Lifecycle Security Services), помогающих успешно внедрять решения в области безопасности и управлять ими. Заказчики, приобретающие устройства Cisco ASA 5500 Series и Cisco Integrated Services Routers, а также любые другие продукты безопасности Cisco, могут воспользоваться "пожизненными" услугами (Cisco Lifecycle Services), включая услуги для удаленных операций Cisco Remote Operations Services, в результате чего они получают упреждающий мониторинг безопасности и систему управления сетью с автоматической защитой.
+<p>В целом, оценивая влияние, которое система ASA 5500 Series может оказать на реализацию основных бизнес-процессов заказчика, Алексей Лукацкий характеризует его как "защиту бизнес-процессов от простоев в результате нарушений их защищенности". А вот экономика данного решения, по его мнению, достаточно проста и складывается из следующих факторов:
+<ul><li>снижение затрат на приобретение системы защиты - вместо шести решений (МСЭ, IPS, VPN, антивирус, антиспам, контроль URL) приобретается всего одно;
+<li>снижение затрат времени и средств на обучение - вместо прохождения шести (минимум) курсов достаточно только одного;
+<li>снижение времени (а время = деньги) на внедрение системы защиты - вместо шести решений ставится всего одно;
+<li>снижение затрат на борьбу с последствиями эпидемий за счет отражения этих эпидемий;
+<li>снижение затрат на каналы связи за счет организации VPN через Интернет.</ul>
+
+<p>Вообще говоря, приобретение комбинации оборудования разных разработчиков позволяет снизить первоначальные капитальные затраты, но приводит к увеличению затрат на интеграцию, а в большинстве случаев - и к снижению уровня безопасности. Это происходит потому, что обеспечение безопасности представляет собой глобальную проблему, проблему нестыковок между компонентами, а также самих компонентов. "Собирая систему безопасности из "кирпичиков" разных разработчиков, - говорит Алексей Лукацкий, - организации приходится выступать в роли интегратора систем безопасности. Это очень трудная задача, которую еще больше усложняют различные протоколы, интерфейсы управления, а также договоры поддержки и другие документы разработчиков, которые потребуется изучить. Кроме того, при неизбежных нарушениях системы безопасности обращение по телефону к множеству разработчиков и согласование их ответов - отнюдь не оптимальный вариант отражения атаки".
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</A></b></li><li><b><A href='detail.php@ID=22430.html'>10-гигабитные коммутаторы для малых и средних локальных сетей</A></b></li><li><b><A href='detail.php@ID=20318.html'>IEEE 802.11ac – новый высокоскоростной стандарт Wi-Fi</A></b></li><li><b><A href='detail.php@ID=19942.html'>LTE в зеркале конгресса MWC 2012</A></b></li><li><b><A href='detail.php@ID=19426.html'>Тенденции и прогнозы телекоммуникационного рынка-2012 </A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</A></b></li><li><b><A href='detail.php@ID=25282.html'>Брандмауэр в Dr.Web для Android</A></b></li><li><b><A href='detail.php@ID=25260.html'>Новые угрозы атак на пользователей онлайн-банкинга </A></b></li><li><b><A href='detail.php@ID=25238.html'>Защита от DDoS-атак – комплексное решение «Билайн Бизнес» и Radware</A></b></li><li><b><A href='detail.php@ID=25227.html'>Сетевой червь в «Интернете вещей»</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8789.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Устройства защиты Cisco ASA 5500 Series
+</a><br><a href="detail.php@ID=8789.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Семейство многофункциональных устройств Cisco Adaptive Security Appliance 5500 Series для защиты сетевой инфраструктуры малых и средних компаний -&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8789.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8789&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0572f55270d7524a44b0df76af5b2a47'><img src='../bitrix/tools/captcha.php@captcha_code=0572f55270d7524a44b0df76af5b2a47' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

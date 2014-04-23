@@ -1,0 +1,417 @@
+<HTML>
+<HEAD>
+<title>Построение масштабируемой инфраструктуры центров обработки данных
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="1) Какова методология выбора оптимальных решений для ключевых элементов инфраструктуры ЦОД? Как выбрать наилучшие с точки зрения соотношения цена/возможности и перспектив масштабирования ЦОД решения в области кондиционирования и энергоснабжения? 2" />
+<meta name="description" content="1) Какова методология выбора оптимальных решений для ключевых элементов инфраструктуры ЦОД? Как выбрать наилучшие с точки зрения соотношения цена/возможности и перспектив масштабирования ЦОД решения в области кондиционирования и энергоснабжения? 2" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398077076','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13246.html'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13654.html'>Технологии ABBYY обеспечивают оперативный доступ к архивным документам</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm7930' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=7930&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm7930"].SHOW_IMAGE.value="N"; document.forms["PrintForm7930"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm7930"].SHOW_IMAGE.value="Y"; document.forms["PrintForm7930"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(7930);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=7930.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=7930.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(7930);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a>, <a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><br /></p><a href='../numbers/index.php@ID=11536.html'>№12 (99), декабрь 2006</a><h1>Построение масштабируемой инфраструктуры центров обработки данных
+</h1>16.12.2006<p></p><DIV class='article-text'><table width="100%" border="1"  bgcolor="#FF9966">
+<tr><td>
+<p><b>1) Какова методология выбора оптимальных решений для ключевых элементов инфраструктуры ЦОД? Как выбрать наилучшие с точки зрения соотношения цена/возможности и перспектив масштабирования ЦОД решения в области кондиционирования и энергоснабжения?
+<p>2) В чем принципы масштабирования инфраструктурных элементов ЦОД? Какие можно использовать критерии анализа и способы прогнозирования роста потребностей в основных инфраструктурных мощностях ЦОД?</b>
+</td></tr></table>
+<p><hr>
+<table border="0">
+<tr><td><img src="detail.php@ID=7930.html" alt=Photo></td>
+<td><i>Виктор Беззубик</i>, <br>
+руководитель отдела проектирования, <br>
+«АйТи» (<a href="http://www.it.ru">http://www.it.ru</a>)
+</td></tr>
+</table>
+<p>1) На сегодняшний день среди основных потребителей инфраструктурных решений для ЦОД можно назвать крупные коммерческие организации (банки, крупные процессинговые центры платежных систем, операторы связи и т. п.) и государственные структуры (МВД, МЧС, ФНС, ФМС и прочие). И те и другие при выборе решений по ЦОД рассматривают следующие основные критерии: степень надежности системы, включая резервирование отдельных компонентов, масштабируемость решения и его стоимость.
+<p>В состав любого современного ЦОД входят следующие ключевые инфраструктурные элементы: система бесперебойного электроснабжения оборудования дата-центра и система обеспечения климатических параметров. Эти системы, несмотря на различное функциональное назначение, тесно взаимосвязаны, поэтому не случайно многие ведущие производители систем бесперебойного питания, такие, как АРС, Emerson и другие, включают сегодня в спектр своих продуктов решения прецизионного кондиционирования. Безусловно, при построении инфраструктуры ЦОД предпочтительны комплексные решения от одного вендора.
+<p>В основу критериев при выборе оптимального решения для построения инфраструктуры ЦОД должны быть положены планируемые параметры роста и развития дата-центра. В настоящее время средний срок обновления активного оборудования в ЦОД — примерно два-три года. Инфраструктура ЦОД, напротив, проектируется с учетом срока эксплуатации в 12—15 лет. Это, безусловно, предъявляет к ней серьезные требования, так как она обязана обеспечить функционирование ЦОД в целом на всех этапах эксплуатации, а также предоставлять возможности модификации, изменения и наращивания активного оборудования дата-центра. Причем все это должно осуществляться без остановок и пауз в режиме эксплуатации.
+<p>Таким образом, методология формирования оптимального решения выглядит следующим образом. На первом этапе заказчик и исполнитель проводят совместный анализ текущих потребностей в ЦОД с учетом перспектив развития, опыта реализации подобных проектов и их технической поддержки. На втором этапе определяется реализуемая инфраструктура дата-центра с учетом архитектурных и иных особенностей помещения для ЦОД. Этот этап достаточно длительный, но крайне важный, так как на нем проводится детальная проработка возможных вариантов размещения компонентов, архитектуры и интеграции всех систем ЦОД.
+<p>В рамках второго этапа рассматриваются:
+<ul><li>схема раздачи охлажденного воздуха (вверх, под фальшполами либо непосредственно в шкафы);
+<li>варианты реализации системы бесперебойного электроснабжения (модульная или блочная);
+<li>варианты организации горячих и холодных коридоров;
+<li>необходимость резервирования оборудования;
+<li>необходимость контроля и регулирования влажности;
+<li>схемы интеграции со смежными системами (электроснабжение здания, центральной вентиляции) и подключения оборудования;
+<li>удельная стоимость 1 кВт бесперебойного питания для данного решения;
+<li>наработка на отказ.</ul>
+<p>Этот этап также включает выбор вендора, решения которого наиболее полно отвечают определенным для данного ЦОД требованиям. При этом учитывается наличие у вендора комплексных решений систем электропитания и кондиционирования, типовых решений для масштабирования бесперебойного питания, включая резервирование по схеме N+1. Безусловный плюс при выборе производителя — наличие сервисных центров вендора в регионе заказчика.
+<p>Разумеется, в данном случае описаны наиболее общие задачи и этапы проектов создания систем бесперебойного питания и кондиционирования ЦОД. В реальных проектах необходимо учитывать разнообразные требования заказчика к составу систем инфраструктуры ЦОД и его архитектуре, так как типовых дата-центров не существует, несмотря на достаточно стандартизованный подход к проектированию и созданию дата-центров.
+<p>2) Вопрос о масштабировании инфраструктурных элементов крайне интересен и важен, причем он должен быть решен на начальной стадии проекта создания ЦОД, так как определяет базовые характеристики закладываемой системы. На данный момент наибольшее распространение получил принцип масштабирования основных инфраструктурных элементов дата-центра, реализуемый в виде изначальной избыточности решения. В частности, по климатическим системам изначально предусматривается либо дополнительный кондиционер, либо место для его установки. С системами бесперебойного питания аналогичная ситуация.
+<p>На сегодняшний день имеется два варианта решения вопроса о будущем масштабировании ЦОД. Первый предусматривает резервирование дополнительной площади (помещения) ЦОД, где можно установить дополнительное оборудование систем кондиционирования и ИБП. При этом оснащение резервных площадей происходит уже при развитии ЦОД. Второй вариант решения также предполагает избыточность, при которой дополнительные модули ИБП (для будущих мощностей) и блоки кондиционеров если и не устанавливаются заранее, то по крайней мере для них создается уже полностью готовая кабельная инфраструктура и устанавливаются стойки, в которых будет размещаться оборудование при развитии (масштабировании) дата-центра. Разумеется, при этом требуемые на текущий момент мощности завышаются в несколько раз, что сказывается на стоимости проекта.
+<p>Приемлемы оба подхода, однако второй вариант при начальной реализации оказывается дороже, обеспечивая при этом в будущем (при развитии ЦОД) более простую схему расширение дата-центра. К сожалению, приходится констатировать, что пока заказчики крайне неохотно выделяют дополнительные площади для ЦОД, не говоря уже о средствах для резервных мощностей.
+<p>Отвечая на вопрос о критериях анализа и способах прогнозирования роста потребностей ЦОД в основных инфраструктурных мощностях, необходимо помнить, что как кондиционирование, так и средства бесперебойного электроснабжения — это системы обеспечения нормальной работоспособности и безотказности основного оборудования ЦОД (серверы, библиотеки, маршрутизаторы). Необходимость масштабирования систем как климатических, так и бесперебойного электроснабжения напрямую зависит от расширения серверной инфраструктуры. В свою очередь, масштабирование активного оборудования серверной связано с развитием бизнес-процессов и ростом бизнеса, внедрением новых приложений и систем управления.
+<p>В связи с этим на старте проектирования инфраструктуры ЦОД проводится тщательный анализ текущей ситуации и перспектив роста серверной инфраструктуры. Практика свидетельствует, что провести долгосрочный анализ на 12—15 лет (среднестатистический срок жизни инфраструктуры ЦОД) весьма затруднительно. Поэтому наиболее корректный вариант — учет прогнозируемого масштабирования в рамках двух-трех лет, что в принципе соответствует стандартному сроку смены активного и серверного оборудования.
+<p>Возможен также вариант определения пределов масштабирования инфраструктурных элементов дата-центра исходя из максимально плотного заполнения помещения ЦОД серверными стойками с учетом максимальной мощности около 30 кВ.А на стойку. Однако опыт свидетельствует, что помимо учета развития дата-центра на ближайшие два-три года целесообразно закладывать еще 50%-ный резерв на более длительную перспективу.
+<p><hr>
+<table border="0">
+<tr><td><img src="detail.php@ID=7930.html" alt=Photo></td>
+<td><i>Александр Ласый</i>, <br>
+директор департамента автоматизации инженерных систем, <br>
+КРОК (<a href="http://www.croc.ru">http://www.croc.ru</a>)
+</td></tr>
+</table>
+<p>1) КРОК активно пользуется рекомендациями общепризнанного стандарта TIA-942, который вобрал в себя мировой опыт создания инженерной инфраструктуры ЦОД последних лет. В соответствии с этим стандартом мы отдаем преимущество масштабируемым системам. Они наиболее выгодны для наших заказчиков, потому что при их построении можно распределить затраты во времени. С точки зрения удобства эксплуатации и обеспечения отказоустойчивости они также выигрывают у «монолитных» систем. Гибко масштабируемые системы бесперебойного питания появились на рынке достаточно давно, и мы широко применяем их в своих проектах. Соотношения цена/возможности у всех производителей сравнимы.
+<p>Масштабирование систем кондиционирования до недавнего прошлого было довольно сложной технической проблемой, поскольку габариты и мощность прецизионных систем с хорошими показателями цена/эффективность были достаточно велики. Сейчас ряд производителей предлагает удобные и гибкие системы охлаждения, но обычно охлаждающей жидкостью в них служит вода. Ее использование не рекомендуется действующими российскими нормативами, и это затрудняет широкое распространение таких систем. Есть и альтернативы: например, компания Emerson предлагает системы охлаждения, где в качестве теплоносителя выступает жидкий фреон. Однако они существенно дороже систем, использующих воду или водные растворы спиртов. В настоящее время дискретность масштабирования систем кондиционирования может составлять шкаф с оборудованием, и даже мельче. Компания Rittal, например, позволяет наращивать систему охлаждения одного шкафа в несколько приемов, по мере заполнения его оборудованием.
+<p>2) Для масштабирования модульных систем бесперебойного питания существуют следующие способы:
+<ul><li>обеспечение электропитания без резервирования — установка необходимого количества (N) модулей в шкаф;
+<li>резервирование за счет добавления еще одного N+1-го блока в стандартный шкаф;
+<li>наращивание мощности путем добавления стандартных блоков в шкаф с резервированием по схеме N+1 до полного его заполнения;
+<li>добавление следующего шкафа, который можно последовательно заполнять по приведенной выше схеме.</ul>
+<p>Основным критерием выбора того или иного оборудования служит предполагаемое дискретное увеличение мощности добавляемого оборудования. Сейчас можно найти системы бесперебойного питания с дискретностью наращивания от 1 до 40 кВ.А и точно подобрать их по своим потребностям. Масштабируемые системы кондиционирования можно наращивать с шагом от 3кВт.
+<p>Прогнозировать темпы роста потребляемой и утилизируемой мощности достаточно точно удается сейчас только крупным операторам связи, так как у них постоянно ведется статистика роста числа клиентов. Остальные пользователи почти всегда очень неточно оценивают свои потребности, сильно их завышая. Масштабируемые системы для них — это реальная возможность сократить расходы на системы бесперебойного питания и кондиционирования; ведь они позволяют наращивать мощности в соответствии с реальными потребностями, которые определяются в процессе эксплуатации. И даже приобретенные модули электропитания и кондиционирования на излишнюю мощность можно использовать для резервирования и создания отказоустойчивых систем.
+<p><hr>
+<table border="0">
+<tr><td><img src="detail.php@ID=7930.html" alt=Photo></td>
+<td><i>Станислав Сахнов</i>, <br>
+ведущий инженер, <br>
+«Микротест» (<a href="http://www.microtest.ru">http://www.microtest.ru</a>)
+</td></tr>
+</table>
+<p>1) В настоящее время российские заказчики наращивают свои ИТ-ресурсы и переходят от «лоскутной» автоматизации к организации единых централизованных ресурсов для улучшения управления и эффективности их использования. Политика централизации вычислительных ресурсов нашла воплощение в технологии создания и эксплуатации центра обработки данных (ЦОД). Основное назначение ЦОД — обеспечить безотказную работу информационных систем предприятия.
+<p>На сегодняшний момент основными критериями выбора того или иного решения для построения ЦОД служат в первую очередь не цена, а такие характеристики, как адаптивность и масштабируемость, надежность и доступность системы, общая стоимость владения (TCO), простота эксплуатации и обслуживания, управляемость. Кроме того, специфика проектов ЦОД определяется и целым рядом других факторов: особенностями бизнеса и географическим расположением компании, унаследованным оборудованием и ПО, требованиями по надежности и отказоустойчивости, по скорости передачи информации, допустимым временем задержки и рядом других.
+<p>Своеобразный «фундамент» ЦОД — так называемая адаптивная инженерная инфраструктура центра обработки данных (NCPI). Дело в том, что уровень готовности информационных систем предприятия определяется надежностью не только используемых серверных решений и ПО, но и «обеспечивающей» инженерной инфраструктуры — систем энергоснабжения, вентиляции и кондиционирования, безопасности и противопожарной защиты, управления, стоек и кабельной разводки, обслуживания. Именно поэтому оптимальное решение можно разработать только тогда, когда при его построении рассматриваются не отдельные компоненты, а вся инфраструктура в целом.
+<p>Большое значение при построении ЦОД имеет и стандартизация инфраструктуры NCPI. Она позволяет отказаться от сложной, неэффективной, подверженной ошибкам системы, созданной по индивидуальному проекту, и означает переход к прозрачному управлению стандартными бизнес-операциями физической инфраструктуры ЦОД.
+<p>Существовавший ранее в отрасли традиционный подход к охлаждению оборудования — охлаждение на уровне зала — хорошо зарекомендовал себя и до сих пор остается эффективным и практичным вариантом для центров с низкой плотностью оборудования, а также для тех систем, где ИТ-оборудование остается практически неизменным. Однако потребность современных ЦОД в адаптации к изменяющимся условиям и в надежной поддержке оборудования с высокой и переменной удельной мощностью, а также в снижении расходов на электроэнергию и других эксплуатационных затрат привела к разработке новых архитектур охлаждения — на уровне ряда и на уровне стойки. Эти две архитектуры достаточно успешно справляются с удовлетворением перечисленных потребностей, особенно когда удельная мощность оборудования превышает 3 кВт на стойку.
+<p>Архитектуры охлаждения на уровне ряда и стойки обеспечивают гибкость, предсказуемость, масштабируемость, сокращение потребления электроэнергии, снижение общей стоимости владения, а также оптимальные показатели доступности, необходимые ЦОД нового поколения. Охлаждение на уровне стойки найдет применение в тех ситуациях, где основную роль играют высокие показатели удельной мощности, большая дискретность устанавливаемого оборудования или неструктурированное размещение. Охлаждение на уровне ряда подойдет для большинства заказчиков, переходящих на новые серверные решения с высокой удельной мощностью. Эта архитектура обеспечит наилучшее соотношение между высокой предсказуемостью, высокой удельной мощностью и адаптируемостью при оптимальной общей стоимости владения.
+<p>Инфраструктура подачи питания исключительно важна для успешной работы оборудования ЦОД. К сожалению, в настоящее время мы не можем говорить о том, что системы энергообеспечения общего пользования достаточно надежны — даже лучшие из них не в полной мере удовлетворяют требованиям обеспечения высокой доступности информационных систем предприятия. Чтобы предотвратить возможные простои и ошибки при обработке данных, вызванные системой энергообеспечения, большинство компаний предпочитает внедрить систему гарантированного и бесперебойного электропитания, устанавливаемую между системой распределения питания общего пользования и своими бизнес-критичными серверными решениями и системами хранения данных. Выбор конкретной конфигурации системы оказывает непосредственное влияние на доступность ИТ-оборудования, для поддержки которого она предназначена. Существует много факторов, влияющих на эффективность системы электропитания, включая ошибки оператора, надежность компонентов, графики технологического обслуживания и время, необходимое для восстановления работоспособности. Кроме того, для электрических сетей общего назначения в Российской Федерации характерно низкое качество электрической энергии — отключения, высокочастотные помехи, отклонения частоты, несинусоидальность, отклонения напряжения и другие нарушения. Влияние каждого из этих факторов на общую доступность данных в большой степени определяется выбранной конфигурацией системы гарантированного и бесперебойного электропитания.
+<p>В зависимости от требований системы энергоснабжения можно разделить на системы с бесперебойным, гарантированным и бесперебойным гарантированным электроснабжением. Если классифицировать системы бесперебойного питания по схеме построения, основное распространение получили централизованная и распределенная системы. Для устранения недостатков каждого из типов на практике применяют двухуровневую систему, которая представляет собой комбинацию централизованной и распределенной системы.
+<p>Бесперебойное гарантированное электроснабжение ЦОД применяется при необходимости длительной работы в автономном режиме. Такая система представляет собой совокупность организационно-технических мероприятий, сведенных в единый технологический комплекс и в случае отключения основных источников электроснабжения обеспечивающих электропитание нагрузки за счет аварийных генераторов и ИБП на неопределенное долгое время.
+<p>Каждая из этих конфигураций имеет свои преимущества и недостатки, но общие рекомендации при выборе конкретной системы таковы:
+<ul><li>определение типов и номиналов нагрузки всех компонентов инфраструктуры ЦОД и обеспечение каждого типа нагрузки необходимыми показателями надежности и качества электроэнергии;
+<li>определение степени резервирования системы — при выходе из строя каких компонентов системы электропитания необходимо обеспечивать нормальное функционирование других компонентов и питаемых нагрузок;
+<li>подбор систем управления и мониторинга, сбора статистики и других параметров работы системы электропитания в автоматическом и ручном режимах, в том числе и дистанционно;
+<li>расчет необходимого уровня подавления помех остаточных информационных сигналов и взаимовлияния подключенного оборудования. Предотвращение несанкционированного доступа, а также разрушения информации и самого оборудования по внешним цепям электропитания;
+<li>расчет необходимости установки фильтров для обеспечения необходимого уровня подавления помех от тиристорных выпрямителей ИБП, поступающих в основную электрическую сеть.</ul>
+<p>И еще один из факторов выбора подходящей конфигурации системы электроснабжения ЦОД — учет и анализ влияния простоев оборудования и допустимости рисков внутри компании.
+<p>2) Обеспечение дальнейшего развития ЦОД и его масштабирования — один из главных критериев оптимального построения вычислительного центра. В этом отношении необходима ориентация на постепенный рост ЦОД. Идеальным был бы случай применения метода и архитектуры, обеспечивающих непрерывную подстройку под изменяющиеся требования. Такие методы и архитектура должны обладать следующими характеристиками:
+<ul><li>число инженерных решений, принимаемых при построении ЦОД и не подлежащих наращиванию, должно быть минимизировано;
+<li>инфраструктура электропитания ЦОД должна состоять из качественно проработанных модулей, в которых заранее предусмотрены все возможные варианты их применения, рассчитанных на транспортировку через стандартные дверные проемы и с использованием пассажирских лифтов, подключаемых без выполнения каких-либо операций на находящихся под напряжением электрических цепях;
+<li>необходимо исключить какую-либо специальную подготовку площадей для установки дополнительного оборудования (например, устройства фальшполов);
+<li>системы электроснабжения и кондиционирования должны быть рассчитана на выбор любой конфигурации (без резервирования или с резервированием по схемам N+1 или 2N) без внесения модификаций в систему ;
+<li>из процесса инсталляции дополнительного оборудования для наращивания мощности систем должны быть исключены получение специальных разрешений и выполнение специальных процедур, а также такие работы, как прокладка проводки, сверление и резка стен и перекрытий.</ul>
+<p>К сожалению, на этапе проектирования по ряду причин не всегда получается правильно спрогнозировать дальнейшее развитие мощностей ЦОД. Из-за плохого планирования и неправильного принятия решений до 30% полной стоимости владения ЦОД затрачивается впустую. Поэтому применение адаптивной инженерной инфраструктуры, модульных и масштабируемых элементов позволит удовлетворять растущие потребности и минимизировать затраты при росте мощностей ЦОД.
+<p><hr>
+<table border="0">
+<tr><td><img src="detail.php@ID=7930.html" alt=Photo></td>
+<td><i>Игорь Мызгин</i>, <br>
+менеджер направления «Интеллектуальное здание», <br>
+«Открытые технологии» (<a href="http://www.ot.ru">http://www.ot.ru</a>)
+</td></tr>
+</table>
+<p>1) Все центры обработки данных обладают своими особенностями, и условия их эксплуатации разные. Поэтому нельзя создать универсальное оптимальное решение для инфраструктуры ЦОД. Можно лишь говорить о подходах, которые позволяют сформировать оптимальное решение. Например, наша компания в своей работе пользуется четырьмя основными принципами.
+<p>1. Мы руководствуемся стандартами (СН 512 78, ANSI/TIA 942).
+<p>2. Следование лучшим практикам, имеющимся в отрасли (рекомендации Uptime Institute).
+<p>3. Использование параллельно-модульных архитектур (имеющих много однотипных, но разных элементов, направленных на решение одной задачи). Например, объединение в параллель двух ИБП позволяет нам решить задачу электроснабжения потребителей. Эта схема может выглядеть как 2n (каждый ИБП обеспечивает электроснабжение), или как n (только оба могут полностью решить задачу). Поскольку у нас уже есть два параллельных ИБП и действует механизм их согласования, можно добавить к ним третий ИБП и таким образом повысить мощность данной конструкции. Если же отказаться от принципа модульности и параллельности, то придется ставить монолитный источник, который можно масштабировать единственным способом — его заменить.
+<p>4. Надежность обслуживающего уровня должна быть выше надежности обслуживаемого уровня. Если бизнес-приложение функционирует на базе кластерного решения, т. е. на уровне технической архитектуры имеет избыточность 2n, то инженерная инфраструктура, чтобы не стать «слабым звеном», должна обладать избыточностью как минимум 2n или 2(n+1). Выбирая оптимальное для заказчика решение, мы обязательно изучаем, насколько критичны его приложения и сколько может стоить минута их простоя. Не секрет, что чем надежнее ЦОД, тем он дороже. Поэтому всегда надо соблюдать баланс между стоимостью минуты простоя центра и стоимостью инженерной инфраструктуры, чтобы меры по обеспечению непрерывности не обходились дороже, чем возможные потери от остановки функционирования ЦОД.
+<p>Наша компания всегда стремится к максимальному сохранению инвестиций и уменьшению совокупной стоимости владения объекта. Жизненный цикл ЦОД составляет 8—15 лет, и для многих наших заказчиков стоимость владения на протяжении этого срока важнее, чем единовременные инвестиции в ЦОД. Поэтому они учитывают все факторы эксплуатации в рамках выбора оптимального решения.
+<p>Специалисты компании «Открытые технологии» постоянно отслеживают появление на рынке новых моделей оборудования ведущих производителей и проводят внутренний анализ этих решений.
+<p>Россия — страна с очень сложным климатом (у нас есть как Сочи, так и Норильск). Многие ведущие мировые производители просто никогда не сталкивались с такими условиями эксплуатации, которые для России считаются нормальными: они не рассчитывают на низкие температуры на улице (-45, -55°C), у многих нижняя граница функционирования кондиционеров — это -10, -18, -35°. Но как показал опыт прошлой зимы, нижний предел на уровне -35° для кондиционеров в Москве недостаточен. У некоторых компаний той зимой ночами, когда было очень холодно, переставала работать система охлаждения ЦОД. Поэтому мы всегда обращаем внимание на нижнюю границу функционирования кондиционеров и рекомендуем, чтобы это значение было -45° или даже ниже. Некоторые кондиционеры можно приспособить к условиям российской эксплуатации за счет использования «зимних комплектов». Существуют модели, которые уже несколько лет работают в Норильске, где температура по ночам опускается до -55°C. И они успешно справляются, функционируя в режиме 24х7х365, — отказов пока не было.
+<p>На рынке электроснабжения представлены десятки производителей ИБП, продукция которых подходят для ЦОД. На наш взгляд, стоит использовать только те источники двойного преобразования, в которых условия электроснабжения потребителей не зависят от качества питающей сети. С точки зрения сохранения инвестиций стоит обратить внимание на ИБП, позволяющие постепенно наращивать мощности (например, ИБП семейства Symmetra компании АРС) или построить параллельную архитектуру (например, ИБП семейства General Electric, обладающие архитектурой RPA).
+<p>2) Исследования Uptime Institute показывают, что жизненный цикл инженерной инфраструктуры ЦОД в среднем колеблется от 8 до 15 лет. Крайне редко строят центры обработки данных в расчете на 4—6 лет. Как показывает мировой опыт эксплуатации ЦОД, за 15 лет архитектура и серверы принципиально меняются, и существующая на тот момент инфраструктура перестает удовлетворять потребностям центра обработки данных.
+<p>При масштабировании наши специалисты опираются на многолетний опыт и исследования Uptime Institute. Эта проектная организация, расположенная в США, уже более 30 лет занимается исследованием прикладных вопросов надежности ЦОД. Специалисты данного института собрали большую статистику надежности центров обработки данных, принципов взаимодействия уровней ЦОД, их инженерной инфраструктуры и их наполнения.
+<p>Часто, когда наши заказчики спрашивают, как им спланировать развитие ЦОД, мы просим их учитывать три основных тенденции в этой области.
+<ol><li>Возрастающий энергодефицит. В Москве уже сейчас многие заказчики столкнулись с проблемой, что внутри Третьего транспортного кольца разместить ЦОД мощностью в 1 МВт невозможно.
+<li>Рост плотности тепловыделения. Производители инженерной инфраструктуры ЦОД отмечают, что плотность потребления электричества на стойку неуклонно растет. Если 10 лет назад мы говорили о потреблении 1,5—2 КВт на стойку, года два-три назад — о 11—18 КВт, то сейчас — о 20 КВт. Ведущие производители уже представили экспериментальные разработки, позволяющие отводить до 40—60 КВт тепла с одной стойки.
+<li>Консолидация ЦОД. Большинство компаний-заказчиков проходят стандартный путь развития: сначала у них появляется маленький ЦОД, затем центры обработки данных в каждом региональном офисе, потом централизованные бизнес-приложения, каналы связи расширяются и дешевеют. И консолидация отдельных центров в единый большой ЦОД становится экономически эффективной. Кроме того, она повышает надежность бизнес-приложений заказчика.</ol>
+<p>В связи с этими тенденциями мы рекомендуем подходить к вопросам масштабирования ЦОД следующим образом:
+<ul><li>располагать объекты в регионах, которые в ближайшее время не станут энергодефицитными;
+<li>строить ЦОД, изначально учитывая, что он будет расти. Поэтому важно создать недорогие элементы с максимальным запасом, т. е. построить максимум фальшпола, заранее обеспечить газопожаротушение, подготовить закладные трассы для будущих систем кондиционирования и пожаротушения. В помещениях, предназначенных для ИБП, необходимо обеспечить запас площади, чтобы в будущем можно было увеличить количество аккумуляторных блоков, нарастить ИБП;
+<li>использовать модульные параллельные избыточные архитектуры, позволяющие сохранить инвестиции, сделанные в начале жизненного цикла.</ul>
+<p>Кроме того, мы рекомендуем нашим заказчикам в рамках развития ЦОД использовать заложенную в них избыточность. Обычно для центров обработки данных высокой надежности необходима система 2(n+1): у заказчиков каждая подсистема инженерной инфраструктуры построена в двух экземплярах, каждый из которых обладает внутренней избыточностью. Такая архитектура при параллельном подключении позволяет исключить единую точку отказа и на время работ по расширению инфраструктурных элементов ЦОД за счет кратковременного понижения надежности инженерной инфраструктуры перевести элементы из резервных в основные. Можно, например, понизить избыточность климатических установок с 2(n+1) до n+1, и таким образом, с одной стороны, иметь запас на отказ, с другой — значительно сократить сроки масштабирования инфраструктурных элементов ЦОД.
+<p>Словом, мы рекомендуем заказчикам всегда учитывать тенденции развития и проводить масштабирование ЦОД, используя заложенную избыточность и не останавливая функционирование сервиса, который обслуживает центр обработки данных.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</A></b></li><li><b><A href='detail.php@ID=24480.html'>EMC: прогнозы развития ИТ-индустрии </A></b></li><li><b><A href='detail.php@ID=22756.html'>Средства борьбы с внутренними нарушителями ИБ</A></b></li><li><b><A href='detail.php@ID=20843.html'>ИБП в условиях мобильности: индивидуальные или централизованные?</A></b></li><li><b><A href='detail.php@ID=20353.html'>Облачное окружение vs. традиционные ЦОД</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25261.html'>Сетевые новинки Dell для дата-центров </A></b></li><li><b><A href='detail.php@ID=24909.html'>Комплекс ETegro Technologies для облачных ЦОД</A></b></li><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24693.html'>Услуга разработки концепции модульного ЦОД </A></b></li><li><b><A href='detail.php@ID=24608.html'>Комплексная платформа для управления инфраструктурой ЦОД от Schneider Electric и HP</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=7930.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Построение масштабируемой инфраструктуры центров обработки данных
+</a><br><a href="detail.php@ID=7930.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">
+
+1) Какова методология выбора оптимальных решений для ключевых элементов инфраструктуры ЦОД? Как выбрать наилучшие с точки зрения соотношения&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=7930.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=7930&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0740baabe159cb99c7e1a1273302519f'><img src='../bitrix/tools/captcha.php@captcha_code=0740baabe159cb99c7e1a1273302519f' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

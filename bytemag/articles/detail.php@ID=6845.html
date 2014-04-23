@@ -1,0 +1,431 @@
+<HTML>
+<HEAD>
+<title>Реализация SOA как разработка композитных приложений
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Термин SOA (Service Oriented Architecture, сервис-ориентированная архитектура), имевший еще недавно ореол загадочно-нового, за прошедший 2006-й год стал привычным и узнаваемым. И все же, при том что использование этой концепции приобрело повседневный" />
+<meta name="description" content="Термин SOA (Service Oriented Architecture, сервис-ориентированная архитектура), имевший еще недавно ореол загадочно-нового, за прошедший 2006-й год стал привычным и узнаваемым. И все же, при том что использование этой концепции приобрело повседневный" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398077069','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13246.html'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13654.html'>Технологии ABBYY обеспечивают оперативный доступ к архивным документам</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6845' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6845&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6845"].SHOW_IMAGE.value="N"; document.forms["PrintForm6845"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6845"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6845"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6845);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6845.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6845.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6845);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a>, <a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><br /></p><a href='../numbers/index.php@ID=11554.html'>№1 (100), январь 2007</a><h1>Реализация SOA как разработка композитных приложений
+</h1>Автор: Андрей Колесов<br />16.01.2007<p></p><DIV class='article-text'><p>Термин SOA (Service Oriented Architecture, сервис-ориентированная архитектура), имевший еще недавно ореол загадочно-нового, за прошедший 2006-й год стал привычным и узнаваемым. И все же, при том что использование этой концепции приобрело повседневный характер, уровень понимания ее сути в ИТ-сообществе за прошедший год вряд ли сильно повысился. Тема SOA регулярно затрагивалась в презентациях вендоров, ей были посвящены даже специальные технические мероприятия, однако пока доводы поставщиков в пользу применения этих идей сводятся лишь к декларациям о повышении эффективности затрат заказчиков на ИТ.
+<p>В результате сегодня наиболее популярными в среде ИТ-специалистов, наверное, можно считать две полярные точки зрения. Первая: SOA — это нечто принципиально новое, что качественно улучшит жизнь заказчиков и решит все их проблемы, связанные с ИТ. Вторая: это все маркетинговые штучки, просто игра в новые слова, а по сути ничего принципиально нового здесь нет. Первая из этих позиций обычно главенствует на тех самых презентациях и в официальных интервью, вторая чаще встречается в обсуждениях в Интернет-форумах и в кулуарных разговорах. На самом же деле истина, как обычно, лежит где-то посередине.
+<p>Безусловно, в дискуссиях вокруг SOA (как, впрочем, и вокруг любого другого новшества в сфере ИТ) очень сильны маркетинговые моменты. Поставщики придумывают новые названия, следуя известному принципу маркетинга: "звучные" рыночные слова должны меняться каждые три года. А если технологии не успевают меняться с такой скоростью — тем хуже для технологий!
+<p>В то же время технологии, концепции, рыночная ситуация, конечно, постоянно изменяются, и терминологические новшества в той или иной мере действительно отражают их изменения. Но в чем состоят эти изменения? И в чем новизна той же самой SOA, если отбросить общие разговоры о стремлении ИТ-компаний улучшить жизнь потребителям?
+<p>Скорее всего, мы только сейчас подходим к моменту серьезного критического обсуждения концепции SOA и методов ее реализации. Некоторые подвижки в этом направлении наметились как раз минувшей осенью, в том числе на конференциях по этой тематике, проведенных в Москве компаниями IBM и Sun. Это вселяет надежду на то, что год 2007-й станет поворотным моментом в процессе продвижения SOA от слов к делу.
+<h3>Общие соображения</h3>
+<p>Одна из проблем с концепцией SOA заключается в том, что точного ее определения просто не существует. А раз так, нетрудно догадаться, что каждый ИТ-вендор вкладывает в этот термин собственное понимание вопроса в соответствии со своим позиционированием на рынке.
+<p>Но все встает на свои места, если воспринимать SOA просто как концепцию. Более того, я бы предложил такой вариант — это некая идеальная модель организации современных сложных информационных систем, в реальности недостижимая, но к которой нужно тем не менее стремиться.
+<p>Действительно, COM, XML, Web Services и т. п. — это примеры стандартов, имеющих четкие утвержденные спецификации. Есть определение ERP, хотя, как отметила вице-президент подразделения IBM SOA & Middleware Services Мари Век, тут можно даже не заниматься формулированием десятка ключевых признаков, а лишь указать на некий эталонный продукт (SAP R3) и сказать — вот это и есть образец ERP-решения.
+<p>Довольно легко определить, что такое клиент-серверная архитектура, ПО промежуточного слоя, OC… А что же такое SOA?
+<p>Отвечая на этот вопрос, следует посмотреть на основные тенденции развития ИТ-рынка с двух точек зрения — заказчика и ИТ-службы.
+<h4>Взгляд заказчика</h4>
+<ul><li><b>Проблема:</b> роль ИТ в общем бизнесе компаний возрастает, ИТ становятся решающим фактором повышения эффективности и конкурентоспособности. При этом быстро увеличиваются затраты на ИТ, их нужно если не сокращать, то хотя бы оптимизировать.
+<li><b>Задача:</b> нужно принять меры для максимальной переориентации ИТ на потребности конкретного бизнеса с учетом быстро меняющихся рыночных условий. Нужно повысить эффективность использования уже накопленных на предприятиях ИТ-ресурсов для решения новых бизнес-задач.
+</ul>
+<h4>Взгляд ИТ-службы</h4>
+<ul><li><b>Проблема:</b> сложность информационных систем растет, теряется управляемость процессов, каждый шаг в развитии дается все труднее. Подавляющая часть ИТ-бюджета (от 70 до 90%) идет на поддержку нынешних систем, и лишь оставшаяся — на внедрение чего-то нового для развития бизнеса. Нужно, чтобы все было наоборот.
+<li><b>Задача:</b> нужно предпринять какие-то шаги на уровне применения принципиально новых архитектурных решений и организационных подходов.
+</ul>
+<p>Еще несколько лет назад все ведущие ИТ-поставщики стали использовать эффектные названия для характеристики своей рыночной стратегии: "по требованию", "адаптивное предприятие", "динамические системы" и т. п. На одной из осенних пресс-конференций представителя такого ИТ-лидера спросили: почему вы в презентации не используете свой звучный слоган (кажется, в данном случае это были "адаптивные вычисления"). "А зачем, — был ответ, — теперь мы поняли, что все подобные различные определения можно заменить двумя стандартными — SOA и ITSM!"
+<p>Действительно, если посмотреть внимательнее, станет ясно, что SOA и ITSM (IT Service Management) — это концепции, которые рассматривают обозначенные выше стратегические проблемы развития ИТ с двух сторон: создания и сопровождения современных информационных систем.
+<p>Еще в середине 1990-х было много предприятий, способных решать задачи внедрения ИТ практически «с чистого листа». Не обязательно это были новые компании — и ветераны могли позволить себе полную замену старой ИТ-инфраструктуры, поскольку в общем объеме бизнеса она занимала не очень много места. Сегодня такое уже невозможно: нужно принимать во внимание сделанные инвестиции, использовать существующие активы. Кроме того, при автоматизации приходится учитывать изменения требований пользователя в плане функций и оперативности решения задач, а также новые возможности ИТ, в частности повышение пропускной способности сети, появление мобильных клиентских устройств и т. д. Приложения сегодня должны работать в режиме реального времени в условиях географически распределенных систем, обеспечивать процессную модель управления компанией и т. п. И все это — за разумные деньги!
+<p>Довольно часто встречается точка зрения, что реализация SOA сводится исключительно к использованию Web-сервисов. Однако это конечно же неправильно, так как такой подход заведомо сужает возможности данной концепции.
+<p>В то же время, учитывая концептуальный характер понятия SOA, получается, что всякая дискуссия о том, в какой степени тот или иной продукт, или проект, или конкретная информационная система предприятия соответствует или не соответствует SOA, просто не имеет смысла. Конечно, можно попробовать сформулировать десяток критериев, на основании которых можно проводить такую оценку, но на практике многокритериальные сравнения фактически просто невозможны. Нужны четкие оценки по какому-то одному, легко определяемому критерию.
+<p>Я бы предложил в качестве такого универсального параметра следующую систему оценок:
+<ul><li>информационная система предприятия — оцените соотношение затрат на поддержку существующих и на внедрение новых функций. Если оно составляет 90/10 — это точно не SOA, если 10/90 — это точно SOA;
+<li>новый ИТ-проект — оцените, в каком соотношении в нем используются новые (специально разработанные, купленные) и уже применявшиеся ранее в организации программные компоненты;
+<li>прикладной программный пакет — оцените отношение функционала, доступного в виде отдельных компонентов для внешних приложений, к общему числу функций.</ul>
+<h3>Создание SOA-систем</h3>
+<p>Определив, что концепция SOA связана с созданием информационных систем, было бы логично рассматривать этот процесс как разработку ПО на некотором качественно новом уровне: привычное понятие "разработка приложений" дополняется новым подходом "разработка информационных систем". Соответственно, если раньше информационная система компании представляла собой набор по существу автономных приложений, привязанных к общей ИТ-инфраструктуре предприятия, то теперь стоит вопрос об их объединении на основе общей бизнес-логики. Получается, что на смену "системным интеграторам" как специалистам по реализации ИТ-проектов должны прийти "разработчики систем".
+<p>Если посмотреть на ключевые идеи SOA — компонентный подход, повторное использование, — то легко видеть, что эти ключевые положения всегда были заложены в основе применения вычислительной техники. Но сегодня с учетом прогресса ИТ в эти понятия вкладывается иное содержание. Сегодняшние приложения отличаются от тех, что были десять лет назад: изменились ИТ-инфраструктура, возможности средств разработки, задачи пользователей. Раньше программист имел дело с компонентами в виде подпрограмм; потом разработчик использовал их в виде многофункциональных объектов. Сейчас речь идет о применении компонентов на уровне тех или иных законченных прикладных задач или операций.
+<p>Имея в виду такой подход к реализации проектов, сегодня SOA-системы часто представляют в виде составных, или композитных приложений, принципы реализации которых мы рассмотрим ниже.
+<h3>От монолитных приложений к композитным</h3>
+<p>Итак, использование компонентов составляло основу разработки ПО на всем протяжении вот уже более чем полувековой истории современной вычислительной техники. Что же нового тогда в SOA?
+<p>Дело в том, что раньше такие компоненты использовались лишь на этапе собственно разработки, а в результате получалось некоторое монолитное приложение, которое было не очень хорошо приспособлено для работы с другими программами. По большому счету задачи интеграции разных приложений выполнялись через своего рода универсальный коннектор — человека, т. е. через пользователя, который решал вопросы преобразования форматов, контроля семантики данных, согласования передачи информации во времени и т. д. Сейчас же нужно обеспечить автоматическое взаимодействие приложений с минимальным участием человека.
+<p>Но ведь сегодняшнее бизнес-приложение — совсем не то же самое, что клиентская программа типа текстового процессора. Фактически речь идет о сложных бизнес-системах, решающих целый комплекс задач. Вот типичный пример: продажа автомобиля в кредит (рис. 1). Эту операцию можно представить в виде бизнес-процесса, по ходу которого нужно выполнить целый ряд автономных задач — проверить кредитоспособность клиента, разместить заказ у поставщика или производителя автомобиля, решить вопросы логистики, оформить банковский кредит… Особо подчеркнем, что при этом нужно взаимодействовать с внешними контрагентами.
+<p>Рис. 1. Традиционная схема "монолитных" приложений базируется на использовании общих репозиториев данных.
+<p>Раньше можно было взять за основу какую-то ERP-систему, но все равно многие внешние операции приходилось выполнять вручную, посылая запросы и ожидая ответов. В результате возникла идея автоматизировать такое взаимодействие. Но тут выясняется, что контрагент может не только быстро представить какие-то данные, но и взять на себя выполнение некоторой законченной бизнес-операции, например, оформление кредита и отслеживание его выплаты. Взглянув на задачу с учетом таких возможностей, мы обнаружим, что нужно только реализовать бизнес-логику, которая объединит готовые средства, в том числе уже имеющиеся в организации, — например, приложение для бухгалтерского учета. Так нужна ли для автоматизации этой работы совсем не дешевая ERP-система, которую все равно придется настраивать, состыковывать и т. д.? Или лучше создать композитное приложение с использованием уже готовых вычислительных и информационных ресурсов?
+<p>Для ответов на эти вопросы нужно посмотреть, какие существуют архитектурные подходы для интеграции различных приложений. На рис. 2 представлена эволюция интеграционных моделей. Модель "точка-точка" довольно легко реализовать, но трудно поддерживать и модифицировать. Это вполне понятно: с увеличением числа компонентов количество взаимосвязей возрастает в квадратичной зависимости: N х (N-1)/2. Следом за ней идут модели взаимодействия через брокер сообщений и SOA с сервисной шиной предприятия.
+<p>Рис. 2. Эволюция интеграционных моделей: а) "точка-точка"; б) через брокер сообщений; в) SOA: сервисная шина предприятия.
+<p>В двух последних случаях число интерфейсов взаимодействия равно N, и на первый взгляд не очень понятно, чем же эти схемы различаются: общение программ выполняется через единый центр. Но принципиальное отличие есть: в одном случае брокер сообщение "подстраивается" под приложения (N интерфейсов), а во втором — наоборот (один интерфейс). Следствие этого — не только упрощение задачи интеграции, но и повышение производительности и масштабируемости композитного решения. На самом же деле схема работы через брокер сообщений больше похожа на вариант "точка-точка" — просто управление интерфейсами находится в одном центре и потому его проще настраивать, хотя, как правило, с заметной потерей производительности в режиме исполнения.
+<p>Реализация SOA требует качественно иного подхода к внутренней организации приложения (рис. 3). На верхнем уровне, с точки зрения пользователей, все внешне обстоит так, как будто они работают с традиционными монолитными приложениями, соответствующими производственным задачам. Но на самом деле в данном случае правильнее говорить о ролевой модели, реализованной в рамках одной клиентской платформы и единого пользовательского интерфейса.
+<p>Рис. 3. Структурная организация композитного SOA-приложения.
+<p>А дальше внутренняя реализация приложения уже довольно существенно отличается от монолитного варианта. Каждая роль должна быть представлена соответствующим бизнес-процессом (или набором бизнес-процессов), которые должны исполняться в виде обращений к отдельным бизнес-сервисам, реализованным в рамках автономных бизнес-приложений. А те, в свою очередь, должны опираться на базовые сервисы, реализованные на уровне ИТ-инфраструктуры (Java, .NET и т. д.). С использованием такого подхода решение описанной выше задачи "продажа автомобиля в кредит" может выглядеть так, как показано на рис. 4.
+<p>Рис. 4. Схема решения "продажа автомобиля в кредит" в варианте композитного приложения.
+<p>На бумаге идея создания композитных приложений выглядит легкой и изящной, но на самом деле ее реализация совсем не так проста. Ведь монолитные приложения, кроме недостатков, обладают и множеством достоинств: это надежность функционирования, безопасность, высокая производительность…
+<p>Главный подводный камень на пути SOA — совместимость компонентов, и очевидный путь преодоления этой проблемы — стандартизация. За последние годы ИТ-индустрия — главным образом усилиями компаний-лидеров — сделала очень многое в этом направлении и прежде всего в сфере Web-сервисов и XML. Но объективно нужно иметь в виду, что стандартизация — это очень непростой и совсем не быстрый процесс. Он проходит через несколько последовательных уровней; представить себе его сложность и длительность можно с помощью модели оценки зрелости стандартов (см. таблицу). Как видно, стандарт проходит два этапа формирования — собственно создание и применение его в реальных условиях. На второй этап нужно обратить особое внимание: если с новыми приложениями в общем все понятно, то внедрение появляющихся стандартов в унаследованное ПО — это уже проблема.
+<h4>Модель зрелости стандартов</h4>
+<table width="100%"  border="1">
+  <tr>
+    <td><b>Уровень зрелости</b></td>
+    <td><b>Характеристика</b></td>
+    <td><b>Стандарты, соответствующие на сегодня данному уровню зрелости</b></td>
+  </tr>
+  <tr>
+    <td>Уровень 0</td>
+    <td>Есть понимание, что проблема существует</td>
+    <td>Семантические стандарты для транзакций</td>
+  </tr>
+  <tr>
+    <td>Уровень 1</td>
+    <td>Много точек зрения на суть проблемы</td>
+    <td>Семантические стандарты для данных</td>
+  </tr>
+  <tr>
+    <td>Уровень 2</td>
+    <td>Предложен вариант стандарта версии 1.0</td>
+    <td>WS-Reliability (обеспечение надежного обмена данными и сообщениями)</td>
+  </tr>
+  <tr>
+    <td>Уровень 3</td>
+    <td>Создан стандарт в варианте «функционально достаточный»</td>
+    <td>WS-Security, BPEL</td>
+  </tr>
+  <tr>
+    <td>Уровень 4</td>
+    <td>Многие приложения уже используют этот вариант стандарта</td>
+    <td>XML, SOAP, WSDL </td>
+  </tr>
+  <tr>
+    <td>Уровень 5</td>
+    <td>Повсеместное использование стандарта</td>
+    <td>TCP/IP, HTTP, SSL</td>
+  </tr>
+  <tr>
+    <td colspan="3">Источник: Sun Microsystems</td>
+  </tr>
+</table>
+<p>Отсюда можно понять, что полная стандартизация компонентов — это недостижимый идеал. Не нужно забывать о том, что все ключевые игроки рынка — конкуренты, и каждый из них пытается опередить других, предложить более эффективное решение. А разработка стандартов — процесс довольно долгий, и разработчики зачастую просто не могут ждать его окончательного завершения.
+<p>Есть и другая очевидная проблема в самой идее компонентной архитектуры, которая скрывается за такими вопросами: как поддерживать множество различных инсталляций внешнего приложения? Как осуществлять контроль версий? Что произойдет, когда выйдет новая версия продукта?
+<p>Не нужно забывать о том, что в случае SOA мы имеем дело не просто с распределенной системой, а с системой, использующей внешние компоненты, которыми распоряжаются совсем другие хозяева. Как будет чувствовать себя ваша компания, когда в приложении вашего контрагента что-то поменяется, после чего нарушится созданный вместе с ним интерфейс и весь ваш бизнес-процесс перестанет выполняться?
+<p>Для предотвращения подобных ситуаций в SOA должны использоваться схемы взаимодействия с так называемыми слабыми связями. Это означает, с одной стороны, что интерфейс между двумя программными компонентами обязан адаптироваться к возможным изменениям в данных или алгоритмах обработки, а с другой — что даже полный отказ одного из компонентов не должен приводить к потере работоспособности системы в целом.
+<p>Но на этом вопросы, связанные с к SOA, не заканчиваются. Как обеспечить безопасность? Производительность? Масштабируемость?
+<p>Еще одна важная проблема: а захотят ли разработчики прикладных решений выполнять их в виде компонентных приложений, функционал которых будет доступен для внешних систем? Как метко было подмечено в одной из Интернет-дискуссий: "все хотят делать SOA-платформы для интеграции приложений, но что-то никто не стремится создавать прикладное ПО, пригодное для использования в SOA".
+<p>Но как бы то ни было, идеи SOA находят все более широкое применение на практике. Что же касается инструментария, который может применяться для создания композитных приложений, то тут можно обратить внимание на новую платформу Sun Java Composite Application Platform Suite (см. статью "SOA-платформа от Sun Microsystems" в этом номере журнала).
+<p>
+<table width="100%"  border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td><h3>Исследование Butler Group</h3>
+  
+    <p>Осенью 2005 г. исследовательская компания Butler Group (<a href="http://www.butlergroup.com">http://www.butlergroup.com</a>) провела исследование, посвященное эффективности применения технологии разработки композитных приложений на примере использования продукта SeeBeyond ICAN (ставшего затем основой Java CAPS). В подготовленном по его результатам отчете "Разработка композитных приложений, сравнение совокупной стоимости владения" (Developing Composite Applications, Comparing the Total Cost of Ownership) был сделан ряд рекомендаций и выводов.
+      <p>В частности, в отчете перечислены ключевые компоненты, необходимые для эффективной разработки составных приложений:
+      <ul>
+        <li>централизованный репозиторий, упрощающий обнаружение существующих сервисов и позволяющий добиться максимальной степени их повторного использования;
+        <li>простое определение точек интеграции с существующими системами, основанное на ключевых протоколах Web-сервисов, включая UDDI, SOAP и WSDL;
+        <li>использование автоматизированного отображения данных и сервисов преобразований для интеграции на уровне данных;
+        <li>графическое окружение для определения потоков бизнес-процессов, включая управляющие структуры, такие, как условное ветвление и параллельные процессы;
+        <li>возможность обмениваться определениями процессов с другими системами и бизнес-партнерами в стандартном формате;
+        <li>интерфейсы пользователя, легко генерируемые с помощью имеющихся сервисов и настраиваемые в соответствии с требованиями;
+        <li>среда разработки приложения, сводящая к минимуму необходимость кодирования и позволяющая повторно использовать навыки разработчиков;
+        <li>каркас на базе открытых стандартов, который может использоваться в неоднородных окружениях, т. е. доступный на множестве платформ;
+        <li>надежные средства управления основными данными, позволяющие применять единый подход к ключевым объектам бизнеса (например, клиенты или продукция), хранящимся в различных базовых источниках данных;
+        <li>автоматизация бизнес-процессов, сокращающая потребность в ручном вмешательстве.
+      </ul>
+      <p>Основные выводы, сделанные при изучении совокупной стоимости владения, таковы.
+      <p>Использование интегрированного набора существенно сокращает время работы над проектом, особенно на этапе разработки, так как снижается необходимость в написании кода программы.
+      <p>Бизнес-аналитикам придется освоить инструментальные средства для проектирования процессов, что может удлинить время планирования первого проекта, однако это нельзя считать недостатком, учитывая, что разработчики (практически из любой группы программистов) смогут принять участие как в первом, так и в последующих проектах без переподготовки для работы с такими сложными архитектурами, как J2EE.
+      <p>Сокращение объема кодирования и снижение сложности полного решения приводят к общему уменьшению затрат времени на тестирование.
+      <p>Трудоемкость развертывания решения значительно снижается за счет тесной интеграции между средами, используемыми при разработке и развертывании.
+      <p>Благодаря использованию общей платформы и сокращению трудоемкости перехода от одного этапа работы над проектом к другому заметно снижается норма накладных расходов на управление проектом.
+      <p>Связанный с проектом риск уменьшается на всех рабочих этапах, соответственно снижается и частота возникновения непредвиденных ситуаций. Это следствие ряда факторов, таких, как улучшение согласования бизнес- и ИТ-функций, сокращение кодирования, встроенные функции управления, а также возможность использования имеющихся навыков.
+      <p>Значительно снижаются расходы на поддержку проекта в последующие годы — частично из-за сокращения программного кода, но главным образом благодаря дополнительной гибкости, вытекающей из подхода к разработке, ориентированного на процессы. При изменении потребностей бизнеса или основных приложений слабые связи между процессами и базовыми системами позволяют значительно уменьшить сложность решения.
+      <p>Главный вывод проведенного исследования заключается в том, что интегрированный набор потенциально позволяет сократить на 50% первоначальную фазу разработки проекта (от проектирования до развертывания) по сравнению с традиционным подходом к разработке, а также достичь экономии совокупной стоимости владения до 58% на протяжении трех лет, если принимать во внимание расходы на последующую поддержку. Учитывая среднюю стоимость разработки приложения, в рассмотренном в отчете примере снижение общей стоимости за трехлетний период составит примерно 220 000 долл.
+    <p></td>
+  </tr>
+</table>
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</A></b></li><li><b><A href='detail.php@ID=24480.html'>EMC: прогнозы развития ИТ-индустрии </A></b></li><li><b><A href='detail.php@ID=22756.html'>Средства борьбы с внутренними нарушителями ИБ</A></b></li><li><b><A href='detail.php@ID=20843.html'>ИБП в условиях мобильности: индивидуальные или централизованные?</A></b></li><li><b><A href='detail.php@ID=20353.html'>Облачное окружение vs. традиционные ЦОД</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25287.html'>Печатная продукция становится интерактивной</A></b></li><li><b><A href='detail.php@ID=24744.html'>Глобальный альянс для разработки технологий умных городов </A></b></li><li><b><A href='detail.php@ID=24364.html'>Новые разработки Intel: мобильные и носимые устройства</A></b></li><li><b><A href='detail.php@ID=24298.html'>Новогодний прогноз IBM 5 in 5</A></b></li><li><b><A href='detail.php@ID=24055.html'>Технология высокоскоростных ЦОДов будущего </A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6845.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Реализация SOA как разработка композитных приложений
+</a><br><a href="detail.php@ID=6845.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Термин SOA (Service Oriented Architecture, сервис-ориентированная архитектура), имевший еще недавно ореол загадочно-нового, за прошедший 2006-й год&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6845.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6845&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='065aa53a34fc795fdc7ec49aa90c38fa'><img src='../bitrix/tools/captcha.php@captcha_code=065aa53a34fc795fdc7ec49aa90c38fa' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

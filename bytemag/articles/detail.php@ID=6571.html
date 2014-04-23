@@ -1,0 +1,446 @@
+<HTML>
+<HEAD>
+<title>Системы хранения: базовые понятия
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Сергей Замуруев секретарь Ассоциации &amp;quot;Инфосан&amp;quot; editor@infosan.ru Сегодня системы хранения - одна из самых быстроразвивающихся областей в ИТ. И даже во времена тотального урезания бюджетов закон роста объема хранимой информации действует вне" />
+<meta name="description" content="Сергей Замуруев секретарь Ассоциации &amp;quot;Инфосан&amp;quot; editor@infosan.ru Сегодня системы хранения - одна из самых быстроразвивающихся областей в ИТ. И даже во времена тотального урезания бюджетов закон роста объема хранимой информации действует вне" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398083139','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6571' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6571&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6571"].SHOW_IMAGE.value="N"; document.forms["PrintForm6571"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6571"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6571"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6571);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6571.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6571.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6571);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11541.html'>№12 (41), декабрь 2001</a><h1>Системы хранения: базовые понятия
+</h1>10.12.2001<p></p><DIV class='article-text'><p><i>Сергей Замуруев</i><br>
+секретарь Ассоциации &quot;Инфосан&quot;<br>
+<a href="mailto:editor@infosan.ru">editor@infosan.ru</a>
+<p>Сегодня системы хранения - одна из самых быстроразвивающихся областей в ИТ. И даже во времена тотального урезания бюджетов закон роста объема хранимой информации действует вне зависимости от экономической ситуации.
+<h3>Direct Attached Storage </h3>
+<p>Бум на рынке систем хранения начался с распространением сетевой модели хранения данных, которая в разной форме реализована в технологиях SAN и NAS. Чтобы лучше понять преимущества сетевой модели, начнем с описания модели традиционной, которая называется Direct Attached Storage (DAS). В DAS каждый сервер имеет в своем единоличном распоряжении дисковые и ленточные накопители, их массивы или библиотеки. Другие серверы могут получить к ним доступ только при посредстве сервера-владельца.
+<p>Достоинства этой модели - всеобщая поддержка и принятые стандарты, а также дешевизна ее реализации. Недостатков же довольно много. Дисковая емкость ограничена физическими характеристиками конкретного сервера или стойки, ее невозможно наращивать без остановки работы сервера-владельца. До 30% дисковой емкости пропадает впустую. Есть ограничения на удаленность дисковой стойки от сервера, которому она принадлежит. При выходе сервера-владельца из строя данные становятся недоступными. Кроме того, трудно вести учет и администрирование дисковой емкости, разбросанной по разным серверам предприятия.
+<p>По мере роста потребности в дисковой емкости (а она может расти со скоростью до 600% в год), проблемы эти становились все более актуальными. Основной метод их решения - консолидация данных и превращение хранения данных в отдельную сетевую службу, с тем чтобы ее эффективность было легче отслеживать и корректировать. Отсюда и выросли технологии SAN/NAS.
+<h3>Network Attached Storage </h3>
+<p>В технологии Network Attached Storage (NAS), аналогично тому, как принт-сервер 
+  берет на себя функции печати, NAS-сервер берет на себя хранение общих файлов 
+  пользователей локальной сети (рис. 1). По некоторым данным, первый NAS-сервер 
+  разработала в конце 80-х гг. компания Auspex (<a href="http://www.auspex.com">http://www.auspex.com</a>). 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/sannas1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Схема NAS.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Системы NAS по наличию дисковой емкости делятся на истинные NAS и шлюзы к SAN. По назначению выделяются системы уровня рабочей группы, отдела, предприятия.
+<p>Технология NAS часто производительнее систем с выделенными файл-серверами. Такие системы просты в настройке за счет ограниченной только хранением данных функциональности. Их легко масштабировать, поскольку количество NAS-серверов и их удаленность от клиентов ограничены только пропускной способностью сети. Кроме того, в числе достоинств метода - снижение издержек за счет консолидации данных, он часто оказывается дешевле выделенного файл-сервера. NAS позволяет также сэкономить на клиентских лицензиях - NAS-серверы обычно работают под управлением ОС, не ограничивающих количество клиентов, например, особых версий Linux или Windows.
+<p>Недостатки же таковы: при резервном копировании или пересылке больших объемов данных сеть бывает перегружена; не всегда очевидна безопасность данных.
+<p>Сфера применения NAS - хранение общих файлов пользователей сети, данных серверов электронной почты, баз данных, Web-хостинг, резервное копирование.
+<h3>Storage Area Network </h3>
+<p>Storage Area Network (SAN) - это специальная выделенная сеть, объединяющая 
+  устройства хранения данных с серверами приложений (рис. 2). Обычно строится 
+  на основе протокола Fibre Channel. Автор идеи - компания IBM (<a href="http://www.ibm.com">http://www.ibm.com</a>), 
+  впервые реализовавшая подобную технологию в мэйнфреймах S/390. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/sannas2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Схема SAN.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В отличие от NAS, SAN не имеет понятия о файлах: файловые операции выполняются на подключенных к SAN серверах (рис. 2). SAN оперирует блоками, как некий гигантский жесткий диск. Идеальный результат работы SAN - возможность доступа любого сервера под любой операционной системой к любой части дисковой емкости, находящейся в SAN.
+<p>Оконечные элементы SAN - это серверы приложений и системы хранения данных (дисковые массивы, ленточные библиотеки и т. п.). А между ними, как и в обычной сети, находятся адаптеры, коммутаторы, мосты, концентраторы.
+<p>SAN классифицируются по архитектуре (&quot;точка-точка&quot;, &quot;арбитражная петля&quot;, &quot;фабрика&quot;); по используемому протоколу (Fibre Channel SAN, IP и т.д.); по составу (из компонентов одного поставщика, из компонентов разных поставщиков, интегрированные в едином корпусе, или &quot;коробочные&quot;).
+<p>Достоинства метода - высокая постоянная скорость передачи данных (от 100 Мбайт/с и более в случае Fibre Channel SAN). Локальная сеть разгружается, уже не нужно &quot;окно резервного копирования&quot;. Большое число серверов могут иметь доступ к одному дисковому массиву. Серверы и дисковые подсистемы могут располагаться на расстоянии до 10 км (а в некоторых версиях - и 100-120 км) друг от друга.
+<p>В числе недостатков - относительно высокая цена, более сложная настройка и то, что компоненты разных производителей не всегда совместимы между собой.
+<p>Применение SAN имеет некоторые особенности, о которых мы поговорим подробнее.
+<p>Скоростной интерфейс. Самое простое и распространенное применение Fibre Channel SAN - организация очень быстрого (и, возможно, совместного) доступа к очень большим объемам данных. Большая часть установок SAN в России решает именно эту задачу. Среди потребителей можно назвать телекомпании, конструкторские бюро, финансовые организации. Так, эксперты утверждают, что для оцифровки одного часа цифрового видео с высоким разрешением требуется 100 Гбайт. Заметим, что средняя телекомпания имеет архив примерно в 400 тыс. часов.
+<p>Резервные центры хранения данных, кластеризация. Как уже говорилось выше, узлы Fibre Channel могут находиться друг от друга на расстоянии до 100 км, а работать со скоростью, которая в большинстве случаев недоступна ни Ethernet, ни SCSI, ни часто даже ATM. Напрашивается масса решений, в которых несколько серверов кластера, находящихся в разных частях здания или города, пользуются одним дисковым массивом. Данные между двумя полностью идентичными ВЦ в разных местах реплицируются по Fibre Channel. Когда сетей SAN или тяжелых дисковых массивов в организации несколько, становятся актуальными проблемы объединения SAN-островов (SAN islands), расположенных в географически удаленных офисах. Для этого можно использовать DWDM, IP, ATM.
+<p>Резервное копирование/восстановление. Всем сотрудникам более или менее крупных фирм, склонным работать сверхурочно, наверняка знакомы проблемы с пропускной способностью локальной сети по вечерам или выходным. Одной из причин может быть резервное копирование. Время, когда оно выполняется, называется &quot;окном резервного копирования&quot; (backup window). Кроме того, часто серверы приложений на время копирования необходимо останавливать.
+<p>Сейчас, когда компании (в том числе и российские) часто работают в автоматическом режиме 24 часа в сутки, без выходных и праздников, многие уже не готовы мириться с существованием окна резервного копирования. Особенно эта проблема актуальна для телекоммуникационных и провайдерских фирм, которые не могут себе позволить остановить серверы ни на минуту. SAN - способ ликвидировать такое окно. Это достигается с помощью техники внесерверного и внесетевого резервного копирования (Serverless и LAN-free backup). При использовании обоих подходов подразумевается, что устройство-источник (дисковый массив) и устройство-цель (ленточный накопитель) подключены к одной и той же SAN.
+<p>При внесетевом резервном копировании трафик полностью переносится из локальной сети внутрь SAN. Однако сервер приложений, данные которого копируются, вынужден &quot;прокачивать&quot; резервированные данные через себя. Это сильно загружает процессоры сервера. Если такое повышение загрузки недопустимо, применяют внесерверное резервное копирование (serverless backup). В этом случае между устройством-источником и устройством-целью ставится интеллектуальный мост, способный отдавать команду SCSI Extended Copy. Фактически сервер резервного копирования приказывает мосту взять блоки такие-то на устройстве таком-то и отправить на магнитную ленту. В результате данные перекачиваются через мост, а загрузка сервера приложений остается почти неизменной.
+<h3>SAN или NAS? </h3>
+<p>Эти технологии дополняют друг друга, и каждая хороша для решения своих задач. В SAN совместный доступ двух клиентов даже к одному тому - задача нетривиальная, для ее решения требуется особое ПО (например, Veritas SANPoint, Tivoli SANergy или ADIC CentraVision). В NAS она решается через 10 мин после подключения оборудования. NAS зависит от локальной сети, SAN - сама по себе локальная сеть. Поэтому взаимопроникновение технологий также имеет место. Внутри NAS-серверов старших моделей часто находятся коммутаторы Fibre Channel. Кроме того, существуют NAS-шлюзы к SAN. Например, IBM TotalStorage 300G подключается к дисковому массиву Shark или сети Fibre Channel SAN и обеспечивает доступ к его дисковой емкости по локальной сети.
+<p>Согласно стратегии развития систем хранения данных уровня предприятия, принятой 
+  в Compaq (<a href="http://www.compaq.com">http://www.compaq.com</a>) и известной 
+  под названием ENSA-2, технологии SAN и NAS сливаются в одно целое и пользуются 
+  единой дисковой емкостью. Только продукты линейки SAN дают к этой емкости доступ 
+  на уровне блоков, а NAS-продукты - на уровне файлов. Однако Compaq все же отдает 
+  предпочтение технологии SAN: как и у IBM, ее новые NAS-устройства E7000 служат 
+  лишь шлюзами к SAN и предоставляют файловый доступ к дисковому пулу предприятия. 
+<h3>Fibre Channel или SCSI? </h3>
+<p>Впрочем, в России трудности сугубо психологического свойства часто возникают еще до того, как заказчик начинает воспринимать аргументы в пользу SAN или NAS. Для начала системным интеграторам приходится убеждать заказчиков выбирать технику с интерфейсом Fibre Channel. Грамотные специалисты обычно прежде всего объясняют, что интерфейс Fibre Channel был разработан с учетом того, какие проблемы создавали транспортные протоколы типа IP и канальные протоколы типа SCSI. Фактически Fibre Channel совместил в себе лучшее из этих двух миров.
+<p>И здесь важно владеть цифрами. Ведь заказчик прав, но ровно настолько, насколько поверхностно он знакомился с техническими спецификациями. Он сравнивает интерфейс Ultra SCSI 160 (&quot;Ага! 160 Мбайт/с&quot;) и Fibre Channel (100 Мбайт/с) и делает вывод о том, что ему пытаются &quot;впарить&quot; нечто заведомо дорогое и малоэффективное.
+<p>При этом клиент упускает из виду, что 160 Мбайт/с (или даже 320 Мбайт/с) - это пиковая пропускная способность, которая достигается довольно редко. А в случае Fibre Channel 100 или 200 Мбайт/с - это устоявшаяся (sustained) пропускная способность, притом только в полудуплексном режиме. В дуплексном же режиме скорость возрастает почти до 200 или 400 Мбайт/с (при использовании двухгигабитного Fibre Channel).
+<p>Далее, грамотный заказчик четко помнит всем известные цифры стандарта SCSI: до 16 устройств на одной шине, расстояние до 12 м. Однако эти показатели исключают друг друга. Так, реально на 12 или 25 м можно вынести только одно устройство, и при этом понадобится хорошо экранированный SCSI-кабель толщиной в руку. В случае с Fibre Channel по меди 15-20 устройств могут находиться на расстоянии 15-20 м от концентратора и обмениваться друг с другом данными на полной скорости. А если взять оптический кабель, расстояние между устройством и коммутатором может достигать 10 км. В некоторых случаях, используя мощные лазеры, можно довести его до 120 км и более.
+<p>SCSI также не годится, если к одной дисковой стойке требуется подключить более двух серверов - обычная задача кластеризации. Да, для некоторых SCSI-контроллеров выпускаются так называемые кластер-киты. Однако предел их возможностей - подключение двух серверов к одной стойке. В кольцевом или коммутируемом Fibre Channel количество серверов и дисковых массивов ограничено только числом портов на концентраторах и коммутаторах.
+<p>И наконец, цена - последнее заблуждение клиентов относительно Fibre Channel. Сегодня ситуация такова, что если брать сходные по функциональности решения, составленные из продукции одного и того же поставщика, то разница будет относительно невелика, от 5 до 15%. И этот разрыв будет сокращаться.
+<h3>2Gbps Fibre Channel </h3>
+<p>Это новая версия интерфейса Fibre Channel, позволяющая передавать данные со скоростью 2 Гбит/с (около 200 Мбайт/с в полудуплексном режиме и около 400 Мбайт/с в полнодуплексном). Помимо увеличения скорости передачи данных, в 2Gbps Fibre Channel была предпринята попытка стандартизовать технику на его основе, решить проблему взаимной совместимости компонентов разных поставщиков на основе стандарта FC-SW-2. Однако достичь столь грандиозной цели, похоже, не удалось. Во всяком случае, уже после выхода первых двухгигабитных продуктов компании Compaq, IBM, Hitachi Data Systems, EMC (которые вместе контролируют до 80% мирового рынка систем хранения) заключили отдельный договор об обмене спецификациями в рамках особой организации (SNIA Verified Solutions Forum). Позднее к договору присоединились почти все сколько-нибудь заметные компании этого рынка.
+<h3>IP Storage: Fibre Channel или IP? </h3>
+<p>Аппаратура Fibre Channel довольно дорога, а специалистов по ней мало. Оборудование для Gigabit Ethernet дешевле, в основном четко стандартизовано, любой системный администратор имеет опыт работы с этими стандартами. И если требуется доступ на уровне блоков, а не файлов, то почему бы не использовать IP/Ethernet для организации SAN? На этой нехитрой идее сейчас делают бизнес десятки фирм. Наиболее популярным протоколом для организации сетей хранения на основе IP считается iSCSI. Как и следует из названия, протокол этот инкапсулирует SCSI-команды в IP-пакеты, т. е. делает то же самое, что и Fibre Channel (ведь в сетях хранения внутри фреймов Fibre Channel также находятся команды SCSI-3). Сейчас идет разработка адаптеров iSCSI, которые полностью освобождают центральный процессор от всех вычислений, связанных с поддержкой как IP-стека, так и команд самого iSCSI.
+<p>Как считает Джон Вролек, глава молодой американской фирмы 3Ware, разрабатывающей устройства IP Storage, Fibre Channel разделит судьбу Token Ring. Или, во всяком случае, доля рынка устройств Fibre Channel не превысит 30% потенциального объема рынка, подобно тому, как доля Token Ring не превысила 15%, несмотря на все усилия IBM.
+<p>Впрочем, помимо организации SAN, для IP Storage есть и другие применения. Это, во-первых, объединение &quot;островов Fibre Channel SAN&quot; между собой по сетям масштаба города (MAN) или глобальным сетям. Для этого используются, например, iFCP (протокол, инкапсулирующий фреймы Fibre Channel, в котором инкапсулированы пакеты SCSI-3, в IP), или тот же iSCSI. Примеры трансконтинентальных SAN уже продемонстрировали компания Nishan Systems с партнерами, а также Compaq, которая объединила в единую SAN три ВЦ: американский, европейский и австралийский.
+<p>О реальной конкуренции между Fibre Channel и IP Storage речи пока не идет - технологии действительно рассчитаны на разные рыночные сегменты. Даже IBM, предложившая дисковый массив с интерфейсом iSCSI в феврале, когда еще не было даже контроллеров и для использования iSCSI приходилось устанавливать особые драйверы сетевых карт, считает IP Storage продукцией младшего уровня, что, вероятно, означает: для тех, кто не может или не хочет позволить себе Fibre Channel.
+<p>Интересно, что хотя окончательные версии iSCSI и некоторых других протоколов IP Storage еще не приняты, множество продуктов на основе iSCSI 0.6 и 0.1 уже продается или объявлено. Среди них упомянутый ранее Cisco Storage Router 5420, NAS-сервер IBM TotalStorage 200i, NAS-серверы HP, адаптеры Adaptec, Emulex и Agilent, маршрутизаторы Nishan Systems и CNT.
+<h3>Storage Service Provider </h3>
+<p>Storage Service Provider (SSP) - это организация, которая представляет дисковую память по первому требованию. Экономическое обоснование услуги SSP таково: на каждый доллар, вложенный в дисковую емкость, приходится 7-8 долл. стоимости управления этой дисковой емкостью. Чтобы сократить издержки, фирма может передать свою дисковую емкость в управление SSP и платить абонентскую плату. По некоторым данным, услуги SSP становятся выгодны, если общая дисковая емкость в организации превышает 7 Тбайт.
+<p>Разумеется, сегодня аналитики прогнозируют рост продаж и курсов акций SSP. Это естественно, поскольку беспокойство корпораций за свои данные заметно увеличилось. Впрочем, само по себе хранение данных уже не столь интересно. Новая волна - фирмы типа Continuity Service Provider, т. е. компании, обеспечивающие непрерывность бизнеса. Они отвечают абсолютно за все и способны даже в случае чего снабдить бедствующую фирму столами, телефонами и компьютерами. Самый известный CSP, фирма Comdisco, купленная недавно HP, обслуживает с полсотни компаний нижнего Манхэттена в Нью-Йорке. И ей сейчас не приходится жаловаться на отсутствие бизнеса.
+<h3>Виртуализация </h3>
+<p>Виртуализация позволяет снизить расходы на приобретение новых дисковых массивов за счет оптимального использования уже имеющихся. Кроме того, сокращаются издержки на администрирование, поскольку управлять большими объемами данных становится проще и дешевле.
+<p>Механизмы виртуализации скрывают частные детали систем хранения (например, информацию о производителе, тип интерфейса или физическую емкость той или иной дисковой стойки либо ленточного накопителя) и позволяют манипулировать емкостью как таковой, где бы она ни находилась и как бы ни выглядела физически.
+<p>Все виртуализованное дисковое пространство представляется администратору в виде единого пула, из которого по мере необходимости можно выделять ровно столько места, сколько требует тот или иной сервер. В отличие от привычной модели, если оказывается, что один сервер не использует выделенное ему дисковое пространство, а другому недостает места на диске, в виртуализированном хранилище можно перебросить емкость от одного сервера к другому.
+<p>Существует несколько концепций виртуализации: host-based, storage subsystem-based, in-bandи out-of-band virtualization.
+<p><b>Host-based virtualization, или серверная виртуализация</b> - то, что многие 
+  годы делали менеджеры логических томов UNIX. Эти программы привязывали идентификаторы 
+  SCSI-устройств, или LUN (Logical Unit Number), к идентификаторам томов операционной 
+  системы. После такой привязки серверная ОС могла монтировать созданный логический 
+  том и пользоваться им независимо от того, где он физически расположен. Эту технику 
+  также называют &quot;маскирование LUN&quot;. 
+<p><b>Storage subsystem-based, или виртуализация дискового массива</b>. То, что 
+  обычно делается в тяжелых дисковых массивах EMC, Hitachi, HP или IBM. Подобно 
+  мэйнфреймам, которые можно делить на несколько абсолютно независимых виртуальных 
+  машин, дисковый массив можно разделить на несколько логических устройств. Каждый 
+  из этих массивов адресуется отдельным LUN. Техника называется LUN mapping (назначение 
+  LUN). Как и маскирование LUN, она позволяет обеспечить доступ к дисковой емкости 
+  массива серверов под разными ОС - например, к LUN 0 имеют доступ серверы под 
+  управлением Windows, к LUN 1 - под UNIX. Однако специалисты разных фирм не могут 
+  прийти к единому мнению относительно того, считать ли два перечисленных выше 
+  метода виртуализацией. 
+<p>Два других подхода к виртуализации вызывают меньше споров - может быть, просто потому, что пока недостаточно обкатаны.
+<p><b>In-band virtualization, внутриполосная виртуализация</b>. Между серверами 
+  и системами хранения данных ставится устройство-посредник (in-band virtualization 
+  appliance), которое преобразует адреса виртуальных томов в адреса реальных физических 
+  блоков и пересылает сами данные от отправителя к получателю и обратно. Здесь 
+  действительно создается общий дисковый пул, и серверам ничего не известно о 
+  том, как физически хранятся запрашиваемые ими данные. Проблема здесь в том, 
+  что устройство может стать узким местом всей получившейся сети. Однако она решаема 
+  при наличии достаточного количества портов Fibre Channel и процессоров в устройстве. 
+<p>И наконец, <b>out-of-band virtualization, внеполосная виртуализация</b>. Это 
+  то же самое, что in-band, только потоки данных не &quot;прокачиваются&quot; через устройство-посредник. 
+  Это устройство занимается только разрешением адресов виртуальной дисковой памяти 
+  в реальную, а к данным серверы обращаются сами. Однако для этого требуется, 
+  чтобы на каждом из серверов, подключенных к дисковому пулу, была установлена 
+  клиентская часть ПО виртуализации, что не всегда возможно. Такой подход реализует 
+  Datacore в своей программе SANSymphony 4.0. 
+<p>Первой компанией, предложившей аппаратуру виртуализации, стала Compaq. Дисковый массив Enterprise Virtual Array имеет несколько отличительных особенностей. Так, в нем дисковая память распределяется подобно виртуальной памяти компьютера - в результате он может использовать больше пространства, чем реально в нем установлено. Можно мгновенно создавать точные копии разделов, которые не будут занимать дискового пространства, - система просто помечает номера блоков исходного раздела и создает виртуальный раздел, включающий в себя те же блоки, что и исходный. Когда приложения начинают запись в исходный раздел, копия остается неизменной, так как изменения записываются в другое место. В результате ОС пользователя считает, что у нее есть, скажем, два раздела по 100 Гбайт, представляющие собой копии друг друга, а на деле система использует 100 Гбайт для основного раздела и еще, например, 20 Гбайт для записи изменений, имевших место с момента копирования. Compaq называет эту технологию Vsnaps. Более того, еще одна технология, называемая Snapclones, позволяет моментально создавать копии раздела и синхронизировать их в реальном времени.
+<p>По неподтвержденной пока информации, в Hitachi Data Systems намерены пойти 
+  еще дальше. На проходившей в конце октября во Флориде выставке Storage Networking 
+  World компания представила ПО для управления своими дисковыми массивами под 
+  названием HiCommand. Среди прочих его функций упоминалась способность виртуализировать 
+  дисковую емкость одного или нескольких массивов Hitachi. Однако есть сведения, 
+  что в течение следующего года Hitachi договорится с другими производителями 
+  тяжелых дисковых массивов об обмене интерфейсами. В результате HiCommand сможет 
+  объединять в пул дисковую емкость массивов нескольких поставщиков. Впрочем, 
+  по информации Byte and Switch (<a href="http://www.byteandswitch.com">http://www.byteandswitch.com</a>), 
+  в списке возможных партнеров Hitachi отсутствует компания EMC. 
+<h3>Взаимная совместимость </h3>
+<p>Проблема, пока что не слишком актуальная для нашей страны, - совместимость компонентов SAN разных производителей. Этой проблемы не существовало, пока отсутствовал младший сегмент рынка систем хранения. Сети хранения покупались либо у производителей серверов, либо у специализированных компаний, например, EMC или Hitachi Data Systems.
+<p>Формальные стандарты Fibre Channel существовали и продолжают существовать, однако до сих пор их далеко не всегда соблюдают во всех подробностях. Поставщики компонентов вводили максимально допустимые отступления от стандарта, чтобы &quot;привязать&quot; клиентов к собственной технике и сделать свои технологии индустриальным стандартом. Но по мере расширения рынка желающих жестко зависеть от одного поставщика оставалось все меньше. Отсюда и &quot;оргия взаимной совместимости&quot;, начавшаяся в середине этого года. Почти каждый вендор считал своим долгом заявить о совместимости своей продукции с продукцией другого поставщика. Так, компания Brocade только за лето выпустила около 15 таких пресс-релизов.
+<p>По мере развития рынка стали создаваться независимые сертифицирующие органы. 
+  Наиболее известны среди них SNIA (Storage Networking Industry Association, <a href="http://www.snia.org">http://www.snia.org</a>) 
+  и FCIA (Fibre Channel Industry Association, <a href="http://www.fibrechannel-europe.com">http://www.fibrechannel-europe.com</a>) 
+  c ее сертификатом совместимости SANmark. Кроме того, свои программы сертификации 
+  стали запускать и производители оборудования. В России подобные цели ставит 
+  перед собой недавно созданная ассоциация &quot;Инфосан&quot; (<a href="http://www.infosan.ru">http://www.infosan.ru</a>). 
+<p>Проблема решается, но до конца пока не решена. Некоторые дистрибьюторские фирмы (например, ASBIS и Ingram Micro) предлагают в этой ситуации свой подход, вводя в ассортимент готовые SAN-решения. По сути это просто комплекты техники для построения сетей хранения данных, но состоящие из оборудования, взаимная совместимость которого была проверена. Кроме того, комплекты поставляются вместе с набором рекомендаций по настройке техники.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6571.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Системы хранения: базовые понятия
+</a><br><a href="detail.php@ID=6571.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Сергей Замуруев
+секретарь Ассоциации &quot;Инфосан&quot;
+editor@infosan.ru
+Сегодня системы хранения - одна из самых быстроразвивающихся областей в&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6571.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6571&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0860fc4a434c6df922c753b49a370b44'><img src='../bitrix/tools/captcha.php@captcha_code=0860fc4a434c6df922c753b49a370b44' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

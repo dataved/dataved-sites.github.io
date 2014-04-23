@@ -1,0 +1,530 @@
+<HTML>
+<HEAD>
+<title>Надежность и производительность ПО: опыт &amp;quot;Галактики&amp;quot;
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Андрей Колесов По мере увеличения сложности программных средств и их роли в обеспечении жизнедеятельности предприятий резко возрастают и требования к качеству ПО (надежности, устойчивости, компактности, производительности, масштабируемости и т. п.). С" />
+<meta name="description" content="Андрей Колесов По мере увеличения сложности программных средств и их роли в обеспечении жизнедеятельности предприятий резко возрастают и требования к качеству ПО (надежности, устойчивости, компактности, производительности, масштабируемости и т. п.). С" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082839','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6650' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6650&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6650"].SHOW_IMAGE.value="N"; document.forms["PrintForm6650"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6650"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6650"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6650);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6650.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6650.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6650);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11494.html'>№9 (61), сентябрь 2003</a><h1>Надежность и производительность ПО: опыт &amp;quot;Галактики&amp;quot;
+</h1>09.09.2003<p></p><DIV class='article-text'><p><i>Андрей Колесов</i>
+<p>По мере увеличения сложности программных средств и их роли в обеспечении жизнедеятельности предприятий резко возрастают и требования к качеству ПО (надежности, устойчивости, компактности, производительности, масштабируемости и т. п.). С точки зрения повышения качества очень важны все этапы разработки ПО - проектирование, кодирование, тестирование и отладка. И все же можно без преувеличения сказать, что тестирование программных продуктов имеет здесь особое значение, на него приходится почти половина стоимости проекта.
+<p>В качестве примера достаточно взять широко известную практику Microsoft. Мы видим, что бета-тестирование продуктов корпорации сейчас занимает от года (офисные приложения) до двух лет (серверные системы), при этом наблюдается явная тенденция к увеличению этих сроков. А ведь перед &quot;внешним&quot; тестированием есть еще и этап &quot;внутреннего&quot; альфа-тестирования. Стоит обратить внимание и еще на один любопытный факт: недостатка в энтузиастах, желающих поучаствовать в бета-тестировании, не наблюдается, однако Microsoft придерживается принципа &quot;лучше меньше (тестировщиков), да лучше&quot;. Кроме того, еще четыре года назад корпорация стала в обязательном порядке использовать бета-версии (обычно начиная со второй) своих продуктов в реальной работе собственных подразделений. При этом, конечно же, появляются возможные издержки в виде проблем с работоспособностью продуктов, но они с лихвой компенсируются - управление тестированием существенно упрощается. Не забудем и о маркетинговых выгодах такой схемы: кто усомнится в качестве товара, который производитель испытал на себе!
+<p>Но Microsoft работает на массовом рынке и поставляет не комплексные системы, а отдельные продукты. Пользователь в любом случае может не спешить с их внедрением и посмотреть, сколько шишек набьют себе те, кто уже работает с новинками (а в силу массовости рынка желающих всегда будет много). Он может и сам протестировать пробную версию, причем без ущерба для нормальной работы информационной системы предприятия. В случае же комплексных систем управления предприятием, скажем, ERP-решений, такой подход не всегда возможен, и это накладывает особые требования к оценке качества ПО.
+<p>В этой статье мы рассмотрим технологию тестирования и оценки качества программных продуктов корпорации &quot;Галактика&quot; (<a href="http://www.galaktika.ru">http://www.galaktika.ru</a>) - на наш взгляд, она хорошо отражает современные методы решения подобных задач, и поэтому может заинтересовать не только клиентов этой компании, но и широкий круг ИТ-специалистов.
+<h3>Общие принципы разработки </h3>
+<p>&quot;Галактика&quot; - интегрированная система для управления предприятием, это тиражно-заказной продукт, включающий 7 функциональных контуров, 53 прикладных и системных модуля (рис. 1).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2003/Galaktik/ris1.gif" alt=Fig.1></td></tr>
+<tr><td valign="bottom">Рис. 1. Функциональная схема системы &quot;Галактика&quot;.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Основы надежности и производительности закладываются организацией производства. Корпорация &quot;Галактика&quot; следует версионному принципу развития своей системы. Как правило, каждая версия реализует определенную концепцию функционального развития. Цикл разработки (рис. 2) начинается с анализа требований рынка с целью выявления конкурентных задач, далее идут проектирование и реализация (6-12 месяцев), затем проверка проектных решений и тестирование. После приемки в опытную эксплуатацию, как правило, организуется выполнение пилотных проектов (при участии и под авторским надзором разработчиков), позволяющих оценить соответствие требованиям клиентов и разработать технологии внедрения нового функционала. По ходу пилотных проектов возможно проведение функциональных доработок.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2003/Galaktik/ris2.gif" alt=Fig.2></td></tr>
+<tr><td valign="bottom">Рис. 2. Корпоративный стандарт &quot;Разработка программных продуктов. Стадии и этапы&quot;.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>При достижении успеха не менее чем в пяти пилотных проектах функциональное развитие версии в соответствии с данной концепцией считается в целом завершенным. После этого окончательно формируются (и передаются партнерам) технологии продвижения, внедрения и сопровождения версии, а также обучения пользователей - все это составные части нового продукта, который корпорация предлагает своим клиентам.
+<p>Далее развитие и модификация версии системы ведется по двум направлениям - в рамках сопровождения по договорам абонентского обслуживания (устранение проблем, поддержка законодательства) и в рамках заказных разработок. В последнем случае клиент заключает договор на модификацию системы или разработку нового модуля. Иногда эти специализированные модули становятся затем основой для типовых блоков. Таким образом, например, появились первые версии модулей &quot;Управление бюджетом&quot; и &quot;Управление капитальным строительством&quot;.
+<p>Каждая из стадий цикла разработки предусматривает свой комплекс методов и процедур, которые образуют систему управления качеством. Мы подробнее остановимся на тестировании и постараемся осветить опыт и некоторые технологические &quot;изюминки&quot; корпорации &quot;Галактика&quot;.
+<h3>Комплексная система тестирования </h3>
+<p>Хотя основы качества закладываются еще при анализе требований, разработке и экспертизе проектной документации, тестирование остается одной из ключевых стадий общего цикла разработки ПО, определяющей характеристики продукта. При тестировании используется несколько способов проверки ПО.
+<p><b>Блочное, или локальное тестирование</b> (unit testing) - проверка, охватывающая 
+  небольшой фрагмент кода вне его связи с другими подобными фрагментами. Обычно 
+  проводится до интеграции решения (блока) в систему. 
+<p><b>Функциональное тестирование</b> (functional testing) - сопоставление выходных 
+  данных, полученных в ходе тестирования, с заданными в функциональных требованиях. 
+<p><b>Тестирование &quot;черного ящика&quot;</b> (black box testing) проводится безотносительно 
+  к структуре программы (на окончательной форме ее реализации). Случаи, когда 
+  дополнительно проводится проверка внутренней логики (на уровне кода), относятся 
+  к тестированию &quot;белого ящика&quot; (white box testing). 
+<p>В практике корпорации &quot;Галактика&quot; локальное тестирование и тестирование &quot;белого ящика&quot; проводятся в подразделениях разработки, по ходу работ. Тестирование &quot;черного ящика&quot; часто предполагает перебор большого числа вариантов, что весьма трудоемко и не имеет особого смысла, поскольку далеко не все варианты бывают востребованы. Поэтому чаще используется более направленное функциональное тестирование - по проектной документации или по описанным бизнес-процессам (контрольным примерам) заказчиков.
+<p><b>Интеграционное, или интегральное тестирование</b> (integration testing) 
+  - проверка программного продукта в целом, после полной его сборки. Здесь выявляются 
+  ошибки, возникающие в процессе интеграции программных компонентов или модулей, 
+  в том числе дефекты, нарушающие их взаимодействие. 
+<p><b>Стрессовое тестирование</b> (stress testing) - тестирование продукта при 
+  номинальных или максимальных нагрузках. Цель этой операции - убедиться, что 
+  функциональность не &quot;ломается&quot;, когда с системой работает большое число пользователей, 
+  что в принципе может приводить к различным конфликтам. 
+<p><b>Регрессионное тестирование</b> (regression testing) - тестирование, проводимое 
+  после функционального усовершенствования или после исправления программы. Здесь 
+  ставятся две задачи: а) убедиться, что обнаруженная ошибка исправлена и после 
+  этого не появились новые; б) гарантировать функциональную преемственность и 
+  совместимость новой версии (релиза, патча) с предыдущими. Как правило, эта стадия 
+  включает повторное выполнение всех ранее использованных процедур тестирования. 
+<p><b>Нагрузочное тестирование, или тестирование производительности</b> (performance/load 
+  testing) - тестирование продукта при заданных известных нагрузках, которые определяются 
+  в терминах числа пользователей, объема данных и скорости их обработки (времени 
+  отклика). Проводится отдельно от функционального тестирования, на специальном 
+  оборудовании (стенде). 
+<p>Тестирование ПО на различных стадиях разработки ставит целью достижение заданных контрольных показателей - как натуральных (количество ошибок), так и качественных (критичность ошибки).
+<p>Для оценки процесса тестирования используются статические и динамические показатели. Статические определяются списком ошибок, ранжированным по уровням критичности (степени влияния на выполнение бизнес-процессов) - как в целом по версии, так и в разрезе функциональных частей. Для сравнения версий и различных частей продукта применяется удельный показатель - количество на тысячу строк кода.
+<p>Динамические показатели учитывают интенсивность обнаружения ошибок (количество/период), в том числе удельную (на одного участника тестирования). Контроль показателей проводится с помощью системы ПИР (&quot;Проблемы и решения&quot;) путем формирования отчетов в табличной и графической форме.
+<p>Фактически тестирование начинается еще во время кодирования очередной версии. Локальное тестирование новых или измененных функций системы - это одна из задач разработчиков. Значительная часть ошибок выявляется и устраняется практически в момент возникновения. При определенной готовности системы начинается перекрестное тестирование. Разработчики не только &quot;свежим взглядом&quot; проверяют работу друг друга, но и одновременно обмениваются накопленным опытом. Эти виды тестирования обычно дополняются визуальной проверкой исходного кода, что позволяет &quot;выловить&quot; ошибки, которые могут не сразу проявиться при обычном тестировании.
+<p>Далее начинается тестирование системы как единого целого (интегральное тестирование), которое состоит из нескольких этапов.
+<p><b>Внутреннее тестирование</b> выполняется силами Управления разработки ПО 
+  (отделы тестирования, аналитические отделы), а также привлекаемых специалистов 
+  служб продвижения. Основные задачи этой операции - проверка проектных решений 
+  на соответствие проектной документации, функциональная полнота системы, соответствие 
+  законодательству России, Белоруссии, Украины и Казахстана. 
+<p>Следующий этап - <b>внешнее тестирование</b>. В нем участвуют ресурсы, &quot;внешние&quot; 
+  по отношению к Управлению разработки ПО, например, подразделения, занимающиеся 
+  продажей, пуском и наладкой, технической поддержкой и обучением, клиенты, которые 
+  заказали новые функции системы и хотят их проверить на своих бизнес-процессах, 
+  а также другие заинтересованные организации. 
+<p>Понятие &quot;внешнее тестирование&quot; - более широкое, чем традиционное &quot;бета-тестирование&quot;, в котором участвуют только нынешние и потенциальные потребители. Здесь концентрируются усилия сотен опытных экспертов, использующих различные методологии и имеющих разный опыт использования системы, обширные знания бизнес-процессов клиентов. С помощью корпоративной системы &quot;Проблемы и решения&quot; эксперты объединяются в единую команду, действия которой координирует отдел интегрального тестирования.
+<p>Задача данного этапа - обеспечение надежности, выявление и устранение максимального количества ошибок. Одновременно отдел интегрального тестирования по специальным методикам выполняет тестирование производительности по определенному набору критичных функций, стрессовое тестирование и параллельное тестирование на разных платформах.
+<p><b>Заключительное тестирование</b> проводят отделы тестирования Управления 
+  разработки ПО. Его цель - еще раз проверить реализацию как можно большего количества 
+  бизнес-процессов и убедиться, что исправление ошибок на предшествующих этапах 
+  не вызвало новых ошибок (регрессионное тестирование). Одновременно идет пополнение 
+  библиотеки автоматизированных тестов для последующего сопровождения версии. 
+  Проверяется корректность формирования дистрибутивов и инсталляции. 
+<p>На всех этапах интегрального тестирования постоянно проводится статистический анализ обнаруженных и исправленных ошибок, динамики их регистрации, в результате принимается решение о переходе к следующему этапу. Отработанная система классификации и ранжирования ошибок обеспечивает обоснованность и объективность оценок.
+<p>После заключительного тестирования версия поступает на корпоративную приемку. Проверяется программный продукт, готовый к поставке пользователю. Группа контроля качества тщательно проверяет его комплектность и работоспособность, и только после положительного заключения версия получает &quot;путевку в жизнь&quot;.
+<p>Далее ПО передается в опытную эксплуатацию на предприятия, которые готовы его принять. Это необходимый этап, ибо даже самое полное тестирование не позволяет выявить все нюансы, которые обнаруживаются в ходе реальной эксплуатации. По достижении положительных результатов принимается решение о переходе к промышленной (коммерческой) эксплуатации.
+<p>По данным Управления разработкой ПО &quot;Галактики&quot;, в процессе разработки очередной версии продукта трудоемкость на стадии разработки распределяется так (с точностью до 5%): на проектирование (анализ требований плюс ТЗ плюс технические проекты) приходится 40%, на реализацию (кодирование) - 20%, на тестирование (все виды ) - 40%. Соответственно относительная трудоемкость этапов тестирования распределяется так: локальное и перекрестное тестирование - 25%; внутреннее тестирование - 25%; внешнее тестирование - 45%; заключительное тестирование - 5%.
+<p>Что касается динамики тестирования (рис. 3), то в первые недели тестирования регистрируется в среднем 40-50 ошибок в день, из них до 4 относятся к высшему уровню критичности. В последние недели внешнего тестирования ежедневно регистрировалось не более одной-двух ошибок низшего уровня критичности; при этом ошибок высшего уровня критичности в течение установленного срока не было обнаружено - при максимальной интенсивности тестирования поток регистрации ошибок, затрудняющих выполнение бизнес-процессов, устойчиво сходит на нет. Чтобы достичь такого уровня и перейти к заключительному тестированию, проверяется примерно 40?50 сборок версии, в которых исправляются ошибки. Требования к организации тестирования и выполнению отдельных видов работ зафиксированы в соответствующих корпоративных регламентах и технологических инструкциях.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2003/Galaktik/ris3.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Динамика тестирования.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<h3>Контроль производительности и нагрузочное автоматизированное тестирование 
+</h3>
+<p>В &quot;Галактике&quot; наработан опыт нагрузочного тестирования, под которым подразумевают эмуляцию эксплуатации системы в многопользовательском режиме. Разработаны нормативы производительности системы на типовых бизнес-процессах заказчиков, при модификации системы проводятся регламентные контрольные измерения для проверки соответствия нормативам и сохранения производительности по сравнению с предыдущей версией (релизом). Аппаратные средства и методика измерений стандартизованы.
+<p>Важность данного вида тестирования определяется не только тем, что система &quot;Галактика&quot; изначально построена как многопользовательская, но и тем, что она может работать с различными популярными СУБД - Oracle, Microsoft SQL Server и Pervasive SQL. Результаты нагрузочного тестирования позволяют разрабатывать рекомендации для заказчиков при переходе от одной СУБД к другой.
+<p>В ходе нагрузочного тестирования постоянно используются автоматизированные тесты. В свое время перед разработчиками корпорации встали два очевидных вопроса. Во-первых, следует ли использовать средство собственной разработки или лучше применить продукт стороннего разработчика (если так, то какой именно)? Во-вторых, какие задачи можно реально решать с помощью выбранного средства?
+<p>При решении первого вопроса специалистам &quot;Галактики&quot; пришлось учитывать целый ряд обстоятельств: совместимость средства тестирования с тестируемой системой во всем наборе используемых платформ; достаточность предлагаемой функциональности и возможность ее расширения; оперативность исправления ошибок, которые могут содержаться в этом средстве, как в любом другом программном продукте; качество документации и технической поддержки; необходимость обучения персонала; ценовую политику поставщика, возможность и условия передачи продукта третьей стороне и т. д.
+<p>Каждый разработчик решает эту проблему по-своему. В корпорации &quot;Галактика&quot; используется система собственной разработки AQA (Automated Quality Assurance) - встраиваемый компонент системы &quot;Галактика&quot;. Такое решение обеспечивает ряд преимуществ. Не требуется дополнительных программ и ресурсов для установки и использования, обеспечивается работа на всех поддерживаемых платформах и хранение всей информации в единой базе данных. Пользовательский интерфейс AQA не отличается от интерфейса системы &quot;Галактика&quot;, что обеспечивает быстрое освоение и простоту использования. Организации-клиенты более эффективно участвуют в тестировании, причем могут не только пользоваться готовыми планами тестов, но и создавать собственные. Исходные данные и действия пользователей, приведшие к критической ситуации при эксплуатации системы, могут фиксироваться и анализироваться специалистами для выяснения причин и устранения последствий.
+<p>Основные функциональные характеристики AQA соответствуют требованиям к современным средствам автоматизированного тестирования. Система обеспечивает:
+<ul><li>запись и воспроизведение всех действий пользователя при взаимодействии с приложением;
+<li>запись и восстановление общего контекста, в котором выполняется тест, включая базу данных и все виды настроек;
+<li>формирование скриптов тестов на языке высокого уровня, с возможностью последующего редактирования пользователем;
+<li>возможность ввода контрольных точек для сравнения результатов работы программы, зафиксированных при формировании теста и при очередном прогоне;
+<li>возможность пакетного прогона ранее сформированных тестов или их структурных частей (сегментов) по специально сформированному плану - такие планы могут использоваться для комплексного тестирования;
+<li>регистрацию времени выполнения тестов для определения быстродействия системы;
+<li>автоматическую генерацию отчетов о прохождении тестов;
+<li>архивирование тестов и всей сопутствующей информации, необходимой для их выполнения.</ul>
+<p>Ответ на второй вопрос выглядит так - с помощью AQA, помимо нагрузочного тестирования, успешно решаются перечисленные ниже задачи.
+<p><b>Параллельное тестирование системы на разных платформах.</b> Отлаженные планы 
+  тестирования могут запускаться на любой из поддерживаемых аппаратно-программных 
+  платформ, что избавляет от необходимости многократно проделывать один и тот 
+  же колоссальный объем работы. При этом легко выявляются ошибки, специфические 
+  для конкретной платформы. 
+<p><b>Регрессионное тестирование и стабилизация надежности.</b> Специалисты указывают, 
+  что каждое исправление ошибки может с вероятностью до 50% породить новую ошибку. 
+  Самые трудноуловимые ошибки - те, что появляются в уже многократно проверенных 
+  компонентах. Автоматизированное тестирование после модификации кода позволяет 
+  обнаружить эти ошибки там, где испытатель с большой вероятностью мог бы их пропустить. 
+  Таким образом, надежность уже отлаженных и проверенных компонентов системы находится 
+  под постоянным контролем и не ухудшается при изменении других компонентов. 
+<p>Эта возможность особенно важна при выпуске релизов. Никакая команда испытателей не может вручную пройти хотя бы типовые бизнес-процессы и гарантировать полное сохранение работоспособности, поэтому основной объем проверки функциональности возлагается на систему AQA. Новые и модифицированные функции можно проверить только вручную, однако при этом ведется запись сценариев для их автоматизированного тестирования в дальнейшем.
+<p>Кроме того, AQA успешно используется для контроля полноты сборки, для стрессового тестирования, при локальном тестировании разработчиками, а также при пусконаладочных работах на площадке заказчика. Во всех случаях достигается значительная экономия ресурсов и повышается качество тестирования, так как система тестирует программный продукт, не требуя участия человека и ничего не пропуская.
+<h3>&quot;Проблемы и решения&quot; </h3>
+<p>В 1995 г. в &quot;Галактике&quot; была создана распределенная система регистрации проблем &quot;Проблемы и решения&quot; (ПИР), ориентированная на задачи организации взаимодействия и обеспечения качества в ходе разработки и сопровождения всех программных продуктов (рис. 4).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2003/Galaktik/ris4.gif" alt=Fig.4></td></tr>
+<tr><td valign="bottom">Рис. 4. Схема обработки проблем в ПИР.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Этот продукт класса bug-tracking system - один из ключевых элементов корпоративной технологии разработки и системы управления качеством. С его помощью выполняются следующие основные операции:
+<ul><li>регистрация и классификация проблем, возникших при разработке и эксплуатации программных продуктов;
+<li>отслеживание всех стадий жизненного цикла проблем от регистрации до решения, контроль за соблюдением регламента обработки;
+<li>учет предложений и формирование на их основе планов разработки новых версий;
+<li>автоматизированное формирование сведений о новых свойствах ПО и оперативное информирование о них клиентов;
+<li>формирование статистических отчетов по контрольным показателям для оценки состояния всех продуктов корпорации (разрабатываемых и сопровождаемых).</ul>
+<p>Традиционно с помощью ПИР проводилась отработка новых технических и технологических решений, причем интенсивная эксплуатация системы несколькими сотнями сотрудников представляет собой эффективный вариант бета-тестирования. В настоящее время система используется во всех восьми основных офисах корпорации. Механизм репликации данных (интервалы от 1 до 2 ч) гарантирует, что проблема, зарегистрированная утром в Иркутске, может к обеду уже быть обработана в Минске, а к вечеру проверенное решение в виде файла с исправлением будет отправлено по назначению.
+<p>В ходе решения проблемы взаимодействуют автор, ответственный разработчик и тестировщик, зачастую находящиеся в разных городах. При необходимости для уточнения сложных вопросов можно подключить другие службы, например, аналитические подразделения. Встроенные средства контроля регламента не дадут забыть о проблеме - при нарушении установленных сроков (например, для ответа на вопрос - до двух дней), виновнику, а также его руководителю будет послано соответствующее уведомление.
+<p>С прошлого года &quot;Галактика&quot; успешно использует новый вариант системы - Web-ПИР, разработанный в ходе выполнения проекта &quot;Галантис&quot; (создание продукта нового поколения на базе архитектуры .NET). Он не требует развертывания на каждой площадке: система, установленная в Москве, доступна через Интернет в любой точке СНГ. В частности, эту возможность первыми оценили сотрудники подразделений, ведущих пусконаладочные работы на объектах клиентов.
+<h3>Тестирование в техническом центре Intel </h3>
+<p>Сегодня одно из основных направлений работы над системой - завершение разработки версии 8.0 системы &quot;Галактика&quot; (параллельно с уже упомянутым продуктом &quot;Галантис&quot;). Его основная особенность - развитие в первую очередь общесистемных (нефункциональных) свойств продукта, в частности, полная реализация трехуровневой архитектуры, завершение перехода к объектным технологиям, реализация компонентной модели с поддержкой независимой разработки и сопровождения компонентов, реализация тонкого клиента.
+<p>Новые архитектурные решения потребовали новых, более совершенных методик тестирования. В начале 2003 г. основные элементы &quot;Галактики&quot; 8.0 были протестированы на стендах московского центра службы решений. Основной целью исследования был анализ работы ERP-системы на многопроцессорных конфигурациях, а также на новейших процессорах Intel с использованием технологии параллельных вычислений Hyper-Threading. Результаты тестирования приведены на рис. 5 (1P4 - однопроцессорный сервер приложений на Pentium 4 2,2 ГГц; 2P4 - двухпроцессорный сервер приложений на Pentium 4 2,2 ГГц; 2P4HT - двухпроцессорный сервер на Pentium 4 2.2 ГГц с технологией Hyper-Threading; 4P3 - четырехпроцессорный сервер на Pentium III 700 МГц; сервер БД во всех случаях один и тот же, его максимальная загрузка не превышала 15%).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No9_2003/Galaktik/ris5.gif" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Результаты тестирования системы &quot;Галактика&quot; 8.0 в техническом центре Intel.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>По результатам тестирования был получен главный качественный вывод - в основу новой архитектуры заложены правильные проектные решения, которые позволят клиентам в полной мере использовать преимущества современных вычислительных средств.
+<p>Кроме того, внимание заказчиков обращается на следующие факты: во-первых, многопроцессорная 
+  техника дает преимущества в производительности (при равной тактовой частоте). 
+  Во-вторых, технология Hyper-Threading увеличивает производительность системы 
+  примерно на 15%. 
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td bgcolor="#CCFFFF">
+      <h3>Проектирование, кодирование, тестирование, отладка… </h3>
+      <p>Скорее всего, историю современных промышленных технологий разработки 
+        ПО следует отсчитывать со второй половины 60-х годов прошлого столетия. 
+        Необходимость в создании (и научном обосновании!) таких технологий была 
+        вызвана резким повышением сложности программных систем, и переломным моментом 
+        здесь стал грандиозный проект IBM OS/360, стартовавший в начале 1960-х. 
+      <p>Именно тогда были выделены основные этапы разработки: проектирование 
+        - кодирование - тестирование - отладка (правда, за ними еще следует сопровождение, 
+        модификация...). Тогда же была дана примерная оценка их трудоемкости: 
+        25% - 25% - 25% - 25%. С тех пор прошло почти 40 лет, сложность проектов 
+        неимоверно выросла, как и качество инструментария, но в целом соотношение 
+        трудозатрат осталось примерно на том же уровне (нужно иметь в виду, что 
+        трудоемкость и сроки этапов - это не всегда равнозначные величины). В 
+        этой связи стоит вспомнить, что формулировка и обоснование идеологии структурного 
+        программирования, которая лежит в основе и сегодняшних методов разработки 
+        (в том числе объектно-ориентированного), была вызвана необходимостью снижения 
+        затрат - в первую очередь на тестирование ПО. Именно под этим углом зрения 
+        рассматривал проблему главный теоретик структурного программирования Э. 
+        Дейкстра (&quot;Заметки по структурному программированию&quot;, 1972), который показал, 
+        что при росте сложности проектов рост затрат на тестирование без соответствующих 
+        методик будет существенно опережать трудоемкость проектирования и кодирования. 
+      <p>Уже в те далекие времена появилась специализация среди разработчиков 
+        ПО (проектировщик, кодировщик, тестер), и все же довольно часто один человек 
+        выступал одновременно во всех амплуа. Прогресс технологий неизменно ведет 
+        к повышению уровня разделения труда, и сегодня на каждом этапе работают 
+        отдельные группы профессионалов. Но, согласно диалектическому закону развития 
+        по спирали, сегодня все актуальнее становится подход к разработке как 
+        к единому взаимосвязанному процессу. Это легко увидеть на примере роста 
+        интереса к системам ALM (Application Lifecycle Management - управление 
+        жизненным циклом приложений). 
+      <p>Ситуация тут представляется вполне естественной. Нужно проектировать 
+        системы, имея в виду не только получение решения с заданными параметрами, 
+        но и снижение издержек на его тестирование, отладку и сопровождение. Кодировать 
+        нужно так, чтобы не просто получить работоспособную программу, но и предусмотреть 
+        возможности ее модернизации. Невозможно построить оптимальную схему тестирования 
+        приложения без знания его архитектуры и заложенных в него алгоритмов (не 
+        говоря уже о случаях, когда работоспособность программы невозможно оценить 
+        путем сравнения с заранее известными результатами). Проблемы, обнаруженные 
+        в ходе тестирования и отладки, могут стать основанием для перепроектирования 
+        или даже для коррекции технического задания. 
+      <p>Хотелось бы обратить внимание на нюансы в определении понятий &quot;отладка&quot; 
+        и &quot;тестирование&quot;. В широком смысле отладка означает процесс доведения 
+        написанного приложения до работоспособного состояния (соответствия сформулированным 
+        ранее техническим требованиям) - упрощенно говоря, устранение ошибок. 
+        Однако в этой работе есть два качественно разных вида деятельности: обнаружение 
+        ошибки (тестирование) и поиск причины ошибки и ее устранение (отладка 
+        в узком смысле слова). Первую задачу может выполнять тестировщик, вторую 
+        - только разработчик. Как видим, круг опять замкнулся. 
+      <p>В заключение вспомним вывод, впервые сформулированный профессором Дейкстрой 
+        более 30 лет назад: &quot;Тестирование программ может послужить доказательством 
+        наличия ошибок, но никогда не докажет их отсутствия&quot;. Отсюда вытекает 
+        и другая максима: &quot;Каждая последняя найденная в программе ошибка на самом 
+        деле предпоследняя&quot;. 
+    </td>
+  </tr>
+</table>
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6650.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Надежность и производительность ПО: опыт &amp;quot;Галактики&amp;quot;
+</a><br><a href="detail.php@ID=6650.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Андрей Колесов
+По мере увеличения сложности программных средств и их роли в обеспечении жизнедеятельности предприятий резко возрастают и требования&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6650.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6650&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0b153ab4b10a45c14c9b8c23264859cb'><img src='../bitrix/tools/captcha.php@captcha_code=0b153ab4b10a45c14c9b8c23264859cb' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

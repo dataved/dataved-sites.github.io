@@ -1,0 +1,484 @@
+<HTML>
+<HEAD>
+<title>Эффективное хранение данных: решения IBM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Новые решения IBM, ориентированные на заказчиков любого масштаба &mdash; от малого и среднего бизнеса до крупных предприятий, &mdash; обеспечат экономию затрат, интегрированную защиту данных и улучшенные возможности их архивирования в ходе формирования" />
+<meta name="description" content="Новые решения IBM, ориентированные на заказчиков любого масштаба &mdash; от малого и среднего бизнеса до крупных предприятий, &mdash; обеспечат экономию затрат, интегрированную защиту данных и улучшенные возможности их архивирования в ходе формирования" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082082','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm13206' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=13206&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm13206"].SHOW_IMAGE.value="N"; document.forms["PrintForm13206"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm13206"].SHOW_IMAGE.value="Y"; document.forms["PrintForm13206"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(13206);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=13206.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=13206.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(13206);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><br /></p><a href='../numbers/index.php@ID=13166.html'>№11 (120), ноябрь 2008</a><h1>Эффективное хранение данных: решения IBM</h1>Автор: Андрей Борзенко<br />14.11.2008<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=13206&amp;PICTURE_ID=13202.html'><IMG src='../upload/iblock/df4/9-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Унифицированная система хранения данных IBM System Storage N3300.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=13206&amp;PICTURE_ID=13203.html'><IMG src='../upload/iblock/11f/10-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Ленточный накопитель IBM System Storage TS2240 форм-фактора «половинной высоты».</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=13206&amp;PICTURE_ID=13204.html'><IMG src='../upload/iblock/699/11-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Платформа IBM System Storage SAN768B с поддержкой технологии FCoE.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=13206&amp;PICTURE_ID=13205.html'><IMG src='../upload/iblock/7f4/12-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Система долговременного хранения данных IBM System Storage DR550 (модель DR2).</b></TD></TR></TABLE><DIV class='article-text'>
+<p><em>Новые решения IBM, ориентированные на заказчиков любого масштаба &mdash; от малого и среднего бизнеса до крупных предприятий, &mdash; обеспечат экономию затрат, интегрированную защиту данных и улучшенные возможности их архивирования в ходе формирования инфраструктуры, реализующей концепцию Information On Demand.</em> </p>
+ 
+<p>В современном бизнесе клиенты, сотрудники, поставщики и бизнес-партнеры рассчитывают на то, что в любой момент и из любого места они смогут получить доступ к необходимой информации. В то же время практически любой компании приходится уделять все больше внимания таким вопросам, как конфиденциальность клиентской информации, безопасность данных и соблюдение нормативных требований. Чтобы гарантировать бесперебойное функционирование компании и сохранить ее конкурентоспособность, необходима комплексная стратегия, нацеленная на три основных аспекта непрерывности бизнеса: высокую готовность, быстрое аварийное восстановление и непрерывность управления. Семейство решений IBM TotalStorage помогает защитить важнейшие бизнес-активы и соотнести расходы на восстановление данных с допустимым ущербом для бизнеса и ценностью информации. </p>
+ 
+<p>Кроме того, корпорация IBM (<a href="http://www.ibm.com" target="_blank">www.ibm.com</a>) предлагает решения для упрощения ИТ-инфраструктуры &mdash; оно может стать ключевым шагом к высвобождению ресурсов, необходимых для внедрения операционной модели &laquo;бизнеса по требованию&raquo;. Даже для самой лучшей организации сложность инфраструктуры может оказаться препятствием для оперативного реагирования на постоянно меняющиеся требования рынка и клиентов. Присущая типичным ИТ-инфраструктурам сложность может затормозить движение бизнеса к поставленным целям, сделав решение новых задач чрезмерно трудным или длительным. Решения IBM TotalStorage для упрощения инфраструктуры призваны повысить эффективность, снизить совокупную стоимость владения и сократить число дорогостоящих и отнимающих время ошибок при одновременном уменьшении затрат времени и средств на управление данными. Решения IBM для упрощения инфраструктуры сконцентрированы на трех ключевых областях: </p>
+ 
+<ul> 
+  <li>физическая консолидация устройств хранения данных; </li>
+ 
+  <li>виртуальная консолидация устройств хранения; </li>
+ 
+  <li>автоматизированное управление данными. </li>
+ </ul>
+ 
+<h2>Системы хранения начального уровня </h2>
+ 
+<p>Малый и средний бизнес сегодня все чаще сталкивается с проблемами, характерными для крупных предприятий, на которых обрушивается массированный поток данных. Компании SMB тоже имеют дело с растущим объемом комбинированных документов, непрерывной лавиной сообщений электронной почты, новыми приложениями с интенсивной обработкой данных, а также с ужесточающимися требованиями регулятивных органов, которые необходимо соблюдать. Надежный и недорогой дисковый массив начального уровня IBM System Storage DS3300 с интегрированным ПО для управления призван обеспечить компаниям из сектора SMB простое и доступное по цене решение, удовлетворяющее их нужды в хранении данных. </p>
+ 
+<p>Модель DS3300 &mdash; это новейшая система в линейке IBM System Storage DS3000, рассчитанная на потребности широкого спектра пользователей в консолидации ресурсов хранения. Она предназначена для создания простых решений на базе сети хранения данных IP SAN для заказчиков из сектора SMB, которые ищут альтернативу сетям SAN на основе технологии Fibre Channel. Система DS3300 поддерживает протокол iSCSI (Internet Small Computer Systems Interface) и интерфейс нового поколения SAS (Serial Attached SCSI) и управляется специальными программными средствами DS3000. Теперь переход от конфигураций подсистемы хранения с прямым подключением к серверу (Direct Attached Storage, DAS) к сетям хранения данных (Storage Area Network, SAN) на базе протокола IP не представляет сложности даже для самых маленьких компаний. Благодаря программным &laquo;мастерам установки&raquo;, упрощающим процедуры инсталляции и конфигурирования, развертывание решения на базе системы DS3300 не составит труда. Ресурсы хранения DS3300 могут совместно использоваться приложениями, серверами, клиентскими ПК, а также пользователями удаленных филиалов компаний, что повышает эффективность корпоративной ИТ-среды. </p>
+ 
+<p>Портфель продуктов IBM System Storage DS3000 сегодня предлагает полный и самый широкий в отрасли спектр дополнительных интерфейсов &mdash; SAS, Fibre Channel, а с выпуском модели DS3300 еще и интерфейс iSCSI. Эти три типа интерфейсов позволяют формировать гибкие и масштабируемые решения, способные обеспечить высокую производительность и надежность по доступной цене. Таким образом, любая организация может выбрать решение, наилучшим образом соответствующее ее специфическим требованиям. Емкость хранения системы DS3300, поддерживающей жесткие диски с интерфейсом SAS, можно расширять до 14,4 Тбайт с помощью внешних контейнеров IBM System Storage EXP3000 Expansion Unit, что позволяет масштабировать устройства хранения до 48 жестких дисков. Кроме того, заказчики могут выбрать опциональные функции расширенной защиты данных, такие как FlashCopy (для создания резервных копий томов данных по установленному расписанию) и VolumeCopy (для репликации полного логического диска). </p>
+ 
+<p>Наряду с DS3300 IBM предлагает модели серии Express, основанные на массиве с интерфейсом Fibre Channel, из продуктового семейства DS3000 (некоторые конфигурации DS3400). Эти модели позиционируются как решения Microsoft Simple SAN &mdash; такое квалификационное обозначение категории систем хранения данных предложено корпорацией Microsoft для реализаций сети SAN с упрощенной установкой и управлением. Системы DS3400 оснащаются коммутаторами IBM SAN16B-2 и адаптерами главной шины IBM Emulex 4 Gbps FC 1-port PCI-E Enterprise Host Bus Adapter (HBA) &mdash; однопортовыми контроллерами Fibre Channel с быстродействием 4 Гбит/с. В целях максимального упрощения процессов установки и управления сетью хранения данных IBM совместно с компанией Emulex, производителем адаптеров для сетей SAN, поставляет ПО EZPilot для конфигурирования компонентов DS3400 Express Kit. Это ПО помогает малым и средним компаниям выйти на новый уровень управления хранением данных. EZPilot связывает дисковый массив DS3400, коммутатор Brocade Switch и HBA-адаптеры Emulex в единую систему, значительно облегчая процесс развертывания и экономя рабочее время ИТ-персонала. Таким образом, модель DS3400 оптимально вписывается в продуктовую линейку DS3000, которую отличает простота в установке, управлении и использовании. </p>
+ 
+<p>Развитие дисковых систем хранения данных серии IBM System Storage DS3000 подразумевает поддержку недорогих жестких дисков с интерфейсом SATA (Serial Advanced Technology Attachment), а также поддержку серверных платформ IBM System p и IBM BladeCenter Power. Клиенты могут совмещать в своих комплектациях устройств DS3000 диски с интерфейсами SAS и SATA, в полной мере используя возросшую гибкость систем хранения этой серии с точки зрения цены и производительности. Благодаря модернизации семейства DS3000 повысилась масштабируемость систем хранения, расширилась поддержка дисковых устройств начального уровня и добавился ряд недорогих дополнительных функций. </p>
+ 
+<p>Новая модель IBM System Storage DS3300 DC power model 32T (с питанием постоянным током), сертифицированная на соответствие стандарту NEBS (Network Equipment Building System), спроектирована по принципу no single point of failure (отсутствие &laquo;единой точки отказа&raquo;, т. е. элемента, отказ которого приводит к отказу всей системы) для обеспечения высокой готовности, оснащена резервными компонентами с возможностью горячей замены в целях надежности и ориентирована на малые и средние компании телекоммуникационной отрасли. Новые функции системы позволяют таким компаниям предлагать своим клиентам широкий спектр телекоммуникационных услуг &mdash; от IP-телефонии до Интернет-телевидения (IPTV), видео по запросу (VoD), сервисов на базе технологий IP multimedia subsystems (IMS) и услуг обеспечения информационной безопасности. Система DS3300 DC легко интегрируется в существующие IP-сети без ограничений на расстояние посредством интерфейса iSCSI, в частности, в конструктиве с двойным iSCSI-контроллером и 12 отсеками для жестких дисков. Система оснащена источниками питания постоянного тока с двойным резервированием и может размещаться практически где угодно за пределами помещений корпоративного центра обработки данных, включая удаленные офисы. К DS3300 DC можно подключать до трех внешних модулей расширения EXP3000 для поддержки до 48 жестких дисков с интерфейсами SAS или SATA &mdash; в целях соответствия растущим требованиям к масштабируемости и наращивания ресурсов хранения. </p>
+ 
+<h2>Унифицированные системы хранения </h2>
+ 
+<p>Унифицированные решения для хранения данных объединяют функции первичных и вторичных хранилищ и обеспечивают заказчикам производительность корпоративного класса по цене систем начального уровня. В первую очередь они позиционируются для малого и среднего бизнеса. Системы серии IBM System Storage N3000 &mdash; N3300 и N3600 &mdash; специально спроектированы для решения задач централизации хранилищ в удаленных офисах и филиалах и повышения производительности и масштабируемости посредством консолидации фрагментированных по приложениям систем хранения в рамках единой инфраструктуры. Расширение серии IBM System Storage N3000 за счет новых моделей N3300 и N3600 &mdash; это очередное подтверждение внимания корпорации IBM к небольшим компаниям, которое, помимо прочего, предполагает расширенные инвестиции в образовательную экосистему, доступ к исследованиям отраслевых лидеров инноваций, услуги для упрощения развертывания и поддержка обширного семейства бизнес-партнеров, способных помочь клиентам из сектора SMB в любых вопросах повышения продуктивности и производительности. </p>
+ 
+<p>Директор IBM по маркетингу продуктов семейства IBM System Storage Чарли Эндрюс отмечает, что корпорация концентрирует свои усилия на предоставлении компаниям малого и среднего бизнеса экономически эффективных и простых решений корпоративного уровня. Продолжая развивать линейку продуктов серии N, она помогает клиентам из сектора SMB успешно решать проблемы в области хранения данных с помощью проверенных инновационных решений, которые повышают продуктивность и производительность, одновременно снижая издержки. Опираясь на свои системы, программные продукты и услуги для малого бизнеса и привлекая обширную экосистему бизнес-партнеров, IBM помогает заказчикам проектировать, развертывать и поддерживать решения, которые имеют огромное значение для малого и среднего бизнеса во всем мире. </p>
+ 
+<p>Новые системы поддерживают функции обеспечения высокой доступности данных, в том числе функции резервного копирования и восстановления, а также простые механизмы репликации и восстановления в аварийных ситуациях, на основе которых можно создавать легко развертываемые решения для зеркалирования данных, устойчивые к нарушениям работы глобальной сети. Единая, интегрированная архитектура обладает высокой степенью универсальности, поддерживая блочный и файловый ввод-вывод при работе с SAN-инфраструктурами на основе технологий Ethernet и Fibre Channel, а также жесткие диски с интерфейсом SAS. </p>
+ 
+<p>Продукты линейки N3000 совместимы со всем семейством унифицированных систем хранения данных серии N, в состав которого входит комплексный набор аппаратных и программных средств для самых разнообразных сред развертывания &mdash; в том числе с участием продуктов из линеек IBM DS3000 и DS4000. </p>
+ 
+<p>Максимальная физическая емкость системы N3300 первоначально составляла 24,6 Тбайт; система N3600 обеспечивала масштабирование физической емкости до 69 Тбайт благодаря поддержке до 104 жестких дисков. Последние усовершенствования систем N Series включают поддержку жестких дисков c интерфейсами SATA и SAS, что предоставляет больше гибкости в выборе решений. Ресурсы хранения модели N3300 можно теперь увеличить до 68 Тбайт, а модели N3600 &mdash; до 104 Тбайт, что позволит небольшим предприятиям масштабировать свои системы хранения по мере роста бизнеса. Кроме того, увеличен максимальный объем памяти хранения у моделей N5300 (с 168 до 336 Тбайт), N5600 (с 252 до 504 Тбайт), N7600 (с 420 до 840 Тбайт) и N7800 (с 504 до 1008 Тбайт). Для всех систем N series теперь доступно ПО SnapManager for Microsoft Office SharePoint Server, предлагающее компаниям любого масштаба полнофункциональное, не имеющее аналогов в отрасли решение для управления данными. </p>
+ 
+<p>Для своих бизнес-партнеров в Северной Америке корпорация внесла ряд усовершенствований в программу поддержки продаж продуктов IBM System Storage, включая новые стимулирующие инициативы и механизмы совместного маркетинга. С целью расширения продаж через своих бизнес-партнеров в США корпорация предоставляет им неограниченные ссуды и возможность пробной эксплуатации. </p>
+ 
+<h2>Инновации для небольших компаний </h2>
+ 
+<p>Компании малого и среднего масштаба на фоне быстро меняющегося экономического ландшафта и стремительного роста корпоративных информационных ресурсов стремятся сохранить для себя рациональный сбалансированный бюджет. Им нужны технологии, которые позволят оставаться конкурентоспособными без существенного увеличения затрат. IBM предлагает таким компаниям полный спектр продуктов, способствующих упрощению инфраструктуры и сокращению расходов, &mdash; от базовых систем резервного копирования и восстановления данных до решений для управления и архивирования документов с соблюдением соответствующих стандартов и нормативных требований. </p>
+ 
+<p>Усовершенствования дисковых систем хранения IBM коснулись, в частности, дисковых устройств средней ценовой категории &mdash; серии System Storage DS4000. Высокопроизводительные и высокомасштабируемые решения на базе этих систем, предназначенные для хранения критически важной информации, дополнены новыми программными функциями пакета Storage Manager Software (им комплектуются модели DS4800, DS4700 Express и DS4200 Express). В число этих расширений вошли следующие: </p>
+ 
+<ul> 
+  <li>поддержка массивов RAID 6 (для DS4700 Express и DS4200 Express) &mdash; обеспечивает повышенную готовность данных в периоды восстановления с жестких дисков; </li>
+ 
+  <li>поддержка логических томов размером более 2 Тбайт (для отдельных ОС); </li>
+ 
+  <li>большее число мгновенных копий диска или набора данных (посредством функции Flash Copy) для каждого дискового контроллера системы хранения; </li>
+ 
+  <li>увеличение числа зеркалированных пар жестких дисков удаленного дискового массива до 64 для моделей DS4700 и DS4200 и до 128 для DS4800 &mdash; улучшает восстановление данных при аварийных сбоях; </li>
+ 
+  <li>оптимизация использования ресурсов кэш-памяти &mdash; повышает производительность; </li>
+ 
+  <li>отдельный ключ регистрации лицензии на программные средства для различных комплектаций DS4800 Model 80 &mdash; позволяет наращивать производительность системы по мере необходимости; </li>
+ 
+  <li>поддержка до 128 логических дисковых разделов для моделей DS4700 Express и DS4200 Express и до 512 разделов для DS4800 &mdash; позволяет серверам и рабочим станциям с различными уровнями производительности и информационной защиты совместно использовать ресурсы хранения одной системы DS4000. </li>
+ 
+  <li>сервисное обслуживание мирового класса, сочетающее техническую поддержку, консультационные услуги и курсы обучения. </li>
+ </ul>
+ 
+<p>Системы серии DS4000 предоставляют реальные преимущества для бизнеса небольших и средних компаний, позволяя создавать масштабируемые решения для хранения корпоративных данных, способствующие экономии затрат благодаря низкому показателю совокупной стоимости владения, обеспечивающие защиту ИТ-инвестиций и содействующие тем самым росту бизнеса. </p>
+ 
+<h2>Ленточные системы хранения среднего ценового диапазона </h2>
+ 
+<p>Сегодня перед ИТ-администраторами стоит сложная задача &mdash; создать системы хранения, отвечающие разнородным требованиям к доступу и длительному хранению данных. Применение многоуровневых иерархических инфраструктур, объединяющих дисковые и ленточные решения со средствами виртуализации, позволяет успешно решить эту задачу. Это подтверждается популярностью ленточных систем IBM и решений для построения архивов, которые помогают клиентам корпорации преодолевать проблемы, связанные с совокупной стоимостью владения, энергопотреблением, сохранностью и безопасностью данных, соответствием нормативным требованиям и архивированием. </p>
+ 
+<p>IBM сегодня предлагает модернизированную модель ленточного накопителя (стримера) IBM System Storage TS2240 Tape Drive Express Model LTO 4 Half-High, представляющую собой высокопроизводительное, компактное и недорогое решение корпоративного уровня для хранения данных со встроенной функцией шифрования. Характеристики модели TS2240 таковы: базовая скорость передачи данных 120 Мбайт/с, 800 Гбайт ленточной памяти (расширяемой до 1,6 Тбайт при сжатии данных в соотношении 2:1), поддержка ленточных накопителей формата LTO предыдущих поколений, функция программно управляемого шифрования данных, возможность подключения к внешним системам по скоростному (до 3 Гбит/с) интерфейсу SAS. Система TS2240 оптимизирована для компаний малого и среднего бизнеса, которым при ограниченных ресурсах, немногочисленном штате ИТ-специалистов и небольших офисных помещениях требуются высокие уровни производительности, емкости хранения и информационной защиты. </p>
+ 
+<p>Стоит отметить также, что система TS2240 имеет самую высокую емкость хранения и производительность среди аналогичных моделей форм-фактора half-height (&laquo;половинной высоты&raquo;), представленных сегодня на рынке, предоставляя больше преимуществ для бизнеса. Для прикладных задач и ИТ-сред, требующих максимально высоких объемов памяти хранения, ленточный накопитель TS2240 полностью поддерживает технологические возможности спецификации LTO. Функция защиты данных, встроенная в систему TS2240, расширена по сравнению с моделями предыдущих поколений за счет опциональной (включаемой или отключаемой) возможности программно управляемого шифрования данных. </p>
+ 
+<p>В этом году IBM представила новейшее поколение LTO-накопителей на магнитной ленте форм-фактора half-height для моделей ленточных библиотек IBM System Storage TS3100 и TS3200 Tape Library Express, предназначенных для заказчиков с высокими требованиями к экономичности и компактности. Эти накопители оптимальны для задач резервного копирования, сохранения, архивирования и восстановления данных в ИТ-средах малых и средних компаний и обеспечивают высокий уровень безопасности с точки зрения потери или кражи физических картриджей. Обе модели, разработанные для открытых системных корпоративных сред среднего масштаба, имеют высокую производительность и емкость хранения. Стоит особо отметить, что IBM стала первой компанией в сегменте систем хранения данных, которая начала предлагать ленточные накопители Ultrium 4 Half-High SAS форм-фактора &laquo;половинной высоты&raquo; с автоматизированными функциями, увеличивающими производительность по сравнению с моделями предыдущего поколения. Клиенты из сектора SMB могут шифровать информацию и управлять данными с помощью программного инструментария IBM Encryption Key Manager, что устраняет необходимость в дополнительных системах. </p>
+ 
+<h2>Расширение портфеля услуг </h2>
+ 
+<p>Сегодня компании любого масштаба вынуждены повышать эффективность использования своих инфраструктур, чтобы достигать поставленных бизнес-целей при одновременном сокращении энергопотребления и финансовых затрат. Перед клиентами стоит обоюдоострая проблема: с одной стороны, потребности в цифровом хранении данных растут по экспоненциальному закону, а с другой &mdash; необходимо оптимизировать хранилища, сделав их более эффективными. </p>
+ 
+<p>В конце прошлого года было подписано соглашение о том, что компания NovusCG войдет в состав подразделения Storage and Data Services службы IBM Global Technology Services. Объединенные возможности этого подразделения и NovusCG помогут клиентам улучшить доступ к деловой информации и обеспечить соответствие законодательным требованиям и корпоративным политикам, а также повысить общую продуктивность ИТ-ресурсов. Корпорация интегрирует активы и проверенные методики NovusCG в области хранения данных с предложениями IBM для хранения информации и обслуживания данных, системами хранения и сопутствующими программными продуктами, получая в результате широкие возможности для содействия своим клиентам в сокращении расходов и адаптации применяемых сред хранения информации и обработки данных к специфике их деятельности. </p>
+ 
+<p>Приобретение NovusCG, которому предшествовала покупка подразделением IBM Storage and Data Services компании Storage Solutions, &mdash; еще один пример стратегии IBM по оказанию стандартизованных услуг, обеспечивающих клиентам существенный экономический эффект и повышение предсказуемости результатов их бизнеса. С приобретением NovusCG корпорация сможет использовать ее основанную на активах модель оказания услуг, а также ее проприетарные инструменты, формализованные методики и опыт работы с различными поставщиками. По мнению экспертов, объединение уникального подхода NovusCG к анализу и оценке данных с ведущим в отрасли портфелем продуктов IBM для хранения данных позволит эффективно помогать клиентам в решении множества проблем, связанных с хранением. </p>
+ 
+<p>Стоит отметить, что активы и методики NovusCG обеспечивают стандартизованный, воспроизводимый подход к оценке и оптимизации систем хранения в средах на основе продуктов различных поставщиков. Программное решение Storage Enterprise Resource Planner (SERP) NovusCG обеспечивает детальную картину использования ресурсов хранения на уровне направления бизнеса, позволяет быстро идентифицировать избыточные или дублирующиеся хранилища и повысить точность планирования расходов и ресурсов. На одну из своих методик компания подала патентную заявку, которая в настоящее время находится в стадии рассмотрения. </p>
+ 
+<p>NovusCG обслуживает множество различных клиентов, включая глобальные корпорации из списка Fortune 500 и компании среднего масштаба, из самых разных отраслей &mdash; от банковского сектора и финансов до государственных учреждений и организаций здравоохранения, розничной торговли и телекоммуникационной отрасли. В перспективе многие организации будут прибегать к услугам сторонних организаций для оптимизации и повышения эффективности своих хранилищ данных. В этой ситуации приобретение NovusCG укрепляет позиции IBM в области оказания клиентам подобных услуг. </p>
+ 
+<p>Напомним, что IBM сотрудничает с NovusCG в области оказания услуг с 2003 г. Компания имела статус премьер-партнера IBM, которая, в свою очередь, была глобальным стратегическим партнером NovusCG. Помимо IBM, в глобальную сеть бизнес-партнеров NovusCG входят компании Cisco Systems, Computer Associates, EDS, EMC, Hitachi Data Systems, HP, Oracle, Sun/StorageTek, Symantec, Unisys и другие. Технологии NovusCG служат ценным дополнением к основным дисковым и ленточным продуктам семейства IBM System Storage, использующимся в качестве ключевого элемента при организации и оптимизации многоуровневых хранилищ. Кроме того, решения NovusCG будут интегрированы с продуктами IBM Total Productivity Center, Tivoli Storage Manager, Tivoli Storage Process Manager и SAN Volume Controller, а также со всеми продуктами семейства IBM System Storage. </p>
+ 
+<h2>Виртуализация ресурсов хранения </h2>
+ 
+<p>Вот уже более 40 лет IBM предлагает своим клиентам технологии виртуализации. Решения IBM для виртуализации ресурсов хранения работают в ИТ-средах, построенных на различных платформах. Технология виртуализации ресурсов хранения данных &mdash; ключевой компонент таких стратегических инициатив IBM как Information on Demand (предоставление информации &laquo;по требованию&raquo;), Green Data Center (&laquo;экологически дружелюбные&raquo; центры обработки данных) и IT Optimization (оптимизация ИТ-инфраструктуры). </p>
+ 
+<p>Всего через 4 года со времени выпуска первого аппаратно-программного решения для виртуализации ресурсов хранения данных SAN Volume Controller (SVC) IBM перешагнула рубеж поставки в 10 тыс. решений, которые развернуты на более чем 3,5 тыс. предприятий и организаций по всему миру. 10-тысячное решение SVC IBM поставила своему клиенту Able Body Labor, небольшой компании из Флориды, которая использует его для улучшения ИТ-инфраструктуры, оптимизации ресурсов хранения и сокращения расходов на электроэнергию. </p>
+ 
+<p>В новой версии SVC 4.2.1 расширена функция создания резервных копий томов данных FlashCopy и значительно улучшена поддержка различных платформ, а также четырехкратно увеличен максимальный поддерживаемый объем ресурсов хранения &mdash; с 2 до 8 Пбайт (миллионов гигабайт). Цель усовершенствований &mdash; ускорение процесса репликации данных и распространение преимуществ технологии виртуализации ресурсов хранения на корпоративные ИТ-среды крупных предприятий. </p>
+ 
+<p>Технология SVC улучшает гибкость ИТ-инфраструктур за счет создания единого виртуального пула информационных ресурсов в масштабах предприятия, что позволяет ИТ-службам более оперативно реагировать на изменения потребностей бизнеса и управлять ресурсами с большей эффективностью. Благодаря внедрению технологии виртуализации ресурсов хранения данных повышается надежность ИТ-системы, достигается более высокий уровень готовности приложений, упрощается процесс миграции данных и оптимизируется использование корпоративных ресурсов. Перечисленные преимущества можно значительно преумножить, сочетая SVC с серверными функциональными компонентами виртуализации, такими как IBM System p LPAR и VMware ESX Server. Технология IBM для виртуализации ресурсов хранения данных помогает устранить многолетнее доминирование закрытых фирменных платформ таких поставщиков как EMC, HP и Hitachi, которое ограничивало для заказчиков выбор решений. Используя систему IBM SVC, клиенты могут выбрать любую комбинацию поддерживаемых устройств хранения от EMC, IBM, HP, Hitachi или других поставщиков, развернуть и виртуализовать эти ресурсы и управлять ими значительно проще и гибче. </p>
+ 
+<h2>Упрощение инфраструктуры при максимальном использовании ресурсов </h2>
+ 
+<p>Как постоянно заявляют руководители корпорации IBM, ее цель состоит в поставке лучших технологий и сервисов для устройств хранения данных, серверов, ПО и услуг, удовлетворяющих современным требованиям и способных решить проблемы, с которыми сталкиваются сегодня пользователи ИТ-систем. В начале этого года IBM анонсировала новые предложения и усовершенствования целого ряда существующих продуктов в рамках своего продуктового портфеля дисковых и ленточных устройств хранения данных. Новые решения, ориентированные на заказчиков любого масштаба &mdash; от малого и среднего бизнеса до крупных предприятий, &mdash; позволят внедрять более эффективную многоуровневую инфраструктуру хранения и достичь более высоких показателей экономии затрат, обеспечить интегрированную защиту данных и расширенные возможности их архивирования в целях соблюдения нормативных требований регулятивных органов и формирования инфраструктуры, реализующей концепцию Information On Demand. </p>
+ <blockquote> 
+  <h3>Достижения технологии IBM SAN Volume Controller </h3>
+ 
+  <ol> 
+    <li>По данным независимой отраслевой организации Комитета по оценке производительности систем хранения данных (Storage Performance Council), на сегодняшний день IBM SAN Volume Controller &mdash; самое быстродействующее в мире решение для виртуализации ресурсов хранения данных, скорости функционирования которого более чем на 75% превышают показатели предшественника. </li>
+   
+    <li>Согласно данным исследования, проведенного аналитической компанией IDC, в прошлом году IBM достигла показателя ежегодного роста доходов в рыночном сегменте ПО для систем хранения данных, выраженного двузначным числом. Доходы IBM в этом сегменте росли быстрее в процентном отношении и превысили по абсолютной величине аналогичные показатели других поставщиков. Таким образом, подразделение IBM Storage Software в течение 10 кварталов подряд демонстрировало темпы роста доходов от продаж ПО для систем хранения данных, равные среднерыночному показателю или превышающие его. </li>
+   
+    <li>IBM SVC &mdash; одно из технологических решений, развиваемых и продвигаемых в рамках экологической инициативы Project Big Green, запущенной IBM в мае 2007 г. Программа Project Big Green нацелена на использование IBM и ее клиентами новых и существующих энергетически эффективных продуктов и сервисов, с тем чтобы кардинально сократить энергопотребление в центрах обработки данных. </li>
+   
+    <li>Опрос пользователей IBM SVC, проведенный аналитической компанией Forrester Consulting, показал, что технология виртуализации SVC способна улучшить показатель использования ресурсов хранения почти на 30% и сократить аппаратно-программные ресурсы хранения почти на 20%. </li>
+   
+    <li>Решение IBM для виртуализации ресурсов хранения данных сертифицировано для использования с инфраструктурой VMware. </li>
+   </ol>
+ </blockquote> 
+<h3>Системы N series для крупных предприятий </h3>
+ 
+<p>IBM представила следующее поколение систем N7000 series &mdash; как устройств хранения данных, так и шлюзов (сетевых решений для поддержания гетерогенного доступа к массивам хранения). Новые модели N7700 и N7900, отличающиеся улучшенной масштабируемостью, ориентированы на применение в больших центрах обработки данных и, кроме того, могут использоваться для консолидации ресурсов хранения на средних и крупных предприятиях. Новые системы обеспечивают уровень масштабируемости вплоть до 1,176 Тбайт для задач центров обработки данных. Системы N7000 series позволяют также решать задачи консолидации сетей хранения SAN и NAS в единую систему для поддержки соблюдения нормативных требований регулятивных органов к сохранению и архивированию данных на одной платформе. </p>
+ 
+<h3>Управление сетевыми системами хранения </h3>
+ 
+<p>IBM System Storage SAN768B предоставляет компаниям платформу для поэтапного роста инфраструктуры хранения с использованием технологий высокопроизводительных вычислений и перспективной технологии Fibre Channel over Ethernet (FCoE &mdash; волоконно-оптический канал поверх Ethernet, интерфейс и архитектура распределенного хранения данных с применением высокоскоростных оптических каналов). Это первая управляющая система (так называемая система director-class), поддерживающая скорость передачи данных 8 Гбит/с в каналах Fibre Channel (FC), что в два раза превышает аналогичный показатель систем предыдущего поколения. SAN768B &mdash; первый в отрасли продукт, предназначенный для поддержки реальной функциональной совместимости между подсистемами управления сетевыми коммутаторами b-type (от компании Brocade) и m-type (от компании McDATA) в глобальной корпоративной инфраструктуре сетей хранения данных FC SAN со скоростями передачи данных 8 и 10 Гбит/с. Для компаний, применяющих технологию m-type, и других крупных корпоративных клиентов, которые используют мэйнфреймы с каналами обмена данными FICON (позволяющими подключаться к высокопроизводительным системам хранения данных по интерфейсу Fibre Channel), эта функциональная совместимость создает основу для роста существующих у них инфраструктур сетей хранения данных на базе решений FICON. Анонсированная технологическая платформа позволяет уменьшить сложность инфраструктуры, снизить риски и экономить на энергопотреблении, обеспечивая при этом возможности масштабирования вплоть до 768 портов в рамках двух сетевых доменов. </p>
+ 
+<h3>Усовершенствованные системы архивирования </h3>
+ 
+<p>Подразделение IBM System Storage продолжает инвестировать в развитие технологий сохранения информации. Одним из результатов этой стратегии стал выпуск следующего поколения (версии 4.5) решения для долговременного сохранения данных IBM System Storage DR550. Используя ПО IBM System Storage Archive Manager (SSAM) для сохранения данных на базе политик, система DR550 обеспечивает автоматическое и прозрачное перемещение архивированных данных между иерархическими уровнями (ярусами) постоянного хранения &mdash; в целях сокращения расходов без ущерба целостности и конфиденциальности данных. Эта система теперь доступна в виде усовершенствованного с точки зрения простоты установки и эксплуатации решения, использующего в качестве унифицированной системы управления ПО IBM Director. Заказчики, которые ищут эффективные решения для долговременного сохранения и защиты информации, критически важной для бизнеса, а также для управления ростом корпоративных информационных массивов и соблюдения нормативных требований регулятивных органов, могут выбирать между двумя новыми моделями DR550 v4.5 &mdash; DR1 и DR2. Модель DR1, конструктивно представляющая собой аппаратную стойку высотой 25U, предварительно интегрирована и идеально подходит для заказчиков из сектора среднего бизнеса. Модель DR2, ориентированная на крупные предприятия, монтируется в более высокую стойку 36U и предлагается в одно- или двухузловых конфигурациях, поддерживая более высокие уровни масштабируемости и готовности. </p>
+ 
+<h2>Устранение дублирования информации </h2>
+ 
+<p>Исследования рынка свидетельствуют о том, что организации все более активно инвестируют в решения для устранения дубликатов данных с целью интеграции этого ПО со своими службами электронной почты, базами данных, системами хранения информации и критически важными бизнес-приложениями. Согласно результатам исследования 152 предприятий из рейтинга Fortune 1000, проведенного аналитической компанией TheInfoPro, 56% респондентов в 2007 г. вложили больше средств в ПО категории data de-duplication по сравнению с 2006 г., а в 2008 г. ИТ-расходы компаний по этой статье, как ожидается, продолжат свой рост. </p>
+ 
+<p>В течение многих лет IBM поставляет клиентам решения для управления информационной инфраструктурой, которые обеспечивают высокую готовность информации, долговременное сохранение и надежную защиту данных. Недавно корпорация объявила о приобретении Diligent Technologies, частной компании закрытого типа, которая занимается разработкой инновационной технологии устранения дубликатов данных (data de-duplication). Штаб-квартира Diligent Technologies находится в Фремингхэме (шт. Массачусетс, США), а офисы исследований и разработок &mdash; в Тель-Авиве (Израиль). После завершения сделки технологии и персонал Diligent будут включены в состав бизнес-подразделения IBM System Storage, которое входит в группу IBM Systems and Technology Group. </p>
+ 
+<p>Diligent Technologies разрабатывает специализированное ПО для устранения дублирования данных, которое интегрируется с инфраструктурой серверов и систем хранения, помогая организациям оптимизировать физические ресурсы хранения информации и существенно сократить затраты на корпоративные центры обработки данных. Средние и крупные предприятия сталкиваются сегодня с серьезной проблемой усложнения инфраструктуры и снижения эффективности управления дата-центрами на фоне лавинообразного роста объемов хранимой корпоративной информации, включая новые данные о транзакциях, сообщения электронной почты и резервные копии электронных документов. Предотвращение дублирования информации &mdash; это недавно возникшая программная технология, в которую сегодня инвестируют многие организации. Новаторское ПО Diligent предлагает единое интегрированное решение для поддержки защиты, архивирования и долговременного сохранения данных с гарантией их целостности. </p>
+ 
+<p>Приобретение Diligent становится важной частью созданной IBM новой модели корпоративного центра обработки данных (New Enterprise Data Center model), которая призвана помочь клиентам в повышении эффективности ИТ и быстром внедрении новых ИТ-сервисов для поддержки будущего роста бизнеса. Эта модель основывается на лучших методиках виртуализации ресурсов хранения, &laquo;экологически дружелюбных&raquo; ИТ и передовых концепциях высокопроизводительных распределенных вычислений, таких как сloud сomputing. Приобретение Diligent Technologies полностью отвечает корпоративной стратегии IBM по созданию функционально и экономически эффективных центров обработки данных. </p>
+ 
+<p>Технология Diligent дополнит портфель решений IBM для хранения информации, в частности, функционально расширив приложения для резервного копирования и восстановления данных (Tivoli Storage Manager и т. д.). Будучи объединены с продуктами корпорации, технологии и решения data de-duplication от Diligent обеспечат средствам предотвращения дублирования информации максимальную производительность, масштабируемость и сохранение целостности данных, которые требуются корпоративным клиентам. Объединенные решения также сократят продолжительность резервного копирования и восстановления данных, обеспечат экономически эффективный перенос резервных копий и архивов данных с первичных устройств хранения на удаленные системы аварийного восстановления информации, уменьшат объем физических ресурсов хранения данных, что сократит расходы и снизит энергопотребление. </p>
+ 
+<p>Diligent Technologies &mdash; это третья приобретенная IBM компания, специализирующаяся на разработке технологий хранения данных. В январе 2008 г. IBM, стремясь реализовать новые бизнес-возможности в условиях бурного развития приложений Web 2.0 и технологий передачи и хранения цифрового контента, объявила о приобретении израильской компании XIV. Ранее корпорация сообщила о своих намерениях приобрести компанию FilesX, ведущего поставщика ПО для защиты корпоративных данных и управления архивами, которое предназначено для применения в ответственных бизнес-приложениях и удаленных офисах. Будучи отраслевым лидером в поставке услуг хранения данных, IBM продолжает расширять свой портфель предложений, предоставляя заказчикам комплексные стратегические решения, включающие серверное оборудование, программные средства и профессиональные услуги, в том числе в области исследований и разработок. </p>
+ 
+<h2>Практика хранения данных </h2>
+ 
+<h3>Производительность, масштабируемость и надежность </h3>
+ 
+<p>Федеральный кредитный союз SSFCU (Security Service Federal Credit Union, <a href="http://www.ssfcu.org" target="_blank">www.ssfcu.org</a>) в США внедрил новое решение IBM для архивирования и длительного хранения данных с целью коренным образом улучшить производительность, масштабируемость и надежность инфраструктуры хранения данных, а также расширить возможности архивирования и восстановления из архивов информации для членов союза, обладающих доступом к технологической системе. Федеральный кредитный союз, основанный в 1956 г., обслуживает свыше 600 тыс. своих членов через 42 местных отделения, расположенных по всей территории штатов Техас и Колорадо. Ему требовалась надежная платформа хранения данных для архивирования соглашений на получение кредита, договоров об открытии и обслуживании счета, чеков и других финансовых документов. Быстрый рост числа членов кредитного союза, однако, опережал возможности существующей системы хранения, архивирования и восстановления данных. Как следствие, пользователи не всегда могли получить доступ к цифровым копиям своих финансовых документов, записей и банковской информации тогда, когда им было нужно, &mdash; приходилось долго, порой целый день, дожидаться запрошенных данных. Кроме того, система имела ограниченную масштабируемость, часто возникали вынужденные простои для проведения внеплановой профилактики оборудования из-за интенсивной эксплуатации. </p>
+ 
+<p>Кредитный союз SSFCU обратился к компании Mainline Information Systems, бизнес-партнеру IBM со статусом Premier, за помощью в поиске новых эффективных решений для архивирования и восстановления данных. Изучив потребности SSFCU в долговременном хранении данных и соответствующие требования к информационной безопасности, Mainline предложила систему хранения IBM System Storage DR550. Эта система, на основе которой можно формировать масштабируемые, безопасные и экономически выгодные решения для долговременного хранения данных, представляет собой платформу с управлением на базе политик, обслуживающая данные как нестираемый и неперезаписываемый информационный массив в течение всего их жизненного цикла, ограниченного соответствующей политикой. В результате внедрения решения кредитный союз SSFCU достиг своей цели &mdash; улучшения надежности и управляемости инфраструктуры хранения данных. Пользователям уже не приходится подолгу ждать восстановления из архива запрошенных данных из-за медленной работы перегруженной системы или частых ремонтнопрофилактических работ на оборудовании. </p>
+ 
+<h3>Хранение и управление цифровыми изображениями </h3>
+ 
+<p>Компания Iron Mountain (<a href="http://www.ironmountain.com" target="_blank">www.ironmountain.com</a>) выбрала ПО IBM для своего нового центра цифровых записей Digital Record Center, который предоставляет компаниям и государственным учреждениям ресурсы хранения и быстрый доступ к отсканированным изображениям, документам в формате PDF и другим файлам. Компания Iron Mountain предлагает комплексные услуги хранения и защиты данных как в бумажном, так и в электронном виде; она использует ПО IBM Content Manager OnDemand, IBM Web Interface for Content Management (IBM WEBi), сервер баз данных IBM DB2 и сервер приложений IBM WebSphere Application Server для управления информацией своего центра цифровых записей. </p>
+ 
+<p>Digital Record Center будет применять ПО IBM для организации хранения и управления информацией в сочетании со своими услугами Storage-as-a-Service (хранение информации как сервис). В центре формируется безопасное масштабируемое хранилище электронной информации клиентов, которую они наиболее часто запрашивают и используют, а также платный абонентский сервис, освобождающий клиентов от расходов и рисков по созданию и обслуживанию собственного корпоративного решения. Объединив эту новую систему с возможностями Iron Mountain по управлению бумажными документами и изображениями, компания сможет предложить своим клиентам исчерпывающее сквозное решение, поскольку будет обеспечено управление бумажными документами, преобразование их в цифровую форму, помещение в обслуживаемый архив и предоставление к ним оперативного электронного доступа по соответствующим запросам. </p>
+ 
+<p>ПО IBM, которое компания Iron Mountain выбрала для преобразования своего бизнеса и поставки информации в требуемом контексте, включает целый ряд современных технологий управления данными и контентом, в том числе высокоэффективное решение корпоративного уровня IBM Content Manager OnDemand, с широкими возможностями для хранения больших массивов контента и подготовки необходимой отчетности. IBM Content Manager OnDemand обеспечивает упрощенный автоматический доступ и предоставление отдельных отчетов и документов авторизованным пользователям, поддерживает функции выставления электронных счетов и учета платежей, а также обеспечивает клиентам компании доступ в режиме самообслуживания к отчетам, заявкам и счетам. Iron Mountain также с успехом использует IBM WEBi &mdash; современный, простой и удобный пользовательский интерактивный интерфейс к приложениям IBM Content Manager и Content Manager OnDemand, который основан на открытых стандартах и поддерживает технологии Web 2.0 и AJAX. Интерфейс IBM WEBi, который легко сконфигурировать в соответствии с требованиями клиентов и быстро развернуть на корпоративных пользовательских ПК, предоставляет сотрудникам компаний широкие возможности для поиска, просмотра и редактирования документов и/или контента самого разнообразного типа. </p>
+ 
+<p>IBM DB2 также предоставляет таким компаниям, как Iron Mountain, возможности инновационного сервера баз данных DB2 Viper. Многочисленные новаторские технологии, включая Deep Compression и pureXML, делают этот продукт оптимальным сервером баз данных, который обеспечивает экономию затрат и поддерживает приложения Web 2.0. Компании любого масштаба могут положиться на ставшую легендарной способность DB2 &mdash; многократно проверенную на практике &mdash; к обслуживанию критически важных бизнес-приложений. Сервер приложений IBM WebSphere Application Server &mdash; это основа программной платформы IBM WebSphere и ключевой &laquo;строительный блок&raquo; для формирования сервис-ориентированной архитектуры (SOA). Поддерживая приложения J2EE (Java 2 Enterprise Edition) и Web-сервисы, IBM WebSphere Application Server V6.1 предоставляет высокопроизводительный механизм обработки транзакций, который помогает клиентам создавать, выполнять, интегрировать и управлять динамическими приложениями. </p>
+ <blockquote> 
+  <h3>Инновационные конструкторские и инженерные разработки </h3>
+ 
+  <p>Жюри форума iF (International Forum) Design присудило IBM четыре награды Design Innovation Award за выдающиеся продукты и решения, созданные ее подразделением Systems and Technology Group. Престижные конструкторские награды форума iF ежегодно получают компании, продемонстрировавшие значительные достижения в конструировании и совместных инновационных разработках продуктов и решений для применения в различных отраслях экономики. IBM отмечена наградами за новаторские конструктивные решения в категории систем хранения данных и серверов. По словам Ли Грина, вице-президента направления IBM Brand and Values Experience, конструктивное исполнение продукта, ориентированное на пользователя, всегда было одним из основополагающих принципов корпорации и ее характерной особенностью проектирования. Награды, которыми отмечены системы хранения данных, отражают приверженность IBM концепции оптимальной функциональности технологического дизайна и убедительно демонстрируют лидерство корпорации в поставке инновационных решений. </p>
+ 
+  <p>Жюри форума присудило награды модульной дисковой системе хранения данных IBM System Storage N3300, системе IBM System Storage N3600 для организации первичных и вторичных хранилищ данных на предприятиях среднего размера и ленточной системе хранения IBM System Storage TS2240 Tape Drive. В каждом из отмеченных решений воплощены оригинальные дизайнерские идеи их создателей, которые стремились максимально полно удовлетворить потребности пользователя. </p>
+ </blockquote> 
+<h3>Катастрофоустойчивая инфраструктура </h3>
+ 
+<p>Летом этого года IBM и &laquo;Банк Сосьете Женераль Восток&raquo; (BSGV, <a href="http://www.bsgv.ru" target="_blank">www.bsgv.ru</a>) объявили об успешном завершении проекта построения централизованной катастрофоустойчивой системы хранения и резервного копирования ключевых приложений. В рамках контракта IBM выступила единым подрядчиком как по поставке оборудования для инфраструктуры, так и по интеграции и техническому обслуживанию новой банковской системы. Отметим, что BSGV &mdash; это универсальный банк, который предоставляет своим клиентам, как корпоративным, так и частным, широкий спектр банковских продуктов и услуг. На сегодняшний день в BSGV в России работает около 1800 сотрудников; банк представлен в 11 регионах и имеет 57 точек продаж. </p>
+ 
+<p>В связи с расширением бизнеса и переходом на новую систему операционного дня перед банком стояла задача создать надежную, высокопроизводительную, универсальную систему хранения и резервного копирования данных, которая после тотального сбоя одного из центров обработки (пожар, взрыв, наводнение) могла бы обеспечить время простоя и потери данных не более 30 мин для ключевых приложений. При этом система должна была обладать хорошей масштабируемостью, так как BSGV &mdash; один из крупнейших игроков на рынке розничных услуг и в настоящий момент представлен в нашей стране от Москвы до Владивостока, планируя дальнейшую экспансию на территории России. Еще одним из требований заказчика была универсальность и управляемость решения, т. е. возможность подключения к инфраструктуре новых систем с сохранением высокого качества управления и мониторинга всей системы. </p>
+ 
+<p>В BSGV принята классификация данных и информационных систем по трем уровням критичности, для каждого из которых было выбрано свое решение хранения и резервного копирования на основе продуктов IBM. В соответствии с этим проект был разделен на три фазы. В настоящий момент полностью завершена первая фаза проекта &mdash; внедрение решения для систем первого уровня критичности, куда входят такие приложения, как ABC, электронная почта и сервисы файлового обмена. Заказчик ведет работы по реализации следующих фаз &mdash; внедрение решений для систем второго и третьего уровня критичности (банковские приложения и отчетность, файловые сервисы, CRM-сервисы, приложения для обучения, тестирования и разработки), которые планируется завершить в начале 2009 г. </p>
+ 
+<p>Для хранения и резервного копирования ключевых приложений первого уровня критичности был реализован отдельный проект &mdash; создание двух географически распределенных дата-центров, соединенных оптическими каналами связи. Инфраструктура была построена на базе high-end оборудования IBM: систем хранения DS8100, серверов IBM p570, ленточных библиотек TS3500. Корпорация IBM в этом проекте не только выступала как поставщик оборудования, но и выполнила полный спектр проектных работ. Специалисты IBM разработали проектную документацию, набор процедур по эксплуатации, подготовили площадки центров обработки данных, провели сборку, настройку инфраструктуры и передачу ее в промышленную эксплуатацию. В ходе проекта был разработан ряд уникальных процедур в области резервного копирования и восстановления, которые позволили снизить время закрытия банковского дня, а в случае логических ошибок &mdash; обеспечить восстановление больших объемов данных в течение нескольких минут. </p>
+ </DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25195.html'>СХД HP для малого и среднего бизнеса</A></b></li><li><b><A href='detail.php@ID=24808.html'>Горизонтально масштабируемые СХД NetApp и виртуализация для облачных инфраструктур</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24655.html'>SSD-хранилище «Облакотеки» </A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=13206.html" target="_blank"><img src="../upload/iblock/0a1/9-1-1.jpg" alt="Открыть материал" style="width:50px; height:50px; border:1px solid #000; float:left; margin:0 5px 5px 0;"></a><a href="detail.php@ID=13206.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Эффективное хранение данных: решения IBM</a><br><a href="detail.php@ID=13206.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">В современном бизнесе клиенты, сотрудники, поставщики и бизнес-партнеры рассчитывают на то, что в любой момент и из любого места они смогут получить &hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=13206.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=13206&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0769aec9bfb356cf4fe2d92e3d69f388'><img src='../bitrix/tools/captcha.php@captcha_code=0769aec9bfb356cf4fe2d92e3d69f388' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

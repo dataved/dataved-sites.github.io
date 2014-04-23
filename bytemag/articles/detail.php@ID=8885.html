@@ -1,0 +1,755 @@
+<HTML>
+<HEAD>
+<title>Программирование MMC
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Вадим Мачулин machulin@mail.ru Полный вариант программного проекта, реализованного в рамках данной статьи (файл MMC_Proj.zip, 28 Кбайт), можно найти на сайте http://www.bytemag.ru. Для работы с ним понадобится Windows 2000 (допустимы Windows 9x" />
+<meta name="description" content="Вадим Мачулин machulin@mail.ru Полный вариант программного проекта, реализованного в рамках данной статьи (файл MMC_Proj.zip, 28 Кбайт), можно найти на сайте http://www.bytemag.ru. Для работы с ним понадобится Windows 2000 (допустимы Windows 9x" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398077715','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13246.html'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13654.html'>Технологии ABBYY обеспечивают оперативный доступ к архивным документам</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8885' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8885&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8885"].SHOW_IMAGE.value="N"; document.forms["PrintForm8885"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8885"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8885"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8885);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8885.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8885.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8885);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6256.html'>Средства разработки</a><br /></p><a href='../numbers/index.php@ID=11541.html'>№12 (41), декабрь 2001</a><h1>Программирование MMC
+</h1>10.12.2001<p></p><DIV class='article-text'><p><i>Вадим Мачулин</i><br>
+  <a href="mailto:machulin@mail.ru">machulin@mail.ru</a>
+<p><hr width="40%" align="left" noshade>
+Полный вариант программного проекта, реализованного в рамках данной статьи (файл 
+MMC_Proj.zip, 28 Кбайт), можно найти на сайте <a href="http://www.bytemag.ru/files/MMC_Proj.zip">http://www.bytemag.ru</a>. 
+Для работы с ним понадобится Windows 2000 (допустимы Windows 9x и NT, но с установленным 
+Microsoft Management Console 1.0) и Microsoft Visual C++ 6.0. 
+<p>Круг задач, связанных с управлением (администрированием), достаточно широк. Можно администрировать операционную систему, различные программные комплексы, обычно называемые серверами (на память сразу приходит Microsoft SQL Server с Enterprise Manager). У вашей фирмы может быть собственный программный продукт, для которого необходим инструмент, позволяющий производить всевозможные настройки и добавления, а также запускать или останавливать систему. Возможно, такой инструмент у вас уже есть. Но в ряде случаев целесообразнее использовать стандартное средство. Те, кто работает с Windows 2000 и пользуется средствами администрирования этой ОС (например, Component Services, Event Viewer, Computer Management), наверное, заметили, что многие из этих средств имеют похожий интерфейс, чем-то напоминающий Explorer. Его обычные атрибуты - левая и правая панели (Scope и Result View Pane), меню, страницы свойств, панели управления, иерархическая структура элементов и т. д. На левой панели представлено дерево элементов, на правой - список (рис. 1).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/MMC/PIC1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Окно Microsoft Management Console.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Дело в том, что, вызывая все подобные средства, вы запускаете одну и ту же программу - Microsoft Management Console (MMC). Ее архитектура и идеология как раз и предназначены для администрирования. MMC работает со специальными COM-объектами - модулями Snap-in. Каждый модуль соответствует отдельному средству администрирования и описывает его внешний вид и поведение.
+<p>Написав свой модуль для MMC, вы получите полноценное средство администрирования с унифицированным современным пользовательским интерфейсом. Для этого достаточно реализовать COM-объект, поддерживающий стандартные для консоли интерфейсы. Вам будут доступны все возможности, которые появятся в MMC в будущем.
+<p>Создадим для примера &quot;серверный&quot; менеджер, который будет администрировать некоторые &quot;серверы&quot;, расположенные в разных &quot;серверных группах&quot;. Сервер можно создать, запустить, остановить и удалить. Можно также создать и удалить серверную группу. Наша консоль будет обладать многими стандартными возможностями MMC, и на ее примере в этой статье будут описаны принципы программирования для MMC.
+<h3>Работа с MMC </h3>
+<p>Для работы потребуется ОС Microsoft Windows 2000 (впрочем, можно обойтись и версией 9x или NT, если в них предустановлена MMC), а также инструментарий Microsoft Visual C++ 6.0. Чтобы запустить MMC, нажмите кнопку Start (Пуск), выберите пункт Run (Выполнить) и в диалоговом окне наберите mmc. Появится пустая консоль, в которую с помощью диалогового окна Add/Remove Snap-in можно добавить новые модули (рис. 2). В списке модулей Snap-in уже есть объекты Services и Event Viewer. Если у вас есть SQL Server версии 7.0 или 2000, то в списке будет и модуль Microsoft SQL Server Enterprise Manager.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/MMC/PIC2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Добавление новых модулей (Snap-in) в консоль.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Соберите из готовых нужных вам модулей консоль и сохраните ее в файле с расширением MSC. Теперь у вас есть средства администрирования, объединенные в одном файле.
+<p>Файл конфигурации консоли (*.msc) содержит информацию о модулях, входящих в консоль, конфигурацию дерева элементов, общие настройки, а также специальные данные для каждого модуля. Стандартные средства Windows 2000, работающие с MMC, представляют собой файлы конфигурации, содержащие ссылки на один или несколько стандартных модулей.
+<h4>Написание модуля для MMC </h4>
+<p>Запустите Microsoft Visual C++ 6.0 и с помощью мастера ATL COM AppWizard создайте новый проект (к примеру, MMCArticle) для внутрипроцессного COM-сервера. На первом шаге мастера укажите в качестве типа сервера (Server Type) Dynamic Link Library (DLL). Вызовите мастер ATL Object Wizard (меню Insert / New ATL Object) и добавьте новый COM-объект - MMC Snap-in (рис. 3).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/MMC/PIC3.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Добавление в ATL-проект нового модуля для MMC.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В следующем окне ATL Object Wizard Properties в поле Short Name укажите имя ServerManager. Во вкладке MMC Snap-in отметьте, что модуль поддерживает окно About и контекстное меню, а также сохраняет некоторые свои данные с помощью COM-интерфейса - IPersistStreamInit (рис. 4). Нажмите OK и откомпилируйте проект. Получится новый модуль для консоли. Если снова запустить MMC, то в списке модулей (показанном на рис. 2) появится новый объект Snap-in под именем ServerManager. Добавив его в консоль, мы получим самый простой модуль, состоящий всего из одного (ничего не делающего) элемента.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/MMC/PIC4.gif" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Указание свойств модуля для MMC в ATL-проекте.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Структура MMC </h4>
+<p>Чтобы сделать чуть более сложную консоль, рассмотрим сначала, как MMC взаимодействует с нашим модулем (Snap-in). Элементы консоли делятся на три типа. Первый - это узлы дерева в левой панели. В англоязычном варианте MSDN они называются Scope Items (рамочные объекты). Если выделить узел в левой панели, то по умолчанию в списке правой панели появятся все дочерние по отношению к Scope Item объекты.
+<p>Второй тип элементов консоли - объекты, которые появляются только в правой панели. Они называются Result Items (конечные объекты). К примеру, в средстве администрирования Services элементы списка сервисов - это объекты типа Result item, и они не отображаются в структуре дерева в левой панели.
+<p>Третий тип элемента - это корневой элемент нашего модуля.
+<p>Snap-in, как уже говорилось, - это обычный COM-объект, но с некоторой оговоркой. Наш модуль должен реализовать два ко-класса (coclass). Первый регистрируется при старте модуля через функцию DllGetClassObject. Консоль запрашивает у него интерфейс IComponentData. С помощью метода CreateComponent этого интерфейса консоль получает указатель на интерфейс IComponent второго ко-класса. Первый ко-класс связан с левой панелью, второй - с правой.
+<p>В нашем ATL-проекте интерфейс IComponentData реализуется классом CServerManager, а IComponent - классом CServerManagerComponent.
+<h4>Что должны делать интерфейсы </h4>
+<p>Интерфейс IComponentData связан с деревом узлов в левой панели. С помощью метода Initialize этого интерфейса консоль сообщает модулю о начале работы, а также передает указатель на интерфейс IUnknown, с помощью которого мы получаем интерфейс IConsole (подробнее об этом речь пойдет ниже). Метод Destroy сообщает об окончании работы консоли, метод Notify - о различных действиях пользователя в левой панели (развернуть дерево, удалить элемент, переименовать элемент и т. д.). С помощью метода CreateComponent консоль получает указатель на интерфейс IComponent.
+<p>IComponent связан со списком элементов в правой панели. Многие его методы похожи на методы интерфейса IComponentData. Так, метод Initialize сообщает о начале работы, метод Destroy - об ее окончании, Notify - о действиях пользователя в правой панели. С помощью метода GetResultViewType мы можем настроить вид правой панели. По умолчанию это просто список элементов, но можно сделать так, что будет отображаться Web-страница или элемент ActiveX.
+<p>Консоль предоставляет интерфейсы, с помощью которых модуль может управлять самой консолью. Интерфейс IConsole (в новых версиях есть IСonsole2, IСonsole3) обеспечивает общее управление консолью и получение других интерфейсов. IConsoleNameSpace служит для управления элементами в левой панели, IResultData - в правой панели.
+<h4>Классы в ATL </h4>
+<p>Каждый элемент в консоли характеризуется своим изображением, именем, контекстным меню, панелью инструментов и реакцией на действия пользователя. Все это может инкапсулироваться в одном классе. В нашем проекте уже присутствует класс CServerManagerData, соответствующий самому верхнему узлу в дереве нашего модуля. CServerManagerData произведен от шаблонного класса CSnapInItemImpl<T>, а тот, в свою очередь, от CSnapItem.
+<p>Чтобы создать другие элементы консоли, можно просто скопировать описание и реализацию этого класса, переименовать его, затем сделать нужные изменения и получить класс, соответствующий новому элементу. Класс, соответствующий какому-либо элементу консоли, будем называть классом элемента.
+<h4>Взаимодействие в MMC </h4>
+<p>Рассмотрим функционирование элемента левой панели. К примеру, в консоли есть некоторый родительский узел (элемент), и пользователь решил его развернуть. Мы можем определить состав и поведение дочерних узлов.
+<p>Допустим, мы хотим перехватывать событие, связанное с данным действием пользователя. В библиотеке ATL каждому типу элемента сопоставляется некоторый класс С++. У нас уже есть для примера класс CChildData, соответствующий дочернему элементу, и мы создаем его экземпляр. Пусть pChildData - это указатель на него. Далее с помощью метода InsertItem интерфейса IConsoleNameSpace можно добавить дочерний узел в дерево консоли. В качестве параметра методу передается указатель на структуру SCOPEDATAITEM, содержащую много всякой полезной информации о том, что представляет собой добавляемый узел.
+<p>В поле lParam этой структуры передается значение типа long, называемое в MSDN cookie. Значение cookie должен сгенерировать наш модуль. Мы связываем с этим значением узел в консоли. Далее этот параметр cookie будет передаваться явно и неявно в вызовах методов нашего модуля, в частности, в методах интерфейсов IComponent и IComponentData.
+<p>В соответствии с идеологией ATL значения cookie - это адреса экземпляров классов элементов (ATL рассматривает их как экземпляры абстрактного класса CSnapItem). В нашем случае значение cookie - это значение переменной pChildData.
+<p>Далее консоль вызывает метод QueryDataObject интерфейса IComponentData для получения объекта данных (интерфейс IDataObject), соответствующего этому cookie. Класс CServerManager через cookie находит экземпляр класса и вызывает его метод GetDataObject, при этом получаемый объект данных опять-таки содержит внутри себя значение cookie. Если значение cookie равно 0, то запрашиваются данные для корневого элемента. В этом случае адрес экземпляра нужного класса нужно искать другим способом.
+<p>Получив объект данных во время какого-либо события, консоль вызывает метод Notify интерфейса IComponentData (или интерфейса IComponent). ATL получает из него cookie, снова находит экземпляр нашего класса и уже у него вызывает метод Notify.
+<p>Для чего такие сложности с IDataObject? Они позволяют выполнять, к примеру, операции копирования и вставки через буфер обмена, работающий с объектом данных, или операции Drag&Drop. Благодаря ATL не приходится напрямую работать с IDataObject.
+<h4>Функция Notify класса элемента </h4>
+<p>Пожалуй, это самая важная функция, с которой мы будем больше всего работать. Вот ее описание:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td> 
+<pre>STDMETHOD(Notify)( MMC_NOTIFY_TYPE event,
+long arg,
+	long param,
+	IComponentData* pComponentData,
+	IComponent* pComponent,
+	DATA_OBJECT_TYPES type);</pre>
+</td></tr></table>
+<p>
+<p>Параметр event - тип события, значения arg и param зависят от типа события. Перечислим основные события, с которыми мы будем работать.
+<ul><li>MMCN_SHOW - наступает при отображении в правой панели контекста элемента (по умолчанию - его дочерних элементов);
+<li>MMCN_EXPAND - наступает, когда пользователь в первый раз разворачивает элемент;
+<li>MMCN_DELETE - наступает, когда пользователь удаляет элемент;
+<li>MMCN_SELECT - наступает, когда пользователь выделил элемент.</ul>
+<p>Каждое событие в методе можно обработать в блоке switch - case инструкции, что ATL по умолчанию и делает. Далее, когда мы будем говорить про обработку события вида MMCN_xxxxx, всегда будет иметься в виду соответствующий блок switch - case инструкции функции Notify класса элемента консоли.
+<h4>Идентификатор элемента консоли </h4>
+<p>С помощью идентификатора элемента мы можем управлять его поведением в консоли. Идентификатор элемента передается в качестве параметра методов IConsole, IComponentData, IComponent (GetItem, GetParentItem, SetItem, DeleteItem, UpdateAllViews и т. д.).
+<p>Получить идентификатор можно при создании элемента. В частности, для объектов Scope item его возвращает метод InsertItem интерфейса IComponentData в поле ID структуры SCOPEDATAITEM.
+<p>Можно сказать, что cookie и идентификатор элемента дополняют друг друга: cookies определяют сущности в нашем модуле, а идентификаторы определяют сущности в консоли.
+<h3>Создание серверного менеджера </h3>
+<p>Мы будем работать с тремя видами узлов (корневой, компьютеры и серверы) и соответственно создадим из класса CServerManagerData еще два класса элемента с помощью команд Copy*Paste. Назовем новые классы CserverGroupData и CServerData. Поскольку наш проект невелик, описание и реализацию классов оставим в файлах ServerManager.h и ServerManager.cpp, сгенерированных ATL. Кроме того, позаботимся о переименовании конструкторов, параметров шаблонных родительских классов и т. п. Каждый класс характеризуется следующими данными, хранящимися в статических полях класса:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>static const GUID CServerManagerGUID_NODETYPE = 
+	{ 0x42bdaf1b, 0xbc50, 0x448e, { 0xb2, 0xe4, 0x77, 0x1c, 
+	0x62, 0x11, 0xed, 0x77 } };
+const GUID*  CServerManagerData::m_NODETYPE = 
+	&CServerManagerGUID_NODETYPE;
+const OLECHAR* CServerManagerData::m_SZNODETYPE = 
+	OLESTR(&quot;42BDAF1B-BC50-448E-B2E4-771C6211ED77&quot;);
+const OLECHAR* CServerManagerData::m_SZDISPLAY_NAME = 
+	OLESTR(&quot;ServerManager&quot;);
+const CLSID* CServerManagerData::m_SNAPIN_CLASSID = 
+	&CLSID_ServerManager;</pre>
+</td></tr></table>
+<p>
+<p>Каждому типу узла соответствуют свои параметры GUID, SZDISPLAY_NAME и SNAPIN_CLASSID. Эти данные передаются вместе с IDataObject. Для нового класса мы сгенерируем новый GUID и все остальные атрибуты. К примеру, для CServerGroupData это будет выглядеть так:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>static const GUID CComputerGUID_NODETYPE = 
+	{0x10cfc065, 0x2153, 0x43d7,  {0xa1, 0x78, 0xe7, 
+	0xf1, 0x72, 0x11, 0x83, 0x39} };
+const GUID*  CServerGroupData::m_NODETYPE = 
+	&CComputerGUID_NODETYPE;
+const OLECHAR* CServerGroupData::m_SZNODETYPE = 
+	OLESTR(&quot;10CFC065-2153-43d7-A178-E7F172118339&quot;);
+const OLECHAR* CServerGroupData::m_SZDISPLAY_NAME = OLESTR(&quot;&quot;);
+const CLSID* CServerGroupData::m_SNAPIN_CLASSID = 
+	&CLSID_ServerManager;</pre>
+</td></tr></table>
+<p>
+<p>Классы CServerManagerData, CServerGroupData содержат дочерние узлы, поэтому 
+  добавим к каждому из них поле 
+<pre>std::vector&lt;CSnapInItem*&gt; ChildItems, </pre>
+<p>хранящее список всех дочерних элементов. 
+<h4>Событие MMCN_SHOW </h4>
+<p>В случае реализации события MMCN_SHOW параметр arg указывает, виден или скрыт контекст элемента в правой панели. Если arg = 1, то в параметре param содержится идентификатор данного элемента. Добавим в блок case MMCN_SHOW: функции Notify класса CServerManagerData следующий код, чтобы запомнить идентификатор корневого элемента:
+<p>
+<pre>if(arg)
+ m_scopeDataItem.ID = param;</pre>
+<p>
+<h4>Изображения в MMC </h4>
+<p>Каждый элемент должен как-то отображаться. Посылая сообщение MMCN_ADD_IMAGES, консоль спрашивает у нашего узлового класса, какие рисунки нужно для этого использовать. ATL уже сгенерировала код, который загружает картинку из ресурсов:
+<p>
+<pre>IDB_SERVERMANAGER_16, IDB_SERVERMANAGER_32.</pre>
+<p>
+<p>Ресурс должен представлять растровое изображение размером 16nх16 для маленьких значков и 32nх32 для больших. Каждый квадрат 16х16 или 32х32 соответствует одному изображению. Загрузив общий массив из n изображений, мы можем обращаться к нему по индексам 0 - (n-1), например, при создании нового элемента:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>SCOPEDATAITEM sdi;
+...;
+sdi.image=1
+...
+spConsoleNameSpace-&gt;InsertItem(&sdi);
+...</pre>
+</td></tr></table>
+<p>
+<h4>Контекстное меню </h4>
+<p>Наш модуль поддерживает интерфейс IExtendContextMenu и сообщает консоли, что он может добавлять свои пункты в ее контекстное меню. У этого интерфейса всего два метода (кроме стандартных Unknown) - AddMenuItems и Command.
+<p>Первый вызывается, когда пользователь открывает контекстное меню. В нем модулю передается указатель на интерфейс IDataObject (чтобы мы знали, для какого элемента вызывается меню) и указатель на интерфейс IContextMenuCallback с одним методом - AddItem. Используя этот метод, наш модуль добавляет в меню свои пункты. При этом каждому пункту меню присваивается некоторый идентификатор, передающийся обратно через метод Command (вместе с тем же IDataObject), когда пользователь выбирает данный пункт меню.
+<p>Как обычно, библиотека ATL избавляет от работы со всей этой внутренней кухней. В нашем проекте уже есть ресурс меню, созданный мастером - IDR_SERVERMANAGER_MENU. На самом верхнем уровне есть пункты - TOP, NEW, VIEW, TASK. Они соответствуют четырем разделам контекстного меню, куда мы можем добавить свои дополнительные пункты. В частности, NEW и VIEW соответствуют подпунктам New и View (&quot;создать&quot; и &quot;просмотр&quot;) в контекстном меню. Мы добавим пункты в раздел TOP - самый верхний уровень контекстного меню. Для CServerManagerData этому пункту будет соответствовать команда &quot;Создать серверную группу&quot;.
+<p>Создадим с помощью копирования IDR_SERVERMANAGER_MENU еще два ресурса меню - IDR_SERVERGROUP_MENU (&quot;Создать сервер&quot;) и IDR_SERVER_MENU (&quot;Запустить сервер&quot;, &quot;Остановить сервер&quot;). В описании каждого узлового класса есть макрос SNAPINMENUID(<MENU_RESOURCE>), связывающий класс с ресурсом меню.
+<p>Следующие макросы реализуют карту обработчиков событий при использовании меню:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>BEGIN_SNAPINCOMMAND_MAP(&lt;Class Name&gt;, FALSE)
+  SNAPINCOMMAND_ENTRY(id, func);
+END_SNAPINCOMMAND_MAP()</pre>
+</td></tr></table>
+<p>
+<p>Здесь id - идентификатор пункта меню, func - функция-обработчик.
+<h4>Создание новых &quot;серверных&quot; групп</h4>
+<p>Функция CServerManager::OnCreateServerGroup, вызываемая при выборе команды контекстного меню &quot;Создать серверную группу&quot;, создает новый дочерний элемент. Вот ее код:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>HRESULT CServerManagerData::OnCreateServerGroup(bool 
+	&bHandled, CSnapInObjectRootBase *pObj)
+{
+  HRESULT hr;
+  CComQIPtr&lt;IConsoleNameSpace, &IID_IConsoleNameSpace&gt; 
+	spConsoleNameSpace;
+  
+if(pObj-&gt;m_nType==1)
+  {
+    spConsoleNameSpace=static_cast&lt;CServerManager*&gt;
+	(pObj)-&gt;m_spConsole;
+  }
+  else
+  {
+    spConsoleNameSpace=static_cast&lt;CServerManagerComponent*&gt;
+	(pObj)-&gt;m_spConsole;
+  }
+  
+  CServerGroupData* pServerGroupData = new CServerGroupData;
+  ChildItems.push_back(pServerGroupData);
+  pServerGroupData-&gt;pParent=this;
+
+  SCOPEDATAITEM sdi={0};
+  sdi.mask = SDI_STR | SDI_PARAM | SDI_IMAGE | SDI_OPENIMAGE | 
+	SDI_PARENT;
+  pServerGroupData-&gt;GetScopePaneInfo(&sdi);
+  sdi.relativeID = m_scopeDataItem.ID;
+  sdi.displayname=MMC_CALLBACK;
+
+  hr=spConsoleNameSpace-&gt;InsertItem(&sdi);
+  pServerGroupData-&gt;m_scopeDataItem.ID=sdi.ID;
+
+  bHandled=true;
+  return hr;
+}</pre>
+</td></tr></table>
+<p>
+<p>Здесь pObj фактически может указывать либо на экземпляр CServerManager, либо на экземпляр CserverManagerComponent. В этих объектах поле m_spConsole - указатель на интерфейс IConsole, из которого мы получаем интерфейс IConsoleNameSpace. Создав экземпляр дочернего класса элемента и сохранив его в списке дочерних элементов, мы с его помощью формируем структуру SCOPEDATAITEM sdi.
+<p>В поле mask мы указываем, что функции InsertItem и GetScopePaneInfo должны работать с полями структуры - displayname, image, openimage, lParam. Флаг SDI_PARENT указывает, что поле relativeID - идентификатор родительского узла. Функция InsertItem в поле ID возвращает идентификатор созданного узла, который мы должны сохранить.
+<h4>Стандартные действия </h4>
+<p>Для реализации таких стандартных действий, как копирование, вставка, удаление и вызов страницы свойств, существует интерфейс IConsoleVerb, получаемый с помощью метода QueryConsoleVerb интерфейса IConsole. К примеру, если мы хотим обеспечить удаление элемента, вызов для него страницы свойств и возможность его переименования, то в обработке события MMCN_SELECT нужно добавить следующий код:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>case MMCN_SELECT:
+{
+ IConsoleVerb* pIConsoleVerb;
+	 spConsole-&gt;QueryConsoleVerb(&pIConsoleVerb);
+	// TODO : Enumerate the result pane items
+
+ pIConsoleVerb-&gt;SetVerbState(MMC_VERB_RENAME,ENABLED,true);
+ pIConsoleVerb-&gt;SetVerbState(MMC_VERB_RENAME,HIDDEN,false);
+
+ pIConsoleVerb-&gt;SetVerbState(MMC_VERB_DELETE,ENABLED,true);
+ pIConsoleVerb-&gt;SetVerbState(MMC_VERB_DELETE,HIDDEN,false);
+      
+	pIConsoleVerb-&gt;SetVerbState(MMC_VERB_PROPERTIES,ENABLED,true);
+ pIConsoleVerb-&gt;SetVerbState(MMC_VERB_PROPERTIES,HIDDEN,false);
+
+	hr = S_OK;
+	break;
+}</pre>
+</td></tr></table>
+<p>
+<h4>Работа с серверами </h4>
+<p>Создание &quot;серверных&quot; элементов происходит несколько иначе. Дело в том, что эти элементы будут создаваться только в правой панели, поскольку они относятся к классу Result items.
+<p>Чтобы отобразить серверы в правой панели во время обработки события MMCN_SHOW элемента типа CserverGroupData, мы заполним список серверов с помощью метода InsertItem интерфейса IResultData, основываясь на списке CServerGroupData::ChildItems. Вот код обработки события MMCN_SHOW:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>case MMCN_SHOW:
+{
+  CComQIPtr&lt;IResultData, &IID_IResultData&gt; spResultData(spConsole);
+  // TODO : Enumerate the result pane items
+
+  if(arg)
+  {
+    m_scopeDataItem.ID=param;
+    hr=spHeader-&gt;InsertColumn(0, L&quot;Name&quot;, LVCFMT_LEFT,MMCLV_AUTO);
+
+   for(std::vector&lt;CServerData*&gt;::const_iterator it=
+	ChildItems.begin();
+      it!=ChildItems.end();
+      it++)
+      {
+         RESULTDATAITEM rdi={0};
+         rdi.mask = RDI_STR | RDI_PARAM | RDI_IMAGE;
+         (*it)-&gt;GetResultPaneInfo(&rdi);
+         rdi.str=MMC_CALLBACK;
+
+         hr=spResultData-&gt;InsertItem(&rdi);
+         (*it)-&gt;m_resultDataItem.itemID=rdi.itemID;
+      }
+    }
+
+  hr = S_OK;
+  break;
+}</pre>
+</td></tr></table>
+<p>
+<p>У элементов типа CServerGroupData есть пункт контекстного меню &quot;Создать сервер&quot;. Вот код его обработчика:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>HRESULT CServerGroupData::OnCreateServer(bool 
+	&bHandled, CSnapInObjectRootBase *pObj)
+{
+  bHandled=true;
+  CServerData* pServerData = new CServerData;
+  pServerData-&gt;pParent=this;
+  ChildItems.push_back(pServerData);
+
+  IDataObject* pDataObj;
+  GetDataObject(&pDataObj, CCT_SCOPE);
+
+  if(pObj-&gt;m_nType==1)
+  {
+    static_cast&lt;CServerManager*&gt;(pObj)-&gt;
+      m_spConsole-&gt;
+      UpdateAllViews(pDataObj, 0, NULL);
+  }
+  else
+  {
+    static_cast&lt;CServerManagerComponent*&gt;(pObj)-&gt;
+      m_spConsole-&gt;
+      UpdateAllViews(pDataObj, 0, NULL);
+  }
+
+  return S_OK;
+}</pre>
+</td></tr></table>
+<p>
+<p>Здесь, как и в методе CServerManagerData::CreateComputer, мы создаем экземпляр класса CServerData и запоминаем его в списке ChildItems. После создания нового сервера мы обновляем список серверов, вызывая метод UpdateAllViews. Результат выполнения метода UpdateAllViews интерфейса IConsole - вызов события MMCN_VIEW_CHANGE для нашего CServerGroupData.
+<p>Для обработки этого события мы вызываем функцию SelectScopeItem интерфейса IConsole. Этот метод программно выделяет элемент, в результате чего для него вызываются события MMCN_SHOW и MMCN_SELECT.
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>case MMCN_VIEW_CHANGE:
+{
+  spConsole-&gt;SelectScopeItem(m_scopeDataItem.ID);
+  break;
+}</pre>
+</td></tr></table>
+<p>
+<h4>Переименование </h4>
+<p>При изменении имени элемента (продолжительный двойной щелчок или вызов команды Rename) вызывается событие MMCN_RENAME. В параметре param передается новое имя. Это имя мы сохраним в некоторой внутренней переменной класса, т. к. далее его с помощью метода GetScopePaneInfo запрашивает консоль для получения информации о состоянии элемента (его имени, изображения и т. д.).
+<h4>Запуск и остановка серверов </h4>
+<p>У наших &quot;серверов&quot; есть два пункта в контекстном меню - &quot;Запустить сервер&quot; и &quot;Остановить сервер&quot;. Результатом этих действий станет изменение изображения, чтобы оно соответствовало статусу работающего или остановленного сервера. У нас уже есть в ресурсах необходимые картинки и код, который их загружает. А вот как обрабатывается команда меню &quot;Запустить сервер&quot;:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>HRESULT CServerData::OnStartServer(bool 
+	&bHandled, CSnapInObjectRootBase *pObj)
+{
+  CComQIPtr&lt;IResultData, &IID_IResultData&gt; 
+    spResultData(static_cast&lt;CServerManagerComponent*&gt;(pObj)
+  -&gt;m_spConsole);
+
+  iServerState=1;
+  m_resultDataItem.nImage=1;
+  
+  IDataObject* pDataObj;
+  GetDataObject(&pDataObj, CCT_RESULT);
+  static_cast&lt;CServerManagerComponent*&gt;(pObj)
+    -&gt;m_spConsole-&gt;UpdateAllViews(pDataObj, 0, NULL);
+
+  return S_OK;
+}
+</pre>
+</td></tr></table>
+<p>
+<p>Поскольку сервер - это элемент правой панели, pObj фактически указывает на экземпляр класса CServerManagerComponent. Метод UpdateAllViews вызывает событие MMCN_VIEW_CHANGE для элемента &quot;сервер&quot;. Вот код обработки этого события:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>case MMCN_VIEW_CHANGE:
+{
+  CComQIPtr&lt;IResultData, &IID_IResultData&gt; 
+	spResultData(spConsole);
+  HRESULTITEM ItemID;
+  spResultData-&gt;FindItemByLParam((long)this, &ItemID);
+
+  RESULTDATAITEM rdi={0};
+  rdi.mask = RDI_IMAGE;
+  rdi.itemID=ItemID;
+  rdi.nImage=m_resultDataItem.nImage;
+  spResultData-&gt;SetItem(&rdi);
+
+  hr=S_OK;
+  break;
+}</pre>
+</td></tr></table>
+<p>
+<p>В структуре rdi мы устанавливаем поле mask равным RDI_IMAGE, тем самым сообщая функции SetItem, что нам нужно изменить только изображение элемента. В поле rdi.nImage мы указываем индекс нужного нам изображения.
+<h4>Сохранение данных </h4>
+<p>Если вам нужно что-нибудь сохранить в конфигурации вашей консоли, то добавьте поддержку интерфейса IpersistStreamInit (или IPersistStorage и IPersistStream). С его помощью вы записываете нужные вам данные в msc-файл. Когда консоль вновь запускается, то одним из первых вызывается метод Load интерфейса IPersistStreamInit. Вы получаете данные из потока IStream и строите внутреннюю структуру внутри вашего модуля. В нашем случае это будет дерево вида:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>CServerManagerData
+	CServerGroupData
+		CServerData</pre>
+</td></tr></table>
+<p>
+<p>Далее мы принимаем события от консоли (в основном нам нужны события MMCN_EXPAND и MMCN_SHOW) и на основе внутренних данных строим нужную структуру данных внутри модуля. Событие MMCN_EXPAND с параметром arg=1 вызывается для узла в левой панели тогда, когда консоли нужно перечислить все дочерние узловые классы. В основном это происходит, когда пользователь в первый раз разворачивает дерево, соответствующее данному узлу. Нам нужно обрабатывать событие MMCN_EXPAND только в случае, когда разворачивается дерево, соответствующее узлу CServerManagerData. У нас уже есть заполненный вектор ChildItems, поэтому мы просто можем пройтись по нему циклом for, добавить новые элементы CServerGroupData в консоль с помощью метода AddItem интерфейса IConsoleNameSpace.
+<h4>Удаление элементов </h4>
+<p>Для удаления элементов из консоли у интерфейсов IConsoleNameSpace и IResultData есть функции DeleteItem, которым в качестве параметра передается идентификатор элемента. Конечно, элементы можно удалять многими способами, но стандартный соответствует действию MMC_VERB_DELETE, позволяющему применять команду Delete и соответствующую кнопку на панели инструментов.
+<p>Если пользователь консоли решил удалить элемент, то возникает событие MMCN_DELETE. Вот код обработки этого события для CServerGroupData:
+<p>
+<table border="0">
+<tr bgcolor="#CCCCCC"> 
+<td><pre>case MMCN_DELETE:
+{
+  CComQIPtr&lt;IConsoleNameSpace, &IID_IConsoleNameSpace&gt; 
+	spConsoleNameSpace(spConsole);
+  for(std::vector&lt;CServerData*&gt;::const_iterator it=
+	ChildItems.begin();
+      it!=ChildItems.end();
+      it++)
+      {
+         delete (*it);
+      }
+  pParent-&gt;ChildItems.erase(
+    std::find(pParent-&gt;ChildItems.begin(),
+      pParent-&gt;ChildItems.end(),
+      this)
+      );
+  spConsoleNameSpace-&gt;DeleteItem(m_scopeDataItem.ID, true);
+  delete this;
+  hr = S_OK;
+  break;
+}</pre>
+</td></tr></table>
+<p>
+<p>Сначала удаляются все экземпляры класса CserverData, соответствующие дочерним элементам. Затем экземпляр удаляет себя из списка дочерних узлов родительского класса. Потом удаляется сам элемент в консоли и его дочерние узлы (метод DeleteItem интерфейса IConsoleNameSpace). И в конце объект удаляет сам себя (delete this).
+<h4>Реестр </h4>
+<p>В папке Resource Files нашего проекта есть файл ServerManager.rgs. Это сценарий, описывающий информацию, которая заносится в Реестр Windows при регистрации модуля. Кроме стандартных ключей, заносимых в Реестр для нашего модуля как для COM-объекта, есть дополнительные, относящиеся только к MMC. Все они расположены в ключе HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MMC\.
+<p>В подключе SnapIns содержится список идентификаторов CLSID для всех COM-объектов, являющихся модулями для MMC. Этот список появляется в окне Add Standalone Snap-ins (см. рис. 2). В каждом из них есть следующие значения:
+<ul><li>NameString - имя нашего модуля;
+<li>About - CLSID объекта COM, реализующего интерфейс ISnapInAbout. Идентификатор содержит имя модуля, его версию, описание, значки, и т. д. (ATL предоставила реализацию этого ко-класса в классе CServerManagerAbout);
+<li>StandAlone - подключ, указывающий, что наш модуль не является модулем-расширением;
+<li>NodeTypes - подключ, содержащий список GUID узлов, используемых в модуле.</ul>
+<p>В подключе HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MMC\ NodeTypes есть список GUID всех узлов всех MMC-модулей.
+<h3>Итоги </h3>
+<p>Мы построили &quot;детскую&quot; консоль, но с достаточно &quot;взрослыми&quot; возможностями. Она показана на рис. 5.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/MMC/PIC5.gif" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Созданный нами серверный менеджер.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Мы не рассматривали ряд относящихся к теме вопросов - страницы свойств, панели 
+  инструментов, колонки, отображение объектов ActiveX, справочную систему, сортировку 
+  и многое другое. Хотелось бы тем не менее надеяться, что эта статья поможет 
+  вам в понимании работы MMC и программирования для нее. 
+<p> 
+<table width="100%" border="0">
+  <tr>
+    <td bgcolor="#FFFFCC"> 
+      <h3>Полезная информация </h3>
+      <p>Вся основная информация находится в базе данных MSDN для Visual C++ (во 
+        вкладке Index справочной системы нужно набрать слово MMC). Много нужной 
+        информации есть на сайте <a href="http://www.microsoft.com">http://www.microsoft.com</a> 
+        (там в поле Search следует набрать слово MMC). 
+      <p>Можно также порекомендовать полезную статью по работе с ATL, хранящуюся 
+        по адресу <a href="http://www.codeproject.com/atl/mmcsnap.asp?print=true">http://www.codeproject.com/atl/mmcsnap.asp?print=true</a>. 
+    </td>
+  </tr>
+</table>
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=16073.html'>Intel Parallel Composer – отладка параллельных программ</A></b></li><li><b><A href='detail.php@ID=15724.html'>Intel Parallel Inspector – поиск ошибок многопоточности</A></b></li><li><b><A href='detail.php@ID=15064.html'>Intel Parallel Amplifier – профилировщих многопоточных приложений</A></b></li><li><b><A href='detail.php@ID=14909.html'>Intel Parallel Inspector – поиск ошибок доступа к памяти</A></b></li><li><b><A href='detail.php@ID=14743.html'>Intel Parallel Studio – инструмент для создания параллельных приложений</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8885.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Программирование MMC
+</a><br><a href="detail.php@ID=8885.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Вадим Мачулин
+  machulin@mail.ru
+
+Полный вариант программного проекта, реализованного в рамках данной статьи (файл 
+MMC_Proj.zip, 28 Кбайт&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8885.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8885&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0c12e2e4858ee441e7113aca942c9dd6'><img src='../bitrix/tools/captcha.php@captcha_code=0c12e2e4858ee441e7113aca942c9dd6' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

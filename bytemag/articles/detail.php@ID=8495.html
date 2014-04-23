@@ -1,0 +1,547 @@
+<HTML>
+<HEAD>
+<title>Cерверы-&amp;quot;лезвия&amp;quot; Hewlett-Packard
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Андрей Борзенко Способы конструктивного исполнения серверов, применявшиеся в течение последних нескольких лет и базирующиеся на использовании стандартной 19-дюймовой стойки, теперь пополнились новым модульным конструктивом (blade server design). Вместо" />
+<meta name="description" content="Андрей Борзенко Способы конструктивного исполнения серверов, применявшиеся в течение последних нескольких лет и базирующиеся на использовании стандартной 19-дюймовой стойки, теперь пополнились новым модульным конструктивом (blade server design). Вместо" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398083078','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8495' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8495&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8495"].SHOW_IMAGE.value="N"; document.forms["PrintForm8495"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8495"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8495"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8495);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8495.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8495.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8495);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11563.html'>№5 (46), май 2002</a><h1>Cерверы-&amp;quot;лезвия&amp;quot; Hewlett-Packard
+</h1>10.05.2002<p></p><DIV class='article-text'><p><i>Андрей Борзенко</i> 
+<p>Способы конструктивного исполнения серверов, применявшиеся в течение последних нескольких лет и базирующиеся на использовании стандартной 19-дюймовой стойки, теперь пополнились новым модульным конструктивом (blade server design). Вместо специализированных источников питания, вентиляторов охлаждения и плат управления для каждой из N независимых систем модульные серверы используют единые средства подачи питания, единый корпус, общую систему охлаждения, унифицированные кабельные соединения и общую инфраструктуру управления для всех N серверов. Это решение не только обеспечивает компаниям, у которых ограничены площади, более высокую плотность размещения компьютерного оборудования, но и несет преимущества в управлении физически объединенными серверами. И хотя появление модульных конструкций не приведет к немедленному падению цен на серверы, это новое экономичное предложение позволит снизить эксплуатационные расходы, а со временем простота таких серверов и совместное использование ресурсов приведут и к снижению стоимости оборудования. На рис. 1 показано, как, по прогнозу IDC, вырастет в ближайшие годы доля &quot;лезвий&quot; среди серверов стандартной Intel-архитектуры.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2002/hp_blade/pict1.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 1. Структура рынка серверов стандартной Intel-архитектуры.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>В течение прошедших двух лет ряд начинающих фирм выпустили первое поколение 
+  специализированных модульных серверов, предназначавшихся в основном для молодых 
+  Интернет-компаний (dot-com) и поставщиков услуг. Это компании с наиболее загруженными 
+  информационными ресурсами и с огромной потребностью в компактных серверах, обеспечивающих 
+  высокую плотность размещения оборудования. К сожалению, хотя с технологических 
+  позиций эти фирмы выбрали верное направление, время их выхода на рынок оказалось 
+  неудачным. Некоторые компании перестали существовать; иные, к примеру RLX Technologies, 
+  были вынуждены существенно сократить свою активность. В настоящее время такие 
+  ведущие поставщики компьютерного оборудования, как Compaq, Dell, Fujitsu-Siemens 
+  Computer, Hewlett-Packard, IBM и Sun Microsystems, намереваются вторгнуться 
+  на этот рынок со всей мощью своих технических возможностей и каналов сбыта. 
+<p>Корпорация Hewlett-Packard анонсировала семейство новых компьютеров одной из 
+  первых. Серверы с кодовым наименованием PowerBar представлены моделью bh7800 
+  (шасси в корпусе для монтажа в 19-дюймовую стойку) и серверными модулями bc1100 
+  на основе процессора Pentium III. Вместе с этими моделями Hewlett-Packard будет 
+  поставлять модули сетевых коммутаторов, блоки из дисковых накопителей для расширения 
+  емкости хранения, а также модули управления. Линейка серверов PowerBar вызывает 
+  особый интерес благодаря примененным в ней конструкторским решениям и некоторым 
+  свойствам этого продукта. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2002/hp_blade/pict4.jpg" alt=Photo></td>
+<td valign="bottom">Серверы-&quot;лезвия&quot; 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p> 
+<h3>Рецепт от PowerBar </h3>
+<p>Вместо введения новых &quot;фирменных&quot; конструктивных параметров - как поступают 
+  многие компании, пытающиеся выразить себя в этом новом секторе рынка, - корпорация 
+  приняла на вооружение конструктивные нормы и средства выполнения межсоединений, 
+  определяемые стандартом Compact PCI (cPCI, <a href="http://www.picmg.org">http://www.picmg.org</a>). 
+  Этот стандарт не столь распространен в сравнении с вездесущим PCI, широко используемым 
+  при создании корпоративных серверов и оборудования для информационных центров; 
+  тем не менее он широко применяется в телекоммуникационном оборудовании и различных 
+  встроенных приложениях. 
+<p>Используя стандартный подход, получивший широкое признание у телекоммуникационного сообщества, Hewlett-Packard четко фиксирует рыночное позиционирование выпускаемых серверов. У корпорации накоплен большой и успешный опыт работы с телекоммуникационными компаниями, которые постоянно создают новые услуги и совершенствуют свою инфраструктуру. Это также оправданно, учитывая сильные позиции Hewlett-Packard в этой области благодаря таким продуктам, как OpenCall и OpenView.
+<p>Однако, выпустив модели семейства PowerBar, компания Hewlett-Packard нацеливается на реализацию более широкой номенклатуры модульных компьютерных устройств, чем это требуется для обслуживания потребностей телекоммуникационных компаний и поставщиков услуг. По мнению представителей корпорации, этот спектр шире, чем у большинства ее конкурентов, и охватывает не только серверы, но также дисковые системы хранения данных, сетевые коммутаторы и другие компоненты, которые также станут доступны в виде модульных блоков.
+<h3>Compact PCI - связующее звено </h3>
+<p>В массовых компьютерах стандарт Compact PCI встречается довольно редко. Однако, если взять системы, поддерживающие работу телекоммуникаций, военные, промышленные, медицинские и иные встраиваемые приложения, открывается совершенно иная картина. По имеющейся информации, например, в 2000 г. продуктов этого класса было продано на сумму более 500 млн долл., и эта цифра к 2004 г. может вырасти вчетверо.
+<p>Если первоначально стандарт cPCI формировался как просто более надежный вариант локальной шины PCI, столь популярной в корпоративных серверах, то со временем он был значительно расширен. Одно из подтверждений тому - набор спецификаций промышленного класса, определяющих требования к компоновке плат. Весьма распространенный размер 6U для плат cPCI больше габаритов аналогичных плат для шины PCI, что позволяет размещать большее число электронных компонентов и, следовательно, расширяет функциональные возможности. В этих платах применяются направляющие штырьки и захваты, благодаря которым плата очень надежно соединяется и удерживается в корпусе. Повышенной безопасностью характеризуются и электрические разъемные соединения, использующие интерфейс pin-in-socket, который не только значительно более долговечен и надежен, чем краевые разъемы традиционных плат PCI, но и имеет увеличенное число контактов (535), большая часть которых остается свободной и предназначается для последующих расширений стандарта. Некоторые из контактов этого разъема нашли удачное применение для реализации специфических требований приложения, таких как поддержка шины H.110, которая передает голосовой трафик TDM в телекоммуникационных приложениях. В самой последней версии спецификаций стандарта cPCI, версии 2.16, одобренной лишь в прошлом году, эти дополнительные выводы использованы весьма эффективно.
+<p>В версии 2.16 предусмотрено наложение поверх традиционной шины PCI сети на основе Ethernet - в терминологии cPCI это объединительная плата с функциями коммутации пакетов (Packet Switching Backplane, PSB). В результате получается встроенная системная сеть (Embedded System Area Network, ESAN), представляющая собой технологию Ethernet, как бы вживленную в шасси на основе технологии cPCI. Это удачное решение в плане развития возможностей системы, поскольку коммутируемый Ethernet (особенно его гигабитный вариант) значительно увеличивает общую ширину полосы пропускания в системе. Использование более сбалансированного протокола, чем PCI, также обеспечивает намного более эффективную изоляцию серверов и не допускает возникновения условий для отказа. Заметим, что все это достигается за счет применения распространенного сетевого стандарта, известного и принятого повсеместно.
+<p>Поддержка Ethernet реализована на основе стандартного шасси с шиной cPCI 2.16 и стандартных межсоединений - это структура, специально разработанная для модульных устройств, как раз и рассчитанных именно на такие возможности шасси и сети. На самом деле здесь &quot;новое - это хорошо забытое старое&quot;, поскольку технология cPCI для модульных серверов возвращает нас непосредственно к одноплатным компьютерам (Single Board Computer), которые были распространены лет десять назад, но сегодня присутствуют главным образом во встроенных системах. Модульные серверы тем самым дают новую жизнь технологии одноплатных компьютеров, возвращая их в ряды серийно выпускаемых компьютерных устройств.
+<p>В дополнение к двойной подсистеме 10/100/1000 Ethernet блок bh7800 поддерживает также соединение двойного Fibre Channel со скоростью 1 Гбит/с. Хотя модули первого выпуска не способны использовать все преимущества гигабитных вариантов Ethernet и Fibre Channel, компания Hewlett-Packard планирует реализовать их поддержку уже в этом году. В будущем специальные сетевые платы можно будет предлагать на рынке в качестве средств расширения возможностей шасси при организации сетей хранения данных.
+<p>Во многих отношениях механические спецификации, требования к питанию и компоновке плат для стандарта cPCI становятся более важными, чем оригинальная архитектура сигналов шины PCI. В телекоммуникационных применениях шина PCI традиционно дополняется специфическими шинами, такими как H.110. В конструкции модульных серверов традиционные компоненты PCI остаются в основном незадействованными, но, по мнению разработчиков, такова цена эволюции.
+<p>Истинно значимый атрибут cPCI - открытость и строгость его спецификаций. Этот факт привел к возникновению значительного числа компаний, разрабатывающих устройства для данного стандарта. При конструировании своих модульных серверов Hewlett-Packard перенесла в них и надеется поднять на новый уровень все достоинства платформы. Использование стандартной инфраструктуры не только устраняет необходимость разработки и изготовления очередного специализированного типа шасси, соединителей и т. п., но и позволяет не тратить время на разработку и изготовление компонентов, воспользовавшись готовыми. Аргументация здесь примерно такая. Кто-то уже сделал хороший корпус для шасси cPCI? Прекрасно - заключим с ними OEM-соглашение. Кто-то уже сподобился разработать модуль сетевого коммутатора? Отлично! Давайте приобретем лицензию на его изготовление. Никто еще не сделал модуль на основе процессора PA-RISC? Ну что ж, приложим некоторые усилия в этом направлении, а заказчики определенно заинтересуются такими модулями. Здесь слышен отголосок борьбы за стандартные компьютеры, собираемые из серийно выпускаемых готовых компонентов. Но этот принцип поднят на новый уровень - используются уже не исходные компоненты, а целые функциональные модули.
+<p>Среди готовящихся к выпуску модулей производства Hewlett-Packard, построенных на основе процессоров Intel и PA-RISC, есть устройства хранения, сетевые коммутаторы и устройства расширения. Однако ничто не мешает и другим поставщикам предлагать конкурентоспособные модули - самостоятельные или функционально дополняющие уже имеющиеся (рис. 2). Есть все основания полагать, что Hewlett-Packard поощряет других производителей к этому, для чего сотрудничает с несколькими компаниями в разработке устройств специфической функциональности, не свойственной Hewlett-Packard, таких как серверные приставки для реализации межсетевых экранов, устройств кэширования контента Интернет и виртуальных частных сетей (VPN).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2002/hp_blade/pict2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Четыре уровня функциональности серверов-&quot;лезвий&quot;. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Сразу после анонсирования новых серверов о поддержке новой концепции корпорации, 
+  основанной на открытых стандартах, заявили Accton Technology, Agilent Technologies, 
+  AMD, Amphus, Brocade, Diversified Technology, Ensim, F5 Networks, Force Computers, 
+  GDA Technologies, InfoValue, Inktomi, Intel, Oracle, OSA Technologies, PolyServe, 
+  Radisys, RealNetworks, Savastra Systems, SBS Technologies, ServerWorks, SonicWall, 
+  Transmeta и TurboLinux. 
+<p>Аналитики Gartner Group предупреждают, что отсутствие стандартов на серверы-&quot;лезвия&quot; может привести к сдерживанию развития рынка этих устройств. Если монтируемые в стойку серверы способны работать с оборудованием и ПО различных производителей, то с серверами-&quot;лезвиями&quot; ситуация иная.
+<p>&nbsp; 
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr> 
+    <td> 
+      <h3>Процессоры, заточенные под &quot;лезвия&quot; </h3>
+      <p>В конце прошлого года корпорация Intel (<a href="http://www.intel.com">http://www.intel.com</a>) 
+        анонсировала новую линейку продукции для формирующегося рынка сверхкомпактных 
+        серверов с низким уровнем энергопотребления. Линейку открыл процессор 
+        Pentium III (ядро Tualatin) со сверхнизким энергопотреблением - с тактовой 
+        частотой 700 МГц и встроенной в кристалл кэш-памятью емкостью 512 Кбайт. 
+        Процессор работает при сверхнизком напряжении 1,1 В. Одновременно был 
+        представлен набор микросхем системной логики Intel 440GX, надежность и 
+        высокая производительность которого, столь необходимые для серверной продукции, 
+        обеспечиваются применением кода коррекции ошибок и поддержкой системной 
+        памяти большой емкости (до 2 Гбайт). 
+      <p>В начале этого года Intel представила версию серверных процессоров Pentium 
+        III с тактовой частотой 1,40 ГГц и кэш-памятью 2-го уровня емкостью 512 
+        Кбайт. Процессор, изготавливаемый с соблюдением проектных норм 0,13 мкм, 
+        предназначен для серверов со сверхвысокой плотностью компоновки. Наращиванию 
+        производительности при одновременном снижении энергопотребления способствует 
+        и использование технологии высокоскоростных медных соединений вместо алюминиевых, 
+        что повышает скорость передачи данных внутри процессора. По сравнению 
+        с предшествующей технологией 0,18-мкм экономия энергии, потребляемой процессорами 
+        Intel, которые изготовлены по 0,13-мкм технологии, достигает 40%, а прирост 
+        быстродействия - 20%. 
+    </td>
+  </tr>
+</table>
+<h3>Шасси и модули </h3>
+<p>Как же выглядят серверные модули от Hewlett-Packard? Прежде всего следует провести различие между корпусом - маркировка bh7800 (он же шасси) и индивидуальными модульными серверами - маркировка bc1100 (рис. 3). Шасси bh7800 - это корпус высотой 13U для установки в стандартную 19-дюймовую стойку. В нем может располагаться до 16 серверных модулей (серверов-&quot;лезвий&quot;), а также сдвоенные (резервированные) сетевые коммутаторы, платы управления и платы ввода-вывода. В конструкции корпуса использованы выдвижные передние и задние панели, а также блоки питания и вентиляторы, которые характеризуются избыточностью N+1 и возможностью горячего подключения и замены.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No5_2002/hp_blade/pict3.jpg" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Модуль bc1100. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>На первый взгляд размещение 16 серверов в пространстве 13U не выглядит таким 
+  уж значительным преимуществом в сравнении с системой, построенной на основе 
+  тонких серверов высотой 1U каждый. Система из 16 тонких серверов займет от 18 
+  до 16 единиц плюс 2U для сетевых коммутаторов (в модульном варианте они располагаются 
+  в основном блоке, а для тонких серверов являются внешними). Но в шасси для модульных 
+  серверов Hewlett-Packard располагаются, кроме серверов, 16 модулей ввода-вывода, 
+  два сетевых модуля и модуль управления. 
+<p>Далее, плотность размещения компьютерных систем в стандартной 19-дюймовой стойке часто измеряют в единицах высоты передней панели устройств - U (1U = 1,75 дюйма = 4,445 см), но это линейная единица, в то время как плотность по определению связана с занимаемым объемом. Это означает, что в большинстве случаев, говоря о плотности размещения оборудования, не учитывают глубину стойки, т. е. предполагается, что используется обычный 19-дюймовый шкаф глубиной 36 дюймов. Так, тонкие серверы характеризуются глубиной 24-26 дюймов и требуют стойки глубиной как минимум 30 дюймов, чтобы обеспечить место для прокладки и распределения сетевых, питающих и иных кабелей, поэтому большинство тонких серверов помещают в еще более глубокие стойки - до 36 дюймов. Но bh7800 имеет глубину всего 18 дюймов, т. е. по глубине занимает в два раза меньше места, что позволяет использовать менее громоздкие стойки. Если заняться подсчетами, то можно обнаружить, что модульные серверы-&quot;лезвия&quot; занимают порядка 36% от объема, необходимого для обычных тонких серверов.
+<p>В полностью заполненной стандартной 19-дюймовой стойке высотой 48U можно разместить 
+  до 48 модульных серверов Hewlett-Packard в трех отдельных шасси. Это всего на 
+  26% больше, чем в альтернативном варианте из 38 тонких серверов высотой 1U, 
+  но общая площадь, занимаемая оборудованием, и объем, занимаемый собственно модулями-&quot;лезвиями&quot;, 
+  значительно меньше (таблица). 
+<h4>Серверные модули против тонких серверов</h4>
+<table width="100%" border="1" bordercolor="#000099">
+  <tr> 
+    <td rowspan="2">&nbsp;</td>
+    <td rowspan="2">Модули Hewlett-Packard (Blades)</td>
+    <td colspan="2">Тонкий сервер высотой 1U</td>
+  </tr>
+  <tr> 
+    <td>Типовой однопроцессорный</td>
+    <td>Двухпроцессорный</td>
+  </tr>
+  <tr> 
+    <td>Всего серверов</td>
+    <td>48</td>
+    <td>38</td>
+    <td>38</td>
+  </tr>
+  <tr> 
+    <td>Всего процессоров</td>
+    <td>48*</td>
+    <td>38</td>
+    <td>76</td>
+  </tr>
+  <tr> 
+    <td>Общая высота </td>
+    <td>39U</td>
+    <td>38U</td>
+    <td>38U</td>
+  </tr>
+  <tr> 
+    <td>Сетевые коммутаторы</td>
+    <td>- **</td>
+    <td>4U</td>
+    <td>4U</td>
+  </tr>
+  <tr> 
+    <td>Свободное пространство в стойке </td>
+    <td>3U</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr> 
+    <td colspan="4"> 
+      <p>* Этот показатель возрастет, когда (предположительно к середине 2002 
+        г.) HP начнет выпуск двухпроцессорных модулей на основе процессоров PA-RISC 
+        или Pentium. 
+      <p>** Поскольку на шасси Hewlett-Packard уже имеются сетевые коммутаторы, 
+        они не увеличивают занимаемое оборудованием место в стойке. 
+    </td>
+  </tr>
+</table>
+<p>Это достаточно высокая плотность, однако, оставив в стороне маркетинговую риторику, 
+  можно указать и на иные роли и преимущества модульных серверов. Кабели, кабели 
+  и еще раз кабели. Кабельное хозяйство (а чаще - отсутствие хорошего решения 
+  в этой сфере) отравляет жизнь многим руководителям ИТ-служб. Если вид спереди 
+  на стойку, заполненную тонкими серверами, - это просто верх элегантности в дизайне 
+  компьютерного оборудования, то вид сзади (особенно у непосвященных) заставляет 
+  сердце сжиматься от ужаса при взгляде на путаницу змеящихся в разных направлениях 
+  разноцветных проводов - шнуров питания, сетевых кабелей, кабелей, соединяющих 
+  дисковые подсистемы, кабелей для клавиатуры, дисплея и мыши. Специалисты хорошо 
+  знают, что конфигурировать современную серверную стойку далеко не просто, однако 
+  еще сложнее поддерживать ее работоспособность после многочисленных замен, дополнений 
+  и изменений назначения ее элементов. И здесь концептуально простой акт физической 
+  разводки кабелей превращается в головоломный секрет, присущий вычислительным 
+  системам с высокой плотностью размещения оборудования. Вот почему свободная 
+  от путаницы кабелей задняя панель систем модульных серверов значительно облегчает 
+  установку и управление такими комплексами, не говоря уже о повышении надежности 
+  и снижении эксплуатационных расходов, поскольку в них нет места ошибочным отключениям 
+  севых кабелей или кабелей питания. Время, требуемое для изменения конфигурации, 
+  может сократиться весьма существенно. Да, одно лишь это преимущество в управлении 
+  кабельным хозяйством и его физической консолидации способно оправдать затраты, 
+  связанные с переходом на такую систему. 
+<h3>Модули </h3>
+<p>Первые модули, выпущенные компанией Hewlett-Packard под маркой bc1100, - это платы cPCI размером 6U. Хотя такой модуль весит всего примерно 900 г, он представляют собой законченный сервер Intel-архитектуры (без блока питания, вентиляторов и корпуса). В каждом таком модуле используется процессор Pentium III (Coppermine) с частотой ядра 700 МГц и до 512 Мбайт оперативной памяти ECC RAM (в одном слоте типа DIMM); кроме того, в них имеется локальный жесткий диск емкостью 30 Гбайт.
+<p>Чтобы свести к минимуму размеры и потребляемую мощность, для этих модулей выбираются жесткие диски, предназначенные для переносных компьютеров, т. е. с интерфейсом IDE и скоростью вращения шпинделя 4200 об./мин. И хотя этих параметров вполне достаточно для того, чтобы проводить начальную загрузку, хранить файлы приложений и выполнять многие задачи работы с файлами (что часто имеет место, скажем, в Web-серверах), этого явно недостаточно для формирования высокопроизводительной дисковой подсистемы. К середине этого года Hewlett-Packard планирует выпустить модули дисковых подсистем, построенные на основе более быстродействующих дисков с интерфейсом Fibre Channel, а также двухпроцессорные модули на основе процессоров Intel Pentium или PA-RISC, что значительно изменит общую картину.
+<p>В каждом блоке bc1100 предусматривается выделенная плата дистанционного управления и процессор обслуживания. В первоначальном исполнении эти устройства крепились как навесные элементы, что позволило HP быстро выйти на рынок, используя лишь готовые компоненты. В будущих версиях вся эта функциональность будет реализована на одном кристалле. Для тех, кому не подходит управление модулями при помощи локальной сети (или кто не может этого сделать из-за какой-либо неисправности), bc1100 предоставляет возможность воспользоваться прямыми KVM-портами (это видеопорт SVGA, последовательный порт мини-RS232 и два USB-порта), расположенными на передней панели.
+<p>Модули Hewlett-Packard соответствуют спецификациям на устройства горячей замены PICMG 2.1 Hot Swap, и в них имеются электронные датчики, фиксирующие момент физического удаления модуля из шасси или его подключения. Поскольку основное соединение для каждой платы - Ethernet, такая конструкция обеспечивает чрезвычайно высокую степень разделения и изолированности различных модулей, находящихся на одном и том же шасси. Ситуация, при которой один из модулей окажет неблагоприятное воздействие на работу соседнего, практически исключена. Здесь, конечно, не рассматриваются ситуации возникновения пожара или образования огромной электрической дуги, что весьма маловероятно.
+<p>Со стороны, противоположной отсеку с серверными модулями, имеется место для размещения дополнительных IDE-дисков - по два на каждый серверный модуль. Поскольку дисковые модули используют проходные функции шины cPCI, они должны располагаться непосредственно напротив соответствующих серверных модулей - это ограничение требует от персонала внимательности при установке модулей в физические гнезда. Учитывая, что платы бывает необходимо добавлять как с фронтальной, так и с тыльной части корпуса, важно предусмотреть в помещении достаточно места, чтобы обеспечить свободный доступ как спереди, так и сзади.
+<p>Хотя в каждом блоке bh7800 может находиться множество разнотипных модулей, их трудно перепутать благодаря цветовой кодировке. Так, светло-голубой цвет указывает на серверный модуль, а вот светло-фиолетовый - на дисковую подсистему. Свои цвета назначены сетевым коммутаторам и модулям управления.
+<h3>Продвигаясь вперед </h3>
+<p>К настоящему времени номенклатура модулей для этой платформы уже достаточно широка, однако со временем их станет намного больше. Первоначально большинство модулей будут подключаться к локальным коммутаторам через порты 10/100 Ethernet, а связь с внешними устройствами пойдет через гигабитный Ethernet. Однако в рамках стандарта cPCI уже определены возможности сетевых подключений, которые требуются каждому модулю для связи через Gigabit Ethernet и Fibre Channel, поэтому создаваемые в будущем продукты смогут воспользоваться этими усовершенствованными функциями в сетевых коммутаторах и других платах. В скором времени ожидается появление модулей на основе InfiniBand, хотя для полной поддержки IB потребуется очередная версия стандарта cPCI (известная пока как 3.0).
+<p>При наличии стандартизованного шасси и межсоединений следует ожидать появления множества разнообразных по назначению модулей как от Hewlett-Packard, так и от других фирм-производителей.
+<p>В разработке находятся модули PA-RISC, которые появятся в первой половине года. Не будет неожиданностью появление модулей на основе более быстрых процессоров Pentium, Intel-совместимых процессоров от AMD и Transmeta, а также альтернативных RISC-процессоров, таких как PowerPC, MIPS и SPARC. Можно ожидать, что модульные серверы будут все интенсивнее интегрироваться в такие специализированные решения, как телефонные системы частного пользования и коммутаторы. За пределами корпоративного применения и инфраструктуры сетей и телекоммуникаций модульные серверы на основе cPCI хорошо подходят для множества встраиваемых приложений, включая промышленные системы мониторинга и управления.
+<p>Выбранный Hewlett-Packard стандарт cPCI и конструктивное решение на его основе оптимизированы для применения в сфере телекоммуникаций. Это решение также совместимо со стандартом Network Equipment Building Standard (NEBS), что позволяет развертывать его как в головных офисах, так и в телефонных стойках, расположенных в удаленных подразделениях предприятия. Телекоммуникационные компании заинтересованы в расширении возможностей своего оборудования и развитии своих сетевых услуг, поэтому перспективы систем типа PowerBar на этом рынке весьма благоприятны.
+<p>И хотя конструкция систем PowerBar выглядит весьма &quot;телекомовской&quot;, нет никаких 
+  причин, не позволяющих адаптировать оборудование на основе cPCI для корпоративных 
+  приложений и поставщиков услуг Интернета. Короткое время выхода продукта на 
+  рынок и возможность пользоваться услугами разнообразных поставщиков - факторы, 
+  привлекательные практически для всех заказчиков. Консолидация парка серверов 
+  без внесения неразберихи в кабельное хозяйство и работу всего предприятия может 
+  также стать достаточно веским резоном. 
+<p>&nbsp; 
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td bgcolor="#99FFFF"> 
+      <h3>&quot;Лезвия&quot; и Linux </h3>
+      <p>По мнению экспертов, ОС Linux, предъявляющая весьма скромные требования 
+        к объему дисковой и оперативной памяти и лучше прочих использующая ресурсы 
+        процессора, - это наилучший выбор для серверов-&quot;лезвий&quot;, от которых требуется 
+        универсальность и масштабируемость при работе в условиях жестких ограничений 
+        на энергопотребление. По имеющимся данным, под управлением ОС Linux работает 
+        около 30% всех Web-серверов в Интернете и 60% серверов, располагающихся 
+        на границах между сетями. 
+      <p>Для управления ресурсами серверов-&quot;лезвий&quot; Hewlett-Packard предоставляет 
+        заказчикам решения сетевого управления, работающие в среде Linux. Эти 
+        решения реализуют надежные и удобные в обслуживании системы, способствующие 
+        укреплению постоянно функционирующей инфраструктуры Интернета. При помощи 
+        системных и управляющих инструментов, таких как HP OpenView, MC/ServiceGuard 
+        и HP Toptools, заказчики получают возможность создавать вычислительные 
+        системы с интегрированным мониторингом и простым управлением всеми вычислительными, 
+        дисковыми, программными и сетевыми ресурсами существующей инфраструктуры. 
+      <p>Hewlett-Packard планирует поддерживать ряд дистрибутивов Linux, в первую 
+        очередь Red Hat, SuSE и Debian. Намечен также выпуск серверов, поддерживающих 
+        ОС Microsoft и HP-UX.
+    </td>
+  </tr>
+</table>
+
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8495.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Cерверы-&amp;quot;лезвия&amp;quot; Hewlett-Packard
+</a><br><a href="detail.php@ID=8495.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Андрей Борзенко 
+Способы конструктивного исполнения серверов, применявшиеся в течение последних нескольких лет и базирующиеся на использовании&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8495.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8495&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='02dad76418f5d2facdc8740313d90708'><img src='../bitrix/tools/captcha.php@captcha_code=02dad76418f5d2facdc8740313d90708' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

@@ -1,0 +1,580 @@
+<HTML>
+<HEAD>
+<title>Базовые технологии мультисервисных сетей
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Рост популярности мультисервисных сетей связи - одна из самых заметных тенденций российского рынка телекоммуникационных услуг в последние годы. Услуги такой сети в первую очередь предназначены для компаний, ориентированных на интенсивное развитие" />
+<meta name="description" content="Рост популярности мультисервисных сетей связи - одна из самых заметных тенденций российского рынка телекоммуникационных услуг в последние годы. Услуги такой сети в первую очередь предназначены для компаний, ориентированных на интенсивное развитие" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398077521','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13246.html'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13654.html'>Технологии ABBYY обеспечивают оперативный доступ к архивным документам</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8788' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8788&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8788"].SHOW_IMAGE.value="N"; document.forms["PrintForm8788"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8788"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8788"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8788);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8788.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8788.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8788);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a>, <a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><br /></p><a href='../numbers/index.php@ID=11507.html'>№6 (94), июнь 2006</a><h1>Базовые технологии мультисервисных сетей
+</h1>Автор: Владислав Шаров<br />16.06.2006<p></p><DIV class='article-text'><p>Рост популярности мультисервисных сетей связи - одна из самых заметных тенденций российского рынка телекоммуникационных услуг в последние годы. Услуги такой сети в первую очередь предназначены для компаний, ориентированных на интенсивное развитие бизнеса, оптимизацию затрат, автоматизацию бизнес-процессов, современные методы управления и обеспечение информационной безопасности. Наиболее эффективное применение мультисервисные сети могут найти у традиционных телекоммуникационных операторов, которые таким образом значительно расширяют гамму предоставляемых услуг. Для корпоративного рынка объединение всех удаленных подразделений в единую мультисервисную сеть на порядок увеличивает оперативность обмена информацией, обеспечивая доступность данных в любое время. Благодаря возможности обмениваться большими объемами данных между офисами можно устраивать селекторные совещания и проводить видеоконференции с отдаленными подразделениями. Все это ускоряет реакцию на изменения, происходящие в компании, и обеспечивает оптимальное управление всеми процессами в реальном масштабе времени.
+<p>Мультисервисная сеть представляет собой универсальную многоцелевую среду, предназначенную для передачи речи, изображений и данных с использованием технологии коммутации пакетов (IP). Она отличается надежностью, характерной для телефонных сетей (в противоположность негарантированному качеству связи через Интернет), и обеспечивает низкую стоимость передачи в расчете на единицу объема информации (приближающуюся к стоимости передачи данных по Интернету). Вообще говоря, основная задача мультисервисных сетей заключается в том, чтобы обеспечить работу разнородных информационных и телекоммуникационных систем и приложений в единой транспортной среде, когда для передачи и обычного трафика (данных), и трафика другой информации (речи, видео и т. д.) используется единая инфраструктура.
+<p>Мультисервисная сеть открывает массу возможностей для построения многообразных наложенных сервисов поверх универсальной транспортной среды - от пакетной телефонии до интерактивного телевидения и Web-сервисов. Сеть нового поколения имеет следующие особенности:
+<ul><li>универсальный характер обслуживания разных приложений;
+<li>независимость от технологий услуг связи и гибкость получения набора, объема и качества услуг;
+<li>полная прозрачность взаимоотношений между поставщиком услуг и пользователями.</ul>
+<p>Интеграция трафика разнородных данных и речи позволяет качественно повысить эффективность информационной поддержки управления предприятием; при этом использование интегрированной транспортной среды снижает издержки на создание и эксплуатацию сети. Мультисервисная сеть, используя единый канал для передачи данных разных типов, дает возможность уменьшить разнообразие типов оборудования, применять единые стандарты и технологии, централизованно управлять коммуникационной средой. Мультисервисные сети поддерживают такие виды услуг, как телефонная и факсимильная связь; выделенные цифровые каналы с постоянной скоростью передачи; пакетная передача данных (FR) с требуемым качеством сервиса; передача изображений, видеоконференцсвязь; телевидение; услуги по требованию (On-Demand); IP-телефония; широкополосный доступ в Интернет; сопряжение удаленных ЛВС, в том числе работающих в различных стандартах; создание виртуальных корпоративных сетей, коммутируемых и управляемых пользователем.
+<p>Надо отметить, что мультисервисные сети - это скорее технологическая доктрина или новый подход к осознанию сегодняшней роли телекоммуникаций, основанный на понимании того, что компьютер и данные сегодня выходят на первое место по сравнению с речевой связью. Эта модель бизнеса, построенная на основе широкополосных сетей связи следующего поколения, позволяет предоставлять очень широкий набор услуг и дает гибкие возможности создавать их, управлять ими и персонализировать. Основные отличия таких сетей состоят в следующем:
+<ul><li>возможность передачи большому количеству пользователей в реальном времени очень больших объемов информации с необходимой синхронизацией и с использованием сложных конфигураций соединений;
+<li>интеллектуальность (управление услугой, вызовом и соединением со стороны пользователя или поставщика сервиса, раздельная тарификация и управление условным доступом);
+<li>инвариантность доступа (организация доступа к услугам независимо от используемой технологии);
+<li>комплексность услуги (возможность участия нескольких провайдеров в предоставлении услуги и разделение их ответственности и дохода сообразно с видом деятельности каждого).</ul>
+<p>Основные проблемы, ограничивающие сегодня распространение широкополосного доступа, а значит, и внедрение мультисервисных сетей, заключаются в том, что это требует значительных инвестиций в отрасль. Кроме того, в нашей стране отсутствует мощная многогигабитная магистральная инфраструктура и слабо развиты абонентские сети. Необходимо полное изменение бизнес-модели для операторов, а огромная территория и неравномерность расселения требуют внимательного подбора технологий (и их комбинации) в зависимости от географии и населенности конкретного региона. Не следует забывать и о "пиратстве", а также обеспечении прав владения через IP. Ведь борьба с мошенничеством требует бизнес-модели, основанной на продаже контента, со сложными системами управления, контроля доступа и тарификации.
+<p>Круг потенциальных пользователей мультисервисных сетей весьма широк. Это, во-первых, бизнес-центры, фирмы, расположенные в одном здании. Корпоративным клиентам необходимо множество телефонных линий, высокоскоростной доступ в Интернет, системы аудио- и видеоконференцсвязи, сигнализации и телеметрии. Это также крупные холдинги, имеющие территориально удаленные филиалы и подразделения, это компании, использующие удаленные автоматические терминалы (банкоматы, торговые автоматы). Это системы телемедицины разного уровня и компании мобильной связи, распределенные офисы, коммутационные центры и базовые станции которых также могут подключаться к единой мультисервисной сети.
+<p>Базовыми понятиями для мультисервисных сетей выступают QoS (Quality Of Service) и SLA (Service Level Agreement), т. е. качество обслуживания и соглашение об уровне (качестве) предоставления услуг сети. Переход к новым мультисервисным технологиям изменяет саму концепцию предоставления услуг, когда качество гарантируется не только на уровне договорных соглашений с поставщиком услуг и требований соблюдения стандартов, но и на уровне технологий и операторских сетей. Архитектурно в структуре мультисервисной сети можно выделить несколько основных уровней: магистральный, уровень распределения и агрегирования и уровень доступа. Магистральный уровень представляет собой универсальную высокоскоростную и по возможности однородную платформу передачи информации, реализованную на базе цифровых телекоммуникационных каналов. Уровень распределения включает узловое оборудование сети оператора, а уровень агрегирования выполняет задачи агрегации трафика с уровня доступа и подключения к магистральной (транспортной) сети. Уровень доступа включает корпоративные или внутридомовые сети, а также каналы связи, обеспечивающие их подключение к узлу (узлам) распределения сети.
+<p>Мультисервисные сети можно строить на базе самых разных технологий, как на платформе IP (IP VPN), так и на основе выделенных каналов связи. На магистральном уровне наиболее популярны сегодня технологии IP/MPLS, Packet over SONET/SDH, POS, ATM, xGE, DWDM, CWDM, RPR. Реально большая часть магистральных мультисервисных сетей сегодня строится на основе технологий POS, DWDM, которые получили заметное распространение в России, а также IP/MPLS, которые считаются особенно перспективными при значительной широте охвата и большом числе потребителей.
+<h3>Технология MPLS </h3>
+<p>Основой технологии многопротокольной коммутации по меткам - MPLS (MultiProtocol Label Switching) послужили разработки компаний Ipsilon (IP Switching), Cisco (Tag Switching) и IBM (ARIS), а также предложения ряда разработчиков, направленные на создание средств управления трафиком в неориентированных на соединение сетях, к которым, как известно, относятся и IP-сети. Последние на сегодняшний день остаются главным объектом приложения технологии MPLS, поскольку стали магистральным направлением развития корпоративной и глобальной телекоммуникационной инфраструктуры. Некоторые эксперты даже считают, что современное состояние данной технологии позволяет называть ее IPLS, т. е. IP-коммутация по меткам.
+<p>Технология MPLS часто используется для построения виртуальных корпоративных IP-сетей (IP VPN) на третьем уровне ЭМВОС ("Эталонная модель взаимодействия открытых систем") в соответствии со спецификациями RFC 2547. В таких сетях каждому IP-пакету присваивается специальная метка, определяющая его маршрут и приоритет. В результате операторы телекоммуникационных сетей могут предоставлять в IP VPN такие классы обслуживания (CoS), которые дают возможность использовать их для транспорта изохронного трафика, например, телефонного. Операторы, внедрившие MPLS в своих сетях, а также представители компании Cisco утверждают, что уже сегодня технология MPLS превращает контролируемые оператором IP-сети в надежную, предсказуемую и управляемую инфраструктуру, не уступающую по этим параметрам сетям АТМ и Frame Relay (FR).
+<p>Основная идея разработчиков технологии MPLS заключалась в создании механизмов, обеспечивающих ускоренную передачу пакетов по наименее загруженным маршрутам IP-сети. При этом, в отличие от постоянных виртуальных каналов (PVC) сетей ATM и FR, которые жестко фиксируются, коммутируемые по меткам пути (Label Switched Path, LSP) могут меняться в зависимости от состояния сети и загруженности отдельных ее узлов или каналов. Таким образом, с помощью MPLS решается проблема непредсказуемости задержек в IP-сети.
+<p>Рассмотрим коротко принцип работы технологии коммутации по меткам в сетях, отвечающих спецификациям RFC 2547. В точке входа в такую сеть пограничные маршрутизаторы (коммутаторы) - обычно их называют Label Edge Router (LER) или Provider Edge router (PE) - определяют, какие услуги третьего уровня модели ЭМВОС необходимы входящим IP-пакетам (например, предоставление QoS или управление полосой пропускания). В зависимости от этих требований, а также с учетом пункта назначения устройства маркируют IP-пакеты специальными метками. Действия, требующие больших процессорных мощностей (анализ, классификация и фильтрация), выполняются только один раз, в точке входа. Опорные устройства сети MPLS - обычно их называют Label Switch Router (LSR) или Provider router (P) - продвигают пакеты только на основе меток и не анализируют заголовки IP-пакетов. В точке выхода из MPLS-сети метки удаляются.
+<p>При перемещении пакета по сети опорные устройства составляют таблицы маршрутизации, связывающие пакеты и указанный маршрут с метками. LSR считывают метки каждого пакета и заменяют их новыми в соответствии со своей таблицей маршрутизации. Затем пакеты передаются дальше. Эта операция повторяется при прохождении каждого LSR. Все пакеты, имеющие одинаковые метки, передаются по одному LSP. При этом, как уже упоминалось, в зависимости от состояния и загруженности сети LSP могут проходить по разным маршрутам.
+<p>На сегодняшний день технология MPLS наиболее широко применяется для построения виртуальных корпоративных IP-сетей. От других способов создания VPN (например, на базе ATM/FR или IPSec) она отличается легкостью добавления новых узлов виртуальной сети и естественной совместимостью с другими IP-сервисами, которые все чаще находят спрос у корпоративных пользователей, - это доступ в Интернет, электронная почта, хостинг и аренда приложений. Технология MPLS решает еще одну очень важную для корпоративного пользователя задачу - она, подобно технологиям ATM и FR, позволяет четко обособлять друг от друга виртуальные корпоративные IP-сети.
+<h3>Классы решений в области OSS/BSS-систем </h3>
+<p>При большом числе пользователей в мультисервисной сети необходима сложная и интеллектуальная система управления. В сети одновременно передается множество разных видов трафика, причем для каждого из них требуется безусловное соблюдение одних параметров, но допускаются более или менее серьезные уступки по другим, следовательно, не обойтись без специализированных средств, не допускающих перегрузки сети и нарушения требуемого качества. Сеть должна самостоятельно устранять перегрузки, автоматически решая, чем можно пожертвовать в разных случаях - шириной полосы пропускания, временем доставки или (для отдельных потоков) целостностью информации.
+<p>При игнорировании требований управляемости и мониторинга состояния владельцы сети могут столкнуться с серьезными трудностями, сопровождающимися критичными для бизнеса сбоями и серьезными финансовыми потерями. Чтобы предоставлять новые услуги, обеспечивать их необходимое качество, правильно их распределять и маршрутизировать, очень важно, чтобы без ошибок принимались все необходимые данные, вне зависимости от технологии и типа оборудования. В качестве систем мониторинга и управления сетью используются средства диагностики, представляющие собой мощные инструменты (функции анализа протоколов, контроля плана маршрутизации и т. п. в современных коммутаторах), а также программные системы OSS/BSS (Operation Support Systems/Business Support Systems).
+<p>Некоторые эксперты полагают, что, несмотря на кажущуюся новизну области OSS, сами принципы, концепции и понятия, связанные с этими системами, отнюдь не новы. Системы поддержки функционирования предприятий связи (OSS) представляют собой существенное расширение давно известной концепции построения глобальных систем управления TMN (Telecommunications Management Network), очень популярной в 90-е годы. Прогресс в области компьютеров, развертывание компьютерных сетей, переход к высокоскоростным системам передачи и коммутации, создание значительных информационных ресурсов развитых стран - все это кардинально преобразило современный деловой мир. По мере того как часть функций управления и обслуживания деятельности предприятий перекладывалась на плечи машин, формировалась концепция глобальной системы управления предприятиями - BSS, в основу которой легли различные методы оптимизации процессов на предприятии. Однако данная концепция не была чисто телекоммуникационной, поскольку для нее не имеет значения, о каких процессах идет речь, важна лишь их оптимизация. Поэтому системы BSS начали внедряться во многих отраслях современной экономики, оптимизируя банковскую сферу, транспортные издержки, поставки сырья и т. п. Усиление централизованного контроля, неизбежное при внедрении BSS, как нельзя лучше отвечает специфике современной глобализации и укрепления роли транснациональных компаний, для управления которыми потребовались автоматизированные системы, - и концепция BSS оказалась весьма кстати.
+<p>Для управления технологией, устройствами передачи и коммутации, сегментами сетей, ресурсами оператора была сформулирована концепция TMN, цель которой заключалась в повышении эффективности работы сети, а не операторской компании как предприятия. Разработчики систем управления в телекоммуникациях объединили задачи управления бизнесом и управления сетью. Так на стыке двух задач родилась концепция OSS, которая, с одной стороны, содержала все наработки TMN, с другой - обеспечивала жесткую экономическую связку BSS/OSS, с третьей - добавляла к ним новые тенденции, опыт и некоторые качественные дополнения, которые всегда сопутствуют синтезу двух независимых идей.
+<p>Современные системы OSS/BSS содержат множество модулей (классов) и подсистем, направленных на решение различных бизнес-задач. Сочетание разных классов с корпоративными информационными системами (CRM, HelpDesk и т. д.) обеспечивает необходимую функциональность для решения конкретных вопросов.
+<p><b>Mediation Device</b> (Уровень сопряжения) позволяет интегрировать OSS/BSS-решения 
+  с разнородным активным оборудованием разных производителей. Уровень сопряжения 
+  обеспечивает надежное двустороннее взаимодействие между всеми элементами информационно-технической 
+  инфраструктуры вне зависимости от их сложности и степени разнородности. Уровень 
+  сопряжения служит основой построения любой современной системы управления сетью. 
+  Без него невозможно полноценное функционирование других классов OSS/BSS-решений, 
+  реализующих более высокие уровни иерархии управления телекоммуникационными ресурсами. 
+<p><b>Inventory Management</b> (Управление инвентаризацией) - это единое хранилище 
+  данных обо всех аспектах функционирования телекоммуникационной сети. Inventory 
+  Management представляет собой мощное и удобное средство для оперативного и эффективного 
+  управления инвентаризацией телекоммуникационных ресурсов компании. Вся информация 
+  инфраструктурного характера представлена здесь в широком спектре форматов, что 
+  позволяет интегрировать решение с другими информационными системами. В режиме 
+  реального времени персонал компании может в соответствии с делегированными ему 
+  правами доступа отслеживать и изменять топологию сети, настраивать конфигурацию 
+  физического оборудования, планировать и управлять логическими ресурсами сети. 
+<p><b>Performance management</b> (Управление производительностью) - этот класс 
+  решений улучшает производительность и эффективность работы телекоммуникационных 
+  сетей и информационных систем. Решения класса Performance Management оптимизируют 
+  конфигурацию сети, распределяют нагрузку между различными ресурсами и способствуют 
+  планированию развития сети. Внедрение решений для управления производительностью 
+  позволяет получить максимальную отдачу от текущих и будущих инвестиций. Благодаря 
+  оптимальному использованию ресурсов растет доходность инвестиций (ROI) и уровень 
+  дохода в расчете на одного клиента или пользователя сети. 
+<p><b>Routing Management</b> (Управление маршрутной информацией в IP-сетях) - 
+  мониторинг процессов маршрутизации в сети, сопряженный со сбором, обработкой 
+  и хранением информации о состоянии процессов маршрутизации. Обработка информации 
+  происходит в реальном времени, что позволяет контролировать состояние маршрутизации 
+  в сети, анализировать ее поведение по историческим данным и прогнозировать состояние 
+  маршрутизации в различных условиях. 
+<p><b>Fault Management & Trouble Ticketing</b> (Регистрация и управление неисправностями) 
+  - это решение эффективно управляет процессом поиска и исправления неисправностей. 
+  Функциональные возможности решения обеспечивают полную поддержку жизненного 
+  цикла устранения неисправностей: подбирается, систематизируется и хранится информация 
+  о каждой возникшей проблеме, о способах и этапах ее решения, о текущем состоянии 
+  дел. Внедрение решения Trouble Ticketing значительно сокращает сроки ремонтных 
+  работ в сети. При этом система предоставляет руководству и персоналу расширенные 
+  средства составления отчетов. Решения класса Fault management относятся к так 
+  называемым зонтичным системам управления, они обеспечивают двустороннее взаимодействие 
+  с автономными системами управления активным оборудованием разных поставщиков. 
+  Данный класс решений позволяет создать интегрированную систему управления, включающую 
+  решения для HelpDesk и CRM, что существенно упрощает управление телекоммуникационными 
+  ресурсами компании и их обслуживание, а также уменьшает совокупную стоимость 
+  владения. 
+<p><b>Order Management</b> (Управление заказами) - решение применяется для поддержки 
+  бизнес-процессов телекоммуникационных услуг любого типа: фиксированная связь, 
+  передача данных, беспроводная связь, IP и интегрированные речевые услуги. Система 
+  отслеживает все этапы исполнения заказа на протяжении всего его жизненного цикла. 
+  Одновременно она может создавать детальные отчеты о каждом этапе выполнения 
+  заказа, а также о процессе обработки заказов в целом. Решение для управления 
+  заказами позволяет управлять как внешними, так и внутренними услугами. При этом 
+  поддерживается ссылка на источник заказа или на пункт его назначения (доставки). 
+  Источник заказа может располагаться на стороне клиента, например, в случае активации 
+  услуги. В его роли может выступать также внутренний отдел компании. 
+<p><b>Fraud Management</b> (Борьба с мошенничеством) - это решение предназначено 
+  для операторов связи, и его основные функции заключаются в обнаружении, пресечении 
+  и упреждении случаев мошенничества с ресурсами оператора. Система отслеживает 
+  нарушителя с помощью механизмов и алгоритмов, специально разработанных для разных 
+  типов соединений и услуг, и реагирует на случаи вызова подозрительного номера, 
+  несуществующего пользователя, вызова с превышением порога стоимости или продолжительности, 
+  а также на иные виды и типы мошенничества. Комплексная система борьбы с мошенничеством 
+  не только своевременно информирует оператора о запросе недобросовестного клиента, 
+  но и способствует выявлению закономерностей в действиях мошенников. Это решение 
+  позволяет выработать механизм защиты от мошенничества, а также оптимально распределить 
+  задачи между аналитиками и другим персоналом компании. Если организовать взаимодействие 
+  решения Fraud Management с CRM-системой, то обнаружить и предотвратить мошенничество 
+  удается в самые короткие сроки. Это создает безопасную среду для внутренних 
+  и внешних пользователей услуг. 
+<p><b>SLA management</b> (Управление уровнем сервиса) обеспечивает компании повышение 
+  доходов за счет оперативного мониторинга информационных сервисов, предоставляемых 
+  внешним и внутренним пользователям. Объективный и своевременный контроль качества 
+  услуг избавляет оператора от выплаты компенсаций клиентам в связи с нарушением 
+  соглашения об уровне сервиса (Service Level Agreement). Документ содержит показатели 
+  работы сети и информационной системы, которые задают необходимый уровень качества 
+  сервиса. Если соглашение заключено с внутренним ИТ-подразделением, предприятие 
+  гарантирует нормальное функционирование бизнес-процессов внутри компании. Класс 
+  решений SLA Management можно интегрировать с CRM-системами, биллинговыми системами 
+  или специализированными решениями для отделов продаж. Бесшовная интеграция обеспечивает 
+  быстрое обновление изменений, вносимых в контракт с клиентом. 
+<p><b>Network&Service Provisioning Management</b> (Управление планированием и 
+  развитием услуг) - этот класс решений позволяет компаниям эффективно управлять 
+  процессом планирования и развития предоставляемых услуг. Прогнозирование различных 
+  путей развития событий и моделирование разнообразных сценариев типа "что, если?" 
+  призваны помочь компаниям добиться максимально возможной степени готовности 
+  услуги, прежде чем начать ее предоставление клиентам. Определив степень готовности 
+  услуги и эффект от ее применения, компания не только удовлетворяет потребности 
+  пользователей сети и формирует устойчивую группу лояльных клиентов или довольных 
+  сотрудников - она, в конечном счете, укрепляет свои позиции на рынке и получает 
+  дополнительные возможности увеличения доходов. Решения Network&Service Provisioning 
+  Management, независимо от сложности и степени разнородности сетевой инфраструктуры, 
+  обеспечивают надежное, быстрое и безопасное двустороннее взаимодействие между 
+  решениями других классов (такими, как Inventory Management и SLA Management, 
+  программно-аппаратным комплексом и элементами сети). 
+<p><b>WorkFlow Management</b> (Управление совместной работой) - это решение позволяет 
+  эффективно управлять различными командами сотрудников, которые территориально 
+  распределены и обслуживают большое число клиентов. Решение класса WorkFlow Management 
+  обеспечивает коммуникации между всеми участниками процесса предоставления услуг, 
+  мониторинг и составление отчетов в режиме реального времени. При интеграции 
+  решений класса WorkFlow Management с другими решениями на базе OSS/BSS-систем 
+  круг решаемых задач можно существенно расширить. Таким образом, перед руководством 
+  предприятия открывается возможность управлять планами работ, автоматически распределять 
+  задачи между исполнителями и гибко назначать менеджеров и членов групп технического 
+  обслуживания. 
+<p>Аналитики различают несколько возможных способов построения OSS/BSS-решения 
+  на предприятии. Так или иначе, каждый вариант сводится к интеграции различных 
+  классов OSS/BSS с другими информационными системами и/или классами. Это может 
+  быть Fault Management &Trouble Ticketing + SLA Management + CRM, или Fraud Management 
+  + биллинговая система + СRM, или другие способы. Каждая комбинация обеспечивает 
+  решение определенного класса наиболее критичных для заказчика бизнес-задач. 
+  Выбор делается на основе комплексного анализа всех бизнес-процессов компании. 
+  Таким образом, OSS - это всегда комплекс продуктов, многие из которых настраиваются 
+  с учетом нужд конкретного заказчика. Однако это не разрозненный набор деталей, 
+  а интегрированная система, что достигается благодаря работе квалифицированных 
+  инженеров компании-интегратора при ее внедрении. 
+<p>
+<table width="100%" border="0" cellpadding="1" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h4>Защита от мошенников </h4>
+      <p>По оценкам экспертов, несмотря на постоянное совершенствование технологий 
+        связи, потери от мошенничества в телекоммуникационных компаниях достигают 
+        3-10% от общего оборота. Примечательно, что для большинства организаций 
+        этот показатель колеблется в пределах 5-7%. Один из наиболее важных классов 
+        OSS/BSS-системы - решения Fraud Management (дословно - "управление мошенничеством"). 
+        В задачи модуля Fraud Management, предназначенного в первую очередь для 
+        операторов связи, входит обнаружение, пресечение и предотвращение случаев 
+        несанкционированного доступа к ресурсам оператора. Система, оснащенная 
+        средствами мониторинга для различных типов соединений, реагирует в случае 
+        вызова подозрительного номера, несуществующего пользователя или несанкционированного 
+        доступа к услугам. Средствами Fraud Management строится профиль каждого 
+        абонента (частота, длительность звонков, время их совершения, основные 
+        направления вызовов и т. д.), после чего система сопоставляет полученные 
+        усредненные параметры с текущими и передает документированную аналитику 
+        по конкретной ситуации с рекомендациями касательно последующих действий. 
+        Подобное решение позволяет не только оперативно предотвратить все случаи 
+        несанкционированного использования ресурсов оператора связи, но и выработать 
+        на основе проведенного анализа определенный механизм защиты. Эксперты 
+        также отмечают, что тесная интеграция Fraud Management с CRM-решением 
+        позволяет максимально оперативно и эффективно построить защиту от мошенничества.
+    </td>
+  </tr>
+</table>
+<h3>Некоторые решения </h3>
+<p>Системы управления и мониторинга телекоммуникационных сетей - это дорогая, 
+  но надежная альтернатива ручному труду множества сетевых инженеров, т. е. тому 
+  подходу, который был принят в российских компаниях до недавнего времени. К примеру, 
+  российский системный интегратор и поставщик ИТ-решений, компания "Энвижн Груп" 
+  (<a href="http://www.nvisiongroup.ru">http://www.nvisiongroup.ru</a>), предлагает 
+  внедрение решений, обеспечивающих полномасштабное управление сетями любого масштаба 
+  и конфигурации, в которые входят: 
+<ul><li>управление сбоями/событиями (Fault management);
+<li>управление конфигурациями (Configuration management);
+<li>сбор статистической/биллинговой информации (Accounting management);
+<li>контроль производительности (Performance management);
+<li>контроль безопасности (Security management).</ul>
+<p>Создание систем OSS - одно из основных направлений деятельности "Энвижн Груп". 
+  Российские операторы связи пока только начинают осознавать необходимость таких 
+  систем, но интегратор уже готов предложить спектр тщательно отобранных продуктов, 
+  позволяющих создавать комплексные и специализированные решения, учитывающие 
+  особенности каждого заказчика. "Энвижн Груп" занимается внедрением систем управления 
+  информационной инфраструктурой на базе решений компаний Micromuse (IBM), HP, 
+  InfoVista, MetaSolv, Dorado, Packet Design и Cisco Systems. 
+<p>
+<table width="100%" border="0" cellpadding="1" bgcolor="#CCFFFF">
+  <tr> 
+    <td>
+      <h4>Магистральная сеть передачи данных в Казахстане </h4>
+      <p>В декабре 2005 г. "Энвижн Груп" объявила о завершении проекта создания 
+        магистральной сети передачи данных (МСПД) на базе технологий IP/MPLS для 
+        компании АО "Казахтелеком" - национального оператора связи Казахстана. 
+        Построение магистральной сети нового поколения, позволяющей предоставлять 
+        полный спектр современных услуг, - важнейшая часть масштабной программы 
+        создания в Казахстане высокоскоростной сети передачи данных, которую реализует 
+        "Казахтелеком". Новая МСПД стала единой транспортной средой для передачи 
+        разнотипного IP-трафика, включая передачу данных, голоса (телефонный трафик), 
+        мультимедийных, видео- и других данных в электронном виде. Сеть предназначается 
+        для бесперебойной передачи данных между опорными узлами в 17 городах - 
+        Актобе, Кустанае, Петропавловске, Кокчетау, Астане, Павлодаре, Семей, 
+        Усть-Каменогорске, Талды-Кургане, Алма-Ате, Таразе, Чимкенте, Кзыл-Орде, 
+        Караганде, Атырау, Актау, Уральске. В качестве первичной транспортной 
+        сети для МСПД использовалась существующая оптическая сеть SDH. 
+      <p>Для построения сети с соответствующей функциональностью, производительностью, 
+        отказоустойчивостью и уровнем готовности, масштабируемости, безопасности 
+        и качества обслуживания, а также с целью максимально эффективного использования 
+        ограниченных ресурсов оператора "Энвижн Груп" использовала решение следующей 
+        архитектуры: 
+      <ul>
+        <li>транспортное ядро на базе технологии DPT, обеспечивающее полную отказоустойчивость 
+          и высокое быстродействие; 
+        <li>ядро IP/MPLS на логическом уровне с поддержкой виртуальных частных 
+          сетей, качества обслуживания и механизмов управления трафиком для быстрого 
+          и безопасного развертывания сервисов; 
+        <li>Cisco 12006 GSR в качестве решения для узлов в Астане, Алма-Ате и 
+          Актобе и маршрутизаторы Cisco 7206 в качестве опорных маршрутизаторов 
+          в остальных узлах сети.
+      </ul>
+      <p>Сегодня мультисервисная IP/MPLS-сеть нового поколения уже работает. В 
+        рамках контракта обеспечена круглосуточная техническая поддержка оборудования 
+        сети, а также проведено техническое обучение специалистов "Казахтелекома". 
+        Внедрение в эксплуатацию МСПД позволило АО "Казахтелеком" значительно 
+        расширить спектр коммерческих услуг на территории страны, повысить их 
+        качество, что в дальнейшем, по мнению заказчика, привлечет новых клиентов. 
+      <p>По замыслу руководства "Казахтелекома", на следующих этапах развития 
+        телекоммуникационной инфраструктуры страны предполагается построение в 
+        городах страны сетей Metro Ethernet и объединение их с построенной "Энвижн 
+        Груп" МСПД. Эти проекты уже реализуются, в некоторых из них также принимает 
+        участие "Энвижн Груп" (в частности, в прошлом году был реализован проект 
+        построения сети доступа на базе технологии Metro Ethernet в Петропавловске). 
+        Кроме того, планируется полномасштабное внедрение современных технологий 
+        управления сетью.
+    </td>
+  </tr>
+</table>
+<p>Качество работы IP-сетей в значительной степени определяется эффективностью 
+  схем маршрутизации. Разработка таких схем и управление ими - исключительно сложная 
+  задача, поскольку приходится учитывать и топологию сети, и параметры каналов 
+  связи, и существенные различия в обработке разных типов трафика. Сложность возрастает 
+  еще и потому, что все эти параметры динамически меняются во времени из-за изменения 
+  нагрузки на сеть, возможного выхода из строя оборудования и множества других 
+  факторов. Соответственно, ошибки в схеме маршрутизации могут снизить производительность, 
+  надежность и живучесть сети, даже если ее технические элементы будут исправны. 
+<p>Система управления маршрутизацией в IP-сетях Route Explorer компании Packet 
+  Design (<a href="http://www.packetdesign.com">http://www.packetdesign.com</a>) 
+  резко упрощает управление телекоммуникационными сетями на базе протокола TCP/IP. 
+  Она не имеет аналогов в мире и полезна всем операторам связи, да и практически 
+  любым предприятиям среднего и крупного бизнеса. Данная система занимает исключительное 
+  место в системе управления ИТ- и телекоммуникационной инфраструктурой предприятия. 
+  Это обусловлено тем, что сегодня протоколы TCP/IP составляют основу локальных 
+  и территориально распределенных вычислительных сетей предприятий, сетей передачи 
+  данных, магистральных и мультисервисных сетей и Интернета. На этих же протоколах 
+  основаны современные технологии IP-телефонии, видеосвязи и видеоконференцсвязи, 
+  видео по заказу и интерактивного телевидения. Более того, и в традиционной телефонии 
+  для передачи голосового трафика на большие расстояния используются IP-сети. 
+<p>Route Explorer решает весь комплекс задач, связанных с управлением маршрутизацией. В их числе разработка и оптимизация схем маршрутизации, соответствующая настройка маршрутизаторов, мониторинг, журналирование и визуализация маршрутных данных, оперативный и ретроспективный анализ этих данных с целью выявления сетевых проблем, моделирование влияния схем маршрутизации на работу сети, в том числе с использованием архива данных, и т. д. Подчеркнем, что ПО Route Explorer существенно повышает управляемость даже небольших сетей (10-20 маршрутизаторов), а для более крупных сетей без его использования практически не обойтись. Именно поэтому это ПО используют крупнейшие телекоммуникационные компании во всем мире, такие, как AOL, BT, Cox, KDDI, Midcontinent Communications, NTT Communications, Song, TeliaSonera, T-mobile, Verizon.
+<p>"Энвижн Груп" стала первой компанией на российском рынке, готовой к использованию 
+  системы Route Explorer в составе решений для операторов связи и корпоративных 
+  заказчиков. Компания рассматривает ПО Route Explorer как один из важнейших строительных 
+  блоков современных систем управления телекоммуникационной инфраструктурой предприятий 
+  и операторов связи. При этом в операторских системах управления бизнесом важным 
+  преимуществом становится соответствие ПО Route Explorer стандарту NGOSS, описывающему 
+  эталонную архитектуру систем управления мультисервисными сетями, предложенную 
+  международной организацией Telemanagement Forum (<a href="http://www.tmforum.org">http://www.tmforum.org</a>). 
+  Другое преимущество - возможность интеграции ПО Route Explorer с системой мониторинга 
+  сбоев и изоляции неисправностей Micromuse Netcool, также входящей в линейку 
+  продуктов, используемых "Энвижн Груп" для создания систем OSS. 
+<p>Заметим, что "Энвижн Груп" дополняет продукты ведущих мировых производителей собственными разработками. Так, она вывела на российский рынок свое специализированное приложение NVision SMAP - интерактивный графический редактор пользовательских сетевых карт, полностью интегрированный с Micromuse Netcool, интегрированной системой управления крупными сетями и ИТ-инфраструктурой. Основное назначение этого решения - упростить внедрение и использование Netcool для операторов связи или предприятий, имеющих распределенную сетевую и телекоммуникационную структуру.
+<p>NVision SMAP представляет собой простой в использовании программный продукт для создания больших карт со сложной структурой, поддерживающий импорт топологической информации из внешних баз данных и "горячее" обновление карт на встроенном в Netcool редакторе карт Webtop. Использование SMAP значительно упрощает и ускоряет процесс создания карт и расширяет функциональность Netcool/Webtop. Отметим, что Micromuse Netcool - ключевое звено широкой линейки решений для управления телекоммуникационной и ИТ-инфраструктурой, в первую очередь потому, что решения на базе Netcool для управления ресурсами отличаются высокой эффективностью. В частности, согласно исследованию IDC, использование Micromuse Netcool в качестве системы управления информационной инфраструктурой повышает производительность работы пользователей на 19%; при этом эффективность работы информационной инфраструктуры возрастает на 58%, а потери от простоев оборудования снижаются на 22%.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</A></b></li><li><b><A href='detail.php@ID=22430.html'>10-гигабитные коммутаторы для малых и средних локальных сетей</A></b></li><li><b><A href='detail.php@ID=20318.html'>IEEE 802.11ac – новый высокоскоростной стандарт Wi-Fi</A></b></li><li><b><A href='detail.php@ID=19942.html'>LTE в зеркале конгресса MWC 2012</A></b></li><li><b><A href='detail.php@ID=19426.html'>Тенденции и прогнозы телекоммуникационного рынка-2012 </A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25257.html'>Недорогая беспроводная точка доступа Cisco </A></b></li><li><b><A href='detail.php@ID=25222.html'>Новые коммутаторы Cisco для ЦОД и облачных сервисов </A></b></li><li><b><A href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </A></b></li><li><b><A href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </A></b></li><li><b><A href='detail.php@ID=25102.html'>Новый модульный коммутатор Allied Telesis </A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8788.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Базовые технологии мультисервисных сетей
+</a><br><a href="detail.php@ID=8788.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Рост популярности мультисервисных сетей связи - одна из самых заметных тенденций российского рынка телекоммуникационных услуг в последние годы&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8788.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8788&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0e1e1286c156f9ddcf8c73aff4ba3264'><img src='../bitrix/tools/captcha.php@captcha_code=0e1e1286c156f9ddcf8c73aff4ba3264' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

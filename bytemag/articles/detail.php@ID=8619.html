@@ -1,0 +1,600 @@
+<HTML>
+<HEAD>
+<title>От AS/400 до i5
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Алексей Борзенко Идея оригинального компьютера делового назначения была впервые реализована в корпорации IBM (http://www.ibm.com) Фрэнком Солтисом (Frank G. Soltis). Архитектура AS/400 сравнительно быстро нашла многочисленных поклонников" />
+<meta name="description" content="Алексей Борзенко Идея оригинального компьютера делового назначения была впервые реализована в корпорации IBM (http://www.ibm.com) Фрэнком Солтисом (Frank G. Soltis). Архитектура AS/400 сравнительно быстро нашла многочисленных поклонников" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082471','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8619' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8619&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8619"].SHOW_IMAGE.value="N"; document.forms["PrintForm8619"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8619"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8619"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8619);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8619.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8619.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8619);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11508.html'>№6 (82), июнь 2005</a><h1>От AS/400 до i5
+</h1>10.06.2005<p></p><DIV class='article-text'><p><i>Алексей Борзенко</i>
+<p>Идея оригинального компьютера делового назначения была впервые реализована 
+  в корпорации IBM (<a href="http://www.ibm.com">http://www.ibm.com</a>) Фрэнком 
+  Солтисом (Frank G. Soltis). Архитектура AS/400 сравнительно быстро нашла многочисленных 
+  поклонников среди клиентов корпорации. Эта платформа довольно широко применяется 
+  в самых различных отраслях, начиная от розничной торговли и заканчивая медициной. 
+  В частности, именно AS/400 лидирует по числу разработанных для нее систем планирования 
+  ресурсов предприятия (Enterprise Resource Planning, ERP). Серверы AS/400 составили 
+  большое семейство мощных мини-компьютеров с единой архитектурой аппаратных и 
+  программных средств. 
+<p>Вообще говоря, AS/400 была разработана и распространялась как полностью законченная система. Это, в частности, означало, что все функции и возможности, обычно используемые в бизнесе, полностью интегрированы в операционную систему IBM Operating System/400 (OS/400). Поскольку пользователю обычно неинтересны архитектурные особенности компьютера, основными информативными параметрами для него стали номер версии и обновления ОС, например, V4R4.
+<p>Обычно считается, что архитектурно платформа AS/400 представляет собой классический мэйнфрейм. Аппаратная часть системы состоит из независимых блоков, которые взаимодействуют между собой посредством одной или нескольких системных шин. Весь ввод-вывод реализуется с помощью периферийных процессоров и не зависит от центрального процессора (полный аналог каналов ввода-вывода на мэйнфреймах). Как известно, системы, построенные в описанной архитектуре, по производительности обычно заметно превосходят компьютеры с общей шиной, в которых практически всеми действиями управляет центральный процессор. Так, в AS/400 пропускная способность внутренних коммуникационных каналов, по сути, не ограничена.
+<p>За историю существования AS/400 было выпущено несколько поколений подобных компьютеров. Среди них выделялись отдельные семейства различной производительности, причем разброс значений последней составлял сотни раз внутри всего ряда, а в пределах одного семейства был примерно пятикратным. Это означало, что при одинаковой скорости выполнения заданий число клиентов, которых в состоянии обслуживать компьютер, возрастает в указанное число раз. Перечисленные особенности архитектуры обеспечивали AS/400 гибкость и позволяли адаптировать системы к условиям эксплуатации.
+<h3>Особенности архитектуры </h3>
+<p>Вообще говоря, система AS/400 построена на нескольких фундаментальных принципах, в частности, таких, как многоуровневая архитектура, объектная реализация, одноуровневая память и т. д. Первые компьютеры этого семейства появились еще в 1988 г. До появления OS/400 V3R6 в их основе лежали микропроцессоры CISC-архитектуры. В 1995 г. начался перевод всего семейства машин на 64-разрядные микропроцессоры PowerPC Advanced Series. Новые процессоры получили именно такое название, поскольку стандартная архитектура PowerPC была дополнена инструкциями, специфичными для сред с большим числом пользователей и объемами данных.
+<p>В начале 2000 г. существенную трансформацию претерпели все семейства серверных систем IBM. Так, платформы для среднего бизнеса AS/400 стали именоваться IBM eServer iSeries. Конечно, это была не просто смена названия: по мнению разработчиков, AS/400 и iSeries отличаются очень существенно. В частности, в iSeries была реализована новая архитектура на базе высокоскоростной шины High Speed Link с пропускной способностью 1 Гбит/с. Шина позволяет работать с усовершенствованными адаптерами сетевых соединений, дисков, лент и, что очень важно, обеспечивает баланс между мощными процессорами и остальной инфраструктурой сервера. Кроме того, iSeries отличает предельная оптимизация для задач ввода-вывода.
+<p>Можно сказать, что наступил второй переломный этап в жизни AS/400. Новые технологии, лежащие в основе iSeries, значительно расширяли диапазон применяемых процессоров, типов основной памяти и систем хранения, скорости коммуникаций, повышая масштабируемость системы. Появилась реальная возможность при небольших затратах интегрировать ряд современных вычислительных сред - от стандартного делового ПО до приложений электронного бизнеса на одном сервере.
+<p>Весной 2002 г. IBM анонсировала новый сервер IBM eServer i890, который не только унаследовал ряд технологий от мэйнфреймов, но и был построен на микропроцессорах POWER4. 32-процессорная система i890, работающая под управлением OS/400 версии 5 (выпуск 2), практически удвоила вычислительную мощность предыдущего флагмана линейки IBM eServer - i840. В первую очередь модель отличалась расширенными возможностями объединения серверов - здесь поддерживалось до 32 динамических логических разделов OS/400 или Linux. В новом сервере были установлены микропроцессорные модули POWER4 с тактовой частотой 1,3 ГГц, причем каждый такой модуль содержал 174 млн транзисторов. Именно тогда микропроцессор POWER4 получил награду MicroDesign Resources Award в номинации &quot;Лучший серверный процессор&quot;.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2005/ip5/ris1.jpg" alt=Fig.1></td>
+<td valign="bottom">Сервер eServer iSeries 890 на процессорах POWER4.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Стоит особо отметить, что серверы iSeries и AS/400 были разработаны как самодостаточные системы, включающие абсолютно все требуемое для ведения бизнеса оборудование и компоненты системного ПО. В качестве универсальной сетевой системы для бизнеса машины этого семейства оптимизированы для работы в бизнес-среде и имеют ряд уникальных особенностей. Системы iSeries и AS/400 работают с десятками тысяч приложений, среди которых тысячи клиент-серверных (это прикладное ПО написано многочисленными бизнес-партнерами компании IBM). Кроме того, системы iSeries и AS/400 - прекрасные платформы для Microsoft Windows NT и прикладных программ Lotus Domino. Серверы iSeries и системы AS/400 поддерживают более 50 языков. Глобальная поддержка пользователей обеспечивается при помощи обширной сети партнеров.
+<p>Поскольку серверы iSeries и AS/400 разработаны для выполнения бизнес-приложений, следует учесть, что одна из фундаментальных характеристик этой среды - высокая интенсивность операций ввода-вывода, а не собственно вычислительных операций. Микропроцессоры, которые обслуживают специфическое устройство ввода-вывода, размещены на платах ввода-вывода, располагающихся в гнездах на системных шинах. Одна из таких плат может быть интегрированным сервером хSeries (сервер Intel-архитектуры) для систем iSeries. Фактически это ПК на вставной плате, который позволяет серверу Windows NT работать на системе iSeries. Подобные платы появились еще на первых AS/400 и тогда назывались IPCS. Периферийное оборудование AS/400 (жесткие диски, CD-ROM, накопитель на лентах, сетевой адаптер и т. п.) могло использоваться с Integrated Netfinity Server.
+<p>Единая конфигурация большой системы на основе iSeries может содержать более 200 процессоров. Комплекс основного процессора системы (составленного из отдельных процессоров, числом до 24) может получать запрос на считывание или запись данных в любое устройство ввода-вывода. Этот запрос делегируется специализированному микропроцессору, обслуживающему данное устройство ввода-вывода. Тем временем главный системный процессор продолжает выполнять другую прикладную программу.
+<p>Например, в модели iSeries 820 высокоскоростной коммутатор, реализующий обмен данными между памятью, процессором и устройствами ввода-вывода, работает со скоростью в 43,2 Гбайт/с. У каждой группы из шести процессоров и у каждого из четырех банков памяти имеются отдельные связи с коммутатором; кроме того, еще две связи обслуживают трафик устройств ввода-вывода. Наличие независимых путей передачи данных дает значительный выигрыш в быстродействии системы в сравнении с предыдущими конструкциями с единой общедоступной шиной памяти, за доступ к которой боролись все компоненты системы. Новый дизайн обеспечивает множество путей доступа к высокоскоростному коммутатору, который может работать самостоятельно. Его широкая полоса пропускания позволяет быстро и эффективно устанавливать соединение между источником и местом назначения данных, что вносит существенный вклад в повышение общей эффективности использования процессора и улучшает совокупное быстродействие системы.
+<h3>На пути интеграции </h3>
+<p>Стратегический план развития серверов IBM состоял в объединении двух семейств - pSeries, в котором используется AIX (версия Unix от IBM), и iSeries с операционной системой OS/400 и ее наследницей i5/OS. Оба семейства уже много лет постепенно сближаются, но с выпуском систем на базе микропроцессора POWER5 их аппаратная часть стала полностью идентичной. Благодаря технологии, называемой сегментацией, или партиционированием (partitioning), одна и та же система может исполнять AIX, i5/OS и Linux. Первые системы с процессорами POWER5 и i5/OS корпорация выпустила в мае прошлого года, подчеркнув усиление унификации в своей группе серверов отказом от марки iSeries в пользу eServer i5. Для AIX-систем стало использоваться аналогичное имя - eServer p5.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2005/ip5/ris2.jpg" alt=Fig.2></td>
+<td valign="bottom">Семейство серверов IBM eServer i5.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Таким образом, именно благодаря процессорам POWER5 - самым высокопроизводительным 64-разрядным микропроцессорам из всех когда-либо выпускавшихся IBM, серверы IBM eServer i5 стали способны интегрировать и исполнять одновременно различные ОС, включая i5/OS, Linux, AIX 5L и Microsoft Windows. В частности, серверы eServer i5 способны исполнять ОС AIX 5L параллельно с i5/OS для консолидации и поддержки Unix-решений. Реализованная в системах eServer i5 новая технология IBM Virtualization Engine распространяет и дополняет такие возможности виртуализации систем iSeries, как поддержка логических разделов (LPAR).
+<p>По информации корпорации, в системах IBM eServer i5 улучшилось соотношение цена/производительность по сравнению с системами IBM eServer iSeries. В частности, системы eServer i5 модель 520 (от одного до двух процессоров POWER5) и eServer i5 модель 570 (от одного до 16 процессоров POWER5 с функцией Capacity on Demand) показывают улучшение этого соотношения на величину до 40% по сравнению с моделями iSeries предыдущего поколения. При этом цена памяти, дисков и серверных компонентов сравнялась с ценами соответствующих блоков Unix-систем. Выпуск новых систем IBM eServer i5 стал частью программы (с общим бюджетом 500 млн долл.), цель которой - вывод на более высокий уровень возможностей вычислительных систем малых и средних компаний.
+<p>Серверы eServer i5 поставляются с предустановленной и протестированной интегрированной ОС i5/OS, в состав которой входит базовое ПО для различных бизнес-задач, включая основанную на отраслевых стандартах СУБД IBM DB2 UDB. В состав i5/OS входит также IBM WebSphere Express - масштабируемый механизм обработки транзакций для динамических приложений электронного бизнеса.
+<p>Как уже отмечалось, основой систем eServer i5 стали микропроцессоры IBM нового 
+  поколения POWER5. Помимо встроенных средств ускорения телекоммуникационных функций 
+  и поддержки многопроцессорных конфигураций на одном кристалле в процессорах 
+  POWER5 реализована технология параллельной многопоточной обработки (SMT), благодаря 
+  которой одно процессорное ядро с точки зрения ОС и прикладного ПО выглядит как 
+  два логических процессора. Поскольку микропроцессор POWER5 содержит два процессорных 
+  ядра, технология SMT позволяет ему исполнять одновременно четыре потока команд, 
+  сокращая общее время выполнения задач. 
+<p>
+<table width="100%" border="0" bgcolor="#CCFFFF">
+  <tr>
+    <td>
+      <h4>Микропроцессор POWER5 </h4>
+      <p>Кристалл POWER5 состоит из 276 млн транзисторов, занимает площадь 389 
+        кв. мм и изготовляется с соблюдением проектных норм 0,13 мкм с применением 
+        технологий медных проводников и &quot;кремний-на-изоляторе&quot;, позволяющих нарастить 
+        производительность и снизить энергопотребление. Одно из главных новшеств 
+        в конструкции кристалла по сравнению с POWER4 - это интегрирование в микросхему 
+        кэш-памяти 3-го уровня (L3) объемом 36 Мбайт (в предыдущем поколении процессора 
+        32-Мбайт кэш-память L3 располагалась вне кристалла). Благодаря переносу 
+        кэш-памяти L3 ближе к процессорному ядру процессору при отсутствии нужных 
+        данных в кэш-памяти L2 намного реже придется обращаться за пределы кристалла, 
+        за счет чего в SMP-системе уменьшается обмен данными между кристаллами. 
+        В результате, если системы на базе POWER4 не могли масштабироваться до 
+        числа процессоров, превышающего 32, поскольку это привело бы к резкому 
+        увеличению задержек из-за увеличения межпроцессорного трафика, то POWER5 
+        обеспечивает построение 64-процессорных конфигураций. Кроме того, переход 
+        на проектные нормы 0,13 мкм позволил конструкторам POWER5 интегрировать 
+        в него и контроллер памяти, избавившись от микросхемы, которая в POWER4 
+        отвечала за управление памятью, что обеспечило дополнительное сокращение 
+        латентности считывания данных из памяти. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2005/ip5/ris3.jpg" alt=Fig.3></td>
+<td valign="bottom">Микропроцессор POWER5. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+      <p>Структура конвейера команд POWER5 осталась полностью идентичной той, 
+        что применялась в POWER4, причем не изменились и величины задержек. Такая 
+        преемственность должна обеспечить полную совместимость нового процессора 
+        с приложениями, разработанными для его предшественника. Четыре кристалла 
+        POWER5 (восемь процессорных ядер) вместе с четырьмя кристаллами L3 упаковываются 
+        в многокристальный модуль Multichip Module (MCM) размером 95x95 мм, который 
+        состоит из керамической подложки и 89 слоев металла и имеет 4491-контактный 
+        вывод. 
+      <p>Для объединения MCM используется смешанная инфраструктура из шин и распределенного 
+        коммутатора - каждый модуль имеет четыре логические шины, позволяющие 
+        построить кольцо из четырех MCM. Соединяющая MCM восьмибайтная шина (Inter 
+        Book) по-прежнему работает на половине тактовой частоты процессора и обеспечивает 
+        пропускную способность 4 Гбайт/с. Для соединения шин применяется усовершенствованная 
+        версия распределенного коммутатора, разработанного для POWER4. Число шин 
+        увеличилось, что повысило суммарную пропускную способность. 
+      <p>
+    </td>
+  </tr>
+</table>
+<p>Комплекс технологий и услуг IBM Virtualization Engine позволяет клиентам упростить 
+  и оптимизировать свою ИТ-инфраструктуру и значительно улучшить экономические 
+  параметры и эксплуатацию недостаточно загруженных ИТ-ресурсов. Технология Virtualization 
+  Engine расширяет возможности серверов IBM eServer i5, обеспечивая им одновременную 
+  работу нескольких ОС. Так, благодаря поддержке AIX 5L компании могут теперь 
+  интегрировать на системе IBM eServer i5 Unix-решения наряду с приложениями для 
+  i5/OS. Еще больше упрощает ИТ-среду впервые реализованная в IBM eServer i5 поддержка 
+  сред Linux на интегрированных серверах IBM eServer xSeries с процессорами Intel. 
+  Совместное управление всеми Linux- и Windows-серверами, а также интегрированные 
+  средства хранения, безопасности и резервного копирования позволяют клиентам 
+  снизить затраты на серверную инфраструктуру. 
+<p>IBM eServer i5 520 Express Edition - это решение семейства Express, которое поставляется малым и средним компаниям через бизнес-партнеров IBM. В свою очередь, системы IBM eServer i5 570 предоставляют предприятиям среднего размера хорошие возможности управления производительностью по запросу. Дело в том, что они поддерживают функции Reserve Capacity on Demand, On/Off Capacity on Demand и Memory Capacity on Demand. Новая функция Reserve Capacity on Demand позволяет клиенту приобрести &quot;запасной набор&quot; вычислительных мощностей, из которого система автоматически будет черпать ресурсы, когда они понадобятся серверу. Напомним, что функции производительности по запросу Capacity on Demand позволяют клиентам включать и отключать процессоры POWER5 и память в соответствии с изменениями потребностей бизнеса, оплачивая только активные ресурсы.
+<p>В июне прошлого года IBM объявила, что ее сервер IBM eServer i5 520 с двумя процессорами POWER5 показал рекордный результат в важном двухуровневом тесте SAP Sales and Distribution (SD) Standard Application Benchmark. Этот компьютер продемонстрировал в тесте лучшую производительность, чем сервер Sun Microsystems с двумя процессорами AMD Opteron 2,21 ГГц и вдвое большим объемом основной памяти. Сервер eServer i5 также превзошел по производительности сервер HP с двумя процессорами Intel Xeon 3,2 ГГц и объемом памяти 8 Гбайт. Результат был получен для системы IBM eServer i5 520 с процессорами POWER5 с частотой 1,65 ГГц. По мнению экспертов, этот успех стал свидетельством возможностей как ОС, так и процессора сервера, а не одной лишь чистой процессорной производительности.
+<p>В августе прошлого года IBM представила еще одну модель на базе процессора POWER5 - eServer i5 550. Этот недорогой и мощный сервер предназначен для компаний любого масштаба и, по выражению разработчиков, позволяет точно соотнести ИТ-затраты с потребностями бизнеса. Стоит отметить, что сервер IBM eServer i5 модель 550 может поставляться в комплектации Solution Edition. Это привлекательное по цене предложение доступно при приобретении продуктов некоторых ведущих компаний - независимых поставщиков ПО. Кроме того, данная модель поддерживает новые функции для управления несколькими операционными системами и их оптимизации, реализованные с помощью системных сервисов технологии Virtualization Engine.
+<p>В частности, IBM eServer i5 550 позволяет быстро и с наименьшими усилиями упростить ИТ-среду, обеспечивая интеграцию приложений, выполняемых под управлением различных ОС. Сервер i5 550 будет удобен для компаний, которым необходимо одновременно использовать приложения, работающие под управлением нескольких ОС.
+<p>Сервер IBM eServer i5 550, поддерживающий от одного до четырех процессоров POWER5, обладает рядом особенностей, которые подробнее обсуждаются ниже.
+<h4>Новые возможности системного управления </h4>
+<p>В числе новых системных сервисов решения Virtualization Engine появились такие, как IBM Director MultiPlatform (основанный на открытых стандартах инструмент централизованного управления ИТ-ресурсами для мониторинга нескольких ОС) и IBM Enterprise Workload Manager (инструмент для выявления проблем и оптимизации прикладной рабочей нагрузки с помощью набора самоуправляемых функций). Решение Virtualization Engine представляет собой комплекс системных технологий и сервисов, который позволяет клиенту упростить и оптимизировать ИТ-инфраструктуру и существенно повысить экономическую и техническую эффективность использования ИТ-ресурсов компании.
+<h4>Архитектура &quot;по требованию&quot; </h4>
+<p>Клиент может приобрести (активировать) только необходимые ему процессорные ресурсы. Неактивированные процессоры можно задействовать позже по мере необходимости (целиком или частично). Дополнительно предоставляется возможность выбора необходимого числа лицензий на ОС i5/OS, AIX 5L и Linux. Это обеспечивает клиенту более широкий выбор приложений за счет поддержки расширенного набора ОС, а также возможность выбора ОС в соответствии с потребностями применяемых приложений, а не с характеристиками сервера.
+<h4>Solution Edition </h4>
+<p>Специальное ценовое предложение, действующее при приобретении продукции определенных независимых поставщиков ПО. В частности, предложение Solution Edition действует при приобретении программных продуктов компаний Clear Technologies, IBS, Integrated Distribution Solutions, LLC, Intentia, Lawson Software, Manhattan Associates, MAPICS, PeopleSoft и SSA Global.
+<h4>Domino Edition </h4>
+<p>Предложение распространяется на клиентов, которые собираются использовать серверы Domino, мигрируют с Microsoft Exchange Server на Domino или консолидируют свои серверы Domino. Предложение Domino Edition имеет конкурентоспособную цену и поддерживает функцию Capacity on Demand. В комплект поставки входят два активных процессора и лицензии на i5/OS.
+<p>По мнению руководства корпорации, представленное сочетание наиболее мощных аппаратных технологий, а также программных решений от ведущих независимых поставщиков и архитектуры &quot;по требованию&quot; стало наилучшим возможным решением для клиентов. Это поможет им сконцентрироваться на бизнес-целях компании вместо того, чтобы ограничивать свой бизнес возможностями ИТ-среды.
+<p>Кроме того, IBM объявила две дополнительные опции по интеграции и управлению Linux-серверами на базе процессоров Intel в сервере eServer i5. В настоящее время Linux, в дополнение к Windows, поддерживается на интегрированных серверах IBM eServer xSeries (IXS) и интегрированных адаптерах xSeries (IXA). Теперь, с выпуском нового интегрированного адаптера xSeries (IXA), эта опция распространяется на недорогие серверы eServer xSeries - в том числе на сервер x346 для установки в стойку с высокой плотностью монтажа. Это расширяет для клиентов возможности выбора и подтверждает ведущую позицию серверов eServer i5 по ассортименту поддерживаемых приложений и ОС.
+<h3>Оптимально для Linux </h3>
+<p>Осенью 2004 г. IBM представила сервер на базе процессоров POWER5, оптимизированный для использования с ОС Linux, - IBM eServer OpenPower 720. Он представляет собой альтернативное Linux-решение более дорогим Unix- и Linux-системам начального уровня от основных конкурентов корпорации в данном сегменте рынка - HP и Sun Microsystems, которое может обеспечить повышение эффективности бизнеса и сокращение расходов заказчиков. Считается, что с выпуском нового сервера IBM перенесла в сектор серверов начального уровня свой десятилетний опыт в области 64-разрядных архитектур и функции обеспечения надежности, пришедшие из мира мэйнфреймов.
+<p>По заявлениям разработчиков, в IBM OpenPower корпорация воплотила надежность, готовность и удобство обслуживания корпоративного класса, до того свойственные преимущественно продуктам высшего уровня. В будущем заказчики этих серверов смогут снизить свои эксплуатационные расходы за счет функции виртуализации для систем OpenPower - элемента технологии IBM Virtualization Engine, позволяющей сократить число используемых систем и снизить стоимость их внедрения.
+<p>Системы IBM OpenPower легко интегрируются в существующую вычислительную инфраструктуру, обеспечивая высокомасштабируемую 64-разрядную платформу на процессоре POWER5 для ОС Linux (дистрибутивы Red Hat или Novell SUSE Linux).
+<p>Всего за четыре месяца с момента появления систем OpenPower независимые поставщики ПО и разработчики для Linux оптимизировали для платформы OpenPower свыше 250 приложений. Таким образом, общее число сертифицированных приложений к началу 2005 г. превысило 900. Эти приложения стоят в одном ряду с тысячами приложений с открытым исходным кодом для множества отраслей, включая финансовые услуги, розничную торговлю, государственное управление и медико-биологические науки.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2005/ip5/ris4.jpg" alt=Fig.4></td>
+<td valign="bottom">Платформа OpenPower 710.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>На базе новой платформы OpenPower 710 может работать сочетание 64-разрядной 
+  системы SAP для Linux с СУБД IBM DB2 и maxDB - доступное, высокопроизводительное 
+  и надежное SAP-решение корпоративного класса для малых и средних компаний. Решение 
+  IBM OpenPower Consolidation Express позволяет малым и средним компаниям упростить 
+  свою ИТ-инфраструктуру и одновременно повысить гибкость бизнеса. Благодаря мощным 
+  и гибким возможностям виртуализации и поддержки микроразделов на одной системе 
+  OpenPower 710 можно эффективно консолидировать рабочие нагрузки Web-сервера, 
+  файлового сервера, сервера печати, сервера каталогов, брандмауэра и сервера 
+  электронной почты, которые традиционно разносятся на отдельные системы. Компании 
+  могут заменить дорогие в эксплуатации устаревающие серверы новой консолидированной 
+  инфраструктурой, основанной на более простой, открытой и гибкой архитектуре. 
+  Такая масштабная поддержка позволит малым и средним предприятиям легко создавать, 
+  развертывать и поддерживать ключевые бизнес- и технические приложения на платформе 
+  Linux on Power. 
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td bgcolor="#FFFFCC">
+      <h4>Только тесты </h4>
+      <p>Современный уровень развития ОС Linux позволяет поддерживать важнейшие 
+        приложения, и семейство OpenPower выводит эту ОС на новые высоты с помощью 
+        серверов, оптимизированных для Linux и функционирующих на процессорах 
+        POWER5. В частности, клиенты могут воспользоваться обширным опытом сотрудничества 
+        IBM с поставщиками обоих дистрибутивов Linux - Novell SUSE и Red Hat, 
+        - которые поддерживаются на сервере OpenPower. Как было объявлено, серверы 
+        OpenPower превзошли аналогичные системы HP и Sun Microsystems в важнейших 
+        отраслевых тестах производительности. 
+      <p><b>SPECompM2001.</b> Превзойдя максимальный объявленный результат HP 
+        на 52%, четырехпроцессорный сервер OpenPower 720 продемонстрировал один 
+        из самых высоких показателей для Linux-систем в отрасли. 
+      <p><b>SPECjbb2000.</b> Четырехпроцессорный сервер OpenPower 720 превзошел 
+        максимальный объявленный результат для серверов HP (на 16%) и Sun Microsystems 
+        и продемонстрировал один из самых высоких показателей среди всех четырехпроцессорных 
+        Linux-систем по числу операций в секунду. 
+      <p><b>SPECsfs97_R1.v3 SMP.</b> Четырехпроцессорный сервер OpenPower 720 
+        продемонстрировал общее время отклика 0,79 мс (один из лучших показателей 
+        в отрасли среди Linux-систем) и в процессе тестирования превзошел наилучший 
+        объявленный результат HP на 65%. 
+      <p>
+    </td>
+  </tr>
+</table>
+<p>Как заявила компания Novell, она предоставляет готовые к корпоративному применению 
+  программные средства и сервисы для ОС Linux, обеспечивающие клиентам инновационные 
+  решения для развития бизнеса. В свою очередь, серверы IBM OpenPower, оптимизированные 
+  для Linux и предлагаемые по стандартной для отрасли цене, - это как раз та основа, 
+  которая все больше интересует заказчиков по мере возрастания объема Linux-приложений 
+  в их компаниях. ОС Novell SUSE Linux Enterprise Server 9, основанная на ядре 
+  Linux 2.6, поддерживает архитектуру POWER5 и технологию IBM Virtualization Engine, 
+  обеспечивая надежную, гибкую и проверенную 64-разрядную основу, которая существенно 
+  улучшает возможности работы в Linux-среде. 
+<p>Руководство компании Red Hat также высоко оценило инициативу IBM Linux on POWER и сервер IBM eServer OpenPower, которые обеспечивают пользователям Red Hat Enterprise Linux более широкий выбор при создании архитектур с открытым кодом. По их мнению, корпорации и правительственные организации стремятся использовать преимущества Linux - безопасность и низкие расходы. Сервер OpenPower с ОС Red Hat Enterprise Linux позволяет реализовать эти преимущества на недорогой, гибкой и надежной аппаратной платформе.
+<p>Первой моделью семейства IBM eServer OpenPower, которая поступила в продажу, стала система IBM eServer OpenPower 720 на базе процессоров POWER5 с тактовыми частотами 1,5 или 1,65 ГГц. Эти четырехпроцессорные системы начали поставляться в корпусе для монтажа в стойку или в вертикальном, при максимальном объеме памяти 64 Гбайт. Сервер OpenPower 720 поддерживает ОС Novell SUSE Linux Enterprise Server 9 и Red Hat Enterprise Linux AS 3 Update 3. В первой половине текущего года IBM планирует представить двухпроцессорную систему IBM eServer OpenPower.
+<h3>Серверы для бизнес-решений </h3>
+<p>Под занавес 2004 г. IBM установила новый стандарт в области высокопроизводительных вычислительных систем, представив новые серверы уровня предприятия на основе процессоров POWER5. Модели IBM eServer i5 595 обладают высокой производительностью и расширяемостью и мощными возможностями виртуализации. Они стали флагманскими изделиями линейки компьютеров IBM POWER5 и самым современным воплощением технологии IBM Virtualization Engine. Поддерживая сотни приложений, системы eServer i5 позволяют строить высококлассные бизнес-решения и достигать высоких экономических показателей благодаря самому широкому выбору операционных систем, интегрированному связующему ПО, СУБД и средствам безопасности IBM в сочетании с исключительной масштабируемостью и гибкостью.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2005/ip5/ris5.jpg" alt=Fig.5></td>
+<td valign="bottom">Флагман - сервер eServer i5 595.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>По мнению большинства экспертов, сервер eServer i5 595 был разработан IBM на основе самых высокопроизводительных аппаратных средств. Первые подобные системы, выпущенные в мае 2004 г., были призваны помочь компаниям упростить ИТ-системы и ограничить рост расходов на ИТ, одновременно предоставив современные средства интеграции и технологии, позволяющие быстро адаптироваться к меняющимся потребностям бизнеса. Система eServer i5 представляет собой законченный сервер для построения решений благодаря интегрированной, ориентированной на практические задачи конструкции, поддерживающей широкий спектр приложений на одном сервере (как известно, eServer i5 поддерживает десятки тысяч приложений для ОС AIX 5L, i5/OS, Windows и Linux).
+<p>Чтобы учесть проблемы, с которыми сталкиваются компании в попытках оптимизировать свою ИТ-инфраструктуру за счет консолидации серверов, корпорация IBM разработала тест iSeries Virtualization Grand Slam, наглядно демонстрирующий преимущества системы eServer i5. В частности, этот тест производительности подтверждает способность сервера eServer i5 эффективно обслуживать множество приложений и ОС в условиях повседневных перегрузок без ущерба для производительности, удобства эксплуатации или экономических показателей и одновременно демонстрирует преимущества технологий IBM Virtualization Engine. Результаты теста показывают, каким образом, выполняя множество приложений на одном сервере семейства eServer i5, компании смогут лучше использовать потенциал своих ИТ-инфраструктур и повысить эффективность инвестиций в ИТ.
+<p>Модель IBM eServer i5 595 стала самым высокопроизводительным сервером, завершившим линейку систем POWER5 eServer i5. Так, она более чем вчетверо превосходит по производительности своего предшественника - 32-процессорный сервер eServer iSeries 890. Сервер IBM eServer i5 595 достиг наивысшего в отрасли результата среди 32-процессорных SMP-систем в тесте производительности SPECjbb2000. Напомним, что тест SPECjbb2000 измеряет производительность сервера, исполняющего типичные бизнес-приложения на основе Java, имитируя процесс обработки заказов оптовым поставщиком. Данный тест представляет собой трехуровневую клиент-серверную систему, в которой основное внимание уделяется связующему уровню. Будучи высокоинтегрированным сервером, eServer i5 595 предоставляет широкие возможности для расширения и гибкость в поддержке вычислительных сред бизнеса по требованию с использованием ОС IBM i5/OS, IBM AIX 5L, Linux и Microsoft Windows (при использовании интегрированных адаптеров xSeries или интегрированных серверов xSeries).
+<p>Серверам iSeries принадлежит и еще один рекорд, установленный в аудите NotesBench для приложения R6Mail на системе eServer i5 570. Этот сервер, выпущенный чуть ранее в 2004 г., стал самым большим на тот момент сервером eServer iSeries с процессорами POWER5. При тестировании с новой модельной нагрузкой R6iNotes система iSeries показала рекордный результат - время отклика 39 мс для одного сервера IBM eServer i5 570, обслуживающего одновременно 165 тыс. пользователей. Таким образом, этот сервер превзошел прежний рекорд сервера HP и занял первое место в данном тесте.
+<p>Первые пользователи серверов IBM eServer i5 595 буквально полны оптимизма. В частности, эксперты из аналитической компании Shell Canada ожидают, что в ближайшие два года нагрузки на серверы iSeries в корпоративном вычислительном центре Shell Canada будут удваиваться ежегодно. Однако благодаря сочетанию 64-разрядной масштабируемости и экономически эффективных технологий виртуализации новый сервер IBM eServer i5 595 гарантирует развертывание дополнительных мощностей в соответствии с задачами развития бизнеса.
+<p>Что касается eServer i5 570, клиенты уже оценили преимущества и этой системы. Так, канадская компания - производитель джемов, начинок и соусов E.D. Smith & Sons, использующая среду i5/OS для поддержки работы своих 400 сотрудников, перешла на эту платформу. Компании был необходим сервер, который обеспечил бы возможности роста и способность эффективно обслуживать операции во всем мире на одной машине. Как и другие компании, использующие системы eServer i5, E.D. Smith & Sons уже убедилась, что система eServer i5 570 значительно превосходит по эффективности и быстродействию ранее использовавшееся решение.
+<p>Мощные iSeries нашли свое место и в игорном бизнесе. Так, компания Boyd Gaming 
+  много лет использовала систему IBM eServer iSeries для поддержания защищенной 
+  и надежной ИТ-инфраструктуры своего казино в Лас-Вегасе. В начале 2004 г. эта 
+  компания, принимая во внимание быстрое развитие своего бизнеса, обратилась к 
+  своему давнему бизнес-партнеру Agilysys Hospitality Solutions Group за помощью 
+  в упрощении своей ИТ-инфраструктуры. Предложенное решение было основано на сервере 
+  eServer i5 570 и двух серверах eServer i5 520, обслуживающих девять казино и 
+  одиннадцать отелей. Сотрудники Boyd Gaming убедились в простоте управления, 
+  надежности и экономичности серверов eServer i5, которые позволили консолидировать 
+  на трех машинах обслуживание 20 предприятий. 
+<p>
+<table width="100%" border="0">
+  <tr>
+    <td bgcolor="#CCFFFF">
+      <h4>Технологии и сервисы IBM Virtualization Engine </h4>
+      <p>Благодаря высокоинтегрированным продуктам серверы iSeries могут помочь 
+        добиться максимальной отдачи от инвестиций в ИТ-инфраструктуру за счет 
+        прозрачного управления гетерогенными разделами или серверами. Впервые 
+        примененные в серверах этого семейства платформенные технологии IBM Virtualization 
+        Engine упрощают ИТ-инфраструктуру без нарушения ее функционирования, давая 
+        возможность сосредоточиться на развитии и расширении бизнеса. 
+      <p><b>Функция подключения-отключения вычислительных мощностей по требованию 
+        IBM eServer On/Off Capacity on Demand.</b> IBM предоставляет быстрый, 
+        не нарушающий работу системы способ активации дополнительных процессорных 
+        мощностей серверов iSeries. Эти возможности дополнены функциями предоставления 
+        резервной мощности по требованию Reserve Capacity on Demand, пробного 
+        подключения вычислительной мощности по требованию Trial Capacity on Demand 
+        и подключения оперативной памяти по требованию Memory on Demand. 
+      <p><b>Технология динамических логических разделов (LPAR).</b> Она предоставляет 
+        удобную инфраструктуру для консолидации систем на базе серверов iSeries. 
+        Воспользовавшись возможностями технологии LPAR, заказчики могут оптимизировать 
+        свои инвестиции в ИТ за счет быстрой консолидации множества специализированных 
+        серверов на меньшем количестве серверов iSeries. Новые возможности серверов 
+        iSeries (например, логические разделы без ограничения размера) позволяют 
+        автоматически задействовать ресурсы серверов для нескольких приложений 
+        в зависимости от приоритетов бизнеса. 
+      <p><b>Параллельная многопоточность (SMT).</b> За счет выполнения множества 
+        потоков на одном и том же процессоре технология SMT позволяет параллельно 
+        выполнять несколько потоков команд, что способствует оптимизации использования 
+        процессора. Процессоры POWER5, которыми оснащены серверы iSeries, автоматически 
+        реализуют технологию SMT, не требуя модификации или настройки приложений. 
+      <p><b>Поддержка виртуальных локальных сетей Ethernet.</b> Поддержка в серверах 
+        iSeries сетей Virtual Ethernet обеспечивает высокоскоростные соединения 
+        между логическими разделами и серверами под управлением Microsoft Windows. 
+        Не требуя дополнительных аппаратных средств, системы iSeries на базе процессоров 
+        POWER5 поддерживают каналы связи Virtual Ethernet со скоростью передачи 
+        1 Гбит/с между различными ОС, такими, как i5/OS, Linux и AIX 5L. Сегменты 
+        Virtual Ethernet можно создавать и удалять динамически. Доступ к виртуальному 
+        сегменту локальной сети можно ограничить в соответствии с требованиями 
+        к безопасности или для разделения трафика. 
+      <p><b>Виртуальный ввод-вывод.</b> Технология Virtual I/O позволяет распределять 
+        между логическими разделами такие физические ресурсы, как накопители, 
+        адаптеры и устройства. Несколько разделов могут совместно использовать 
+        физические ресурсы ввода-вывода сервера, при этом каждый раздел может 
+        одновременно использовать как виртуальные, так и физические устройства 
+        ввода-вывода. Кроме того, виртуальный ввод-вывод позволяет администраторам 
+        создавать новые разделы, не добавляя в систему физические адаптеры ввода-вывода. 
+      <p>Вместе со средствами POWER Hypervisor платформенные сервисы IBM Virtualization 
+        Engine дополняют технологии IBM Virtualization Engine, способствуя упрощению 
+        ИТ-инфраструктуры. 
+      <p><b>IBM Director Multiplatform.</b> Даже самая полнофункциональная мощная 
+        система требует для эффективной работы удобных инструментальных средств 
+        управления. Программное средство IBM Director Multiplatform предоставляет 
+        общую консоль на базе Web-интерфейса для системного мониторинга рабочей 
+        среды по требованию, облегчая управление гетерогенными системами и ресурсами. 
+      <p><b>IBM Grid Toolbox V3 for Multiplatforms.</b> Связывая системы и ресурсы 
+        через единый управляющий интерфейс, программное средство IBM Grid Toolbox 
+        V3 for Multiplatforms помогает создавать более безопасные и надежные корпоративные 
+        инфраструктуры на базе открытых стандартов. 
+      <p><b>Развертывание систем.</b> Предназначенные для максимального использования 
+        ресурсов и упрощения инфраструктуры центров обработки данных, функции 
+        подготовки систем к работе серверов iSeries позволяют компаниям развертывать 
+        и переназначать ИТ-ресурсы в соответствии с меняющимися потребностями 
+        бизнеса. 
+      <p><b>IBM Enterprise Workload Manager (EWLM).</b> Программное средство EWLM 
+        ведет мониторинг вычислительных ресурсов, времени реакции и потока транзакций, 
+        помогая улучшить управление уровнями сервиса и планирование вычислительных 
+        ресурсов. В свою очередь, возможности самоуправления помогают выявлять 
+        проблемы и оптимизировать управление рабочей нагрузкой в гетерогенных 
+        многоуровневых средах. 
+    </td>
+  </tr>
+</table>
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8619.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">От AS/400 до i5
+</a><br><a href="detail.php@ID=8619.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Алексей Борзенко
+Идея оригинального компьютера делового назначения была впервые реализована 
+  в корпорации IBM (http://www.ibm.com) Фрэнком 
+&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8619.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8619&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0bf8c68e5b79da52d02500724d6979d3'><img src='../bitrix/tools/captcha.php@captcha_code=0bf8c68e5b79da52d02500724d6979d3' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

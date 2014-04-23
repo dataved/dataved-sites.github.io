@@ -1,0 +1,570 @@
+<HTML>
+<HEAD>
+<title>Как построить собственный ЦОД </title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="- У вас есть ЦОД?  - Да, строим на 100 стоек.  - А мы строим на 200.  - А мы на 400 с независимой газовой электростанцией.  - А мы на 500 с водяным охлаждением и возможностью отводить до 10 кВт тепла с одной" />
+<meta name="description" content="- У вас есть ЦОД?  - Да, строим на 100 стоек.  - А мы строим на 200.  - А мы на 400 с независимой газовой электростанцией.  - А мы на 500 с водяным охлаждением и возможностью отводить до 10 кВт тепла с одной" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398076933','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13246.html'>ABBYY FineReader Engine 9.0 – передовые технологии распознавания документов для разработчиков программ</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13654.html'>Технологии ABBYY обеспечивают оперативный доступ к архивным документам</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm15495' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=15495&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm15495"].SHOW_IMAGE.value="N"; document.forms["PrintForm15495"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm15495"].SHOW_IMAGE.value="Y"; document.forms["PrintForm15495"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(15495);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=15495.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=15495.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(15495);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><br /></p><h1>Как построить собственный ЦОД </h1>Автор: Владимир Габриелян, технический директор Mail.Ru<br />12.09.2009<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=15495&amp;PICTURE_ID=15492.html'><IMG src='../upload/iblock/e18/blackbox-150.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>BlackBox от Sun Microsystems.</b></TD></TR></TABLE><DIV class='article-text'><p align="right"><i>- У вас есть ЦОД? 
+    <br />
+   - Да, строим на 100 стоек. 
+    <br />
+   - А мы строим на 200. 
+    <br />
+   - А мы на 400 с независимой газовой электростанцией. 
+    <br />
+   - А мы на 500 с водяным охлаждением и возможностью отводить до 10 кВт тепла с одной стойки. 
+    <br />
+   - А мы наблюдаем за рынком и удивляемся.</i></p>
+ 
+<p>Ситуация на московском (да и российском в целом) рынке ЦОД еще два года назад выглядела плачевно. Тотальная нехватка дата-центров как таковых и мест в уже существовавших центрах привела к тому, что стойка на 3-4 кВт, стоившая в 2004-2005 гг. около 700 у.е., в 2007-м стала стоить 1500&ndash;2000 у.е. Стараясь удовлетворить растущий спрос, многие операторы и системные интеграторы организовали &laquo;стройки века&raquo; с целью создания самых лучших и самых больших ЦОД. Эти прекрасные стремления привели к тому, что на текущий момент в Москве есть около 10 дата-центров в стадии открытия и первичного заполнения, и еще несколько находится в проекте. Компании &laquo;Теленет&raquo;, i-Teco, Dataline, &laquo;Хостеров&raquo;, &laquo;Агава&raquo;, &laquo;Мастерхост&raquo;, Oversun, &laquo;Синтерра&raquo; и целый ряд других открыли собственные дата-центры на рубеже 2008 и 2009 гг. </p>
+
+<p>Желание вкладывать деньги в масштабные телекоммуникационные проекты объяснялось не только данью моде, но и рядом экономических причин. Для многих компаний строительство собственного ЦОД было мерой вынужденной: стимулом к этому, в частности, для хостинг-провайдеров или крупных Интернет-ресурсов стали постоянно растущие расходы на инфраструктуру. Однако не все компании правильно рассчитали свои силы; например, дата-центр одного крупного хостинг-провайдера превратился в долгострой, который ведется уже два года. Другой хостинг-провайдер, построивший дата-центр за МКАД, вот уже полгода старается распродать его хоть каким-нибудь крупным клиентам. </p>
+
+<p>Инвестиционные проекты, запущенные в разгар кризиса, тоже не могут похвастаться стабильным притоком клиентов. Сплошь и рядом стоимость за стойку, заложенная в бизнес-плане на уровне 2000 у.е., в нынешних экономических условиях снижается до 1500&ndash;1400 у.е., на годы откладывая выход проекта на самоокупаемость. </p>
+
+<p>Остались нереализованными несколько грандиозных проектов строительства дата-центров на тысячи стоек с газовыми электростанциями за МКАД. Один из таких проектов, в частности, был &laquo;похоронен&raquo; оператором фиксированной связи (в связи с поглощением компании более крупным игроком). </p>
+
+<p>Таким образом, на сегодняшний день окупились только те дата-центры, которые были построены больше трех лет назад и заполнение которых пришлось как раз на дефицитные 2004&ndash;2007 гг. В кризис же &ndash; в условиях избытка свободных площадей в дата-центрах &ndash; постройка все новых и новых ЦОД, казалось бы, выглядит сущим безумием. </p>
+
+<p>Однако не все так плохо: даже в условиях кризиса, при соблюдении определенных условий, можно и нужно создавать собственный ЦОД. Главное &ndash; понять ряд нюансов. </p>
+
+<h2>Что заставляет компанию создавать собственный ЦОД</h2>
+ 
+<p>Мотив один &ndash; безопасность бизнеса и минимизация рисков. Риски же таковы. Во-первых, класс коммерческих ЦОД в Москве соответствует 1&ndash;2 уровню, что означает перманентные проблемы с электропитанием и охлаждением. Во-вторых, коммерческие ЦОД категорически не согласны покрывать убытки от простоя и недополученную выгоду. Уточните максимальный размер штрафа или неустойки, на который вы можете рассчитывать в случае простоя, &ndash; он, как правило, не превышает 1/30 от арендной платы за день простоя. </p>
+
+<p>И в третьих, вы не в состоянии контролировать реальное положение дел в коммерческом ЦОД: </p>
+
+<ul>
+  <li>это коммерческая организация, которая должна извлекать прибыль из своей деятельности и порой экономит даже в ущерб качеству своих услуг; </li>
+
+  <li>вы принимаете на себя все риски сторонней компании, например - отключение питания (пусть и кратковременное) за непогашенную задолженность; </li>
+
+  <li>коммерческий ЦОД может расторгнуть договор с вами в любое время. </li>
+</ul>
+ 
+<h2>Экономика ЦОД</h2>
+ 
+<p>Очень важно заранее, правильно и полностью оценить затраты на строительство и эксплуатацию, а для этого необходимо определить класс ЦОД, который вы будете строить. Ниже приведена ориентировочная стоимость строительства площадки &laquo;под ключ&raquo; на 5 кВт стойку (без учета стоимости электричества). 
+  <table> 
+    <tbody>
+      <tr><td>Уровень 1</td>	<td>От 620 т.р. </td></tr>
+     
+      <tr><td>Уровень 2</td>	<td>От 810 т.р. </td></tr>
+     
+      <tr><td>Уровень 3</td>	<td>От 1300 т.р</td></tr>
+     
+      <tr><td>Уровень 4</td>	<td>От 1800 т.р. </td></tr>
+     </tbody>
+  </table>
+ </p>
+
+<p>Стоимость эксплуатации ЦОД зависит от множества факторов. Перечислим основные. </p>
+
+<ol>
+  <li>Стоимость электричества = количество потребляемой электроэнергии + 30% на отвод тепла + потери при передаче и преобразовании (от 2 до 8%). И это при условии выполнения всех мер по снижению затрат &ndash; таких, как сокращение потерь и пропорциональное охлаждение (что в некоторых случаях, увы, невозможно). </li>
+
+  <li>Стоимость аренды помещения &ndash; от 10 тыс. рублей за кв. м. </li>
+
+  <li>Стоимость обслуживания систем кондиционирования &ndash; приблизительно 15&ndash;20% от стоимости системы кондиционирования в год. </li>
+
+  <li>Стоимость обслуживания энергосистем (ИБП, ДГУ) &ndash; от 5 до 9% от стоимости. </li>
+
+  <li>Аренда каналов связи. </li>
+
+  <li>ФОТ службы эксплуатации. </li>
+</ol>
+ 
+<h2>Из чего состоит ЦОД</h2>
+ 
+<p>Существует целый ряд формализованных требований и стандартов, которые должны быть соблюдены при строительстве ЦОД: ведь надежность его работы критически важна. </p>
+
+<p>В настоящий момент широко используется международная классификация уровней (от 1 до 4) готовности (надежности) ЦОД ()см. таблицу). Каждый уровень предполагает определенную степень доступности сервисов ЦОД, которая обеспечивается различными подходами к резервированию питания, охлаждения и канальной инфраструктуры. Самый низкий (первый) уровень предполагает доступность 99,671% времени в год (или возможность 28 ч простоя), а самый высокий (четвертый) уровень &ndash; доступность 99,995%, т.е. не более 25 мин простоя в год. </p>
+
+<h3>Параметры уровней надежности ЦОД</h3>
+ 
+<table> 
+  <tbody>
+    <tr><td></td>	<td>Уровень 1</td>	<td>Уровень 2</td>	<td>Уровень 3</td>	<td>Уровень 4</td></tr>
+   
+    <tr><td>Пути охлаждения и ввода электричества</td>	<td>Один</td>	<td>Один</td>	<td>Один активный и один резервный</td>	<td>Два активных</td></tr>
+   
+    <tr><td>Резервирование компонентов</td>	<td>N</td>	<td>N+1</td>	<td>N+1</td>	<td>2*(N+1) </td></tr>
+   
+    <tr><td>Деление на несколько автономных блоков</td>	<td>Нет</td>	<td>Нет</td>	<td>Нет</td>	<td>Да</td></tr>
+   
+    <tr><td>Возможность горячей замены</td>	<td>Нет</td>	<td>Нет</td>	<td>Да</td>	<td>Да</td></tr>
+   
+    <tr><td>Здание</td>	<td>Часть или этаж</td>	<td>Часть или этаж</td>	<td>Отдельно стоящее</td>	<td>Отдельно стоящее</td></tr>
+   
+    <tr><td>Персонал</td>	<td>Нет</td>	<td>Не менее одного инженера в смене</td>	<td>Не менее двух инженеров в смене</td>	<td>Более двух инженеров, 24-часовое дежурство</td></tr>
+   
+    <tr><td>Загрузка мощностей, %</td>	<td>100</td>	<td>100</td>	<td>90</td>	<td>90</td></tr>
+   
+    <tr><td>Вспомогательные площади, % </td>	<td>20</td>	<td>30</td>	<td>80&ndash;90</td>	<td>100+</td></tr>
+   
+    <tr><td>Высота фальш- пола, см</td>	<td>40</td>	<td>60</td>	<td>100&ndash;120</td>	<td>100&ndash;120</td></tr>
+   
+    <tr><td>Нагрузка на пол, кг/м2</td>	<td>600</td>	<td>800</td>	<td>1200</td>	<td>1200</td></tr>
+   
+    <tr><td>Электричество</td>	<td>208&ndash;480 В</td>	<td>208&ndash;480 В</td>	<td>12&ndash;15 кВ</td>	<td>12&ndash;15 кВ</td></tr>
+   
+    <tr><td>Число точек отказа</td>	<td>Много + ошибки оператора</td>	<td>Много + ошибки оператора</td>	<td>Мало + ошибки оператора</td>	<td>Нет + ошибки оператора </td></tr>
+   
+    <tr><td>Допустимое время простоя в год, ч</td>	<td>28,8</td>	<td>22</td>	<td>1,6</td>	<td>0,4</td></tr>
+   
+    <tr><td>Время на создание инфраструктуры, мес.</td>	<td>3</td>	<td>3&ndash;6</td>	<td>15&ndash;20</td>	<td>15&ndash;20</td></tr>
+   
+    <tr><td>Год создания первого ЦОД подобного класса</td>	<td>1965</td>	<td>1975</td>	<td>1980</td>	<td>1995</td></tr>
+   </tbody>
+</table>
+ 
+<p>Данная классификация по уровням была предложена Кеном Бриллом (Ken Brill) еще в 1990-х гг. Считается, что первый ЦОД самого высокого уровня готовности был построен в 1995 г. компанией IBM для UPS в рамках проекта Windward. </p>
+
+<p>В США и Европе существует определенный набор требований и стандартов, регламентирующих постройку ЦОД. Например, американский стандарт TIA-942 и его европейский аналог -EN 50173&minus;5 фиксируют следующие требования: </p>
+
+<ul>
+  <li>к месту расположения дата-центра и его структуре; </li>
+
+  <li>к кабельной инфраструктуре; </li>
+
+  <li>к надежности, специфицированные по уровням инфраструктуры; </li>
+
+  <li>к внешней среде. </li>
+</ul>
+ 
+<p>В России на текущий момент не разработано актуальных требований к организации ЦОД, поэтому можно считать, что они задаются стандартами на строительство машинных залов и СНиПами на строительство технологических помещений, большинство положений которых были написаны еще в конце 1980-х гг. </p>
+
+<p>Итак, остановимся на трех &laquo;китах&raquo; строительства ЦОД, которые являются наиболее значимыми. </p>
+
+<h2>Питание</h2>
+ 
+<p>Как построить надежную и стабильную систему электроснабжения, избежать в дальнейшем сбоев в работе и не допустить простоев оборудования? Задача не из простых, требующая тщательного и скрупулезного изучения. </p>
+
+<p>Основные ошибки обычно допускают еще на этапе проектирования систем электропитания ЦОД. Они (в перспективе) могут вызвать отказ системы электроснабжения по следующим причинам: </p>
+
+<ul>
+  <li>перегрузка линий электропитания, как следствие &ndash; выход из строя электрооборудования и санкции энергонадзорных органов за превышение лимита потребления; </li>
+
+  <li>серьезные энергопотери, что снижает экономическую эффективность ЦОД; </li>
+
+  <li>ограничения в маcштабируемости и гибкости систем электропитании, связанные с нагрузочной способностью линий электропередач и электрооборудования. </li>
+</ul>
+ 
+<p>Система электропитания в дата-центре должна соответствовать современным потребностям технических площадок. В классификации ЦОД, предложенной Кеном Бриллом, применительно к электропитанию эти требования будут выглядеть следующим образом: </p>
+
+<ul>
+  <li>Уровень 1 &mdash; достаточно обеспечить защиту от скачков тока и стабилизацию напряжения, это решается установкой фильтров (без установки ИБП); </li>
+
+  <li>Уровень 2 &mdash; требует установки ИБП с байпасом с резервированием N+1; </li>
+
+  <li>Уровень 3 &mdash; необходимы параллельно работающие ИБП, с резервированием N+1; </li>
+
+  <li>Уровень 4 &mdash; системы ИБП, с резервированием 2 (N+1). </li>
+</ul>
+ 
+<p>Сегодня на рынке чаще всего можно встретить ЦОД с электропитанием второго уровня, реже &ndash; третьего (но в этом случае стоимость размещения обычно резко возрастает, причем далеко не всегда обоснованно). </p>
+
+<p>По нашим оценкам, дата-центр с полным резервированием обычно обходится в 2,5 раза дороже простого ЦОД, поэтому крайне важно еще на уровне предпроектной подготовки определиться, какой категории должна соответствовать площадка. Как недооценка, так и переоценка важности параметра допустимого времени простоя одинаково негативно сказываются на бюджете компании. Ведь финансовые потери возможны в обоих случаях - либо из-за простоя и сбоев в работе критически важных систем, либо из-за выбрасывания денег на ветер. </p>
+
+<p>Очень важно также проследить, как будет вестись учет потребления электричества. </p>
+
+<h2>Охлаждение</h2>
+ 
+<p>Правильно организованный отвод тепла &ndash; не менее сложная и важная задача. Очень часто берется общее тепловыделение зала и уже исходя из этого рассчитывается мощность претензионных кондиционеров и их количество. Такой подход, хотя он и очень часто встречается, нельзя назвать правильным, так как он ведет к дополнительным издержкам и потерям в эффективности систем охлаждения. Ошибки в расчетах систем охлаждения &ndash; самые распространенные, и свидетельство тому &ndash; служба эксплуатации почти каждого ЦОД в Москве, поливающая жарким летним днем теплообменники из пожарных шлангов. </p>
+
+<p>На качество отвода тепла влияют следующие моменты. </p>
+
+<p><b>Архитектурные особенности здания. </b> К сожалению, не все здания имеют правильную прямоугольную форму с постоянной высотой потолков. Перепады высоты, стены и перегородки, конструктивные особенности строения и воздействие солнечной радиации &ndash; все это может привести к дополнительным трудностям при охлаждении отдельных участков ЦОД. Поэтому расчет систем охлаждения должен вестись с учетом особенностей помещения. </p>
+
+<p><b>Высота потолков и фальшпола. </b> Здесь все очень просто: если высотой фальшпола дело не испортишь, то слишком высокие потолки ведут к застою горячего воздуха (следовательно, его надо отводить дополнительными средствами), а слишком низкие потолки затрудняют движение горячего воздуха к кондиционеру. В случае же низкого фальшпола (&gt; 500 мм) резко падает эффективность охлаждения. </p>
+
+<p><b>Показатели температуры и влажности воздуха в ЦОД. </b> Как правило, для нормальной работы оборудования требуется соблюдать температурный режим в диапазоне 18&ndash;25 градусов Цельсия и относительную влажность воздуха от 45 до 60%. В этом случае вы обезопасите свое оборудование от остановки по причине переохлаждения, выхода из строя в случае выпадения конденсата при высокой влажности, статического электричества (в случае с низкой влажностью) или из-за перегрева. </p>
+
+<h2>Каналы связи</h2>
+ 
+<p>Казалось бы, такая &laquo;незначительная&raquo; составляющая, как каналы связи, не может вызывать никаких затруднений. Именно поэтому на нее и не обращают должного внимания ни те, кто арендует ЦОД, ни те, кто его строит. Но что толку от безупречной и бесперебойной работы ЦОД, если оборудование недоступно, т.е. его фактически нет? Обязательно обратите внимание: ВОЛС должны полностью дублироваться, причем многократно. Под &laquo;дублируются&raquo; имеется в виду не только наличие двух волоконно-оптических кабелей от разных операторов, но и то, что они не должны лежать в одном коллекторе. </p>
+
+<p>Важно понимать, что действительно развитая коммуникационная инфраструктура требует значительных разовых затрат и отнюдь не дешева в эксплуатации. Следует расценивать ее как одну из весьма ощутимых составляющих стоимости ЦОД. </p>
+
+<h2>Собственный ЦОД на &laquo;раз-два-три&raquo; </h2>
+ 
+<p>Здесь стоит сделать небольшое отступление и рассказать об альтернативном методе создания собственного ЦОД. Речь идет о BlackBox &ndash; мобильном центре обработки данных, встроенном в транспортный контейнер. Проще говоря, BlackBox &ndash; это дата-центр, размещенный не в отдельной комнате внутри помещения, а в неком подобии автотрейлера (см. рисунок). </p>
+
+<p>BlackBox можно привести в полностью рабочее состояние за месяц, т.е. в 6&ndash;8 раз быстрее, чем традиционные ЦОД. При этом не нужно приспосабливать под BlackBox инфраструктуру здания компании (создавать под него особую систему противопожарной безопасности, охлаждения, охраны и т.п.). А самое главное &ndash; для него не требуется отдельного помещения (можно разместить его на крыше, во дворе&hellip;). Все, что действительно необходимо &ndash; организовать подачу воды для охлаждения, систему бесперебойного электропитания и наладить подключение к Интернету. </p>
+
+<p>Стоимость собственно BlackBox &mdash; около полумиллиона долларов. И тут надо отметить, что BlackBox &ndash; это полностью сконфигурированный (однако с возможностью кастомизации) виртуализационный центр обработки данных, размещенный в стандартном транспортном контейнере. </p>
+
+<p>Две компании уже получили этот контейнер для предварительного тестирования. Это Linear Accelerator Center (Стэнфорд, США) и ... российская компания &laquo;Мобильные ТелеСистемы&raquo;. Самое интересное, что МТС запустила BlackBox быстрее, чем американцы. </p>
+
+<p>В целом BlackBox производит впечатление очень хорошо продуманной и надежной конструкции, хотя, конечно, стоит упомянуть и ее недостатки. </p>
+
+<p>Необходим внешний источник энергии минимум в 300 Вт. Здесь мы упираемся в строительство или реконструкцию ТП, монтаж ГРЩ, прокладку кабельной трассы. Это не так просто &ndash; проектные работы, согласование и утверждение проекта во всех инстанциях, монтаж оборудования&hellip; </p>
+
+<p>ИБП в комплект поставки не входят. Опять упираемся в проектные работы, выбор поставщика, оборудование помещения под монтаж ИБП с климатической установкой (батареи очень капризны к температурному режиму). </p>
+
+<p>Потребуется также покупка и монтаж ДГУ. Без него не решить проблему с резервированием, а это еще один круг согласований и разрешений (средний срок поставки таких агрегатов &ndash; от 6 до 8 месяцев). </p>
+
+<p>Охлаждение - необходим внешний источник холодной воды. Придется спроектировать, заказать, дождаться, смонтировать и запустить систему чиллеров с резервированием. </p>
+
+<p>Резюме: вы по сути построите небольшой дата-центр в течение полугода, но вместо ангара (помещения) купите контейнер с серверами, причем сбалансированный и серьезно продуманный до мелочей, с комплектом удобных опций и ПО для управления всем этим хозяйством, и смонтируете его за месяц. </p>
+
+<h2>Чем больше ЦОД, тем..? </h2>
+ 
+<p>На текущий момент самый большой ЦОД, о котором есть информация в открытых источниках, &ndash; объект Microsoft в Ирландии, в который корпорация планирует инвестировать более 500 млн долл. Специалисты утверждают, что эти деньги будут потрачены на создание первого в Европе вычислительного центра для поддержки различных сетевых сервисов и приложений Microsoft. </p>
+
+<p>Строительство в Дублине конструкции общей площадью 51,09 тыс. кв. м, на территории которой разместятся десятки тысяч серверов, началось в августе 2007 г. и должно завершиться (по прогнозам самой компании) в середине 2009 г. </p>
+
+<p>К сожалению, имеющаяся информация о проекте мало что дает, ведь важна не площадь, а энергопотребление. Исходя из этого параметра, мы предлагаем классифицировать ЦОД следующим образом. </p>
+
+<ul>
+  <li>&laquo;Домашний ЦОД&raquo; &ndash; ЦОД уровня предприятия, которому требуются серьезные вычислительные мощности. Мощность &ndash; до 100 кВт, что позволяет разместить в нем до 400 серверов. </li>
+
+  <li>&laquo;Коммерческий ЦОД&raquo;. К этому классу относятся операторские ЦОД, стойки в которых сдаются в аренду. Мощность &ndash; до 1500 кВт. Вмещает до 6500 серверов. </li>
+
+  <li>&laquo;Интернет-ЦОД&raquo; &ndash; ЦОД для Интернет-компании. Мощность &ndash; от 1,5 МВт, вмещает 6500 серверов и более.</li>
+</ul>
+ 
+<p>Возьму на себя смелость предположить, что при строительстве ЦОД мощностью более 15 МВт неотвратимо возникнет &laquo;эффект масштаба&raquo;. Ошибка на 1,5&ndash;2 кВт в &laquo;семейном&raquo; ЦОД на 40 кВт, скорее всего, останется незамеченной. Ошибка размером в мегаватт будет фатальной для бизнеса. </p>
+
+<p>Кроме того, можно с полным основанием предположить в этой ситуации действие закона убывающей отдачи (как следствие эффекта масштаба). Он проявляется в необходимости совмещения больших площадей, огромной электрической мощности, близости к основным транспортным магистралям и прокладки железнодорожных путей (это будет экономически целесообразней, чем доставка огромного количества грузов автотранспортом). Стоимость освоения всего этого в пересчете на 1 стойку или юнит будет серьезно выше среднего по следующим причинам: во-первых, отсутствием подведенной мощности в 10 МВт и более в одной точке (придется искусственно выращивать такой &laquo;алмаз&raquo;); во-вторых, необходимостью строить здание или группу зданий, достаточных для размещения ЦОД. </p>
+
+<p>Но если вдруг удалось найти мощность, скажем, около 5 МВт (а это уже большое везение), с двумя резервируемыми вводами от разных подстанций в здание, которое имеет правильную прямоугольную форму с высотой потолков 5 м и общей площадью 3,5 тыс. кв. м, да еще и в нем нет перепадов высоты, стен и перегородок, а рядом есть около 500 кв. м прилегающей территории&hellip; Тогда, конечно, возможно достичь минимальной себестоимости за одну стойку, которых будет примерно 650. </p>
+
+<p>Цифры здесь названы из расчета потребления 5 КВт на стойку, что является на сегодняшний день стандартом &laquo;де факто&raquo;, так как увеличение потребления в стойке неотвратимо приведет к сложностям с отводом тепла, а как следствие &ndash; к серьезному увеличению себестоимости решения. Равно как и уменьшение потребления не принесет необходимой экономии, а лишь увеличит арендную составляющую и потребует освоения больших площадей, чем это на самом деле требуется (что тоже печально скажется на бюджете проекта). </p>
+
+<p>Но не нужно забывать, что главное &ndash; это соответствие ЦОД поставленным задачам. В каждом отдельном случае необходимо искать баланс, опираясь на те вводные данные, которые мы имеем. Другими словами, придется искать компромисс между удаленностью от основных магистралей и наличием свободной электрической мощности, высотой потолка и площадью помещения, полным резервированием и бюджетом проекта. </p>
+<blockquote> 
+   <h3>Где строить? </h3>
+ 
+  <p>Считается, что ЦОД должен размещаться в отдельно стоящем здании, как правило, без окон, оснащенном самыми современными системами видеонаблюдения и контроля доступа. К зданию должно быть подведено два независимых электрических ввода (от двух разных подстанций). Если ЦОД имеет несколько этажей, то перекрытия должны выдерживать высокие нагрузки (от 1000 кг на кв. м). Внутренняя часть должна быть разделена на герметичные отсеки с собственным микроклиматом (температурой 18&ndash;25 градусов Цельсия и влажностью 45&ndash;60%). Охлаждение серверного оборудования должно обеспечиваться с помощью прецизионных систем кондиционирования, а резервирование питания &ndash; как устройствами бесперебойного питания, так и дизель-генераторными установками, которые обычно находятся рядом со зданием и обеспечивают в случае аварии функционирование всех электрических систем ЦОД. </p>
+
+  <p>Особое внимание следует уделить системе автоматического пожаротушения, которая обязана, с одной стороны, исключать ложные срабатывания, а с другой &ndash; реагировать на малейшие признаки задымления или появления открытого пламени. Серьезный шаг вперед в области пожаробезопасности ЦОД &ndash; применение азотных систем пожаротушения и создания пожаробезопасной атмосферы. </p>
+
+  <p>Сетевая инфраструктура также должна предусматривать максимальное резервирование всех критически важных узлов. </p>
+
+  <h3>Как экономить? </h3>
+ 
+  <p>Можно начать экономить с качества питания в ЦОД и закончить экономией на отделочных материалах. Но если вы строите такой &laquo;бюджетный&raquo; ЦОД, это выглядит по крайней мере странно. Какой смысл инвестировать в рискованный проект и ставить под угрозу ядро своего бизнеса?! Одним словом, экономия требует очень взвешенного подхода. </p>
+
+  <p>Тем не менее есть несколько весьма затратных статей бюджета, которые оптимизировать не только можно, но и нужно. </p>
+
+  <p><b>1. Телекоммуникационные шкафы (стойки).</b> Устанавливать в ЦОД шкафы, т. е. стойки, где каждая имеет боковые стенки плюс заднюю и переднюю дверь, не имеет никакого смысла по трем причинам: </p>
+
+  <ul>
+    <li>стоимость может отличаться на порядок; </li>
+  
+    <li>нагрузка на перекрытия выше в среднем на 25-30%; </li>
+  
+    <li>охлаждающая способность ниже (даже с учетом установки перфорированных дверей). </li>
+  </ul>
+ 
+  <p><b>2. СКС. </b> Опять-таки нет никакого смысла опутывать весь ЦОД оптическими патчкордами и приобретать самые дорогие и мощные коммутаторы, если вы не намерены устанавливать оборудование во все стойки разом. В среднем срок заполняемости коммерческого ЦОД &ndash; полтора-два года. При текущих темпах развития микроэлектроники это целая эпоха. Да и всю разводку так или иначе придется переделывать &ndash; либо не рассчитаете требуемого объема портов, либо в процессе эксплуатации линии связи будут повреждены. </p>
+
+  <p>Ни в коем случае не стройте &laquo;медный&raquo; кросс в одном месте &ndash; разоритесь на кабеле. Намного дешевле и грамотней ставить рядом с каждым рядом телекоммуникационную стойку и разводить от нее на каждую стойку по 1&ndash;2 патч-панели медью. Если необходимо будет подключить стойку, то пробросить оптический патч-корд до нужного ряда &ndash; минутное дело. При этом еще и не понадобятся серьезные инвестиции на начальном этапе; наконец, попутно будет обеспечена необходимая маштабируемость. </p>
+
+  <p><b>3. Питание. </b> Да, не поверите, но в питании ЦОД самое важное &ndash; КПД. Тщательно выбирайте электрооборудование и системы бесперебойного питания! От 5 до 12% стоимости владения ЦОД можно сэкономить на минимизации потерь, таких как потери на преобразовании (2-8%) в ИБП (у старых поколений ИБП КПД ниже) и потери при сглаживании гармонических искажений фильтром гармоник (4–8%). Уменьшить потери можно за счет установки «компенсаторов реактивной мощности» и за счет сокращения длины силовой кабельной трассы. </p>
+</blockquote> 
+<h2>Заключение</h2>
+ 
+<p>Какие же выводы можно сделать? Как выбрать из всего многообразия то решение, которое подходит именно вам? Это, безусловно, сложный и нетривиальный вопрос. Повторимся: в каждом конкретном случае необходимо тщательно взвешивать все &laquo;за&raquo; и &laquo;против&raquo;, избегая бессмысленных компромиссов, &ndash; учитесь правильно оценивать собственные риски. </p>
+
+<p>С одной стороны, при сокращении издержек одним из вариантов экономии может стать аутсорсинг ИТ-услуг. В этом случае оптимально использование коммерческих ЦОД, с получением полного комплекса телекоммуникационных сервисов при отсутствии инвестиций в строительство. Однако для больших профильных компаний и банковского сектора с наступлением периода нестабильности и замораживания строительства коммерческих ЦОД остро встает вопрос о строительстве собственного дата-центра&hellip; </p>
+
+<p>С другой стороны, кризисные явления, которые мы наблюдаем в течение последнего года, печально сказались на экономике в целом, но в то же время служат акселератором для развития более успешных компаний. Арендная плата за помещения серьезно уменьшилась. Спад ажиотажа вокруг электрических мощностей освободил место более эффективным потребителям. Производители оборудования готовы на беспрецедентные скидки, а рабочая сила упала в цене более чем на треть. </p>
+
+<p>Одним словом, если вы планировали строить свой собственный дата-центр, то сейчас, на наш взгляд, самое время. </p>
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</A></b></li><li><b><A href='detail.php@ID=24480.html'>EMC: прогнозы развития ИТ-индустрии </A></b></li><li><b><A href='detail.php@ID=22756.html'>Средства борьбы с внутренними нарушителями ИБ</A></b></li><li><b><A href='detail.php@ID=20843.html'>ИБП в условиях мобильности: индивидуальные или централизованные?</A></b></li><li><b><A href='detail.php@ID=20353.html'>Облачное окружение vs. традиционные ЦОД</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25261.html'>Сетевые новинки Dell для дата-центров </A></b></li><li><b><A href='detail.php@ID=24909.html'>Комплекс ETegro Technologies для облачных ЦОД</A></b></li><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24693.html'>Услуга разработки концепции модульного ЦОД </A></b></li><li><b><A href='detail.php@ID=24608.html'>Комплексная платформа для управления инфраструктурой ЦОД от Schneider Electric и HP</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=15495.html" target="_blank"><img src="../upload/iblock/a66/cod-50.jpg" alt="Открыть материал" style="width:50px; height:50px; border:1px solid #000; float:left; margin:0 5px 5px 0;"></a><a href="detail.php@ID=15495.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Как построить собственный ЦОД </a><br><a href="detail.php@ID=15495.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Каким должен быть центр обработки данных? &laquo;Подводные камни&raquo;, о которых важно не забывать при строительстве собственного дата-центра&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=15495.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br />Ссылка на статью: <a href="detail.php@ID=15495.html" target="_blank" rel="nofollow">Как построить собственный ЦОД </a><br /><br />Система подзарядки ИБП должна осуществляться независимыми от электрической сети средствами, к которым можно отнести ветровую и солнечную энергию.<br /><br />Создано: 01.04.2014 19:08:52<br />Автор: Александр<br /><br /><img src='../images/byte/pix-g.gif' class='break'><br /><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=15495&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='01bed3528b1d43266e2b84683fc86974'><img src='../bitrix/tools/captcha.php@captcha_code=01bed3528b1d43266e2b84683fc86974' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

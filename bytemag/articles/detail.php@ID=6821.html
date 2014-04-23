@@ -1,0 +1,364 @@
+<HTML>
+<HEAD>
+<title>Управление транзакционным содержанием как дополнение к ERP-системе
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="За последние десятилетия во всем мире, включая Россию, приобрели большую известность системы класса ERP (Enterprise Resource Planning — управление ресурсами предприятия). Эти системы ориентированы в первую очередь на учет и управление бизнес-операциями" />
+<meta name="description" content="За последние десятилетия во всем мире, включая Россию, приобрели большую известность системы класса ERP (Enterprise Resource Planning — управление ресурсами предприятия). Эти системы ориентированы в первую очередь на учет и управление бизнес-операциями" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398080992','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6821' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6821&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6821"].SHOW_IMAGE.value="N"; document.forms["PrintForm6821"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6821"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6821"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6821);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6821.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6821.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6821);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6271.html'>ERP</a><br /></p><a href='../numbers/index.php@ID=11491.html'>№9 (96), сентябрь 2006</a><h1>Управление транзакционным содержанием как дополнение к ERP-системе
+</h1>Автор: Елена Стрелкова<br />23.09.2006<p></p><DIV class='article-text'><p>За последние десятилетия во всем мире, включая Россию, приобрели большую известность системы класса ERP (Enterprise Resource Planning — управление ресурсами предприятия). Эти системы ориентированы в первую очередь на учет и управление бизнес-операциями (транзакциями). Однако ERP-системы нельзя считать самодостаточными в процессе управленческого и бухгалтерского учета, поскольку данные, которые они обрабатывают, берутся, в частности, из документов, поступающих на предприятие в бумажном виде (счета на оплату, счета-фактуры, товарно-транспортные накладные и т. п.). Эти документы, поступая на предприятие, инициируют регламентированный процесс согласования транзакции, после чего передаются в финансовую службу, где данные из документов вносят в систему, в которой выполняется транзакция. Сами же документы полагается сохранять в учетных целях в соответствии с требованиями законодательства.
+<p>До тех пор пока в контур автоматизации не включены описанные процессы с бумажными документами, рано говорить о достижении максимальных преимуществ от ИТ в области управленческого и бухгалтерского учета. Сегодня в мире растет интерес к переводу процессов работы с бумажными документами, инициирующими транзакции и содержащими данные для их выполнения, в электронную среду. Аналитическая компания Forrester (<a href="http://www.forrester.com">http://www.forrester.com</a>) даже ввела термин Transactional Content (транзакционное содержание), под которым понимается «возникающее вне предприятия содержание, которое инициирует внутренний бизнес-процесс»*, а приложения, предназначенные для управления этим типом содержания, выделяет в отдельный класс.
+<p><hr width="40%" align="left" noshade>* The Forrester Wave: Content-Centric Applications, Q1 2006 by Kyle McNabb. March 29, 2006.
+<p>Как отмечает Forrester, для поддержки процессов, в которых участвует транзакционное содержание, приложениям необходимы функции сбора, обработки, хранения и архивирования неизменяемого содержания, такого, как отсканированные образы, письма электронной почты, факсы и документы, сгенерированные информационными системами. Поскольку рассматриваемые процессы нуждаются в автоматизации и оптимизации, приложения также должны обладать развитыми возможностями автоматизации бизнес-процессов и интеграции с корпоративными системами предприятия.
+<p>Рассмотрим возможности автоматизации процессов с участием транзакционного содержания на примере решения для автоматизации обработки счетов на оплату на платформе EMC Documentum.
+<h3>Решение для обработки счетов на оплату</h3>
+<p>На любом предприятии есть отдел, который занимается оплатой счетов поставщиков и подрядчиков, выставленных за работы и услуги. Несмотря на применение ERP-систем, процессы обработки полученных счетов в основном выполняются вручную, поскольку счета поступают на предприятие извне на физическом носителе — бумаге или по факсу. Данные из счетов вручную вводятся в финансовую систему, проведению операции предшествует процесс согласования оплаты, а сами бумажные документы передаются в архив для хранения в установленном порядке.
+<p>При большом количестве счетов на оплату в процессе их обработки вручную возникают длительные задержки, что вносит напряженность в отношения с подрядчиками и поставщиками. Кроме того, при вводе данных в финансовую систему вручную всегда есть вероятность ошибки. Поэтому предприятия ищут пути повышения эффективности и точности этой работы за счет автоматизации трудоемких процессов.
+<p>Современный подход к автоматизации оплаты счетов заключается в том, чтобы при помощи сканирования и других технологий ввода (например, механизма классификации документов и оптического распознавания символов) перевести документ в электронную среду в самом начале процесса обработки — сразу после поступления счета на предприятие. Технологии ввода, разработанные для различных отраслей, интенсивно использующих бумажные документы (финансовые услуги, страхование, здравоохранение, нефтяная и газовая промышленность, производство), и транзакционно-ориентированных процессов (оплата счетов и получение платежей), специально рассчитаны на то, чтобы преобразовывать большой объем бумажных документов и другого исходного содержания в цифровую форму, делая их доступными для автоматизированных бизнес-процессов.
+<p>Чтобы исключить использование бумажных документов в цикле обработки счета, нужно решить задачу преобразования счетов в стандартные электронные документы и данные, принимаемые корпоративными и платежными системами. Раньше это было невозможно из-за многообразия самих счетов. Но сегодня системы автоматизации выгодно используют технологии обработки так называемых полуструктурированных документов.
+<p>После преобразования в электронный вид документ движется по процессу посредством технологии workflow. Workflow предоставляет инструмент для отслеживания и управления процессом утверждения оплаты на уровне счета и на агрегированном уровне. В число обычных функций входят автоматическое извещение пользователей при необходимости какого-либо действия (например, утверждения счета), сообщения с напоминаниями, а также процедуры эскалации, основанные на иерархиях утверждений.
+<p>Решения для оплаты счетов не включают саму оплату, но они доставляют необходимые транзакционные данные в финансовые системы для осуществления платежей. Поэтому очень важен такой фактор, как уровень интеграции с существующей ERP- и другими финансовыми системами.
+<h3>Этапы управления счетами для оплаты</h3>
+<p>Процесс обработки счетов на оплату схематично показан на рис. 1. Рассмотрим, что происходит при преобразовании бумажных счетов в цифровые документы и данные и при их передаче в корпоративные бизнес-процессы, где эти данные и документы оцениваются или используются. Кроме того, посмотрим, как в конечном счете они архивируются или удаляются.
+<p>Рис. 1. Автоматизированный процесс оплаты счетов с использованием технологий EMC Documentum.
+<h4>Этап 1: ввод</h4>
+<p>Ввод бумажных счетов и извлечение данных для передачи в транзакционную систему обеспечивает ПО EMC Captiva InputAccel (рис. 2). Как правило, входящие документы проходят через некоторые или все перечисленные ниже процедуры.
+<p>Рис. 2. EMC Captiva InputAccel обеспечивает ввод бумажных счетов и извлечение данных их для передачи в транзакционную систему.
+<p><b>Ввод.</b> Процесс улучшения качества отсканированных изображений может включать очистку от мусора, изменение ориентации страницы, удаление рамки, устранение искажений. Существуют и другие функции предварительной обработки изображений, предназначенные для уменьшения шума и удаления или игнорирования несущественного материала.
+<p><b>Классификация.</b> Анализ текста или изображения, а также интеллектуальный анализ позволяют автоматически идентифицировать документы и подготовить их к обработке без ручной сортировки или разделителей страниц. С помощью такого анализа можно определять тип документа и автоматически маршрутизировать документы в соответствии с бизнес-правилами. Затем документы индексируются либо в них расставляются теги, чтобы их легко было извлечь из хранилища системы управления корпоративным содержанием или из другой системы.
+<p><b>Извлечение данных.</b> В настоящее время технологии обработки форм и интеллектуального распознавания документов применяются для ввода таких данных, как номер и дата счета, идентификационный номер продавца, номер заказа на покупку, номер счета, общая сумма, и других важных полей данных. Затем система экспортирует эту информацию в ERP- или другую платежную систему.
+<p><b>Валидация.</b> После извлечения данные можно проверить с помощью функциональных приложений, чтобы убедиться в их точности и целостности. Например, атрибуты счета можно сравнить с атрибутами заказа на покупку, сформированного в ERP-системе.
+<p><b>Экспорт.</b> Во время экспорта данные становятся доступными в соответствующем формате (например, PDF, XML) и конвертируются для непосредственного использования в базах данных (Microsoft, Oracle, Informix, Sybase и т. д.). Предприятия, использующие систему управления содержанием EMC Documentum, могут экспортировать любые данные и документы в хранилище Documentum.
+<h4>Этап 2: интеграция с системой управления бизнес-процессами</h4>
+<p>С того момента как документ введен в хранилище, его можно включать в работу. Система управления бизнес-процессами (BPM) обеспечивает следующие способы обработки входящих документов.
+<ul><li>Применение бизнес-правил к BPM-службам для автоматизации повторяющихся задач, традиционно выполнявшихся вручную (например, сверка счета с данными заказа на покупку из ERP-приложения без участия человека).
+<li>Установление очереди, в которой можно указать приоритет для работ или задач и направлять их работникам в зависимости от уровня квалификации и/или пропускной способности.
+<li>Интеграция с функциональными приложениями (например, ERP, CRM и Microsoft Office) таким образом, чтобы дополнительная информация становилась доступной для переписки, анализа и коллективной работы.
+<li>Обязательное применение технологий управления записями и регламентов хранения, чтобы определить, какие документы следует хранить и как долго, а также какие принимать меры обеспечения безопасности.
+<li>Объединение содержания с соответствующими шаблонами исходящих документов для создания персонализованных коммуникаций, например, формирования писем поставщикам и подрядчикам.</ul>
+<p>Идеальное решение обеспечивает сбор всего взаимосвязанного транзакционного содержания в «виртуальных папках», которые содержат все необходимые документы по данному делу, транзакции или поставщику. Виртуальные папки можно эффективно маршрутизировать и систематизировать, исключив ситуации, в которых информация может быть потеряна или не принята во внимание. Чтобы уменьшить время отклика на запрос, можно использовать управление очередями для автоматической маршрутизации информации соответствующим сотрудникам.
+<p>Кроме того, для автоматизации максимального числа процессов и минимизации ручного вмешательства используется управление правилами. Например, к счетам ниже определенной суммы можно применять правило, позволяющее утверждать их автоматически и оплачивать без взаимодействия с человеком.
+<h4>Этап 3: доступ и меры контроля</h4>
+<p>Перевод документов в электронный вид существенно расширяет возможности обзора информации, относящейся к операции, поставщику или подрядчику. Как только документ оцифрован и сохранен в едином хранилище, сотрудники могут выполнять поиск, просмотр и аннотирование документов. Извлечение информации происходит быстрее при использовании эффективных функций поиска по метаданным или навигации по папкам и категориям, структурирующим хранилище.
+<p>Доступ также облегчает коллективную работу с целью сократить время принятия решений. Кроме того, коллективное обсуждение можно автоматически инициировать как часть бизнес-процессов; например, на основе критериев, определенных в бизнес-правилах, можно вызвать сотрудников по электронной почте в «виртуальный конференц-зал» (в нашем случае EMC Documentum eRoom) для утверждения оплаты некоторых счетов.
+<p>Безусловно, доступ к документам необходимо строго контролировать для защиты конфиденциальности и обеспечения целостности записей. При помощи цифровых паролей система аутентификации EMC Documentum определяет, имеет ли то или иное лицо право на доступ к документам. Можно также обеспечить многофакторную аутентификацию пользователей, включая биометрические характеристики, инфраструктуру открытого ключа (Public Key Infrastructure, PKI) и единую регистрацию.
+<p>EMC Documentum использует списки управления доступом, чтобы определить, какие пользователи могут получить доступ к документам и какие действия им разрешены. Списки управления доступом можно автоматически задавать при создании документов. Кроме того, уполномоченный на это персонал может в любое время вносить в них изменения вручную. Разрешения устанавливаются как для отдельных пользователей, так и для групп пользователей, что упрощает администрирование набора прав доступа в масштабе всей системы.
+<h4>Этап 4: архивирование и хранение</h4>
+<p>В конце концов в бизнес-процессе обработки счетов на оплату наступает момент, когда документ становится неактивным. В этот момент документ можно «логически ламинировать» и поместить под управление системы управления записями. Документ можно выписывать и возвращать в хранилище, но если он будет каким-то образом изменен, будет создана новая запись, включающая метаданные о том, кем и когда сделано изменение. Это обеспечивает защиту записи и позволяет установить любые регламенты хранения, указывающие, как долго хранится документ и где он должен находиться.
+<p>Как эффективно хранить информацию после того, как процесс обработки счета закончен? Выбор стратегии хранения очень важен в связи с ростом объема хранимых документов. Можно значительно сэкономить за счет перемещения архивных документов с «первичных» высокопроизводительных устройств хранения (например, локальных серверов) на дисковые устройства хранения (например, EMC Centera, рис. 3), если доступ к ним требуется не слишком часто.
+<p>Рис. 3. На устройстве EMC Centera можно хранить неизменяемое содержание и архив первичных финансовых документов.
+<p>Решение EMC Centera предлагает дополнительные преимущества по сравнению с обычными средствами хранения (ленточные накопители или оптические устройства), обеспечивая аутентичность содержания, мгновенный онлайновый доступ и применение регламентов хранения и размещения в соответствии с корпоративными правилами и требованиями регулирующих организаций.
+<p>К хранению счетов и других первичных бухгалтерских документов предъявляются следующие ключевые требования: аутентичность, целостность, доступность.
+<p><b>Аутентичность.</b> Достоверность документов обеспечивается с помощью соответствующих мер безопасности, управляющих доступом и ограничивающих возможности изменения или удаления. Система должна предоставлять журнал аудита для просмотра всех действий, совершенных с документами в хранилище.
+<p><b>Целостность.</b> Система должна иметь встроенную защиту от отказов системы хранения данных, сбоев или внешних угроз. Как правило, данные автоматически реплицируются на вторичные носители, а функции самовосстановления непрерывно контролируют целостность данных и при необходимости восстанавливают их.
+<p><b>Доступность.</b> Соответствие требованиям раскрытия информации может включать быстрое восстановление сотен или тысяч архивированных записей в ответ на запрос проверяющих органов. В таком случае способность быстрого реагирования поможет компании избежать штрафных санкций или уменьшить судебные издержки.
+<p>Система хранения с адресацией по содержанию (Content Addressed Storage, CAS) — относительно новый подход к удовлетворению требований к системе хранения. В этом случае приложению не требуется знать физическое расположение информации на устройстве хранения. Вместо этого адрес вычисляется непосредственно по содержанию и используется как «виртуальная квитанция на получение», которую приложения используют для поиска и извлечения хранимых объектов. Это не только упрощает задачу управления огромным количеством объектов, но и предоставляет цифровой «отпечаток пальца» для содержания, гарантируя его аутентичность. CAS также поддерживает собственное управление и конфигурирование, что позволяет организациям управлять большими объемами данных силами меньшего количества персонала и со значительно более низкими расходами по сравнению с традиционными методами управления архивированием.
+<h3>Пример решения для оплаты счетов</h3>
+<p>Компания Petro-Canada, расположенная в городе Калгари (Канада), ведет разведку, освоение и разработку месторождений нефти и природного газа, занимается переработкой сырой нефти и другого сырья, поставляет сырую нефть и природный газ, а также нефтепродукты и связанные с этим товары и услуги. Валовой доход компании в 2005 г. превысил 3,7 млн долл., и сегодня это одна из самых больших объединенных нефтяных и газовых компаний в Канаде, влияние которой на международном рынке неуклонно растет. У Petro-Canada пять заводов в удаленных друг от друга точках, и на каждом из этих заводов применяется отдельный централизованный процесс оплаты счетов.
+<p>До 1997 г. в компании существовал трудоемкий «бумажный» процесс оплаты счетов, что приводило к длительным срокам утверждения оплаты (около 35 дней) и затрудняло доступ к документам, хранящимся в бумажном виде. Кроме того, географический и функциональный разброс предприятий, добывающих и перерабатывающих нефть, приводил к тому, что управление документами в масштабе всей компании становилось сложнее и дороже.
+<p>Возрастающие требования к функциям управления содержанием, таким, как контроль версий, настройка безопасности и улучшенные средства поиска, получения и доставки данных, привели к тому, что Petro-Canada начала рассматривать решения для управления содержанием. В компании оценили возможности автоматизации, предлагаемые тремя разными поставщиками, и выбрали платформу EMC Documentum, обладающую большей функциональностью, а также интегрированной и открытой архитектурой.
+<p>Компания внедрила платформу Documentum в сентябре 1997 г. в пилотных группах, включая департамент оплаты счетов, и на протяжении последующих лет постепенно разворачивала это решение в других группах, наращивая их функциональность. Сегодня Documentum стала корпоративным стандартом для управления содержанием в Petro-Canada; в 30 департаментах с ней работают 4500 пользователей.
+<p>В настоящее время компания использует в процессе оплаты счетов процедуру «получение образа после оплаты». Поступившие счета маршрутизируются через ERP-систему, где они снабжаются кодами и оплачиваются, а впоследствии все счета сканируются в центральном отделе. Затем образ счета прикрепляется к соответствующему ваучеру в системе ERP. Самое большое преимущество решения EMC заключается в том, что пользователи системы оплаты счетов теперь имеют прямой и немедленный доступ ко всему содержанию, хранящемуся в системе (контракты поставщиков, счета и другие сопровождающие документы), что значительно уменьшает время и издержки, связанные с архивированием, поиском и извлечением данных.
+<p>Благодаря автоматизации бухгалтерских процессов компания снизила время обработки счетов и пользуется скидками за раннюю оплату, направляя счета с определенными сроками или от определенных поставщиков в отдельные, более быстрые workflow-процессы.
+<p>Другое важное преимущество интеграции систем ERP с платформой Documentum — улучшение согласованности и возможность проведения аудита. Компания использует платформу EMC Documentum для должного управления жизненным циклом документов, безопасностью, интеграцией и доступностью документов компании, а также для предоставления отчетности, требуемой в целях контроля по закону Сарбэйнса—Оксли.
+<h3>Преимущества автоматизированных решений</h3>
+<p>Предприятия, использующие автоматизированные решения для оплаты счетов, получают ряд преимуществ, которые можно в основном отнести к трем областям.
+<p><b>Эффективность обработки.</b> Решения для оплаты счетов ускоряют поиск транзакций, разрешение несоответствий и уменьшают время ответа на запросы поставщика, поскольку персонал подразделения по оплате счетов получает счета из электронного хранилища, а не разыскивает их в стопках бумаг или в архиве. Счета быстрее поступают в очередь на обработку, а для утверждения оплаты используются их образы. Задачи рассмотрения и утверждения могут автоматически направляться индивидуальным пользователям, распределенным в масштабе организации, в соответствии с четко определенными и полностью настраиваемыми бизнес-правилами.
+<p><b>Снижение издержек.</b> Решения для оплаты счетов снижают издержки на хранение документов за счет замены бумажных архивов электронными хранилищами. Кроме того, они помогают избежать штрафов за просроченные платежи и получать скидки за быструю оплату.
+<p><b>Улучшение прозрачности и контроля.</b> Решения для оплаты счетов обеспечивают надежное хранение счетов и поддерживают корпоративную политику и установленные требования к хранению и размещению документов. Постоянный доступ к образам счетов упрощает анализ и отчетность, позволяя обойтись без бумажных документов при составлении отчетов. Автоматизированные решения также увеличивают скорость и точность принятия решений, предоставляя пользователям правильную и своевременную информацию.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24872.html'>Microsoft Dynamics NAV 2013 R2 в России</A></b></li><li><b><A href='detail.php@ID=24846.html'>Epicor: новая модель внедрения ERP-систем </A></b></li><li><b><A href='detail.php@ID=24758.html'>Коннектор системы ЭДО и Microsoft Dynamics AX </A></b></li><li><b><A href='detail.php@ID=23887.html'>Облачное решение iTMan для учета ИТ-активов</A></b></li><li><b><A href='detail.php@ID=23802.html'>Новые технологии отчетности от БФТ</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6821.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Управление транзакционным содержанием как дополнение к ERP-системе
+</a><br><a href="detail.php@ID=6821.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">За последние десятилетия во всем мире, включая Россию, приобрели большую известность системы класса ERP (Enterprise Resource Planning — управление&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6821.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6821&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='09588e7f39bfc12896d4b671154d9264'><img src='../bitrix/tools/captcha.php@captcha_code=09588e7f39bfc12896d4b671154d9264' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

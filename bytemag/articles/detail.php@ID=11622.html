@@ -1,0 +1,628 @@
+<HTML>
+<HEAD>
+<title>Управление вычислительной мощностью и прогнозирование потребностей центров обработки данных</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Подход, основанный на регистрации профилей потребностей в ресурсах для работы приложений, позволяет эффективно предсказывать будущую потребность в вычислительной мощности. Развитие виртуализации серверов, сетей и устройств хранения позволяет" />
+<meta name="description" content="Подход, основанный на регистрации профилей потребностей в ресурсах для работы приложений, позволяет эффективно предсказывать будущую потребность в вычислительной мощности. Развитие виртуализации серверов, сетей и устройств хранения позволяет" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082126','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm11622' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=11622&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm11622"].SHOW_IMAGE.value="N"; document.forms["PrintForm11622"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm11622"].SHOW_IMAGE.value="Y"; document.forms["PrintForm11622"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(11622);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=11622.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=11622.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(11622);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><br /></p><a href='../numbers/index.php@ID=11604.html'>№2 (112), февраль 2008</a><h1>Управление вычислительной мощностью и прогнозирование потребностей центров обработки данных</h1>Автор: Дэниел Гмах, Джерри Ролиа,  Людмила Черкасова, Альфонс Кемпер Enterprise Systems and Software Laboratory, HP Laboratories Palo Alto<br />13.03.2008<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=11622&amp;PICTURE_ID=11618.html'><IMG src='../upload/iblock/f0c/1-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 1. Примеры процессов управления мощностью: a) «Сконфигурировать размер пула ресурсов»; b) «Найти размещение нагрузок»; c) «Добавить нагрузку»</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=11622&amp;PICTURE_ID=11619.html'><IMG src='../upload/iblock/b2e/2-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 2. Рабочая нагрузка и требуемая мощность</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=11622&amp;PICTURE_ID=11620.html'><IMG src='../upload/iblock/ba5/3-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 3. Прогнозирование мощности на неделю</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=11622&amp;PICTURE_ID=11621.html'><IMG src='../upload/iblock/f60/4-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Рис. 4. Прогнозирование мощности на пять недель</b></TD></TR></TABLE><DIV class='article-text'> 
+<p><em>Подход, основанный на регистрации профилей потребностей в ресурсах для работы приложений, позволяет эффективно предсказывать будущую потребность в вычислительной мощности.</em> </p>
+ 
+<p>Развитие виртуализации серверов, сетей и устройств хранения позволяет сегодня создавать пулы серверных ресурсов, где множество приложений могут совместно использовать любой сервер в пуле. В данной статье предложен и охарактеризован процесс управления вычислительной мощностью, позволяющий автоматизировать эффективное использование таких пулов при хостинге большого количества сервисов. Наш подход к управлению мощностью на основе регистрации профилей опирается на 1) определение понятия требуемой мощности, 2) описание паттернов потребностей в мощности для различных нагрузок, 3) создание имитирующих нагрузок, с помощью которых на основе паттернов прогнозируют будущие потребности в мощности, и 4) сервис рекомендаций по размещению нагрузки. Исследование, выполненное на примере данных за шесть месяцев, отражающих использование ресурсов 139 нагрузками в корпоративном центре обработки данных, демонстрирует эффективность предложенного процесса управления мощностью. Наши результаты показывают, что при консолидации на </p>
+ 
+<p>восьмипроцессорных системах мы предсказывали будущую потребность в мощности в расчете на сервер с точностью до одного процессора 95% всего времени. С помощью данного подхода удалось сократить использование процессоров на 35% по сравнению с лучшей на сегодня практикой размещения нагрузки. </p>
+ 
+<h3>Введение </h3>
+ 
+<p>В теперь уже далеком прошлом центры обработки данных (ЦОД) состояли из малого числа больших ЭВМ, или мэйнфреймов, на каждом из которых исполнялось несколько прикладных задач со множеством пользователей. Специалисты по планированию мощности отвечали за то, чтобы достаточная совокупная мощность была доступна именно в то время, когда она была нужна. С появлением распределенных вычислений новые нагрузки приложений стали назначаться каждая на отдельный небольшой сервер. Наращивание мощности для небольших серверов обходилось гораздо дешевле, чем на мэйнфреймах. Часто планировщики могли прогнозировать нагрузку, создаваемую некоторым приложением, на два года вперед и вводить новый сервер достаточной мощности с упреждением, так чтобы нагрузка &quot;дорастала&quot; до него. Однако взрывной рост корпоративных вычислений и вычислений через Интернет привел к разрастанию вычислительных центров. Корпоративные ЦОД, как правило, состоят из множества слабо используемых серверов, что влечет за собой высокую стоимость владения (включая затраты на аренду и электроэнергию для вычислений и охлаждения), лицензий на ПО и администрирования с участием операторов. </p>
+ 
+<p>Web-сервисы и сервисно-ориентированные архитектуры еще больше обостряют проблемы роста числа серверов. В сервисно-ориентированной архитектуре может быть множество сервисов, которые требуется администрировать либо как рабочие нагрузки, исполняемые на серверах, либо как сервисы, совместно использующие один образ операционной системы. В нашем контексте предполагается, что сервисы имеют крупное разбиение, &mdash; таков, например сервис базы данных, входящий в состав сервиса управления взаимоотношениями с клиентами (CRM), который обслуживает множество пользователей. Мы исходим из того, что потребности в ресурсах для каждого сервиса соответствуют прикладной нагрузке. </p>
+ 
+<p>Многие корпорации начинают теперь использовать &quot;пулы&quot; серверных ресурсов совместно с механизмами виртуализации, что позволяет исполнять на каждом сервере множество приложений. Для корпораций главные стимулы для перехода на такие технологии &mdash; это увеличение гибкости, возможность быстро перенацелить серверную мощность, чтобы она лучше соответствовала потребностям владельцев приложений, и снижение общей стоимости владения. К сожалению, сложность этих сред создает дополнительные проблемы при администрировании. Имеется много нагрузок, на каждый сервер можно назначить некое конечное их число, и каждая нагрузка имеет требования по мощности, которые могут часто меняться в зависимости от потребностей бизнеса. И пока не существует способов администрирования мощности, позволяющих управлять такими пулами оптимальным по соотношению стоимость/эффективность образом. </p>
+ 
+<p>Цель нашей работы &mdash; предложить процесс управления вычислительной мощностью для пулов ресурсов, который позволил бы специалистам по планированию мощности привести в соответствие предложение мощности ресурсов и потребность в них, причем точно в нужное время. При управлении пулами ресурсов возникает множество вопросов управления мощностью, на которые нужно ответить, чтобы убедиться, что ресурсы используются эффективно. Например: какая мощность необходима для обслуживания текущих нагрузок? Какие нагрузки следует назначить каждому ресурсу? Как влияет на производительность планировщик нагрузки и/или установленные политики, управляющие совместным использованием ресурсов? Как следует назначать нагрузки, чтобы сделать планирование нагрузки и/или настройки политик наиболее эффективными? Что делать, если мощности ресурса недостаточно, чтобы удовлетворить потребности его нагрузок? Какой объем ресурсов будет нужен в перспективе? </p>
+ 
+<p>Рассматривая эти вопросы, мы используем подход, основанный на построении профилей. Он опирается на: 1) определение понятия требуемой мощности, 2) выяснение характеристик паттернов потребности в ресурсах для нагрузок, 3) создание имитирующих нагрузок, которые на основе паттернов прогнозируют будущие потребности в ресурсах и 4) сервис рекомендаций по размещению нагрузки. Наш процесс автоматизирует этапы сбора и анализа данных, позволяющих решить эти вопросы. В итоге он дает операторам возможность решать эти вопросы быстрее, с более высокой точностью и с меньшими трудозатратами. </p>
+ 
+<p>Чтобы продемонстрировать эффективность предложенного нами подхода, мы взяли данные за шесть месяцев из корпоративного центра обработки данных. Эти данные описывают меняющиеся во времени потребности в ресурсах для 139 корпоративных приложений. На этом примере мы показываем влияние различных формулировок определений требуемой мощности и демонстрируем эффективность сервиса прогнозирования потребности. Результаты показывают, что при консолидации на восьмипроцессорных системах мы смогли предсказать требуемую мощность в расчете на сервер с точностью до одного процессора 95% всего времени, если прогноз делался на пять недель вперед, что позволило на 35% снизить использование процессора по сравнению с лучшей на сегодня практикой размещения нагрузки. Ниже в статье наши результаты описаны более подробно. </p>
+ 
+<h3>Процесс управления мощностью </h3>
+ 
+<p>Предлагаемый нами процесс управления вычислительной мощностью опирается на комбинацию подпроцессов, реализующих различные сценарии использования ресурсов для операторов пула ресурсов. В числе этих сценариев могут быть следующие: </p>
+ 
+<ul> 
+  <li>определить вычислительную мощность пула ресурсов, необходимую для поддержки нескольких рабочих нагрузок; </li>
+ 
+  <li>добавить/удалить нагрузку в пул/из пула ресурсов; </li>
+ 
+  <li>добавить/удалить вычислительную мощность к пулу/из пула ресурсов; </li>
+ 
+  <li>заново сбалансировать нагрузки по всем ресурсам пула; </li>
+ 
+  <li>снизить рабочую нагрузку на сервер из пула ресурсов, рекомендовав переместить некоторые из выполняемых на нем нагрузок; </li>
+ 
+  <li>составить отчет о значительных изменениях в характере поведения потребности в ресурсах; </li>
+ 
+  <li>скорректировать прогнозы по каждой нагрузке, тенденции или требования к качеству обслуживания (QoS). </li>
+ </ul>
+ 
+<p>Чтобы поддерживать такие сценарии, следует начать с определения понятия требуемой мощности. Требуемая мощность есть минимальная величина вычислительной мощности, необходимая, чтобы удовлетворить потребности нагрузок на серверном ресурсе. В следующем разделе дано более формализованное определение и обоснование для нашего конкретного способа выражения требуемой мощности. Исходя из определения требуемой мощности, мы реализуем: </p>
+ 
+<ul> 
+  <li>сервис управления допуском к ресурсам; </li>
+ 
+  <li>сервис размещения рабочей нагрузки; </li>
+ 
+  <li>сервис прогнозирования потребностей нагрузки. </li>
+ </ul>
+ 
+<p>Сервис управления допуском к ресурсам решает, имеется ли в пуле достаточно ресурсов, чтобы принять новую нагрузку. Если да, то он сообщает, какому серверу будет назначена нагрузка. Мы рассматриваем нагрузки, использующие множество ресурсов, как набор отдельных нагрузок, возможно, имеющих ограничения по размещению, которые должна учитывать служба размещения нагрузки. </p>
+ 
+<p>Сервис размещения нагрузки, которым мы пользуемся [13], рекомендует, как разместить нагрузки приложений на серверах в пуле, чтобы уменьшить число используемых серверов или сбалансировать рабочие нагрузки по всем серверам. Этот сервис использует основанный на профилях подход для определения потребностей в ресурсах и для выработки рекомендаций. В общих чертах каждая нагрузка описывается меняющимся во времени профилем потребности в ресурсах для главных показателей мощности, таких, как уровни использования процессора и памяти. Сервис размещения нагрузки включает &laquo;жадные&raquo; алгоритмы для консолидации нагрузок на небольшом числе серверов и для балансирования рабочих нагрузок внутри некоторого фиксированного числа серверов. Кроме того, сюда входит оптимизирующий поиск на основе генетического алгоритма, имеющий целью улучшить &laquo;жадные&raquo; решения. В каждом случае алгоритмы моделируют множество сценариев распределения. В каждом сценарии рассматривается размещение нескольких нагрузок &mdash; нуля или более &mdash; на каждом сервере. Совокупная потребность нагрузок, назначенных серверу, описывается с помощью профиля, который представляет собой сумму меняющихся во времени потребностей по каждой нагрузке. Требуемая мощность для меняющихся во времени совокупных потребностей сравнивается с мощностью ресурса, чтобы решить, соответствуют ли ей нагрузки. Сервис рекомендует лучший из тех вариантов размещения нагрузки, который удается найти по всем серверам, будь то для консолидации или выравнивания нагрузки. Наконец, сервис учитывает дополнительные ограничения на размещение нагрузки, которые включают родственность нагрузок (например, следует или не следует помещать нагрузки на один и тот же физический сервер) и родственность между нагрузками и списком из одного или более конкретных серверов. </p>
+ 
+<p>Сервис прогнозирования потребности для нагрузки имеет три цели. Он: </p>
+ 
+<ul> 
+  <li>помогает выяснить, значительно ли меняются потребности нагрузки во времени; </li>
+ 
+  <li>поддерживает генерацию имитирующих профилей, которые отражают будущие потребности для каждой рабочей нагрузки, давая возможность моделировать планирование мощности; </li>
+ 
+  <li>предоставляет удобную модель, которую можно использовать для составления модельных прогнозов. Этот сервис реализует методики выявления паттернов, описанные в разделе &laquo;Прогнозирование потребности в ресурсах&raquo;. </li>
+ </ul>
+ 
+<p>В основе процесса управления мощностью лежит ключевая концепция плана управления мощностью. План управления мощностью представляет собой хранилище данных на базе календаря, который хранит предысторию для: 1) величин нагрузок, прогнозов и требований к качеству обслуживания для доступа к ресурсам, 2) ресурсов, которые связаны с пулом, и 3) распределения нагрузок по ресурсам. Предыстория такой информации хранится как функция даты и времени и используется при планировании мощности. </p>
+ 
+<p>Рис. 1 иллюстрирует несколько аспектов наших процессов управления мощностью. Вариант &laquo;Сконфигурировать размер пула ресурсов&raquo; используется, чтобы уменьшить фрагментирование мощности посредством периодического переназначения, т. е. консолидации нагрузок в пуле. &laquo;Найти размещение&raquo; обеспечивает балансирование нагрузок, т. е. делит рабочую нагрузку равномерно на все ресурсы. Это делается в два этапа. Если ни один ресурс не способен удовлетворить получающиеся в результате требования по мощности, тогда мы можем либо попытаться заново сбалансировать нагрузки в более крупном масштабе, либо скорректировать требования качества обслуживания для нагрузок, либо сочетать оба подхода. Вариант &laquo;Добавить нагрузку&raquo; сообщает, можно ли обеспечить размещение для новой нагрузки. </p>
+ 
+<p>Суммируя, можно сказать, что процесс управления мощностью в нашем представлении полагается на описанные выше подпроцессы. Некоторые из шагов могут потребовать вмешательства оператора пула ресурсов или владельца нагрузки или же могут управляться политиками. Мы ожидаем, что такие процессы обеспечат поддержку крупной платформы предоставления услуг Information Technology [10]. </p>
+ 
+<h3>Требуемая мощность </h3>
+ 
+<p>Определение понятия требуемой мощности задает уровень избыточной нагрузки на пул ресурсов, т. е. показывает, до какой степени, по оценкам, потребность в вычислительной мощности может превышать имеющуюся в наличии мощность. Потребности могут превышать предложение, если мы разместим множество нагрузок на общем сервере и сумма пиковых потребностей каждой нагрузки превысит мощность сервера. Алгоритмы распределения нагрузки используют определение требуемой мощности, чтобы решить, подходит ли данный ресурс для группы нагрузок. Ресурс считается подходящим, если по всем параметрам мощность его достаточна, чтобы удовлетворить совокупные потребности нагрузок. </p>
+ 
+<p>Наши определения построены на понятии единицы мощности. Размер этой единицы до некоторой степени произволен, но она должна быть такой, чтобы с ее помощью можно было последовательно (единообразно) выражать потребности в ресурсах и имеющиеся мощности. Для процессоров за единицу мощности мы принимаем 1% уровня загруженности процессора*. Тогда n-процессорный сервер будет иметь мощность в n сотен единиц. Для памяти мы определяем единицу мощности как 1 Мбайт. Аналогичным образом мы можем ввести единицы потребности для других характеристик мощности. Под уровнем загруженности мы понимаем здесь потребность, деленную на предложение, за некоторый период времени. Рассмотрим один параметр мощности. Определим функцию потребностей в ресурсах для некоторой нагрузки L как N последовательно измеренных значений данного параметра за интервалы времени постоянной длительности d. Пусть t<sub>n</sub> &mdash; это время, которое соответствует интервалу n в L, а l(t<sub>n</sub>) &mdash; измеренная потребность в единицах мощности. Тогда мы можем записать: L = (l(t<sub>n</sub>))<sub>1&le;n&le;N</sub> </p>
+ 
+<p>Наши определения понятия требуемой мощности основаны на фиксированном и скользящем окнах интервалов. Мы определяем профиль с фиксированным окном, имеющим c смежных интервалов на каждое окно с длительностью окна s = c*d, как L<sup>Fs</sup> = (l<sup>Fs</sup>(t<sub>n</sub>)), Где l<sup>Fs</sup>(t<sub>n</sub>) есть средняя потребность по всему окну длительностью s. </p>
+ 
+<p>Мы определяем профиль со скользящим окном, имеющим c смежных интервалов на каждое окно с длительностью окна s = c*d, как L<sup>Ss</sup> = (l<sup>S</sup><sup>s</sup>(t<sub>n</sub>))<sub>1</sub><sub>&le;n&le;N-c+1</sub>, где l<sup>Ss</sup> есть средняя потребность для окон длительностью s. </p>
+ 
+<h3>Фиксированные окна и вероятности </h3>
+ 
+<p>Фиксированные окна позволяют интуитивно понятным способом выразить ограничения, налагаемые на требуемую мощность. При таком подходе мы можем сформулировать множество одновременных ограничений для фиксированных окон с разным размером. Рассмотрим Z ограничений, имеющих вид (s<sub>i</sub>, U<sub>i</sub>, P<sub>i</sub>) для i = 1&hellip;Z, где: </p>
+ 
+<ul> 
+  <li>s<sub>i</sub> &mdash; фиксированное окно, имеющее ci интервалов длительностью d, так что s<sub>i</sub>=c<sub>i</sub>*d; </li>
+ 
+  <li>U<sub>i</sub> &mdash; предельный процент загруженности мощности для окна; </li>
+ 
+  <li>P<sub>i</sub>&mdash; процент окон, которым разрешается иметь загруженность, превышающую U<sub>i</sub>. </li>
+ </ul>
+ 
+<p>Найдем требуемую мощность, которая будет удовлетворять самому жесткому ограничению. Например, пусть s<sub>0</sub>= 30 мин, U<sub>0</sub>= 100% и P<sub>0</sub>= 100% или же s<sub>1</sub>= 5 мин., U<sub>1</sub>= 100% и P<sub>1</sub>= 95%. Первое ограничение включает в себя интуитивно понятное требование, чтобы потребность в мощности не превышала предложение слишком надолго, например, не более 30 мин. Второе ограничение указывает, как часто потребность может превышать предложение на короткий срок, например, 5 мин. Оно ограничивает влияние перегруженности ресурсов на работу приложений в короткие периоды времени. </p>
+ 
+<p>Недостаток этого подхода в том, что он не ограничивает явным образом влияние на какую-либо потребность, которая не удовлетворена в данном интервале времени. Например, для тех пятиминутных интервалов, где потребность превысила наличие ресурсов, мы не знаем, насколько именно потребность была больше, чем предложение. Более того, поскольку это подход с фиксированным окном, то результат расчета требуемой мощности будет зависеть от того, с какого интервала начинается первое фиксированное окно. Рассмотрим теперь подход со скользящим окном. </p>
+ 
+<h3>Простое скользящее окно </h3>
+ 
+<p>Наше определение простого скользящего окна для требуемой мощности определяет требуемую мощность, выраженную неким ее параметром, как минимальное число единиц мощности, необходимое для того, чтобы потребность в мощности не превышала предложение мощности больше, чем на период перегрузки s, выраженный в минутах. Если единица потребности не удовлетворяется, потому что потребность превышает предложение (т. е. имеет место перегрузка), тогда эта единица потребности продвигается вперед во времени, пока не появится достаточная мощность, чтобы удовлетворить эту потребность. Для среды, где критична производительность, s можно выбрать равным нулю &mdash; это означает, что любая потребность должна быть всегда удовлетворена. Для более типичного центра обработки данных, где уровни обслуживания могут контролироваться ежечасно, целесообразно выбрать s = 30 мин. Мы принимаем требуемую мощность равной такой минимальной мощности, при которой ни в какой период времени потребность не превышает предложение в течение более чем s минут подряд. Таков подход со скользящим окном, где период перегрузки понимается как длительность окна s. </p>
+ 
+<h3>Скользящее окно &laquo;на единицу потребности&raquo; </h3>
+ 
+<p>Теперь мы рассмотрим предпочтительное определение требуемой мощности, в которой также используется скользящее окно. В соответствии с этим подходом мы находим такую наименьшую мощность, чтобы ни одна единица потребности не передвигалась из какого-то интервала в следующий на время, большее чем s минут. Кроме того, мы вводим вероятность доступа к ресурсу &theta; &mdash; это вероятность того, что единица потребности будет удовлетворена немедленно, &laquo;по требованию&raquo;, следовательно, не будет передвигаться дальше. Это прямо связывает определение понятия требуемой мощности с его влиянием на потребности нагрузок. </p>
+ 
+<p>Рассмотрим вычисление &theta;, которое проводится для подхода &laquo;на единицу потребности&raquo; во время моделирования процессов размещения нагрузки. Пусть A есть число рассматриваемых профилей потребности для нагрузки. Каждый профиль наблюдается в течение W недель с T интервалами за день при измерениях через каждые d минут. Без потери обобщения мы используем неделю как период времени для проверки соглашений об уровне обслуживания (можно также использовать другие периоды времени). Время суток учитывает, что по своему характеру интерактивные корпоративные нагрузки приходятся на дневное время (например, те, с которыми пользователи работают напрямую); мы отмечали, что в некоторые интервалы времени нагрузка может быть существенно больше, чем в другие. При пятиминутных интервалах измерения мы имеем T = 288 интервалов за день. Обозначим каждый интервал индексом так, что 1 &le; t &le; T. В любой день x из семи дней недели для каждого интервала t проводится наблюдение. При каждом наблюдении измеряются значения всех параметров мощности, рассматриваемых в нашем анализе. </p>
+ 
+<p>Для определения &theta; рассмотрим один параметр, имеющий предельное значение мощности, равное R единицам потребности. Пусть D<sub>w,x,t</sub> есть сумма потребностей по данному параметру со стороны A нагрузок для недели w, дня x и интервала t. Мы определяем измеренное значение &theta; как: &theta; = min<sup>W</sup><sub>w=1</sub> min<sup>T</sup><sub>t=1</sub> &Sigma;<sup>7</sup><sub>x=1</sub> min (D<sub>w,x,t</sub>,R) / &Sigma;<sup>7</sup><sub>x=1</sub> D<sub>w,x,t</sub>. </p>
+ 
+<p>Таким образом, &theta; описывается как минимальная вероятность доступа к ресурсу, которая может быть получена в любую неделю для любого из T интервалов времени за день. </p>
+ 
+<p>Далее, пусть R' есть требуемая мощность по данному параметру. Требуемая мощность R' &mdash; это наименьшее значение мощности, R' &le; R, позволяющее предложить такую вероятность &theta;', что &theta;' &ge; &theta;, а те потребности, которые не удовлетворены по запросу, D<sub>w,x,t</sub>&mdash; R' &gt; 0, удовлетворяются в пределах периода перегрузки, равного s минут. </p>
+ 
+<p>Главное преимущество этого подхода по сравнению с фиксированным окном в том, что потребность, не удовлетворяемая внутри интервала, моделируется как передвинутая в следующий интервал. По сравнению с подходом с простым скользящим окном условия перегрузки задаются с учетом неудовлетворенных единиц потребности, а не просто как число смежных периодов перегрузки. Было показано, что такое значение &theta; можно использовать для того, чтобы выбрать настройки планировщика для средств управления нагрузкой, поддерживающих два приоритета обслуживания [6]. С помощью этого подхода можно автоматически делить потребности нагрузки между двумя приоритетами планирования и управлять рисками совместного использования ресурсов по каждой нагрузке. Более высокий приоритет можно рассматривать как гарантированный класс обслуживания, а более низкий приоритет &mdash; как класс обслуживания, предлагающий ресурс мощности со статистической гарантированностью &theta;. </p>
+ 
+<h3>Прогнозирование потребности в ресурсах </h3>
+ 
+<p>В этом разделе описаны методы, которые мы использовали для прогнозирования потребности в ресурсах для нагрузки. В первой части раздела описано выделение паттернов и трендов для рабочей нагрузки, а во второй они используются для построения профилей имитирующих нагрузок. </p>
+ 
+<h3>Паттерны и тренды для рабочей нагрузки </h3>
+ 
+<p>Для выявления возможных паттернов для нагрузки мы использовали трехэтапный подход. На этапе анализа находят множество гипотетических паттернов. На втором этапе вычисляют тренды. Наконец, в ходе третьего этапа оценивают гипотетические паттерны и выдают рекомендацию о наиболее вероятном паттерне, или характере поведения нагрузки. В рекомендации может быть указано, что это периодическая нагрузка с определенной длительностью цикла либо апериодическая, так что определенной длительности цикла для нее не установлено. </p>
+ 
+<p>Исходя из ретроспективного профиля нагрузки L = (l(t<sub>n</sub>))<sub>1&le;n&le;N</sub>, который представлен N последовательными значениями потребности l(t<sub>n</sub>), получаем паттерн P = (p(t<sub>m</sub>))<sub>1</sub><sub> &le; m &le; M,M &le; N/2</sub> с M последовательными значениями потребности p(t<sub>m</sub>) ) в допущении, что нагрузка носит циклический характер. Справедливость этого допущения оценивается позднее, на стадии классификации. Согласно классической модели аддитивных составляющих, последовательность значений во времени состоит из составляющей тренда, циклической составляющей и остатка, характеризующего, например, влияние шума. Тренд представляет собой монотонную функцию, моделирующую общее возрастание или снижение потребности. </p>
+ 
+<p>Чтобы выявить циклическую составляющую, которая описывает периодические характеристики нагрузки, зададим для паттерна пока неизвестную длительность M. Для этого выполним совместную оценку периодограммы и автокорреляции [4], задавая таким образом набор гипотетических длительностей для паттерна. Для рабочих нагрузок в корпоративных центрах данных обычно характерна периодичность, кратная часам, дням, неделям и т. д. Ввиду неизбежных вычислительных погрешностей и влияния нерегулярных событий и шума, длины волн могут слегка отклоняться от этих типичных периодов. Таким образом, мы проводим сравнение с конкретными календарными периодами и находим для каждого предполагаемого варианта длины волны наиболее подходящий множитель для часов, дней и недель. После этого мы выбираем наиболее подходящую длину волны &lambda;' из набора вариантов. Более подробно расчет вариантов длин волн и выбор наилучшего варианта описаны в [17]. Длительность шаблона M задается как &lambda;'/d интервалов, где d &mdash; длительность каждого интервала. </p>
+ 
+<p>Выбранное значение длины шаблона в M интервалов используется при расчете паттерна для нагрузки: P = (p(t<sub>m</sub>))<sub>1&le;m&le;M.</sub> </p>
+ 
+<p>Сначала мы задаем число вхождений событий для паттерна, а затем значения потребности в ресурсах для этого паттерна p(t<sub>m</sub>). Зная M, мы делим нагрузку L на N/M полных вхождений и, возможно, одно частичное вхождение. Пусть O есть количество вхождений шаблона для o &le; N/M + 1. Тогда вхождение o есть субпрофиль профиля L со значениями l<sup>o</sup>(t<sub>m</sub>) = l(t<sub>m+o*M</sub>) для каждого 1 &le; m &le; M. Для каждого интервала t<sub>m</sub> в паттерне мы вычисляем взвешенное среднее p(t<sub>m</sub>) для интервала. Взвешенное среднее рассчитывается с использованием интервалов t<sub>m</sub> из вхождений O данного паттерна. Мы определяем вес для каждого вхождения o и интервала m как: w<sub>o,m</sub> = l<sup>o</sup>(t<sub>m</sub>) / &Sigma;<sub>o</sub>l<sup>o</sup>(t<sub>m</sub>). </p>
+ 
+<p>С этими весовыми коэффициентами мы вычисляем взвешенную среднюю потребность для каждого интервала t<sub>m</sub> как p(t<sub>m</sub>) = &Sigma;<sub>o</sub>w<sub>o,m</sub>*l<sub>o</sub>(t<sub>m</sub>). </p>
+ 
+<p>Мы используем взвешенное среднее, чтобы подчеркнуть важность более высоких значений по сравнению с низкими для управления мощностью. </p>
+ 
+<p>На втором этапе мы анализируем тренд нагрузки. Для этого мы вычисляем общее отклонение каждого вхождения паттерна от исходной нагрузки L. Пусть c<sup>o</sup><sub>m</sub> есть разность между p(t<sub>m</sub>) и величиной потребности для интервала t<sub>m</sub> во вхождении o. Мы определяем c<sup>o</sup> как совокупную разность в потребности для вхождения o относительно значения паттерна P:&nbsp; c<sup>o</sup> = &Sigma;<sub>1 &le; m &le; M</sub> (p(t<sub>m</sub>) &mdash; l<sup>o</sup>(t<sub>m</sub>)). </p>
+ 
+<p>Далее, мы определяем тренд &tau; как градиент линейной аппроксимации методом наименьших квадратов [7] всех значений c<sup>o</sup> для вхождений O во временной последовательности. Тренд &tau; оценивает скорость изменения потребности во времени относительно паттерна. </p>
+ 
+<p>Наконец, на стадии классификации мы решаем, какие нагрузки носят периодический характер. Классификация основана на двух показателях качества паттерна. Первый показатель, &rho;', представляет собой среднее значение из множителей для &lambda;' в функции автокорреляции. Более высокие значения &rho;' означают лучшее качество аппроксимации. Второй показатель характеризует различие между вхождениями O и паттерном. Разность между ними вычисляется как средняя абсолютная погрешность 
+  <br />
+ &zeta; = &Sigma;<sub>1 &le; m &le; M,o </sub>|p(t<sub>m</sub>) &mdash; l<sup>o</sup>(t<sub>m</sub>)| / N 
+  <br />
+ между исходной нагрузкой и паттерном P. Меньшая разность означает лучшее качество паттерна. Чтобы охарактеризовать качество паттернов для большого числа нагрузок, мы используем алгоритм группировки k средних [9] с параметрами группировки &zeta; и &rho;'. С помощью этого алгоритма паттерны делятся на три группы, которые мы интерпретируем как имеющие сильный, средний или слабый паттерн. Слабые паттерны рассматриваются как апериодические, поскольку в их профиле нельзя выявить никакого явного цикла. </p>
+ 
+<h3>Генерация профилей имитирующей нагрузки и прогноз </h3>
+ 
+<p>Теперь мы рассмотрим процесс генерации модельного профиля, с помощью которого можно будет представить профиль будущей потребности в ресурсах нагрузки L' для некоторого периода времени. Как правило, мы генерируем профили, отражающие потребности на несколько недель или месяцев вперед. Цель моделирования профиля &mdash; охватить пики и &laquo;провалы&raquo; потребности и непрерывные участки последовательности. Они критичны для моделирования способности нагрузки совместно использовать мощность ресурсов с другими нагрузками и для моделирования необходимой ей мощности. </p>
+ 
+<p>Генерируя вхождение o' для L', мы опираемся на вхождения ретроспективного паттерна O. Величина l<sup>o</sup>'(t<sub>m</sub>) выбирается случайным образом из соответствующих значений t<sub>m</sub> из O. Учитывая достаточно большое количество будущих вхождений O', мы получим то же самое распределение потребностей во времени, что и для O. Это дает нам паттерн потребностей, описывающий пики и &laquo;провалы&raquo; потребности репрезентативным образом. Чтобы лучше моделировать требуемую мощность, мы должны принять во внимание порядок следования смежных участков потребности в профиле L. Это достигается путем случайного выбора блоков по b интервалов t<sub>m</sub>,t&lt;<sub>m+1,</sub>&hellip;,t<sub>m+b</sub> в данный момент времени из вхождений O. Более того, следует отметить, что вхождения могут иметь тренд &tau;. Для последовательности вхождений ретроспективного паттерна мы нормализуем значения потребности, чтобы исключить тренд относительно последнего вхождения, прежде чем строить O'. </p>
+ 
+<p>Значения потребностей l<sup>o</sup>'(t<sub>m</sub>) в имитирующем профиле следует увеличить, чтобы отразить тренд &tau;. Мы принимаем аддитивную модель. Для каждого будущего вхождения o' мы вычисляем абсолютное значение на основе &tau;, которое следует добавить ко всем значениям потребности во вхождении o'. Чем дальше o' отстоит во времени, тем больше будет изменение по сравнению с ретроспективными данными, при условии что &tau; не равно нулю. </p>
+ 
+<p>В процессе управления мощностью мы повторяем эти шаги анализа, используя множество случайным образом сгенерированных экземпляров L', чтобы лучше описать диапазон возможного поведения для системы в целом. Множество экземпляров лучше характеризует взаимное влияние потребностей для множества нагрузок. </p>
+ 
+<p>Наконец, паттерн рабочей нагрузки P предоставляет удобный способ сформировать сценарии &laquo;что, если&hellip;&raquo; и бизнес-прогнозы, которые мы не можем наблюдать исходя из ретроспективных данных. Допустим, мы имеем паттерн P с числом вхождений O, и нам требуется изменить этот паттерн. Тогда мы можем задать это изменение один раз для паттерна P, а не отдельно для каждого из вхождений, которых может быть достаточно много. </p>
+ 
+<h3>Пример использования </h3>
+ 
+<p>Чтобы оценить эффективность наших методов и процессов, мы получили данные для построения профиля рабочей нагрузки за шесть месяцев для 139 нагрузок приложений, исполняемых в центре обработки данных. Этот центр специализируется на хостинге корпоративных приложений, таких, как системы управления взаимодействием с клиентами (CRM) и управления цепочками поставок, для малого и среднего бизнеса. Каждая нагрузка была размещена на своем собственном сервере, поэтому мы могли использовать измеренные значения потребности в ресурсах для сервера, чтобы характеризовать профиль потребности нагрузки. Измерения исходно проводились с помощью vmstat и sar. Каждый профиль описывает уровень использования ресурса (например, процессора), измеряемый через каждые 5 мин начиная с 1 января 2006 г. </p>
+ 
+<p>В нашем примере рассматривается: </p>
+ 
+<ul> 
+  <li>влияние различных определений понятия требуемой мощности; </li>
+ 
+  <li>общие результаты для центра обработки данных с использованием результатов метода анализа паттернов потребности для рабочей нагрузки; </li>
+ 
+  <li>проверка правильности методик выявления трендов и генерации имитирующей нагрузки; </li>
+ 
+  <li>тестовый прогноз, использующий методы сопоставления с паттерном, построения трендов и генерации имитирующей нагрузки. </li>
+ </ul>
+ 
+<h3>Требуемая мощность </h3>
+ 
+<p>Теперь сравним следующие методы вычисления требуемой мощности, описанные в разделе &laquo;Требуемая мощность&raquo;: </p>
+ 
+<ul> 
+  <li>на основе определения с простым скользящим окном с периодом перегрузки s = 30 мин; </li>
+ 
+  <li>100, 99 и 95 процентили потребности (как оценки для требуемой мощности); </li>
+ 
+  <li>расчет с фиксированным окном с единственным ограничением U = 100%, P = 100% и s = 30 мин; </li>
+ 
+  <li>расчет со скользящим окном на единицу потребности с s = 30 мин. </li>
+ </ul>
+ 
+<p>Для метода расчета на единицу потребности мы не вводим ограничений для значения вероятности доступа к ресурсу &theta;. Мы включаем процентили потребности, чтобы оценить влияние периода перегрузки. </p>
+ 
+<p>В таблице приведены результаты из подмножества данных, собранных за пять недель, для восьми нагрузок w<sub>1</sub>&hellip;w<sub>8</sub> и двух совокупных нагрузок w<sub>1&hellip;4</sub> и w<sub>5&hellip;8</sub> в которые входят нагрузки w<sub>1</sub>&hellip;w<sub>4</sub> и w<sub>5</sub>&hellip;w<sub>8</sub> соответственно. Мы рассматриваем здесь совокупные нагрузки, поскольку при моделировании процесса выработки рекомендаций по размещению нагрузки нам приходится вычислять требуемую мощность и для совокупных нагрузок. 
+  <table><caption>Требуемая мощность в единицах потребности</caption> 
+    <tbody> 
+      <tr><th>Нагрузка</th><th>Простое скользящее окно</th><th>100-p</th><th>99-p</th><th>95-p</th><th>Фиксированное окно</th><th>Скользящее окно &laquo;на единицу потребности&raquo;</th></tr>
+     
+      <tr><td>w1</td><td>848</td><td>946</td><td>769</td><td>621</td><td>855</td><td>839</td></tr>
+     
+      <tr><td>w2</td><td>538</td><td>580</td><td>402</td><td>296</td><td>553</td><td>533</td></tr>
+     
+      <tr><td>w3</td><td>75</td><td>75</td><td>75</td><td>74,7</td><td>75</td><td>75</td></tr>
+     
+      <tr><td>w4</td><td>32</td><td>51,6</td><td>40,4</td><td>9,2</td><td>36</td><td>22</td></tr>
+     
+      <tr><td>w1&hellip;4</td><td>1193</td><td>1356</td><td>1036</td><td>827</td><td>1240</td><td>1164</td></tr>
+     
+      <tr><td>w5</td><td>464</td><td>539</td><td>406</td><td>317</td><td>449</td><td>444</td></tr>
+     
+      <tr><td>w6</td><td>180</td><td>180</td><td>180</td><td>179</td><td>180</td><td>180</td></tr>
+     
+      <tr><td>w7</td><td>41</td><td>47</td><td>38,7</td><td>26,1</td><td>40</td><td>40</td></tr>
+     
+      <tr><td>w8</td><td>77</td><td>120</td><td>62</td><td>51</td><td>81</td><td>70</td></tr>
+     
+      <tr><td>w5&hellip;8</td><td>581</td><td>672</td><td>528</td><td>431</td><td>607</td><td>558</td></tr>
+     </tbody>
+   </table>
+ </p>
+ 
+<p>Во втором столбце таблицы приведены результаты для метода простого скользящего окна, которое передвигает во времени неудовлетворенные потребности. </p>
+ 
+<p>100-я процентиль &mdash; это пиковая потребность нагрузки; она всегда превышает другие оценки. Хотя 99-я и 95-я процентили часто малы по сравнению с результатами подхода со скользящим или фиксированным окном, они не дают никакого представления о продолжительности любых результирующих периодов перегрузки. Процентильный подход обычно недооценивает требуемую мощность и в результате не может предложить контролируемый уровень перегрузки. </p>
+ 
+<p>Подход с фиксированным окном обычно приводит к завышенным значениям требуемой мощности, т. е. избыточному предоставлению ресурсов по сравнению с определением со скользящим окном. Это вызвано тем, что фиксированное окно накладывает больше ограничений, чем скользящее окно; когда P = 100%, все потребности должны быть удовлетворены в пределах каждого фиксированного окна. Ни процентильный, ни подход с фиксированным окном не учитывают влияние периодов перегрузки на единицы потребности. Однако такой учет полезен и необходим при выборе параметров настройки планировщика в диспетчере нагрузки [6]. </p>
+ 
+<p>Как и ожидалось, подход со скользящим окном на единицу потребности обычно приводит к слегка заниженным значениям требуемой мощности, т. е. более эффективному использованию мощности, чем определение с простым скользящим окном, так как он допускает более длительные периоды перегрузки &mdash; до тех пор, пока ни одна единица потребности не останется неудовлетворенной по истечении s = 30 мин. Более того, мы можем наблюдать значение &theta;, типичное для размещения нагрузок в центре обработки данных. Оператор пула ресурсов может предложить это как часть гарантии уровня обслуживания для данного пула. </p>
+ 
+<p>Для нагрузки w<sub>4</sub> подход на единицу потребности дает значительно заниженную оценку значения требуемой мощности, т. е. более эффективную мощность для пользователя. Данная конкретная нагрузка весьма неравномерна, периодически создавая пики потребности, о чем говорит также сравнительно большая разница между ее 99 и 95 процентилями потребности. На рис. 2 показаны расчетные значения требуемой мощности для w<sub>4</sub> по сравнению с профилем потребности для нагрузки. Интересно, что разброс результатов, полученных разными методами, столь велик. Подход со скользящим окном на единицу потребности, очевидно, допускает для этой неравномерной нагрузки более длительные периоды перегрузки, чем подход с простым скользящим окном. Это может быть приемлемо, если явно циклические всплески потребности соответствуют пакетным заданиям и если требования пакетных заданий к времени выполнения допускают дополнительную задержку. Если в пуле ресурсов есть средства управления нагрузкой, обеспечивающие множество классов обслуживания, то владелец нагрузки может выбрать более высокий класс обслуживания для этих нагрузок с потребностями, которые нельзя отсрочить [6]. Учитывая эти дополнительных преимущества в производительности и гибкости, из всех определений требуемой мощности мы остановились на формулировке на единицу потребности и в дальнейших исследованиях использовали именно ее. </p>
+ 
+<h3>Тестовый прогноз </h3>
+ 
+<p>В этом разделе мы используем сервис прогнозирования потребности для нагрузки как часть процесса управления вычислительной мощностью. Мы проводим тестовое прогнозирование (walk forward test) на основе данных за шесть месяцев, чтобы оценить, насколько успешно наш процесс управления мощностью мог бы работать в центре обработки данных в течение этих шести месяцев. </p>
+ 
+<ul> 
+  <li>Начиная с первой недели, окно с данными за w недель используется, чтобы рекомендовать для системы консолидированную конфигурацию C<sub>1</sub> (т. е. каждая нагрузка назначена конкретному серверу). Конфигурация указывает ожидаемые значения требуемой мощности для каждого сервера в ней. </li>
+ 
+  <li>Затем для C<sub>1</sub> данные за следующие y недель. Такое моделирование дает действительную требуемую мощность на следующие y недель. </li>
+ 
+  <li>Разность между оценкой мощности сервера и действительным значением требуемой мощности дает абсолютную погрешность для оценки требуемой мощности. Отрицательные погрешности указывают на &laquo;недооцененную&raquo; мощность, а положительные погрешности соответствуют &laquo;переоцененной&raquo;. Мы используем специальную интегральную функцию распределения (CDF), которая отражает оба типа погрешности для теста прогнозирования. </li>
+ 
+  <li>На следующих итерациях шаги в тесте прогнозирования повторяются для данных за w недель, но теперь уже начиная с недели 2, 3 и т. д. </li>
+ 
+  <li>Пусть i &mdash; это номер шага в тесте прогнозирования. На шаге i вычисляется новая конфигурация C<sub>i</sub> и новый набор разностей между оценкой и действительным значением требуемой мощности для каждого сервера. </li>
+ </ul>
+ 
+<p>Мы рассматриваем непрерывный процесс, где нагрузки повторно консолидируются на некотором количестве мощных серверов. Серверы имеют по восемь процессоров. В целом консолидация требует 13 или 15 серверов в каждый момент времени. Чтобы оценить эффективность методов прогнозирования потребности для нагрузки, мы рассматриваем несколько разных сценариев генерации имитирующих нагрузок. Эти сценарии включают: </p>
+ 
+<ul> 
+  <li>анализ паттернов использования и выявление трендов; </li>
+ 
+  <li>один лишь анализ паттернов использования; </li>
+ 
+  <li>все нагрузки ассоциируются с ежедневным паттерном; </li>
+ 
+  <li>все нагрузки ассоциируются с 30-часовым паттерном (специально выбранным как некорректный). </li>
+ </ul>
+ 
+<p>В данном исследовании мы взяли w = 5 недель ретроспективных входящих данных для процесса и прогнозируем требуемую мощность на y = 1 неделю и y = 5 недель вперед. На рис. 3 и 4 показаны функции распределения погрешности прогнозов требуемой мощности для разных сценариев по всему тесту прогнозирования в целом. Отрицательная погрешность предполагает, что метод дает более низкое значение мощности, чем действительно требуется для сервера. </p>
+ 
+<p>Рис. 3 иллюстрирует результаты прогноза на неделю вперед. Сценарии a) и b) дают почти неразличимые кривые. Построение трендов позволяет избежать двух больших, но близких отрицательных погрешностей. Фиксированный ежедневный паттерн без трендов, сценарий c), дает несколько больших по величине отрицательных погрешностей, чем вариант a), т. е. значений меньших -1 процессора. Явно некорректный 30-часовой паттерн из сценария d) приводит к грубым ошибкам. </p>
+ 
+<p>Как видно из рис. 4, результаты прогнозирования требуемой мощности на пять недель вперед весьма сходны. Единственное различие состоит в том, что погрешности оказались чуть ниже для сценария b), т. е. без трендов, чем в варианте a) с трендами. И это вполне объяснимо: нашего ретроспективного окна в пять недель, по-видимому, недостаточно, чтобы прогнозировать тренды на пять недель вперед для всех нагрузок на всех шагах в тесте прогнозирования. </p>
+ 
+<p>В обоих прогнозах, на неделю и на пять недель, сценарий a) оценивает требуемую мощность в расчете на сервер с точностью до одного процессора (из восьми) 95% всего времени. </p>
+ 
+<p>Лучшая на сегодня в отрасли практика консолидации серверов определяет пиковую потребность каждой прикладной нагрузки и консолидирует приложения на небольшом количестве серверов таким образом, чтобы сумма пиковых потребностей приложений на каждом сервере была меньше, чем мощность сервера. Если мы сочтем нужным рекомендовать размещение нагрузок на основе пиковых потребностей каждого из приложений, нам потребуется 23 восьмипроцессорных сервера. При использовании метода на основе профилей, описанного в данной статье, потребуется лишь 15 серверов. Данный подход позволяет на 35% снизить использование процессоров по сравнению с размещением рабочей нагрузки, которое исходит только из пиковой потребности приложений. Точность прогнозов требуемой мощности предполагает, что такая экономия ресурсов достигается с небольшим риском. </p>
+ 
+<h3>Другие исследования </h3>
+ 
+<p>Мы используем подход на основе профилей, чтобы моделировать совместное использование вычислительной мощности внутри пулов ресурсов. Многие группы исследователей использовали такие методы для детальной оценки производительности процессорных архитектур [11]. Они также подходят для поддержки управления мощностью на основе более грубых данных, например, уровней использования ресурсов, регистрируемых каждые 5 мин. </p>
+ 
+<p>В ряде ранних работ, посвященных оценке эффективности центра обработки данных, на основе профилей потребностей рабочих нагрузок прогнозировали возможности совместного использования ресурсов в корпоративных центрах обработки данных [1]. Рассматриваемый нами метод позволяет прогнозировать потребности на дни, недели и месяцы вперед. Мы видим различие между нашими методами и теми, которые обычно служат для прогнозирования потребности на несколько секунд или минут вперед. В методиках краткосрочных прогнозов чаще используются другие подходы, например, модели ARMA [4] или GARCH [8, 3]. Хотя эти подходы и годятся для очень коротких периодов времени, на интересующих нас временных промежутках такие прогнозы быстро сходятся к среднему значению. В работе [17] также описаны методы прогнозирования паттернов потребности в ресурсах, использующие периодограммы и автокорреляцию. Они сходны с теми методами, которые предлагаем мы, но не рассматривают тренды и генерацию имитирующей нагрузки, описанные в этой статье. </p>
+ 
+<p>Профили были использованы в анализе &laquo;что, если&hellip;&raquo;, в котором рассматривалось назначение нагрузок на консолидированные серверы. AOG [2] и TeamQuest [16] предлагают продукты, в которых методы на основе профилей используются для решения задач консолидации. AutoGlobe [14] предлагает самоорганизующуюся инфраструктуру, где имеющееся оборудование виртуализовано, сведено в пулы и постоянно отслеживается. Они представили контроллер на основе нечеткой логики, который контролирует все сервисы, исполняемые на аппаратной платформе. Если контроллер распознает исключительную ситуацию, он автоматически запускает действия, исправляющие ситуацию. В дополнение к нему предлагается модуль статической оптимизации, который использует ретроспективные данные о потребности для расчета рекомендаций по размещению нагрузки. При расчете рекомендаций используются эвристика &laquo;жадного&raquo; алгоритма. </p>
+ 
+<p>Мы полагаем, что использованный нами сервис размещения нагрузки имеет преимущества перед другими описанными выше подходами. Он поддерживает сервисы консолидации и балансировки нагрузки, необходимые во всеобъемлющем процессе управления мощностью, и опирается на генетический алгоритм, стремящийся улучшить &quot;жадные&quot; решения размещения нагрузки. Более того, наши методы размещения нагрузки идут дальше, чем другие методы, затрагивая такие вопросы, как классы обслуживания и ограничения по размещению. </p>
+ 
+<p>И наконец, предложенный нами подход к прогнозу требуемой мощности улучшает другие известные нам подходы, применяемые для пулов ресурсов. Он предусматривает вероятность доступа к ресурсу, исходя из которой можно разделить потребности каждой нагрузки между двумя классами обслуживания [6]. Некоторые исследователи предлагают ограничить требования мощности для прикладной нагрузки до процентили от ее потребности [15]. Но этот подход не учитывает влияния на работу пользователя постоянного падения производительности со временем, как это делает наше ограничение скользящего окна. Другие исследователи рассматривают только цели для ресурсов как целого [14] вместо того, чтобы разрешить каждой нагрузке иметь независимо установленную цель. </p>
+ 
+<h3>Выводы и дальнейшая работа </h3>
+ 
+<p>Мы описали процесс управления мощностью для пулов ресурсов. Процесс опирается на сервисы, автоматизирующие и упрощающие администрирование для операторов пулов ресурсов. В центре нашей работы были определения понятия требуемой мощности и методы прогнозирования потребности в ресурсах для нагрузки. Мы оценили эффективность наших методов на примере, в котором использовались данные о потребности в мощности для 139 корпоративных приложений за шесть месяцев работы. Автоматизированные методы предсказывали требуемую мощность для серверов, несущих нагрузку, с точностью до одного процессора из восьми 95% всего времени при прогнозировании на пять недель вперед, сократив при этом совокупные требования к процессорной мощности на 35% без значительных рисков. Используя такие методы предсказания, операторы пулов ресурсов могут решать, следует ли вводить дополнительные мощности в их пулы. </p>
+ 
+<p>Сервис прогнозирования потребности для нагрузки опирается на методы выявления паттернов и трендов. Проведенная нами проверка на конкретном примере показывает, что прогнозирование трендов может быть полезным до тех пор, пока мы не слишком преувеличиваем глубину периода времени, на который, как мы полагаем, эти тренды сохранятся в будущем. Мы считаем, что методы прогнозирования потребности для нагрузки полезны для процесса управления мощностью. Они выявляют нетиповые варианты поведения, которые в будущем могут влиять друг на друга (например, трехдневные и пятидневные образы могут накладываться каждые 15 дней), и могут помочь выяснить, когда потребности нагрузки, по-видимому, отклоняются от ее поведения в прошлом. </p>
+ 
+<p>Наша дальнейшая работа предполагает: разработку онлайновых автоматических методов мониторинга и отчетности о незапланированных изменениях параметров рабочей нагрузки; улучшенное использование уведомлений о достоверности и рисках в прогнозах требуемой мощности на будущее; лучшую интеграцию с бизнес-прогнозами для внесения изменений в наш подход. Кроме того, необходима дальнейшая работа по описанию характеристик паттернов потребности нагрузки для корпоративных служб, выступающих как Web-сервисы. Паттерны использования для этих сервисов могут отличаться от паттернов, описанных в данной статье. </p>
+ 
+<p><em>* В этой статье мы не обсуждаем масштабирование потребностей в мощности между серверами с разной частотой процессоров или разными архитектурами.</em> </p>
+ <blockquote> 
+  <h3>Литература </h3>
+ 
+  <ol> 
+    <li>A. Andrzejak, J. Rolia and M. Arlitt, Bounding Resource Savings of Utility Computing Models, HPLabs Technical Report HPL-2002-339. </li>
+   
+    <li><a href="http://www.aogtech.com">http://www.aogtech.com</a>. </li>
+   
+    <li>T. Bollerslev. Generalized Autoregressive Conditional Heteroskedasticity. Journal of Econometrics, 31:307&mdash;327, 1986. </li>
+   
+    <li>G. E. P. Box, G. Jenkins and G. Reinsel. Time Series Analysis: Forecasting and Control. Prentice Hall, Upper Saddle River, NJ, USA, third edition, 1994. </li>
+   
+    <li>I. Chakravarti, R. Laha, J. Roy.Handbook of Methods of Applied Statistics. Vol. I, John Wiley and Sons, pp. 392&mdash;394, 1967. </li>
+   
+    <li>L. Cherkasova and J. Rolia: R-Opus: A Composite Framework for Application Performability and QoS in Shared Resource Pools. Proc. of the Intl. Conf. on Dependable Systems and Networks (DSN&rsquo;2006), Philadelphia, USA, 2006. </li>
+   
+    <li>N. R. Draper and H. Smith. Applied Regression Analysis. John Wiley &amp; Sons, New York, NY, USA 1998. </li>
+   
+    <li>R. F. Engle. Autoregressive Conditional Heteroscedasticity with Estimates of the Variance of United Kingdom Inflation. Econometrica, 50(4):987&mdash;1008, 1982. </li>
+   
+    <li>J .A. Hartigan and M. A. Wong. A K-Means Clustering Algorithm. In Applied Statistics, vol. 28, pp. 100&mdash;108, 1979. </li>
+   
+    <li>ITIL: IT Infrastructure Library. <a href="http://www.itil.com.uk">www.itil.com.uk</a>. </li>
+   
+    <li>J. Pieper, A.Mellan, J. Paul, D. Thomas and F. Karim. High Level Cache Simulation for Heterogeneous Multiprocessors. Proc. of the 41st Annual Conference on Design Automation, San Diego, CA, 2004. </li>
+   
+    <li>J. Rolia, X. Zhu, M. Arlitt and A. Andrzejak, Statistical Service Assurances for Applications in Utility Grid Environments. Performance Evaluation Journal, vol. 58, 2004. </li>
+   
+    <li>J. Rolia, L. Cherkasova, M. Arlitt and A. Andrzejak. A Capacity Management Service for Resource Pools. Proc. of the 5th Intl. Workshop on Software and Performance (WOSP&rsquo;2005), Spain, 2005. </li>
+   
+    <li>S. Seltzsam, D.Gmach, S. Krompass and A. Kemper. Auto-Globe: An Automatic Administration Concept for Service-Oriented Database Applications. Proc. of the 22nd Intl. Conference on Data Engineering (ICDE&rsquo;2006), Industrial Track, Atlanta, GA, 2006. </li>
+   
+    <li>B. Urgaonkar, P. Shenoy and T. Roscoe. Resource Overbooking and Application Profiling in Shared Hosting Platforms. Proc. of the 5th Symp. on Operating System Design and Implementation (OSDI&rsquo;2002), Boston, MA, December, 2002. </li>
+   
+    <li><a href="http://www.teamQuest.com">http://www.teamQuest.com</a> </li>
+   
+    <li>M.Wimmer, V. Nicolescu, D. Gmach,M.Mohr, A. Kemper and H. Krcmar. Evaluation of Adaptive Computing Concepts for Classical ERP Systems and Enterprise Services. Proc. of the Joint Conference on E-Commerce Technology and Enterprise Computing, E-Commerce and E-Services (CEC&rsquo;06 and EEE&rsquo;06), San Francisco, CA, 2006. </li>
+   </ol>
+ </blockquote></DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25261.html'>Сетевые новинки Dell для дата-центров </A></b></li><li><b><A href='detail.php@ID=24909.html'>Комплекс ETegro Technologies для облачных ЦОД</A></b></li><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24693.html'>Услуга разработки концепции модульного ЦОД </A></b></li><li><b><A href='detail.php@ID=24608.html'>Комплексная платформа для управления инфраструктурой ЦОД от Schneider Electric и HP</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=11622.html" target="_blank"><img src="../upload/iblock/058/2-1-1.jpg" alt="Открыть материал" style="width:50px; height:50px; border:1px solid #000; float:left; margin:0 5px 5px 0;"></a><a href="detail.php@ID=11622.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Управление вычислительной мощностью и прогнозирование потребностей центров обработки данных</a><br><a href="detail.php@ID=11622.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Подход, основанный на регистрации профилей потребностей в ресурсах для работы приложений, позволяет эффективно предсказывать будущую потребность в &hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=11622.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=11622&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0d3d2deb29e8d1421edf7355be700d5e'><img src='../bitrix/tools/captcha.php@captcha_code=0d3d2deb29e8d1421edf7355be700d5e' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

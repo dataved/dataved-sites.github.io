@@ -1,0 +1,587 @@
+<HTML>
+<HEAD>
+<title>Тестирование процессоров high-end с помощью SPEC CPU2000
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Олег Денисов, Сергей Назаров В одном из предыдущих номеров* мы уже публиковали результаты тестирования высокопроизводительных процессоров AMD и Intel с помощью стандартных тестовых пакетов и некоторых популярных реальных приложений. Однако тогда" />
+<meta name="description" content="Олег Денисов, Сергей Назаров В одном из предыдущих номеров* мы уже публиковали результаты тестирования высокопроизводительных процессоров AMD и Intel с помощью стандартных тестовых пакетов и некоторых популярных реальных приложений. Однако тогда" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398078982','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8815' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8815&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8815"].SHOW_IMAGE.value="N"; document.forms["PrintForm8815"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8815"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8815"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8815);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8815.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8815.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8815);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6255.html'>ByteLab</a><br /></p><a href='../numbers/index.php@ID=11564.html'>№4 (45), апрель 2002</a><h1>Тестирование процессоров high-end с помощью SPEC CPU2000
+</h1>10.04.2002<p></p><DIV class='article-text'><p><i>Олег Денисов, Сергей Назаров</i> 
+<p>В одном из предыдущих номеров* мы уже публиковали результаты тестирования высокопроизводительных процессоров AMD и Intel с помощью стандартных тестовых пакетов и некоторых популярных реальных приложений. Однако тогда остался незатронутым вопрос о скорости их работы при решении объемных расчетных задач, поэтому, продолжая начатую тему, мы решили провести испытания процессоров средствами пакета SPEC CPU2000, предназначенного для оценки работы процессоров в условиях экстремальной нагрузки.
+<p>
+<hr width="40%" align="left" noshade>
+*См. <a href="http://www.bytemag.ru/Article.asp?id=729">&quot;Сравнительное тестирование новых процессоров 
+
+  от AMD и Intel&quot;</a>, &quot;BYTE/Россия&quot; № 2/2002. </p>
+<table width="100%" border="0">
+  <tr>
+    <td bgcolor="#FFFF99">
+      <h3>Методика тестирования </h3>
+      <p>Программа испытаний состояла из двух частей. Первая часть включала тесты 
+        из пакета SPEC CPU2000 1.2, предназначенного для проверки быстродействия 
+        процессора, ОЗУ и эффективности компиляторов. Для развернутого анализа 
+        результатов SPEC CPU2000 во второй части тестирования мы выполнили тесты 
+        из пакета BYTEmark 2.0, а также тесты на скорость решения системы нелинейных 
+        дифференциальных уравнений и выполнения элементарных операций при использовании 
+        SSE2-инструкций. 
+      <p>Все тесты выполнялись под управлением ОС Microsoft Windows XP Professional 
+        Build 2600, а компиляция исполняемого кода проводилась с помощью Intel 
+        C++ Compiler 5.0.1 Build 010525Z (далее для краткости Intel C++), Microsoft 
+        Visual C++ 6.0 Enterprise Edition с SP5 (Microsoft C++), Microsoft Visual 
+        Studio .NET Professional Candidate Release (Microsoft .NET), Intel Fortran 
+        Compiler 5.0.1 Build 010525Z (Intel Fortran) и Compaq Visual Fortran 6.6/6.6A 
+        (Compaq Fortran 6.6/6.6A). 
+      <p>Для проведения испытаний мы использовали следующее стендовое оборудование: 
+        процессоры AMD Athlon XP 1900+, Intel Pentium 4 2,0 ГГц (L2-кэш 512 Кбайт), 
+        Pentium 4 2,0 ГГц (L2-кэш 256 Кбайт), Pentium III Coppermine 1,0 ГГц; 
+        системные платы ASUS A7V266-E (набор микросхем - VIA Apollo KT266A), P4B 
+        (Intel 845), TUSL2-C (Intel 815E B0 Stepping), Gigabyte GA-8IRX (Intel 
+        845D), MSI 850 Pro5 (MS-6545) (Intel 850); DIMM-модули PC133 и DDR266 
+        SDRAM-памяти емкостью 256 Мбайт; два модуля PC800 RDRAM-памяти емкостью 
+        128 Мбайт каждый; графический адаптер ASUS AGP-V8200 на базе набора микросхем 
+        NVIDIA GeForce3 с 64 Мбайт видеопамяти; жесткий диск Fujitsu MPG3204AH 
+        емкостью 20,4 Гбайт.
+    </td>
+  </tr>
+</table>
+<h3>Тесты SPEC CPU2000 1.2 </h3>
+<p>SPEC CPU2000 - это тестовый пакет от некоммерческой организации Standard Performance Evaluation Corporation (SPEC), в которую входит более 60 производителей компьютерной техники и ПО (3DLabs, AMD, Bull, Apple, ATI, Compaq, Dell, Fujitsu, Hewlett-Packard, Hitachi, IBM, Intel, Matrox, Microsoft, NEC, NVIDIA, Oracle, SGI, Sun и т. д.) и исследовательских центров (например, NASA и университет Беркли в Калифорнии). Цель деятельности SPEC - разработка и проведение интенсивных компьютерных тестов для испытания систем, работающих с максимально возможной нагрузкой. SPEC CPU2000 - один из таких тестов, предназначенный для тестирования центральных процессоров.
+<p>Если быть точнее, то результаты SPEC CPU2000 зависят не только от мощности и количества процессоров, но и от быстродействия ОЗУ и эффективности работы компиляторов, с помощью которых генерируется исполняемый код тестовых программ, и не зависят от типа и скорости работы других составных частей машины - графической, дисковой (если объем ОЗУ не меньше 256 Мбайт) и сетевой подсистемы, а также периферийных устройств, подключенных к компьютеру. Поэтому SPEC CPU2000 хорошо подходит для сравнения как совокупной производительности процессора(ов) и оперативной памяти разных машин, так и качества работы компиляторов.
+<p>В состав SPEC CPU2000 входят исходные тексты тестовых программ; вспомогательный программный инструментарий для ОС NT и клонов UNIX, который служит для компиляции кода тестовых программ и проверки корректности их работы, запуска тестов и генерации отчетов об их выполнении; исходные тексты вспомогательного программного инструментария (это делается для того, чтобы их исполняемый код можно было скомпилировать на тестируемой системе); документация. Поставляется SPEC CPU2000 в виде одного компакт-диска.
+<p>Для работы с тестами из пакета SPEC CPU2000 пользователь должен иметь в своем распоряжении машину, оснащенную ОЗУ объемом не менее 256 Мбайт (в противном случае некоторые тестовые задачи не будут помещаться в пределах оперативной памяти и система начнет обращаться к файлу подкачки на жестком диске, что приведет к снижению показателей SPEC CPU2000), работающую под управлением NT- или UNIX-подобной ОС и имеющую не менее 1 Гбайт свободного места на жестком диске (для установки SPEC CPU2000 и сборки исполняемых кодов), а также компиляторы языков C, C++, Fortran-77 и Fortran-90.
+<p>SPEC CPU2000 состоит из двух наборов тестов - CINT2000 и CFP2000, которые предназначены для измерения производительности системы при выполнении соответственно целочисленных вычислений и вычислений с плавающей точкой.
+<h4>CINT2000 </h4>
+<p>В набор тестов CINT2000 входят 12 тестовых программ, из которых 11 написаны на языке C и одна - на языке C++. Приведем их краткое описание.
+<p><b>164.gzip. </b>Язык программирования - ANSI C. Тест на скорость сжатия/распаковки 
+  модельного набора данных (графический TIFF-файл, журнальный файл Web-сервера, 
+  двоичный исполняемый файл, файл со случайными данными, TAR-файл с архивом исходных 
+  кодов этого теста) с помощью широко известной программы gzip, созданной в рамках 
+  GNU-проекта (<a href="http://www.gnu.org">http://www.gnu.org</a>) и построенной 
+  на основе LZ77-алгоритма сжатия Лемпеля-Зива. Все операции сжатия/распаковки 
+  выполняются в оперативной памяти. 
+<p><b>175.vpr. </b>Язык программирования - ANSI C. Тест на скорость решения задачи 
+  оптимизации расположения блоков и проводников внутри интегральной FPGA-микросхемы 
+  (Field-Programmable Gate Array), которая решается с помощью алгоритма Дейкстры 
+  и алгоритмически относится к классу задач комбинаторной оптимизации. Цель этой 
+  задачи - расположить отдельные блоки микросхемы и соединяющие их проводники 
+  таким образом, чтобы длина проводников была минимальной, а скорость работы микросхемы 
+  - максимальной. 
+<p><b>176.gcc.</b> Язык программирования - C с GNU-расширениями. Тест на скорость 
+  компиляции исполняемого кода для процессора Motorola 88100 с помощью популярного 
+  компилятора gcc версии 2.7.2.2 (создан в рамках GNU-проекта), запускаемого со 
+  множеством ключей оптимизации. В ходе этого теста компилируется исполняемый 
+  код пяти программ, причем для каждой из них в качестве исходных данных используется 
+  свой файл, сгенерированный препроцессором языка C (а не исходный текст на языке 
+  C). 
+<p><b>181.mcf.</b> Язык программирования - ANSI C. Тест на скорость решения транспортной 
+  задачи в рамках одного машинного депо. Цель задачи - для одного отдельно взятого 
+  депо общественного транспорта составить такое расписание движения машин, чтобы 
+  затраты на их обслуживание были минимальны. Алгоритмически эта задача относится 
+  к классу задач комбинаторной оптимизации и решается с помощью сетевого симплекс-алгоритма 
+  (network simplex algorithm). 
+<p><b>186.crafty.</b> Язык программирования - ANSI C. Тест на скорость решения 
+  шахматных задач, во время выполнения которого решается пять задач с разными 
+  исходными позициями. Алгоритм, используемый в тесте, работает с 64-разрядными 
+  целыми числами (типа &quot;long long&quot; или &quot;_int64&quot;), содержит большое количество 
+  операций типа OR, EXCLUSIVE OR, SHIFT и хорошо подходит для оценки скорости 
+  работы процессора с целыми числами и эффективности алгоритмов предсказания переходов, 
+  встроенных в ядро ЦП. 
+<p><b>197.parser.</b> Язык программирования - ANSI C. Тест на скорость работы 
+  синтаксического анализатора английского языка с использованием словаря, содержащего 
+  60 тыс. словоформ. В ходе работы тестовая программа анализирует грамматическую 
+  структуру предложений модельного английского текста, т. е. определяет принадлежность 
+  к той или иной части речи, распознает синтаксические связи между членами предложений 
+  и проверяет корректность предложений с точки зрения правил грамматики. 
+<p><b>252.eon.</b> Язык программирования - C++. Тест на скорость работы программы 
+  рендеринга 3D-сцены методом трассировки лучей (Ray Tracing). В ходе ее работы 
+  генерируется картинка размером 150x150 точек, на которой изображен стул, поставленный 
+  в угол комнаты. При этом расчет одной и той же картинки выполняется три раза 
+  - каждый раз с другим алгоритмом рендеризации (Kajiya, Cook и Rushmeier). 
+<p><b>253.perlbmk.</b> Язык программирования - ANSI C. Тест на скорость работы 
+  популярного интерпретатора скриптов, написанных на языке Perl. В качестве Perl-интерпретатора 
+  используется несколько видоизмененный вариант программы Perl версии 5.005_03 
+  - в нем отключены функции, работа которых существенно зависит от типа ОС. Дополнительно 
+  подключено несколько модулей третьих производителей - MD5 1.7, MHonArc 2.3.3, 
+  IO-stringy 1.205, MailTools 1.11, TimeDate 1.08. 
+<p>В ходе теста выполняется 4 Perl-скрипта. Первый конвертирует случайным образом сгенерированные сообщения e-mail в HTML-формат с помощью модуля MHonArc. Второй представляет собой немного модифицированный вариант скрипта specdiff, входящий в комплект вспомогательного программного инструментария SPEC CPU2000. Третий решает задачу нахождения совершенных (perfect) чисел с помощью стандартного итерационного алгоритма и модуля Math::BigInt. Четвертый генерирует последовательность псевдослучайных чисел.
+<p><b>254.gap.</b> Язык программирования - ANSI C. Тест на скорость решения ряда 
+  вычислительных задач из области теории групп. 
+<p><b>255.vortex. </b>Язык программирования - C. Тест на скорость работы однопользовательской 
+  транзакционной объектно-ориентированной базы данных. Применяемая в этом тесте 
+  программа - это составная часть более сложной программы для работы с объектно-ориентированными 
+  базами данных, известной под названием VORTEx (Virtual Object Runtime EXpository). 
+<p>В процессе выполнения тестовая программа генерирует три разные базы данных общим объемом около 200 Мбайт (база со списком почтовой рассылки, база со списком товаров, база с геометрическими данными) и манипулирует ими. Базы логически объединяются в рамках одной структурной схемы, определяющей набор взаимосвязей между ними. Программа состоит из трех этапов, на каждом из которых для эмуляции разных режимов работы с базами данных выполняется свой набор транзакций добавления, удаления и поиска данных.
+<p><b>256.bzip2. </b>Язык программирования - ANSI C. Тест на скорость сжатия/распаковки 
+  модельного набора данных (графический TIFF-файл, двоичный исполняемый файл и 
+  TAR-файл с архивом исходных кодов) с помощью программы bzip2 версии 0.1, модифицированной 
+  специально для SPEC CPU2000 таким образом, чтобы обработка всех данных проводилась 
+  в ОЗУ (без обращения к жесткому диску). 
+<p><b>300.twolf. </b>Язык программирования - C. Тест на скорость расчета дизайна 
+  литографических фотошаблонов, используемых в процессе производства микросхем, 
+  в ходе выполнения которого решается задача оптимизации расположения транзисторов 
+  и проводников микросхем. 
+<h4>CFP2000 </h4>
+<p>В набор тестов CFP2000 входят 14 тестовых программ, из которых шесть написаны на языке Fortran-77, четыре - на Fortran-90 и четыре - на C. Вот их краткая характеристика.
+<p><b>168.wupwise.</b> Язык программирования - Fortran-77. Тест на скорость выполнения 
+  вычислительной задачи, сформулированной в рамках математического аппарата калибровочной 
+  теории из раздела квантовой хромодинамики, описывающей сильное межкварковое 
+  взаимодействие. В ходе теста с помощью итерационного метода BiCGStab решается 
+  неоднородное решеточное уравнение Дирака. 
+<p><b>171.swim.</b> Язык программирования - Fortran-77. Тест на скорость решения 
+  задачи прогнозирования погодных условий из области метеорологии. Алгоритм тестовой 
+  программы построен на основе уравнения мелководья (Shallow-Water Equation), 
+  с помощью которого рассчитывается динамика поля скоростей на 512 временных точках 
+  для поверхности, представленной сеткой с размерностью 1335x1335 элементов. 
+<p><b>172.mgrid.</b> Язык программирования - Fortran-77. Тест на скорость расчета 
+  трехмерного скалярного потенциального поля на кубической сетке с помощью простого 
+  многосеточного алгоритма. 
+<p><b>173.applu.</b> Язык программирования - Fortran-77. Тест на скорость решения 
+  системы из пяти параболических/эллиптических нелинейных уравнений в частных 
+  производных на трехмерной сетке из области гидрогазодинамики. 
+<p><b>177.mesa.</b> Язык программирования - ANSI C. Тест на скорость генерации 
+  изображения трехмерного объекта на основе описывающего его набора геометрических 
+  данных с помощью OpenGL-подобного интерфейса программирования Mesa, реализованного 
+  в виде библиотеки графических функций Mesa 3D Graphics Library. 
+<p><b>178.galgel.</b> Язык программирования - Fortran-90. Тест на скорость решения 
+  вычислительной задачи, в которой исследуется характер поведения жидкости внутри 
+  замкнутого сосуда прямоугольной формы в зависимости от разности температур на 
+  его двух противоположных стенках. При небольшой разности температур внутри сосуда 
+  устанавливается стационарный (безвихревой) режим движения жидкости. При повышении 
+  разности температур до некоторого критичного значения режим движения жидкости 
+  становится турбулентным (вихревым), причем он может быть устойчивым или неустойчивым. 
+<p>Тестовая программа выполняется в три этапа. На первом с помощью итерационного метода Ньютона моделируется стационарный режим движения жидкости. На втором рассчитывается критичное значение разности температур и частота колебаний, возникающих в жидкости при ее переходе в критичное состояние, для чего используется спектральный метод Галеркина. На третьем моделируется движение жидкости в турбулентном режиме и выясняется, будет он устойчивым или неустойчивым.
+<p><b>179.art.</b> Язык программирования - ANSI C. Тест на скорость распознавания 
+  тепловых образов вертолета и самолета с помощью нейронной сети типа ART 2 (Adaptive 
+  Resonance Theory 2). Тест выполняется в два этапа: на первом нейронная сеть 
+  &quot;учится&quot; распознавать эталонные тепловые образы вертолета и самолета, на втором 
+  - распознает тестовые образы. 
+<p><b>183.equake.</b> Язык программирования - ANSI C. Программа, использованная 
+  для проведения этого теста, моделирует процесс распространения упругих сейсмических 
+  волн и рассчитывает динамику передвижения почвенных пород, инициированного сейсмическим 
+  возмущением, в пределах крупномасштабного тектонического бассейна с сильно неоднородной 
+  структурой. 
+<p>В ходе выполнения теста моделируется прохождение подземного толчка по долине Сан-Фернандо (на юге Калифорнии), вызванного Нортриджским землетрясением (Northridge Earthquake) 1994 г. Все вычисления проводятся на неструктурированной пространственной сетке с помощью метода конечных элементов.
+<p><b>187.facerec.</b> Язык программирования - Fortran-90. Тест на скорость идентификации 
+  личности по фотографии лица. Выполняется в три этапа. На первом тестовая программа 
+  &quot;учится&quot; сравнивать распознаваемое изображение с эталонным. На втором проверяется 
+  корректность работы программы при сравнении набора из 26 распознаваемых фотографий 
+  (по две на каждого человека) с набором из 13 эталонных. На третьем проводится 
+  распознавание 84 изображений (от одного до трех на человека), сравниваемых с 
+  42 эталонными фотографиями. 
+<p><b>188.ammp.</b> Язык программирования - C. Тест на скорость решения вычислительной 
+  задачи из области биологии - расчет динамики движения элементов в системе из 
+  большого числа молекул, в качестве которой взят белково-ингибиторный комплекс 
+  (protein-inhibitor complex), помещенный в водную среду. 
+<p><b>189.lucas.</b> Язык программирования - Fortran-90. Тест на скорость работы 
+  алгоритма поиска простых чисел Мерсенна (Mersenne). В ходе его выполнения проводится 
+  поиск чисел вида 2n-1, где n - целое число, которые были бы простыми, с помощью 
+  методики Лукаса-Лехмера (LucasLehmer). 
+<p><b>191.fma3d. </b>Язык программирования - Fortran-90. Тест на скорость расчета 
+  динамики неупругой деформации трехмерного объекта, произошедшей при воздействии 
+  кратковременной ударной нагрузки. В ходе теста моделируется процесс деформации 
+  тонкой цилиндрической обшивки, которая математически описывается массивом конечных 
+  элементов, занимающим около 100 Мбайт оперативной памяти. 
+<p><b>200.sixtrack.</b> Язык программирования - Fortran-77. Тест на скорость расчета 
+  траектории движения элементарных частиц в ускорителе, в результате чего вычисляется 
+  значение динамической апертуры (Dynamic Aperture) пучка частиц, которое служит 
+  критерием его долговременной стабильности. В ходе выполнения теста эта задача 
+  решается для модели ускорителя Large Hadron Collider и пучка из 60 частиц. 
+<p><b>301.apsi. </b>Язык программирования - Fortran-77. Тест на скорость решения 
+  комплексной задачи из области метеорологии, в ходе выполнения которого рассчитываются 
+  долговременные (мезомасштабные) и кратковременные (синоптические) вариации температуры 
+  воздуха, скорости ветра и концентрации загрязняющих веществ в атмосфере на модельной 
+  кубической сетке из 112x112x112 элементов в 70 временных точках. 
+<h4>Режим и метрика выполнения тестов </h4>
+<p>Существует несколько способов выполнения тестов из наборов CFP2000 и CINT2000 и расчета на базе их результатов интегральных показателей производительности системы, которые определяются двумя характеристиками, указываемыми при запуске тестов, - &quot;режимом&quot; (Base или Peak) и &quot;метрикой&quot; (Speed Metrics или Throughput Metrics).
+<p>В Base-режиме при генерации исполняемого кода всех тестовых программ, написанных на одном языке, должен использоваться один и тот же компилятор с одинаковым набором ключей запуска, причем в сумме для всех компиляторов должно быть указано не более четырех ключей оптимизации машинного кода. В Peak-режиме таких ограничений нет, и исполняемый код для каждого приложения может генерироваться любым компилятором, запущенным со своим набором ключей.
+<p>Два режима выполнения тестов в SPEC CPU2000 соответствуют двум возможным схемам поведения пользователя - генерация исполняемого кода либо с ключами по умолчанию или рекомендованными производителями компиляторов, либо с ключами, обеспечивающими максимальную оптимизацию кода и подобранными в результате их последовательного перебора. Согласно правилам SPEC CPU2000, для сравнения производительности разных систем нужно использовать данные, полученные в Base-режиме, в то время как проведение тестов в Peak-режиме считается факультативным.
+<p>Метрика определяет количество одновременно выполняемых копий тестовых программ и способ расчета интегральных показателей. Так, если выбирается метрика Speed Metrics, правила будут таковы:
+<ol><li>Для каждой тестовой программы запускается только одна ее копия и измеряется время ее работы.
+<li>Эта операция повторяется одинаковое количество раз, но обязательно нечетное и не меньше трех.
+<li>Для каждой программы находится медиана времени ее работы (для возрастающего ряда с нечетным количеством элементов, как в данном случае, медианой будет элемент, находящийся посередине ряда).
+<li>Значение медианы MTIME сравнивается со временем выполнения этой программы на базовой машине RTIME (в роли таковой в SPEC CPU2000 выступает рабочая станция Sun Ultra5_10 со SPARC-процессором 300 МГц и 256 Мбайт ОЗУ). Для этого по формуле (RTIME/MTIME)*100 рассчитывается их отношение (Ratio), которое включается в отчет о выполнении тестов и служит показателем скорости работы испытываемой системы на конкретном тесте.</ol>
+<p>Интегральные показатели выполнения тестов из набора CINT2000/CFP2000 рассчитываются по формуле
+<p>GEOMEAN (RTIME i/MEDIAN (TTIME ij, j=1,M)*100, i = 1,N),
+<p>где GEOMEAN - среднее геометрическое, MEDIAN - медиана, RTIME/TTIME - время выполнения теста на базовой/испытываемой машине, i - номер теста, N - количество тестов в наборе CINT2000/CFP2000, j - номер запуска теста, M - количество запусков каждого теста (3, 5, 7 и т. д.).
+<p>Метрика Speed Metrics предназначена для измерения производительности однопроцессорных машин, поскольку в любой момент времени выполняется только одна копия тестовой программы, а рассчитанные по ее правилам интегральные показатели можно интерпретировать как время, которое понадобится машине для решения набора типичных вычислительных задач.
+<p>Если выбирается метрика Throughput Metrics, то для каждой тестовой программы одновременно запускается на выполнение несколько ее копий, причем для режима Base их количество должно быть одинаковым для всех тестов, а для режима Peak этого ограничения нет. Интегральные показатели выполнения тестов рассчитываются по формуле
+<pre>GEOMEAN (K i * RC i * 3600/MEDIAN (TTIME ij, j=1,M), i = 1,N),</pre>
+<p>где GEOMEAN - среднее геометрическое, MEDIAN - медиана, K - количество одновременно выполняемых копий программы, RC - некий коэффициент, 3600 - число секунд в часе, TTIME - время выполнения теста на испытываемой машине в секундах, i - номер теста, N - количество тестов в наборе CINT2000/CFP2000, j - номер запуска теста, M - количество запусков каждого теста (3, 5, 7 и т. д.).
+<p>Метрика Throughput Metrics служит для измерения производительности многопроцессорных машин, а вычисляемые в этом случае интегральные показатели можно интерпретировать как количество типичных вычислительных задач, которые могут быть решены на машине за один час работы.
+<p>Таким образом, выбирая набор тестов, режим и метрику, с помощью SPEC CPU2000 можно получить 8 интегральных показателей производительности системы: SPECint_base2000 и SPECint2000/SPECfp_base2000 и SPECfp2000 - индексы скорости работы в Base- и Peak-режимах с целочисленными приложениями/приложениями с плавающей точкой, рассчитанные по метрике Speed Metrics; SPECint_rate_base2000 и SPECint_rate2000/SPECfp_rate_base2000 и SPECfp_rate2000 - аналогичные показатели, рассчитанные по метрике Throughput Metrics.
+<h3>Результаты SPEC CPU2000 </h3>
+<p>В ходе испытаний мы выполняли тесты из пакета SPEC CPU2000 в режимах Base и Peak с метрикой Speed Metrics на нескольких однопроцессорных платформах с процессорами Pentium 4 2,0 ГГц, Pentium III Coppermine 1,0 ГГц, Athlon XP 1900+ и с использованием пяти разных компиляторов - Intel C++, Microsoft C++, Microsoft .NET, Intel Fortran, Compaq Fortran 6.6/6.6A. Отметим, что однократное выполнение всех тестов из наборов CFP2000 и CINT2000 в двух режимах (Base и Peak) с трехкратным прогоном каждой тестовой программы на системе с процессором Pentium 4 2,0 ГГц или Athlon XP 1900+ длится примерно 15-20 ч, а с Pentium III Coppermine 1,0 ГГц - 30 ч.
+<p>Ниже обсуждаются результаты анализа зависимости показателей SPEC CPU2000 от типа компиляторов, &quot;включения&quot;/&quot;выключения&quot; SSE2-инструкций, типа процессора, объема L2-кэша и типа ОЗУ (см. <a href="http://www.bytemag.ru/files/proc_tab.zip">таблицы</a>). Для справки мы будем указывать режимы и платформы, для которых были получены сравниваемые результаты.
+<h4>Компиляторы </h4>
+<p>Сравнивая результаты в Base-режиме для платформ Intel Pentium 4 2,0 ГГц, L2-кэш 512 Кбайт / PC800 RDRAM / Intel 850 и AMD Athlon XP 1900+ / DDR266 SDRAM / VIA Apollo KT266A, можно сделать следующие выводы.
+<p>В случае процессора Pentium 4 компилятор Intel C++ превосходил Microsoft C++ во всех тестах, причем в зависимости от их характера преимущество могло быть как небольшим (около 5%), так и просто огромным (в 2-3 раза)!
+<p>Сравнение Intel C++ с Microsoft .NET было также не в пользу последнего, так как на всех целочисленных тестах он проигрывал в производительности от 1% до 80% (к сожалению, тесты с Microsoft .NET на скорость вычислений с плавающей точкой не были выполнены из-за проблемы совместимости этого компилятора с Compaq Fortran 6.6A, что приводило к ошибке на этапе сборки исполняемого кода тестов). Но все же Microsoft .NET работал быстрее Microsoft C++.
+<p>На этом же процессоре Intel Fortran обошел Compaq Fortran 6.6A во всех тестах, причем в зависимости от приложения разрыв мог быть как небольшим (5-10%), так и весьма существенным (более чем в 2 раза в тесте 187.facerec), за одним исключением - в тесте 178.galgel он уступил Compaq Fortran 6.6A в производительности на 12%.
+<p>Что касается интегральных показателей, то замена пары компиляторов Compaq Fortran 6.6A + Microsoft C++ на Intel Fortran + Intel C++ приводила к росту SPECint_base2000 и SPECfp_base2000 соответственно на 28% и 32%.
+<p>В случае процессора Athlon XP компилятор Intel C++ победил Microsoft C++ во всех тестах с преимуществом от 2% до более чем двух раз, за исключением теста 176.gcc, где отстал на 8%. Так что и на Athlon XP в целом Intel C++ снова был эффективнее конкурента, однако разрыв между компиляторами был меньше.
+<p>То же самое можно сказать, сравнив Intel Fortran и Compaq Fortran 6.6 - в общем зачете Intel Fortran был лучше, в большинстве тестов опережая своего соперника с преимуществом от 2% до 41% и проиграв только в трех приложениях (171.swim, 178.galgel, 301.apsi), но разница в эффективности работы компиляторов значительно уменьшилась.
+<p>Вследствие этого разрыв между компиляторами по интегральным показателям тоже сократился - замена пары Compaq Fortran 6.6 + Microsoft C++ на Intel Fortran + Microsoft C++ приводила к увеличению SPECint_base2000 на 20%, а SPECfp_base2000 на 6%.
+<p>Что же касается Microsoft .NET, то на целочисленных приложениях он работал быстрее своего предшественника (к сожалению, как уже говорилось, тесты с Microsoft .NET на скорость вычислений с плавающей точкой не были выполнены по причине его несовместимости с компилятором Compaq Fortran 6.6), однако все же медленнее Intel C++, отстав во всех тестах от 1% до 85% по производительности, кроме теста 176.gcc, где он вышел вперед на 9%.
+<p>Итак, проанализировав зависимость показателей SPEC CPU2000 от типа компилятора, можно сделать следующие выводы. Из числа испытанных компиляторов C/C++ самым эффективным будет Intel C++, причем для Pentium 4 это справедливо всегда, а для Athlon XP - за очень редким исключением. Из двух протестированных компиляторов языка Fortran-77/Fortran-90 на Pentium 4 компилятор Intel Fortran почти всегда эффективнее Compaq Fortran 6.6A - за очень редким исключением, в то время как для Athlon XP это тоже верно в большинстве случаев, но уже с меньшей вероятностью, поэтому для последнего процессора имеет смысл проверять скорость работы исполняемого кода, сгенерированного обоими компиляторами.
+<h4>SSE2-инструкции </h4>
+<p>Мы сравнивали результаты в Base-режиме для платформы Intel Pentium 4 2,0 ГГц, L2-кэш 512 Кбайт / PC800 RDRAM / Intel 850 с компиляторами Intel C++ и Intel Fortran. Чтобы выяснить, каким образом применение SSE2-инструкций влияет на скорость работы машинного кода, мы принудительно запретили их использование, заменив везде ключ компиляции -QxW на -QxK.
+<p>В результате выяснилось, что при &quot;включении&quot; SSE2-инструкций из 12 целочисленных тестов в четырех (186.crafty, 255.vortex, 181.mcf, 176.gcc) показатели остаются на том же уровне, в шести (253.perlbmk, 256.bzip2, 197.parser, 164.gzip, 300.twolf, 175.vpr) - увеличиваются на 1-4% и только в двух (252.eon, 254.gap) возрастают на 9-10%. Для тестов на скорость вычислений с плавающей точкой ситуация другая: из 14 тестов в четырех (171.swim, 188.ammp, 179.art, 183.equake) показатели практически не изменяются, в трех (189.lucas, 173.applu, 301.apsi) возрастают на 1-4%, в двух (187.facerec, 191.fma3d) - на 7-10%, в трех (168.wupwise, 200.sixtrack, 178.galgel) - на 13-16%, а в двух увеличиваются очень существенно: 172.mgrid - на 25%, 177.mesa - на 34%.
+<p>Таким образом, максимальный прирост производительности от использования SSE2-инструкций при выполнении целочисленных вычислений/вычислений с плавающей точкой составил 10/34%, а типичный - 1-4/7-16%. В то же время при &quot;включении&quot; SSE2-инструкций скорость работы приложения может остаться неизменной или даже немного понизиться - этот результат стал для нас достаточно неожиданным, поэтому мы дополнительно провели мини-исследование на тему о влиянии SSE2-инструкций на скорость выполнения элементарных операций.
+<p>Что же касается интегральных показателей, то их прирост при использовании SSE2-инструкций, как и следовало ожидать, оставался в рамках типичных значений для отдельных тестов и для SPECint_base2000/SPECfp_base2000 составил 3/9%.
+<h4>Процессоры </h4>
+<p>Сравнивались результаты в Peak-режиме для платформ Intel Pentium 4 2,0 ГГц, L2-кэш 512 Кбайт / PC800 RDRAM / Intel 850; Intel Pentium III Coppermine 1,0 ГГц, L2-кэш 256 Кбайт / PC133 SDRAM / Intel 815E B0 Stepping и AMD Athlon XP 1900+ / DDR266 SDRAM / VIA Apollo KT266A.
+<p>Среди процессоров бесспорным лидером был Pentium 4, опередивший Athlon XP по SPECint2000/SPECfp2000 на 16/37%. Однако его превосходство не было абсолютным, поскольку в ряде тестов победителем стал Athlon XP - в целочисленных 164.gzip (обогнал на 4%), 186.crafty (26%), 252.eon (25%), 253.perlbmk (3%) и в тестах на плавающую точку 177.mesa (5%), 200.sixtrack (7%).
+<p>Что же касается Pentium III Coppermine 1,0 ГГц, то он сильно отстал от двух более мощных соперников и по показателям SPECint2000/SPECfp2000 был медленнее Pentium 4 в 1,72/2,59 раза, а Athlon XP - в 1,48/1,90 раза.
+<h4>Объем L2-кэша </h4>
+<p>Сравнение результатов в Peak-режиме для платформ Intel Pentium 4 2,0 ГГц, L2-кэш 256 Кбайт / PC800 RDRAM / Intel 850 и Intel Pentium 4 2,0 ГГц, L2-кэш 512 Кбайт / PC800 RDRAM / Intel 850 показывает следующее.
+<p>Увеличение объема L2-кэша с 256 до 512 Кбайт у Pentium 4 совершенно по-разному отражалось на результатах отдельных тестовых программ. Из 26 приложений у одного (189.lucas), как это ни странно, скорость работы понизилась на 1%, у двух (252.eon, 179.art) осталась прежней, у семи (200.sixtrack, 173.applu, 171.swim, 183.equake, 172.mgrid, 177.mesa, 168.wupwise) незначительно увеличилась (на 1-3%); у десяти (191.fma3d, 254.gap, 178.galgel, 164.gzip, 186.crafty, 181.mcf, 187.facerec, 253.perlbmk, 301.apsi, 256.bzip2) выросла довольно заметно - на 5-12%; а у шести (255.vortex, 188.ammp, 197.parser, 175.vpr, 300.twolf, 176.gcc) возросла очень сильно - на 16-28%.
+<p>Таким образом, &quot;реакция&quot; тестовых программ на двукратный рост объема L2-кэша была неоднозначной и зависела от их характера. Что же касается интегральных показателей, то прирост SPECint2000/SPECfp2000 составил 13/4%.
+<h4>Тип ОЗУ </h4>
+<p>Здесь сравнивались результаты в Peak-режиме для платформ Intel Pentium 4 2,0 ГГц, L2-кэш 512 Кбайт / PC133 SDRAM / Intel 845; Intel Pentium 4 2,0 ГГц, L2-кэш 512 Кбайт / DDR266 SDRAM / Intel 845D; Intel Pentium 4 2,0 ГГц, L2-кэш 512 Кбайт / PC800 RDRAM / Intel 850.
+<p>Поведение тестов при замене памяти PC133 SDRAM на более скоростную DDR266 SDRAM, как и в предыдущем случае, было неодинаковым. В двух тестах (252.eon, 186.crafty) результаты не изменились, в четырех (200.sixtrack, 164.gzip, 177.mesa, 253.perlbmk) незначительно подросли (2-3%); в пяти (255.vortex, 197.parser, 254.gap, 175.vpr, 256.bzip2) увеличились довольно ощутимо (9-14%); в 11 (168.wupwise, 187.facerec, 300.twolf, 176.gcc, 191.fma3d, 188.ammp, 301.apsi, 189.lucas, 178.galgel, 173.applu, 172.mgrid) значительно улучшились (16-40%); а в четырех (181.mcf, 171.swim, 183.equake, 179.art) выросли очень сильно, на 43-63%. В итоге показатели SPECint2000/SPECfp2000 выросли на 12/28%.
+<p>При переходе от памяти DDR266 SDRAM к памяти PC800 RDRAM наблюдалась примерно такая же картина. В трех тестах (252.eon, 186.crafty, 200.sixtrack) показатели остались неизменными, в четырех (255.vortex, 164.gzip, 168.wupwise, 197.parser) подросли на 2-5%; в восьми (177.mesa, 253.perlbmk, 175.vpr, 254.gap, 187.facerec, 188.ammp, 300.twolf, 191.fma3d) увеличились довольно заметно (6-15%); еще в восьми (256.bzip2, 176.gcc, 178.galgel, 301.apsi, 183.equake, 181.mcf, 189.lucas, 173.applu) значительно выросли (16-39%); а в трех (172.mgrid, 179.art, 171.swim) улучшились очень сильно, на 48-74%. Интегральные показатели SPECint2000/SPECfp2000 возросли на 10/25%.
+<p>Таким образом, рост скорости работы конкретного приложения при замене оперативной памяти на более скоростной ее тип очень сильно зависит от алгоритма работы программы.
+<h3>BYTEmark 2.0 </h3>
+<p>Одна из главных целей нашего исследования - оценка собственно мощности тестируемых процессоров, в отрыве от схем поддержки и подсистем памяти - для определения эффективности внутренней архитектуры процессорного ядра. Для этой задачи лучше всего подходят синтетические тесты, имитирующие работу подпрограмм реального приложения, но с предельно малыми массивами данных, помещающимися во внутреннюю кэш-память процессора (L1-кэш), либо по возможности написанные так, чтобы обращения к внешней памяти (ОЗУ) были крайне редкими. Этим требованиям удовлетворяет пакет BYTEmark 2.0, обладающий еще и тем ценным свойством, что он доступен в исходных кодах на языке C, а потому его можно без проблем перенести в любую ОС и перекомпилировать любым компилятором.
+<p>Пакет BYTEmark состоит из 10 последовательно выполняемых тестов, из которых три предназначены для определения производительности процессора при обработке целых чисел, а остальные семь - при обработке чисел с плавающей точкой. По результатам их выполнения рассчитывается два показателя - соответственно Integer Index и Floating-Point Index.
+<p>Мы выполнили тесты из пакета BYTEmark на нескольких платформах, причем его исполняемый код генерировался с помощью трех разных компиляторов - Intel C++, Microsoft C++ и Microsoft .NET.
+<p>Как и следовало ожидать, показатели BYTEmark определялись только типом процессора и тактовой частотой его ядра и практически не зависели от объема L2-кэша, типа и скорости работы ОЗУ и набора микросхем системной платы. Как уже говорилось, это достигается за счет того, что BYTEmark очень редко обращается к оперативной памяти; более того, если объем памяти, необходимый приложению для работы, меньше суммарной емкости L1- и L2-кэшей процессора, то оно может вообще не обращаться к ОЗУ. Однако в случае с BYTEmark это не так, поскольку в течение 90% времени выполнения эта программа использовала примерно 550-640 Кбайт (в зависимости от компилятора), а максимум используемого объема ОЗУ составлял около 2,5-3,0 Мбайт. Самый компактный код был сгенерирован компилятором Microsoft .NET (соответственно 552-620 Кбайт и 2,544 Мбайт), Microsoft C++ немного отстал от него (564-620 Кбайт и 2,784 Мбайт), а самый объемный код был создан средствами Intel C++ (588-640 Кбайт и 3,076 Мбайт).
+<p>Тип компилятора также очень сильно влиял на скорость работы BYTEmark. Для процессора Pentium 4 самым быстрым из трех оказался Intel C++, значительно опередивший Microsoft .NET (на 20/22% по Integer/Floating-Point Index) и Microsoft C++ (41/46%), равно как и для Pentium III Coppermine - соответственно 26/12% и 73/19%. А вот на Athlon XP преимущество Intel C++ было не таким радикальным, поскольку если на целочисленных операциях он значительно обогнал Microsoft .NET (27%) и Microsoft C++ (56%), то на операциях с плавающей точкой немного уступил первому (-4%) и незначительно превосходил второй (7%).
+<p>Из этого напрашивается следующий вывод. Если текст программы написан на языке C/C++, то для достижения наивысшей скорости работы на процессорах Intel следует компилировать ее с помощью Intel C++. Если же нужно добиться максимальной производительности исполняемого кода на процессорах AMD, то целочисленные приложения должны компилироваться средствами Intel C++, а программы с большим объемом вычислений с плавающей точкой - Intel C++ или Microsoft .NET (в последнем случае преимущество того или иного компилятора по скорости работы кода будет, скорее всего, определяться особенностями конкретного приложения).
+<p>Intel C++ имеет еще одно весьма полезное преимущество перед конкурентами - он позволяет четко указать, каким образом сгенерированный код должен работать с расширенными наборами инструкций (это делается точно так же, как в Intel Fortran). Так что с помощью этого компилятора можно выяснить, какой эффект дает использование расширенных наборов инструкций для IA32-процессоров, что мы и проделали.
+<p>В случае BYTEMark для всех протестированных процессоров &quot;включение&quot; MMX-инструкций вызывало небольшое снижение производительности на целочисленных операциях, что нас несколько удивило, в то время как использование SSE-инструкций не давало ровным счетом никакого эффекта. А вот применение SSE2-инструкций увеличивало показатели Integer Index и Floating-Point Index для Pentium 4 соответственно на 3% и 12%.
+<p>Таким образом, на примере BYTEMark мы еще раз убедились в том, что скорость работы современных IA32-процессоров с приложениями существенно зависит не только от мощности первых и характера последних, но также от компилятора, которым генерировался исполняемый код, и от оптимизации кода под расширенные наборы инструкций.
+<p>Кстати, именно SSE2-инструкции позволили Pentium 4 2,0 ГГц выиграть у Athlon XP 1900+ в скорости выполнения операций с плавающей точкой с небольшим преимуществом в 6% - Floating-Point Index составил соответственно 36,80 и 34,83. Если же SSE2-инструкции &quot;отключались&quot;, то этот показатель у Pentium 4 снижался до 32,46. А вот по целочисленному индексу Athlon XP стал бесспорным лидером (52,75), обогнав Pentium 4 на 37% (38,44). Что же касается Pentium III Coppermine 1,0 ГГц, то на этот раз он не преподнес сюрпризов и показал вполне ожидаемые результаты (максимум Integer/Floating-Point Index - 27,43/20,29). Однако, если взглянуть на них в контексте исторической перспективы, можно прийти к любопытному выводу.
+<p>Как уже неоднократно подчеркивалось, результаты теста BYTEMark зависят только от скорости работы ядра процессора и его архитектуры. Поэтому увеличение тактовой частоты ядра процессора без изменения его архитектуры приводит к строго линейному росту показателей этого теста. И, наоборот, повышение тактовой частоты ядра с одновременным изменением его архитектуры обуславливает нелинейный рост этих показателей. На практике подобное поведение BYTEMark можно использовать для сравнения архитектуры процессоров, чем мы и займемся.
+<p>Для проведения нашего мини-исследования мы дополнительно использовали результаты выполнения тестов из пакета BYTEMark, скомпилированного Microsoft C++, которые были получены два года назад при испытании процессоров для ПК предыдущего поколения под управлением ОС Windows 2000 Pro WorkStation: Pentium III 600EB Coppermine (тактовая частота ядра 600 МГц, L2-кэш 256 Кбайт с тактовой частотой, равной тактовой частоте ядра, процессорный разъем Slot 1, частота системной шины 133 МГц; был установлен в стенд с системной платой на чипсете VIA Apollo Pro 133A и 128 Мбайт PC133 SDRAM-памятью) и Athlon 600 (тактовая частота ядра 600 МГц, L2-кэш 512 Кбайт с частотой, равной 1/2 тактовой частоты ядра, процессорный разъем Slot A, физическая (эффективная) частота системной шины 100 (200) МГц; был установлен в стенд с системной платой на чипсете AMD-750 и 128 Мбайт PC133 SDRAM-памятью). Показатели Floating-Point/Integer Index для них составляли соответственно 9,54/11,03 и 12,70/12,38.
+<p>Если сопоставить значения Integer/Floating-Point Index для Pentium III 600EB Coppermine и Pentium III Coppermine 1,0 ГГц, то можно заметить, что при увеличении тактовой частоты ядра в 1,67 раза они выросли в 1,67/1,55 раза (в этом случае, чтобы сравнение было корректным, для Pentium III Coppermine 1,0 ГГц были взяты результаты выполнения кода BYTEMark, созданного средствами Microsoft C++ - 15,90/17,05). Иными словами, оба показателя BYTEMark изменялись почти строго линейно, а это означает, что оба процессора имеют практически одинаковую или же вообще идентичную архитектуру - как оно и есть на самом деле.
+<p>Сравним Athlon 600 с Athlon XP 1900+ (снова взяты результаты для Microsoft C++ - 33,87/31,32). При увеличении тактовой частоты ядра в 2,67 раза (с 600 до 1600 МГц) показатели BYTEMark выросли в 2,67/2,53 раза, что говорит о том, что оба процессора имеют практически одинаковую архитектуру, несмотря на то, что они в общем-то относятся к разным поколениям.
+<p>А вот если сравнить значения Integer/Floating-Point Index, полученные при выполнении кода, скомпилированного Intel C++ с отключенными SSE2-инструкциями, для Pentium III Coppermine 1,0 ГГц (27,43/20,29) и Pentium 4 2,0 ГГц (37,36/32,46), то легко заметить, что при росте тактовой частоты ядра в 2,0 раза они увеличились всего в 1,36/1,60 раза! Это говорит о том, что архитектура этих процессоров разная. Заметим также, что использование SSE2-инструкций не спасает Pentium 4 2,0 ГГц (Integer/Floating-Point Index - 38,44/36,80), поскольку и в этом случае показатели Integer/Floating-Point Index растут медленнее, чем тактовая частота ядра, - 1,40/1,81.
+<h3>Решение системы нелинейных дифференциальных уравнений </h3>
+<p>Смысл этого теста заключался в измерении времени выполнения реальной расчетной задачи из области современной квантовой механики, которая с точки зрения математики сводится к решению системы нелинейных дифференциальных уравнений и по алгоритмике и объему вычислений сравнима, например, с тестом 168.wupwise (вычислительная задача из раздела квантовой хромодинамики) из пакета SPEC CPU2000 1.2.
+<p>В ходе испытаний мы проверили, каким образом скорость решения этой задачи, реализованной в виде набора программ на языке Fortran-77, оперирующих преимущественно числами с плавающей точкой двойной точности, зависит от используемого компилятора (Intel Fortran и Compaq Fortran 6.6/6.6A), расширенного набора инструкций процессора и собственно процессора.
+<p>На процессоре Pentium 4 2,0 ГГц код, скомпилированный Intel Fortran, работал значительно быстрее, чем созданный средствами Compaq Fortran 6.6A, - разница во времени расчета составила 56%. На Pentium III Coppermine 1,0 ГГц разрыв между ними сократился до 13%, а на Athlon XP 1900+ компилятор Compaq даже на 3% обошел Intel Fortran. В итоге оказалось, что для достижения максимальной скорости решения реальной расчетной задачи, написанной на языке Fortran-77, на процессорах Intel должен выполняться код, сгенерированный Intel Fortran, а на процессорах AMD - Compaq Fortran 6.6A. Впрочем, в последнем случае разрыв между компиляторами был совсем небольшим, и можно считать, что эффективность созданного с их помощью кода была примерно одинаковой.
+<p>Intel Fortran позволяет точно определить, какие расширенные наборы инструкций (MMX, SSE, SSE2) будет использовать сгенерированный им машинный код - для этого при запуске компилятора нужно указать соответствующие ключи. Так, ключ -Qxi означает, что будет создан код с эксклюзивной оптимизацией под процессор Intel Pentium Pro и Pentium II (&quot;эксклюзивность&quot; в данном случае означает, что исполняемый код будет гарантированно работать только на этих и более поздних IA32-процессорах Intel и, например, может не работать на IA32-процессорах AMD); -QxM - с эксклюзивной оптимизацией под процессор Pentium с поддержкой MMX-инструкций, -QxK - под Pentium III с поддержкой MMX- и SSE-инструкций (включает опции -Qxi и -QxM), -QxW - под Pentium 4 с поддержкой MMX-, SSE- и SSE2-инструкций (включает опции -Qxi, -QxM, -QxK). Поэтому с помощью Intel Fortran можно проверить, какой эффект дает использование расширенных наборов инструкций для IA32-процессоров, что мы и проделали.
+<p>Подключение MMX-инструкций никак не влияло на скорость выполнения расчета на всех протестированных процессорах. Добавление SSE-инструкций заметно повышало производительность только Pentium 4 - на 19%, в то время как скорость работы Pentium III Coppermine и Athlon XP возрастала незначительно - соответственно всего лишь на 4% и 2%. &quot;Включение&quot; SSE2-инструкций не оказало никакого влияния на производительность Athlon XP (как это и должно быть, поскольку он не &quot;умеет&quot; работать с инструкциями этого типа), а вот у Pentium 4 производительность выросла еще на 15%. Таким образом, в тесте на скорость решения системы нелинейных дифференциальных уравнений использование SSE-инструкций для Athlon XP и Pentium III приводило лишь к небольшому улучшению результатов, в то время как для Pentium 4 общий рост производительности за счет добавления поддержки SSE- и SSE2-инструкций был сильным и составил 36%.
+<p>Что же касается победителя в этом тесте среди процессоров, то им стал Athlon XP 1900+ с результатом в 1 мин 29 с, более чем в 2 раза (!) опередив Pentium 4 2,0 ГГц (3 мин 47 с). Отметим также, что здесь Pentium 4 уступил Pentium III Coppermine 1,0 ГГц (3 мин 27 с), что стало для нас полной неожиданностью!
+<p>В итоге тест на скорость решения системы нелинейных дифференциальных уравнений наглядно продемонстрировал, что скорость работы современных IA32-процессоров сильно зависит не только от их мощности, но также от особенностей написания конкретных программ, компилятора, которым генерируется их исполняемый код, и от степени оптимизации этого кода под расширенные наборы инструкций.
+<h3>SSE2-инструкции и скорость выполнения элементарных операций </h3>
+<p>Обнаружив, что некоторые тестовые программы из состава SPEC CPU2000 никак не реагируют на &quot;включение&quot; SSE2-инструкций или начинают работают даже чуть медленнее, мы решили проверить, как в этом случае будет изменяться скорость выполнения ряда простых операций на циклах обработки массивов чисел типа double (числа с плавающей точкой с двойной точностью). Здесь важно то, что мы, во-первых, использовали циклическую обработку массивов и, во-вторых, работали с числами типа double, и вот почему.
+<p>Как известно, SSE-инструкции позволяют за один такт обработать до четырех чисел типа float (числа с плавающей точкой с одинарной точностью), но не могут работать с числами типа double. А вот в наборе SSE2-инструкций появилась возможность обработать за один такт до двух чисел типа double. Поэтому, если мы хотим &quot;поймать&quot; в чистом виде эффект от использования SSE2-инструкций, то надо сравнивать скорость выполнения операций с двумя числами типа double с использованием SSE- и SSE2-инструкций.
+<p>Кроме того, компилятор Intel C++, использовавшийся при проведении этого эксперимента, обладает тем замечательным свойством, что если он &quot;видит&quot; цикл, в котором над элементами двух массивов чисел типа double выполняется некоторая операция, то он создает исполняемый код, где для реализации этой операции применяются машинные SSE2-инструкции (если, конечно, SSE2-инструкции разрешено использовать) - в терминологии Intel такой способ трансляции цикла в машинные коды называется &quot;векторизацией цикла&quot;.
+<p>Поэтому суть эксперимента состояла в том, чтобы измерить скорость циклического выполнения ряда операций над массивами чисел типа double без SSE2-инструкций (запуск компилятора с ключом -QxK, когда &quot;работают&quot; только SSE-инструкции) и &quot;включив&quot; SSE2-инструкции (с помощью ключа -QxW).
+<p>Для этого мы сначала измеряли скорость выполнения программы с циклом вида for (j = 0; j < N; j++) {[тело цикла]}, где в качестве тела цикла использовалось одно из следующих простых выражений: a[j] = aconst*b[j]+c[j], a[j] = cos(b[j])+c[j], a[j] = cos(b[j])+sin(c[j]), a[j] = log(24325345.0)*b[j]+c[j], a[j] = log(24325345.0)*cos(b[j])+sin(c[j]), a[j] = exp(b[j])+c[j], a[j] = log(b[j])+c[j]. Здесь a[j], b[j], c[j] - элементы массивов чисел типа double, aconst - константа, а размерность цикла N и то, сколько раз выполнялся этот цикл, подбирались таким образом, чтобы было удобно измерять время выполнения тестов (примерно 10-60 с). Назовем такие циклы "элементарными". После этого мы несколько изменили условия испытаний и использовали в качестве тела цикла различные комбинации простых операций - назовем такие циклы "сложными".
+<p>Все сгенерированные таким образом тесты были выполнены с наборами ключей -O3 -QxW и -O3 -QxK на процессоре Pentium 4 2,0 ГГц (L2-кэш 512 Кбайт) и с набором ключей -O3 -QxKна Athlon XP 1900+ и Pentium III Coppermine 1,0 ГГц (L2-кэш 256 Кбайт). Результаты проведенного мини-исследования оказались во многом для нас неожиданными.
+<p>Так, эффект от &quot;включения&quot; SSE2-инструкций для процессора Pentium 4 на элементарных циклах был трояким: скорость работы оставалась без изменений, увеличивалась в 1,7-4,3 раза или снижалась (!) в 2,2 раза. На сложных циклах ситуация в принципе была похожей (без изменения, увеличение в 1,2-2,9 раза, снижение в 5,0-6,9 раза), однако потеря производительности на некоторых циклах была просто катастрофической - более чем в 5 раз!
+<p>Интересно также сравнить скорость работы Pentium 4 и Athlon XP. На элементарных циклах Pentium 4 с SSE2 победил Athlon XP, а вот если SSE2-инструкции были &quot;выключены&quot;, то в двух случаях он сильно проигрывал (a[j] = cos(b[j])+sin(c[j]) - в 3,2 раза, a[j] = log(24325345.0)*cos(b[j])+sin(c[j]) - в 3,1 раза), но по субъективным ощущениям в целом был все же быстрее Athlon XP. А вот на сложных циклах лидера не выявилось: где-то впереди был Pentium 4, а где-то - Athlon XP.
+<p>В итоге напрашивается два вывода. Во-первых, результат использования SSE2-инструкций неоднозначен и их применение иногда может привести к значительному падению производительности. Во-вторых, скорость работы Pentium 4 и Athlon XP с числами типа double очень сильно зависит от характера производимых вычислений, который и &quot;отвечает&quot; за лидерство того или иного процессора.
+<p>Что же касается Pentium III Coppermine 1,0 ГГц, то, конечно, в целом он проиграл двум более современным процессорам, однако детальный анализ его результатов стоит того, чтобы его проделать. Так, по всем показателям Pentium III Coppermine стабильно проигрывал Athlon XP в 2-3 раза, как это, в общем, и должно быть.
+<p>А вот в случае с Pentium 4 все было иначе. На некоторых элементарных циклах этот процессор без SSE2 работал едва быстрее, чем Pentium III Coppermine: a[j] = cos(b[j])+c[j] - соответственно 60 и 66 с, a[j] = cos(b[j])+sin(c[j]) - 113 и 119 с, a[j] = log(24325345.0)*cos(b[j])+sin(c[j]) - 116 и 121 с! Более того, на некоторых сложных циклах Pentium 4 без SSE2 проиграл Pentium III Coppermine! А на одном сложном цикле, для которого &quot;включение&quot; SSE2 приводило к пятикратному снижению производительности, Pentium 4 с SSE2 уступил Pentium III Coppermine в производительности на 21% - соответственно 104 и 86.
+<h3>Выводы </h3>
+<p>Главный вывод, который следует из результатов всех выполненных тестов, можно, пожалуй, сформулировать так: &quot;Ни один из процессоров Intel Pentium 4 и AMD Athlon XP на сегодня не может считаться абсолютным лидером по производительности, поскольку преимущество того или иного процессора определяется характером конкретного приложения и компилятором, использовавшимся для генерации исполняемого кода&quot;.
+<p>Второй вывод, в общем-то, очевиден: если из процессора нужно &quot;выжать&quot; максимум производительности, то его следует использовать в сочетании с самой быстрой оперативной памятью (RDRAM - для Pentium 4 и DDR266 SDRAM - для Athlon XP) и с максимально возможным объемом L2-кэша, однако выигрыш от этих мер будет неодинаков для разных приложений и зависит опять-таки от их характера.
+<p>И, наконец, в-третьих, в целом применение SSE2-инструкций для Pentium 4 дает довольно ощутимый прирост в скорости работы исполняемого кода, но возможна прямо противоположная ситуация, когда производительность падает, поэтому эффект от использования SSE2 нужно обязательно проверять.
+<p>Авторы статьи выражают особую признательность фирме &quot;ПИРИТ&quot; (тел. (095) 115-7101, 
+  <a href="http://www.pirit.ru">http://www.pirit.ru</a>) за оборудование, предоставленное 
+  для проведения тестирования. 
+<p>Системные платы для подготовки этого обзора были предоставлены компаниями ASUSTeK 
+  (<a href="http://www.asus.com.tw">http://www.asus.com.tw</a>), Gigabyte (<a href="http://www.gigabyte.com.tw">http://www.gigabyte.com.tw</a>) 
+  и Micro-Star (<a href="http://www.msi.com.tw">http://www.msi.com.tw</a>). 
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=12477.html'>Момент истины</A></b></li><li><b><A href='detail.php@ID=11794.html'>Шипы и розы Santa Rosa</A></b></li><li><b><A href='detail.php@ID=11796.html'>Многофункциональный минимализм</A></b></li><li><b><A href='detail.php@ID=11590.html'>Новогоднее чудо: ASUS Eee PC</A></b></li><li><b><A href='detail.php@ID=6391.html'>Лазерные краски осени</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8815.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Тестирование процессоров high-end с помощью SPEC CPU2000
+</a><br><a href="detail.php@ID=8815.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Олег Денисов, Сергей Назаров 
+В одном из предыдущих номеров* мы уже публиковали результаты тестирования высокопроизводительных процессоров AMD и&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8815.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8815&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='01f6f9e87114ccc5a5bf8c730a51261c'><img src='../bitrix/tools/captcha.php@captcha_code=01f6f9e87114ccc5a5bf8c730a51261c' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

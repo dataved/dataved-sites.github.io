@@ -1,0 +1,495 @@
+<HTML>
+<HEAD>
+<title>Расширение возможностей мэйнфреймов</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Сегодняшнее развитие мэйнфреймов IBM &mdash; это новая система IBM System z10, портирование ОС OpenSolaris на платформу мэйнфрейма, программные средства адаптации приложений для мэйнфреймов, ресурсы для подготовки специалистов в этой области." />
+<meta name="description" content="Сегодняшнее развитие мэйнфреймов IBM &mdash; это новая система IBM System z10, портирование ОС OpenSolaris на платформу мэйнфрейма, программные средства адаптации приложений для мэйнфреймов, ресурсы для подготовки специалистов в этой области." />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398080020','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm12642' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=12642&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm12642"].SHOW_IMAGE.value="N"; document.forms["PrintForm12642"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm12642"].SHOW_IMAGE.value="Y"; document.forms["PrintForm12642"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(12642);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=12642.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=12642.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(12642);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /><b>Тема:</b> <a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><br /></p><a href='../numbers/index.php@ID=12666.html'>№9 (118), сентябрь 2008</a><h1>Расширение возможностей мэйнфреймов</h1>Автор: Андрей Борзенко<br />16.09.2008<p></p><TABLE class='tbl-tn-list'><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=12642&amp;PICTURE_ID=12643.html'><IMG src='../upload/iblock/ebd/32-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Мультипроцессорный модуль для IBM System Z10.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=12642&amp;PICTURE_ID=12644.html'><IMG src='../upload/iblock/1fb/33-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Замена нескольких серверов одним мэйнфреймом.</b></TD></TR><TR align='center'><TD><a href='../big-pictures/index.php@ARTICLE_ID=12642&amp;PICTURE_ID=12645.html'><IMG src='../upload/iblock/d75/34-1.jpg' alt='Увеличить'></a></TD></TR>
+<TR><TD><b>Мэйнфрейм серии z900.</b></TD></TR></TABLE><DIV class='article-text'>
+<p><em>Сегодняшнее развитие мэйнфреймов IBM &mdash; это новая система IBM System z10, портирование ОС OpenSolaris на платформу мэйнфрейма, программные средства адаптации приложений для мэйнфреймов, ресурсы для подготовки специалистов в этой области.</em> </p>
+ 
+<p>Крупные корпорации постоянно говорят о том, что наиболее приоритетные для них задачи &mdash; это упрощение ИТ-инфраструктуры и повышение отдачи от ИТ-инвестиций. Современный мэйнфрейм корпорации IBM (<a target="_blank" href="http://www.ibm.com">www.ibm.com</a>) позволяет удовлетворить обе эти потребности. Как известно, эти мощнейшие серверы были и остаются основой обеспечения надежности, безопасности и целостности информационных систем. Главное, что вот уже несколько десятилетий мэйнфреймы служат форпостом централизации функций и данных, так и не павшим под натиском распределенных вычислений. Кстати, одна из важнейших причин признания рынком IBM System z связана с тем, что они поддерживают такие нетипичные для мэйнфреймов задачи, как приложения для Linux и Web. </p>
+ 
+<h2>Развитие ОС z/VSE </h2>
+ 
+<p>Многие клиенты запускают на аппаратной платформе мэйнфрейма IBM System z9 новые Linux-приложения совместно с приложениями ОС z/VSE. Такой интеграционный подход позволяет в полной мере задействовать лучшие программные решения Linux в сочетании с надежными функциями обслуживания данных z/VSE и характерным для мэйнфрейма System z9 низким показателем совокупной стоимости владения. В основе этих интегрированных сред лежит мощная технология виртуализации IBM z/VM, которая дает возможность выполнять приложения Linux и z/VSE на одной системе, способствует интеграции бизнес-процессов и поддерживает рост бизнеса. Нововведения z/VSE V4.2, впервые представленные на специальном семинаре международной ассоциации группы пользователей мэйнфреймов IBM Guide Share Europe (GSE), включают целый ряд функций, главным образом обеспечивающих совместимость с новейшими бизнес-приложениями и Web-сервисами (например, с системами онлайновой электронной коммерции). В число этих новых функций входят: </p>
+ 
+<ul> 
+  <li>программные средства, обеспечивающие повышенную масштабируемость системы, а также более экономичную и эффективную поддержку рабочих нагрузок; </li>
+ 
+  <li>функция шифрования для дополнительной защиты критически важных бизнес-данных; </li>
+ 
+  <li>средства интеграции z/VSE и Linux на системе System z, позволяющие применять данные z/VSE &mdash;например, информационные среды хранилища данных, созданные сервером баз данных DB2, &mdash; в новых приложениях Linux. </li>
+ </ul>
+ 
+<p>Эксперты отмечают, что многие заказчики инвестировали в z/VSE и технологии мэйнфреймов. У некоторых из них проверенные временем бизнес-приложения десятилетиями работают на этой экономически эффективной платформе. Выпуск нового релиза z/VSE служит подтверждением того, что IBM продолжает совершенствовать свою ОС. Положительные отклики на ее обновленную версию со стороны членов ассоциации свидетельствуют об особой важности этой инициативы IBM для сообщества пользователей z/VSE. Поставки новой версии z/VSE запланированы на IV квартал 2008 г. </p>
+ 
+<h2>OpenSolaris на мэйнфрейме IBM </h2>
+ 
+<p>Демонстрация работы программного кода OpenSolaris на мэйнфрейме IBM, показавшая способность ОС Solaris и мэйнфрейма обеспечить виртуализацию центра обработки, впервые прошла в конце прошлого года на конференции Gartner Data Center с участием IBM, Sun Microsystems (<a target="_blank" href="http://www.sun.com">www.sun.com</a>) и Sine Nomine Associates (<a target="_blank" href="http://www.sinenomine.net">www.sinenomine.net</a>). IBM также сообщила о своей поддержке инициативы Sun xVM. Заметим, что обе корпорации твердо уверены в больших возможностях открытой всеобъемлющей виртуализации, которая способствует расширению выбора для клиентов и предоставляет дополнительные бизнес-преимущества. </p>
+ 
+<p>Напомним, что демонстрации, проведенной для клиентов, аналитиков Gartner и представителей прессы, предшествовали сообщение компании Sine Nomine Associates о запуске независимого проекта портирования OpenSolaris и совместное сообщение IBM и Sun Microsystems об их намерении изучить возможности переноса OpenSolaris на платформу мэйнфрейма System z. Проект реализует Sine Nomine Associates &mdash; компания из города Эшборн (шт. Вирджиния, США), которая специализируется на исследованиях и разработках. Возможность переноса OpenSolaris на System z опирается на инновационную деятельность сообщества OpenSolaris, в том числе активное совершенствование продуктов, и служит примером успешного портирования гибкой ОС с открытым исходным кодом на еще одну аппаратную архитектуру. </p>
+ 
+<p>Большинство экспертов сходится во мнении, что будущее центров обработки зависит от способности технологий виртуализации ограничить стремительный рост расходов на электроэнергию и обслуживание. Корпорации во всем мире для поддержки своего бизнеса в течение многих лет полагались на мэйнфреймы IBM, в которых впервые были использованы механизмы виртуализации. По той же самой причине ОС Sun Solaris широко распространена в центрах обработки данных. Таким образом, комбинация этой ОС и виртуализованной среды мэйнфрейма представляется вполне логичной. Как отметил Дэвид Бойс, президент и главный технолог компании Sine Nomine Associates, добавление ОС Solaris в меню опций для крупномасштабной виртуализации на различных аппаратных платформах было для Sine Nomine труднейшей задачей, компании пришлось применить все знания и опыт, накопленные в процессе работы по переносу оригинальной версии Linux для мэйнфрейма в другие среды с совместно используемыми ресурсами. Разработчики тесно сотрудничали со специалистами IBM и Sun </p>
+ 
+<p>Microsystems, чтобы гарантировать сохранение при портировании всех важнейших компонентов обеих сред, а также чтобы использовать все лучшие прикладные решения, созданные пользователями Solaris. Эта инициатива позволила представить убедительные аргументы в пользу стратегии виртуализации, реализуемой в масштабах предприятия. </p>
+ 
+<p>Демонстрация включала выполнение ОС OpenSolaris в среде z/VM мэйнфрейма &mdash; самой высокоэффективной в отрасли технологии виртуализации. z/VM позволяет реализовать свыше 1000 виртуальных образов на одном гипервизоре (программе управления ОС), что в свою очередь предоставляет широкие возможности для оптимизации инфраструктур компаний. ОС Solaris предлагает богатый набор функций и технологий, включая файловую систему Solaris ZFS и инструмент динамической трассировки Solaris Dynamic Tracing (DTrace) для отладки и оптимизации приложений в реальном времени: именно они помогают повысить уровень готовности системы и снизить расходы. </p>
+ 
+<p>Технология виртуализации z/VM уже сформировала основу для выполнения Linux на мэйнфреймах. За последние годы многие предприятия, использующие мэйнфреймы, выбрали Linux в качестве среды для своих многочисленных рабочих нагрузок, таких, как Web-приложения и виртуальные миры. В мэйнфрейме &mdash; уникальной системе в ряду серверов &mdash; изначально предусмотрено объединение процессорных ресурсов для выполнения специализированных задач. Например, для поддержки приложений Linux и Java, а также операций шифрования и дешифрования данных определенного формата были разработаны так называемые специализированные процессоры (specialty processors): System z9 Application Assist Processor (zAAP), Integrated Facility for Linux (IFL), Internal Coupling Facility (ICF), System z9 Integrated Information Processor (zIIP). </p>
+ 
+<h2>System z10 &mdash; самый мощный мэйнфрейм </h2>
+ 
+<p>В феврале этого года корпорация IBM представила новый мэйнфрейм IBM System z10 Enterprise Class, ориентированный на современные корпоративные центры обработки данных. System z10 &mdash; это абсолютно новая разработка, призванная увеличить эффективность центров обработки за счет существенного повышения производительности, сокращения расходов на электроэнергию и охлаждение, уменьшения занимаемой полезной площади. Мэйнфрейм System z10 предлагает очень высокий уровень безопасности и автоматизирует управление и отслеживание ИТ-ресурсов, позволяя быстро реагировать на непрерывно меняющиеся потребности бизнеса. </p>
+ <blockquote> 
+  <h3>Внимание &mdash; мэйнфрейм z10 </h3>
+ 
+  <p>Существенное расширение возможностей мэйнфреймов &mdash; сигнал для тех, кому приходится поддерживать дорогостоящие и энергозатратные центры обработки данных. </p>
+ 
+  <ul> 
+    <li>Один мэйнфрейм z10 способен заменить 1500 x86-серверов. </li>
+   
+    <li>Мэйнфрейм переходит на четырехъядерные процессоры. </li>
+   
+    <li>Затраты на электроэнергию снижаются на 85%. </li>
+   
+    <li>Занимаемая площадь уменьшается на 85%. </li>
+   
+    <li>Объем лицензий на ПО в сравнении с x86-серверами уменьшается в соотношении до 30 к 1. </li>
+   
+    <li>Устраняется &laquo;хаос&raquo; в центре обработки. </li>
+   
+    <li>Своевременно предоставляются ресурсы для удовлетворения меняющихся потребностей бизнеса. </li>
+   
+    <li>Управление производительностью системы автоматизировано в интересах ответственных транзакций. </li>
+   </ul>
+ </blockquote> 
+<p>IBM также объявила об инвестициях объемом 300 млн долл. в развитие знаний в области архитектуры и технических навыков, а также в центры проектирования и тестирования, которые помогут клиентам перейти к корпоративным центрам обработки нового типа. Некоторые категории клиентов смогут воспользоваться бесплатными услугами оценки, помогающими спланировать и реализовать динамичную ИТ-инфраструктуру с более высокими показателями эффективности и возможностью совместного использования ресурсов. Мэйнфрейм IBM следующего поколения на базе 64 процессоров, использующих четырехъядерные технологии, с самого начала разрабатывался как система коллективного пользования, которая предлагает более высокую производительность, чем виртуализованные x86-серверы, и способна поддерживать от нескольких сотен до сотен миллионов пользователей. Кроме того, мэйнфрейм z10 работает с широким диапазоном рабочих нагрузок. В дополнение к Linux, XML, Java, WebSphere и увеличенным рабочим нагрузкам в сервис-ориентированных архитектурах IBM (совместно с Sun и Sine Nomine Associates) проводит пилотную программу применения ОС Open Solaris на System z. С точки зрения производительности новый мэйнфрейм z10 работает на 50% быстрее и на 100% более производительно при решении задач, требовательных к процессорным ресурсам, по сравнению с предшествующей моделью z9с, а также имеет увеличенный на 70% объем ресурсов хранения данных. </p>
+ 
+<p>По своим возможностям мэйнфрейм z10 эквивалентен почти 1500 x86-серверам, но при этом занимает на 85% меньше полезной площади и тратит на 85% меньше энергии. По сравнению с x86-серверами объем лицензий на ПО для мэйнфрейм уменьшается в соотношении до 30 к 1. </p>
+ 
+<p>Специализированный процессор zIIP, входящий в состав аппаратной части System z10, предназначен для рабочих нагрузок, порождаемых базами данных, и призван снизить загрузку основных вычислительных ресурсов и сократить расходы на ПО для мэйнфреймов. Процессор zIIP &mdash; это высокопроизводительное вычислительное устройство, которое способствует централизации данных на базе мэйнфрейма. Поскольку данные составляют основу наиболее важных бизнес-процессов, мэйнфрейм обеспечивает стройную организацию информационных ресурсов. Более того, централизовав свои данные на мэйнфрейме, заказчики смогут снизить риски, обусловленные наличием нескольких экземпляров одних и тех же данных в различных системах. Использование единственного экземпляра данных значительно упрощает решение таких задач, как аудит, обеспечение соответствия законодательным нормам, бизнес-управление. Разработчики полагают, что роль мэйнфреймов с процессорами zIIP как защищенного концентратора корпоративных данных будет расти. </p>
+ 
+<h2>Управление ИТ-ресурсами как сервисом </h2>
+ 
+<p>Сегодня компании стремятся не только побороть неэффективность и снизить сложность центров обработки, но и повысить качество совместного использования ИТ-ресурсов и улучшить их соответствие конкретным целям и меняющимся условиям бизнеса. Одновременно с этим они пытаются решать сложнейшие задачи регистрации, отслеживания, контроля и повышения окупаемости каждой бизнес-операции. Конечная цель этой деятельности состоит в том, чтобы выйти за пределы базовой виртуализации (при которой различные вычислительные задачи выполняются в нескольких разделах одного сервера) и реализовать среду, в которой вся ИТ-инфраструктура, включая бизнес-приложения, средства безопасности, ресурсы хранения, процессорные ресурсы, инициализируется &laquo;по требованию&raquo;. В итоге компании смогут управлять своими ИТ-ресурсами как сервисом &mdash; используя основанную на политиках систему, которая выделяет, контролирует и отслеживает необходимые ИТ-ресурсы по мере необходимости, &mdash; в рамках корпоративного центра обработки данных нового типа. С этой точки зрения важно, что мэйнфрейм z10 &mdash; это единственный сервер в отрасли, предоставляющий полный диапазон управляемых политиками функций. </p>
+ 
+<h3>Управление авторизацией </h3>
+ 
+<p>Механизмы аутентификации и авторизации в System z10 определяют, кто может обратиться к определенному бизнес-сервису и связанным с ним ИТ-ресурсам. Встроенные функции с алгоритмами шифрования позволяют администраторам System z реализовать несколько уровней безопасности, на основе которых авторизованным пользователям предоставляется контролируемый доступ к хранящейся на мэйнфрейме ответственной информации. Например, при составлении корпоративного отчета сотрудник с правами начального уровня может быть уполномочен на просмотр послужных списков сотрудников в поисках сведений об их деятельности в качестве волонтеров, но при этом он не должен иметь доступа к данным о зарплате, служебном росте и к другой кадровой информации о тех же сотрудниках. Эта задача эффективно решается путем назначения данному сотруднику соответствующего уровня доступа на основе встроенной в System z политики управления авторизацией. </p>
+ 
+<h3>Управление использованием </h3>
+ 
+<p>Цель управления использованием &mdash; поддерживать коэффициент использования системы на максимальном уровне. Мэйнфрем System z10 принципиально отличается от других классов серверов &mdash; он рассчитан работу при максимальном коэффициенте использования в условиях непрерывного изменения потребностей пользователей. Система z/OS, одна из ОС для платформы z10, обеспечивает эффективное управление транзакциями в соответствии с заданными политиками, динамически адаптируясь к пикам и резким сокращениям транзакционных нагрузок. Например, при обращении клиентов в банк их запросы могут существенно различаться &mdash; некоторым нужны наличные деньги, что требует от банка мгновенного отклика, а другие хотят получить кредит, утверждение которого занимает значительно больше времени. Мэйнфрейм в сочетании с интегрированной ОС можно сконфигурировать на классификацию указанных запросов по степени важности и неотложности с последующим распределением ресурсов в соответствии с результатами этой классификации. </p>
+ 
+<h3>Своевременное предоставление ресурсов </h3>
+ 
+<p>Мэйнфрейм позволяет предоставлять заказчикам дополнительные процессорные ресурсы и ресурсы хранения, когда им это необходимо для совершенствования управления бизнес-рисками (например, розничной торговле требуется более высокая вычислительная мощность в периоды пикового спроса). Впервые в истории мэйнфреймов в 64-процессорной системе z10 реализована автоматическая инициализация вычислительной мощности для оперативного реагирования на изменение условий бизнеса. Например, компании, оказывающие финансовые услуги, и предприятия розничной торговли могут планировать и автоматически инициализировать предварительно установленные уровни вычислительной мощности для нейтрализации пиковых повышений спроса. Что не менее важно, мэйнфрейм z10 способен автоматически инициализировать вычислительные ресурсы при возникновении непредвиденных запросов. ОС z/OS прогнозирует потребности в дополнительных ресурсах и продолжительность их использования, что обеспечивает высокую скорость реагирования. Эта концепция, известная под названием &laquo;Своевременное развертывание компьютерных ресурсов&raquo; (Just-in-Time Deployment of Capacity Resources), основана на учете транзакционных потребностей клиентов и приоритезации этих потребностей. </p>
+ 
+<h3>Безопасная виртуализация </h3>
+ 
+<p>Виртуализация соответствует самым высоким уровням требований по безопасности для государственных учреждений США &mdash; стандарту Evaluation Assurance Level 5 (при использовании z/VM). IBM System z &mdash; единственный сервер в мире, получивший максимальный уровень сертификации Common Criteria Evaluation Assurance Level 5 (EAL5) по защищенности логических разделов (на данный момент такую сертификацию прошел мэйнфрейм System z9, планируется сертификация для System z10). В ситуации, когда клиенты подключают к мэйнфрейму дополнительные ресурсы и распределяют их между разделами с целью уменьшения затрат и выделения ресурсов по требованию, сертификация EAL5 гарантирует, что открытые виртуальные разделы с выполняющимися в них определенными ОС будут обладать таким же уровнем безопасности, как подключенные к мэйнфрейму System z физические серверы. Другими словами, физическая безопасность виртуального раздела находится на максимально возможном уровне. Это позволяет клиентам распределять ресурсы по требованию без риска для любой информации, циркулирующей в ОС, благодаря чему повышается производительность и обеспечивается круглосуточная готовность. </p>
+ 
+<h2>ПО класса &laquo;информация по требованию&raquo; </h2>
+ 
+<p>Одновременно с новым мэйнфреймом IBM представила ПО категории &laquo;Информация по требованию&raquo; для System z, в том числе решение IBM Cognos 8 Business Intelligence (BI) for System z. В этом решении проверенные возможности анализа и подготовки отчетности продукта IBM Cognos 8 BI сочетаются с мощью и надежностью платформы System z, благодаря чему клиенты могут использовать свои данные для достижения конкурентного преимущества, улучшения принятия решений и повышения продуктивности бизнеса. </p>
+ 
+<p>Как известно, стратегия IBM &laquo;Информация по требованию&raquo; помогает клиентам получать своевременный доступ к нужной информации и принимать на ее основе адекватные бизнес-решения с целью ускорения реакции на меняющиеся требования рынка. Решение Cognos 8 BI for Linux on System z позволит им просматривать и анализировать сотни миллионов транзакций непосредственно на мэйнфрейме &mdash; гарантируя в масштабе всей организации быстрое выявление важнейших тенденций бизнеса и реагирование на эти тенденции. </p>
+ 
+<p>Решение IBM Cognos 8 BI for Linux on System z будет доступно во второй половине 2008 г. IBM также объявила о начале программы бета-тестирования Cognos 8 BI for Linux on System z у клиентов. </p>
+ 
+<p>Объявлено и о готовности продукта DB2 for z/OS Value Unit Edition &mdash; нового комплексного предложения, которое обеспечивает развертывание новых прикладных рабочих нагрузок. Это предложение усиливает роль System z в качестве базовой платформы для реализации важных бизнес-инициатив, включая SOA, информационные хранилища, интеллектуальный анализ бизнес-данных и пакетные приложения, такие, как SAP. Продукты DB2 for z/OS Value Unit Edition и IBM Information Server улучшают доставку достоверной информации клиентов в их динамические информационные хранилища. </p>
+ 
+<p>Кроме того, во второй половине этого года IBM реализует на основе System z новые средства для управления основными данными. В число таких средств входит продукт InfoSphere Master Data Management Server for Linux on System z, позволяющий компании централизованно управлять информацией о клиентах, продуктах и учетными данными в масштабе всего предприятия. </p>
+ 
+<h2>Подключаемые хранилища </h2>
+ 
+<p>Объем транзакций и данных стремительно растет, что заметно затрудняет эффективное сохранение информации и доступ к ней. IBM предлагает усовершенствованные средства хранения данных для сред на основе мэйнфреймов &mdash; эти средства помогут повысить доступность информации, ослабить информационные риски и расширить емкость хранилищ для размещения больших объемов данных. </p>
+ 
+<h3>Дисковые хранилища </h3>
+ 
+<p>Предоставляя ведущее в отрасли решение для хранения данных на мэйнфреймах, IBM объявила о выпуске усовершенствованной версии своей корпоративной дисковой системы хранения DS8000 R3.1 с новыми функциями восстановления в аварийных ситуациях и поддержки бесперебойного функционирования бизнеса, оптимизирующих возможности мэйнфрейма. При использовании операционной среды IBM z/OS 1.10 клиенты смогут теперь задействовать на мэйнфреймах в четыре раза больше информации, чем в случае любой другой системы хранения. </p>
+ 
+<h3>Ленточные решения </h3>
+ 
+<p>Основываясь на своем почти 40-летнем опыте в области виртуализации, IBM усовершенствовала решение IBM System Storage TS7700 Virtual Tape для сред на основе мэйнфреймов. Теперь оно обладает более широкими возможностями по части длительного хранения и архивирования информации и повышенным уровнем безопасности благодаря решению TS1120 IBM с возможностью шифрования ленточной информации. </p>
+ 
+<h2>Новые услуги </h2>
+ 
+<p>IBM Global Financing (IGF), бизнес-подразделение IBM, оказывающее финансовые услуги и услуги аренды, предлагает условия финансирования, благодаря которым уполномоченные на то клиенты, имеющие действующие договоры с IGF на аренду мэйнфреймов z9, могут приобрести новую систему System IBM z10 с увеличенной вычислительной мощностью при меньших ежемесячных выплатах (по сравнению с сегодняшним уровнем). IBM также представила несколько новых услуг, которые дополняют существующий пакет услуг корпорации по приведению стратегий преобразования и проектирования центров обработки в соответствие с особенностями реализации и управления. </p>
+ 
+<p>IBM IT Transformation &amp; Optimization Consulting Services &mdash; консалтинговая услуга стратегического планирования, помогающая клиентам выработать полное экономическое обоснование для демонстрации будущих результатов и оценки окупаемости инвестиций в свою ИТ-инфраструктуру. Услуга IBM Implementation Services for Parallel Sysplex Middleware использует System z в качестве центра консолидации данных, помогая клиентам перейти к централизованной среде совместного использования данных DB2 с одновременным обеспечением их целостности. Услуга IBM Implementation Services for Geographically Dispersed Parallel Sysplex (GDPS) помогает создать на базе мэйнфреймов System z и других платформ интегрированное и автоматизированное всеобъемлющее решение для восстановления. </p>
+ 
+<h2>Инфраструктура для управления сервисами </h2>
+ 
+<p>Продолжая вкладывать миллионы долларов в реализацию программы, призванной упростить работу с мэйнфреймами, IBM представила новый интегрированный комплекс программных продуктов. Этот пакет обеспечивает автоматизацию процессов и предоставляет инфраструктуру для управления сервисами, что поможет компаниям более эффективно использовать мощные вычислительные ресурсы мэйнфрейма для решения бизнес-задач. Новое решение IBM Tivoli Service Management Center for System z, входящее в состав семейства IBM Service Management, обеспечивает автоматизацию управления сложными процедурами ИТ-обслуживания и удобное управление процессами, основанными на применении политик, &mdash; такими, как управление инцидентами и проблемами, управление изменениями и версиями, обнаружение активов и управление бизнес-сервисами &mdash; с мэйнфрейма либо из распределенных вычислительных сред. Таким образом, это решение распространяет преимущества автоматизации управления сервисами и процессов обслуживания на все корпоративные активы и центр обработки, предоставляя возможность более эффективно выполнять требования бизнеса &mdash; от обеспечения четкого соответствия ИТ-обслуживания бизнес-задачам до сокращения ИТ-затрат, совершенствования системы безопасности, выполнения регулирующих и нормативных требований и повышения уровня удовлетворенности клиентов. </p>
+ 
+<p>Новое решение сочетает лучшие отраслевые методики автоматизации процессов на базе Information Technology Infrastructure Library (ITIL) с программными продуктами IBM: Tivoli Change and Configuration Management Database, Tivoli Application Dependency Discovery Manager, Tivoli Business Service Manager, Tivoli Service Request Manager и Tivoli Enterprise Portal. Интеграция этих программных продуктов позволит избавиться от изолированности приложений и получить единое представление всех бизнес-приложений и других систем в масштабе всего корпоративного центра обработки. Клиенты смогут эффективно использовать такие возможности, как единое, интегрированное представление важнейших приложений, выполняемых на мэйнфреймах; обнаружение, контролирование и представление связей между ИТ-активами и бизнес-приложениями, а также мониторинг сервисов ИТ-подразделения для поддержки выполнения бизнес-задач. Клиенты смогут настраивать решение для поддержки различных функций, охватывающих обнаружение приложений, выявление взаимосвязей, бизнес-сервисы, запросы на обслуживание, финансы, безопасность, предоставление ИТ-ресурсов, поддержку и операционный контроль. </p>
+ 
+<p>Как отмечают эксперты, главная ценность нового решения в том, что оно позволяет компаниям с любыми масштабами бизнеса повысить уровень автоматизации процессов для эффективного использования технологий в соответствии с целями бизнеса и более совершенного управления всеми сервисами. Новая интегрированная среда повышает уровень прозрачности и контроля для обнаружения активов, поддерживает управление инцидентами и проблемами в рамках единой, общей для всего предприятия инфраструктуры управления сервисами. Интегрированный комплекс программных продуктов включает средства автономных вычислений и предлагает улучшенные функциональные возможности для решения различных проблем, с которыми сталкиваются руководители центров обработки и административно-хозяйственных подразделений. </p>
+ 
+<p><span style="font-weight: bold;">Управление бизнес-сервисами. </span>Интеграция ПО IBM Tivoli Business Service Manager и Application Discovery and Dependency Manager обеспечивает обнаружение, готовность, управление, определение состояния и контроль в случае добавления приложения, а также если приложение становится недоступным или нарушается соглашение об уровне обслуживания. </p>
+ 
+<p><span style="font-weight: bold;">Управление финансами. </span>Обеспечивается соответствие ИТ-обслуживания целям бизнеса, обоснование ИТ-затрат и понимание стоимости совместно используемых ресурсов. Кроме того, решение включает интегрированное ПО IBM Tivoli Usage and Accounting Manager с приложением Decision Support, чтобы обеспечивать распределение затрат на базе использования ИТ-ресурсов. Организации также могут эффективно управлять жизненным циклом своих ИТ-активов с целью сокращения затрат и ослабления рисков нарушения лицензионных соглашений в масштабе всего предприятия с использованием ПО Tivoli Asset Management for IT, Tivoli License Compliance Manager for z/OS и Tivoli License Compliance Manager. </p>
+ 
+<p><span style="font-weight: bold;">Управление безопасностью.</span> Решение предоставляет полную информацию об уровне безопасности и средства формирования отчетов для множества технологических платформ, в том числе полученных в результате слияний и приобретений, внедрения новых технологических решений, а также при введении новых нормативных стандартов. Комплекс Tivoli Service Management Center for System z формирует единый взгляд на управление безопасностью, процессы аудита и соблюдение нормативных требований с использованием таких программных продуктов, как IBM Tivoli zSecure, Compliance Insight Manager, Identity Manager, Access Manager и Federated Identity Manager. </p>
+ 
+<p><span style="font-weight: bold;">Операции и поддержка.</span> Оптимальная производительность и соблюдение соглашений об уровнях обслуживания достигаются благодаря возможности получать полное представление об операциях мэйнфрейма с помощью интегрированного ПО IBM Tivoli Enterprise Portal, NetView, OMEGAMON, Composite Application Manager, System Automation и Workload Scheduler. Клиенты получат такие преимущества, как детальное представление процессов в системе, экспертные рекомендации и автоматизация управления системной производительностью, пропускной способностью сети, инцидентами и проблемами и выполнением важнейших бизнес-приложений. </p>
+ <blockquote> 
+  <h3>Пятилетняя программа IBM </h3>
+ 
+  <p>В октябре 2006 г. IBM объявила о запуске общекорпоративной программы, которая позволит к 2011 г. сделать мэйнфрейм IBM System z &mdash; оптимальную вычислительную платформу для бизнеса &mdash; значительно более простым в эксплуатации и доступным более широкому кругу ИТ-специалистов. Цель этой пятилетней программы, поддерживаемой инвестициями, превышающими 100 млн долл., &mdash; упростить процессы программирования и администрирования мэйнфреймов, а также повысить уровень автоматизации задач разработки и развертывания приложений в среде мэйнфрейма. При реализации этой инициативы, в которой будут участвовать специалисты по аппаратным средствам и ПО, IBM будет эффективно использовать свои экспертные знания и богатый опыт в области автоматизации и системного управления. </p>
+ </blockquote> 
+<h2>Модернизация приложений на мэйнфреймах </h2>
+ 
+<p>По прогнозам аналитической компании WinterGreen Research, рынок приложений для мэйнфреймов достигнет объема 6,6 млрд долл. уже к 2012 г. Расширяя анонсированную в 2006 г. 100-миллионную инвестиционную инициативу IBM Mainframe Simplification, IBM представила новые программные продукты и ресурсы, призванные помочь мировому бизнес-сообществу с выгодой использовать потенциал этого рынка. </p>
+ 
+<p>Новое ПО IBM облегчит программистам, тестировщикам ПО, руководителям проектов, программным архитекторам и другим ИТ-специалистам управление системой мэйнфрейма, а также во многом автоматизирует процессы разработки и развертывания приложений для мэйнфрейма. Некоторые используемые сегодня важные бизнес-приложения, созданные для специфических нужд клиентов, столько раз видоизменялись за годы, прошедшие с момента их разработки, что превратились в &laquo;макаронный&raquo; программный код (spaghetti code) &mdash; запутанную, слабо структурированную и трудную для понимания и совершенствования систему. Нынешние предложения IBM помогут упростить эти приложения с помощью современных инструментальных средств &mdash; простых, удобных и не требующих от программистов дополнительных знаний и навыков. </p>
+ 
+<p>Новый программный продукт IBM, названный IBM Rational Business Developer, позволяет разработчикам приложений и клиентам, использующим системы System z, существенно сократить циклы разработки ПО; при этом даже команды ИТ-специалистов самой разной квалификации смогут совместно создавать высококачественные технологические решения. Например, инструментарий IBM Rational Business Developer способен помочь разработчикам в создании новых бизнес-приложений для System z, даже если эти специалисты не знакомы с ПО связующего слоя и технологиями мэйнфрейма, на которых базируются данные приложения. Кроме того, новый продукт семейства Rational позволяет трансформировать существующие приложения, написанные на языке COBOL, в Web-сервисы. Эта возможность облегчает клиентам определение, преобразование и интеграцию своих имеющихся программных ресурсов на языках COBOL и PL/I в виде Web-сервисов; упрощает создание &laquo;чистого&raquo; высокоэффективного программного кода COBOL или Java, способствует повышению стратегической значимости платформы System z в рамках постоянно модернизируемых корпоративных ИТ-инфраструктур. </p>
+ 
+<p>ПО IBM Rational Business Developer Extension v7.0 могут использовать разработчики с любыми уровнями навыков для более продуктивной работы, и им не потребуется осваивать COBOL, PL/I, Java или другие низкоуровневые языки программирования для мэйнфреймов. Rational Business Developer Extension эффективно использует язык Enterprise Generation Language (EGL), применяемый для создания бизнес-приложений, которые могут выполняться практически на любых платформах &mdash; от функционально насыщенных Web-приложений до систем обработки транзакций CICS. </p>
+ 
+<p>Новые продукты IBM будут полезны также проектировщикам и производителям мэйнфреймов, обеспечивая более высокий уровень автоматизации бизнес-процессов, позволяя создавать более гибкие приложения, хорошо адаптируемые к меняющимся условиям бизнеса, и более современные пользовательские интерфейсы к этим приложениям. Решение IBM Rational Host Access Transformation Services (HATS), входящее в портфель ПО IBM Rational, предназначено для преобразования существующих терминальных приложений &laquo;текстового экрана&raquo; (green screen) в Web-сервисы или функционально богатые и удобные пользовательские интерфейсы, предоставляющие пользователям доступ к приложениям мэйнфрейма с сотового телефона, карманного компьютера или другого мобильного устройства. К примеру, представитель страховой фирмы, оценивающий размер убытков, сможет теперь просматривать заявления о выплате страхового возмещения с мобильного телефона по пути к клиентам &mdash; ранее доступ к этой информации был гораздо менее оперативен и удобен, поскольку соответствующие данные хранились в негибком с точки зрения внешних интерфейсов приложении и были доступны только через командную строку терминала. </p>
+ 
+<p>Специалисты корпорации особо подчеркивают, что, используя упрощенную среду разработки ПО для мэйнфрейма, клиенты смогут ускорить создание Web-сервисов и приложений на основе сервис-ориентированной архитектуры. Программные продукты IBM Rational помогают сокращать расходы на профессиональную переподготовку персонала, позволяя быстро внедрять современные архитектуры и технологии, такие, как Web 2.0, независимо от нынешней квалификации ИТ-специалистов компании. </p>
+ 
+<p>В числе продуктов IBM Rational корпоративного уровня для модернизации ПО предприятий &mdash; инструменты Rational Developer for System z, Rational Transformation Workbench, Enterprise COBOL for z/OS v4.1, Enterprise PL/I for z/OS v3.7 и Software Configuration and Library Manager (SCLM) Advanced Edition for z/OS V1.2. </p>
+ 
+<p>ПО IBM Rational Transformation Workbench v3.1 позволяет преодолеть проблему нехватки знаний в области автоматизации бизнес-процессов с использованием приложений для IBM System z. Rational Transformation Workbench собирает и обобщает технические и бизнес-знания из сложных систем. Объединение этих знаний с автоматизированными технологиями модернизации программных кодов ускоряет выполнение задач модернизации. </p>
+ 
+<p>Компиляторы IBM Enterprise COBOL for z/OS v4.1 и IBM Enterprise PL/I for z/OS v3.7 интегрируют приложения для System z с Web-ориентированными бизнес-процессами и упрощают компонентное представление приложений COBOL и PL/I. </p>
+ 
+<p>ПО Software Configuration and Library Manager (SCLM) Advanced Edition for z/OS V1.2 &mdash; это экономически эффективное и функциональное решение для централизованного управления конфигурациями ПО z/OS. </p>
+ 
+<p>Портфель IBM также включает плагин Rational Unified Process for System z v1.0 для IBM Rational Method Composer v7.2, предназначенный для создания руководства и лучших методик реализации унифицированного процесса разработки; расширения IBM Rational ClearCase v7 z/OS для единого управления изменениями активов для распределенных и централизованных платформ; IBM Rational ClearQuest v7 z/OS для управления процессами создания ПО в распределенных и централизованных группах разработчиков; а также IBM Rational Build Forge для автоматизации процессов управления разработкой и выпуском ПО для распределенных и централизованных платформ. Предлагаемые усовершенствования призваны сократить время реализации проектов с многих месяцев до примерно пары недель. Клиенты будут получать существенную выгоду от ускоренного развертывания приложений и возможности высвободить ценные ИТ-ресурсы для выполнения стратегически важных проектов. </p>
+ 
+<h2>Подготовка специалистов </h2>
+ 
+<p>Корпорация IBM создает своим клиентам, бизнес-партнерам, независимым разработчикам ПО, преподавателям и студентам высших учебных заведений самые благоприятные условия для повышения квалификации и приобретения профессиональных новых знаний и навыков, которые помогут им успешно конкурировать в условиях современной глобальной экономики. В частности, IBM анонсировала различные программы и ресурсы для профессиональной подготовки следующего поколения специалистов, которые будут создавать приложения для новейшего мэнфрейма IBM z10 Enterprise Class. </p>
+ 
+<p>Образовательная инициатива System z for ISV предлагает бизнес-партнерам IBM ряд учебных программ и технических и маркетинговых ресурсов, призванных в конечном счете повысить рентабельность их инвестиций. Технические ресурсы включают доступ к экспертам IBM в области систем System z, к семинарам по темам, связанным с платформой System z, к новейшим аппаратным технологиям System z (через программу IBM Virtual Loaner Program), а также к квалифицированным консультантам, работающим в расположенных по всему миру центрах инноваций IBM. Маркетинговые ресурсы &mdash; это специализированные торговые выставки и поддержка Web-маркетинга. В течение этого года IBM планирует организовать несколько тематических семинаров, цель которых &mdash; привлечь бизнес-партнеров к созданию приложений для платформы System z. </p>
+ 
+<p>Образовательная инициатива Academic Initiative for System z направлена на помощь партнерам IBM из образовательного сектора &mdash; среди которых свыше 400 университетов и колледжей &mdash; в разработке учебных курсов и подготовке квалифицированных специалистов по мэйнфреймам. </p>
+ 
+<p>Сообщество destination Z &mdash; новое международное онлайновое сообщество, призванное объединить бизнес-партнеров и разработчиков ПО для совершенствования их профессиональных знаний и навыков, обмена опытом и знакомства с новейшими технологиями разработки приложений для систем IBM System z. Через это онлайновое сообщество пользователи смогут оценить преимущества социальных сетей для делового сотрудничества, генерации новых идей и создания новых бизнес-возможностей, результатом которых станет дальнейшее развитие платформы System z. </p>
+ 
+<p>Онлайновый ресурс System z Sandbox &mdash; новый Web-сайт IBM, организованный в рамках популярного портала для разработчиков developerWorks; он предоставляет заказчикам доступ к пробным бесплатным версиям новейших программных продуктов IBM Rational для тестирования перед принятием окончательного решения о приобретении. На сайте System z Sandbox представлена также разнообразная техническая документация и руководства по развертыванию ПО. </p>
+ 
+<p>Комплекты System z Starter Packs &mdash; три новых пакета предложений, которые помогут клиентам быстро приступить к модернизации своих базовых ИТ-систем. Пакеты включают обучение и тренинг, бесплатные семинары, 90-дневный период оценки качества приобретенного ПО и ряд других льготных условий, способствующих успешной и экономически эффективной реализации корпоративных ИТ-проектов. </p>
+ 
+<h3>IBM Academic Initiative </h3>
+ 
+<p>В начале этого года IBM объявила о том, что число учебных заведений &mdash; участников ее глобальной образовательной программы Academic Initiative for System z, которые активно разрабатывают учебные курсы и проводят обучение технологиям мэйнфрейма, превысило рекордную отметку 400. Первоначально программа Academic Initiative for System z, запущенная IBM в 2004 г., охватывала всего 24 колледжа и университета, а в настоящее время уже около 50 тыс. студентов прошли обучение по этой чрезвычайно актуальной компьютерной дисциплине. Последними в четвертой сотне учебных заведений, присоединившихся к программе Academic Initiative for System z, стали Университет Западного Техаса (West Texas A&amp;M University) в США и Университет Суррея (University of Surrey) в Великобритании. </p>
+ 
+<p>Координатор программы по компьютерным наукам Университета Западного Техаса отмечает, что интерес студентов к платформе мэйнфрейма продолжает расти, и это побуждает университет пересмотреть свою учебную программу по компьютерным дисциплинам, сделав упор на высокопроизводительные вычисления для бизнеса и мэйнфреймы. Работая с IBM, студенты изучают открытые стандарты и приложения для мэйнфрейма с открытым исходным кодом, практикуются в использовании разнообразного инструментария, такого, как программные средства IBM Rational для упрощения разработки приложений и управления мэйнфреймом, приобретают полезные знания, навыки и практический опыт, которые непременно пригодятся им как будущим системным архитекторам, программистам, специалистам по мэйнфреймам и новаторам в сфер ИТ. Скорее всего, платформа мэйнфрейма станет основой их профессиональной карьеры. </p>
+ 
+<p>Не секрет, что мэйнфрейм не имеет себе равных среди вычислительных систем в эффективном управлении миллиардами транзакций, иными словами &mdash; в решении ключевой бизнес-задачи множества крупных предприятий. Благодаря своей способности уменьшать сложность инфраструктуры, экономить полезное пространство помещений вычислительного центра, гарантировать безопасность информации, снижать энергопотребление центров данных и сокращать соответствующие финансовые затраты, мэйнфрейм и сегодня остается оптимальной базовой платформой современного корпоративного центра обработки данных. Для крупных корпоративных клиентов, которые ищут пути снижения расходов на поддержку сложной и громоздкой инфраструктуры, а также способы повышения уровня информационной безопасности, мэйнфрейм &mdash; единственная технология, от внедрения которой они могут практически немедленно получить желаемый эффект. Эксперты отмечают повышенный спрос на молодых специалистов по мэйнфреймам со стороны бизнеса, правительственных учреждений и других заинтересованных организаций, и полагают, что с помощью программы Academic Initiative for System z будет сформирован глобальный пул студентов и экспертов в области технологий мэйнфрейма. </p>
+ 
+<p>Многие компании, например, BMO Financial Group, Progressive, Charles Schwab и Neon Enterprise Software, которые сотрудничают с IBM в рамках программы IBM Academic Initiative for System z, уже воспользовались возможностями этой инициативы, пригласив к себе на стажировку или на постоянную работу молодых специалистов по мэйнфреймам. Один из менеджеров финансовой группы BMO Financial Group особо отмечает работу в тесном контакте с местными университетами, колледжами и IBM с целью повышения квалификации сотрудников, приобретения ими дополнительных знаний и практических навыков, а также пополнения штата компании специалистами по платформам мэйнфрейма. Эта практика стала ключевой составляющей корпоративной стратегии в отношении центра обработки. BMO Financial Group &mdash; ведущий финансовый институт Канады, который придерживается политики постоянного совершенствования профессионального уровня своего персонала. Руководство группы уделяет повышенное внимание любым инициативам, которые предоставляют студентам выпускных курсов высших учебных заведений широкие возможности для обучения ИТ-дисциплинам, связанным с современными технологиями мэйнфрейма. Все усилия направлены на формирование непрерывного &laquo;конвейера&raquo; подготовки профессионалов в этой области, способных удовлетворить нужды информационно-технологической инфраструктуры и бизнеса компании. </p>
+ 
+<p>IBM Academic Initiative представляет собой международную программу, которая, базируясь на многолетней истории технологических достижений IBM, предлагает широкий спектр возможностей для обучения и профессиональной подготовки в области информатики и компьютерных наук. Программа IBM Academic Initiative достаточно гибка, и ее можно адаптировать в соответствии с образовательными целями большинства колледжей и университетов. Специфическая часть программы IBM Academic Initiative, связанная с мэйнфреймами, ориентирована на сотрудничество с образовательными учреждениями в разработке учебных курсов и лабораторных занятий, проведении исследований и реализации практических проектов в целях развития профессионального мышления будущих ИТ-специалистов на уровне крупномасштабных высокопроизводительных вычислительных систем. Одна из последних инициатив в рамках этой части программы &mdash; проведение в университетских городках круглых столов по тематике платформы System z &mdash; призвана формировать и укреплять партнерские связи между экосистемой профессионалов в области мэйнфреймов и университетским сообществом, объединяя специалистов IBM, ее клиентов и бизнес-партнеров с преподавателями и студентами для дискуссий по актуальным вопросам, связанным с высокопроизводительными вычислениями в целом и технологиями мэйнфрейма в частности. </p>
+ 
+<p>Повышенный интерес университетских кругов к технологиям мэйнфрейма вполне согласуется с пятилетней инвестиционной программой IBM, предусматривающей поэтапное финансирование (на общую сумму в 100 млн долл.) инициатив, направленных на облегчение задач ИТ-администраторов и программистов по разработке ПО, обслуживанию и администрированию систем мэйнфрейма, и предусматривающих расширенную автоматизацию процессов создания и развертывания приложений для среды мэйнфрейма. Побудительная причина данной инициативы достаточно очевидна &mdash; рыночная доля IBM в сегменте высокопроизводительных серверных систем выросла с 17% в 2000 г. до 34% в 2007 г. По имеющимся данным, за период с 2004 г. (когда стартовала программа Academic Initiative for System z) по настоящее время приблизительно 50 тыс. студентов со всего мира закончили организованные в колледжах и университетах учебные курсы по высокопроизводительным серверным системам уровня предприятия или по мэйнфреймам. Эти студенты либо получили дипломы (степень магистра) в области информационных систем (Information Systems) или компьютерных наук (Computer Science) со специализацией по мощным корпоративным серверам и по мэйнфреймам, либо прослушали специализированные курсы по мэйнфреймам в целях подготовки к карьере ИТ-специалистов в крупных компаниях, входящих в рейтинговый список Fortune 1000. </p>
+ 
+<h3>Новое поколение выбирает мэйнфреймы </h3>
+ 
+<p>Крупные корпорации сегодня активно набирают в свой штат молодых талантливых специалистов, считая это наиболее эффективным путем привлечения свежих идей и внедрения инновационных концепций, таких, как green computing &mdash; &laquo;экологически дружелюбных&raquo; компьютерных технологий. Последние достижения в области мэйнфреймов, в том числе специализированные процессорные модули для поддержки определенных видов рабочей нагрузки, Java-приложения, ОС Solaris для платформы мэйнфрейма, технологии виртуализации ресурсов, ОС Linux и опция Сapacity on Demand (вычислительные ресурсы по требованию), убедительно подтверждают, что эта платформа, не имеющая себе равных по возможностям, оптимальна для поддержки корпоративной стратегии снижения энергопотребления, экономии полезного пространства рабочих помещений и уменьшения издержек на трудовые ресурсы. В 2007 г. IBM сообщила о планах сокращения собственного пула из приблизительно 3900 серверов до менее чем 30 мэйнфреймов System z под управлением ОС Linux. IBM предполагает, что ее новая серверная среда будет суммарно потреблять на 80% меньше электроэнергии, чем существующий парк серверов. Кроме того, IBM ожидает значительной экономии энергозатрат и расходов на ПО и техническое обслуживание систем в течение пятилетнего периода. </p>
+ 
+<p>Повышенный интерес к технологиям мэйнфрейма в колледжах и университетах продолжает сохраняться. В этом году IBM объявила победителей ежегодного студенческого конкурса по мэйнфреймам 2007 IBM Student Mainframe Contest, особо отметив, что в этом году в нем участвовали уже студенты высших учебных заведений, которые соревновались со студентами колледжей. За последние три года в конкурсе IBM Student Mainframe Contest приняли участие свыше 8 тыс. студентов из более чем 1000 колледжей со всего мира. Это соревнование проводится каждый осенний семестр в Северной Америке и еще в восьми странах мира. </p>
+ </DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи по схожей теме</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24207.html'>«Суперкомпьютерная» видеокарта AMD для обработки больших объемов данных</A></b></li><li><b><A href='detail.php@ID=24157.html'>GPU-ускоренные вычисления – сотрудничество IBM и NVIDIA </A></b></li><li><b><A href='detail.php@ID=24154.html'>Сверхплотный вычислительный комплекс RSC PetaStream </A></b></li><li><b><A href='detail.php@ID=24138.html'>Intel: высокопроизводительные вычисления для анализа «больших данных»</A></b></li><li><b><A href='detail.php@ID=22708.html'>NVIDIA GeoInt Accelerator – новая платформа для анализа данных аэрогеодезической разведки</A></b></li></ul></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=12642.html" target="_blank"><img src="../upload/iblock/29b/32-1-1.jpg" alt="Открыть материал" style="width:50px; height:50px; border:1px solid #000; float:left; margin:0 5px 5px 0;"></a><a href="detail.php@ID=12642.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Расширение возможностей мэйнфреймов</a><br><a href="detail.php@ID=12642.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Сегодняшнее развитие мэйнфреймов IBM &mdash; это новая система IBM System z10, портирование ОС OpenSolaris на платформу мэйнфрейма, программные средства &hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=12642.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=12642&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0831e17f018438357988e4d9ce08654d'><img src='../bitrix/tools/captcha.php@captcha_code=0831e17f018438357988e4d9ce08654d' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

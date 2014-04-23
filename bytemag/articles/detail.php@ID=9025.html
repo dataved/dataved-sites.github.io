@@ -1,0 +1,572 @@
+<HTML>
+<HEAD>
+<title>Безопасность в Windows XP
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Камилл Ахметов Стратегия безопасности Windows XP Модель безопасности Windows XP Professional основана на понятиях аутентификации и авторизации. При аутентификации проверяются идентификационные данные пользователя, а при авторизации - наличие у него" />
+<meta name="description" content="Камилл Ахметов Стратегия безопасности Windows XP Модель безопасности Windows XP Professional основана на понятиях аутентификации и авторизации. При аутентификации проверяются идентификационные данные пользователя, а при авторизации - наличие у него" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398078882','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12546.html'>Новая политика лицензирования в обслуживании IT инфраструктуры</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12543.html'><img src='../upload/iblock/261/logo100x50.gif' alt='Paragon Software' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12545.html'>Инфраструктурные решения от Paragon Software: преимущества для Вашего бизнеса</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=11848.html'><img src='../upload/iblock/6f0/logo-novell.gif' alt='Novell' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=11849.html'>Novell ZENworks Configuration Management</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=12720.html'>DatabaseGear – инструменты Embarcadero для специалистов по базам данных</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21265.html'>О видах и подвидах СЭД на SharePoint</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm9025' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=9025&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm9025"].SHOW_IMAGE.value="N"; document.forms["PrintForm9025"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm9025"].SHOW_IMAGE.value="Y"; document.forms["PrintForm9025"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(9025);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=9025.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=9025.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(9025);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6258.html'>Безопасность</a><br /></p><a href='../numbers/index.php@ID=11541.html'>№12 (41), декабрь 2001</a><h1>Безопасность в Windows XP
+</h1>10.12.2001<p></p><DIV class='article-text'><p><i>Камилл Ахметов</i>
+<h3>Стратегия безопасности Windows XP </h3>
+<p>Модель безопасности Windows XP Professional основана на понятиях аутентификации и авторизации. При аутентификации проверяются идентификационные данные пользователя, а при авторизации - наличие у него прав доступа к ресурсам компьютера или сети. В Windows XP Professional также имеются технологии шифрования, которые защищают конфиденциальные данные на диске и в сетях: например, EFS (Encrypting File System), технология открытого ключа.
+<h4>Аутентификация </h4>
+<p>Регистрируясь на компьютере для получения доступа к ресурсам локального компьютера или сети, пользователь должен ввести свое имя и пароль. В Windows XP Professional возможна единая регистрация для доступа ко всем сетевым ресурсам. Таким образом, пользователь может войти в систему с клиентского компьютера по единому паролю или смарт-карте и получить доступ к другим компьютерам домена без повторного ввода идентификационных данных.
+<p>Главный протокол безопасности в доменах Windows 2000 - Kerberos версии 5. Для аутентификации на серверах под управлением Windows NT 4.0 и доступа к ресурсам доменов Windows NT клиенты Windows XP Professional используют протокол NTLM. Компьютеры с Windows XP Professional, не принадлежащие к домену, также применяют для аутентификации протокол NTLM.
+<p>Используя Windows XP Professional в сети с активным каталогом (Active Directory), можно управлять безопасностью регистрации с помощью параметров политики групп, например, ограничивать доступ к компьютерам и принудительно завершать сеансы работы пользователей спустя заданное время. Можно применять предварительно сконфигурированные шаблоны безопасности, соответствующие требованиям к безопасности данной рабочей станции или сети. Шаблоны представляют собой файлы с предварительно сконфигурированными параметрами безопасности, которые можно применять на локальном компьютере или импортировать в групповые политики активного каталога. Эти шаблоны используются в неизменном виде или настраиваются для определенных нужд.
+<h4>Авторизация </h4>
+<p>Авторизация позволяет контролировать доступ пользователей к ресурсам. Применение списков управления доступом (access control list, ACL) и прав доступа NTFS гарантирует, что пользователь получит доступ только к нужным ему ресурсам, например, к файлам, дискам (в том числе сетевым), принтерам и приложениям. С помощью групп безопасности, прав пользователей и прав доступа можно одновременно управлять безопасностью как на уровне ресурсов, так и на уровне файлов, папок и прав отдельных пользователей.
+<h4>Группы безопасности </h4>
+<p>Группы безопасности упрощают управление доступом к ресурсам. Можно приписывать пользователей к группам безопасности, а затем предоставлять этим группам права доступа. Можно добавлять пользователей к группам безопасности и удалять их оттуда в соответствии с потребностями этих пользователей.
+<p>Оснастка MMC Computer Management позволяет создавать учетные записи пользователей и помещать их в локальные группы безопасности. Можно предоставлять пользователям права доступа к файлам и папкам и определять действия, которые пользователи могут выполнять над ними. Можно разрешить и наследование прав доступа. При этом права доступа, определенные для каталога, применяются ко всем его подкаталогам и находящимся в них файлам.
+<p>Среди групп безопасности, локальных для домена и компьютера, имеется ряд предварительно сконфигурированных групп, в которые можно включать пользователей.
+<p><b>Администраторы (Administrators)</b> обладают полным контролем над локальным 
+  компьютером и правами на совершение любых действий. При установке Windows XP 
+  Professional для этой группы создается и назначается встроенная учетная запись 
+  Администратор (Administrator). Когда компьютер присоединяется к домену, по умолчанию 
+  к группе Администраторы добавляется группа Администраторы домена (Domain Administrators).
+<p><b>Опытные пользователи (Power Users)</b> обладают правами на чтение и запись 
+  файлов не только в личных папках, но и за их пределами. Они могут устанавливать 
+  приложения и выполнять многие административные действия. У членов этой группы 
+  такой же уровень прав доступа, что и у групп Пользователи (Users) и Опытные 
+  пользователи (Power Users) в Windows NT 4.0.
+<p><b>Пользователи (Users)</b> в отношении большей части системы имеют только 
+  право на чтение. У них есть право на чтение и запись только файлов их личных 
+  папок. Пользователи не могут читать данные других пользователей (если они не 
+  находятся в общей папке), устанавливать приложения, требующие модификации системных 
+  каталогов или реестра, и выполнять административные действия. Права пользователей 
+  в Windows XP Professional более ограниченны по сравнению с Windows NT 4.0.
+<p><b>Гости (Guests)</b> могут регистрироваться по встроенной учетной записи Guest 
+  и выполнять ограниченный набор действий, в том числе выключать компьютер. Пользователи, 
+  не имеющие учетной записи на этом компьютере, или пользователи, чьи учетные 
+  записи отключены (но не удалены), могут зарегистрироваться на компьютере по 
+  учетной записи Guest. Можно устанавливать права доступа для этой учетной записи, 
+  которая по умолчанию входит во встроенную группу Guests. По умолчанию учетная 
+  запись Guest отключена.
+<p>Можно сконфигурировать списки управления доступом (ACL) для групп ресурсов или групп безопасности и по мере необходимости добавлять/удалять из них пользователей или ресурсы, что облегчает управление правами доступа и их аудит. Это также позволяет реже изменять ACL. Можно предоставить пользователям права на доступ к файлам и папкам и указать действия, которые можно выполнять с ними. Можно также разрешить наследование прав доступа; при этом права доступа к некоторой папке применяются и к ее подкаталогам и находящимся в них файлам.
+<p>При работе с Windows XP Professional в составе рабочей группы или в изолированном режиме вам предоставляются права администратора, и у вас есть все права по отношению ко всем функциям безопасности ОС. Если компьютер под управлением Windows XP Professional включен в сеть, параметры безопасности определяет сетевой администратор.
+<h4>Политика групп </h4>
+<p>Параметры политики групп позволяют назначать ресурсам права доступа, а также предоставлять права доступа пользователям. Это нужно для того, чтобы требовать запуска определенных приложений только в заданном контексте безопасности (тем самым снижая риск воздействия на компьютер нежелательных приложений, например, вирусов) и конфигурировать различные права доступа для множества клиентских компьютеров. Можно сконфигурировать права доступа на эталонном компьютере, который будет использован как базовый образ для установки на другие рабочие станции, гарантируя, таким образом, стандартизованное управление безопасностью даже в отсутствие Active Directory.
+<p>Функции аудита позволяют обнаруживать попытки отключить или обойти защиту ресурсов.
+<p>Можно задействовать предварительно сконфигурированные шаблоны безопасности, соответствующие требованиям безопасности для данной рабочей станции или сети. Шаблоны безопасности - это файлы с предварительно установленными параметрами безопасности, которые применяют к локальному компьютеру или импортируют в групповые политики активного каталога (Active Directory). Шаблоны безопасности используются в неизменном виде или настраиваются в соответствии с определенными задачами.
+<h4>Шифрование </h4>
+<p>EFS (Encrypting File System) позволяет зашифровать данные на жестком диске. Риск кражи портативных компьютеров особенно велик, а с помощью EFS можно усилить безопасность путем шифрования данных на жестких дисках портативных компьютеров компании. Эта предосторожность защищает информацию и идентификационные данные от несанкционированного доступа.
+<h3>Корпоративная безопасность </h3>
+<p>Windows XP Professional поддерживает ряд функций защиты избранных файлов, приложений и других ресурсов. В их числе списки управления доступом (ACL), группы безопасности и групповая политика, а также средства конфигурирования и управления этими функциями. В совокупности они обеспечивают мощную, но гибкую инфраструктуру управления доступом в корпоративных сетях.
+<p>Windows XP поддерживает тысячи относящихся к безопасности параметров конфигурации, 
+  которые можно применять и по отдельности. В Windows XP также есть предопределенные 
+  шаблоны безопасности, обычно используемые без изменений или как основа для особой 
+  настройки конфигурации безопасности. Эти шаблоны безопасности применяются при:
+<ul>
+  <li>создании ресурса, такого как общая папка или файл; при этом вы вправе воспользоваться 
+    заданными по умолчанию ACL или настроить их в соответствии со своими потребностями;</li>
+  <li>распределении пользователей по стандартным группам безопасности, таким как 
+    Users, Power Users и Administrators, и принятии заданных по умолчанию параметров 
+    ACL;</li>
+  <li>использовании предоставляемых ОС шаблонов групповой политики - Basic (основной), 
+    Compatible (совместимый), Secure (безопасный) или Highly Secure (высокобезопасный). 
+  </li></ul>
+<p>Каждая из особенностей системы безопасности Windows XP - списки ACL, группы безопасности и групповая политика - имеет параметры по умолчанию, которые разрешается изменять в соответствии с требованиями организации. Предприятия также вправе применять соответствующие средства для реализации и настройки управления доступом. Многие из этих средств, такие как оснастки Microsoft Management Console, представляют собой компоненты Windows XP Professional, другие поставляются в составе комплекта ресурсов Windows XP Professional Resource Kit.
+<h3>Управляемый доступ к сети </h3>
+<p>Windows XP содержит встроенную подсистему безопасности для предотвращения вторжений. Ее работа базируется на ограничении прав любого, кто пытается получить доступ к компьютеру из сети до привилегий гостевой учетной записи. Взломщикам или вообще не удастся получить доступ к компьютеру и перебором паролей получить дополнительные привилегии, или они получат только ограниченный гостевой доступ.
+<h4>Управление сетевой проверкой подлинности </h4>
+<p>Все большее число систем под управлением Windows XP Professional подключается к Интернету напрямую, а не через домены. Поэтому продуманная система управления доступом (в том числе устойчивыми паролями и разрешениями, сопоставленными учетными записями) важна как никогда ранее. Для обеспечения безопасности следует избегать анонимных параметров управления доступом, обычно связанных с открытыми средами, подобными Интернету.
+<p>Вот почему в Windows XP Professional по умолчанию все пользователи, вошедшие по сети, работают под учетной записью Guest. Это исключает для злоумышленника возможность войти в систему через Интернет под локальной учетной записью Администратор (Administrator), у которой нет пароля.
+<h3>Упрощенное совместное использование ресурсов </h3>
+<p>Модель совместного использования и безопасности для локальных учетных записей позволяет выбрать модель безопасности на основе применения исключительно гостевой учетной записи (Guest) либо классическую (Classic) модель безопасности. В гостевой модели при любых попытках войти в систему локального компьютера через сеть применяется только гостевая учетная запись. В классической модели пользователи при доступе через сеть входят в систему локального компьютера под своими учетными записями. На компьютерах в составе домена эта политика не применяется, а по умолчанию используется гостевая учетная запись.
+<p>Если гостевая учетная запись существует и ей назначен пустой пароль, сетевые пользователи смогут войти в систему и получить доступ к любому ресурсу, разрешенному для доступа учетной записи Guest.
+<p>При включенной политике &quot;force network logons using local accounts to authenticate as Guest&quot; локальные учетные записи должны аутентифицироваться как учетная запись Guest при доступе через сеть. Эта политика служит для ограничения разрешений локальной учетной записи, обращающейся к системным ресурсам на другом сетевом компьютере.
+<p>Кроме того, на компьютерах, поддерживающих модель упрощенной защиты общих ресурсов, диалоговое окно Security Properties заменено упрощенным диалоговым окном Shared Documents Properties.
+<h3>Ограничение на учетные записи с пустыми паролями </h3>
+<p>Для безопасности пользователей, не защитивших свою учетную запись паролем, в Windows XP Professional такие учетные записи разрешено применять только для входа в систему компьютера с его консоли. По умолчанию учетные записи с пустыми паролями запрещено применять для входа в систему удаленно по сети и вообще для любых других действий по входу в систему, кроме как с физической консоли компьютера. Например, нельзя задействовать службу вторичного входа в систему (RunAs - запуск от имени) для запуска программ под учетной записью с пустым паролем локального пользователя.
+<p>Назначение пароля локальной учетной записи устраняет указанное ограничение на вход через сеть, а также предоставляет ей доступ по сети к любым ресурсам, на которые у нее есть права.
+<p>Если ваш компьютер не расположен в физически защищенном помещении, рекомендуется назначать пароли всем локальным учетным записям пользователей. Несоблюдение этого требования ведет к тому, что любой пользователь, получивший физический доступ к компьютеру, может войти в систему под учетной записью без пароля. Это особенно важно для переносных компьютеров, на которых следует предусмотреть устойчивые пароли для всех локальных учетных записей пользователей.
+<p>Указанное ограничение не относится к доменным учетным записям, а также к локальной гостевой учетной записи. Если учетная запись Guest с пустым паролем существует, под ней можно войти в систему и обратиться к любому ресурсу, разрешенному ей для доступа.
+<p>Если требуется отключить ограничение на вход через сеть без пароля, надо соответствующим образом настроить локальную политику безопасности (Local Security Policy).
+<h4>Шифрованная файловая система </h4>
+<p>Дополнительные функции шифрованной файловой системы (Encrypting File System, EFS) существенно обогатили Windows XP Professional, обеспечив дополнительную гибкость для корпоративных пользователей при развертывании решений безопасности, основанных на шифровании файлов с данными.
+<p>Любой злоумышленник, имеющий физический доступ к компьютеру, может загрузить на нем другую ОС, обойти защиту основной ОС и получить доступ к конфиденциальным данным. Шифрование конфиденциальных файлов средствами EFS обеспечивает дополнительную защиту. Данные зашифрованного файла останутся недоступными, даже если атакующий получит полный доступ к среде хранения данных компьютера.
+<p>Только полномочные пользователи и назначенные агенты восстановления данных в состоянии расшифровывать файлы. Пользователи с другими учетными записями, обладающие разрешениями для файла - даже разрешением на передачу прав владения (Take Ownership), не в состоянии открыть его. Администратору доступ к содержимому файла также закрыт, если только он не назначен агентом восстановления данных. При попытке несанкционированного доступа к зашифрованному файлу система откажет в доступе.
+<h4>Архитектура EFS </h4>
+<p>EFS базируется на технологии шифровании с открытым ключом и использует архитектуру CryptoAPI. Стандартная (по умолчанию) конфигурация EFS не требует никакого административного вмешательства: вы вправе выполнять шифрование файлов сразу же после установки системы. EFS автоматически создает пару ключей шифрования и сертификат пользователя, если они не были созданы ранее.
+<p>В качестве алгоритма шифрования EFS использует DESX (Expanded Data Encryption Standard) или 3DES (Triple-DES). Поставщики услуг криптографии поддерживают два алгоритма: RSA Base и RSA Enhanced - для создания сертификатов EFS и для шифрования симметричных ключей шифрования.
+<p>Если зашифровать папку, все файлы и подпапки в ней шифруются автоматически. Рекомендуется шифрование именно на уровне папок, чтобы в процессе работы не появлялись незашифрованные временные файлы.
+<h4>EFS и NTFS </h4>
+<p>Шифрованная файловая система (EFS) защищает конфиденциальные данные в файлах на томах NTFS. EFS - основная технология шифрования и расшифровки файлов на томах NTFS. Открывать файл и работать с ним может только пользователь, его зашифровавший. Это чрезвычайно важно для пользователей переносных компьютеров: даже если взломщик получит доступ к потерянному или украденному компьютеру, он не сможет открыть зашифрованные файлы. В Windows XP шифрованная файловая система также поддерживает автономные файлы и папки (Offline Files and Folders).
+<p>Зашифрованный файл останется недоступным для просмотра в исходном виде, даже если атакующий обойдет системную защиту, например, загрузив другую ОС. EFS обеспечивает устойчивое шифрование по стандартным алгоритмам и тесно интегрирована с NTFS. EFS в Windows XP Professional предоставляет новые возможности совместного использования зашифрованных файлов или отключения агентов восстановления данных, а также облегчает управление посредством групповой политики и служебных программ командной строки.
+<h4>Как работает EFS </h4>
+<p>EFS позволяет сохранить конфиденциальность информации на компьютере в условиях, когда люди, имеющие физический доступ к компьютеру, могут преднамеренно или неумышленно скомпрометировать ее. EFS чрезвычайно удобна для обеспечения конфиденциальности данных на мобильных компьютерах или на компьютерах, на которых работают несколько пользователей, т. е. таких системах, которые могут подвергаться атакам, предусматривающим обход ограничений списков ACL.
+<p>В совместно используемой системе атакующий обычно получает несанкционированный доступ, загружая другую ОС. Злоумышленник также может захватить компьютер, вынуть жесткий диск, поместить его на другой компьютер и получить доступ к файлам. Однако если у него нет ключа расшифровки, зашифрованный средствами EFS файл будет выглядеть как бессмысленный набор символов.
+<p>Поскольку EFS тесно интегрирована с NTFS, шифрование и расшифровка выполняются незаметно (&quot;прозрачно&quot;) для пользователя. При открытии файла EFS автоматически расшифровывает его по мере чтения данных с диска, а при записи - шифрует данные при записи на диск. Работая с зашифрованным файлом, вы можете даже не догадываться, что он зашифрован (при условии, что у вас есть соответствующие права).
+<p>В стандартной конфигурации EFS позволяет зашифровать файл прямо из Проводника Windows без какого-либо вмешательства администратора. С точки зрения пользователя шифрование файла или папки - это просто назначение ему определенного атрибута.
+<h4>Конфигурирование EFS </h4>
+<p>По умолчанию система поддерживает работу EFS. Разрешается шифровать файлы, для которых имеется разрешение на изменение. Поскольку в EFS для шифрования файлов применяется открытый ключ, нужно создать пару ключей открытый/закрытый и сертификат с открытым ключом шифрования. В EFS разрешены сертификаты, подписанные самим владельцем, поэтому вмешательство администратора для нормальной работы не требуется.
+<p>Если применение EFS не соответствует требованиям организации или если есть файлы, которые нельзя шифровать, существует много способов отключить EFS или нужным образом конфигурировать ее.
+<p>Для работы с EFS всем пользователям требуются сертификаты EFS. Если в организации нет инфраструктуры открытого ключа (Public Key Infrastructure, PKI), применяются подписанные самим владельцем сертификаты, которые автоматически создаются ОС. При наличии центров сертификации сертификаты EFS обычно выпускают именно они. Если вы используете EFS, обязательно предусмотрите план восстановления данных при сбое системы.
+<h4>Что разрешается шифровать </h4>
+<p>На томах NTFS атрибут шифрования разрешается назначать отдельным файлам и папкам 
+  с файлами (или подпапками). Хотя папку с атрибутом шифрования и называют &quot;зашифрованной&quot;, 
+  сама по себе она не шифруется, и для установки атрибута пары ключей не требуется. 
+  При установленном атрибуте шифрования папки EFS автоматически шифрует:
+<ul>
+  <li>все новые файлы, создаваемые в папке;</li>
+  <li>все незашифрованные файлы, скопированные или перемещенные в папку;</li>
+  <li>все вложенные файлы и подпапки (по особому требованию);</li>
+  <li>автономные файлы. </li>
+</ul>
+<h4>Шифрование базы данных автономных файлов </h4>
+<p>В Windows XP можно шифровать базу данных автономных файлов для локальной защиты кэшируемых документов от воровства компьютера, а также обеспечения дополнительной безопасности локально кэшируемых данных. В Windows 2000 этой функции не было - она предусматривает шифрование кэшируемых файлов.
+<p>Например, вы вправе активно использовать автономные файлы, при этом конфиденциальность данных обеспечивается автоматически. Как администратор отдела технической поддержки вы можете задействовать эту возможность, чтобы обезопасить все локально кэшируемые документы. Автономные файлы - превосходная защита от потери конфиденциальных данных при захвате мобильного компьютера.
+<p>Указанная функция поддерживает шифрование и расшифровку всей автономной базы данных. Для конфигурирования порядка шифрования автономных файлов нужны административные привилегии. Чтобы зашифровать автономные файлы, откройте папку Мой компьютер (My Computer) и в меню Сервис (Tools) выберите команду Свойства папки (Folder Options), в открывшемся окне свойств на вкладке Автономные файлы (Offline Files) установите флажок Шифровать автономные файлы для защиты данных (Encrypt Offline Files To Secure Data) (рис. 1).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/XP_Sec/ris1.jpg" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Настройка шифрования автономных файлов.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Удаленные операции EFS на общих файлах и Web-папках</h4>
+<p>Можно шифровать и расшифровывать файлы, расположенные в Web-папках Web Distributed Authoring and Versioning (распределенная система хранения файлов с доступом через Web), или WebDAV. У Web-папок много преимуществ по сравнению с общими файлами, и Microsoft рекомендует максимально широко применять их для удаленного хранения шифрованных файлов.
+<p>Web-папки требуют меньше внимания от администраторов и безопаснее, чем общие файлы. Web-папки также обеспечивают безопасное хранение и доставку шифрованных файлов через Интернет средствами стандартного протокола HTTP. Чтобы использовать общие файлы для удаленных операций EFS, требуется доменная среда Windows 2000 или более поздних версия Windows, так как при шифровании и расшифровке пользовательских файлов EFS работает от имени пользователя посредством протокола делегирования полномочий в Kerberos.
+<p>Основное отличие удаленных операций EFS с общими файлами и файлами в Web-папках - то, в каком месте эти операции выполняются. Если файлы хранятся в общих файлах, все операции EFS выполняются на компьютере, где расположен файл. Так, если вы подключились к общему сетевому файлу и пытаетесь открыть ранее зашифрованный файл, он расшифровывается на компьютере, где хранится, а затем передается открытым текстом по сети на ваш компьютер.
+<p>При хранении файла на Web-папках все операции EFS выполняются на локальном компьютере. Скажем, при подключении к Web-папке и попытке открыть зашифрованный файл последний пересылается по сети в зашифрованном виде на локальный компьютер и уже там расшифровывается системой EFS. Входящий и исходящий трафик Web-папок - это необработанные данные, которые, даже перехваченные атакующим, остаются зашифрованными и совершенно для него бесполезны.
+<p>Такое различие в выполнении операций EFS объясняет, почему общие файлы требуют больших усилий со стороны администраторов, чем Web-папки.
+<p>EFS с Web-папками устраняет необходимость в специализированном ПО для безопасного совместного использования зашифрованных файлов пользователями и организациями. Файл может храниться в свободном доступе на файловых серверах в интрасети или в Интернете и при этом оставаться надежно защищенным средствами EFS.
+<h3>Службы сертификации </h3>
+<p>Службы сертификации - это компонент базовой ОС, позволяющий ей выполнять функции центра сертификации (certification authority, CA), или ЦС, в том числе выпускать цифровые сертификаты и управлять ими. Windows XP Professional поддерживает многоуровневые иерархии ЦС и сети ЦС с перекрестными доверительными отношениями, а также изолированные и интерактивные ЦС.
+<h4>Хранилища сертификатов с открытыми ключами </h4>
+<p>Windows XP Professional хранит сертификаты с открытыми ключами в личном (Personal) хранилище сертификатов. Они хранятся открытым текстом, так как это общедоступная информация. Сертификаты имеют цифровую подпись ЦС для предотвращения изменения.
+<p>Сертификаты пользователя расположены в папке Documents and Settings\<имя_пользователя>\ApplicationData\Microsoft\<br>SystemCertificates\My\Certificates профиля пользователя. Эти сертификаты записываются в локальном реестре при каждом входе в систему компьютера. Для перемещаемых профилей сертификаты обычно хранятся в определенном месте (не на компьютере) и &quot;следуют&quot; за пользователем при его входе в систему любого компьютера в домене.
+<h4>Хранение закрытых ключей </h4>
+<p>Поставщики услуг криптографии (cryptographic service provider, CSP) - как Base CSP, так и Enhanced CSP, хранят закрытые ключи в профиле пользователя в папке %SystemRoot%\Documents and Settings\<имя_пользователя>\<br>Application Data\Microsoft\Crypto\RSA. В перемещаемых профилях пользователей закрытый ключ располагается в папке RSA на контроллере домена и загружается на компьютер только на время его работы.
+<p>Поскольку закрытые ключи надо защищать, все файлы в папке RSA автоматически шифруются случайным симметричным ключом - основным ключом пользователя (user&#39;s master key). Ключ длиной в 64 символа создается надежным генератором случайных чисел. На базе основного ключа создаются ключи 3DES, используемые для шифрования закрытых ключей. Основной ключ автоматически генерируется и периодически возобновляется.
+<p>При хранении на диске основной ключ защищается по алгоритму Triple DES с применением ключа, созданного на основе вашего пароля. Основной ключ применяется для автоматического шифрования всех файлов в папке RSA по мере их создания.
+<h4>Автоматический запрос сертификата пользователя </h4>
+<p>В Windows 2000 имелась функция автоматического запроса сертификата пользователя. Автоматический запрос сертификата компьютера и контроллера домена поддерживается и групповой политикой Microsoft Active Directory. Автоматический запрос сертификата компьютера чрезвычайно полезен для упрощения подключений по IPSec или L2TP/IPSec VPN к серверам с Windows XP со службой Routing и Remote Access и другим серверам.
+<p>Эта функция снижает совокупную стоимость владения и упрощает управление жизненным циклом сертификатов для пользователей и администраторов. Автоматический запрос сертификата смарт-карты и ЦС с самоподписанными сертификатами обеспечивают дополнительную защиту пользователям предприятий, где требуется усиленная безопасность.
+<h4>Запросы в ожидании и обновление сертификатов </h4>
+<p>Автоматический запрос сертификата пользователя в Windows XP Professional обеспечивает также запросы в ожидании и обновление сертификатов. После запроса сертификата вручную или автоматически на сервере сертификации Windows .NET Server CA ожидается разрешение администратора на выпуск сертификата или завершение процесса верификации. После одобрения и выпуска сертификата механизм автоматического запроса автоматически установит сертификат.
+<p>В процессе обновления сертификатов пользователя с истекшим сроком действия также применяется механизм автоматического запроса. Сертификаты автоматически обновляются от имени пользователя, причем процедура определяется параметрами шаблонов сертификатов в Active Directory.
+<p>По умолчанию сертификаты и ключи защищены. Для дополнительной защиты вы вправе применить дополнительные меры безопасности, в том числе выполнять экспорт закрытых ключей и хранить их в защищенном месте.
+<h3>Управление реквизитами </h3>
+<p>Управление реквизитами в Windows XP состоит из трех компонентов: интерфейс пользователя для ввода реквизитов, хранилище имен и паролей пользователя и связка ключей (keyring).
+<h4>Интерфейс пользователя для ввода реквизитов </h4>
+<p>Приложение отображает интерфейс пользователя для ввода реквизитов, если компонент аутентификации возвратил ошибку проверки подлинности. (Это касается только приложений, в которых такой интерфейс реализован.)
+<p>Вам предлагается ввести имя пользователя и пароль в соответствующем диалоговом окна или выбрать сертификат X.509 из хранилища My Store. Приложение также может предусматривать флажок Remember my password (Запомнить пароль), при установке которого реквизиты запоминаются.
+<p>Сохранение реквизитов поддерживают только интегрированные с Windows XP компоненты проверки подлинности (например, Kerberos, NTLM, SSL). Для базовой проверки подлинности отображается интерфейс пользователя для ввода реквизитов, но возможности сохранения реквизитов нет.
+<h4>Хранилище реквизитов пользователя </h4>
+<p>Реквизиты перемещаемых профилей хранятся в защищенном хранилище Stored User Names and Passwords (Сохраненные имя и пароль пользователя). Порядок доступа к реквизитам определяют параметры локальной защиты (Local Security Settings). Реквизиты хранятся на основе целевой информации, возвращенной ресурсом.
+<p>Когда установлен флажок Remember my password в интерфейсе запроса реквизитов, реквизиты сохраняются в наиболее общей форме. Скажем, после обращения к определенному серверу в домене реквизиты сохраняются в форме *.domain.com. При сохранении разных реквизитов для разных серверов в этом домене указанная запись не перезаписывается, а создаются более конкретные записи о целевой информации.
+<p>При обращении к ресурсу с применением интегрированного компонента проверки подлинности последний выберет среди сохраненных реквизитов пользователей наиболее близко соответствующие целевой информации, возвращенной ресурсом. Найдя нужные реквизиты, компонент ничего не будет спрашивать у пользователя. В случае неудачи поиска реквизитов приложению, которое пыталось обращаться к ресурсу, возвращается ошибка аутентификации.
+<p>Приложение, обращающееся к ресурсу, не обязательно должно реализовывать интерфейс пользователя для ввода реквизитов. Если оно взаимодействует с интегрированным компонентом проверки подлинности, последний и выполняет поиск реквизитов. В действительности сохраненные реквизиты сможет получить только компонент проверки подлинности.
+<p>Для Windows XP Professional в составе домена используется классический интерфейс пользователя для ввода реквизитов, а в Windows XP Home Edition и Windows XP Professional в рабочей группе - новый дружественный интерфейс пользователя (рис. 2).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/XP_Sec/ris2.jpg" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Новый дружественный интерфейс для ввода реквизитов пользователя.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h4>Связка ключей </h4>
+<p>Связка ключей (keyring) позволяет вручную управлять сохраненными реквизитами. Для работы с ней служит элемент User Accounts Панели управления.
+<p>В связке ключей отображается список сохраненных реквизитов. При выделении реквизита в поле описания в нижней части окна отображается его краткое описание. Можно добавлять новые реквизиты, редактировать и удалять существующие.
+<p>При добавлении реквизитов система представит диалоговое окно, похожее на интерфейс пользователя для ввода реквизитов, и попросит указать целевую информацию. В целевой информации разрешается использовать символы подстановки в виде звездочки (*).
+<p>Редактирование реквизитов позволяет самостоятельно изменить целевую информацию или сами реквизиты. Здесь можно изменить имя пользователя и пароль на сервере. Не разрешается применять интерфейс пользователя для ввода реквизитов и редактирования реквизитов, созданных конкретным приложением. Например, не удастся отредактировать реквизиты паспорта. Но вы вправе удалять любые реквизиты. Возможность сохранять реквизиты обычно определяется в групповой политике.
+<p>Чтобы разработчики могли использовать механизм сохранения реквизитов, API запроса реквизитов и другие базовые API описаны в соответствующем комплекте Platform Software Development Kit (SDK).
+<h3>Быстрое переключение пользователей </h3>
+<p>Быстрое переключение пользователей в Windows XP Professional доступно, только когда компьютер работает в составе рабочей группы или изолированно. Если компьютер присоединен к домену, параметры входа в систему компьютера определяются политикой, заданной администратором. На компьютерах с Windows XP Professional, которые не работают в составе домена, разрешается переключаться между сессиями разных пользователей без выхода из системы и закрытия приложений.
+<p>Названные возможности обеспечивает технология поддержки и хранения пользовательских сессий, аналогичная той, что применяется в терминальной службе Microsoft Windows 2000 Terminal Services. Смена пользователя выполняется буквально в мгновение ока &quot;горячими клавишами&quot; я+L или через меню выключения компьютера. В результате не будет закрыто ни одно приложение, а значит, не нужно ломать голову над тем, сохранять ли файлы другого пользователя - вся рабочая обстановка будет сохранена такой, какая она есть. Очередному пользователю Windows выведет окно приглашения, которое, кстати, легко настроить и оформить картинками по своему вкусу (рис. 3).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No12/XP_Sec/ris3.jpg" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Окно приглашения пользователю.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Разумеется, на сохранение каждого рабочего сеанса потребуется столько оперативной памяти, сколько нужно для хранения приложений, выполняемых в сеансах, плюс еще дополнительно 2 Мбайт на каждый сеанс. Поэтому для надежной поддержки нескольких пользователей рекомендуется компьютер с объемом ОЗУ не менее 128 Мбайт. Приложения, сохраняемые в фоновых сессиях, продолжают работать - скажем, почтовая программа другого пользователя будет продолжать принимать почту! Если система настроена на переход в &quot;спящий&quot; режим (hibernation mode) после приостановки работы, то все сеансы будут сохранены на жестком диске и восстановятся после включения компьютера.
+<p>Быстрое переключение пользователей разрешено для версий Windows XP Home Edition или Windows XP Professional на изолированном компьютере или компьютере в составе рабочей группы. При присоединении компьютера под управлением Windows XP Professional к домену эта функция отключается.
+<h3>Личная конфиденциальность </h3>
+<p>Возможности обеспечения личной конфиденциальности в Windows XP Professional такие же, как и в Windows XP Home Edition. Они различаются при работе в домене или в составе рабочей группы и в изолированном режиме. В домене применяется назначенная администратором политика.
+<h3>Доступ к Интернету - Internet Connection Firewall </h3>
+<p>Межсетевой экран Internet Connection Firewall в Windows XP Professional обеспечивает защиту настольных и переносных компьютеров при подключении к Интернету - особенно в случае постоянных подключений, таких как кабельные модемы и DSL.
+<h4>Групповая политика в ICF </h4>
+<p>Характерная функция ICF в Windows XP Professional - зависящая от места групповая политика. Это удобно для мобильных пользователей, желающих обеспечить безопасность при работе на переносных компьютерах в местах общественного подключения к Интернету: в гостиницах, аэропортах и т. п.
+<p>Когда компьютер с Windows XP Professional работает в составе домена, администратор домена обычно создает групповую политику, запрещающую поддержку ICF в корпоративной сети. Это облегчает работу как пользователя, так и администратора. Когда пользователь вернется домой или подключится к Интернету в общественном месте, межсетевой экран ICF снова заработает, так как указанная политика в той сети не действует.
+<h4>Как работает межсетевой экран </h4>
+<p>Такую технологию, как фильтры пакетов на основании полной информации о пакете, межсетевой экран ICF использует совместно с компонентом ICS. Хотя ICF обычно и применяется только в изолированном режиме работы компьютера, его иногда используют для защиты общего адаптера и обеспечения безопасности домашней сети.
+<p>По умолчанию фильтры пакетов межсетевого экрана ICF блокируют все незапрошенные пакеты из открытого сетевого интерфейса. Для этого ICF обращается к таблице трафика в Network Address Translation (NAT) и проверяет весь входящий трафик на соответствие своим правилам. Входные потоки данных пропускаются только при наличии соответствующей записи в таблице трафика NAT, созданной межсетевым экраном или другими средствами из внутренней защищенной сети. Иначе говоря, если источник сетевого сообщения находится вне защищенной сети, входящие данные отбрасываются.
+<p>Межсетевой экран ICF в Windows XP Professional дает уверенность, что хакеры не смогут просканировать вашу систему или подключиться к ее ресурсам. Однако здесь имеется определенный компромисс: межсетевой экран затрудняет конфигурирование системы для работы в качестве сервера в Интернете.
+<p>Межсетевой экран ICF в Windows XP Professional доступен, только когда компьютер включен в рабочую группу или в изолированную конфигурацию. В домене параметры ICF определяются политиками, назначенными администратором.
+<h4>Параметры групповой политики, относящиеся к безопасности </h4>
+<p>С Windows XP поставляются шаблоны защиты, представляющие собой заранее сконфигурированные наборы политик безопасности, которые разрешается применять для обеспечения определенного уровня защиты пользовательских компьютеров. Шаблоны предусматривают несколько уровней защиты: низкий (low), средний (medium) и высокий (high).
+<p>Существуют также определенные политики управления паролями:
+<ul>
+  <li>определение минимальной длины пароля;</li>
+  <li>настройка интервала между обязательной сменой пароля;</li>
+  <li>управление доступом к ресурсам и данным. </li>
+</ul>
+<h3>Политика ограничения используемых приложений </h3>
+<p>Эта политика предоставляет администраторам механизм определения и управления ПО, работающим в домене. Она позволяет ограничить круг приложений только разрешенным к выполнению ПО и запрещает работу нежелательных приложений, среди которых вирусы и &quot;троянцы&quot;, а также другое ПО, вызывающее конфликты.
+<p>Политика идентифицирует приложения по пути к файлу, хешу файла, подписанному сертификату Microsoft Authenticode или зоне Интернета. После идентификации система применяет политику, заданную администратором.
+<p>Политика ограничения используемых приложений помогает защититься и от вирусов-сценариев, и от &quot;троянцев&quot;. Администратор может разрешить выполнение только тех сценариев, которые подписаны определенными организациями, и работа таких вирусов-сценариев, как ILOVEYOU.VBS, станет невозможной. Политика также позволяет управлять тем, какие приложения пользователям разрешено устанавливать на своих компьютерах.
+<p>Политика ограничения применяется и на изолированных компьютерах при конфигурировании политики локальной защиты. Она также интегрируется с групповой политикой и Active Directory. Можно задать разные политики ограничения используемых приложений для различных подмножеств пользователей или компьютеров. Компьютер Windows XP можно задействовать и для создания политики ограничения используемых приложений в среде Windows 2000. Windows 2000-компьютеры в домене игнорируют эту политику, компьютеры с Windows XP приводят ее в исполнение.
+<p>Политика ограничения используемых приложений создается в оснастке Group Policy консоли управления Microsoft Management Console (MMC) и состоит из заданного по умолчанию правила, определяющего, разрешено или запрещено выполнение определенных программ. Стандартное правило предусматривает два варианта: unrestricted (&quot;неограниченно&quot;) и disallowed (&quot;запрещено&quot;). Если стандартное правило установлено в режим unrestricted, администратор может определять исключения, т. е. указывать программы, которые запускать запрещено. Более безопасный подход - изначально установить общее запрещение (режим disallowed), а затем выбрать только те программы, которые запускать разрешено.
+<h3>Протокол IPSec </h3>
+<p>Безопасность IP-сетей - почти стандартное требование в нынешнем деловом мире 
+  с Интернетом, интрасетями, отделениями и удаленным доступом. Поскольку конфиденциальная 
+  информация постоянно пересылается по сети, сетевые администраторы и другие специалисты 
+  службы поддержки должны обеспечить защиту этого трафика от:
+<ul>
+  <li>изменения данных при пересылке;</li>
+  <li>перехвата, просмотра и копирования;</li>
+  <li>несанкционированного олицетворения (или маскарадинга) определенных ролей;</li>
+  <li>перехвата и повторного использования для получения доступа к конфиденциальным 
+    ресурсам (для этого обычно применяется зашифрованный пароль). </li>
+</ul>
+<p>Службы безопасности призваны обеспечить целостность, конфиденциальность и проверку подлинности данных, а также защиту от их повторного использования для получения доступа.
+<h4>Зачем нужен IPSec </h4>
+<p>Протокол IP не имеет стандартного механизма безопасности, и IP-пакеты легко перехватывать, просматривать, изменять, пересылать повторно и фальсифицировать. Без защиты и открытые, и частные сети подвержены несанкционированному доступу. Внутренние атаки - это обычно результат слабой или вообще отсутствующей защиты интрасети. Риски внешних атак обусловлены подключением к Интернету и экстрасетям. Одно лишь основанное на паролях управление доступом пользователей не обеспечивает безопасности данных, пересылаемых по сети.
+<p>Вот почему сообщество Internet Engineering Task Force (IETF) разработало IPSec - протокол сетевого уровня для проверки подлинности, целостности и конфиденциальности данных, а также защиту от повторов. Поддержка IPSec встроена в Windows 2000 и Windows XP Professional. Таким образом, эти системы - хорошая основа для создания защищенных интрасетей и связи через Интернет. В них применяются стандартные отраслевые алгоритмы шифрования и всеобъемлющий подход к управлению системой безопасности для защиты всего обмена по протоколу TCP/IP на обеих сторонах брандмауэра организации. В результате стратегия сквозной безопасности Windows 2000 и Windows XP Professional защищает и от внешних, и от внутренних атак.
+<p>IP-безопасность располагается ниже транспортного уровня, сокращая усилия сетевых администраторов, которым обычно приходится обеспечивать защиту последовательно для каждого приложения. Развертывание протокола IPSec в Windows XP Professional и Windows 2000 позволяет обеспечить высокий уровень безопасности всей сети, при этом приложения на серверах и клиентах, поддерживающих IPSec, защищаются автоматически.
+<h4>Криптографические механизмы защиты </h4>
+<p>Для предупреждения нападений в IPSec служат криптографические механизмы. Они защищают информацию путем хеширования и шифрования.
+<p>Для защиты информации используются алгоритм и ключ.
+<p>Алгоритм - это последовательность математических действий для преобразования информации, а ключ - секретный код или число, необходимый для чтения, изменения или проверки защищенных данных.
+<p>Уровень безопасности для данного сеанса в IPSec определяется политикой. Политика обычно назначается в распределенных системах через контроллеры домена с Windows 2000 или создается и хранится локально в реестре компьютера с Windows XP Professional.
+<h4>IPSec в работе </h4>
+<p>Перед передачей любых данных компьютер с поддержкой IPSec согласовывает с партнером по связи уровень защиты, используемый в сеансе. В процессе согласования определяются методы аутентификации, хеширования, туннелирования (при необходимости) и шифрования (также при необходимости). Секретные ключи проверки подлинности создаются на каждом компьютере локально на основании информации, которой они обмениваются. Никакие реальные ключи никогда не передаются по сети. После создания ключа выполняется проверка подлинности и начинается сеанс защищенного обмена данными.
+<p>Уровень безопасности (высокий или низкий) определяется политиками IP-безопасности обменивающихся компьютеров. Скажем, для связи между компьютером с Windows XP Professional и компьютером, не поддерживающим IPSec, создание защищенного канала не требуется. С другой стороны, в сессии обмена между Windows 2000-сервером, содержащим конфиденциальные данные, и компьютером в интрасети обычно нужна высокая степень безопасности.
+<h3>Поддержка смарт-карт </h3>
+<p>Смарт-карта - это устройство с интегральной схемой размером с кредитную карточку, предназначенное для безопасного хранения открытых и закрытых ключей, паролей и прочей личной информации. Она служит для операций шифрования с открытым ключом, проверки подлинности, введения цифровой подписи и обмена ключами.
+<p>Смарт-карта предоставляет следующие функции:
+<ul>
+  <li>особо защищенное хранилище для закрытых ключей и другой частной информации;</li>
+  <li>изоляцию чрезвычайно важных для безопасности вычислений, в том числе проверки 
+    подлинности, цифровой подписи и обмена ключами, от других компонентов системы, 
+    которые напрямую не работают с этими данными;</li>
+  <li>свободу перемещения реквизитов пользователей и другой частной информации 
+    между компьютерами на работе и дома, а также удаленными компьютерами. </li>
+</ul>
+<h4>PIN вместо пароля </h4>
+<p>Для активизации смарт-карт применяются PIN-коды (Personal Identification Number - персональный идентификационный номер), а не пароли. Код известен только владельцу смарт-карты, что повышает надежность защиты. Для активизации смарт-карты пользователь вводит ее в подключенное к компьютеру устройство чтения и в ответ на запрос системы вводит свой PIN-код.
+<p>PIN-код надежнее обычных сетевых паролей. Пароли (или их производные, например, хеш) передаются по сети и подвержены атакам. Устойчивость пароля к взлому зависит от его длины, надежности механизма защиты пароля и от того, насколько трудно его угадать. С другой стороны, PIN-код никогда не передается по сети, и поэтому его нельзя перехватить анализатором пакетов. Дополнительное средство защиты - блокировка смарт-карты после нескольких неудачных попыток подряд ввести PIN-код, что сильно затрудняет подбор кода. Разблокировать смарт-карту может только администратор системы.
+<h4>Стандарты смарт-карт </h4>
+<p>Windows 2000 работает со стандартными смарт-картами и устройствами чтения смарт-карт, поддерживающими спецификацию PC/SC (Personal Computer/Smart Card), определенную рабочей группой PC/SC Workgroup, а также технологию Plug and Play. Для поддержки спецификации PC/SC 1.0 в Windows смарт-карта должна конструктивно и по электрическим характеристикам соответствовать стандартам ISO 7816-1, 7816-2 и 7816-3.
+<p>Устройства чтения смарт-карт подключают к стандартным интерфейсам периферийных устройств персонального компьютера, таким как RS-232, PS/2, PCMCIA и USB. Некоторые устройства чтения смарт-карт с интерфейсом RS-232 оборудованы дополнительным кабелем, подключаемым к порту PS/2 и используемым для питания устройства. PS/2-порт применяется только для питания, но не для передачи данных.
+<p>Устройства чтения смарт-карт считаются стандартными устройствами Windows со своим дескриптором безопасности и PnP-идентификатором. Они управляются стандартными драйверами устройств Windows и устанавливаются и удаляются средствами мастера Hardware wizard.
+<p>В Windows 2000 Server и Windows XP Professional имеются драйверы для многих коммерческих PnP-устройств чтения смарт-карт с логотипом совместимости с Windows. Некоторые производители поставляют драйверы для несертифицированных устройств чтения, которые в настоящее время работают с Windows. И все же для обеспечения постоянной поддержки Microsoft рекомендуется приобретать устройства чтения смарт-карт, имеющие логотип совместимости с Windows.
+<h4>Вход в систему с использованием смарт-карты </h4>
+<p>Смарт-карты применяются для входа только под доменными, но не локальными учетными записями. Если вход в систему в интерактивном режиме под учетной записью домена в Windows 2000 Server и Windows XP Professional выполняется по паролю, используется протокол проверки подлинности Kerberos v5. При входе со смарт-картой ОС использует Kerberos v5 с сертификатами X.509 v3, если только контроллер домена не работает под Windows 2000 Server.
+<p>Если вместо пароля применяется смарт-карта, хранимая на ней пара ключей заменяется общим секретным ключом, созданным на основе пароля. Закрытый ключ есть только на смарт-карте. Открытый ключ предоставляется всем, с кем нужно обмениваться конфиденциальной информацией.
+<h4>Применение смарт-карт для администрирования </h4>
+<p>Администраторы выполняют свою обычную работу под учетной записью простого пользователя, а привилегированную административную учетную запись применяют для администрирования. Такие инструментальные средства и утилиты, как Net.exe и Runas.exe, позволяют им работать с дополнительными реквизитами. В Windows XP Professional служебные программы также применяются для управления реквизитами на смарт-картах.
+<h3>Kerberos v5 </h3>
+<p>В Windows 2000 и Windows XP Professional реквизиты предоставляются в виде пароля, билета Kerberos или смарт-карты (если компьютер оборудован для работы со смарт-картами).
+<p>Протокол Kerberos v5 обеспечивает взаимную проверку подлинности клиента (например, пользователя, компьютера или службы) и сервера. Kerberos v5 предоставляет для серверов высокоэффективные средства аутентификации клиентов даже в огромных и чрезвычайно сложных сетевых средах.
+<p>Протокол Kerberos основан на предположении, что начальный обмен между клиентами и серверами выполняется в открытой сети, т. е. в такой, где любой неавторизованный пользователь может имитировать клиент или сервер, перехватывать или подделывать сообщения между полномочными клиентами и серверами. Kerberos v5 поддерживает защищенный и эффективный механизм проверки подлинности в сложных сетях с клиентами и ресурсами.
+<p>В Kerberos v5 применяется секретный (симметричный) ключ шифрования для защиты передаваемых по сети реквизитов входа в систему. Этот же ключ использует получатель для расшифровки реквизитов. Расшифровка и все последующие шаги выполняются службой центра распространения ключей Kerberos, работающей на каждом контроллере домена в составе Active Directory.
+<h4>Аутентификатор </h4>
+<p>Аутентификатор - это информация (например, метка времени), уникальная для каждого сеанса проверки и присоединяемая к зашифрованным реквизитам входа в систему для гарантии того, что переданное ранее сообщение с реквизитами не используются повторно. Для подтверждения получения и принятия исходного сообщения генерируется новый аутентификатор и присоединяется к зашифрованному ответу KDC клиенту. Если реквизиты входа в систему и аутентификатор удовлетворяют KDC, он выпускает билет TGT (ticket-granting ticket), на основании которого диспетчер локальной безопасности (Local Security Authority, LSA) получает билеты служб. Билеты служб содержат зашифрованные данные, подтверждающие подлинность клиента, и применяются для получения доступа к сетевым ресурсам без дополнительной проверки подлинности на все время действия билета. Начальный ввод пароля или реквизитов со смарт-карты &quot;виден&quot; пользователю, все остальное происходит автоматически (&quot;прозрачно&quot;) без его участия.
+<h4>Служба центра распространения ключей Kerberos </h4>
+<p>Эта служба применяется совместно с протоколом проверки подлинности Kerberos для аутентификации запросов на вход в систему в соответствии с данными в Active Directory.
+<p>Kerberos v5 используется в Windows 2000 Server и Windows XP Professional по умолчанию, но для нормальной работы этого протокола требуется, чтобы и контроллеры домена, и клиентские компьютеры работали под управлением Windows 2000 или Windows XP Professional. Если это условие не соблюдается, для проверки подлинности используется протокол NTLM.
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</A></b></li><li><b><A href='detail.php@ID=24095.html'>Сертифицированные системы обнаружения вторжений </A></b></li><li><b><A href='detail.php@ID=22469.html'>Новые технологии в Security operation center</A></b></li><li><b><A href='detail.php@ID=20887.html'>Агрессивность и мобильность: какие угрозы нас ждут в 2013-м</A></b></li><li><b><A href='detail.php@ID=20621.html'>Карты с дисплеем как новое средство защиты онлайн-банкинга</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=9025.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Безопасность в Windows XP
+</a><br><a href="detail.php@ID=9025.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Камилл Ахметов
+Стратегия безопасности Windows XP 
+Модель безопасности Windows XP Professional основана на понятиях аутентификации и авторизации&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=9025.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=9025&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0b103a44a237e0682809ad8141716af7'><img src='../bitrix/tools/captcha.php@captcha_code=0b103a44a237e0682809ad8141716af7' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

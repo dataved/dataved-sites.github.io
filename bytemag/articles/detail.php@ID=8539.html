@@ -1,0 +1,602 @@
+<HTML>
+<HEAD>
+<title>Технология AMD64
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Игорь Колбин Весной этого года корпорация AMD (http://www.amd.com) представила долгожданный процессор восьмого поколения Opteron. Он стал первым в мире 64-разрядным процессором, совместимым со стандартной архитектурой x86. Процессор AMD" />
+<meta name="description" content="Игорь Колбин Весной этого года корпорация AMD (http://www.amd.com) представила долгожданный процессор восьмого поколения Opteron. Он стал первым в мире 64-разрядным процессором, совместимым со стандартной архитектурой x86. Процессор AMD" />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082921','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm8539' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=8539&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm8539"].SHOW_IMAGE.value="N"; document.forms["PrintForm8539"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm8539"].SHOW_IMAGE.value="Y"; document.forms["PrintForm8539"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(8539);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=8539.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=8539.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(8539);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a><br /></p><a href='../numbers/index.php@ID=11510.html'>№6 (58), июнь 2003</a><h1>Технология AMD64
+</h1>10.06.2003<p></p><DIV class='article-text'><p><i>Игорь Колбин</i> 
+<p>Весной этого года корпорация AMD (<a href="http://www.amd.com">http://www.amd.com</a>) 
+  представила долгожданный процессор восьмого поколения Opteron. Он стал первым 
+  в мире 64-разрядным процессором, совместимым со стандартной архитектурой x86. 
+  Процессор AMD Opteron для серверов и рабочих станций использует набор инструкций 
+  x86, расширенный в расчете на поддержку 64-разрядных вычислений. По мнению разработчиков, 
+  технология AMD64 развивает стандартную архитектуру x86 и позволяет разработать 
+  единую инфраструктуру 64-разрядной вычислительной обработки, полностью совместимую 
+  с традиционным набором команд x86. Считается, что c появлением процессора AMD 
+  Opteron устраняются последние барьеры на пути развития 64-разрядной технологии. 
+  В частности, благодаря этому может упроститься переход на ПО нового поколения. 
+<p>Как полагают в компании AMD, новая технология также обеспечивает защиту инвестиций клиентов, которые благодаря ей смогут по-прежнему пользоваться всеми своими 32-разрядными программными продуктами до тех пор, пока не решат развертывать новое, 64-разрядное ПО. Поскольку новые программы смогут работать параллельно со старыми, компьютерные системы, основанные на технологии AMD64, послужат фундаментом для создания первой в отрасли объединенной инфраструктуры 32- и 64-разрядных ИТ.
+<p>Сразу после официального объявления в тестах TPC-C, считающихся наиболее важными для серверов, процессор AMD Opteron достиг уровня производительности на 14% выше, чем конкурирующие с ним 32-разрядные серверные процессоры. В пакете тестов SPECweb99, проверяющих производительность доступа в Интернет, процессор AMD Opteron модели 844 впервые в мире превысил рекордную планку 10 000.
+<p>Весной был начат выпуск процессоров AMD Opteron (рис. 1) моделей 240, 242 и 244 для однопроцессорных и двухпроцессорных серверов. Позже будет объявлено о начале производства процессоров AMD Opteron серии 800 для серверов, использующих до восьми процессоров. Ожидается, что поставки процессоров AMD Opteron серии 100 (для однопроцессорных серверов) будут начаты в III квартале текущего года.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2003/amd64/ris1.jpg" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Процессор Opteron.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<table width="100%" border="0" bgcolor="#CCFFCC">
+  <tr>
+    <td>
+      <h4>Коротко об Opteron </h4>
+      <p>Это первый представитель нового, восьмого поколения процессоров AMD, 
+        знаменующего собой эру перехода с 32-разрядных вычислений на 64-разрядные. 
+        Процессор Opteron первым в мире обеспечил возможность работы с 64-разрядными 
+        ОС и приложениями, одновременно сохраняя высокую производительность при 
+        работе с 32-разрядными x86-программами. 
+      <p>Отметим основные особенности Opteron. В архитектуре нового процессора 
+         имеются 12-ступенчатый конвейер для целочисленных вычислений 
+        и 17-ступенчатый для операций с плавающей точкой. Полностью виртуальное 
+        64-разрядное адресное пространство (52 разряда физической памяти) теоретически 
+        позволяет получить доступ к 4,5 Тбайт памяти. Регистры общего назначения 
+        имеют разрядность 64 бит. Для кэш-памяти инструкций и данных 1-го уровня 
+        (L1) отведено по 64 Кбайт, объем кэш-памяти 2-го уровня (L2) - 1 Мбайт. 
+        Встроенный двухканальный контроллер памяти DDR (PC2700), позволяющий обойтись 
+        без &quot;северного моста&quot; набора микросхем, работает на частоте процессора 
+        и снимает ограничения по пропускной способности, связанные с фронтальной 
+        шиной FSB. Три встроенных канала шины HyperTransport обеспечивают совокупную 
+        пропускную способность до 19,2 Гбайт/с. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2003/amd64/ris2a.gif" alt=Fig.></td>
+<td valign="bottom">Блок-схема процессора Opteron. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+      <p>
+      <p>Процессор выполнен с соблюдением проектных норм 0,13 мкм и с использованием 
+        технологии &quot;кремний на изоляторе&quot; (SOI). Микросхема содержит 105,9 млн 
+        транзисторов, реализованных на площади кристалла 193 мм2. Максимальная 
+        рассеиваемая мощность не превышает 89 Вт. Кристалл процессора помещен 
+        в корпус типа mPGA с числом контактов 940. 
+    </td>
+  </tr>
+</table>
+<h3>Основы архитектуры x86-64 </h3>
+<p>Известно, что достаточно долгое время архитектура х86 не претерпевала никаких принципиальных изменений. Собственно, ключевые особенности адресации команд, сегментации памяти, да и сами х86 команды не менялись со времен микросхем типа i386. Часто говорят, что это был последний революционный процессор. Теперь же усилиями AMD впервые со времен i386 архитектура х86 подверглась полноценному расширению.
+<p>Хороша архитектура х86 или нет, но именно она до сих пор доминирует по количеству как инсталлированных систем, так и существующего ПО.
+<p>Попробуем разобраться, как реализуется 64-разрядность в Opteron. Дело в том, что в этом процессоре к имеющейся системе регистров добавлено несколько новых регистров, а существующие просто расширены (рис. 2). Так, регистры общего назначения дополнены еще восемью регистрами R8-R15, используемыми в 64-разрядном режиме (т. е. для их использования потребуется перекомпиляция программ), а существующие EAX, EBX и т. п. расширены с 32 до 64 разрядов. Кроме того, в блок SSE добавлено восемь новых 128-разрядных XMM-регистров, что не только обеспечивает поддержку команд SSE2, но и улучшает обработку мультимедиа. Вообще говоря, увеличение количества регистров призвано повысить производительность ресурсоемких приложений, например, в программах научных расчетов.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2003/amd64/ris2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Расширенный файл регистров.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Для реализации одновременной работы как с 32-разрядным, так и с 64-разрядным кодом и регистрами архитектура AMD64 предполагает, что процессор поддерживает два режима: так называемый &quot;длинный&quot; режим (Long mode), который включает в себя два подрежима - &quot;истинно&quot; 64-разрядный и режим совместимости (Compatibility mode), а также наследуемый режим (Legacy mode).
+<p>Для чего понадобились два дополнительных подрежима для 64-разрядного режима? Оказывается, все очень просто. При работе с 32-разрядной ОС задействовать 64-разрядный режим в полном объеме нет никакого смысла. Но как только осуществлен переход на &quot;настоящую&quot; 64-разрядную ОС, возникает альтернатива. Можно использовать &quot;старое&quot;, 32-разрядное ПО (и тогда нужен режим совместимости), а можно - новое, 64-разрядное. Кроме того, разработчики говорят, что переключения &quot;частных&quot; режимов Long mode происходят весьма быстро, в отличие от переключения режимов работы процессора. Таким образом, введение таких режимов становится вполне целесообразным.
+<p>Compatibility mode обеспечивает двоичную совместимость с существующими 16- и 32-разрядными приложениями при работе с 64-разрядной ОС. Режим совместимости разрешается ОС по принципу отдельных кодовых сегментов. Однако, в отличие от 64-разрядного режима, сегментация функционирует обычным образом, используя семантику защищенного режима. С точки зрения выполняемого приложения процессор выглядит как обычный x86-кристалл в защищенном режиме (Protected mode). Однако с точки зрения ОС трансляция адресов, работа с прерываниями и исключениями, а также системные структуры данных используют механизмы 64-разрядного Long mode.
+<p>В дополнение к Long mode новая архитектура предполагает поддержку наследуемого режима, обеспечивающего двоичную совместимость с 16- и 32-разрядными ОС. Иначе говоря, в Legacy mode процессор уподобляется обычному 32-разрядному кристаллу x86. В этом режиме не задействуется ни одна из 64-разрядных функций, а процессор работает как стандартный x86. Этот режим обеспечивает полную совместимость с существующими 32-разрядными реализациями x86-архитектуры, в частности, включает поддержку сегментированной памяти и 32-разрядных регистров общего назначения и указателя инструкций.
+<p>Стоит отметить, что полностью все возможности Opteron задействуются именно в 64-разрядном режиме Long mode, т. е. при работе с 64-разрядными ОС.
+<h3>Ядро процессора </h3>
+<p>Кэш-память инструкций (I-cache) по сравнению с Athlon не слишком изменился - он так и остался 2-канальным частично-ассоциативным, и объем его по-прежнему 64 Кбайт. Размер блока равен 64 байт. Имеются два набора тэгов - fetch port (порт выборки) и snoop (слежения). Содержимое памяти защищается при помощи проверки четности.
+<p>Кэш-память данных (D-cache) тоже 2-канальная частично-ассоциативная. В текущей модификации поддерживается 40-разрядный физический и 48-разрядный линейный адрес. Размер блока данных также составляет 64 байт. Из нововведений стоит отметить протокол работы кэш-памяти MOESI (Modified, Owned, Exclusive, Shared, Invalid), который ранее использовался в наборе микросхем AMD760 MPX. Отметим, что реализация протокола MOESI более трудоемка, чем, например, MESI, и требует включения в процессор большего количества транзисторов. Однако, по мнению специалистов, такой протокол прекрасно работает и действительно повышает эффективность работы шины.
+<p>Вообще говоря, AMD64 как раз меньше нуждается в кэш-памяти, нежели другие х86-архитектуры. Напомним, что кэш-память нужна из-за того, что скорость работы процессоров растет намного быстрее, нежели скорость памяти, и задержки при обращении в память сводят на нет все преимущества от скоростного процессора, ибо большую часть времени тот просто ждет. Именно поэтому и наращивают кэш-память в процессорах - чтобы сгладить этот эффект и дать процессору возможность продолжать работу над предварительно запасенными данными. Однако, по мнению разработчиков, ключевая особенность архитектуры AMD64 как раз и состоит в намного меньших задержках памяти по сравнению со всеми остальными архитектурами.
+<p>Что касается размера буфера быстрого преобразования адреса TLB (Translation Look-aside Buffers), то, в отличие от кэш-памяти 1-го уровня, TLB для кэш-памяти 2-го уровня поддерживает только страницы в 4К. При этом обеспечивается уже 512 входов с 4-канальной ассоциативностью. Вообще говоря, задача TLB заключается в кэшировании транслируемых физических адресов памяти. Процесс трансляции необходим процессору при обращении к любым данным, хранящимся в основной памяти, а потому кэширование адресов существенно сокращает время с момента запроса данных процессором до момента их получения. Дело в том, что в момент обращения к оперативной памяти процессор обращается не к физическому адресу ячейки, а к виртуальному (естественно, между ними есть строгое соответствие). Эти преобразованные адреса и размещаются в TLB, причем отдельно для инструкций и данных. Если процессор не найдет нужный ему адрес, придется заняться его вычислением. Учитывая немалое количество адресов в большинстве случаев, подобные операции вполне могут заметно притормозить процессор. Понятно, что расширение TLB самым положительным образом сказывается на производительности. Обычно в TLB кэш-памяти команд и TLB кэш-памяти данных 2-го уровня используется так называемая специальная exclusive-архитектура. Кроме того, строки TLB поддерживают опережающую загрузку.
+<p>Увеличение числа строк в TLB кэш-памяти данных повышает вероятность успешного попадания в буфер (вероятность нахождения нужного адреса). Особенность архитектуры заключается в том, что записи TLB кэш-памяти 1-го уровня не дублируются в TLB кэш-памяти 2-го уровня. Таким образом, в последнем экономятся строки, благодаря чему этот буфер может кэшировать больше адресов.
+<h3>Интегрированный контроллер памяти </h3>
+<p>Одно из главных новшеств архитектуры AMD64 - интегрированный в процессор контроллер памяти. Основное преимущество встроенного контроллера памяти по сравнению с обычным, располагающимся в &quot;северном мосте&quot; набора микросхем, состоит в том, что контроллер памяти будет работать на частоте процессора, а следовательно, обладать низкой латентностью. Причем эта латентность будет тем меньше, чем на большей частоте будет работать процессор.
+<p>Контроллер памяти Opteron может работать с DDR-памятью стандарта PC1600/2100/2700 и использовать ширину шины 128 разрядов. В принципе допускается использование как одного, так и двух каналов памяти. Кроме того, вполне логично выглядит то, что встроенный контроллер поддерживает память с обнаружением и коррекцией ошибок ECC.
+<h3>Ключевая технология - HyperTransport </h3>
+<p>Одна из ключевых инноваций нового процессора - это, несомненно, технология HyperTransport. Она применяется не только для связи процессора и набора логики, но и для связи различных частей набора микросхем, разработанного AMD для Opteron, а также для связи между процессорами при построении многопроцессорных систем посредством встроенных в процессор дополнительных контроллеров HyperTransport.
+<p>Вообще говоря, технология межсоединений HyperTransport (рис. 3) представляет собой высокоскоростную, высокопроизводительную связь &quot;точка-точка&quot; для интегральных схем. Считается, что она позволяет процессам в высокопроизводительных компьютерах, сетевых и коммуникационных устройствах взаимодействовать друг с другом быстрее, чем существующие на данный момент технологии. Пропускная способность технологии HyperTransport, равная 12,8 Гбайт/с, может обеспечить 48-кратное увеличение скорости передачи данных по сравнению с ранее созданными системными межсоединениями, которые, как правило, поддерживают пропускную способность на уровне 266 Мбайт/с (PCI).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2003/amd64/ris3.gif" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Межсоединение HyperTransport.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Не секрет, что в системе есть по меньшей мере несколько областей, для которых технология HyperTransport позволяет избавиться от эффекта &quot;бутылочного горлышка&quot;. Так, для оптимальной работы фронтальная шина процессора должна увеличивать пропускную способность с ростом тактовой частоты. Благодаря замене традиционной шины процессора на HyperTransport пропускная способность существенно увеличивается. Если процессору требуются данные, отсутствующие в его кэш-памяти, ему приходится посылать запрос в системную память. В традиционной архитектуре, когда контроллер оперативной памяти интегрирован в &quot;северный мост&quot; набора логики, запрос будет обрабатываться последним, что повлечет за собой дополнительные задержки и увеличит латентность, которая, в свою очередь, снижает производительность системы в целом.
+<p>Как уже отмечалось, для решения данной проблемы AMD интегрировала контроллер памяти непосредственно в процессоры семейства Opteron. Прямой доступ к памяти может заметно понизить латентность и увеличить практическую пропускную способность. Разумеется, что увеличение скорости одного из компонентов сказывается на производительности всего компьютера.
+<p>В настоящее время пропускная способность интерфейса, соединяющего &quot;северный мост&quot; системы с контроллером ввода-вывода (&quot;южным мостом&quot;), обычно составляет от 266 Мбайт/с до 1 Гбайт/с. Конечно, данные параметры приемлемы для среднестатистического настольного ПК, однако для производительных компьютеров, рабочих станций и серверов такая полоса пропускания может оказаться слишком низкой. К тому же с каждым днем ситуация все более обостряется: производители начинают использовать PCI-X, Gigabit Ethernet, USB 2.0 и другие стандарты, требующие большей скорости передачи данных. Благодаря внедрению HyperTransport в межкомпонентные связи наборов микросхем скорость передачи данных между мостами становится более высокой, что означает повышение общего стандарта производительности.
+<p>Вообще говоря, архитектура систем, построенных с применением технологии HyperTransport (рис. 4), представляет собой довольно внушительное дополнение к традиционной архитектуре и включает ряд новаций. Вместо соединения двух-трех компонентов набора микросхем PCI-шиной в ней появились туннели. Дополнительные компоненты довольно просто включить в цепь, что дает возможность получить платформу с улучшенными возможностями.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2003/amd64/ris4.gif" alt=Fig.4></td>
+<td valign="bottom">Рис. 4. Системная архитектура на базе HyperTransport.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Очевидно, что для создания простой и недорогой комбинации из блоков системной 
+  логики следует использовать недорогую последовательную шину, которая будет поддерживать 
+  большое количество устройств (т. е. масштабироваться), обладать простотой, надежностью 
+  и, разумеется, высокой скоростью передачи данных. Нетрудно догадаться, что технология 
+  HyperTransport как нельзя лучше подходит для создания систем, где требуются 
+  описанные выше качества: она легко расширяется как по количеству поддерживаемых 
+  компонентов, так и по части межблочной пропускной способности. Разумеется, в 
+  шине имеется управление энергопотреблением и коррекция ошибок. 
+<p>&nbsp;
+<table width="100%" border="0" bgcolor="#CCFFFF">
+  <tr>
+    <td>
+      <h4>HyperTransport </h4>
+      <p>Разработка шины Lightning Data Transfer (LDT) была начата корпорацией 
+        AMD еще в 1997 г. Несколько позже к ней присоединились такие гранды индустрии, 
+        как API Networks, Apple Computer, Cisco Systems, Nvidia, PMC-Sierra, Sun 
+        Microsystems, немного позже Transmeta и Acer Laboratories, VIA Technologies 
+        и другие компании, образовавшие в итоге консорциум HyperTransport Technology 
+        Consortium (<a href="http://www.hypertransport.org">http://www.hypertransport.org</a>). 
+        В конечном счете разработка и внедрение протокола HyperTransport должны 
+        решить проблемы, связанные со скоростью, ценой, мастштабируемостью, универсальностью 
+        соединений в компьютерах. 
+      <p>Устройства, поддерживающие протокол HyperTransport (процессоры, наборы 
+        логики, контроллеры), соединены по принципу &quot;точка-точка&quot; (peer-to-peer). 
+        Это теоретически означает, что между собой могут соединяться любые компоненты 
+        системы, причем без применения коммутаторов или мостов. Каждое соединение 
+        состоит из субсоединения &quot;Передачи&quot; (Tx) и субсоединения &quot;Получения&quot; (Rx), 
+        работающих асинхронно. Передача данных организована в виде пакетов длиной 
+        до 64 байт (значение должно быть кратно четырем). Протокол HyperTransport 
+        предполагает передачу данных по обоим фронтам сигнала. 
+      <p>Соединение HyperTransport может иметь магистраль шириной 2, 4, 8, 16, 
+        32 или 64 разряда в каждом направлении (Tx или Rx). Кроме того, соединения 
+        могут работать на разной тактовой частотой (от 200 до 800 МГц), в зависимости 
+        от требований к конкретному решению. Таким образом, технология HyperTransport 
+        предоставляет инженерам и разработчикам очень высокую гибкость. Так, в 
+        случае устройств с высокими требованиями к пропускной способности (процессоры) 
+        используется пара 32-разрядных соединений с частотой в 800 МГц, обеспечивающие 
+        6,4 Гбайт/с для Tx- и 6,4 Гбайт/с для Rx-соединения (результирующая линейная 
+        пропускная способность равна в этом случае 12,8 Гбайт/с). В то же время 
+        для сообщения между менее требовательными к скорости передачи данных компонентами 
+        (например, внутри какого-либо переносного устройства) можно задействовать 
+        четырехразрядную (2 по 2 разряда) магистраль, работающую на частоте 200 
+        МГц, что обеспечит скорость не менее 100 Мбайт/с для каждого направления. 
+      <p>Следует отметить, что устройства с разными режимами передачи данных смогут 
+        работать вместе в режиме менее быстрого устройства. Иными словами, предполагается 
+        возможность выбора режима работы компонента. Например, устройство с шиной 
+        в 16 разрядов можно подключить к устройству с режимами работы от 2 до 
+        8 разрядов. То же самое устройство может подключаться и к более быстрому, 
+        с магистралью от 32 до 64 разрядов. 
+      <p>Следует также упомянуть, что HyperTransport программно совместим с текущим 
+        стандартом PCI; иначе говоря, все ПО, разработанное с учетом моделей адресации 
+        и инициализации протокола PCI, будет функционировать и на платформе HyperTransport. 
+      <p>Новая версия спецификации HyperTransport Technology I/O Link Specification 
+        1.05 определяет несколько особенностей технологии HyperTransport, среди 
+        которых стоит отметить функцию коммутации, улучшенную поддержку взаимодействия 
+        по PCI-X 2.0, повышенную степень параллелизма и 64-разрядную адресацию. 
+        Данная спецификация расширяет набор определений протоколов и электрических 
+        параметров, позволяет выпускать на базе HyperTransport новый класс продуктов. 
+      <p>Механизм коммутации HyperTransport дает возможность соединять практически 
+        неограниченное число соответствующих устройств. Более того, за счет локальной 
+        коммутации трафика коммутатор HyperTransport сокращает задержку и снижает 
+        вероятность перебоев трафика. Коммутатор поддерживает объединение множества 
+        &quot;широких&quot; шин, что, в свою очередь, позволяет системным разработчикам 
+        предоставлять нужную полосу пропускания конкретной секции архитектуры. 
+      <p>В то же время программа HyperTransport Technology Compatibility Program 
+        содержит контрольные списки электрических параметров и характеристик протоколов, 
+        а также определение Device Under Test Connector, которым могут пользоваться 
+        производители систем, поддерживающих HyperTransport, чтобы гарантировать 
+        совместимость своих устройств. Благодаря этому пользователи и разработчики 
+        могут проверить соответствие спецификаций своих устройств и HyperTransport 
+        и гарантировать, что продукты одного производителя будут без труда интегрироваться 
+        с другими. 
+    </td>
+  </tr>
+</table>
+<h3>Набор микросхем AMD 8000 </h3>
+<p>Корпорация AMD разработала для своих процессоров восьмого поколения новый набор микросхем AMD-8000. Он значительно отличается от всех своих предшественников, олицетворяя собой новый подход к архитектуре наборов логики. Так, AMD-8000 не содержит привычных &quot;северного&quot; и &quot;южного мостов&quot;, а состоит из так называемых &quot;тоннелей&quot;-контроллеров. Такие контроллеры имеют на входе одну полосу пропускания, а на выходе - другую, используя разницу между ними для своих целей. При этом набор логики позволяет соединять &quot;в цепочку&quot; произвольное число &quot;тоннелей&quot;, что допускает реализацию систем различной сложности и с различными характеристиками.
+<p>В составе AMD-8000 анонсировано три базовых компонента для построения систем 
+  на Opteron. К ним относятся:
+<ul>
+  <li>графический AGP-&quot;тоннель&quot; (AMD-8151), реализующий поддержку шины AGP 3.0;</li>
+  <li>&quot;тоннель&quot; PCI-X (AMD-8131), посредством которого в системах на Opteron будет 
+    поддерживаться шина PCI-X;</li>
+  <li>&quot;тоннель&quot; ввода-вывода (AMD-8111), поддерживающий USB-порты, IDE-устройства 
+    и шину PCI. </li>
+</ul>
+<p>Для соединения компонентов набора микросхем с процессором и процессоров между собой в многопроцессорных системах сам Opteron имеет до трех встроенных контроллеров шины HyperTransport с шириной 16 разрядов и пропускной способностью 3,2 Гбайт/с в каждую сторону.
+<p>Графический AGP-&quot;тоннель&quot; AMD-8151 представляет собой контроллер шины AGP, поддерживающий устройства AGP 4x и AGP 8x. Кроме того, микросхема содержит и два контроллера шины HyperTransport: 16-разрядный входной и 8-разрядный выходной (так называемые Link-A и Link-B). Благодаря этому AGP тоннель может получать данные со скоростью 3,2 (6,4) Гбайт/с, а передавать далее - со скоростью 0,8 (1,6) Гбайт/с (в AMD-8000 это передача на &quot;южный мост&quot;). Разница в полосе пропускания составляет в данном случае 2,4 Гбайт/с, что может использоваться в &quot;собственных интересах&quot; контроллера. Например, этого как раз достаточно для полноценной работы AGP 8x с пропускной способностью 2,1 Гбайт/с.
+<p>PCI-X-&quot;тоннель&quot; AMD-8131, как и AMD-8151, содержит два контроллера HyperTransport с шириной шин 16 и 8 разрядов в каждую сторону. Пропускная способность этих каналов составляет соответственно 3,2 (6,4) и 1,6 (3,2) Гбайт/с в каждую сторону. Однако предназначение этой микросхемы совсем иное; кроме того, она содержит два PCI-X моста.
+<p>&quot;Тоннель&quot; ввода-вывода AMD-8111, в отличие от AMD-8151 и AMD-8131, имеет лишь один контроллер 8-разрядной шины HyperTransport с пропускной способностью 400 Мбайт/с (суммарно 800 Мбайт/с), поскольку предполагается, что этот кристалл всегда будет находиться в конце цепочки HyperTransport. &quot;Тоннель&quot; AMD-8111 поддерживает обычную 33-МГц 32-разрядную шину PCI 2.2, AC&#39;97 и 10/100 Ethernet-интерфейсы, два концентратора USB 2.0 (шесть портов USB) и двухканальный EIDE-контроллер с поддержкой режима ATA-133.
+<p>Комбинируя данные &quot;тоннели&quot;-контроллеры различным образом, можно получать системы различного назначения. Тем не менее возникает вопрос: зачем понадобились три микросхемы, когда в принципе все функции можно было реализовать в одном кристалле? А дело здесь вот в чем. Редко когда в системе необходимы абсолютно все возможности, предоставляемые набором микросхем. Обычно часть функций не используется, но платить за них все равно приходится. Теперь для построения системы обязательна только одна микросхема - AMD-8111. Остальные две, вообще говоря, могут отсутствовать. Тем самым не надо платить за ненужные функции. Так, для построения серверов следует использовать AMD-8131 (при необходимости даже несколько) плюс обязательный &quot;тоннель&quot; AMD-8111. В графических рабочих станциях, конечно, будет трудно обойтись без AGP-&quot;тоннеля&quot; AMD-8151.
+<p>Таким образом, вместо нескольких наборов микросхем для каждой линейки продуктов: 
+  одного для рабочих станций, одного или нескольких для серверов - AMD предложила 
+  использовать один строительный набор из трех компонентов, которые можно объединять 
+  практически в любой удобной для клиента комбинации. 
+<p>&nbsp;
+<table width="100%" border="0" bgcolor="#CCFFFF">
+  <tr>
+    <td>
+      <h4>&quot;Аполлон&quot; для Opteron&#39;а </h4>
+      <p>Одной из первых компания VIA Technologies (<a href="http://www.viatech.com">http://www.viatech.com</a>) 
+        выпустила набор микросхем VIA Apollo K8T400M, предназначенный специально 
+        для 64-разрядного процессора Opteron от AMD. 
+      <p>Набор микросхем K8T400M состоит из двух компонентов - микросхем VT8237 
+        (прообраз &quot;южного моста&quot;) и VT8385 (прообраз &quot;северного моста&quot;). Данный 
+        чипсет может использоваться как для создания однопроцессорных, так и двухпроцессорных 
+        систем. 
+      <p>&quot;Северный мост&quot; набора микросхем поддерживает работу шины HyperTransport 
+        и графической шины стандарта AGP 8x. Следует заметить, что VT8385 не содержит 
+        контроллера памяти, так как последний расположен непосредственно на кристалле 
+        процессора Opteron. Следовательно, именно на процессор возложена функция 
+        поддержки различных типов памяти. 
+      <p>&quot;Южный мост&quot; набора микросхем содержит в себе RAID-контроллер с двумя 
+        каналами Serial ATA. Обычные ATA-диски можно будет подключить к двухканальному 
+        контроллеру ATA-133, который также интегрирован в VT8237. RAID-контроллер 
+        поддерживает четыре режима работы, включая уровни 0, 1, 0+1 и JBOD. 
+      <p>&quot;Южный мост&quot; набора также поддерживает работу до восьми портов USB 2.0, 
+        сетевого контроллера 10/100 Ethernet и модема MC&#39;97. В VT8237 встроен 
+        также аудиоконтроллер VIA Vinyl Audio technology, который обеспечивает 
+        шестиканальный звук. Компоненты набора микросхем соединяются между собой 
+        высокоскоростной шиной VIA Ultra V-Link, работающей со скоростью 1,06 
+        Гбит/с. 
+    </td>
+  </tr>
+</table>
+<h3>Организация многопроцессорных систем </h3>
+<p>Ключевой момент в организации многопроцессорных платформ на основе процессоров архитектуры AMD64 заключается в том, что процессоры соединяются при помощи той же самой универсальной шины HyperTransport. Таким образом, для реализации, например, двух-, четырех- и даже восьмипроцессорной конфигурации не требуется поддержки со стороны набора микросхем.
+<p>Правда, тут же возникает закономерный вопрос. Известно, что каждый из процессоров Opteron имеет свой собственный контроллер памяти, к которому и подключается необходимое количество DDR SDRAM. Что же будет происходить с памятью каждого процессора при их совместной работе в многопроцессорной платформе? Оказывается, при том, что каждый процессор в многопроцессорной системе на базе AMD64 имеет свою память, он без больших задержек может обращаться и к памяти, с которой работают другие процессоры, входящие в многопроцессорный комплекс. Обращения происходят по той же самой шине HyperTransport, которая связывает данные процессоры.
+<p>Таким образом, с многопроцессорными системами на базе Opteron складывается очень интересная ситуация. С одной стороны, по распределению памяти они представляют собой типичную NUMA-архитектуру (с неоднородным доступом к памяти), ибо время доступа к памяти будет зависеть от того, локальная это память или удаленная (а если память нелокальная - и от того, какому именно процессору она принадлежит). С другой стороны, специалисты AMD буквально настаивают, что с точки зрения программной модели это SMP - и ничего более. Для новой архитектуры появилось даже новое название - SUMO (Sufficient Uniform Memory Organization), что приблизительно можно перевести как &quot;достаточно единообразная организация памяти&quot;. Видимо, здесь содержится намек на то, что хотя в системах на базе AMD64 память и представлена единым сплошным пространством, как в SMP, но масштабируемость ее значительно выше. Дело в том, что здесь каждый процессор имеет свой собственный контроллер памяти, а пропускной способности межпроцессорных шин HyperTransport достаточно для того, чтобы не возникало значительных задержек при обращении к удаленной памяти. Тем не менее  немаловажно, что для ПО система представляется как SMP, поэтому существующие приложения смогут работать без проблем.
+<p>В случае использования NUMA-архитектуры для эффективного исполнения программы необходимо следить за ее распределением в памяти. Напомним, что при использовании SMP-архитектуры в общем случае такой необходимости нет. Происходит это потому, что времена доступа к памяти различных иерархий в архитектуре NUMA обычно отличаются на порядки - соответственно, неправильное размещение программы в памяти приводит к падению производительности (иногда даже в десятки раз).
+<p>В терминах многопроцессорных систем обращение к памяти называется &quot;скачком&quot; (hop). При этом обращение к своей локальной памяти - 0-hop. Обращение к памяти соседнего процессора, до которого надо сделать один переход по шине Hyper Transport один раз, - 1-hop. То же самое, но к процессору, до которого необходимо сделать два &quot;скачка&quot; по Hyper Transport, называется 2-hop (рис. 5).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No6_2003/amd64/ris5.gif" alt=Fig.5></td>
+<td valign="bottom">Рис. 5. Обращение к памяти в многопроцессорной системе.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Согласно результатам опубликованных тестовых испытаний, в случае, когда число процессоров равно четырем, времена доступа не превышают 118 нс. Последняя цифра, кстати, соответствует времени доступа хорошего однопроцессорного набора микросхем. Но поскольку здесь общее время складывается из собственно времени доступа в память и времени передачи по шине Hyper Transport (один или два раза), то подобный результат считается вполне удовлетворительным.
+<p>Стоит отметить, что архитектура AMD64 позволяет строить и восьмипроцессорные системы. При этом пространственные соединения строятся так, что у крайних четырех процессоров по одной шине Hyper Transport отдано для ввода-вывода, а у центральных - все три задействованы в качестве межпроцессорных связей.
+<p>&nbsp;
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr>
+    <td>
+      <h3>Испытания в тестовой лаборатории &quot;СК Пресс&quot; </h3>
+      <p>Тестирование нового 64-разрядного процессора Opteron компании AMD впервые 
+        в нашей практике проводилось дистанционно. Сервер, в котором были установлены 
+        два процессора Opteron 244 с тактовой частотой 1,8 ГГц, находился в Центре 
+        поддержки разработчиков AMD в городе Саннивейл (шт. Калифорния, США). 
+        Доступ к нему с помощью виртуальной частной сети (VPN) компании Nortel 
+        и вся необходимая помощь были любезно предоставлены нам менеджером Центра 
+        Джастином Боггсом при содействии российского и европейского представительств 
+        AMD. Заметим, что сервер на несколько дней был отдан в полное наше распоряжение, 
+        никакие другие пользователи на нем в это время не работали и никакие программы 
+        не запускались. 
+      <p>На сервере была установлена ОС Windows Server 2003 (32-разрядная), мы 
+        работали с ним при помощи стандартного терминального клиента Windows, 
+        получая на свой экран картину рабочего стола калифорнийского сервера. 
+        Такая организация работы исключала возможность прогона стандартных тестов 
+        компании Ziff-Davis Media, поскольку &quot;накладные расходы&quot;, связанные с 
+        перекачкой по Интернету графики, не позволили бы получить сколько-нибудь 
+        достоверные результаты. По этой причине пришлось ограничиться тестами 
+        из состава пакета SiSoft Sandra, а именно тестами производительности ЦП 
+        и пропускной способности подсистемы памяти. 
+      <p>Благодаря тому, что одновременно в нашей лаборатории оказались две двухпроцессорные 
+        машины на процессорах Intel Xeon с тактовыми частотами 1,8 и 3,06 ГГц, 
+        мы смогли прогнать на них те же тесты и получить результаты, позволяющие 
+        сравнить &quot;32-разрядную&quot; производительность этих процессоров. Надеемся, 
+        что в дальнейшем нам удастся провести более серьезные испытания на реальных 
+        образцах нового процессора. 
+      <p>Кроме калифорнийского сервера на платформе AMD Melody (набор микросхем 
+        AMD 8000) с двумя 1,8-ГГц ЦП Opteron 244 и 4-Гбайт ОЗУ, мы протестировали 
+        &quot;очно&quot; сервер AquaServer T125 на наборе микросхем Intel 7500 с двумя 1,8-ГГц 
+        процессорами Xeon и рабочую станцию Depo Race 750 с двумя 3,06-ГГц процессорами 
+        Xeon, оснащенными средствами HyperThreading, на НМС 7505. Выводы из приведенных 
+        результатов читатели могут сделать сами; отметим лишь явное преимущество 
+        ЦП Opteron на тестах пропускной способности памяти, которое обеспечивается 
+        ему встроенным контроллером, работающим на полной частоте процессора. 
+        Укажем еще, что по данным AMD результаты тестов SPECint_rate_base2000 
+        и SPECfp_rate_base2000 для двухпроцессорной конфигурации на Opteron 244 
+        составили 26,8 и 26,7 балла соответственно. 
+<p>
+<img src="../images/byte_archive/images/No6_2003/amd64/ris6_vr.gif" alt=Fig.6>
+    </td>
+  </tr>
+</table>
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=24720.html'>Облачные вычисления: статистика и прогнозы</A></b></li><li><b><A href='detail.php@ID=24683.html'>Что будет с хранилищами данных в 2014 году</A></b></li><li><b><A href='detail.php@ID=24605.html'>Эволюция систем хранения класса high-end </A></b></li><li><b><A href='detail.php@ID=24205.html'>Элемент инфраструктуры</A></b></li><li><b><A href='detail.php@ID=21991.html'>Инфраструктурные ИБП – не такой уж скучный рынок</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=8539.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">Технология AMD64
+</a><br><a href="detail.php@ID=8539.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Игорь Колбин 
+Весной этого года корпорация AMD (http://www.amd.com) 
+  представила долгожданный процессор восьмого поколения Opteron. Он стал&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=8539.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=8539&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='0288547edd650e642c620991cb2c5172'><img src='../bitrix/tools/captcha.php@captcha_code=0288547edd650e642c620991cb2c5172' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>

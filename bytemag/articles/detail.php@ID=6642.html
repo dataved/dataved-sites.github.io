@@ -1,0 +1,584 @@
+<HTML>
+<HEAD>
+<title>ALM-платформа Borland
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Андрей Колесов *При подготовке статьи использовались информационные материалы корпорации Borland Уже два десятилетия корпорация Borland (http://www.borland.com) занимается созданием систем разработки и развертывания программных продуктов." />
+<meta name="description" content="Андрей Колесов *При подготовке статьи использовались информационные материалы корпорации Borland Уже два десятилетия корпорация Borland (http://www.borland.com) занимается созданием систем разработки и развертывания программных продуктов." />
+<link href="../bitrix/js/main/core/css/core.css@1397654732.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<link href="../bitrix/templates/main/template_styles.css@1357814843.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../bitrix/js/main/core/core.js@1397654768"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1398082884','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'b8a7a6a0086bde8dc8bdb2b592b7e6d2','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="../bitrix/js/main/core/core_ajax.js@1397654452"></script>
+<script type="text/javascript" src="../bitrix/js/main/session.js@1314803764"></script>
+<script type="text/javascript">
+bxSession.Expand(10800, 'b8a7a6a0086bde8dc8bdb2b592b7e6d2', false, '2688bad5c95a57f544635a13a7ff0826');
+</script>
+<META http-equiv="Refresh" CONTENT="3600">
+<LINK REL='alternate' TITLE='BYTE/Россия: Новые статьи на сайте' HREF='../rss/index.php' TYPE='application/rss+xml'>
+<link rel="stylesheet" href="../images/byte/css/main.css" type="text/css">
+<link rel="stylesheet" href="../images/sk/css/menu.css" type="text/css">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script language="JavaScript" src="../bitrix/templates/main/jquery.js"></script>
+<script language="JavaScript" src="../bitrix/templates/main/main.js"></script>
+<meta name='yandex-verification' content='4637394ebf6b856d' />
+<meta name="google-site-verification" content="YuDDKJUKYlersC5RZAAO_epNdELhEXLrgxUxtn4_31Q" />
+</HEAD>
+<BODY>
+
+
+<DIV id="container">
+
+<center>
+<table id="skmenu">
+<tr>
+<td class="cl"><img src="../images/sk/lc.gif"></td>
+<!--<td class="bgr"><a href="http://www.skpress.ru" title="СК Пресс" target="_blank">СК Пресс:</a></td>-->
+<td class="bgr"><a href="http://www.itrn.ru" title="Современные информационные технологии" target="_blank">ITRN:</a></td>
+<td class="del"><img src="../images/sk/cc.gif"></td>
+<td class="bglg"><a href="http://www.itbestsellers.ru" title="Бестселлеры IT-рынка">Бестселлеры IT-рынка</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bgdg">BYTE/Россия</td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.crn.ru" title="CRN/RE">CRN/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.iemag.ru" title="Intelligent Enterprise/RE">Intelligent Enterprise/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcmag.ru" title="PC Magazine/RE">PC Magazine/RE</a></td>
+<td class="del"><img src="../images/sk/del.gif"></td>
+<td class="bglg"><a href="http://www.pcweek.ru" title="PC Week/RE">PC Week/RE</a></td>
+<td class="cl"><img src="../images/sk/rc.gif"></td>
+</tr>
+</table>
+</center>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD class='top-banner' colspan='3'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_top_adv" id="byte_top_adv" src="/ad/banners/top.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_top_adv" id="byte_top_adv" src="../ad/banners/top.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</TD>
+</TR>
+<TR>
+<TD class='top-menu-g'><a href='index.php@TYPE_ID=6260.html'>Новости</a><a href='../numbers/index.html'>Архив</a><a href='../foto/index.html'>Фоторепортажи</a><a href='../video/index.html'>Видеоролики</a><a href='../events/index.html'>Мероприятия</a><a href='../forum/index.html'>Форумы</a><a href='../white-papers/index.html'>Решения</a><a href='../courses/index.html'>Учебные курсы</a><a href='../subscribe/index.html'>Подписка на рассылки</a><a href='../about/index.html'>Об издании</a></TD>
+<TD valign='top' class='top-menu-d'><img src="../images/byte/top-menu-delim.gif"></TD>
+<TD class='top-menu-r'><a href='../auth/index.html'>Авторизация</a></TD>
+</TR>
+</TABLE>
+<!-- для баннера топгир
+<map name="map1"> <area href="/articles/index.php?TYPE_ID=6254" alt="Сети и телекоммуникации" shape="rect" coords="0,0,177,18"></area> <area href="http://netgear.ru/?page=products" alt="netgear" shape="rect" coords="0,18,177,36"></area> </map>-->
+
+<TABLE border="0" cellpadding="0" cellspacing="0" width="1000">
+<TR>
+<TD><a href='../index.html' title='На главную'><!--<img src="/images/newlogo.gif" class='logo'>--><img src="../images/byte/logo.gif" class='logo'></a></TD>
+<TD valign='top' width="90%">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6250.html'>Технопарк</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6251.html'>Клуб экспертов</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6252.html'>Платформы и технологии</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6253.html'>Проекты</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><!--<img src="/images/netgear.gif" usemap="#map1" border="0">--><a href='index.php@TYPE_ID=6254.html'>Сети и телекоммуникации</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=16029.html'>Обзоры</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6256.html'>Средства разработки</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	</tr>
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6257.html'>Программное обеспечение</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6258.html'>Безопасность</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+	<td class='rubric-c-l'><img src="../images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='index.php@TYPE_ID=6255.html'>ByteLab</a></td>
+	<td class='rubric-c-r'><img src="../images/byte/c-r.gif"></td>
+
+	<!--<td class='rubric-c-l'><img src="/images/byte/c-l.gif"></td>
+	<td class='rubric' nowrap><a href='/articles/index.php?TYPE_ID=6259'>Колонка редактора</a></td>-->
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	<td class='rubric-r' nowrap><!--<a href='/blog/'>--><a>Блоги</a><!--</a>--></td>
+	<td><img src="../images/byte/rubric-delim-l.gif" class='rubric-delim'></td>
+	<td class='search-block'><img src="../images/byte/search-title.gif" class='search-title' alt='Поиск'></td>
+	<td class='search-block' width='40%'><FORM action="http://www.bytemag.ru/search/index.php" method="GET" name="FormSearch"><input type="hidden" name="how" value="d"><input id="queryText" name="q" size='20' style='width: 100%;'></td>
+	<td class='search-block'><input type='image' src='../images/byte/btn-search.gif'></FORM></td>
+	<td class='rss-block'><a href='../rss/index.php'><img src='../images/byte/rss.gif'></a></td>
+	<td class='rss-block'><a href='../rss/index.php'>RSS</a></td>
+	<td><img src="../images/byte/rubric-delim-r.gif" class='rubric-delim'></td>
+	<td class='rubric-r'><a href='../themes/index.html'>Темы</a></td>
+	<td class='rubric-c-r-r'><img src="../images/byte/c-r-r.gif"></td>
+	</tr>
+	</table>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='2' class='bg-sub-rubric'><img src="../images/byte/bg-sub-rubric.gif"></TD>
+</TR>
+</TABLE>
+
+
+
+
+<TABLE border="0" cellpadding="0" cellspacing="0" class='main-tbl'>
+<TR valign='top'>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+<TD width='250'>
+
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left_adv" id="byte_left_adv" src="/ad/banners/left.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:400px;"></iframe>');
+// -->
+</script>
+ <noscript> <iframe width="250" scrolling="no" height="100%" frameborder="0" marginheight="0" marginwidth="0"  style="max-height:400px;" hspace="0" vspace="0" src="../ad/banners/left.php.html" id="byte_left_adv" name="byte_left_adv"></iframe> </noscript> </DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@TYPE_ID=6260.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@TYPE_ID=6260.html'>Новости</a></td></tr></table><DIV class='block-g'><b><a href='detail.php@ID=25289.html'>Облачные решения Schneider Electric и Microsoft: управление энергоэффективностью и экологичностью</a></b><br />Как объявила компания Schneider Electric, в рамках ее альянса с Microsoft теперь появилась возможность разрабатывать облачные решения для управления &hellip;<br /><br /><b><a href='detail.php@ID=25288.html'>Устройства Lenovo c защитой «АльтЭль»</a></b><br />Компании &laquo;АльтЭль&raquo;, российский разработчик средств защиты информации, и Lenovo объявили о завершении работ по интеграции модуля доверенной загрузки &hellip;<br /><br /><b><a href='detail.php@ID=25286.html'>Год на российском рынке ИБП оказался очень сложным</a></b><br />По данным аналитической компании ITResearch в 2013 г. в России было продано 1,95 млн ИБП на сумму 503,6 млн долл. Годовая динамика составила &ndash;17% в &hellip;<br /><br /><b><a href='detail.php@ID=25285.html'>МФУ Brother Ink Benefit с картриджами повышенной емкости</a></b><br />Компания Brother выпустила новую линейку струйных многофункциональных устройств Ink Benefit, обеспечивающих низкую стоимость печати за счет &hellip;<br /><br /><b><a href='detail.php@ID=25284.html'>Высокоскоростной интерфейс в графических процессорах NVIDIA</a></b><br />Компания NVIDIA объявила о намерении интегрировать высокоскоростной интерфейс NVLink в будущие графические процессоры, что должно ускорить передачу &hellip;<br /><br /><a href='index.php@TYPE_ID=6260.html' class='link'>Другие новости</a></DIV>
+<DIV class='adv'>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_left2_adv" id="byte_left2_adv" src="/ad/banners/left2.php?banner_random='+banner_random+'" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_left2_adv" id="byte_left2_adv" src="../ad/banners/left2.php.html" width="250" height="100%" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0" style="max-height:120px;"></iframe>
+</noscript></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.php@OPINION=1.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.php@OPINION=1.html'>Мнения</a></td></tr></table><DIV class='block-g'><a href='detail.php@ID=25262.html'><img src='../upload/iblock/36d/Vaculenko-NEC-50.jpg' alt='В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере' class='tn'></a><b><a href='detail.php@ID=25262.html'>В сегменте панелей для видеостен конкурентная борьба идет в технологической сфере</a></b><br />На рынке информационных панелей, если судить по отчетам аналитиков, растет потенциал и улучшаются перспективы сегмента дисплеев для видеостен. Этот &hellip;<br /><br /><a href='detail.php@ID=24189.html'><img src='../upload/iblock/e10/Gribanov-50.jpg' alt='У рынка планшетов есть много драйверов дальнейшего роста ' class='tn'></a><b><a href='detail.php@ID=24189.html'>У рынка планшетов есть много драйверов дальнейшего роста </a></b><br />В последнее время рынок планшетов бурно развивается. К традиционным планшетам добавились гибридные гаджеты, устройства &laquo;2 в 1&raquo; и масса других &hellip;<br /><br /><a href='detail.php@ID=23635.html'><img src='../upload/iblock/6fe/Maxim-Rubanenko-50.jpg' alt='Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы ' class='tn'></a><b><a href='detail.php@ID=23635.html'>Основным драйвером ускоренного роста рынка тяжелых ИБП в последние годы являются ЦОДы </a></b><br />Любая компания рано или поздно сталкивается с необходимостью обработки данных. Вначале для этого достаточно сервера, затем число серверов и их &hellip;<br /><br /><a href='index.php@OPINION=1.html' class='link'>Другие мнения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='index.html'>Наиболее читаемые</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='detail.php@ID=25074.html'>Комплекты LifeSize – все для видеоконференцсвязи</a></li><li><a href='detail.php@ID=25041.html'>Видеоконференцсвязь от TrueConf – приложение WebRTC</a></li><li><a href='detail.php@ID=25196.html'>Видеоконференции в среде ALT Linux </a></li><li><a href='detail.php@ID=25115.html'>Облачный и традиционный настольный антивирус: что выбрать?</a></li><li><a href='../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html'>Коммутаторы начального уровня</a></li><li><a href='detail.php@ID=25114.html'>Microsoft Lync 2013 по модели SaaS </a></li><li><a href='detail.php@ID=25103.html'>Серверы IBM Power Systems – в облаке для разработчиков </a></li><li><a href='detail.php@ID=25178.html'>Коммутаторы ZyXEL начального уровня</a></li><li><a href='detail.php@ID=25177.html'>От 5 до 16 – Ethernet-коммутаторы для SOHO и малого бизнеса</a></li><li><a href='detail.php@ID=25208.html'>«Большие данные» и новая версия Intel Xeon E7</a></li></ul></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../white-papers/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../white-papers/index.html'>Современные решения</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12321.html'><img src='../upload/iblock/a7b/logo.gif' alt='Dr.Web' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13978.html'>Dr.Web Security Space</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=13245.html'><img src='../upload/iblock/b1d/abbyy.gif' alt='ABBYY' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=15604.html'>«Цюрих. Ритейл» будет обслуживать клиентов ещё быстрее. С помощью ABBYY FlexiCapture 8.0</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=21403.html'>«ДЕЛО» версии 12.2.1: новые возможности для межведомственного взаимодействия</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=19413.html'><img src='../upload/iblock/0d8/logo-eos.gif' alt='«Электронные офисные системы»' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=19667.html'>По дороге к ECM. Вопросы и ответы</a></b></div><div class='list-el'><a href='../white-papers/index.php@COMPANY_ID=12719.html'><img src='../upload/iblock/06d/logo-embarcadero.gif' alt='Embarcadero' class='wp-logo-last'></a><b><a href='../white-papers/detail.php@ID=13676.html'>Управление изменениями в базе данных для разработчиков</a></b></div><a href='../white-papers/index.html' class='link'>Другие решения</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../courses/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../courses/index.html'>Учебные курсы</a></td></tr></table><DIV class='block-g'><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=18993.html'>Adaptec Certified Storage Professional</a></b></div><div class='list-el'><a href='../courses/index.php@COMPANY_ID=18527.html'><img src='../upload/iblock/9ac/Adaptec_by_PMC_100x50.GIF' alt='Adaptec by PMC' class='wp-logo-last'></a><b><a href='../courses/detail.php@ID=19120.html'>Обратно за парту с Adaptec by PMC</a></b></div><a href='../courses/index.html' class='link'>Другие курсы</a></DIV>
+
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../subscribe/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../subscribe/index.html'>Подписка на рассылки</a></td></tr></table><table cellpadding='0' cellspacing='0' border='0' class='block-g'><tr><td><form action='http://www.bytemag.ru/subscribe/subscr_edit.php'><table border='0' width='100%'><tr><td valign='top' align='right'><input type='checkbox' name='sf_RUB_ID[]' id='sf_RUB_ID_1' value='3' checked></td><td><b><label for='sf_RUB_ID_1'>BYTE Express</label></b><br />Анонсы новых статей, последние новости и т.п.</td></tr><tr><td width='15%' nowrap><b>E-mail</b></td><td width='85%'><input type='text' name='sf_EMAIL' size='15' value='' class='100p'></td></tr></table><DIV class='btn-grey'><input type='submit' value='Подписаться' class='200px'></DIV><a href='../subscribe/index.html' class='link'>Управление подпиской</a></form></td></tr></table>
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='560'>
+
+<p>
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_center_adv" id="byte_center_adv" src="/ad/banners/center.php?banner_random='+banner_random+'" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_center_adv" id="byte_center_adv" src="../ad/banners/center.php.html" width="100%" height="90" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</p>
+<form name='PrintForm6642' method='post' action='http://www.bytemag.ru/articles/detail_print.php?ID=6642&amp;PRINT=Y' target='_blank'><input type='hidden' name='ACTION' value='PRINT'><input type='hidden' name='SHOW_IMAGE' value='N'></form><br /><TABLE class='tbl-link-services'><TR><TD width='16'><img src='../images/byte/icon-print.gif'></TD><TD><a href='javascript: document.forms["PrintForm6642"].SHOW_IMAGE.value="N"; document.forms["PrintForm6642"].submit();'>Версия для печати</a> (<a href='javascript: document.forms["PrintForm6642"].SHOW_IMAGE.value="Y"; document.forms["PrintForm6642"].submit();'>включая изображения</a>)</TD><TD width='16'><img src='../images/byte/icon-mail.gif'></TD><TD><a href='javascript:SendLink(6642);'>Отправить ссылку</a></TD><TD width='16'><img src='../images/byte/icon-blog.gif'></TD><TD><a href='detail.php@ID=6642.html#add-blog'>Поместить в блог</a></TD><TD width='16'><img src='../images/byte/icon-forum.gif'></TD><TD><a href='detail.php@ID=6642.html#add-comment'>Добавить комментарий</a></TD><TD width='16'><img src='../images/byte/icon-author.gif'></TD><TD><a href='javascript:SendAuthor(6642);'>Написать автору</a></TD><TD width='16'><img src='../images/byte/icon-subscribe.gif'></TD><TD><a href='../subscribe/index.html'>Подписаться на рассылки</a></TD></TR></TABLE><br /><p><b>Раздел:</b> <a href='index.php@TYPE_ID=6304.html'>Тема номера</a><br /></p><a href='../numbers/index.php@ID=11502.html'>№7 (59), июль 2003</a><h1>ALM-платформа Borland
+</h1>10.07.2003<p></p><DIV class='article-text'><p><i>Андрей Колесов</i> 
+<p>
+<hr width="40%" noshade align="left">
+*При подготовке статьи использовались информационные материалы корпорации Borland 
+<p>Уже два десятилетия корпорация Borland (<a href="http://www.borland.com">http://www.borland.com</a>) 
+  занимается созданием систем разработки и развертывания программных продуктов. 
+  Ее инструменты пользуются неизменным спросом у профессиональных разработчиков 
+  ПО, несмотря на сильную конкуренцию, в первую очередь со стороны таких поставщиков 
+  платформ, как Microsoft, IBM, Oracle и Sun. Это объясняется не только высоким 
+  качеством инструментария Borland, но и неизменностью политики корпорации, направленной 
+  на поддержку совместимости и независимости от конкретных фирменных технологий 
+  (в том числе унаследованных). Borland не привязывает организации к какой бы 
+  то ни было платформе разработки или развертывания, ее стратегия отличается открытостью 
+  и предусматривает поддержку широкого спектра технологий, включая J2EE и Enterprise 
+  JavaBeans (EJB), CORBA и COM/DCOM, Oracle, IBM DB2 и т. д. 
+<p>Кроме того, в арсенале Borland есть множество инструментов, которые охватывают 
+  весь процесс разработки ПО - от выработки требований до сопровождения. Многими 
+  из этих инструментов Borland обязана приобретенным в последнее время компаниям 
+  (только за последний год корпорация поглотила шесть компаний). Определенный 
+  этап работы по интеграции всех этих продуктов завершился в апреле, когда Borland 
+  анонсировала свою стратегию управления жизненным циклом программных продуктов 
+  (Application Lifecycle Management, ALM) для Microsoft .NET Framework (см. врезку 
+  &quot;ALM - управление жизненным циклом приложений&quot;). 
+<p>&nbsp;
+<table width="100%" border="0" bgcolor="#FFFFCC">
+  <tr> 
+    <td> 
+      <h4>ALM - управление жизненным циклом приложений </h4>
+      <p>По мере повышения сложности программных проектов резко возрастают требования 
+        к эффективности их реализации. Это тем более важно сегодня, когда разработчики 
+        ПО вовлечены практически во все аспекты работы предприятий и число таких 
+        специалистов растет. В то же время данные исследований в этой области 
+        говорят о том, что результаты как минимум половины &quot;внутренних&quot; проектов 
+        разработки программных средств не оправдывают возложенных на них надежд. 
+      <p>В этих условиях становится особенно актуальной задача оптимизации всего 
+        процесса создания программных средств с охватом всех его участников - 
+        проектировщиков, разработчиков, тестеров, служб сопровождения и менеджеров. 
+        Управление жизненным циклом приложений (Application Lifecycle Management, 
+        ALM) рассматривает процесс выпуска программных средств как постоянно повторяющийся 
+        цикл взаимосвязанных этапов:
+      <ul>
+        <li>определение требований (Requirements);</li>
+        <li>проектирование и анализ (Design & Analysis);</li>
+        <li>разработка (Development);</li>
+        <li>тестирование (Testing);</li>
+        <li>развертывание и сопровождение (Deployment & Operations). </li>
+      </ul>
+      <p>Каждый из этих этапов должен тщательно отслеживаться и контролироваться. 
+        Правильно организованная ALM-система позволяет:
+      <ul>
+        <li>сократить сроки вывода продуктов на рынок (разработчикам приходится 
+          заботиться лишь о соответствии их программ сформулированным требованиям);</li>
+        <li>повысить качество, гарантируя при этом, что приложение будет соответствовать 
+          потребностям и ожиданиям пользователей;</li>
+        <li>повысить производительность труда (разработчики получают возможность 
+          делиться передовым опытом разработки и внедрения);</li>
+        <li>ускорить разработку благодаря интеграции инструментов;</li>
+        <li>уменьшить затраты на сопровождение, постоянно поддерживая соответствие 
+          между приложением и его проектной документацией;</li>
+        <li>получить максимальную отдачу от инвестиций в навыки, процессы и технологии. 
+        </li>
+      </ul>
+      <p>Разработка программ имеет ту особенность, что, с одной стороны, это процесс 
+        итерационный, а с другой - он не всегда последовательно переходит от одного 
+        этапа к другому. Зачастую от тестирования разработчики переходят назад 
+        к проектированию, затем - к развертыванию, а потом, возможно, вновь возвращаются 
+        на этап определения требований по мере изменения производственных потребностей. 
+        Кроме того, нужно отметить, что внутренняя организация процесса, в частности, 
+        распределение функций и ролей его участников, может сильно варьироваться 
+        в зависимости от корпоративных регламентов и специфики конкретных проектов. 
+    </td>
+  </tr>
+</table>
+<p>Как заявил президент и генеральный директор Borland Дейл Фуллер, ориентация на платформу .NET Framework объясняется ее растущей популярностью среди заказчиков и разработчиков ПО. В этой связи стоит упомянуть об аналитическом отчете &quot;Наиболее популярные языки программирования для планирования портфеля информационных систем&quot;, подготовленном компанией Gartner в сентябре 2002 года. В нем прогнозируется, что количество программистов, использующих языки семейства .NET, к 2007 г. превысит 4 млн (рис. 1), т. е. составит более чем половину программистского населения планеты.
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2003/Borland/ris1.gif" alt=Fig.1></td>
+<td valign="bottom">Рис. 1. Динамика и прогноз изменения численности программистов в мире, использующих разные языки (Gartner, сентябрь 2002 г.).
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Впрочем, хорошие перспективы .NET были в целом очевидны еще в момент объявления этой инициативы Microsoft, и корпорация Borland изначально подключилась к программе Visual Studio .NET Integration Partner. Более того, Borland первой получила лицензию на SDK .NET Framework, именно поэтому предлагаемые ею программные средства для Microsoft .NET Framework созданы не только с учетом стандартов данной платформы, но с использованием ряда ее важных компонентов (например, компиляторов Microsoft).
+<p>Вместе с тем исследования показывают, что корпоративные информационные системы (особенно крупные) и в будущем останутся гетерогенными - в большинстве случаев они будут включать не меньше двух конкурирующих платформ разработки или развертывания. Поэтому даже в системе, написанной для Microsoft .NET Framework, скорее всего, будут присутствовать совместная работа и обмен данными с другими программами. Вполне вероятно, что подобную систему придется развертывать в окружении других платформ, таких, как J2EE, и баз данных, предлагаемых конкурентами Microsoft, - IBM DB2 или Oracle.
+<p>Реализация ALM-стратегии в исполнении Borland заключается в предоставлении комплекса взаимосвязанных инструментов (см. таблицу) для всех этапов жизненного цикла приложений, таких, как определение требований, анализ и проектирование, разработка, тестирование, развертывание и управление (рис. 2).
+<h4>Семейство систем Borland ALM, дополняющее .NET Framework </h4>
+<table border="1" bordercolor="#000066">
+  <tr>
+    <td><b>Название продукта</b></td>
+    <td><b>Назначение</b></td>
+  </tr>
+  <tr>
+    <td>Borland CaliberRM</td>
+    <td>Согласование требований</td>
+  </tr>
+  <tr>
+    <td>Borland Together</td>
+    <td>Проектирование программ с помощью UML</td>
+  </tr>
+  <tr>
+    <td>Borland C#Builder</td>
+    <td>Разработка на C# с частичной поддержкой VB.NET</td>
+  </tr>
+  <tr>
+    <td>Borland Delphi (Octane)</td>
+    <td>Разработка программ на Delphi/Pascal</td>
+  </tr>
+  <tr>
+    <td>Borland OptimizeIt Profiler</td>
+    <td>Профилирование программ</td>
+  </tr>
+  <tr>
+    <td>Borland Janeva</td>
+    <td>Обеспечение совместимости с Enterprise JavaBeans, J2EE и CORBA</td>
+  </tr>
+  <tr>
+    <td>Borland InterBase</td>
+    <td>Реализация встраиваемых баз данных, используемых совместно с Windows Server 
+      2003</td>
+  </tr>
+  <tr>
+    <td>Borland StarTeam</td>
+    <td>Управление: конфигурирование и координация изменений</td>
+  </tr>
+</table>
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2003/Borland/ris2.gif" alt=Fig.2></td>
+<td valign="bottom">Рис. 2. Взаимосвязанные инструменты Borland образуют законченную систему для 
+  управления жизненным циклом приложения. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<h3>Определение требований </h3>
+<p>Работа над любым приложением должна начинаться с определения формальных требований к функциям программы, без этого руководитель группы разработчиков не может распределять ресурсы и планировать сроки. Если же план проекта не связан с изначально заданным набором требований, оценить влияние различных изменений на график разработки оказывается непросто. С требованиями должны быть ознакомлены все участники группы - такое понимание общих целей проекта помогает организовать взаимодействие между руководством, разработчиками и будущими пользователями системы.
+<p>Необходимо четко определить рамки этой системы и сопоставить пользу, приносимую каждой ее функцией, со стоимостью разработки. Все последующие этапы жизненного цикла программной системы будут обращаться к требованиям - это необходимо для того, чтобы дать аналитикам представление о том, какие элементы системы обязательны и какое влияние на деятельность организации может оказать то или иное изменение.
+<p>Для решения этой задачи Borland предлагает средство CaliberRM - полнофункциональную систему согласования требований. CaliberRM тесно интегрируется с системами управления проектами (например, Microsoft Project) и взаимодействует с системой управления конфигурацией Borland StarTeam, что позволяет скоординировать проведение изменений. Определение требований можно использовать в качестве точки отсчета для всех последующих этапов жизненного цикла программного продукта.
+<p>Поскольку исходные требования служат основой для последующего проектирования и разработки, следует обеспечить легкий доступ к ним из других этапов жизненного цикла программного продукта. С CaliberRM интегрируются программы Borland StarTeam, Borland Together и Borland C#Builder; в результате все участники группы разработки - в какой бы системе они ни работали - получают сведения о требованиях, очерчивающих рамки проекта и его ожидаемые возможности.
+<h3>Анализ и проектирование </h3>
+<p>Эффективность разработки ПО, как и любой другой сложной инженерной работы, в значительной степени зависит от качества анализа задачи и проектирования. Качественное проектирование помогает заложить прочный фундамент всего проекта, способствует общению между работниками, что особенно важно для крупных организаций. Использование стандартных языков моделирования, таких, как UML, не только автоматизирует процесс проектирования, но и упрощает общение всех участников проекта. Недостаточно продуманное проектирование приведет к созданию некачественных программ, в которые со временем станет все сложнее вносить изменения.
+<p>Иногда сложно понять, как работает та или иная программа, особенно если она написана давно. Средства проектирования не только помогают разрабатывать новые программы, но и способны создавать визуальные представления существующих систем с целью упростить понимание их устройства и взаимосвязей. Благодаря этому разработчики смогут вносить изменения в программы более эффективно.
+<p>Borland Together - это полнофункциональная система анализа и проектирования для архитекторов, проектировщиков и разработчиков. Фирменная технология LiveSource обеспечивает полную синхронизацию изменений, вносимых на всех этапах жизненного цикла проекта разработки. При модификации текстов программ на языках C#, C++ или Visual Basic .NET соответствующим образом изменяется модель программы, а при модификации модели программы адекватно изменяются ее исходные тексты.
+<p>Наряду с функциями проектирования в Borland Together имеются возможности аудита программных средств. Это помогает соблюдать требования корпоративных стандартов и исправлять возможные ошибки. Такая функция хорошо дополняет обычные способы инспектирования программных средств и способствует повышению качества ПО.
+<p>Borland Together позволяет проводить оценку программ по таким критериям, как размер, сложность и взаимосвязи, упрощая определение приоритетов при тестировании и рефакторинге программных продуктов. Кроме того, делая &quot;моментальные снимки&quot; оценочных измерений программ, команды разработчиков могут судить о развитии своих продуктов, а также о качестве самих работ и процессов.
+<h3>Разработка </h3>
+<p>После знакомства с требованиями и выполнения начальных фаз проектирования разработчики могут приступать к написанию программ. Довольно часто эти три этапа образуют постоянный цикл: по ходу разработки программы появляется необходимость внести изменения в ее проект, а иногда и пересмотреть или уточнить требования.
+<p>Для редактирования текстов программ и их отладки требуется высококачественная среда разработки (IDE). Она должна работать быстро и не допускать перерывов в процессе написания кода. Необходимо также, чтобы среда поддерживала все возможности платформы, включала различные Мастера и имела полноценный набор готовых компонентов. Разумеется, IDE должна поддерживать весь спектр технологий, которые будет использовать создаваемое приложение. И наконец, что особенно важно, IDE должна уметь работать непосредственно с моделью программы. Без этого разработка может замедлиться, число ошибок в ней - вырасти, поскольку для интерпретации языка моделирования ряд действий потребуется выполнять вручную.
+<h4>C#Builder </h4>
+<p>Borland C#Builder для Microsoft .NET Framework (кодовое название проекта Sidewinder) - первый независимый (не вышедший из недр Microsoft) инструмент разработки для .NET на языке C#. В будущем Borland планирует обеспечить ограниченную поддержку Visual Basic .NET для уже существующих проектов и кодов. В C#Builder используются соответствующие лицензионные компиляторы Microsoft .NET Framework (которые в рамках соглашения между двумя компаниями будут обновляться по мере выпуска новых версий).
+<p>C#Builder призван стать центром разработки для семейства ALM-систем Borland для .NET. Продукт, созданный с учетом потребностей корпоративных разработчиков, гармонично интегрируется с системами проектирования, тестирования и развертывания. В отличие от Visual Studio .NET, система C#Builder обеспечивает разработчикам возможность интегрировать свои программы для .NET с широким спектром систем, построенных по другим технологиям, в частности, Java, J2EE и CORBA. В состав Borland C#Builder также входят драйверы ADO.NET для таких популярных баз данных, как IBM DB2, Oracle, Microsoft SQL Server 2000 и Borland InterBase.
+<p>С помощью встроенной поддержки средств моделирования C#Builder обеспечивает 
+  также полную интеграцию с инструментами Borland Together, реализующими итерационное 
+  проектирование. Кроме того, предусмотрена основанная на моделях разработка при 
+  помощи Borland Enterprise Core Objects (см. соответствующую врезку). Применение 
+  этой технологии исключает необходимость в программировании и позволяет значительно 
+  сократить сроки разработки. Работу программы определяет собственно модель, при 
+  этом качество законченного программного средства повышается, а проектировщики 
+  могут быть уверены в том, что программа полностью соответствует первоначально 
+  заданным характеристикам модели. 
+<p>&nbsp;
+<table width="100%" border="0" bgcolor="#CCFFFF">
+  <tr>
+    <td>
+      <h4>Borland Enterprise Core Objects (ECO) </h4>
+      <p>Borland C#Builder поддерживает технологию разработки Borland Enterprise 
+        Core Objects (ECO). Функции ECO можно запускать непосредственно из UML-модели 
+        без всякого программирования. Единственное, что потребуется написать на 
+        C#, - пользовательский интерфейс. Вся бизнес-логика содержится в самой 
+        модели и даже не видна как программа на C#. 
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2003/Borland/ris4.gif" alt=Fig.></td>
+<td valign="bottom">Схема работы технологии ECO. 
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+      <p>Подобная технология разработки резко повышает производительность труда, 
+        устраняя необходимость в программировании. К тому же программа здесь всегда 
+        соответствует проекту, так что можно будет выполнять даже весьма существенные 
+        изменения в логике работы системы без риска внести в программу ошибки. 
+      <p>Программные средства с использованием ECO можно создавать при помощи 
+        C#Builder, а затем эти компоненты могут быть интегрированы с программами, 
+        написанными в среде Microsoft Visual Studio .NET. Таким образом, C#Builder 
+        будет удобно использовать при работе над частями крупного корпоративного 
+        проекта, что приведет к существенному повышению производительности труда. 
+        Для создания модели разработчики могут воспользоваться системой проектирования 
+        Borland Together. 
+    </td>
+  </tr>
+</table>
+<h4>Borland Delphi </h4>
+<p>Уже в предварительной версии система Delphi for .NET позволяет создавать программы для .NET Framework. В конце нынешнего года должна выйти новая версия Delphi, известная пока под кодовым названием Octane (название подчеркивает, что Delphi впервые вышла на рынок восемь лет назад). Как и предыдущие версии Delphi, Octane будет работать с библиотеками Visual Component Library (VCL) и Component Library for Cross-platform (CLX) для Win32. Однако наиболее значительные усовершенствования будут связаны с .NET (первое средство поддержки .NET, компилятор языка Delphi для .NET, появилось в прошлогодней Delphi 7 Studio, но лишь в виде предварительного варианта). С помощью Octane будут создаваться программы, полностью совместимые с .NET и при этом использующие все возможности языка Delphi. В числе прочего продукт предусматривает комплексную визуальную разработку в рамках .NET Framework, поддерживает технологии Windows Forms, ASP.NET Web Forms, Web-сервисы и ADO.NET.
+<p>Кроме того, в состав Octane войдет специальная версия VCL, позволяющая переносить под .NET программы, написанные для библиотеки Win32. VCL для .NET - это обширное подмножество основных классов VCL для Win32. Borland обещает обеспечить высокую совместимость между этими вариантами библиотек, хотя предупреждает, что в ряде случаев (например, при прямом обращении к Win32 API) тексты программ, возможно, придется корректировать вручную.
+<p>Пакеты Delphi и C#Builder построены на базе нового ядра IDE для Windows, поддерживающего несколько различных систем разработки для Win32 и .NET. Поэтому программисты, пользующиеся Delphi, смогут сразу же начать работать с C#Builder, а внешний вид C#Builder можно настроить на привычный манер Delphi. И наконец, в состав Octane войдут Delphi-версии специальных функций и инструментов Borland для .NET, которые будут впервые использованы в C#Builder.
+<h3>Испытание и профилирование </h3>
+<p>Наиболее важные характеристики критичных для бизнеса программных систем - это скорость, стабильность и надежность. Упрощая разработку программных систем, .NET Framework в то же время вводит в обиход еще один технологический уровень, который ограничивает контроль разработчиков над производительностью их систем. Поэтому крайне важным для поддержания должного уровня производительности и надежности становится регулярное использование средств контроля производительности на всех этапах процесса разработки.
+<p>Пакет Borland OptimizeIt Profiler для Microsoft .NET Framework предназначен для управления эксплуатационными характеристиками корпоративных программных средств. В тесной интеграции с Borland C#Builder и Microsoft Visual Studio .NET этот продукт поддерживает все языки программирования, с которыми работает .NET, - C#, Visual Basic .NET и &quot;управляемый&quot; (managed) C++. OptimizeIt Profiler обеспечивает профилирование рабочих параметров программ в реальном времени, что помогает разработчикам оперативно устранять ошибки, приводящие к снижению производительности.
+<p>За счет повышения производительности на ранних этапах разработки предприятия могут добиться большей эффективности при развертывании программных систем. Эта методика исключает возникновение глубинных проблем, приводящих к снижению производительности и угрожающих всему проекту. Она также снижает затраты на диагностику и решение проблем с производительностью в процессе сопровождения приложения. OptimizeIt Profiler рекомендуется использовать в качестве компонента жизненного цикла программ как средство снижения риска разработки.
+<h3>Развертывание и сопровождение </h3>
+<p>В большинстве организаций программные продукты для .NET будут внедряться в разнородные информационные системы, в рамках которых приходится задействовать возможности уже имеющихся технологий J2EE и CORBA. Для совместимости различных платформ используются Web-сервисы и подобные им технологии, реализующие альтернативные способы обмена данными. Однако они могут обладать недостаточной производительностью, защищенностью или функциональностью (например, в случае необходимости управления транзакциями).
+<p>Borland Janeva - продукт, решающий все эти вопросы. При помощи масштабируемого и защищенного протокола Internet Inter-ORB Protocol (IIOP) Janeva позволяет клиентским и серверным программам для Microsoft .NET работать с серверными компонентами инфраструктур J2EE и CORBA (рис. 3).
+<p>
+<table width="100%" border="0">
+<tr><td><img src="../images/byte_archive/images/No7_2003/Borland/ris3.jpg" alt=Fig.3></td>
+<td valign="bottom">Рис. 3. Borland Janeva позволяет без посредников подключать системы на .NET к программам, использующим EJB и CORBA.
+<hr noshade align="left" size="0">
+</td></tr>
+</table>
+<p>
+<p>Borland Janeva тесно интегрируется в среды разработки Borland C#Builder и Microsoft Visual Studio .NET. Для внедрения этого продукта не нужен опыт работы с J2EE или CORBA, не требуется также никаких изменений в серверных системах. Подобная реализация взаимной совместимости снижает уровень риска и упрощает интеграцию новых программных средств для .NET в имеющиеся корпоративные инфраструктуры.
+<h3>Базы данных </h3>
+<p>В основе практически каждой корпоративной программной системы лежит база данных, поэтому выбор СУБД влияет на стоимость текущего сопровождения системы в период ее производительной работы (иногда этот период длится многие годы). Borland дает разработчикам возможность выбирать базу данных, наиболее подходящую для того или иного проекта.
+<p>Borland InterBase - это мощная встраиваемая база данных, сертифицированная для Microsoft Windows Server 2003 и обеспечивающая высокую производительность при интеграции с Borland C#Builder и Borland Together. Кроме того, этот продукт открыт для использования в Microsoft Visual Studio (см. статью &quot;Borland InterBase 7 для построения масштабируемых систем&quot;, BYTE/Россия N 6&#39;2003). Хорошая функциональность в сочетании с невысокими требованиями к сопровождению и к ресурсам делает СУБД Borland InterBase привлекательной для использования в тиражируемых программных системах. InterBase использует технологию Borland Data Provider, упрощающую подключение самых разных баз данных к C#Builder при создании программных средств на базе .NET Framework. Разработчики, пользующиеся Visual Studio .NET, также смогут применять InterBase вместо SQL Server.
+<h3>Согласование изменений и управление конфигурацией </h3>
+<p>Реализация сложных программных проектов требует эффективных средств управления всеми этапами работ. Необходимы также механизмы поддержки общения работников (к примеру, дискуссионные форумы) и средства отслеживания возникающих проблем, дефектов и изменений в проекте. Без этого руководители групп не получают адекватного представления о ходе разработки, в результате теряется контроль над процессом и в конечном счете сроки разработки срываются.
+<p>Средства управления конфигурацией позволяют группам сопровождения при необходимости возвращать измененную программную систему в исходное состояние. С их помощью значительно упрощается настройка системы для точного воспроизведения той или иной проблемы. При этом разработчики смогут одновременно поддерживать два или более параллельных пути развития программы.
+<p>Borland StarTeam - полнофункциональная система согласования изменений и управления конфигурацией, предназначенная для крупных организаций, в том числе для поддержки географически распределенных проектных групп. Эта система, изначально рассчитанная на работу через Интернет, централизованно хранит все проектные материалы и отслеживает их использование. Продукт предоставляет предприятиям широкие возможности управлять информационными активами при помощи соответствующих контрольных замеров и аудиторских проверок.
+<p>Управление конфигурацией - центральная часть разработанной Borland системы управления жизненным циклом программных продуктов. StarTeam непосредственно интегрируется с другими системами Borland - CaliberRM, Together и C#Builder.
+<h3>Не только .NET </h3>
+<p>Продукты Borland для платформы Microsoft .NET не только хорошо взаимодействуют друг с другом, но и сочетаются с различными инструментами других поставщиков. При этом возможны два варианта интеграции - функциональная и синергетическая.
+<p>Функциональная интеграция позволяет обратиться к каждой из систем, всего лишь выбрав соответствующий пункт в меню. Она гарантирует совместимость и автоматическое преобразование между различными форматами данных. Например, всеми функциями интерфейса системы управления конфигурацией StarTeam можно воспользоваться непосредственно из Together, C#Builder или Visual Studio .NET. Это не только поощряет разработчиков к использованию функций контроля текстов программ, но и упрощает весь процесс, что особенно важно, если руководители групп желают добиться целостности разрабатываемых ими систем.
+<p>Чтобы сделать этапы процесса разработки еще более взаимосвязанными, Borland применяет синергетическую интеграцию. Подобный тип интеграции позволяет прозрачно сочетать функции двух различных продуктов. Разработчик может даже не догадываться, что он работает с несколькими продуктами, а не с одним. Пример такой интеграции - взаимосвязь между C#Builder и Janeva. Установив Janeva, можно непосредственно конвертировать код J2EE в .NET и наоборот, и при этом разработчикам не потребуется осваивать никаких сложных механизмов преобразования.
+<p>Пример интеграции с продуктами других поставщиков - работа с Visual Studio .NET. Каждая из ALM-систем Borland реализует оба варианта интеграции с этим инструментом Microsoft. При этом возможны сценарии совместного использования VS.NET и C#Builder или только одного из них. Например, используя VS.NET в сочетании с Janeva, разработчики могут создавать .NET-приложения, способные взаимодействовать с инфраструктурами на базе J2EE и CORBA.
+<p>Информационные системы многих организаций неоднородны: в них работают программы не только для Windows, но и для Java, Linux и других платформ. Borland предлагает средства разработки для всех популярных современных платформ - Delphi и C++Builder (Windows), Kylix (Linux), JBuilder (Java и Enterprise JavaBeans), C#Builder (.NET Framework). Borland также предлагает системы для всех других этапов жизненного цикла программных продуктов, создаваемых для трех указанных платформ. Например, Borland Together обладает богатыми возможностями UML-проектирования и моделирования для Java и C#, а система управления конфигурацией Borland StarTeam работает с клиентскими программами для Windows, Linux и Unix. Janeva обеспечивает взаимную совместимость на этапе развертывания программных систем для .NET на базе &quot;тонких&quot; или &quot;толстых&quot; клиентов.
+<p>Для интеграции разнородных систем Borland предлагает решения, функционирующие на нескольких уровнях. Высокоуровневой интеграции можно достичь при помощи Web-сервисов на базе протокола SOAP. Эта стандартная методика может применяться к большинству технических платформ. На низком уровне можно использовать продукт Janeva, который применяет для связи между программами протокол IIOP, применяемый в J2EE и CORBA и обладающий лучшими характеристиками по сравнению с SOAP.
+<p>В качестве альтернативного подхода можно разработать модель бизнес-системы, а затем создать различные компоненты этой системы, предназначенные для различных платформ. Например, Borland Together позволяет выводить программные тексты как на C#, так и на Java, поэтому на основе одной UML-модели с помощью этой системы можно создавать программные средства на любом из этих двух языков.
+<h3>Последние новости с JavaOne </h3>
+<p>Во время проведения в начале июня в Сан-Франциско конференции JavaOne Borland объявила о том, что ее программные средства полностью реализуют ALM-стратегию для Java-продуктов. Стало также известно, что корпорация заключила с ведущими игроками на рынке Java ряд стратегических соглашений. Их цель - поддержать собственную ALM-стратегию и обеспечить разработку большого количества взаимно совместимых систем, предназначенных для создания Java-программ, работающих в реальном времени. Там же Borland анонсировала выпуск новой версии продукта Enterprise Studio 6 для Java.
+<p>Кроме того, учитывая динамичность мирового рынка мобильных средств, Borland 
+  включила в число предлагаемых ею продуктов Borland JBuilder 9 Mobile Edition, 
+  Borland Mobile Studio и Borland Enterprise Studio for Mobile, позволяющие разработчикам 
+  оперативно создавать и развертывать мобильные системы. Для дальнейшего укрепления 
+  своего положения на рынке разработки для мобильных систем Borland также заключила 
+  соглашение с Sony Ericsson, предусматривающее распространение и поддержку Sony 
+  Ericsson Java SDK совместно с Borland JBuilder 9 Mobile Edition. 
+<p>&nbsp;
+<table width="100%" border="0" bgcolor="#CCFFCC">
+  <tr>
+    <td>
+      <h3>Borland - курс на корпоративных разработчиков </h3>
+      <p>В начале июня в Москве прошел семинар разработчиков, на котором Borland 
+        представила реализацию своей ALM-стратегии для .NET и J2EE. В мероприятии 
+        принял участие вице-президент Borland по связям с разработчиками Дэвид 
+        Интерсимон, имеющий также титул Chief Evangelist (старший проповедник) 
+        корпорации. Вот несколько цитат из его выступления. 
+      <p>&quot;Развитие средств разработки Borland определяется ориентацией на корпоративных 
+        разработчиков ПО, с учетом их требований к средствам создания программ. 
+        Для этого Borland реализует три основные стратегические линии. Первая 
+        - поддержка широкого круга технологий и платформ, вторая - предложение 
+        полного комплекса инструментов для всего жизненного цикла программ, третья 
+        - максимальное использование модельных методов разработки. Но, говоря 
+        о нашей нацеленности на крупных заказчиков, мы уверены, что продукты Borland 
+        полезны и доступны даже для небольших команд разработчиков&quot;. 
+      <p>&quot;Одна из главных задач Borland сегодня - повысить авторитет, узнаваемость 
+        торговой марки нашей корпорации. Мировое и российское сообщество разработчиков 
+        хорошо знают наши инструменты и уверены в нас. Но решения об использовании 
+        того или иного инструментария сегодня принимают руководители, которые 
+        порой говорят: &quot;Borland? Да, хорошая была компания...&quot;. Такие суждения 
+        - следствие наших прошлых маркетинговых ошибок, недостаточного внимания 
+        к пропаганде, рекламе наших продуктов. Мы исправляем эту ситуацию и хотим 
+        сказать всем: Borland остается одним из ведущих игроков на рынке инструментальных 
+        средств, мы активно расширяем свой бизнес и предлагаем сегодня уникальный 
+        набор продуктов для полного управления жизненным циклом приложений, для 
+        всех основных платформ разработки и развертывания информационных систем&quot;. 
+    </td>
+  </tr>
+</table>
+
+
+
+</DIV><TABLE cellpadding='0' cellspacing='0' border='0' width='100%'><TR valign='top'><TD width='48%'><DIV class='tit-grey'><h4>Другие статьи из раздела</h4></DIV><ul class='list-links'><li><b><A href='detail.php@ID=6752.html'>Программная платформа IBM для повышения эффективности бизнеса
+</A></b></li><li><b><A href='detail.php@ID=6751.html'>ИБП для защиты серверов
+</A></b></li><li><b><A href='detail.php@ID=6750.html'>Интегрированное решение для защиты центров обработки данных
+</A></b></li><li><b><A href='detail.php@ID=6749.html'>На пути к построению единой платформы защиты данных
+</A></b></li><li><b><A href='detail.php@ID=6748.html'>Виртуализация без ограничений
+</A></b></li></ul></TD><TD width='4%'>&nbsp;</TD><TD width='48%'></TD></TR></TABLE><br /><noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-blog'></a>Поместить в блог</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><FORM name='FormBlog'><textarea name='MsgCode' style='width:100%; height:100px; font-size: 11px;'><table border="0" width="75%" style="margin:10px; border:2px solid #000; background-color:#FFF;"><tr><td align="right"><a href="../index.html" target="_blank"><img src="../images/byte/logo-blog.gif" style="width:71px; height:40px; border:0;" alt="BYTE/Россия"></a></td></tr><tr><td><a href="detail.php@ID=6642.html" target="_blank" style="font:14px Arial; color:#000; text-decoration:none; font-weight:bold;">ALM-платформа Borland
+</a><br><a href="detail.php@ID=6642.html" target="_blank" style="font:12px Arial; color:#000; text-decoration:none;">Андрей Колесов 
+
+
+*При подготовке статьи использовались информационные материалы корпорации Borland 
+Уже два десятилетия корпорация Borland&nbsp&hellip;</a></td></tr><tr><td align="right"><a href="detail.php@ID=6642.html" target="_blank" style="font:12px Arial;">Открыть материал</a></td></tr></table></textarea><DIV class='btn-grey'><input type='button' value='Скопировать код' class='200px' OnClick='javascript: BlogCopyClipboard(this.form.MsgCode);'><input type='button' value='Предпросмотр' class='200px' OnClick='javascript: BlogPreview();'></DIV></FORM></noindex><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr valign='top'><td width='5' class='title-b'><img src='../images/byte/title-b.gif'></td><td width='2'><img src='../images/byte/title-l.gif'></td><td class='bg-title-2' valign='middle' nowrap><a name='add-comment'></a>Комментарии к статье</td><td width='2'><img src='../images/byte/title-r.gif'></td><td width='90%' class='title-b'><img src='../images/byte/title-b.gif'></td></tr></table><br /><p><form name='AddComment' action='http://www.bytemag.ru/articles/detail.php?ID=6642&amp;' method='post'><b>Ваше имя</b><span class='rs'>*</span><br /><input type='text' name='AUTHOR_NAME' value='' size='20' class='100p'><br /><br /><b>Ваш комментарий</b><span class='rs'>*</span><br /><textarea name='COMMENT' cols='70' rows='10' class='100p'></textarea><br /><br /><b>Защита от автоматических сообщений</b><span class='rs'>*</span><br /><br /><input type='hidden' name='captcha_code' value='07ee82c97610a26a12020a0718c3cd6e'><img src='../bitrix/tools/captcha.php@captcha_code=07ee82c97610a26a12020a0718c3cd6e' class='captcha' /><br /><br />Введите символы на картинке <input type='text' size='20' name='captcha_word' value='' class='100p'><DIV class='btn-grey'><input type='submit' name='SUBMIT' value='Добавить комментарий' class='200px'></DIV><span class='rs'>*</span> - Поля, обязательные для заполнения.</form></p>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='1%' valign='top'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></td><td width='99%' class='bg-title'><span>Рекламные ссылки</span></td></tr></table><DIV class='block-g'><div style='margin-bottom:5px;'><b><a href='../about/index.html' target='_blank'>BYTEmag.ru приглашает к сотрудничеству авторов статей  по корпоративной ИТ-тематике. </a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=16029.html' target='_blank'>Коммутаторы начального уровня</a></b></div><div style='margin-bottom:5px;'><b><a href='index.php@TYPE_ID=6258.html' target='_blank'>В рубрике &quot;Безопасность&quot; появилась новая статья о выборе антивирусов</a></b></div><div style='margin-bottom:5px;'><b><a href='http://itrp.ru/41/' target='_blank'>ITRN — современные информационные технологии</a></b></div></DIV>
+
+
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr valign='top'><td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../foto/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../foto/index.html'>Фоторепортажи</a></td></tr></table><DIV class='block-g'><a href='../foto/detail.php@ID=19983.html'><IMG src='../upload/iblock/4d5/1.jpg' alt='Демонстрация Chloride Trinergy' class='tn-foto'></a><b>Chloride</b><br /><b><a href='../foto/detail.php@ID=19983.html'>Демонстрация Chloride Trinergy</a></b><br />Впервые в России компания Chloride Rus провела демонстрацию системы бесперебойного электропитания Chloride Trinergy®, а также ИБП Chloride 80-NET™, NXC и NX для своих партнеров и заказчиков.<br /><br /><a href='../foto/detail.php@ID=17939.html'><IMG src='../upload/iblock/b04/IMG_7608.jpg' alt='Завершена реорганизация двух дочерних предприятий NEC Corporation в России' class='tn-foto'></a><b>NEC Нева Коммуникационные Системы</b><br /><b><a href='../foto/detail.php@ID=17939.html'>Завершена реорганизация двух дочерних предприятий NEC Corporation в России</a></b><br />С 1 декабря 2010 года Генеральным директором ЗАО «NEC Нева Коммуникационные Системы» назначен Раймонд Армес, занимавший ранее пост Президента Shyam …<br /><br /><a href='../foto/detail.php@ID=17921.html'><IMG src='../upload/iblock/2b0/1.JPG' alt='С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.' class='tn-foto'></a><b>компания «Гротек»</b><br /><b><a href='../foto/detail.php@ID=17921.html'>С 17 по 19 ноября 2010 в Москве, в КВЦ «Сокольники», состоялась VII Международная выставка InfoSecurity Russia. StorageExpo. Documation’2010.</a></b><br />Новейшие решения защиты информации, хранения данных и документооборота и защиты персональных данных представили 104 организации. 4 019 руководителей …<br /><br /><a href='../foto/index.html' class='link'>Другие фоторепортажи</a></DIV>	</td>
+	<td><img src="../images/byte/pix.gif" width="10" height="1" border="0"></td>
+	<td width='50%'>
+	<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../video/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../video/index.html'>Видеоролики</a></td></tr></table><DIV class='block-g'><a href='../video/detail.php@ID=17721.html'><img src='../upload/iblock/ae3/adaptec.jpg' alt='RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша' class='tn-video'></a><b>Adaptec by PMC</b><br /><b><a href='../video/detail.php@ID=17721.html'>RAID-контроллеры Adaptec Series 5Z с безбатарейной защитой кэша</a></b><br />Опытные сетевые администраторы знают, что задействование в работе кэш-памяти RAID-контроллера дает серьезные преимущества в производительности …<br /><br /><a href='../video/detail.php@ID=16525.html'><img src='../upload/iblock/c6e/v1.jpg' alt='Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy' class='tn-video'></a><b>Chloride</b><br /><b><a href='../video/detail.php@ID=16525.html'>Трехфазный ИБП Chloride от 200 до 1200 кВт: Trinergy</a></b><br />Trinergy — новое решение на рынке ИБП, впервые с динамическим режимом работы, масштабируемостью до 9.6 МВт и КПД до 99%. Уникальное сочетание …<br /><br /><a href='../video/detail.php@ID=15824.html'><img src='../upload/iblock/134/delphi.jpg' alt='Возможности Delphi 2010' class='tn-video'></a><b>Embarcadero</b><br /><b><a href='../video/detail.php@ID=15824.html'>Возможности Delphi 2010</a></b><br />Посмотрите обзор среды разработки Delphi и оцените, как можно использовать данную технологию для быстрой разработки Windows-приложений. В это обзоре …<br /><br /><a href='../video/index.html' class='link'>Другие видеоролики</a></DIV>	</td></tr>
+	</table>
+
+</TD>
+<TD width='10'><img src="../images/byte/pix.gif" width="10" height="1" border="0"></TD>
+<TD width='160'>
+
+
+<DIV class='adv'><script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_right_adv" id="byte_right_adv" src="/ad/banners/right.php?banner_random='+banner_random+'" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_right_adv" id="byte_right_adv" src="../ad/banners/right.php.html" width="100%" height="600" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+</DIV>
+<DIV class='block-g'>Опубликован обзор по теме <font color="#0000FF"><b><a href="../bitrix/rk.php@id=375&amp;event1=banner&amp;event2=click&amp;event3=1+%252F+[375]+[TXT2]+Коммутаторы+начального+уровня+апрель+2014&amp;goto=http%253A%252F%252Fwww.bytemag.ru%252Farticles%252Fdetail.php%253FID=25176.html" target="_blank" >&laquo;Коммутаторы начального уровня&raquo;</a></b></font>. Рынок коммутаторов для сети передачи данных показывает востребованность этих устройств: согласно отчёту IDC в III квартале прошлого года на мировом рынке коммутаторов Ethernet рост составил 6,5%, а объём рынка достиг 5,66 млрд долл. 
+<br />
+
+<br />
+ </DIV>
+<DIV class='adv'>
+</DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../themes/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../themes/index.html'>Темы</a></td></tr></table><DIV class='block-g'><ul class='list-links'><li><a href='index.php@THEME_ID=6261.html'>Перспективные технологии</a><li><a href='index.php@THEME_ID=6262.html'>Информационная безопасность</a><li><a href='index.php@THEME_ID=6263.html'>Серверы</a><li><a href='index.php@THEME_ID=6264.html'>HPC (High Performance Computing)</a><li><a href='index.php@THEME_ID=6265.html'>Центры обработки данных</a><li><a href='index.php@THEME_ID=6266.html'>Технологии хранения данных</a><li><a href='index.php@THEME_ID=6267.html'>Инфраструктурные технологии</a><li><a href='index.php@THEME_ID=6268.html'>Периферийное оборудование</a><li><a href='index.php@THEME_ID=6269.html'>Телеком-решения</a><li><a href='index.php@THEME_ID=6270.html'>Мобильные решения</a><li><a href='index.php@THEME_ID=6271.html'>ERP</a><li><a href='index.php@THEME_ID=6272.html'>Документооборот</a><li><a href='index.php@THEME_ID=6273.html'>Управление бизнес-процессами</a><li><a href='index.php@THEME_ID=6274.html'>Бизнес-аналитика</a><li><a href='index.php@THEME_ID=6275.html'>Интеграционные технологии</a><li><a href='index.php@THEME_ID=6276.html'>Разработка приложений</a><li><a href='index.php@THEME_ID=12163.html'>Интеграция данных и приложений</a><li><a href='index.php@THEME_ID=12781.html'>Управление ИТ-инфраструктурой</a><li><a href='index.php@THEME_ID=11766.html'>Технологии виртуализации</a></ul></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../events/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../events/index.html'>Мероприятия</a></td></tr></table><DIV class='block-g'>22 апреля 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25002.html'>Dell Desktop Virtualization Forum 2014</a></b><br /><br />20 &#151; 22 мая 2014 г.&nbsp;|&nbsp;Новосибирск <br /><b><a href='../events/detail.php@ID=25217.html'>Межрегиональный  форум «Инфосибирь»</a></b><br /><br />20 мая 2014 г.&nbsp;|&nbsp;Москва<br /><b><a href='../events/detail.php@ID=25221.html'>Docflow 2014 </a></b><br /><br /><a href='../events/index.html' class='link'>Другие мероприятия</a></DIV>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../forum/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../forum/index.html'>Форумы</a></td></tr></table><DIV class='block-g'><b><A href='../forum/forum2/topic70917/index.html'>EOS for SharePoint: ЕСМ и СЭД «в одном флаконе»</A></b><br />Федор Буцко, 07.04.2014 20:24:47<br /><br /><b><A href='../forum/forum2/topic70916/index.html'>Как построить собственный ЦОД</A></b><br />Александр, 01.04.2014 19:08:52<br /><br /><b><A href='../forum/forum2/topic70915/index.html'>Блейд-серверы HP в эволюции ИТ-инфраструктуры</A></b><br />Жания, 28.03.2014 12:12:38<br /><br /><b><A href='../forum/forum2/topic70914/index.html'>StarWind Native SAN для Hyper-V: история успеха</A></b><br />satosan, 24.03.2014 12:54:37<br /><br /><b><A href='../forum/forum2/topic70913/index.html'>Новые технологии в Security operation center</A></b><br />Иван, 20.03.2014 09:53:28<br /><br /></DIV><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><td width='5%' valign='top'><a href='../press/index.html'><img src='../images/byte/btn-arrow.gif' class='btn-arrow'></a></td><td width='95%' class='bg-title'><a href='../press/index.html'>Пресс-релизы</a></td></tr></table><DIV class='block-g'><b><a href='../press/detail.php@ID=25278.html'>ПСС приняла участие в Autodesk BIM Форуме</a></b><br /><br /><b><a href='../press/detail.php@ID=25277.html'>«Ландшафтдизайнпроект» повышает эффективность </a></b><br /><br /><b><a href='../press/detail.php@ID=25276.html'>Google и Citrix приступили к разработке новых реше</a></b><br /><br /><a href='../press/index.html'>Другие пресс-релизы</a></DIV></TD>
+<TD width='5'><img src="../images/byte/pix.gif" width="5" height="1" border="0"></TD>
+</TR>
+<TR>
+<TD colspan='7' class='bottom-banner'>
+
+<script language="JavaScript">
+<!--
+var banner_random = Math.round(Math.random() * 100000);
+document.write('<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="/ad/banners/bottom.php?banner_random='+banner_random+'" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>');
+// -->
+</script>
+<noscript>
+<iframe name="byte_bottom_adv" id="byte_bottom_adv" src="../ad/banners/bottom.php.html" width="100%" height="60" frameborder="0" scrolling="no" vspace="0" hspace="0" marginwidth="0" marginheight="0"></iframe>
+</noscript>
+
+</TD>
+</TR>
+<TR>
+<TD colspan='7' class='bg-on-footer'><img src="../images/byte/bg-on-footer.gif"></TD>
+</TR>
+</TABLE>
+<DIV class='copy'>
+
+<div style="float:right;">
+<script type="text/javascript">
+<!--
+Nnv=navigator;Nna=Nnv.appName;Nd=document;Nd.cookie="b=b";Nc=0;if(Nd.cookie)Nc=1;
+Nn=(Nna.substring(0,2)=="Mi")?0:1;Ns=screen;Npx=(Nn==0)?Ns.colorDepth:Ns.pixelDepth;
+str='<img src="http://c.cnstats.ru/755;'+Ns.width+'x'+Ns.height+';'+Npx+';'+Nc+';';
+str=str+escape(Nd.referrer)+';'+Math.random()+'" width="88" height="31" border="0">';
+document.write('<a href="http://www.cnstats.ru/" alt="CNStats Rating" target="_blank">'+str+'</a>');
+// -->
+</script>
+<noscript><a href="http://www.cnstats.ru/" target="_blank"><img src="http://c.cnstats.ru/755;0x0;0;0;-;0" alt="CNStats Rating" width="88" height="31" border="0"></a></noscript> 
+</div>
+
+<a href="http://www.imake.ru"><img src="../images/imake/imake-logo.gif" width="88" height="31" border="0" alt="Студия iMake" style="float:right;"></a>
+
+&copy; 2001—2014 ЗАО «СК Пресс». <a href="../credits/index.html">Информация об авторских правах и порядке использования материалов сайта</a><br />
+109147 г. Москва, ул. Марксистская, 34, строение 10. Телефон: (495) 974–2260. Факс: (495) 974-2263. E-mail: <a href='mailto:byte@bytemag.ru'>byte@bytemag.ru</a>.
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2722156-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter12877408 = new Ya.Metrika({id:12877408, enableAll: true, webvisor:true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="http://mc.yandex.ru/watch/12877408" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</DIV>
+<DIV class='sites'>
+<a href='http://www.skpress.ru' target='_blank'>СК Пресс</a> | <a href='http://www.itbestsellers.ru' target='_blank'>Бестселлеры IT-рынка</a> | <a href='http://www.crn.ru' target='_blank'>CRN/RE</a>&nbsp;|&nbsp;<a href='http://www.pcmag.ru' target='_blank'>PC Magazine/RE</a>&nbsp;|&nbsp;<a href='http://www.pcweek.ru' target='_blank'>PC Week/RE</a>&nbsp;|&nbsp;<a href='http://www.iemag.ru' target='_blank'>Intelligent Enterprise/RE</a>
+<script type="text/javascript">
+var adf=$("#byte_left_adv img").css("height");
+$("div.sites").append(adf);
+</script>
+</DIV>
+
+</DIV>
+
+</BODY>
+</HTML>
